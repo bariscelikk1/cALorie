@@ -1,3 +1,5 @@
+import "server-only";
+
 const BUCKET = "workout-videos";
 
 /**
@@ -24,4 +26,17 @@ export async function createUploadUrl(key: string) {
 
   const { url } = await res.json();
   return `${process.env.SUPABASE_URL}/storage/v1${url}`;
+}
+
+export async function objectExists(key: string) {
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
+  const res = await fetch(
+    `${process.env.SUPABASE_URL}/storage/v1/object/${BUCKET}/${key}`,
+    {
+      method: "HEAD",
+      headers: { apikey: serviceKey, Authorization: `Bearer ${serviceKey}` },
+      cache: "no-store",
+    },
+  );
+  return res.ok;
 }
