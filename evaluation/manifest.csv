@@ -1,0 +1,4 @@
+video_path,exercise,weight_kg,manual_repetitions,actual_duration_seconds,source
+examples/videos/squat-demo.mp4,squat,70,10,30,Record specifically for this project
+examples/videos/jumping-jack-demo.mp4,jumping_jack,70,15,30,Record specifically for this project
+examples/videos/push-up-demo.mp4,push_up,70,8,30,Record specifically for this project
