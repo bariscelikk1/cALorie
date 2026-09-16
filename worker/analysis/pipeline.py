@@ -1,126 +1,83 @@
 from pathlib import Path
 
+from .aggregation import aggregate_exercises, total_calories
 from .calories import calorie_summary
+from .classifier import classify_frame
 from .errors import PoseNotDetectedError
 from .exercises import JumpingJackCounter, PushUpCounter, SquatCounter
-from .geometry import distance, joint_angle, mean
+from .features import extract_features
 from .intensity import classify_intensity
-from .models import AnalysisResult, Exercise, Point
-from .pose import Landmarks, extract_pose_landmarks
+from .models import Activity, Exercise, FrameFeatures, MultiAnalysisResult, SegmentResult
+from .pose import extract_pose_landmarks
 from .quality import confidence_from_pose_ratio, quality_warnings
+from .segmentation import FrameLabel, TimelineSegment, build_segments, smooth_labels
 from .video import frames, read_metadata
 
-MIN_VISIBILITY = 0.55
 
-
-def _visible(points: list[Point]) -> bool:
-    return all(point.visibility >= MIN_VISIBILITY for point in points)
-
-
-def _side_angle(landmarks: Landmarks, joint: str) -> float | None:
-    if joint == "knee":
-        triplets = [
-            ("left_hip", "left_knee", "left_ankle"),
-            ("right_hip", "right_knee", "right_ankle"),
-        ]
-    elif joint == "elbow":
-        triplets = [
-            ("left_shoulder", "left_elbow", "left_wrist"),
-            ("right_shoulder", "right_elbow", "right_wrist"),
-        ]
-    else:
-        raise ValueError(f"Unsupported joint: {joint}")
-    candidates = []
-    for names in triplets:
-        points = [landmarks[name] for name in names]
-        if _visible(points):
-            candidates.append((mean([p.visibility for p in points]), joint_angle(*points)))
-    return max(candidates, default=(0.0, None), key=lambda item: item[0])[1]
-
-
-def _metrics(exercise: Exercise, landmarks: Landmarks) -> dict[str, float] | None:
-    if exercise is Exercise.SQUAT:
-        angle = _side_angle(landmarks, "knee")
-        return {"knee_angle": angle} if angle is not None else None
-
-    if exercise is Exercise.PUSH_UP:
-        elbow = _side_angle(landmarks, "elbow")
-        body_candidates = []
-        for side in ("left", "right"):
-            points = [
-                landmarks[f"{side}_shoulder"],
-                landmarks[f"{side}_hip"],
-                landmarks[f"{side}_ankle"],
-            ]
-            if _visible(points):
-                body_candidates.append(joint_angle(*points))
-        if elbow is None or not body_candidates:
-            return None
-        return {"elbow_angle": elbow, "body_angle": max(body_candidates)}
-
-    required = [
-        landmarks[name]
-        for name in (
-            "left_wrist",
-            "right_wrist",
-            "left_shoulder",
-            "right_shoulder",
-            "left_ankle",
-            "right_ankle",
-        )
-    ]
-    if not _visible(required):
-        return None
-    shoulder_width = distance(landmarks["left_shoulder"], landmarks["right_shoulder"])
-    if shoulder_width < 0.02:
-        return None
-    wrists_up = (
-        landmarks["left_wrist"].y < landmarks["left_shoulder"].y
-        and landmarks["right_wrist"].y < landmarks["right_shoulder"].y
-    )
-    ankle_width = distance(landmarks["left_ankle"], landmarks["right_ankle"])
+def _counter(exercise: Exercise):
     return {
-        "wrist_above_shoulder": 1.0 if wrists_up else 0.0,
-        "ankle_to_shoulder_ratio": ankle_width / shoulder_width,
-    }
-
-
-def analyze_video(path: str | Path, exercise: Exercise, weight_kg: float) -> AnalysisResult:
-    metadata = read_metadata(path)
-    counter = {
         Exercise.SQUAT: SquatCounter,
         Exercise.JUMPING_JACK: JumpingJackCounter,
         Exercise.PUSH_UP: PushUpCounter,
     }[exercise]()
-    analyzed = 0
-    valid = 0
-    for landmarks in extract_pose_landmarks(frames(path)):
-        analyzed += 1
-        if landmarks is None:
-            continue
-        metrics = _metrics(exercise, landmarks)
-        if metrics is None:
-            continue
-        valid += 1
-        counter.update(metrics)
 
-    ratio = valid / analyzed if analyzed else 0.0
-    if analyzed == 0:
-        raise PoseNotDetectedError("No readable frames were found in the video.")
-    if ratio < 0.15:
-        raise PoseNotDetectedError(
-            "A person could not be detected reliably. Keep the full body visible."
+
+def _counter_metrics(exercise: Exercise, feature: FrameFeatures) -> dict[str, float] | None:
+    if not feature.valid:
+        return None
+    if exercise is Exercise.SQUAT and feature.knee_angle is not None:
+        return {"knee_angle": feature.knee_angle}
+    if exercise is Exercise.PUSH_UP and feature.elbow_angle is not None:
+        return {"elbow_angle": feature.elbow_angle, "body_angle": feature.body_angle or 180.0}
+    if exercise is Exercise.JUMPING_JACK:
+        return {
+            "wrist_above_shoulder": 1.0 if feature.wrists_up else 0.0,
+            "ankle_to_shoulder_ratio": feature.ankle_to_shoulder_ratio,
+        }
+    return None
+
+
+def _exercise_segment(
+    segment: TimelineSegment,
+    features: list[FrameFeatures],
+    weight_kg: float,
+    valid_pose_ratio: float,
+) -> SegmentResult:
+    if segment.activity in {Activity.IDLE, Activity.UNKNOWN}:
+        return SegmentResult(
+            exercise=segment.activity.value,
+            start_seconds=round(segment.start_seconds, 2),
+            end_seconds=round(segment.end_seconds, 2),
+            duration_seconds=round(segment.duration_seconds, 2),
+            repetitions=None,
+            repetitions_per_minute=None,
+            intensity=None,
+            met_value=None,
+            calories_estimated=0.0,
+            calories_low=0.0,
+            calories_high=0.0,
+            confidence="high" if segment.confidence >= 0.8 else "medium" if segment.confidence >= 0.6 else "low",
+            warnings=[],
         )
-
-    rpm = counter.repetitions / (metadata.duration_seconds / 60.0)
+    exercise = Exercise(segment.activity.value)
+    counter = _counter(exercise)
+    valid = 0
+    for feature in features[segment.start_index:segment.end_index]:
+        metrics = _counter_metrics(exercise, feature)
+        if metrics is not None:
+            valid += 1
+            counter.update(metrics)
+    duration = segment.duration_seconds
+    rpm = counter.repetitions / (duration / 60) if duration > 0 else 0.0
     intensity = classify_intensity(exercise, rpm)
-    confidence = confidence_from_pose_ratio(ratio, counter.repetitions)
-    met, estimated, low, high = calorie_summary(
-        exercise, intensity, weight_kg, metadata.duration_seconds, confidence
-    )
-    return AnalysisResult(
+    segment_pose_ratio = valid / max(1, segment.end_index - segment.start_index)
+    confidence = confidence_from_pose_ratio(min(valid_pose_ratio, segment_pose_ratio), counter.repetitions)
+    met, estimated, low, high = calorie_summary(exercise, intensity, weight_kg, duration, confidence)
+    return SegmentResult(
         exercise=exercise.value,
-        duration_seconds=round(metadata.duration_seconds, 2),
+        start_seconds=round(segment.start_seconds, 2),
+        end_seconds=round(segment.end_seconds, 2),
+        duration_seconds=round(duration, 2),
         repetitions=counter.repetitions,
         repetitions_per_minute=round(rpm, 1),
         intensity=intensity.value,
@@ -129,8 +86,79 @@ def analyze_video(path: str | Path, exercise: Exercise, weight_kg: float) -> Ana
         calories_low=low,
         calories_high=high,
         confidence=confidence,
-        frames_analyzed=analyzed,
-        valid_pose_frame_ratio=round(ratio, 3),
-        warnings=quality_warnings(ratio, counter.repetitions),
+        warnings=quality_warnings(segment_pose_ratio, counter.repetitions),
     )
 
+
+def analyze_feature_sequence(
+    features: list[FrameFeatures],
+    fps: float,
+    duration_seconds: float,
+    weight_kg: float,
+    selected_exercise: Exercise | None = None,
+) -> MultiAnalysisResult:
+    valid_count = sum(feature.valid for feature in features)
+    ratio = valid_count / len(features) if features else 0.0
+    if not features or ratio < 0.15:
+        raise PoseNotDetectedError("A person could not be detected reliably. Keep the full body visible.")
+    if selected_exercise:
+        labels = [FrameLabel(
+            feature.timestamp,
+            Activity(selected_exercise.value) if feature.valid else Activity.UNKNOWN,
+            1.0 if feature.valid else 0.0,
+        ) for feature in features]
+    else:
+        labels = [FrameLabel(feature.timestamp, *classify_frame(feature)) for feature in features]
+        labels = smooth_labels(labels, fps)
+    timeline = build_segments(labels, fps, duration_seconds)
+    results = [_exercise_segment(segment, features, weight_kg, ratio) for segment in timeline]
+    estimated, low, high = total_calories(results)
+    unknown_duration = sum(
+        segment.duration_seconds for segment in results if segment.exercise == Activity.UNKNOWN.value
+    )
+    completed_reps = sum(segment.repetitions or 0 for segment in results)
+    overall_confidence = confidence_from_pose_ratio(ratio, completed_reps)
+    warnings = quality_warnings(ratio, completed_reps)
+    if unknown_duration / duration_seconds > 0.2:
+        warnings.append("A substantial part of the video could not be classified reliably.")
+    return MultiAnalysisResult(
+        duration_seconds=round(duration_seconds, 2),
+        total_calories_estimated=estimated,
+        total_calories_low=low,
+        total_calories_high=high,
+        overall_confidence=overall_confidence,
+        valid_pose_frame_ratio=round(ratio, 3),
+        frames_analyzed=len(features),
+        segments=results,
+        exercise_totals=aggregate_exercises(results),
+        unknown_duration_seconds=round(unknown_duration, 2),
+        warnings=warnings,
+    )
+
+
+def analyze_video(
+    path: str | Path,
+    selected_exercise: Exercise | None,
+    weight_kg: float,
+) -> MultiAnalysisResult:
+    metadata = read_metadata(path)
+    extracted: list[FrameFeatures] = []
+    previous_landmarks = None
+    previous_features = None
+    delta = 1 / metadata.fps
+    for frame_index, landmarks in enumerate(extract_pose_landmarks(frames(path))):
+        feature = extract_features(
+            landmarks,
+            frame_index / metadata.fps,
+            previous_landmarks,
+            previous_features,
+            delta,
+        )
+        extracted.append(feature)
+        if landmarks is not None:
+            previous_landmarks = landmarks
+        if feature.valid:
+            previous_features = feature
+    return analyze_feature_sequence(
+        extracted, metadata.fps, metadata.duration_seconds, weight_kg, selected_exercise
+    )

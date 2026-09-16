@@ -1,24 +1,27 @@
 @import "tailwindcss";
 
-:root { --ink: #172019; --muted: #68716b; --paper: #f5f7f2; --lime: #cafa58; --green: #193c2d; }
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; color: var(--ink); background: var(--paper); font-family: Arial, Helvetica, sans-serif; }
-button, input, select { font: inherit; }
-button, a { -webkit-tap-highlight-color: transparent; }
-:focus-visible { outline: 3px solid #8ebc2d; outline-offset: 3px; }
-.shell { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
-.brand { display: inline-flex; align-items: center; gap: 10px; font-size: 1.15rem; font-weight: 800; letter-spacing: -.04em; }
-.brand-mark { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 10px; background: var(--lime); color: var(--green); }
-.eyebrow { color: #55711a; font-weight: 800; font-size: .76rem; letter-spacing: .13em; text-transform: uppercase; }
-.button { display: inline-flex; justify-content: center; align-items: center; min-height: 48px; padding: 0 22px; border: 0; border-radius: 14px; background: var(--green); color: white; font-weight: 750; text-decoration: none; cursor: pointer; transition: transform .15s, opacity .15s; }
-.button:hover { transform: translateY(-1px); }
-.button:disabled { opacity: .55; cursor: not-allowed; transform: none; }
-.button.secondary { background: white; color: var(--ink); border: 1px solid #d8ddd6; }
-.card { border: 1px solid #dfe4dc; border-radius: 24px; background: rgba(255,255,255,.82); box-shadow: 0 20px 55px rgba(28,48,36,.07); }
-.field { display: grid; gap: 8px; }
-.field label, .label { font-size: .87rem; font-weight: 750; }
-.input { width: 100%; min-height: 48px; padding: 0 14px; border: 1px solid #ccd3ca; border-radius: 12px; background: white; color: var(--ink); }
-.helper { color: var(--muted); font-size: .79rem; line-height: 1.5; }
-.error { padding: 12px 14px; border-radius: 12px; background: #fff0ec; color: #9b3022; font-size: .87rem; }
-@media (max-width: 640px) { .shell { width: min(100% - 24px, 1120px); } }
+:root { --ink:#171a17; --muted:#667068; --line:#d9ded9; --paper:#f7f8f5; --accent:#b8ef57; --accent-dark:#244718; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; color:var(--ink); background:var(--paper); font-family:Arial,Helvetica,sans-serif; }
+button,input,select { font:inherit; }
+a { color:inherit; }
+:focus-visible { outline:3px solid #82b82d; outline-offset:3px; }
+.shell { width:min(1180px,calc(100% - 48px)); margin-inline:auto; }
+.site-header { height:64px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); }
+.brand { display:inline-flex; align-items:center; gap:9px; font-size:1rem; font-weight:900; letter-spacing:-.04em; text-decoration:none; }
+.brand-mark { display:grid; place-items:center; width:25px; height:25px; background:var(--accent); font-size:.75rem; }
+.eyebrow { color:#527d20; font-size:.72rem; font-weight:900; letter-spacing:.14em; text-transform:uppercase; }
+.button { min-height:44px; display:inline-flex; align-items:center; justify-content:center; border:1px solid #1e251f; border-radius:5px; padding:0 18px; background:#1e251f; color:white; font-size:.88rem; font-weight:800; text-decoration:none; cursor:pointer; }
+.button:hover { background:#304134; }
+.button:disabled { opacity:.5; cursor:not-allowed; }
+.button.secondary { background:transparent; color:var(--ink); border-color:var(--line); }
+.input { width:100%; min-height:46px; border:1px solid #bdc5bd; border-radius:4px; padding:0 12px; background:white; color:var(--ink); }
+.label { display:block; margin-bottom:8px; font-size:.82rem; font-weight:800; }
+.helper { color:var(--muted); font-size:.76rem; line-height:1.5; }
+.error { border-left:3px solid #bc422f; padding:10px 12px; background:#fff1ee; color:#8d291c; font-size:.84rem; }
+.rule { border-top:1px solid var(--line); }
+.data-table { width:100%; border-collapse:collapse; font-size:.86rem; }
+.data-table th,.data-table td { padding:13px 8px; border-bottom:1px solid var(--line); text-align:left; }
+.data-table th { color:var(--muted); font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; }
+@media(max-width:640px){ .shell{width:min(100% - 24px,1180px)} .site-header{height:56px} }

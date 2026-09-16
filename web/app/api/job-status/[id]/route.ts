@@ -11,7 +11,7 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ id: 
   }
   const { data: job, error } = await supabaseAdmin()
     .from("jobs")
-    .select("status, result_json, error_message, created_at, updated_at")
+    .select("status, result_json, error_message, video_key, created_at, updated_at")
     .eq("id", id)
     .eq("access_token", token)
     .single();
@@ -20,9 +20,17 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ id: 
   }
   const age = Date.now() - new Date(job.updated_at).getTime();
   const stuck = ["queued", "processing"].includes(job.status) && age > 10 * 60_000;
+  let videoUrl: string | null = null;
+  if (job.status === "done") {
+    const { data } = await supabaseAdmin().storage
+      .from("workout-videos")
+      .createSignedUrl(job.video_key, 60 * 60);
+    videoUrl = data?.signedUrl ?? null;
+  }
   return NextResponse.json({
     status: stuck ? "error" : job.status,
     result: job.result_json,
     error: stuck ? "Analysis timed out. Please try again." : job.error_message,
+    videoUrl,
   });
 }

@@ -60,11 +60,11 @@ async def process(
 def run_pipeline(job_id: str, video_key: str) -> None:
     try:
         job = get_job(job_id)
-        exercise = Exercise(job["exercise"])
+        selected_exercise = None if job["exercise"] == "auto" else Exercise(job["exercise"])
         with tempfile.TemporaryDirectory(prefix="calorie-") as directory:
             path = Path(directory) / f"input{Path(video_key).suffix}"
             download_video(video_key, path)
-            result = analyze_video(path, exercise, float(job["weight_kg"]))
+            result = analyze_video(path, selected_exercise, float(job["weight_kg"]))
         update_job(
             job_id,
             status="done",

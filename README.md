@@ -7,10 +7,14 @@ estimate. It does **not** claim medical or wearable-grade accuracy.
 
 ## Status
 
-V1 supports user-selected squats, jumping jacks and push-ups. The analysis
-engine, validation, QStash verification, structured results and unit tests are
-implemented. Evaluation videos must still be recorded with consent before real
-accuracy figures can be reported.
+V2 supports automatic segmentation of squats, jumping jacks and push-ups, plus
+manual exercise mode. Evaluation videos must still be recorded with consent
+before real accuracy figures can be reported.
+
+## Live links
+
+- Production (unchanged until explicit promotion): https://c-a-lorie.vercel.app
+- Branch preview: https://c-a-lorie-git-feat-calorie-engine-v1-ayqmonki12-7626.vercel.app
 
 ## Architecture
 
@@ -34,12 +38,14 @@ QStash requests and re-reads weight and exercise from the database.
 
 1. OpenCV reads FPS, frame count, duration and frames.
 2. MediaPipe Pose extracts body landmarks and visibility values.
-3. Exercise-specific state machines count complete cycles:
+3. Normalized joint/motion features classify each frame as squat, jumping jack,
+   push-up, idle or unknown; smoothing turns labels into timeline segments.
+4. Exercise-specific state machines count complete cycles in each segment:
    - squat: standing → lowered → standing using knee angle;
    - jumping jack: closed → open → closed using wrists and ankle width;
    - push-up: extended → lowered → extended using elbow and body angles.
-4. Repetitions per minute determine light, moderate or vigorous intensity.
-5. A configured MET value is applied:
+5. Repetitions per minute determine light, moderate or vigorous intensity.
+6. A configured MET value is applied:
 
 ```text
 Calories = MET × 3.5 × body_weight_kg / 200 × duration_minutes
@@ -52,16 +58,12 @@ returning an invented value.
 
 ## Result fields
 
-- `exercise`: selected supported exercise.
+- `segments`: ordered activity segments with exercise, timing, repetitions,
+  calories, confidence and warnings.
+- `exercise_totals`: aggregated repetitions and calories by exercise.
 - `duration_seconds`: FPS/frame-count duration.
-- `repetitions`: complete state-machine cycles.
-- `repetitions_per_minute`: count normalized by duration.
-- `intensity`: tempo band used for MET selection.
-- `met_value`: configured metabolic equivalent.
-- `calories_estimated`, `calories_low`, `calories_high`: point estimate and
-  quality-dependent range.
-- `confidence`: pose/count quality category.
-- `frames_analyzed`: decoded frames.
+- `total_calories_estimated`, `total_calories_low`, `total_calories_high`:
+  point estimate and quality-dependent range.
 - `valid_pose_frame_ratio`: frames with the required visible landmarks.
 - `warnings`: actionable camera or movement notes.
 

@@ -9,7 +9,7 @@ create table if not exists jobs (
     check (video_key ~ '^uploads/[0-9a-f-]{36}\.(mp4|mov|webm)$'),
   weight_kg numeric not null check (weight_kg between 30 and 250),
   exercise text not null
-    check (exercise in ('squat', 'jumping_jack', 'push_up')),
+    check (exercise in ('auto', 'squat', 'jumping_jack', 'push_up')),
   result_json jsonb,
   error_message text,
   created_at timestamptz not null default now(),
@@ -32,6 +32,9 @@ update jobs set updated_at = created_at where updated_at is null;
 alter table jobs alter column access_token set not null;
 alter table jobs alter column exercise set not null;
 alter table jobs alter column updated_at set not null;
+alter table jobs drop constraint if exists jobs_exercise_check;
+alter table jobs add constraint jobs_exercise_check
+  check (exercise in ('auto', 'squat', 'jumping_jack', 'push_up'));
 
 create index if not exists jobs_status_created_at_idx on jobs (status, created_at);
 

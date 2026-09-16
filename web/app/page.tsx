@@ -1,41 +1,18 @@
 import Link from "next/link";
 
-const exercises = [
-  ["Squats", "Knee-angle state machine", "Side or 45° view"],
-  ["Jumping jacks", "Arm and leg position", "Front, full-body view"],
-  ["Push-ups", "Elbow angle and body line", "Clear side view"],
+const methods=[
+  ["01","Pose","Body landmarks and visibility are measured frame by frame."],
+  ["02","Segment","Movement rules separate exercises, rest and uncertain periods."],
+  ["03","Estimate","Repetitions, pace, duration and MET values produce an estimate."],
 ];
 
-export default function Home() {
-  return <main>
-    <header className="shell flex items-center justify-between py-6">
-      <div className="brand"><span className="brand-mark">C</span>cALorie</div>
-      <Link href="/upload" className="button secondary !min-h-10 !px-4">Analyze a video</Link>
-    </header>
-    <section className="shell grid min-h-[620px] items-center gap-12 py-16 lg:grid-cols-[1.15fr_.85fr]">
-      <div>
-        <p className="eyebrow mb-5">Explainable workout analysis</p>
-        <h1 className="max-w-3xl text-5xl font-black leading-[.98] tracking-[-.065em] sm:text-7xl">Movement in.<br/><span className="text-[#5e7d20]">Useful estimates out.</span></h1>
-        <p className="mt-7 max-w-xl text-lg leading-8 text-[#68716b]">Upload a workout video. cALorie follows body landmarks, counts complete repetitions, measures pace, and applies a transparent MET formula.</p>
-        <div className="mt-9 flex flex-wrap gap-3"><Link href="/upload" className="button">Start analysis →</Link><a href="#method" className="button secondary">See how it works</a></div>
-        <p className="mt-5 text-xs text-[#7b837d]">Fitness estimate only — not a medical or wearable-grade measurement.</p>
-      </div>
-      <div className="card relative overflow-hidden p-8 text-white" style={{ background: "#193c2d" }}>
-        <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[#cafa58] opacity-90" />
-        <p className="relative text-sm font-bold text-[#cafa58]">ANALYSIS PREVIEW</p>
-        <p className="relative mt-14 text-7xl font-black tracking-[-.07em]">18</p><p className="relative text-white/60">complete repetitions</p>
-        <div className="relative mt-10 grid grid-cols-2 gap-3">
-          <div className="rounded-2xl bg-white/10 p-4"><b>5.0 MET</b><span className="mt-1 block text-xs text-white/60">moderate squat</span></div>
-          <div className="rounded-2xl bg-white/10 p-4"><b>86%</b><span className="mt-1 block text-xs text-white/60">valid pose frames</span></div>
-        </div>
-      </div>
-    </section>
-    <section id="method" className="border-y border-[#dfe4dc] bg-white py-20">
-      <div className="shell"><p className="eyebrow">Three understandable steps</p><h2 className="mt-3 text-4xl font-black tracking-[-.05em]">No mystery number.</h2>
-        <div className="mt-10 grid gap-4 md:grid-cols-3">{[["01","Track","MediaPipe estimates body landmarks frame by frame."],["02","Count","Exercise-specific state machines count complete motion cycles."],["03","Estimate","Duration, body weight and intensity select a MET-based estimate."]].map(([n,t,d])=><article className="card p-6" key={n}><span className="text-xs font-black text-[#709225]">{n}</span><h3 className="mt-8 text-xl font-bold">{t}</h3><p className="mt-2 text-sm leading-6 text-[#68716b]">{d}</p></article>)}</div>
-      </div>
-    </section>
-    <section className="shell py-20"><p className="eyebrow">V1 exercise set</p><div className="mt-8 grid gap-4 md:grid-cols-3">{exercises.map(([name,method,view])=><article className="card p-6" key={name}><h3 className="text-xl font-bold">{name}</h3><p className="mt-5 text-sm">{method}</p><p className="mt-1 text-sm text-[#68716b]">Camera: {view}</p></article>)}</div></section>
-    <footer className="border-t border-[#dfe4dc] py-8"><div className="shell flex flex-wrap justify-between gap-4 text-sm text-[#68716b]"><span>cALorie · University software project</span><span>Estimates, not medical measurements</span></div></footer>
-  </main>;
-}
+export default function Home(){return <main>
+  <header className="shell site-header"><Link href="/" className="brand"><span className="brand-mark">C</span>cALorie</Link><Link href="/upload" className="text-sm font-bold no-underline">Analyze video ↗</Link></header>
+  <section className="shell grid gap-12 py-16 md:grid-cols-[1fr_340px] md:py-20">
+    <div><p className="eyebrow">Video movement analysis</p><h1 className="mt-5 max-w-3xl text-5xl font-black leading-[.98] tracking-[-.06em] sm:text-6xl">One video.<br/>Every set, separated.</h1><p className="mt-6 max-w-2xl text-lg leading-8 text-[#667068]">Upload a mixed workout. cALorie separates supported movements over time, counts complete repetitions and explains its calorie estimate.</p><div className="mt-8 flex flex-wrap gap-3"><Link href="/upload" className="button">Analyze a workout</Link><a href="#method" className="button secondary">How it works</a></div></div>
+    <aside className="border-l border-[#d9ded9] pl-7"><p className="eyebrow">Supported in V2</p><ul className="mt-5 divide-y divide-[#d9ded9] text-sm font-bold"><li className="py-4">Squat</li><li className="py-4">Jumping jack</li><li className="py-4">Push-up</li><li className="py-4 text-[#667068]">Rest & unknown periods</li></ul><p className="mt-6 text-xs leading-5 text-[#667068]">Automatic mode is rule-based and explainable. Manual single-exercise mode remains available.</p></aside>
+  </section>
+  <section id="method" className="rule bg-white"><div className="shell py-12"><div className="grid divide-y divide-[#d9ded9] md:grid-cols-3 md:divide-x md:divide-y-0">{methods.map(([n,t,d])=><article className="py-6 md:px-7 md:first:pl-0" key={n}><span className="eyebrow">{n}</span><h2 className="mt-3 text-xl font-black">{t}</h2><p className="mt-2 max-w-xs text-sm leading-6 text-[#667068]">{d}</p></article>)}</div></div></section>
+  <section className="shell flex flex-col justify-between gap-6 py-12 sm:flex-row sm:items-end"><div><h2 className="text-2xl font-black tracking-[-.03em]">Designed to show its work.</h2><p className="mt-2 max-w-2xl text-sm leading-6 text-[#667068]">Results include a timestamped exercise timeline, pose coverage, confidence, warnings and the exact MET formula.</p></div><Link href="/upload" className="button secondary">Start analysis →</Link></section>
+  <footer className="rule"><div className="shell flex flex-wrap justify-between gap-3 py-6 text-xs text-[#667068]"><span>cALorie · Computer Engineering project</span><span>Activity estimate, not a medical measurement</span></div></footer>
+</main>}

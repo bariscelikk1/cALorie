@@ -8,6 +8,14 @@ class Exercise(str, Enum):
     PUSH_UP = "push_up"
 
 
+class Activity(str, Enum):
+    SQUAT = "squat"
+    JUMPING_JACK = "jumping_jack"
+    PUSH_UP = "push_up"
+    IDLE = "idle"
+    UNKNOWN = "unknown"
+
+
 class Intensity(str, Enum):
     LIGHT = "light"
     MODERATE = "moderate"
@@ -49,3 +57,52 @@ class AnalysisResult:
     def to_dict(self) -> dict:
         return asdict(self)
 
+
+@dataclass(frozen=True)
+class FrameFeatures:
+    timestamp: float
+    valid: bool
+    knee_angle: float | None = None
+    elbow_angle: float | None = None
+    body_angle: float | None = None
+    torso_horizontal: bool = False
+    wrists_up: bool = False
+    ankle_to_shoulder_ratio: float = 0.0
+    motion: float = 0.0
+    knee_velocity: float = 0.0
+    elbow_velocity: float = 0.0
+
+
+@dataclass
+class SegmentResult:
+    exercise: str
+    start_seconds: float
+    end_seconds: float
+    duration_seconds: float
+    repetitions: int | None
+    repetitions_per_minute: float | None
+    intensity: str | None
+    met_value: float | None
+    calories_estimated: float
+    calories_low: float
+    calories_high: float
+    confidence: str
+    warnings: list[str] = field(default_factory=list)
+
+
+@dataclass
+class MultiAnalysisResult:
+    duration_seconds: float
+    total_calories_estimated: float
+    total_calories_low: float
+    total_calories_high: float
+    overall_confidence: str
+    valid_pose_frame_ratio: float
+    frames_analyzed: int
+    segments: list[SegmentResult]
+    exercise_totals: dict[str, dict]
+    unknown_duration_seconds: float
+    warnings: list[str] = field(default_factory=list)
+
+    def to_dict(self) -> dict:
+        return asdict(self)
