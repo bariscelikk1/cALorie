@@ -1,4 +1,4 @@
-export const EXERCISES = ["auto", "squat", "jumping_jack", "push_up"] as const;
+export const EXERCISES = ["auto", "squat", "jumping_jack", "push_up", "pull_up", "lunge", "sit_up", "mountain_climber", "burpee", "plank"] as const;
 export type Exercise = (typeof EXERCISES)[number];
 export const MAX_FILE_BYTES = 100 * 1024 * 1024;
 export const ALLOWED_TYPES = {

@@ -6,7 +6,11 @@ import { useRouter } from "next/navigation";
 
 const MAX_BYTES=100*1024*1024;
 const allowed=["video/mp4","video/quicktime","video/webm"];
-const manualExercises=[{value:"squat",label:"Squat"},{value:"jumping_jack",label:"Jumping jack"},{value:"push_up",label:"Push-up"}];
+const manualExercises=[
+  {value:"squat",label:"Squat"},{value:"jumping_jack",label:"Jumping jack"},{value:"push_up",label:"Push-up"},
+  {value:"pull_up",label:"Pull-up"},{value:"lunge",label:"Lunge"},{value:"sit_up",label:"Sit-up"},
+  {value:"mountain_climber",label:"Mountain climber"},{value:"burpee",label:"Burpee"},{value:"plank",label:"Plank (timed)"},
+];
 
 export default function UploadPage(){
   const router=useRouter(); const abortRef=useRef<AbortController|null>(null);
@@ -32,7 +36,7 @@ export default function UploadPage(){
       <aside className="bg-[#131714] px-0 py-10 lg:px-10"><p className="eyebrow">02 / Analysis setup</p><h2 className="mt-4 text-3xl font-black tracking-[-.04em]">Set the context.</h2><div className="mt-8"><label htmlFor="weight" className="label">Body weight (kg)</label><input id="weight" className="input" type="number" min="30" max="250" step="0.1" placeholder="70" value={weight} onChange={e=>setWeight(e.target.value)}/><p className="helper mt-2">Used only in the MET calculation.</p></div>
         <fieldset className="mt-8"><legend className="label">Analysis mode</legend><label className={`flex cursor-pointer gap-3 border p-4 ${mode==="auto"?"border-[#bbf236]":"border-[#30362f]"}`}><input className="accent-[#bbf236]" type="radio" checked={mode==="auto"} onChange={()=>setMode("auto")}/><span><b className="block text-xs uppercase tracking-wide">Automatic mixed workout</b><span className="helper">Separates supported exercises, rest and unknown periods.</span></span></label><label className={`mt-3 flex cursor-pointer gap-3 border p-4 ${mode==="manual"?"border-[#bbf236]":"border-[#30362f]"}`}><input className="accent-[#bbf236]" type="radio" checked={mode==="manual"} onChange={()=>setMode("manual")}/><span><b className="block text-xs uppercase tracking-wide">Manual single exercise</b><span className="helper">Use when the full video contains one known movement.</span></span></label></fieldset>
         {mode==="manual"&&<div className="mt-5"><label className="label" htmlFor="exercise">Exercise override</label><select id="exercise" className="input" value={manualExercise} onChange={e=>setManualExercise(e.target.value)}>{manualExercises.map(item=><option value={item.value} key={item.value}>{item.label}</option>)}</select></div>}
-        <details className="mt-7 border-y border-[#30362f] py-4"><summary className="cursor-pointer text-xs font-bold uppercase tracking-wide">Supported movements & camera guide</summary><ul className="mt-4 space-y-3 text-xs leading-5 text-[#8d958f]"><li><b className="text-white">Squat</b> — side or 45° view</li><li><b className="text-white">Jumping jack</b> — front, full-body view</li><li><b className="text-white">Push-up</b> — unobstructed side view</li></ul></details>
+        <details className="mt-7 border-y border-[#30362f] py-4"><summary className="cursor-pointer text-xs font-bold uppercase tracking-wide">9 supported movements & camera guide</summary><p className="mt-4 text-xs leading-5 text-[#8d958f]">Front view: jumping jack, lunge, mountain climber. Side view: squat, push-up, sit-up, burpee and plank. Pull-up: full body with hands and bar area visible.</p></details>
         {error&&<p role="alert" className="error mt-6">{error}</p>}{busy&&<div className="mt-6" role="status"><div className="flex justify-between text-xs font-bold"><span>{phase==="checking"?"Preparing":phase==="uploading"?"Uploading":"Starting analysis"}</span><span>{phase==="checking"?"25%":phase==="uploading"?"65%":"100%"}</span></div><div className="mt-2 h-1 bg-[#30362f]"><div className={`h-full bg-[#bbf236] ${phase==="checking"?"w-1/4":phase==="uploading"?"w-2/3":"w-full"}`}/></div></div>}
         <div className="mt-7 flex gap-2"><button className="button flex-1" type="submit" disabled={busy}>{busy?"Working…":"Analyze video →"}</button>{busy&&<button className="button secondary" type="button" onClick={()=>abortRef.current?.abort()}>Cancel</button>}</div><p className="helper mt-4">Activity estimate, not a medical measurement.</p>
       </aside>

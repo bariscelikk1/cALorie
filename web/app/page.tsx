@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const exercises=[["01","Squat","Knee depth and complete stand.","text-[#bbf236]"],["02","Push-up","Body line and elbow cycle.","text-[#f36c3d]"],["03","Jumping jack","Hands overhead and stance width.","text-[#36a4d5]"],["→","Explainable","No black-box calorie number.","text-white"]];
+const exercises=[["09","Movements","Squat, push-up, pull-up, lunge, sit-up, jumping jack, mountain climber, burpee and plank.","text-[#bbf236]"],["01","Mixed video","Automatic segmentation across sets and rest.","text-[#f36c3d]"],["33","Landmarks","MediaPipe joint geometry measured over time.","text-[#36a4d5]"],["→","Explainable","No black-box calorie number.","text-white"]];
 
 export default function Home(){return <main className="min-h-screen bg-[#0c0e0d] text-[#f5f6ed]">
   <header className="shell site-header"><Link href="/" className="brand"><span className="brand-mark">C</span>cALorie</Link><div className="flex items-center gap-6"><span className="hidden font-mono text-[10px] tracking-[.12em] text-[#8d958f] sm:block">MOVEMENT INTELLIGENCE</span><Link href="/upload" className="text-xs font-bold uppercase tracking-wider no-underline">Analyze ↗</Link></div></header>

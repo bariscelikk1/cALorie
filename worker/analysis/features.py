@@ -17,6 +17,11 @@ def _best_angle(landmarks: Landmarks, triplets: list[tuple[str, str, str]]) -> f
     return max(candidates, default=(0.0, None), key=lambda item: item[0])[1]
 
 
+def _angle(landmarks: Landmarks, names: tuple[str, str, str]) -> float | None:
+    points = [landmarks[name] for name in names]
+    return joint_angle(*points) if _visible(points) else None
+
+
 def extract_features(
     landmarks: Landmarks | None,
     timestamp: float,
@@ -32,10 +37,9 @@ def extract_features(
     ]
     if not _visible(required):
         return FrameFeatures(timestamp=timestamp, valid=False)
-    knee = _best_angle(landmarks, [
-        ("left_hip", "left_knee", "left_ankle"),
-        ("right_hip", "right_knee", "right_ankle"),
-    ])
+    left_knee = _angle(landmarks, ("left_hip", "left_knee", "left_ankle"))
+    right_knee = _angle(landmarks, ("right_hip", "right_knee", "right_ankle"))
+    knee = left_knee if right_knee is None else right_knee if left_knee is None else min(left_knee, right_knee)
     elbow = _best_angle(landmarks, [
         ("left_shoulder", "left_elbow", "left_wrist"),
         ("right_shoulder", "right_elbow", "right_wrist"),
@@ -43,6 +47,10 @@ def extract_features(
     body = _best_angle(landmarks, [
         ("left_shoulder", "left_hip", "left_ankle"),
         ("right_shoulder", "right_hip", "right_ankle"),
+    ])
+    hip = _best_angle(landmarks, [
+        ("left_shoulder", "left_hip", "left_knee"),
+        ("right_shoulder", "right_hip", "right_knee"),
     ])
     shoulder_mid = Point(
         mean([landmarks["left_shoulder"].x, landmarks["right_shoulder"].x]),
@@ -84,4 +92,8 @@ def extract_features(
         motion=motion,
         knee_velocity=knee_velocity,
         elbow_velocity=elbow_velocity,
+        left_knee_angle=left_knee,
+        right_knee_angle=right_knee,
+        hip_angle=hip,
+        knee_asymmetry=abs(left_knee - right_knee) if left_knee is not None and right_knee is not None else 0.0,
     )

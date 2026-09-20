@@ -5,8 +5,8 @@ import {Suspense,useEffect,useRef,useState} from "react";
 import {useParams,useSearchParams} from "next/navigation";
 import {activeSegmentIndex,segmentPercent,type AnalysisResult,type Segment} from "@/lib/results";
 
-const labels:Record<string,string>={squat:"Squat",jumping_jack:"Jumping jack",push_up:"Push-up",idle:"Rest",unknown:"Unknown"};
-const colors:Record<string,string>={squat:"#bbf236",jumping_jack:"#36a4d5",push_up:"#f36c3d",idle:"#4a514b",unknown:"#242925"};
+const labels:Record<string,string>={squat:"Squat",jumping_jack:"Jumping jack",push_up:"Push-up",pull_up:"Pull-up",lunge:"Lunge",sit_up:"Sit-up",mountain_climber:"Mountain climber",burpee:"Burpee",plank:"Plank",idle:"Rest",unknown:"Unknown"};
+const colors:Record<string,string>={squat:"#bbf236",jumping_jack:"#36a4d5",push_up:"#f36c3d",pull_up:"#a875ff",lunge:"#f0b429",sit_up:"#ef7bb5",mountain_climber:"#23c8a4",burpee:"#ff4d5e",plank:"#7b8cde",idle:"#4a514b",unknown:"#242925"};
 type JobState={status:"queued"|"processing"|"done"|"error";result:AnalysisResult|null;error:string|null;videoUrl:string|null};
 
 function ResultsContent(){const{jobId}=useParams<{jobId:string}>();const token=useSearchParams().get("token");const videoRef=useRef<HTMLVideoElement|null>(null);const[state,setState]=useState<JobState>({status:"queued",result:null,error:null,videoUrl:null});const[network,setNetwork]=useState<string|null>(null);const[current,setCurrent]=useState(0);const[selected,setSelected]=useState(0);

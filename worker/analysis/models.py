@@ -6,12 +6,24 @@ class Exercise(str, Enum):
     SQUAT = "squat"
     JUMPING_JACK = "jumping_jack"
     PUSH_UP = "push_up"
+    PULL_UP = "pull_up"
+    LUNGE = "lunge"
+    SIT_UP = "sit_up"
+    MOUNTAIN_CLIMBER = "mountain_climber"
+    BURPEE = "burpee"
+    PLANK = "plank"
 
 
 class Activity(str, Enum):
     SQUAT = "squat"
     JUMPING_JACK = "jumping_jack"
     PUSH_UP = "push_up"
+    PULL_UP = "pull_up"
+    LUNGE = "lunge"
+    SIT_UP = "sit_up"
+    MOUNTAIN_CLIMBER = "mountain_climber"
+    BURPEE = "burpee"
+    PLANK = "plank"
     IDLE = "idle"
     UNKNOWN = "unknown"
 
@@ -71,6 +83,10 @@ class FrameFeatures:
     motion: float = 0.0
     knee_velocity: float = 0.0
     elbow_velocity: float = 0.0
+    left_knee_angle: float | None = None
+    right_knee_angle: float | None = None
+    hip_angle: float | None = None
+    knee_asymmetry: float = 0.0
 
 
 @dataclass

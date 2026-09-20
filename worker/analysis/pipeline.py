@@ -4,7 +4,7 @@ from .aggregation import aggregate_exercises, total_calories
 from .calories import calorie_summary
 from .classifier import classify_frame
 from .errors import PoseNotDetectedError
-from .exercises import JumpingJackCounter, PushUpCounter, SquatCounter
+from .exercises import BurpeeCounter, JumpingJackCounter, LungeCounter, MountainClimberCounter, PullUpCounter, PushUpCounter, SitUpCounter, SquatCounter
 from .features import extract_features
 from .intensity import classify_intensity
 from .models import Activity, Exercise, FrameFeatures, MultiAnalysisResult, SegmentResult
@@ -19,6 +19,11 @@ def _counter(exercise: Exercise):
         Exercise.SQUAT: SquatCounter,
         Exercise.JUMPING_JACK: JumpingJackCounter,
         Exercise.PUSH_UP: PushUpCounter,
+        Exercise.PULL_UP: PullUpCounter,
+        Exercise.LUNGE: LungeCounter,
+        Exercise.SIT_UP: SitUpCounter,
+        Exercise.MOUNTAIN_CLIMBER: MountainClimberCounter,
+        Exercise.BURPEE: BurpeeCounter,
     }[exercise]()
 
 
@@ -34,6 +39,14 @@ def _counter_metrics(exercise: Exercise, feature: FrameFeatures) -> dict[str, fl
             "wrist_above_shoulder": 1.0 if feature.wrists_up else 0.0,
             "ankle_to_shoulder_ratio": feature.ankle_to_shoulder_ratio,
         }
+    if exercise is Exercise.PULL_UP and feature.elbow_angle is not None:
+        return {"elbow_angle": feature.elbow_angle}
+    if exercise in {Exercise.LUNGE, Exercise.MOUNTAIN_CLIMBER} and feature.left_knee_angle is not None and feature.right_knee_angle is not None:
+        return {"left_knee_angle": feature.left_knee_angle, "right_knee_angle": feature.right_knee_angle}
+    if exercise is Exercise.SIT_UP and feature.hip_angle is not None:
+        return {"hip_angle": feature.hip_angle}
+    if exercise is Exercise.BURPEE and feature.knee_angle is not None:
+        return {"knee_angle": feature.knee_angle, "torso_horizontal": 1.0 if feature.torso_horizontal else 0.0}
     return None
 
 
@@ -60,6 +73,11 @@ def _exercise_segment(
             warnings=[],
         )
     exercise = Exercise(segment.activity.value)
+    if exercise is Exercise.PLANK:
+        confidence = confidence_from_pose_ratio(valid_pose_ratio, 1)
+        intensity = classify_intensity(exercise, 0)
+        met, estimated, low, high = calorie_summary(exercise, intensity, weight_kg, segment.duration_seconds, confidence)
+        return SegmentResult(exercise=exercise.value, start_seconds=round(segment.start_seconds, 2), end_seconds=round(segment.end_seconds, 2), duration_seconds=round(segment.duration_seconds, 2), repetitions=None, repetitions_per_minute=None, intensity=intensity.value, met_value=met, calories_estimated=estimated, calories_low=low, calories_high=high, confidence=confidence, warnings=[])
     counter = _counter(exercise)
     valid = 0
     for feature in features[segment.start_index:segment.end_index]:

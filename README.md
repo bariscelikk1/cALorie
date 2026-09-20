@@ -7,9 +7,11 @@ estimate. It does **not** claim medical or wearable-grade accuracy.
 
 ## Status
 
-V2 supports automatic segmentation of squats, jumping jacks and push-ups, plus
-manual exercise mode. Evaluation videos must still be recorded with consent
-before real accuracy figures can be reported.
+V2 supports automatic segmentation of squats, jumping jacks, push-ups,
+pull-ups, lunges, sit-ups, mountain climbers, burpees and planks, plus manual
+exercise mode. Plank is duration-based; the other movements use repetition
+state machines. Evaluation videos must still be recorded with consent before
+real accuracy figures can be reported.
 
 ## Live links
 
@@ -39,7 +41,8 @@ QStash requests and re-reads weight and exercise from the database.
 1. OpenCV reads FPS, frame count, duration and frames.
 2. MediaPipe Pose extracts body landmarks and visibility values.
 3. Normalized joint/motion features classify each frame as squat, jumping jack,
-   push-up, idle or unknown; smoothing turns labels into timeline segments.
+   push-up, pull-up, lunge, sit-up, mountain climber, burpee, plank, idle or
+   unknown; smoothing turns labels into timeline segments.
 4. Exercise-specific state machines count complete cycles in each segment:
    - squat: standing → lowered → standing using knee angle;
    - jumping jack: closed → open → closed using wrists and ankle width;

@@ -8,6 +8,7 @@ from .models import Point
 Landmarks = dict[str, Point]
 
 _NAMES = {
+    "nose": 0,
     "left_shoulder": 11,
     "right_shoulder": 12,
     "left_elbow": 13,
@@ -43,4 +44,3 @@ def extract_pose_landmarks(video_frames: Iterator) -> Iterator[Landmarks | None]
                 name: Point(source[index].x, source[index].y, source[index].visibility)
                 for name, index in _NAMES.items()
             }
-
