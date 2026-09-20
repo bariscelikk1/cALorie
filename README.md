@@ -18,6 +18,13 @@ real accuracy figures can be reported.
 - Production (unchanged until explicit promotion): https://c-a-lorie.vercel.app
 - Branch preview: https://c-a-lorie-git-feat-calorie-engine-v1-ayqmonki12-7626.vercel.app
 
+## Complete technical guide
+
+Read **[How cALorie works](docs/how-calorie-works.md)** for the full architecture,
+request and video-analysis flows, exercise rules, security model, deployment,
+limitations, diagrams, and a plain-language glossary of terms such as OpenCV,
+MediaPipe, landmarks, classifiers, MET, QStash and signed URLs.
+
 ## Architecture
 
 ```mermaid
