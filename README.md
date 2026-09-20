@@ -25,6 +25,9 @@ request and video-analysis flows, exercise rules, security model, deployment,
 limitations, diagrams, and a plain-language glossary of terms such as OpenCV,
 MediaPipe, landmarks, classifiers, MET, QStash and signed URLs.
 
+The teacher-ready Turkish report is available as a formatted Word document:
+**[cALorie Teknik Açıklama Raporu](docs/cALorie_Teknik_Aciklama_Raporu.docx)**.
+
 ## Architecture
 
 ```mermaid
