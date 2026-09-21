@@ -1,48 +1,191 @@
 # cALorie
 
-Upload a workout video, get an estimated calorie burn. See `/Users/bariscelik/.claude/plans/hola-we-are-starting-kind-waffle.md` for the full plan.
+cALorie is a university project that estimates energy expenditure from a short
+workout video. It uses pose landmarks to count repetitions, measures exercise
+pace, selects an exercise-specific MET value, and shows a transparent calorie
+estimate. It does **not** claim medical or wearable-grade accuracy.
 
-Two pieces:
-- `web/` — Next.js frontend + API routes, deployed on Vercel.
-- `worker/` — Python FastAPI service that does the actual video processing, deployed on Render.
+## Status
 
-Phase 0 status: scaffolded, using a **stub** worker (fake calorie numbers, no real video analysis yet) to prove the pipeline works end to end.
+V2 supports automatic segmentation of squats, jumping jacks, push-ups,
+pull-ups, lunges, sit-ups, mountain climbers, burpees and planks, plus manual
+exercise mode. Plank is duration-based; the other movements use repetition
+state machines. Evaluation videos must still be recorded with consent before
+real accuracy figures can be reported.
 
-## One-time account setup (Phase 0)
+## Live links
 
-You'll need four free accounts (no credit card required for any of them). Create each one yourself (sign-up flows aren't something I can do for you), then hand me the credentials listed so I can drop them into the env files.
+- Production (unchanged until explicit promotion): https://c-a-lorie.vercel.app
+- Branch preview: https://c-a-lorie-git-feat-calorie-engine-v1-ayqmonki12-7626.vercel.app
 
-### 1. Supabase (database + video storage) — done
-Used for both the `jobs` table and the `workout-videos` storage bucket, both already created and wired up.
+## Complete technical guide
 
-### 2. Upstash (job queue — QStash)
-1. Go to https://upstash.com → sign up → **QStash** in the sidebar.
-2. On the QStash overview page, copy the `QSTASH_TOKEN`.
+Read **[How cALorie works](docs/how-calorie-works.md)** for the full architecture,
+request and video-analysis flows, exercise rules, security model, deployment,
+limitations, diagrams, and a plain-language glossary of terms such as OpenCV,
+MediaPipe, landmarks, classifiers, MET, QStash and signed URLs.
 
-### 3. Render (worker hosting)
-1. Go to https://render.com → sign up → **New → Web Service**.
-2. Connect this repo (once pushed to GitHub) and point it at the `worker/` directory.
-3. Build command: `pip install -r requirements.txt`. Start command: `uvicorn main:app --host 0.0.0.0 --port $PORT`.
-4. Add environment variables `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` (same values as above) in Render's dashboard.
-5. Once deployed, copy the service's public URL (e.g. `https://calorie-worker.onrender.com`) → `WORKER_URL`.
+The Turkish report prepared for Selami Beyhan at Yıldız Technical University is
+available as a formatted Word document:
+**[cALorie Teknik Açıklama Raporu](docs/cALorie_Teknik_Aciklama_Raporu.docx)**.
 
-### 4. Vercel (frontend hosting)
-1. Go to https://vercel.com → sign up → **New Project** → import this repo, root directory `web/`.
-2. Add all variables from `web/.env.example` in Vercel's **Environment Variables** settings (`SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `QSTASH_TOKEN`, `WORKER_URL`).
-3. Deploy.
+## Architecture
 
-## Local development
+```mermaid
+flowchart LR
+  B[Browser] -->|signed PUT| S[Supabase private storage]
+  B -->|create job| N[Next.js API on Vercel]
+  N --> D[(Supabase jobs)]
+  N --> Q[QStash]
+  Q -->|signed request| W[FastAPI worker on Render]
+  W --> S
+  W -->|status + result| D
+  B -->|poll with access token| N
+```
+
+The browser never receives the Supabase service-role key. Upload claims bind a
+server-issued storage key to job creation. The worker accepts only verified
+QStash requests and re-reads weight and exercise from the database.
+
+## Analysis method
+
+1. OpenCV reads FPS, frame count, duration and frames.
+2. MediaPipe Pose extracts body landmarks and visibility values.
+3. Normalized joint/motion features classify each frame as squat, jumping jack,
+   push-up, pull-up, lunge, sit-up, mountain climber, burpee, plank, idle or
+   unknown; smoothing turns labels into timeline segments.
+4. Exercise-specific state machines count complete cycles in each segment:
+   - squat: standing → lowered → standing using knee angle;
+   - jumping jack: closed → open → closed using wrists and ankle width;
+   - push-up: extended → lowered → extended using elbow and body angles.
+5. Repetitions per minute determine light, moderate or vigorous intensity.
+6. A configured MET value is applied:
+
+```text
+Calories = MET × 3.5 × body_weight_kg / 200 × duration_minutes
+```
+
+The displayed range is ±15%, ±25% or ±35% for high, medium or low confidence.
+Confidence comes from valid-pose-frame ratio and complete counted repetitions;
+it is not random. A video with almost no valid pose frames fails instead of
+returning an invented value.
+
+## Result fields
+
+- `segments`: ordered activity segments with exercise, timing, repetitions,
+  calories, confidence and warnings.
+- `exercise_totals`: aggregated repetitions and calories by exercise.
+- `duration_seconds`: FPS/frame-count duration.
+- `total_calories_estimated`, `total_calories_low`, `total_calories_high`:
+  point estimate and quality-dependent range.
+- `valid_pose_frame_ratio`: frames with the required visible landmarks.
+- `warnings`: actionable camera or movement notes.
+
+## Local setup
+
+Requirements: Node.js 20+, Python 3.11, a Supabase project and QStash account.
+
+Apply `supabase/schema.sql` in the Supabase SQL editor. Then configure the web:
 
 ```bash
 cd web
-cp .env.example .env.local   # fill in the values collected above
+cp .env.example .env.local
+npm ci
 npm run dev
 ```
+
+Configure and run the worker in another terminal:
 
 ```bash
 cd worker
 cp .env.example .env
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
+python3.11 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements-dev.txt
+set -a; source .env; set +a
 uvicorn main:app --reload
 ```
+
+QStash must call the public URL in `WORKER_PUBLIC_URL`; a local tunnel is needed
+for a complete local queue test. Do not expose a development tunnel without
+signature verification enabled.
+
+## Environment variables
+
+Web (server-side only):
+
+- `SUPABASE_URL`
+- `SUPABASE_SERVICE_ROLE_KEY`
+- `QSTASH_TOKEN`
+- `WORKER_URL`
+- `UPLOAD_TOKEN_SECRET` — random string of at least 32 characters
+
+Worker:
+
+- `SUPABASE_URL`
+- `SUPABASE_SERVICE_ROLE_KEY`
+- `WORKER_PUBLIC_URL`
+- `QSTASH_CURRENT_SIGNING_KEY`
+- `QSTASH_NEXT_SIGNING_KEY`
+
+Never prefix these values with `NEXT_PUBLIC_` and never commit real `.env`
+files.
+
+## Testing
+
+```bash
+cd worker && pytest -q
+cd web && npm test
+cd web && npm run lint && npm run build
+```
+
+Core tests cover joint angles, invalid inputs, MET calories, state transitions,
+synthetic movement sequences, intensity and quality. API validation has its own
+web tests.
+
+## Evaluation
+
+Record consented sample videos and update `evaluation/manifest.csv`. Run:
+
+```bash
+python evaluation/run_evaluation.py
+```
+
+The reproducible CSV compares manual and predicted counts, actual and detected
+duration, pose coverage, calorie output and runtime. See `evaluation/README.md`.
+Do not report evaluation accuracy until real sample rows have been produced.
+
+## Deployment
+
+- Vercel: import the repository, choose `web/` as root and add web variables.
+- Render: use `render.yaml` and add worker secrets.
+- Supabase: apply the schema and keep the `workout-videos` bucket private.
+- QStash: use `WORKER_URL/process` and copy both signing keys to Render.
+
+## Video guidance
+
+- Keep exactly one person and all required joints in frame.
+- Use a stable camera and even lighting.
+- Squat: side or 45° view.
+- Jumping jack: front, full-body view.
+- Push-up: unobstructed side view.
+- Accepted formats: MP4, MOV, WebM; maximum 100 MB and 3 minutes.
+
+## Limitations and ethics
+
+MET values describe population averages. Actual expenditure varies with age,
+sex, technique, fitness, body composition and physiology. A monocular camera
+can lose landmarks through occlusion, loose clothing, poor lighting or an
+incorrect angle. The state-machine thresholds are explainable but must be
+evaluated on a diverse, consented dataset. Videos can contain sensitive personal
+data; use private storage and a retention/deletion policy in any public demo.
+
+## Future work
+
+- automatic exercise classification after a reliable labeled dataset exists;
+- per-user threshold calibration and more exercises;
+- durable queue workers instead of in-process background execution;
+- scheduled cleanup of stored videos and stale jobs;
+- authenticated history and stronger distributed rate limiting;
+- browser upload progress with resumable uploads;
+- evaluation charts and the final teacher presentation.

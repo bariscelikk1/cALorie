@@ -1,18 +1,29 @@
-import random
-import time
+import json
+import logging
+import tempfile
+from datetime import UTC, datetime
+from pathlib import Path
+from uuid import UUID
 
-from fastapi import BackgroundTasks, FastAPI
-from pydantic import BaseModel
+from fastapi import BackgroundTasks, FastAPI, Header, HTTPException, Request
+from pydantic import BaseModel, ConfigDict, Field
 
-from db import update_job
+from analysis.errors import AnalysisError
+from analysis.models import Exercise
+from analysis.pipeline import analyze_video
+from db import get_job, mark_processing, update_job
+from security import SignatureError, verify_qstash
+from storage import download_video, validate_storage_key
 
-app = FastAPI()
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("calorie-worker")
+app = FastAPI(title="cALorie worker", docs_url=None, redoc_url=None)
 
 
 class ProcessRequest(BaseModel):
-    job_id: str
-    video_key: str
-    weight_kg: float
+    model_config = ConfigDict(extra="forbid")
+    job_id: UUID
+    video_key: str = Field(min_length=45, max_length=80)
 
 
 @app.get("/health")
@@ -20,31 +31,59 @@ def health():
     return {"ok": True}
 
 
-@app.post("/process")
-def process(req: ProcessRequest, background_tasks: BackgroundTasks):
-    # Return immediately so QStash doesn't time out waiting for the (slow) pipeline.
-    update_job(req.job_id, status="processing")
-    background_tasks.add_task(run_pipeline_stub, req.job_id, req.weight_kg)
+@app.post("/process", status_code=202)
+async def process(
+    request: Request,
+    background_tasks: BackgroundTasks,
+    upstash_signature: str | None = Header(default=None),
+):
+    raw_body = await request.body()
+    try:
+        verify_qstash(upstash_signature, raw_body)
+        req = ProcessRequest.model_validate(json.loads(raw_body))
+        validate_storage_key(req.video_key)
+    except (SignatureError, ValueError, json.JSONDecodeError) as exc:
+        raise HTTPException(status_code=401, detail="Request verification failed") from exc
+
+    job = get_job(str(req.job_id))
+    if not job or job["video_key"] != req.video_key:
+        raise HTTPException(status_code=404, detail="Job not found")
+    if job["status"] == "done":
+        return {"accepted": False, "reason": "already completed"}
+    if not mark_processing(str(req.job_id)):
+        return {"accepted": False, "reason": "already processing"}
+
+    background_tasks.add_task(run_pipeline, str(req.job_id), req.video_key)
     return {"accepted": True}
 
 
-def run_pipeline_stub(job_id: str, weight_kg: float) -> None:
-    """
-    Phase 0 stub: no real video processing yet. Just proves the
-    upload -> job row -> queue -> worker -> status update -> polling
-    pipeline actually works end to end. Replaced in Phase 2/3 with
-    real pose estimation + calorie estimation.
-    """
-    time.sleep(5)
-    low = round(weight_kg * 4.5)
-    high = round(weight_kg * 6.5)
-    update_job(
-        job_id,
-        status="done",
-        result_json={
-            "calories_low": low,
-            "calories_high": high,
-            "confidence": random.choice(["low", "medium", "high"]),
-            "note": "stub result — real pose/calorie pipeline not implemented yet",
-        },
-    )
+def run_pipeline(job_id: str, video_key: str) -> None:
+    try:
+        job = get_job(job_id)
+        selected_exercise = None if job["exercise"] == "auto" else Exercise(job["exercise"])
+        with tempfile.TemporaryDirectory(prefix="calorie-") as directory:
+            path = Path(directory) / f"input{Path(video_key).suffix}"
+            download_video(video_key, path)
+            result = analyze_video(path, selected_exercise, float(job["weight_kg"]))
+        update_job(
+            job_id,
+            status="done",
+            result_json=result.to_dict(),
+            error_message=None,
+            completed_at=datetime.now(UTC).isoformat(),
+        )
+    except AnalysisError as exc:
+        update_job(
+            job_id,
+            status="error",
+            error_message=str(exc),
+            completed_at=datetime.now(UTC).isoformat(),
+        )
+    except Exception:
+        logger.exception("Unexpected pipeline failure for job %s", job_id)
+        update_job(
+            job_id,
+            status="error",
+            error_message="The video could not be analyzed. Please try another video.",
+            completed_at=datetime.now(UTC).isoformat(),
+        )

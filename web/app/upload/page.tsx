@@ -1,105 +1,45 @@
 "use client";
 
-import { useState } from "react";
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default function UploadPage() {
-  const router = useRouter();
-  const [file, setFile] = useState<File | null>(null);
-  const [weightKg, setWeightKg] = useState("");
-  const [uploading, setUploading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+const MAX_BYTES=100*1024*1024;
+const allowed=["video/mp4","video/quicktime","video/webm"];
+const manualExercises=[
+  {value:"squat",label:"Squat"},{value:"jumping_jack",label:"Jumping jack"},{value:"push_up",label:"Push-up"},
+  {value:"pull_up",label:"Pull-up"},{value:"lunge",label:"Lunge"},{value:"sit_up",label:"Sit-up"},
+  {value:"mountain_climber",label:"Mountain climber"},{value:"burpee",label:"Burpee"},{value:"plank",label:"Plank (timed)"},
+];
 
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setError(null);
+export default function UploadPage(){
+  const router=useRouter(); const abortRef=useRef<AbortController|null>(null);
+  const [file,setFile]=useState<File|null>(null); const [preview,setPreview]=useState<string|null>(null); const [duration,setDuration]=useState<number|null>(null);
+  const [weight,setWeight]=useState(""); const [mode,setMode]=useState<"auto"|"manual">("auto"); const [manualExercise,setManualExercise]=useState("squat");
+  const [phase,setPhase]=useState<"idle"|"checking"|"uploading"|"starting">("idle"); const [error,setError]=useState<string|null>(null); const busy=phase!=="idle";
+  useEffect(()=>()=>{if(preview)URL.revokeObjectURL(preview)},[preview]);
 
-    if (!file) {
-      setError("Choose a video first.");
-      return;
-    }
-    const weight = parseFloat(weightKg);
-    if (!weight || weight <= 0) {
-      setError("Enter your body weight in kg.");
-      return;
-    }
-
-    setUploading(true);
-    try {
-      const urlRes = await fetch("/api/upload-url", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ contentType: file.type }),
-      });
-      if (!urlRes.ok) throw new Error("Could not prepare upload.");
-      const { uploadUrl, key } = await urlRes.json();
-
-      const putRes = await fetch(uploadUrl, {
-        method: "PUT",
-        headers: { "Content-Type": file.type },
-        body: file,
-      });
-      if (!putRes.ok) throw new Error("Video upload failed.");
-
-      const jobRes = await fetch("/api/create-job", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ videoKey: key, weightKg: weight }),
-      });
-      if (!jobRes.ok) throw new Error("Could not start processing.");
-      const { jobId } = await jobRes.json();
-
-      router.push(`/results/${jobId}`);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Something went wrong.");
-      setUploading(false);
-    }
+  function choose(next:File|null){
+    setError(null); setDuration(null); if(preview)URL.revokeObjectURL(preview); setPreview(null);
+    if(!next){setFile(null);return} if(!allowed.includes(next.type)){setError("Choose an MP4, MOV, or WebM file.");return} if(next.size>MAX_BYTES){setError("Video must be smaller than 100 MB.");return}
+    const url=URL.createObjectURL(next); const video=document.createElement("video"); video.preload="metadata"; video.onloadedmetadata=()=>{if(video.duration>180||video.duration<=0){setError("Video must be between 1 second and 3 minutes.");URL.revokeObjectURL(url);return}setFile(next);setPreview(url);setDuration(video.duration)}; video.onerror=()=>{setError("This video could not be read.");URL.revokeObjectURL(url)}; video.src=url;
   }
-
-  return (
-    <main className="mx-auto max-w-md p-8">
-      <h1 className="text-2xl font-semibold mb-1">cALorie</h1>
-      <p className="text-sm text-neutral-500 mb-6">
-        Upload a workout video and get an estimated calorie burn.
-      </p>
-
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
-          <label className="block text-sm font-medium mb-1">Workout video</label>
-          <input
-            type="file"
-            accept="video/mp4,video/quicktime,video/webm"
-            onChange={(e) => setFile(e.target.files?.[0] ?? null)}
-            className="block w-full text-sm"
-          />
-        </div>
-
-        <div>
-          <label className="block text-sm font-medium mb-1">Body weight (kg)</label>
-          <input
-            type="number"
-            min={1}
-            step="0.1"
-            value={weightKg}
-            onChange={(e) => setWeightKg(e.target.value)}
-            className="block w-full rounded border border-neutral-300 px-3 py-2 text-sm"
-            placeholder="70"
-          />
-          <p className="text-xs text-neutral-500 mt-1">
-            Needed to estimate calories — the math is weight-dependent.
-          </p>
-        </div>
-
-        {error && <p className="text-sm text-red-600">{error}</p>}
-
-        <button
-          type="submit"
-          disabled={uploading}
-          className="w-full rounded bg-black px-4 py-2 text-sm font-medium text-white disabled:opacity-50"
-        >
-          {uploading ? "Uploading…" : "Analyze workout"}
-        </button>
-      </form>
-    </main>
-  );
+  async function submit(event:React.FormEvent){event.preventDefault();setError(null);const kg=Number(weight);if(!file)return setError("Choose a workout video first.");if(!Number.isFinite(kg)||kg<30||kg>250)return setError("Enter a body weight between 30 and 250 kg.");const controller=new AbortController();abortRef.current=controller;
+    try{setPhase("checking");const prepared=await fetch("/api/upload-url",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({contentType:file.type,size:file.size}),signal:controller.signal});const upload=await prepared.json();if(!prepared.ok)throw new Error(upload.error??"Could not prepare upload.");setPhase("uploading");const sent=await fetch(upload.uploadUrl,{method:"PUT",headers:{"Content-Type":file.type},body:file,signal:controller.signal});if(!sent.ok)throw new Error("Video upload failed.");setPhase("starting");const created=await fetch("/api/create-job",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({videoKey:upload.key,uploadToken:upload.uploadToken,weightKg:kg,exercise:mode==="auto"?"auto":manualExercise}),signal:controller.signal});const job=await created.json();if(!created.ok)throw new Error(job.error??"Could not start analysis.");router.push(`/results/${job.jobId}?token=${job.accessToken}`)}catch(reason){setError(reason instanceof DOMException&&reason.name==="AbortError"?"Upload cancelled.":reason instanceof Error?reason.message:"Something went wrong.");setPhase("idle")}}
+  return <main className="min-h-screen bg-[#0c0e0d]"><header className="shell site-header"><Link href="/" className="brand"><span className="brand-mark">C</span>cALorie</Link><span className="font-mono text-[10px] font-bold tracking-[.12em] text-[#8d958f]">NEW ANALYSIS</span></header>
+    <form onSubmit={submit} className="shell grid min-h-[calc(100vh-80px)] lg:grid-cols-[1.55fr_.85fr]">
+      <section className="py-10 lg:border-r lg:border-[#30362f] lg:pr-12"><p className="eyebrow">01 / Add video</p><h1 className="mt-4 text-4xl font-black tracking-[-.055em] sm:text-5xl">Give the movement room.</h1><p className="mt-3 text-sm text-[#8d958f]">One person · steady camera · working joints visible</p>
+        <label htmlFor="video" onDragOver={e=>e.preventDefault()} onDrop={e=>{e.preventDefault();choose(e.dataTransfer.files[0]??null)}} className="mt-8 grid min-h-72 cursor-pointer place-items-center border border-dashed border-[#454c46] bg-[#131714] p-8 text-center transition hover:border-[#bbf236]"><input id="video" className="sr-only" type="file" accept="video/mp4,video/quicktime,video/webm" onChange={e=>choose(e.target.files?.[0]??null)}/><span><i className="mx-auto grid h-16 w-16 place-items-center bg-[#bbf236] text-3xl not-italic text-[#0c0e0d]">↑</i><b className="mt-5 block text-sm uppercase tracking-wider">Drop your workout here</b><span className="helper mt-2 block">MP4, MOV or WebM · up to 100 MB · 3 min max</span></span></label>
+        {preview?<div className="mt-5"><video className="aspect-video w-full bg-black object-contain" src={preview} controls preload="metadata"/><div className="mt-3 flex flex-wrap justify-between gap-2 text-xs"><b className="max-w-[70%] truncate">{file?.name}</b><span className="text-[#8d958f]">{(file!.size/1024/1024).toFixed(1)} MB · {duration?.toFixed(1)} sec</span></div></div>:null}
+        <div className="mt-7 grid grid-cols-2 border-y border-[#30362f] text-[10px] font-bold tracking-wider text-[#a0a7a1] sm:grid-cols-4">{["Full body","Stable camera","Even light","One person"].map((item,index)=><span className="border-[#30362f] px-4 py-5 sm:border-r" key={item}><i className="mr-2 not-italic text-[#bbf236]">0{index+1}</i>{item.toUpperCase()}</span>)}</div>
+      </section>
+      <aside className="bg-[#131714] px-0 py-10 lg:px-10"><p className="eyebrow">02 / Analysis setup</p><h2 className="mt-4 text-3xl font-black tracking-[-.04em]">Set the context.</h2><div className="mt-8"><label htmlFor="weight" className="label">Body weight (kg)</label><input id="weight" className="input" type="number" min="30" max="250" step="0.1" placeholder="70" value={weight} onChange={e=>setWeight(e.target.value)}/><p className="helper mt-2">Used only in the MET calculation.</p></div>
+        <fieldset className="mt-8"><legend className="label">Analysis mode</legend><label className={`flex cursor-pointer gap-3 border p-4 ${mode==="auto"?"border-[#bbf236]":"border-[#30362f]"}`}><input className="accent-[#bbf236]" type="radio" checked={mode==="auto"} onChange={()=>setMode("auto")}/><span><b className="block text-xs uppercase tracking-wide">Automatic mixed workout</b><span className="helper">Separates supported exercises, rest and unknown periods.</span></span></label><label className={`mt-3 flex cursor-pointer gap-3 border p-4 ${mode==="manual"?"border-[#bbf236]":"border-[#30362f]"}`}><input className="accent-[#bbf236]" type="radio" checked={mode==="manual"} onChange={()=>setMode("manual")}/><span><b className="block text-xs uppercase tracking-wide">Manual single exercise</b><span className="helper">Use when the full video contains one known movement.</span></span></label></fieldset>
+        {mode==="manual"&&<div className="mt-5"><label className="label" htmlFor="exercise">Exercise override</label><select id="exercise" className="input" value={manualExercise} onChange={e=>setManualExercise(e.target.value)}>{manualExercises.map(item=><option value={item.value} key={item.value}>{item.label}</option>)}</select></div>}
+        <details className="mt-7 border-y border-[#30362f] py-4"><summary className="cursor-pointer text-xs font-bold uppercase tracking-wide">9 supported movements & camera guide</summary><p className="mt-4 text-xs leading-5 text-[#8d958f]">Front view: jumping jack, lunge, mountain climber. Side view: squat, push-up, sit-up, burpee and plank. Pull-up: full body with hands and bar area visible.</p></details>
+        {error&&<p role="alert" className="error mt-6">{error}</p>}{busy&&<div className="mt-6" role="status"><div className="flex justify-between text-xs font-bold"><span>{phase==="checking"?"Preparing":phase==="uploading"?"Uploading":"Starting analysis"}</span><span>{phase==="checking"?"25%":phase==="uploading"?"65%":"100%"}</span></div><div className="mt-2 h-1 bg-[#30362f]"><div className={`h-full bg-[#bbf236] ${phase==="checking"?"w-1/4":phase==="uploading"?"w-2/3":"w-full"}`}/></div></div>}
+        <div className="mt-7 flex gap-2"><button className="button flex-1" type="submit" disabled={busy}>{busy?"Working…":"Analyze video →"}</button>{busy&&<button className="button secondary" type="button" onClick={()=>abortRef.current?.abort()}>Cancel</button>}</div><p className="helper mt-4">Activity estimate, not a medical measurement.</p>
+      </aside>
+    </form>
+  </main>;
 }

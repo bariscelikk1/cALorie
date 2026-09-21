@@ -1,4 +1,5 @@
 import os
+from datetime import UTC, datetime
 
 from supabase import Client, create_client
 
@@ -21,3 +22,15 @@ def get_job(job_id: str) -> dict:
 
 def update_job(job_id: str, **fields) -> None:
     get_client().table("jobs").update(fields).eq("id", job_id).execute()
+
+
+def mark_processing(job_id: str) -> bool:
+    result = (
+        get_client()
+        .table("jobs")
+        .update({"status": "processing", "started_at": datetime.now(UTC).isoformat()})
+        .eq("id", job_id)
+        .eq("status", "queued")
+        .execute()
+    )
+    return bool(result.data)
