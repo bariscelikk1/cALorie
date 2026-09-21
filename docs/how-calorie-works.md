@@ -380,35 +380,7 @@ URLs and secrets. Real secret values must never be committed to GitHub.
 Any ordered processing chain. Here it usually means video decode → pose →
 features → labels → segments → counts → calories → result.
 
-## 7. YOLO, RetinaNet, and what cALorie actually uses
-
-cALorie does **not** currently use YOLO or RetinaNet.
-
-- YOLO is mainly an object-detection family: it draws boxes around objects and
-  assigns object categories.
-- RetinaNet is also an object detector, known for focal loss that addresses
-  foreground/background class imbalance.
-- MediaPipe Pose is a pose estimator: it returns articulated body landmarks,
-  which are more useful than a single person bounding box for measuring joint
-  motion.
-
-The actual stack is:
-
-```text
-OpenCV video frames
-    → MediaPipe Pose landmarks
-    → custom geometric features
-    → custom heuristic activity scores
-    → temporal smoothing and segmentation
-    → custom per-exercise state machines
-    → MET calorie calculation
-```
-
-A future learned sequence model could replace or assist the heuristic activity
-classifier, but only after collecting or adopting a suitable labeled dataset
-and reporting evaluation results honestly.
-
-## 8. Data and job states
+## 7. Data and job states
 
 ```mermaid
 stateDiagram-v2
@@ -429,7 +401,7 @@ mode, weight, status, timestamps, access token, structured result, and a safe
 error field. The result contains timeline segments, per-exercise totals,
 duration, calorie estimate and range, valid-pose ratio, confidence, and warnings.
 
-## 9. Security and privacy design
+## 8. Security and privacy design
 
 - Videos are stored in a private bucket.
 - Browser uploads and playback use short-lived signed URLs.
@@ -445,7 +417,7 @@ duration, calorie estimate and range, valid-pose ratio, confidence, and warnings
 Videos can still contain sensitive biometric and environmental information. A
 public deployment needs a clear consent, retention, and deletion policy.
 
-## 10. Deployment and configuration
+## 9. Deployment and configuration
 
 | Service | Deployed component | Required configuration |
 |---|---|---|
@@ -457,7 +429,7 @@ public deployment needs a clear consent, retention, and deletion policy.
 The committed `.env.example` files show variable names only. Actual values live
 in local or hosting-provider secret settings.
 
-## 11. Accuracy, limitations, and honest interpretation
+## 10. Accuracy, limitations, and honest interpretation
 
 Current limitations include:
 
@@ -478,7 +450,7 @@ obtain representative labeled videos, compare predicted segments and counts to
 human annotations, and report metrics such as count mean absolute error,
 segment precision/recall, pose coverage, runtime, and failure rate.
 
-## 12. Sensible future upgrades
+## 11. Sensible future upgrades
 
 1. Build a versioned, consented evaluation dataset covering different people,
    viewpoints, lighting, tempos, and technique variations.
@@ -492,7 +464,7 @@ segment precision/recall, pose coverage, runtime, and failure rate.
 7. Add automatic storage cleanup and a user-facing deletion control.
 8. Publish an evaluation report and model/version metadata with every result.
 
-## 13. Code map
+## 12. Code map
 
 | Area | Important path | Purpose |
 |---|---|---|
@@ -510,7 +482,7 @@ segment precision/recall, pose coverage, runtime, and failure rate.
 | Database | `supabase/schema.sql`, `supabase/migrations/` | Define storage policies and job schema |
 | Evaluation | `evaluation/` | Compare predictions with annotated samples |
 
-## 14. Further reading
+## 13. Further reading
 
 - [OpenCV documentation](https://docs.opencv.org/)
 - [MediaPipe Pose Landmarker documentation](https://ai.google.dev/edge/mediapipe/solutions/vision/pose_landmarker)
