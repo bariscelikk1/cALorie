@@ -5,6 +5,15 @@ workout video. It uses pose landmarks to count repetitions, measures exercise
 pace, selects an exercise-specific MET value, and shows a transparent calorie
 estimate. It does **not** claim medical or wearable-grade accuracy.
 
+> [!IMPORTANT]
+> **Major rebuild in progress.** The deployed web application and rule-based
+> analyzer remain available as the first prototype, but the active project is
+> being reshaped into a local-first, dataset-driven exercise recognition
+> system. The new pipeline converts videos into normalized MediaPipe pose
+> sequences and will train and evaluate a TCN across at least 15 exercises.
+> Accuracy will be reported only from person-separated validation and test
+> sets, not from the training data.
+
 ## Status
 
 V2 supports automatic segmentation of squats, jumping jacks, push-ups,
@@ -12,6 +21,12 @@ pull-ups, lunges, sit-ups, mountain climbers, burpees and planks, plus manual
 exercise mode. Plank is duration-based; the other movements use repetition
 state machines. Evaluation videos must still be recorded with consent before
 real accuracy figures can be reported.
+
+The rebuild lives in [`ml/`](ml/). Its first Colab smoke test successfully
+processed 14/14 videos across seven exercise classes. All clips passed pose
+detection quality checks; the lowest detected-frame ratio was 95.8%. The next
+milestone processes all 234 relevant clips from the first dataset, adds more
+datasets and classes, then compares an explainable baseline with the TCN.
 
 ## Live links
 

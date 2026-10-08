@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "exercises": [
+    "squat",
+    "push_up",
+    "jumping_jack",
+    "pull_up",
+    "lunge",
+    "sit_up",
+    "mountain_climber",
+    "burpee",
+    "plank",
+    "shoulder_press",
+    "dumbbell_row",
+    "tricep_extension",
+    "bicep_curl",
+    "lateral_raise",
+    "glute_bridge"
+  ],
+  "non_exercise_classes": ["unknown"],
+  "static_exercises": ["plank"]
+}
