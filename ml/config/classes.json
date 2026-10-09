@@ -7,15 +7,15 @@
     "pull_up",
     "lunge",
     "sit_up",
-    "mountain_climber",
-    "burpee",
+    "bench_press",
+    "deadlift",
     "plank",
     "shoulder_press",
     "dumbbell_row",
     "tricep_extension",
     "bicep_curl",
     "lateral_raise",
-    "glute_bridge"
+    "lat_pulldown"
   ],
   "non_exercise_classes": ["unknown"],
   "static_exercises": ["plank"]

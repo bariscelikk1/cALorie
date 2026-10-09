@@ -24,9 +24,10 @@ real accuracy figures can be reported.
 
 The rebuild lives in [`ml/`](ml/). Its first Colab smoke test successfully
 processed 14/14 videos across seven exercise classes. All clips passed pose
-detection quality checks; the lowest detected-frame ratio was 95.8%. The next
-milestone processes all 234 relevant clips from the first dataset, adds more
-datasets and classes, then compares an explainable baseline with the TCN.
+detection quality checks; the lowest detected-frame ratio was 95.8%. The full
+pipeline now selects 378 clips across ten classes from Workout/Fitness Video,
+adds five movements and person-grouped pose data from MM-Fit, and trains a
+15-class TCN with group-separated evaluation.
 
 ## Live links
 

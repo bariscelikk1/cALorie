@@ -15,6 +15,16 @@ pull-up, push-up, shoulder press, and squat. All 14 clips produced normalized
 validates the extraction and transfer format only. It is not a training result
 or an accuracy claim.
 
+## Current 15-class target
+
+The evidence-driven class set is squat, push-up, jumping jack, pull-up, lunge,
+sit-up, plank, shoulder press, dumbbell row, tricep extension, bicep curl,
+lateral raise, bench press, deadlift, and lat pulldown. The first ten are
+available in Workout/Fitness Video; MM-Fit supplies additional people and five
+new movements. Burpee, mountain climber, and glute bridge remain external-data
+candidates because the currently audited source contains too few canonical
+examples to support a defensible trained class.
+
 ## First milestone
 
 1. Audit dataset access, licenses, identities, and labels.
@@ -37,3 +47,9 @@ validation.
 - State machines count exercise phases and complete cycles.
 - Evaluation reports Macro F1, per-class precision/recall/F1, confusion matrix,
   repetition MAE, exact-count accuracy, and off-by-one accuracy.
+
+## Colab notebooks
+
+1. `01_colab_extract_workoutfitness.ipynb` extracts and downloads 378 landmark clips.
+2. `02_colab_prepare_mmfit.ipynb` converts official MM-Fit 2D pose sets without downloading RGB-D video.
+3. `03_colab_train_tcn.ipynb` combines either or both ZIPs, performs group-separated splits, trains the TCN, and downloads the model and evaluation report.

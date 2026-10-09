@@ -19,15 +19,15 @@ those names before training.
 - `pull_up`: hanging movement that raises the torso by flexing the elbows and shoulders.
 - `lunge`: split stance or alternating step with a lowered rear/front knee.
 - `sit_up`: supine movement that raises the torso toward the legs.
-- `mountain_climber`: supported horizontal posture with alternating knee drives.
-- `burpee`: compound standing-to-floor-to-standing movement, optionally including a jump or push-up.
+- `bench_press`: supine press that moves a barbell or weights away from the chest and back.
+- `deadlift`: standing hip-hinge that lifts a weight from a lowered position and returns it.
 - `plank`: static supported horizontal posture; measure duration, not repetitions.
 - `shoulder_press`: hands/weights press from shoulder level to overhead.
 - `dumbbell_row`: bent or supported torso with elbow pulling the hand/weight toward the torso.
 - `tricep_extension`: elbow extends against resistance while the upper arm stays comparatively stable.
 - `bicep_curl`: elbow flexes to bring the hand/weight toward the shoulder.
 - `lateral_raise`: arms rise laterally from the sides toward shoulder height.
-- `glute_bridge`: supine posture with the hips raised and lowered.
+- `lat_pulldown`: seated or kneeling pull that brings an overhead bar toward the upper torso.
 - `unknown`: rest, transitions, unsupported exercise, incomplete setup, camera adjustment, or ambiguous motion.
 
 ## Repetition counting
