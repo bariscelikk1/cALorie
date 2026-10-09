@@ -50,6 +50,12 @@ validation.
 
 ## Colab notebooks
 
-1. `01_colab_extract_workoutfitness.ipynb` extracts and downloads 378 landmark clips.
-2. `02_colab_prepare_mmfit.ipynb` converts official MM-Fit 2D pose sets without downloading RGB-D video.
-3. `03_colab_train_tcn.ipynb` combines either or both ZIPs, performs group-separated splits, trains the TCN, and downloads the model and evaluation report.
+The current rebuild uses five small, sequential notebooks:
+
+1. `01_colab_extract_workoutfitness.ipynb` converts selected Workout/Fitness videos to normalized 17-joint pose sequences.
+2. `02_colab_prepare_mmfit.ipynb` converts the labeled MM-Fit exercise sets to the same representation.
+3. `02b_colab_prepare_mmfit_unknown.ipynb` exports the unlabeled gaps between MM-Fit sets as `unknown` examples for rest and transitions.
+4. `03_colab_train_tcn.ipynb` trains and evaluates the exercise TCN from all uploaded landmark ZIPs.
+5. `04_colab_analyze_mixed_video.ipynb` runs the trained model over a long mixed-workout video and produces a smoothed timeline.
+
+For the final mixed-video model, upload all three landmark ZIPs to notebook 03. Notebook 04 expects the report ZIP produced by notebook 03; its `tcn_model.pt` contains the class list and model weights.
