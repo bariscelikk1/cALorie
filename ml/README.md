@@ -7,13 +7,19 @@ repetitions; plank is measured by duration.
 
 ## Verified progress
 
-The Colab landmark pipeline in
-[`notebooks/01_colab_tasks_extract_landmarks.ipynb`](notebooks/01_colab_tasks_extract_landmarks.ipynb)
-has completed a 14-video smoke test across bicep curl, lateral raise, plank,
-pull-up, push-up, shoulder press, and squat. All 14 clips produced normalized
-17-joint pose sequences; the minimum detected-frame ratio was 95.8%. This test
-validates the extraction and transfer format only. It is not a training result
-or an accuracy claim.
+The landmark pipelines have produced three compatible archives: 368 usable
+Workout/Fitness clips, 616 MM-Fit exercise clips, and 252 MM-Fit `unknown`
+clips. The first 16-class TCN reached 87.6% held-out window accuracy, but that
+number does not describe performance on long, unseen workouts.
+
+Two frozen external tests now expose the generalization gap. A 45-second
+jumping-jack/burpee video produced no correct jumping-jack windows. A separately
+annotated 917-second mixed workout achieved 42.3% stable-interior accuracy,
+66.5% supported-exercise accuracy, 32.7% unsupported-exercise rejection, and
+26.2% transition rejection at the notebook's 0.55 threshold. MediaPipe detected
+a pose in 99.9% of sampled frames, so the main bottleneck is exercise
+recognition and rejection rather than landmark extraction. See
+[`artifacts/v1/README.md`](artifacts/v1/README.md) for the frozen evidence.
 
 ## Current 15-class target
 
@@ -59,3 +65,19 @@ The current rebuild uses five small, sequential notebooks:
 5. `04_colab_analyze_mixed_video.ipynb` runs the trained model over a long mixed-workout video and produces a smoothed timeline.
 
 For the final mixed-video model, upload all three landmark ZIPs to notebook 03. Notebook 04 expects the report ZIP produced by notebook 03; its `tcn_model.pt` contains the class list and model weights.
+
+## External evaluation
+
+Notebook 04 exports model predictions, but it cannot measure accuracy without
+independent human labels. Score an exported mixed-video analysis with:
+
+```bash
+python ml/scripts/score_exported_mixed_video.py \
+  --predictions path/to/window_predictions.csv \
+  --annotations path/to/labels_v1.csv \
+  --output path/to/evaluation
+```
+
+Keep each external-test video and its labels out of training. Compare future
+models on the same frozen tests using supported-class accuracy, unknown and
+transition rejection, balanced accuracy, macro F1, and per-movement errors.
