@@ -18,8 +18,10 @@ recognized 66.5% of supported exercise windows but rejected only 32.7% of
 unsupported exercise and 26.2% of transitions. TCN v3 rejected 79.6% of
 unsupported exercise and 88.9% of transitions, but recognized only 33.0% of
 supported windows. Its higher overall accuracy was driven by the many
-`unknown` windows. This evidence motivates the two-stage model below rather
-than another single 16-class retrain. See [`artifacts/v3/README.md`](artifacts/v3/README.md).
+`unknown` windows. The two-stage v4 candidate recovered supported accuracy to
+47.5%, but unsupported rejection fell to 32.7% and transition rejection to
+54.0%. The gate is therefore the current bottleneck. See
+[`artifacts/v4/README.md`](artifacts/v4/README.md).
 
 ## Current 15-class target
 
@@ -73,8 +75,10 @@ The current rebuild uses ten sequential notebooks:
 
 Notebook 08 downloads all six versioned landmark ZIPs from GitHub by default.
 Run it on T4 and preserve `calorie_two_stage_tcn_report.zip`. Notebook 09 runs
-on CPU and initially asks for that report ZIP; its external analysis determines
-whether the two-stage design improves the supported/rejection trade-off.
+on CPU and downloads the archived report automatically. Its locked external
+evaluation shows that v4 recovers supported recognition to 47.5% but reduces
+unsupported rejection to 32.7%; the gate still needs better hard negatives,
+boundary handling, or a revised decision rule.
 
 ## External evaluation
 

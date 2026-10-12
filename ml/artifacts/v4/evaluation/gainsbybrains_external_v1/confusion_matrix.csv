@@ -1,0 +1,12 @@
+true_class,bicep_curl,deadlift,jumping_jack,lateral_raise,lunge,plank,pull_up,push_up,squat,tricep_extension,unknown
+bicep_curl,0,0,0,0,0,0,0,0,0,0,0
+deadlift,0,0,0,0,0,0,0,0,0,0,0
+jumping_jack,0,0,37,0,0,0,0,0,0,0,0
+lateral_raise,0,0,0,0,0,0,0,0,0,0,0
+lunge,0,0,0,0,0,0,0,0,0,0,0
+plank,0,0,0,0,0,18,0,5,0,0,51
+pull_up,0,0,0,0,0,0,0,0,0,0,0
+push_up,0,0,0,0,0,0,0,0,0,0,0
+squat,0,0,0,0,0,0,0,0,50,23,37
+tricep_extension,0,0,0,0,0,0,0,0,0,0,0
+unknown,131,15,2,2,10,0,13,75,41,0,180
