@@ -59,7 +59,7 @@ validation.
 
 ## Colab notebooks
 
-The current rebuild uses seven small, sequential notebooks:
+The current rebuild uses eight small, sequential notebooks:
 
 1. `01_colab_extract_workoutfitness.ipynb` converts selected Workout/Fitness videos to normalized 17-joint pose sequences.
 2. `02_colab_prepare_mmfit.ipynb` converts the labeled MM-Fit exercise sets to the same representation.
@@ -68,8 +68,11 @@ The current rebuild uses seven small, sequential notebooks:
 5. `04_colab_analyze_mixed_video.ipynb` downloads the versioned TCN v2 checkpoint, reruns the locked GainsByBrains test, and produces a smoothed timeline.
 6. `05_colab_extract_youtube_mixed_landmarks.ipynb` downloads three reviewed long-form training videos and exports their labelled landmark segments.
 7. `06_colab_extract_additional_youtube_landmarks.ipynb` processes the three earlier reviewed YouTube training videos that were missing from TCN v2, adding 111 segments without touching the locked tests.
+8. `07_colab_extract_youtube_training_v4.ipynb` extracts 212 reviewed segments from four additional single-person long workouts while keeping the new creator-separated test locked.
 
-Notebook 03 downloads all four versioned landmark ZIPs from GitHub by default.
+Notebook 03 downloads the versioned landmark ZIPs from GitHub by default. Add
+the notebook 07 archive to its input list for the next TCN comparison; keep the
+older archives too because each contains different source-video groups.
 Notebook 04 expects the report ZIP produced by notebook 03; its `tcn_model.pt`
 contains the class list and model weights.
 

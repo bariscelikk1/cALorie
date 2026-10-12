@@ -1,6 +1,6 @@
 # Reviewed YouTube mixed-workout timelines
 
-This directory contains metadata and reviewed temporal labels for six training
+This directory contains metadata and reviewed temporal labels for ten training
 sources. Raw YouTube videos are intentionally excluded from Git.
 
 | Video | Segments | Review evidence |
@@ -11,6 +11,10 @@ sources. Raw YouTube videos are intentionally excluded from Git.
 | Fraser Wilson (`IeGrTqW5lek`) | 41 | Reviewed contiguous exercise timeline |
 | Home Fitness Challenge (`85XS8onO9Q4`) | 24 | Reviewed contiguous exercise and transition timeline |
 | MadFit (`LqW9gdpctKE`) | 46 | Reviewed contiguous beginner-workout timeline |
+| Pamela Reif (`UItWltVZZmE`) | 45 | On-screen 30-second blocks plus sequential contact sheets |
+| Heather Robertson (`Gzp8IA2vW_Q`) | 41 | Four rounds, exercise names, countdown, and contact sheets |
+| Caroline Girvan (`fegQSC-nUtg`) | 85 | Creator sequence plus on-screen 20/10 timer and contact sheets |
+| MadFit (`2Z9g-AZinUc`) | 41 | Five workout sections, countdown, and contact sheets |
 
 Run `ml/notebooks/05_colab_extract_youtube_mixed_landmarks.ipynb` in a Colab
 CPU runtime. It downloads the source videos temporarily, extracts MediaPipe
@@ -23,7 +27,20 @@ segments were missing from the TCN v2 landmark inputs. The notebook creates a
 separate archive, so the 91 segments already produced by notebook 05 are not
 processed again.
 
-Unsupported movements, transitions, rests, intros, and outros are deliberately
+Run `ml/notebooks/07_colab_extract_youtube_training_v4.ipynb` in a **CPU
+runtime** to process the four `train_v4` sources. It downloads the videos only
+inside the temporary Colab runtime and produces
+`calorie_youtube_training_landmarks_v4.zip` containing 212 reviewed segments.
+The archive is cumulative for this batch and can be uploaded alongside the
+earlier landmark ZIPs when retraining.
+
+Unsupported movements, compound exercises, transitions, rests, intros, and outros are deliberately
 labelled `unknown`. This supplies rejection examples for long mixed-workout
 analysis. GainsByBrains, Sunny Health, and Nobadaddiction remain separately
-held-out external tests and must stay out of every training archive.
+held-out external tests and must stay out of every training archive. Heather
+Robertson's no-repeat workout (`iSj7k4EXqho`) is the locked `external_test_v3`
+source and must also stay out of training and threshold selection.
+
+Growingannanas (`ROg_FeobtzI`) and HASfit (`lJGxljpd7Fc`) were inspected and
+rejected because both videos show two athletes. Feeding either one to the
+single-pose extractor would mix identities across frames.
