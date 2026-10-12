@@ -55,3 +55,16 @@ generalization problem hidden by ordinary short-clip scores. It is a candidate
 checkpoint until it is evaluated on the frozen GainsByBrains, Sunny Health,
 and Nobadaddiction long-video tests. Those external videos remain excluded
 from training.
+
+## Locked long-video result
+
+The candidate has now been evaluated on the frozen GainsByBrains test using the
+same labels, boundary guard, and 0.55 threshold as v1. Stable accuracy fell from
+42.32% to 32.46%, supported-exercise accuracy fell from 66.52% to 49.32%, and
+unsupported-exercise rejection fell from 32.65% to 20.70%. Transition rejection
+improved from 26.19% to 34.92%.
+
+See `evaluation/gainsbybrains_external_v1/` for the raw inference export,
+scored predictions, per-movement results, and direct v1/v2 comparison. V2 is
+retained as an experiment, but the locked evidence does not support promoting
+it over v1.
