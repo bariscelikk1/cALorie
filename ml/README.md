@@ -7,22 +7,19 @@ repetitions; plank is measured by duration.
 
 ## Verified progress
 
-The landmark pipelines have produced four compatible archives: 368 usable
-Workout/Fitness clips, 616 MM-Fit exercise clips, 252 MM-Fit `unknown` clips,
-and 91 reviewed segments from three long-form YouTube workouts. The YouTube
-archive contributes 39,652 landmark frames, including unsupported movements,
-rests, previews, and transitions labelled `unknown`. The first 16-class TCN
-reached 87.6% held-out window accuracy, but that number does not describe
-performance on long, unseen workouts.
+The landmark pipelines now produce six compatible archives: Workout/Fitness,
+MM-Fit exercise and `unknown`, and three reviewed long-form YouTube batches.
+The newest YouTube batch adds 205 usable segments from four independent source
+videos after seven low-detection `unknown` segments are filtered. All archives
+retain source groups so related windows stay in one split.
 
-Two frozen external tests now expose the generalization gap. A 45-second
-jumping-jack/burpee video produced no correct jumping-jack windows. A separately
-annotated 917-second mixed workout achieved 42.3% stable-interior accuracy,
-66.5% supported-exercise accuracy, 32.7% unsupported-exercise rejection, and
-26.2% transition rejection at the notebook's 0.55 threshold. MediaPipe detected
-a pose in 99.9% of sampled frames, so the main bottleneck is exercise
-recognition and rejection rather than landmark extraction. See
-[`artifacts/v1/README.md`](artifacts/v1/README.md) for the frozen evidence.
+The locked 917-second mixed workout exposed opposite failure modes. TCN v1
+recognized 66.5% of supported exercise windows but rejected only 32.7% of
+unsupported exercise and 26.2% of transitions. TCN v3 rejected 79.6% of
+unsupported exercise and 88.9% of transitions, but recognized only 33.0% of
+supported windows. Its higher overall accuracy was driven by the many
+`unknown` windows. This evidence motivates the two-stage model below rather
+than another single 16-class retrain. See [`artifacts/v3/README.md`](artifacts/v3/README.md).
 
 ## Current 15-class target
 
@@ -52,29 +49,32 @@ validation.
 
 - MediaPipe Pose provides frame-level landmarks.
 - A Random Forest provides an explainable learned baseline.
-- A PyTorch TCN learns exercise identity from normalized landmark sequences.
+- A gate TCN learns supported motion versus `unknown`/transition.
+- A second TCN classifies accepted windows among the 15 supported exercises.
+- A validation-only threshold sweep calibrates the gate without using locked-test labels.
 - State machines count exercise phases and complete cycles.
 - Evaluation reports Macro F1, per-class precision/recall/F1, confusion matrix,
   repetition MAE, exact-count accuracy, and off-by-one accuracy.
 
 ## Colab notebooks
 
-The current rebuild uses eight small, sequential notebooks:
+The current rebuild uses ten sequential notebooks:
 
 1. `01_colab_extract_workoutfitness.ipynb` converts selected Workout/Fitness videos to normalized 17-joint pose sequences.
 2. `02_colab_prepare_mmfit.ipynb` converts the labeled MM-Fit exercise sets to the same representation.
 3. `02b_colab_prepare_mmfit_unknown.ipynb` exports the unlabeled gaps between MM-Fit sets as `unknown` examples for rest and transitions.
-4. `03_colab_train_tcn.ipynb` trains and evaluates the exercise TCN from all uploaded landmark ZIPs.
-5. `04_colab_analyze_mixed_video.ipynb` downloads the versioned TCN v2 checkpoint, reruns the locked GainsByBrains test, and produces a smoothed timeline.
+4. `03_colab_train_tcn.ipynb` preserves the single-stage 16-class baseline.
+5. `04_colab_analyze_mixed_video.ipynb` evaluates the archived single-stage candidate on locked GainsByBrains and scores it against frozen labels.
 6. `05_colab_extract_youtube_mixed_landmarks.ipynb` downloads three reviewed long-form training videos and exports their labelled landmark segments.
 7. `06_colab_extract_additional_youtube_landmarks.ipynb` processes the three earlier reviewed YouTube training videos that were missing from TCN v2, adding 111 segments without touching the locked tests.
 8. `07_colab_extract_youtube_training_v4.ipynb` extracts 212 reviewed segments from four additional single-person long workouts while keeping the new creator-separated test locked.
+9. `08_colab_train_two_stage_tcn.ipynb` trains the binary gate and 15-class exercise TCN from all six versioned archives in one T4 session.
+10. `09_colab_evaluate_two_stage_tcn.ipynb` evaluates the two-stage checkpoint on locked GainsByBrains using CPU and exports a scored report.
 
-Notebook 03 downloads the versioned landmark ZIPs from GitHub by default. Add
-the notebook 07 archive to its input list for the next TCN comparison; keep the
-older archives too because each contains different source-video groups.
-Notebook 04 expects the report ZIP produced by notebook 03; its `tcn_model.pt`
-contains the class list and model weights.
+Notebook 08 downloads all six versioned landmark ZIPs from GitHub by default.
+Run it on T4 and preserve `calorie_two_stage_tcn_report.zip`. Notebook 09 runs
+on CPU and initially asks for that report ZIP; its external analysis determines
+whether the two-stage design improves the supported/rejection trade-off.
 
 ## External evaluation
 
