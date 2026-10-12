@@ -65,7 +65,7 @@ The current rebuild uses six small, sequential notebooks:
 2. `02_colab_prepare_mmfit.ipynb` converts the labeled MM-Fit exercise sets to the same representation.
 3. `02b_colab_prepare_mmfit_unknown.ipynb` exports the unlabeled gaps between MM-Fit sets as `unknown` examples for rest and transitions.
 4. `03_colab_train_tcn.ipynb` trains and evaluates the exercise TCN from all uploaded landmark ZIPs.
-5. `04_colab_analyze_mixed_video.ipynb` runs the trained model over a long mixed-workout video and produces a smoothed timeline.
+5. `04_colab_analyze_mixed_video.ipynb` downloads the versioned TCN v2 checkpoint, reruns the locked GainsByBrains test, and produces a smoothed timeline.
 6. `05_colab_extract_youtube_mixed_landmarks.ipynb` downloads three reviewed long-form training videos and exports their labelled landmark segments.
 
 Notebook 03 downloads all four versioned landmark ZIPs from GitHub by default.
