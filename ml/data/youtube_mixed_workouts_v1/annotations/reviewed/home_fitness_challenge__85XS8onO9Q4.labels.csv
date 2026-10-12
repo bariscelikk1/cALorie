@@ -1,0 +1,25 @@
+video_id,video_file,start_s,end_s,start_time,end_time,segment_type,fine_label,current_tcn_label,split,use_for_training,annotation_source,boundary_precision_s,notes
+85XS8onO9Q4,home_fitness_challenge__85XS8onO9Q4.mp4,0.0,8.0,00:00.0,00:08.0,intro,intro,unknown,train_v2,true,human_visual_contact_sheet_and_motion_strip,0.5,Promotional opening before the timed workout
+85XS8onO9Q4,home_fitness_challenge__85XS8onO9Q4.mp4,8.0,57.0,00:08.0,00:57.0,exercise,high_knees,unknown,train_v2,true,human_visual_contact_sheet_and_motion_strip,0.5,Running in place with alternating high knees
+85XS8onO9Q4,home_fitness_challenge__85XS8onO9Q4.mp4,57.0,62.0,00:57.0,01:02.0,transition,next_step,unknown,train_v2,true,pink_transition_detector_plus_human_review,0.5,Five-second preview overlay
+85XS8onO9Q4,home_fitness_challenge__85XS8onO9Q4.mp4,62.0,108.5,01:02.0,01:48.5,exercise,lateral_squat_step,squat,train_v2,true,human_visual_contact_sheet_and_motion_strip,0.5,Alternating lateral step with a deep squat
+85XS8onO9Q4,home_fitness_challenge__85XS8onO9Q4.mp4,108.5,113.0,01:48.5,01:53.0,transition,next_step,unknown,train_v2,true,pink_transition_detector_plus_human_review,0.5,Preview overlay
+85XS8onO9Q4,home_fitness_challenge__85XS8onO9Q4.mp4,113.0,159.5,01:53.0,02:39.5,exercise,squat_to_overhead_reach,squat,train_v2,true,human_visual_contact_sheet_and_motion_strip,0.5,Squat followed by bilateral overhead reach
+85XS8onO9Q4,home_fitness_challenge__85XS8onO9Q4.mp4,159.5,164.5,02:39.5,02:44.5,transition,next_step,unknown,train_v2,true,pink_transition_detector_plus_human_review,0.5,Preview overlay
+85XS8onO9Q4,home_fitness_challenge__85XS8onO9Q4.mp4,164.5,210.5,02:44.5,03:30.5,exercise,standing_oblique_knee_drive_left,unknown,train_v2,true,human_visual_contact_sheet_and_motion_strip,0.5,Repeated knee drive with torso and arm rotation
+85XS8onO9Q4,home_fitness_challenge__85XS8onO9Q4.mp4,210.5,215.5,03:30.5,03:35.5,transition,next_step,unknown,train_v2,true,pink_transition_detector_plus_human_review,0.5,Preview overlay
+85XS8onO9Q4,home_fitness_challenge__85XS8onO9Q4.mp4,215.5,262.0,03:35.5,04:22.0,exercise,standing_oblique_knee_drive_right,unknown,train_v2,true,human_visual_contact_sheet_and_motion_strip,0.5,Mirrored side of the previous knee drive
+85XS8onO9Q4,home_fitness_challenge__85XS8onO9Q4.mp4,262.0,267.0,04:22.0,04:27.0,transition,next_step,unknown,train_v2,true,pink_transition_detector_plus_human_review,0.5,Preview overlay
+85XS8onO9Q4,home_fitness_challenge__85XS8onO9Q4.mp4,267.0,313.0,04:27.0,05:13.0,exercise,supine_march,unknown,train_v2,true,human_visual_contact_sheet_and_motion_strip,0.5,Alternating bent-knee leg lifts while lying supine
+85XS8onO9Q4,home_fitness_challenge__85XS8onO9Q4.mp4,313.0,318.0,05:13.0,05:18.0,transition,next_step,unknown,train_v2,true,pink_transition_detector_plus_human_review,0.5,Preview overlay
+85XS8onO9Q4,home_fitness_challenge__85XS8onO9Q4.mp4,318.0,364.5,05:18.0,06:04.5,exercise,tabletop_crunch,unknown,train_v2,true,human_visual_contact_sheet_and_motion_strip,0.5,Crunch with legs held in tabletop position and arms reaching forward
+85XS8onO9Q4,home_fitness_challenge__85XS8onO9Q4.mp4,364.5,369.0,06:04.5,06:09.0,transition,next_step,unknown,train_v2,true,pink_transition_detector_plus_human_review,0.5,Preview overlay
+85XS8onO9Q4,home_fitness_challenge__85XS8onO9Q4.mp4,369.0,415.5,06:09.0,06:55.5,exercise,dead_bug,unknown,train_v2,true,human_visual_contact_sheet_and_motion_strip,0.5,Alternating opposite arm and leg extension while supine
+85XS8onO9Q4,home_fitness_challenge__85XS8onO9Q4.mp4,415.5,420.5,06:55.5,07:00.5,transition,next_step,unknown,train_v2,true,pink_transition_detector_plus_human_review,0.5,Preview overlay
+85XS8onO9Q4,home_fitness_challenge__85XS8onO9Q4.mp4,420.5,466.5,07:00.5,07:46.5,exercise,donkey_kick,unknown,train_v2,true,human_visual_contact_sheet_and_motion_strip,0.5,First side quadruped hip extension
+85XS8onO9Q4,home_fitness_challenge__85XS8onO9Q4.mp4,466.5,471.5,07:46.5,07:51.5,transition,next_step,unknown,train_v2,true,pink_transition_detector_plus_human_review,0.5,Preview overlay
+85XS8onO9Q4,home_fitness_challenge__85XS8onO9Q4.mp4,471.5,518.0,07:51.5,08:38.0,exercise,donkey_kick,unknown,train_v2,true,human_visual_contact_sheet_and_motion_strip,0.5,Second side quadruped hip extension
+85XS8onO9Q4,home_fitness_challenge__85XS8onO9Q4.mp4,518.0,523.0,08:38.0,08:43.0,transition,next_step,unknown,train_v2,true,pink_transition_detector_plus_human_review,0.5,Preview overlay
+85XS8onO9Q4,home_fitness_challenge__85XS8onO9Q4.mp4,523.0,569.0,08:43.0,09:29.0,exercise,windmill_toe_touch,unknown,train_v2,true,human_visual_contact_sheet_and_motion_strip,0.5,Alternating hand toward opposite foot with trunk rotation
+85XS8onO9Q4,home_fitness_challenge__85XS8onO9Q4.mp4,569.0,574.0,09:29.0,09:34.0,transition,next_step,unknown,train_v2,true,pink_transition_detector_plus_human_review,0.5,Preview overlay
+85XS8onO9Q4,home_fitness_challenge__85XS8onO9Q4.mp4,574.0,620.366667,09:34.0,10:20.4,exercise,jumping_jack,jumping_jack,train_v2,true,human_visual_contact_sheet_and_motion_strip,0.5,Standard jumping jacks until video ends
