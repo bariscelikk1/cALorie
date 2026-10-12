@@ -60,7 +60,7 @@ validation.
 
 ## Colab notebooks
 
-The current rebuild uses ten sequential notebooks:
+The current rebuild uses eleven sequential notebooks:
 
 1. `01_colab_extract_workoutfitness.ipynb` converts selected Workout/Fitness videos to normalized 17-joint pose sequences.
 2. `02_colab_prepare_mmfit.ipynb` converts the labeled MM-Fit exercise sets to the same representation.
@@ -72,6 +72,7 @@ The current rebuild uses ten sequential notebooks:
 8. `07_colab_extract_youtube_training_v4.ipynb` extracts 212 reviewed segments from four additional single-person long workouts while keeping the new creator-separated test locked.
 9. `08_colab_train_two_stage_tcn.ipynb` trains the binary gate and 15-class exercise TCN from all six versioned archives in one T4 session.
 10. `09_colab_evaluate_two_stage_tcn.ipynb` evaluates the two-stage checkpoint on locked GainsByBrains using CPU and exports a scored report.
+11. `10_colab_extract_gate_hard_negatives.ipynb` uses CPU to extract independent movement-like `unknown` examples and supported exercise variants from previously unused Workout/Fitness classes.
 
 Notebook 08 downloads all six versioned landmark ZIPs from GitHub by default.
 Run it on T4 and preserve `calorie_two_stage_tcn_report.zip`. Notebook 09 runs
@@ -79,6 +80,11 @@ on CPU and downloads the archived report automatically. Its locked external
 evaluation shows that v4 recovers supported recognition to 47.5% but reduces
 unsupported rejection to 32.7%; the gate still needs better hard negatives,
 boundary handling, or a revised decision rule.
+
+Notebook 10 is the first corrective data step after that diagnosis. It does not
+use the locked GainsByBrains video. Its output
+`calorie_workoutfitness_gate_hardneg_v1.zip` is intended for the next controlled
+gate retraining experiment.
 
 ## External evaluation
 
