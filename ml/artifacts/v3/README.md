@@ -45,3 +45,26 @@ This improves over the v2 candidate's 80.72% accuracy and 74.08% Macro F1 on
 their respective internal splits. The splits changed when the new source groups
 were added, so the locked GainsByBrains evaluation remains the meaningful
 promotion test. The main report files are extracted beside the ZIP for review.
+
+## Locked long-video result
+
+The v3 candidate was evaluated on the same frozen GainsByBrains video, human
+labels, boundary guard, and 0.55 confidence threshold as v1 and v2. It strongly
+improved rejection but became too conservative on supported exercises:
+
+- stable accuracy: **66.38%** (v1: 42.32%, v2: 32.46%)
+- stable Macro F1: **17.96%** (v1: 19.45%, v2: 15.31%)
+- supported-exercise accuracy: **33.03%** (v1: 66.52%, v2: 49.32%)
+- unsupported-exercise rejection: **79.59%** (v1: 32.65%, v2: 20.70%)
+- transition rejection: **88.89%** (v1: 26.19%, v2: 34.92%)
+
+The higher total accuracy is driven by the many `unknown` windows. V3 correctly
+rejects most unsupported exercises and transitions, but also rejects every
+plank variation, jumping jack, and pop squat window in this test. It should not
+replace v1 as the supported-exercise classifier yet. The result motivates a
+two-stage design: first reject unsupported/transition windows, then classify
+accepted windows among supported exercises.
+
+See `evaluation/gainsbybrains_external_v1/` for the frozen labels, raw and
+scored predictions, per-movement results, timeline, confusion matrix, and the
+direct v1/v2/v3 comparison.
