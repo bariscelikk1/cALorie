@@ -30,3 +30,28 @@ does not dominate training batches.
 The extracted manifest is included beside the ZIP for review. `validation.json`
 records the machine-readable audit, and `SHA256SUMS.txt` identifies the exact
 files committed here.
+
+## TCN v2 candidate
+
+`model/calorie_tcn_report.zip` is the first model trained with all four
+landmark archives. It contains the checkpoint and its complete development
+report. The main report files are also extracted beside it for review.
+
+- Test accuracy: **0.8072**
+- Balanced accuracy: **0.8293**
+- Macro F1: **0.7408**
+- Best validation Macro F1: **0.7069** at epoch 10
+- Classes: **15 exercises + unknown**
+
+The lower aggregate score is informative rather than directly comparable with
+v1. Group splitting held the entire MonikaFit YouTube source out of training.
+All 275 of its test windows were independently labelled `unknown`; the model
+correctly rejected 62 (**22.5%**) and forced most remaining windows into
+`pull_up`, `bicep_curl`, or `squat`. On the same test run, MM-Fit window
+accuracy was 95.3% and Workout/Fitness window accuracy was 75.2%.
+
+This result confirms that source-group separation works and exposes the domain
+generalization problem hidden by ordinary short-clip scores. It is a candidate
+checkpoint until it is evaluated on the frozen GainsByBrains, Sunny Health,
+and Nobadaddiction long-video tests. Those external videos remain excluded
+from training.
