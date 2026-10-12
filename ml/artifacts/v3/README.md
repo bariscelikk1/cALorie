@@ -28,3 +28,20 @@ its YouTube-based `group_id` values are correct, so group-separated splitting is
 unaffected.
 
 `SHA256SUMS.txt` identifies the exact archives preserved here.
+
+## TCN v3 candidate
+
+`model/calorie_tcn_report.zip` is the checkpoint trained after adding both v3
+YouTube landmark batches to the earlier Workout/Fitness, MM-Fit, and YouTube
+inputs. Its group-separated internal test report contains 2,381 windows:
+
+- accuracy: **83.49%**
+- balanced accuracy: **86.31%**
+- Macro F1: **81.90%**
+- best validation Macro F1: **79.96%** at epoch 37
+- classes: **15 exercises + unknown**
+
+This improves over the v2 candidate's 80.72% accuracy and 74.08% Macro F1 on
+their respective internal splits. The splits changed when the new source groups
+were added, so the locked GainsByBrains evaluation remains the meaningful
+promotion test. The main report files are extracted beside the ZIP for review.
