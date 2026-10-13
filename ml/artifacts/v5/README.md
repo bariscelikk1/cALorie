@@ -68,6 +68,13 @@ camera views; separate new evidence is still required. See
 `evaluation/gainsbybrains_external_v1/` for the full report and the v4/v5
 comparison.
 
+Notebook 13 found **194 hard-positive windows** among 4,433 reviewed supported
+training windows (4.38%) across 81 groups and all 15 supported classes. Their
+recommended weights range from 1.00 to 3.00 and are keyed to the original
+training windows, so they can be joined without duplicating clips or changing
+the immutable split. See `hard_positive_mining/` for the complete audit archive,
+CSV tables, and pose previews.
+
 See `model/` for the combined checkpoint, reports, threshold sweep, histories,
 raw predictions, and original report ZIP. See `evaluation/` for the locked
 external benchmark.
