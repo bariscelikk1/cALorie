@@ -3,7 +3,8 @@
 ## What the 28.51% result actually measures
 
 The locked GainsByBrains evaluation is a deliberately difficult domain-shift
-test, but its supported subset is not a balanced test of all 15 classes. Its
+test, but its supported subset is not a balanced test of the historical
+15-class v5 model. Its
 221 stable supported windows cover only:
 
 | Fine label | Broad target | Windows | Accuracy |
@@ -32,7 +33,8 @@ benchmark.
    a standard squat or also pop squat, squat kick, sumo pulse, and future
    variants. Labels, training data, and evaluation must use the same rule.
 2. **The external benchmark is incomplete.** It contains only three broad
-   supported classes and cannot estimate 15-class recognition accuracy.
+   supported classes and cannot estimate recognition accuracy across the active
+   14-class target.
 3. **Windows are not independent examples.** The v5 training split has 4,433
    reviewed supported windows but only 284 source groups. Long videos can
    dominate through many correlated windows.

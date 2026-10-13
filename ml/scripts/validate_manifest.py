@@ -30,8 +30,11 @@ VALID_REVIEW_STATUSES = {"pending", "approved", "rejected"}
 def load_classes(path: Path) -> tuple[set[str], set[str]]:
     config = json.loads(path.read_text(encoding="utf-8"))
     exercises = set(config["exercises"])
-    labels = exercises | set(config["non_exercise_classes"])
-    return labels, set(config["static_exercises"])
+    retired = set(config.get("retired_exercises", []))
+    labels = exercises | set(config["non_exercise_classes"]) | retired
+    # Archived static classes such as plank may legitimately have no
+    # repetition count. They remain schema-valid even after retirement.
+    return labels, set(config["static_exercises"]) | retired
 
 
 def validate(manifest_path: Path, classes_path: Path) -> list[str]:

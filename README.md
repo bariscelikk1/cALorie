@@ -10,7 +10,7 @@ estimate. It does **not** claim medical or wearable-grade accuracy.
 > analyzer remain available as the first prototype, but the active project is
 > being reshaped into a local-first, dataset-driven exercise recognition
 > system. The new pipeline converts videos into normalized MediaPipe pose
-> sequences and will train and evaluate a TCN across at least 15 exercises.
+> sequences and will train and evaluate a TCN across 14 dynamic exercises.
 > Accuracy will be reported only from person-separated validation and test
 > sets, not from the training data.
 
@@ -25,9 +25,10 @@ real accuracy figures can be reported.
 The rebuild lives in [`ml/`](ml/). Its first Colab smoke test successfully
 processed 14/14 videos across seven exercise classes. All clips passed pose
 detection quality checks; the lowest detected-frame ratio was 95.8%. The full
-pipeline now selects 378 clips across ten classes from Workout/Fitness Video,
-adds five movements and person-grouped pose data from MM-Fit, and trains a
-15-class TCN with group-separated evaluation.
+pipeline now selects 378 clips across ten classes from Workout/Fitness Video
+and adds person-grouped pose data from MM-Fit. Historical v1-v5 experiments
+trained 15 classes; the active post-v5 target retires plank and trains 14
+dynamic classes with group-separated evaluation.
 
 ## Live links
 

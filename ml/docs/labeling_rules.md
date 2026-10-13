@@ -9,7 +9,7 @@ documented.
 
 ## Exercise labels
 
-The project supports exactly 15 exercises plus `unknown`. The canonical names
+The active target supports exactly 14 exercises plus `unknown`. The canonical names
 are stored in `config/classes.json`; dataset-specific names must be mapped to
 those names before training.
 
@@ -21,19 +21,22 @@ those names before training.
 - `sit_up`: supine movement that raises the torso toward the legs.
 - `bench_press`: supine press that moves a barbell or weights away from the chest and back.
 - `deadlift`: standing hip-hinge that lifts a weight from a lowered position and returns it.
-- `plank`: static supported horizontal posture; measure duration, not repetitions.
 - `shoulder_press`: hands/weights press from shoulder level to overhead.
 - `dumbbell_row`: bent or supported torso with elbow pulling the hand/weight toward the torso.
 - `tricep_extension`: elbow extends against resistance while the upper arm stays comparatively stable.
 - `bicep_curl`: elbow flexes to bring the hand/weight toward the shoulder.
 - `lateral_raise`: arms rise laterally from the sides toward shoulder height.
 - `lat_pulldown`: seated or kneeling pull that brings an overhead bar toward the upper torso.
-- `unknown`: rest, transitions, unsupported exercise, incomplete setup, camera adjustment, or ambiguous motion.
+- `unknown`: rest, transitions, unsupported exercise (including plank), incomplete setup, camera adjustment, or ambiguous motion.
+
+Plank is retired beginning with the post-v5 training pipeline. Preserve its
+historical labels for reproducibility, but remap them to `unknown` when building
+new training windows.
 
 ## Repetition counting
 
 Count only complete cycles. Record the visible count in `repetition_count`.
-Use an empty value for plank and unknown clips. Do not guess when the beginning
+Use an empty value for unknown clips. Do not guess when the beginning
 or end of a repetition is outside the clip; add a note and exclude the partial
 cycle.
 

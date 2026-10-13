@@ -27,7 +27,7 @@ Low confidence is useful evidence. Never force an uncertain supported label.
    `segment_type` and `current_tcn_label=unknown`.
 2. For an exercise interval, identify the visible movement as precisely as
    possible in `fine_label`.
-3. Map it to one of the 15 supported classes only when the visible motion
+3. Map it to one of the 14 supported classes only when the visible motion
    matches that class definition.
 4. Use `unknown` for unsupported, compound, ambiguous, or badly occluded
    movements. Record the reason in `notes`.
@@ -42,8 +42,7 @@ is expected to accept it. Examples:
 
 - bodyweight, sumo, pulse, and kick squat variants may map to `squat` after
   review;
-- left/right/front plank variants may map to `plank` when the body is held in a
-  plank posture;
+- plank and plank variants map to `unknown` in the post-v5 target;
 - close-grip push-ups may map to `push_up`;
 - a compound sequence containing multiple unsupported phases remains
   `unknown`, even if one phase resembles a supported class.

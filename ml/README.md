@@ -13,9 +13,10 @@ coverage, overlaps, canonical labels, training eligibility, boundary precision,
 and reviewer/confidence metadata.
 
 This directory contains the local, dataset-driven rebuild of cALorie. The
-primary task is 15-class workout recognition from temporal pose landmarks, with
+primary task is 14-class workout recognition from temporal pose landmarks, with
 an additional `unknown` class. Exercise-specific state machines count complete
-repetitions; plank is measured by duration.
+repetitions. Plank was retired from the active target after v5; future training
+maps archived plank samples to `unknown` while historical reports remain intact.
 
 See `ACCURACY_RECOVERY_PLAN.md` for the interpretation of the v5 external
 results and the controlled data, calibration, TCN, and ST-GCN experiment order.
@@ -38,11 +39,11 @@ supported windows. Its higher overall accuracy was driven by the many
 54.0%. The gate is therefore the current bottleneck. See
 [`artifacts/v4/README.md`](artifacts/v4/README.md).
 
-## Current 15-class target
+## Current 14-class target
 
 The evidence-driven class set is squat, push-up, jumping jack, pull-up, lunge,
-sit-up, plank, shoulder press, dumbbell row, tricep extension, bicep curl,
-lateral raise, bench press, deadlift, and lat pulldown. The first ten are
+sit-up, shoulder press, dumbbell row, tricep extension, bicep curl,
+lateral raise, bench press, deadlift, and lat pulldown. Nine are
 available in Workout/Fitness Video; MM-Fit supplies additional people and five
 new movements. Burpee, mountain climber, and glute bridge remain external-data
 candidates because the currently audited source contains too few canonical
@@ -67,7 +68,7 @@ validation.
 - MediaPipe Pose provides frame-level landmarks.
 - A Random Forest provides an explainable learned baseline.
 - A gate TCN learns supported motion versus `unknown`/transition.
-- A second TCN classifies accepted windows among the 15 supported exercises.
+- A second TCN classifies accepted windows among the 14 supported exercises.
 - A validation-only threshold sweep calibrates the gate without using locked-test labels.
 - State machines count exercise phases and complete cycles.
 - Evaluation reports Macro F1, per-class precision/recall/F1, confusion matrix,

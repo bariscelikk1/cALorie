@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "exercises": [
     "squat",
     "push_up",
@@ -9,7 +9,6 @@
     "sit_up",
     "bench_press",
     "deadlift",
-    "plank",
     "shoulder_press",
     "dumbbell_row",
     "tricep_extension",
@@ -18,5 +17,6 @@
     "lat_pulldown"
   ],
   "non_exercise_classes": ["unknown"],
-  "static_exercises": ["plank"]
+  "static_exercises": [],
+  "retired_exercises": ["plank"]
 }

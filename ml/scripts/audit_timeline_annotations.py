@@ -32,7 +32,14 @@ def read_rows(path: Path) -> tuple[list[dict[str, str]], set[str]]:
 
 def load_labels(path: Path) -> set[str]:
     config = json.loads(path.read_text(encoding="utf-8"))
-    return set(config["exercises"]) | set(config["non_exercise_classes"])
+    # Retired labels remain valid in archived annotations so historical
+    # experiments can still be audited. Dataset builders decide whether a
+    # retired label is an active target or must be remapped to ``unknown``.
+    return (
+        set(config["exercises"])
+        | set(config["non_exercise_classes"])
+        | set(config.get("retired_exercises", []))
+    )
 
 
 def as_float(value: str, location: str, errors: list[str]) -> float | None:
