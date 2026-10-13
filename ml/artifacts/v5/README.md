@@ -58,8 +58,13 @@ A diagnostic sweep shows that **0.60-0.65** would recover roughly **47%**
 supported accuracy while retaining at least **97.65%** unknown rejection, but
 the locked test cannot be used to select the production threshold. The next
 step is calibration on a separate mixed-workout validation set and additional
-hard-positive plank variants. See `evaluation/gainsbybrains_external_v1/` for
-the full report and the v4/v5 comparison.
+hard-positive variants, especially plank. Notebook 13 starts part of that work
+by mining low-gate supported candidates from an independent four-class pool
+while flagging likely Workout/Fitness duplicates and requiring visual review
+before training. The source has no plank, so a separate plank batch is still
+required. See
+`evaluation/gainsbybrains_external_v1/` for the full report and the v4/v5
+comparison.
 
 See `model/` for the combined checkpoint, reports, threshold sweep, histories,
 raw predictions, and original report ZIP. See `evaluation/` for the locked

@@ -72,7 +72,7 @@ validation.
 
 ## Colab notebooks
 
-The current rebuild uses thirteen sequential notebooks:
+The current rebuild uses fourteen sequential notebooks:
 
 1. `01_colab_extract_workoutfitness.ipynb` converts selected Workout/Fitness videos to normalized 17-joint pose sequences.
 2. `02_colab_prepare_mmfit.ipynb` converts the labeled MM-Fit exercise sets to the same representation.
@@ -87,6 +87,7 @@ The current rebuild uses thirteen sequential notebooks:
 11. `10_colab_extract_gate_hard_negatives.ipynb` uses CPU to extract independent movement-like `unknown` examples and supported exercise variants from previously unused Workout/Fitness classes.
 12. `11_colab_train_hard_negative_tcn.ipynb` performs a controlled T4 retrain with the seventh hard-negative archive while keeping the v4 architecture and evaluation procedure fixed.
 13. `12_colab_evaluate_hard_negative_tcn.ipynb` runs the v5 checkpoint on the unchanged locked GainsByBrains benchmark using CPU.
+14. `13_colab_mine_hard_positives.ipynb` uses the frozen v5 gate to rank independent supported candidates, flags likely Workout/Fitness duplicates, and exports contact sheets plus a review template before any candidate can enter training.
 
 Notebook 08 downloads all six versioned landmark ZIPs from GitHub by default.
 Run it on T4 and preserve `calorie_two_stage_tcn_report.zip`. Notebook 09 runs
@@ -104,6 +105,14 @@ The v5 internal test reached **82.17% gate Macro F1**, **83.78% oracle exercise
 Macro F1**, and **73.43% end-to-end Macro F1** with a validation-selected gate
 threshold of **0.90**. Because adding groups changes the internal split,
 Notebook 12 remains the required promotion test.
+
+Notebook 13 begins the next controlled correction after Notebook 12 showed that
+v5 rejects unsupported motion reliably but over-rejects supported exercises. It
+uses the four-class Real-Time Exercise Recognition Dataset as a candidate pool,
+keeps GainsByBrains locked, and exports
+`calorie_hard_positive_candidates_v1.zip`. The archive is deliberately marked
+as not training-ready: selected source labels and duplicate warnings require
+visual review before a later notebook promotes any landmarks.
 
 ## External evaluation
 
