@@ -60,7 +60,7 @@ validation.
 
 ## Colab notebooks
 
-The current rebuild uses twelve sequential notebooks:
+The current rebuild uses thirteen sequential notebooks:
 
 1. `01_colab_extract_workoutfitness.ipynb` converts selected Workout/Fitness videos to normalized 17-joint pose sequences.
 2. `02_colab_prepare_mmfit.ipynb` converts the labeled MM-Fit exercise sets to the same representation.
@@ -74,6 +74,7 @@ The current rebuild uses twelve sequential notebooks:
 10. `09_colab_evaluate_two_stage_tcn.ipynb` evaluates the two-stage checkpoint on locked GainsByBrains using CPU and exports a scored report.
 11. `10_colab_extract_gate_hard_negatives.ipynb` uses CPU to extract independent movement-like `unknown` examples and supported exercise variants from previously unused Workout/Fitness classes.
 12. `11_colab_train_hard_negative_tcn.ipynb` performs a controlled T4 retrain with the seventh hard-negative archive while keeping the v4 architecture and evaluation procedure fixed.
+13. `12_colab_evaluate_hard_negative_tcn.ipynb` runs the v5 checkpoint on the unchanged locked GainsByBrains benchmark using CPU.
 
 Notebook 08 downloads all six versioned landmark ZIPs from GitHub by default.
 Run it on T4 and preserve `calorie_two_stage_tcn_report.zip`. Notebook 09 runs
@@ -87,6 +88,10 @@ use the locked GainsByBrains video. Its output
 `calorie_workoutfitness_gate_hardneg_v1.zip` is intended for the next controlled
 gate retraining experiment in Notebook 11. Notebook 11 downloads all seven
 archives automatically and exports `calorie_two_stage_tcn_hardneg_report.zip`.
+The v5 internal test reached **82.17% gate Macro F1**, **83.78% oracle exercise
+Macro F1**, and **73.43% end-to-end Macro F1** with a validation-selected gate
+threshold of **0.90**. Because adding groups changes the internal split,
+Notebook 12 remains the required promotion test.
 
 ## External evaluation
 

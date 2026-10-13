@@ -24,3 +24,26 @@ this archive to the six v4 inputs while preserving the same architecture,
 window size, optimizer, sampler, and validation-only threshold selection. This
 makes the next run a controlled test of whether better gate evidence improves
 external rejection without destroying supported recognition.
+
+## Two-stage v5 internal result
+
+Notebook 11 trained the same two-stage architecture with the seventh archive.
+Validation selected a gate threshold of **0.90** without access to the locked
+external video. On the new group-separated internal test split:
+
+- gate accuracy: **84.07%**
+- gate balanced accuracy: **82.53%**
+- gate Macro F1: **82.17%**
+- oracle exercise-classifier accuracy: **92.13%**
+- oracle exercise-classifier Macro F1: **83.78%**
+- end-to-end accuracy: **83.05%**
+- end-to-end balanced accuracy: **72.54%**
+- end-to-end Macro F1: **73.43%**
+
+The split changed when new groups were added, so these values are not a direct
+promotion over v4. Gate validation Macro F1 peaked at epoch 13 and exercise
+validation Macro F1 at epoch 14; early stopping restored those checkpoints.
+Notebook 12 performs the meaningful comparison on the unchanged locked video.
+
+See `model/` for the combined checkpoint, reports, threshold sweep, histories,
+raw predictions, and original report ZIP.
