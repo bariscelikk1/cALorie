@@ -1,0 +1,25 @@
+{
+  "boundary_guard_seconds": 3.0,
+  "all_windows": {
+    "windows": 858,
+    "accuracy": 0.7750582750582751,
+    "balanced_accuracy": 0.4958134372276313,
+    "macro_f1": 0.3047310416252058
+  },
+  "stable_interior_windows": {
+    "windows": 690,
+    "accuracy": 0.7710144927536232,
+    "balanced_accuracy": 0.5187346437346437,
+    "macro_f1": 0.31881632868159476
+  },
+  "supported_exercise_windows": {
+    "windows": 221,
+    "accuracy": 0.2850678733031674,
+    "balanced_accuracy": 0.3583128583128583,
+    "macro_f1": 0.1920424403183024
+  },
+  "unsupported_exercise_rejection_rate": 1.0,
+  "unsupported_exercise_windows": 343,
+  "transition_rejection_rate": 1.0,
+  "transition_windows": 126
+}

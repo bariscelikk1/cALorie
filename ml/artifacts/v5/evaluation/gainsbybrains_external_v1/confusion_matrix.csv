@@ -1,0 +1,8 @@
+true_class,deadlift,jumping_jack,lunge,plank,pull_up,squat,unknown
+deadlift,0,0,0,0,0,0,0
+jumping_jack,0,28,0,0,6,0,3
+lunge,0,0,0,0,0,0,0
+plank,0,0,0,0,0,0,74
+pull_up,0,0,0,0,0,0,0
+squat,25,0,8,0,0,35,42
+unknown,0,0,0,0,0,0,469

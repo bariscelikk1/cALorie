@@ -45,5 +45,22 @@ promotion over v4. Gate validation Macro F1 peaked at epoch 13 and exercise
 validation Macro F1 at epoch 14; early stopping restored those checkpoints.
 Notebook 12 performs the meaningful comparison on the unchanged locked video.
 
+## Locked external result
+
+Notebook 12 evaluated v5 on the unchanged 917-second GainsByBrains benchmark.
+At the checkpoint's validation-selected **0.90** gate threshold, stable-window
+accuracy reached **77.10%**, unsupported-exercise rejection reached **100%**,
+and transition rejection reached **100%**. This is a large correction of v4's
+false-positive behavior. Supported-exercise accuracy fell to **28.51%**,
+showing that the internal threshold is too strict outside its training domains.
+
+A diagnostic sweep shows that **0.60-0.65** would recover roughly **47%**
+supported accuracy while retaining at least **97.65%** unknown rejection, but
+the locked test cannot be used to select the production threshold. The next
+step is calibration on a separate mixed-workout validation set and additional
+hard-positive plank variants. See `evaluation/gainsbybrains_external_v1/` for
+the full report and the v4/v5 comparison.
+
 See `model/` for the combined checkpoint, reports, threshold sweep, histories,
-raw predictions, and original report ZIP.
+raw predictions, and original report ZIP. See `evaluation/` for the locked
+external benchmark.
