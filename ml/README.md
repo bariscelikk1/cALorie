@@ -1,5 +1,17 @@
 # cALorie ML
 
+New long-video labels must follow `data/ANNOTATION_GUIDE.md` and pass the
+timeline audit before landmark extraction:
+
+```bash
+python3 ml/scripts/audit_timeline_annotations.py path/to/annotation/csvs --strict
+```
+
+For an independently repeated subset, add `--second-root path/to/review/csvs`
+to report time-sampled canonical-label agreement. The audit checks temporal
+coverage, overlaps, canonical labels, training eligibility, boundary precision,
+and reviewer/confidence metadata.
+
 This directory contains the local, dataset-driven rebuild of cALorie. The
 primary task is 15-class workout recognition from temporal pose landmarks, with
 an additional `unknown` class. Exercise-specific state machines count complete

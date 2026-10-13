@@ -3,6 +3,24 @@
 This directory contains metadata and reviewed temporal labels for ten training
 sources. Raw YouTube videos are intentionally excluded from Git.
 
+All new or revised timelines must follow `ml/data/ANNOTATION_GUIDE.md` and pass:
+
+```bash
+python3 ml/scripts/audit_timeline_annotations.py \
+  ml/data/youtube_mixed_workouts_v1/annotations/reviewed
+```
+
+The current files use the legacy schema. The audit deliberately reports their
+missing reviewer/confidence fields so they can be upgraded incrementally rather
+than silently presented as double-reviewed ground truth.
+
+The current audit covers **414 rows in 10 videos**. It finds no structural
+errors, overlaps, gaps, or invalid canonical labels. It does flag **91 rows**
+from Gritty Soldier, Tom Peto, and MonikaFit whose notes still say that visual
+review is required, plus one legacy-schema warning per file. Those 91 rows must
+receive a second visual review before the next promoted training run. The
+machine-readable result is stored in `annotation_audit.json`.
+
 | Video | Segments | Review evidence |
 | --- | ---: | --- |
 | Gritty Soldier (`oLsonHQJOUc`) | 29 | Creator chapters plus timestamped contact sheets |

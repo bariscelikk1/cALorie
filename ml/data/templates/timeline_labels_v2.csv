@@ -1,0 +1,4 @@
+video_id,video_file,start_s,end_s,start_time,end_time,segment_type,fine_label,current_tcn_label,split,use_for_training,annotation_source,boundary_precision_s,notes,annotation_confidence,review_status,reviewer,needs_second_review
+example_id,example.mp4,0.0,10.0,00:00.0,00:10.0,intro,intro,unknown,calibration,false,human_visual_review,0.5,Opening,high,reviewed,reviewer_1,false
+example_id,example.mp4,10.0,40.0,00:10.0,00:40.0,exercise,bodyweight_squat,squat,calibration,false,human_visual_review,0.5,Visible full squat cycles,high,reviewed,reviewer_1,false
+example_id,example.mp4,40.0,45.0,00:40.0,00:45.0,transition,position_change,unknown,calibration,false,human_visual_review,1.0,Boundary needs confirmation,low,draft,reviewer_1,true

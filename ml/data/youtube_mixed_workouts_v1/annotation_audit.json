@@ -1,0 +1,246 @@
+{
+  "files": 10,
+  "rows": 414,
+  "errors": 0,
+  "warnings": 101,
+  "results": [
+    {
+      "file": "ml/data/youtube_mixed_workouts_v1/annotations/reviewed/caroline_girvan__fegQSC-nUtg.labels.csv",
+      "rows": 85,
+      "duration_s": 1551.64,
+      "labels": {
+        "lunge": 4,
+        "push_up": 4,
+        "squat": 6,
+        "unknown": 71
+      },
+      "errors": [],
+      "warnings": [
+        "legacy schema lacks QA columns: annotation_confidence, needs_second_review, review_status, reviewer"
+      ]
+    },
+    {
+      "file": "ml/data/youtube_mixed_workouts_v1/annotations/reviewed/fraser_wilson__IeGrTqW5lek.labels.csv",
+      "rows": 41,
+      "duration_s": 1225.265708,
+      "labels": {
+        "lunge": 4,
+        "plank": 1,
+        "push_up": 2,
+        "squat": 3,
+        "unknown": 31
+      },
+      "errors": [],
+      "warnings": [
+        "legacy schema lacks QA columns: annotation_confidence, needs_second_review, review_status, reviewer"
+      ]
+    },
+    {
+      "file": "ml/data/youtube_mixed_workouts_v1/annotations/reviewed/gritty_soldier__oLsonHQJOUc.labels.csv",
+      "rows": 29,
+      "duration_s": 883.0,
+      "labels": {
+        "lunge": 2,
+        "plank": 3,
+        "push_up": 2,
+        "sit_up": 1,
+        "squat": 2,
+        "unknown": 19
+      },
+      "errors": [],
+      "warnings": [
+        "legacy schema lacks QA columns: annotation_confidence, needs_second_review, review_status, reviewer",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:2: training row is described as draft/unreviewed",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:3: training row is described as draft/unreviewed",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:4: training row is described as draft/unreviewed",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:5: training row is described as draft/unreviewed",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:6: training row is described as draft/unreviewed",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:7: training row is described as draft/unreviewed",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:8: training row is described as draft/unreviewed",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:9: training row is described as draft/unreviewed",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:10: training row is described as draft/unreviewed",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:11: training row is described as draft/unreviewed",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:12: training row is described as draft/unreviewed",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:13: training row is described as draft/unreviewed",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:14: training row is described as draft/unreviewed",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:15: training row is described as draft/unreviewed",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:16: training row is described as draft/unreviewed",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:17: training row is described as draft/unreviewed",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:18: training row is described as draft/unreviewed",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:19: training row is described as draft/unreviewed",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:20: training row is described as draft/unreviewed",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:21: training row is described as draft/unreviewed",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:22: training row is described as draft/unreviewed",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:23: training row is described as draft/unreviewed",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:24: training row is described as draft/unreviewed",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:25: training row is described as draft/unreviewed",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:26: training row is described as draft/unreviewed",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:27: training row is described as draft/unreviewed",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:28: training row is described as draft/unreviewed",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:29: training row is described as draft/unreviewed",
+        "gritty_soldier__oLsonHQJOUc.labels.csv:30: training row is described as draft/unreviewed"
+      ]
+    },
+    {
+      "file": "ml/data/youtube_mixed_workouts_v1/annotations/reviewed/heather_robertson_circuit__Gzp8IA2vW_Q.labels.csv",
+      "rows": 41,
+      "duration_s": 1263.804208,
+      "labels": {
+        "plank": 4,
+        "squat": 4,
+        "unknown": 33
+      },
+      "errors": [],
+      "warnings": [
+        "legacy schema lacks QA columns: annotation_confidence, needs_second_review, review_status, reviewer"
+      ]
+    },
+    {
+      "file": "ml/data/youtube_mixed_workouts_v1/annotations/reviewed/home_fitness_challenge__85XS8onO9Q4.labels.csv",
+      "rows": 24,
+      "duration_s": 620.366667,
+      "labels": {
+        "jumping_jack": 1,
+        "squat": 2,
+        "unknown": 21
+      },
+      "errors": [],
+      "warnings": [
+        "legacy schema lacks QA columns: annotation_confidence, needs_second_review, review_status, reviewer"
+      ]
+    },
+    {
+      "file": "ml/data/youtube_mixed_workouts_v1/annotations/reviewed/madfit__LqW9gdpctKE.labels.csv",
+      "rows": 46,
+      "duration_s": 1414.733333,
+      "labels": {
+        "squat": 2,
+        "unknown": 44
+      },
+      "errors": [],
+      "warnings": [
+        "legacy schema lacks QA columns: annotation_confidence, needs_second_review, review_status, reviewer"
+      ]
+    },
+    {
+      "file": "ml/data/youtube_mixed_workouts_v1/annotations/reviewed/madfit_small_space__2Z9g-AZinUc.labels.csv",
+      "rows": 41,
+      "duration_s": 1327.833333,
+      "labels": {
+        "lunge": 2,
+        "squat": 2,
+        "unknown": 37
+      },
+      "errors": [],
+      "warnings": [
+        "legacy schema lacks QA columns: annotation_confidence, needs_second_review, review_status, reviewer"
+      ]
+    },
+    {
+      "file": "ml/data/youtube_mixed_workouts_v1/annotations/reviewed/monikafit__W2Bm9dfQjbk.labels.csv",
+      "rows": 25,
+      "duration_s": 620.0,
+      "labels": {
+        "unknown": 25
+      },
+      "errors": [],
+      "warnings": [
+        "legacy schema lacks QA columns: annotation_confidence, needs_second_review, review_status, reviewer",
+        "monikafit__W2Bm9dfQjbk.labels.csv:2: training row is described as draft/unreviewed",
+        "monikafit__W2Bm9dfQjbk.labels.csv:3: training row is described as draft/unreviewed",
+        "monikafit__W2Bm9dfQjbk.labels.csv:4: training row is described as draft/unreviewed",
+        "monikafit__W2Bm9dfQjbk.labels.csv:5: training row is described as draft/unreviewed",
+        "monikafit__W2Bm9dfQjbk.labels.csv:6: training row is described as draft/unreviewed",
+        "monikafit__W2Bm9dfQjbk.labels.csv:7: training row is described as draft/unreviewed",
+        "monikafit__W2Bm9dfQjbk.labels.csv:8: training row is described as draft/unreviewed",
+        "monikafit__W2Bm9dfQjbk.labels.csv:9: training row is described as draft/unreviewed",
+        "monikafit__W2Bm9dfQjbk.labels.csv:10: training row is described as draft/unreviewed",
+        "monikafit__W2Bm9dfQjbk.labels.csv:11: training row is described as draft/unreviewed",
+        "monikafit__W2Bm9dfQjbk.labels.csv:12: training row is described as draft/unreviewed",
+        "monikafit__W2Bm9dfQjbk.labels.csv:13: training row is described as draft/unreviewed",
+        "monikafit__W2Bm9dfQjbk.labels.csv:14: training row is described as draft/unreviewed",
+        "monikafit__W2Bm9dfQjbk.labels.csv:15: training row is described as draft/unreviewed",
+        "monikafit__W2Bm9dfQjbk.labels.csv:16: training row is described as draft/unreviewed",
+        "monikafit__W2Bm9dfQjbk.labels.csv:17: training row is described as draft/unreviewed",
+        "monikafit__W2Bm9dfQjbk.labels.csv:18: training row is described as draft/unreviewed",
+        "monikafit__W2Bm9dfQjbk.labels.csv:19: training row is described as draft/unreviewed",
+        "monikafit__W2Bm9dfQjbk.labels.csv:20: training row is described as draft/unreviewed",
+        "monikafit__W2Bm9dfQjbk.labels.csv:21: training row is described as draft/unreviewed",
+        "monikafit__W2Bm9dfQjbk.labels.csv:22: training row is described as draft/unreviewed",
+        "monikafit__W2Bm9dfQjbk.labels.csv:23: training row is described as draft/unreviewed",
+        "monikafit__W2Bm9dfQjbk.labels.csv:24: training row is described as draft/unreviewed",
+        "monikafit__W2Bm9dfQjbk.labels.csv:25: training row is described as draft/unreviewed",
+        "monikafit__W2Bm9dfQjbk.labels.csv:26: training row is described as draft/unreviewed"
+      ]
+    },
+    {
+      "file": "ml/data/youtube_mixed_workouts_v1/annotations/reviewed/pamela_reif__UItWltVZZmE.labels.csv",
+      "rows": 45,
+      "duration_s": 1314.2,
+      "labels": {
+        "jumping_jack": 4,
+        "lunge": 2,
+        "plank": 3,
+        "squat": 9,
+        "unknown": 27
+      },
+      "errors": [],
+      "warnings": [
+        "legacy schema lacks QA columns: annotation_confidence, needs_second_review, review_status, reviewer"
+      ]
+    },
+    {
+      "file": "ml/data/youtube_mixed_workouts_v1/annotations/reviewed/tom_peto__c4TomZjzobY.labels.csv",
+      "rows": 37,
+      "duration_s": 1141.0,
+      "labels": {
+        "bicep_curl": 3,
+        "dumbbell_row": 3,
+        "lunge": 3,
+        "tricep_extension": 3,
+        "unknown": 25
+      },
+      "errors": [],
+      "warnings": [
+        "legacy schema lacks QA columns: annotation_confidence, needs_second_review, review_status, reviewer",
+        "tom_peto__c4TomZjzobY.labels.csv:2: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:3: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:4: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:5: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:6: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:7: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:8: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:9: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:10: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:11: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:12: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:13: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:14: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:15: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:16: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:17: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:18: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:19: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:20: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:21: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:22: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:23: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:24: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:25: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:26: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:27: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:28: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:29: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:30: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:31: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:32: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:33: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:34: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:35: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:36: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:37: training row is described as draft/unreviewed",
+        "tom_peto__c4TomZjzobY.labels.csv:38: training row is described as draft/unreviewed"
+      ]
+    }
+  ]
+}
