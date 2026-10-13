@@ -59,10 +59,12 @@ supported accuracy while retaining at least **97.65%** unknown rejection, but
 the locked test cannot be used to select the production threshold. The next
 step is calibration on a separate mixed-workout validation set and additional
 hard-positive variants, especially plank. Notebook 13 starts part of that work
-by mining low-gate supported candidates from an independent four-class pool
-while flagging likely Workout/Fitness duplicates and requiring visual review
-before training. The source has no plank, so a separate plank batch is still
-required. See
+without downloading another raw dataset: it scores reviewed supported windows
+from the seven existing landmark archives with the frozen v5 gate and exports
+the windows it over-rejects. Validation, test, locked GainsByBrains, and known
+draft-label groups are excluded. The resulting weights can focus the next
+retrain on existing failure cases, but they do not add independent people or
+camera views; separate new evidence is still required. See
 `evaluation/gainsbybrains_external_v1/` for the full report and the v4/v5
 comparison.
 
