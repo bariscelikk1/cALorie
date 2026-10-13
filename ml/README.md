@@ -18,8 +18,8 @@ an additional `unknown` class. Exercise-specific state machines count complete
 repetitions. Plank was retired from the active target after v5; future training
 maps archived plank samples to `unknown` while historical reports remain intact.
 
-See `ACCURACY_RECOVERY_PLAN.md` for the interpretation of the v5 external
-results and the controlled data, calibration, TCN, and ST-GCN experiment order.
+See `EXPERIMENT_BACKBONE.md` for the fixed post-v5 implementation sequence and
+`ACCURACY_RECOVERY_PLAN.md` for the interpretation of the v5 external results.
 
 ## Verified progress
 
@@ -76,7 +76,7 @@ validation.
 
 ## Colab notebooks
 
-The current rebuild uses fourteen sequential notebooks:
+The current rebuild uses fifteen sequential notebooks:
 
 1. `01_colab_extract_workoutfitness.ipynb` converts selected Workout/Fitness videos to normalized 17-joint pose sequences.
 2. `02_colab_prepare_mmfit.ipynb` converts the labeled MM-Fit exercise sets to the same representation.
@@ -92,6 +92,7 @@ The current rebuild uses fourteen sequential notebooks:
 12. `11_colab_train_hard_negative_tcn.ipynb` performs a controlled T4 retrain with the seventh hard-negative archive while keeping the v4 architecture and evaluation procedure fixed.
 13. `12_colab_evaluate_hard_negative_tcn.ipynb` runs the v5 checkpoint on the unchanged locked GainsByBrains benchmark using CPU.
 14. `13_colab_mine_hard_positives.ipynb` reuses the seven existing landmark archives and frozen v5 checkpoint to find reviewed training windows that the gate wrongly treats as `unknown`, then exports auditable sample-weight recommendations for the next retrain.
+15. `14_colab_train_v6a_hierarchical_tcn.ipynb` retires plank, preserves the historical group split, samples class -> source group -> window, and applies Notebook 13 weights only to matching training windows.
 
 Notebook 08 downloads all six versioned landmark ZIPs from GitHub by default.
 Run it on T4 and preserve `calorie_two_stage_tcn_report.zip`. Notebook 09 runs
@@ -119,6 +120,13 @@ locked GainsByBrains evaluation, and known draft YouTube groups remain excluded.
 It exports `calorie_v5_hard_positive_mining.zip` with window scores, hard-positive
 rows, clip summaries, pose previews, and recommended weights. A later retrain
 must join those weights back to the original windows rather than append copies.
+
+Notebook 14 implements V6-A from the fixed experiment backbone. It runs on T4,
+downloads the existing landmark evidence, maps archived plank windows to
+`unknown`, excludes unresolved draft groups, and exports
+`calorie_v6a_hierarchical_tcn_report.zip`. Its report includes immutable split
+assignments and sampler weights so V6-B, V6-C, and the ST-GCN comparison can use
+the same evidence.
 
 ## External evaluation
 
