@@ -1,0 +1,2 @@
+b2c2905b34deae368edc56cd4732d51c623929717242d66975564a512c690a93  README.md
+b3aab2dbcefd709f1977c4d8d3f7d0326b50444ab44db4ba6b0cf64bbae0f4f6  landmarks/calorie_workoutfitness_gate_hardneg_v1.zip
