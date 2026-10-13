@@ -17,6 +17,9 @@ primary task is 15-class workout recognition from temporal pose landmarks, with
 an additional `unknown` class. Exercise-specific state machines count complete
 repetitions; plank is measured by duration.
 
+See `ACCURACY_RECOVERY_PLAN.md` for the interpretation of the v5 external
+results and the controlled data, calibration, TCN, and ST-GCN experiment order.
+
 ## Verified progress
 
 The landmark pipelines now produce six compatible archives: Workout/Fitness,
