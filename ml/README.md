@@ -76,7 +76,7 @@ validation.
 
 ## Colab notebooks
 
-The current rebuild uses fifteen sequential notebooks:
+The current rebuild uses sixteen sequential notebooks:
 
 1. `01_colab_extract_workoutfitness.ipynb` converts selected Workout/Fitness videos to normalized 17-joint pose sequences.
 2. `02_colab_prepare_mmfit.ipynb` converts the labeled MM-Fit exercise sets to the same representation.
@@ -93,6 +93,7 @@ The current rebuild uses fifteen sequential notebooks:
 13. `12_colab_evaluate_hard_negative_tcn.ipynb` runs the v5 checkpoint on the unchanged locked GainsByBrains benchmark using CPU.
 14. `13_colab_mine_hard_positives.ipynb` reuses the seven existing landmark archives and frozen v5 checkpoint to find reviewed training windows that the gate wrongly treats as `unknown`, then exports auditable sample-weight recommendations for the next retrain.
 15. `14_colab_train_v6a_hierarchical_tcn.ipynb` retires plank, preserves the historical group split, samples class -> source group -> window, and applies Notebook 13 weights only to matching training windows.
+16. `14b_colab_train_v6a1_tempered_tcn.ipynb` corrects V6-A's over-aggressive equal-group sampler by assigning each group square-root-tempered mass while preserving class balance and training-only hard-positive weights.
 
 Notebook 08 downloads all six versioned landmark ZIPs from GitHub by default.
 Run it on T4 and preserve `calorie_two_stage_tcn_report.zip`. Notebook 09 runs
@@ -127,6 +128,14 @@ downloads the existing landmark evidence, maps archived plank windows to
 `calorie_v6a_hierarchical_tcn_report.zip`. Its report includes immutable split
 assignments and sampler weights so V6-B, V6-C, and the ST-GCN comparison can use
 the same evidence.
+
+The completed V6-A run showed that fully equal source-group probability
+over-amplified tiny groups. Its active-14 oracle exercise Macro F1 was 84.75%
+and end-to-end Macro F1 was 71.63%, below the same-window v5 diagnostics of
+88.11% and 76.70%. The failed run remains archived under `artifacts/v6a/`.
+Notebook 14b is the controlled correction: group mass is proportional to the
+square root of its window count, between equal-group and raw-window sampling.
+V6-B augmentation begins only if this corrected base is acceptable.
 
 ## External evaluation
 

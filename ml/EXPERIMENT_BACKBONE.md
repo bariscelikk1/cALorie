@@ -6,7 +6,8 @@ split, seed, report schema, and evaluation protocol.
 
 | Order | Experiment | Change | Status |
 | ---: | --- | --- | --- |
-| 1 | V6-A | Hierarchical class -> source group -> window sampling plus Notebook 13 hard-positive weights | Notebook 14 ready to run |
+| 1a | V6-A | Fully equal class -> source group -> window sampling plus Notebook 13 hard-positive weights | Completed; rejected because equal group mass hurt generalization |
+| 1b | V6-A.1 | Class-balanced sampling with square-root-tempered group mass plus the same hard-positive weights | Notebook 14b ready to run |
 | 2 | V6-B | V6-A plus train-only flip, rotation, speed, frame-drop, and coordinate-noise augmentation | Planned |
 | 3 | V6-C | V6-B plus velocity, bone-vector, and joint-angle features | Planned |
 | 4 | Calibration | Select and calibrate the gate threshold on a separate creator/person-separated validation set | Planned |
@@ -37,3 +38,5 @@ The product path remains:
 - Save split assignments, sampler diagnostics, configuration, checkpoint,
   learning curves, confusion matrices, and window predictions in every report.
 - Keep historical v1-v5 artifacts immutable.
+- A failed controlled experiment remains archived and is never silently used as
+  the base for the next stage.
