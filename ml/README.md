@@ -163,7 +163,13 @@ gate plus V6-B exercise classifier reached **81.15%** end-to-end Macro F1 on
 the same internal test. That hybrid is not promoted from test evidence.
 Notebook 17 uses three excluded creator groups for provisional calibration and
 system comparison. It runs on local CPU and never reads the locked long-video
-test; its historical timeline labels still require a final spot-check.
+test. The first local run used 90 segments and 1,198 windows. V6-C ranked first
+at a provisional threshold of **0.95**, with **56.76%** accuracy, **30.65%**
+Macro F1 across the eight labels present, and **67.53%** unknown recall. This
+is evidence of strong domain shift rather than a production threshold: seven
+supported classes are absent and four present exercises have zero recall. Its
+historical timeline labels still require a final visual spot-check before the
+threshold can be frozen.
 
 ## External evaluation
 
