@@ -1,0 +1,75 @@
+{
+  "experiment": "v6a1_tempered_hierarchical_sampling_hard_positive_weights",
+  "active_supported_class_count": 14,
+  "retired_classes_mapped_to_unknown": [
+    "plank"
+  ],
+  "training_archives": [
+    "calorie_workoutfitness_landmarks_v1.zip",
+    "calorie_mmfit_landmarks_v1.zip",
+    "calorie_mmfit_unknown_v1.zip",
+    "calorie_youtube_mixed_landmarks_v3.zip",
+    "calorie_youtube_additional_landmarks_v1.zip",
+    "calorie_youtube_training_landmarks_v4.zip",
+    "calorie_workoutfitness_gate_hardneg_v1.zip"
+  ],
+  "seed": 42,
+  "window_frames": 64,
+  "stride_frames": 32,
+  "sampler": {
+    "group_temperature": 0.5,
+    "gate": "binary_class_then_sqrt_group_mass_then_window_x_hard_positive_weight",
+    "exercise": "canonical_class_then_sqrt_group_mass_then_window",
+    "matched_hard_positive_training_windows": 172
+  },
+  "gate_threshold": 0.825,
+  "threshold_selection": "interim group-separated validation; not final calibration",
+  "gate": {
+    "accuracy": 0.8249619482496194,
+    "balanced_accuracy": 0.8061474181262156,
+    "macro_f1": 0.803896150712684
+  },
+  "exercise_classifier_oracle": {
+    "accuracy": 0.9036418816388467,
+    "balanced_accuracy": 0.8701368892989724,
+    "macro_f1": 0.8480828109368678
+  },
+  "end_to_end": {
+    "accuracy": 0.8153221714865551,
+    "balanced_accuracy": 0.7642625139255657,
+    "macro_f1": 0.7675784246818158
+  },
+  "classes": [
+    "bench_press",
+    "bicep_curl",
+    "deadlift",
+    "dumbbell_row",
+    "jumping_jack",
+    "lat_pulldown",
+    "lateral_raise",
+    "lunge",
+    "pull_up",
+    "push_up",
+    "shoulder_press",
+    "sit_up",
+    "squat",
+    "tricep_extension",
+    "unknown"
+  ],
+  "supported_classes": [
+    "bench_press",
+    "bicep_curl",
+    "deadlift",
+    "dumbbell_row",
+    "jumping_jack",
+    "lat_pulldown",
+    "lateral_raise",
+    "lunge",
+    "pull_up",
+    "push_up",
+    "shoulder_press",
+    "sit_up",
+    "squat",
+    "tricep_extension"
+  ]
+}

@@ -7,8 +7,8 @@ split, seed, report schema, and evaluation protocol.
 | Order | Experiment | Change | Status |
 | ---: | --- | --- | --- |
 | 1a | V6-A | Fully equal class -> source group -> window sampling plus Notebook 13 hard-positive weights | Completed; rejected because equal group mass hurt generalization |
-| 1b | V6-A.1 | Class-balanced sampling with square-root-tempered group mass plus the same hard-positive weights | Notebook 14b ready to run |
-| 2 | V6-B | V6-A plus train-only flip, rotation, speed, frame-drop, and coordinate-noise augmentation | Planned |
+| 1b | V6-A.1 | Class-balanced sampling with square-root-tempered group mass plus the same hard-positive weights | Completed; recovered V6-A regression and retained as sampling base |
+| 2 | V6-B | V6-A.1 plus train-only flip, rotation, speed, frame-drop, and coordinate-noise augmentation | Notebook 15 ready to run |
 | 3 | V6-C | V6-B plus velocity, bone-vector, and joint-angle features | Planned |
 | 4 | Calibration | Select and calibrate the gate threshold on a separate creator/person-separated validation set | Planned |
 | 5 | Dense decoder | Denser inference, hysteresis, minimum action duration, and short-gap merging | Planned |

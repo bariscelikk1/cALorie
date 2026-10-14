@@ -76,7 +76,7 @@ validation.
 
 ## Colab notebooks
 
-The current rebuild uses sixteen sequential notebooks:
+The current rebuild uses seventeen sequential notebooks:
 
 1. `01_colab_extract_workoutfitness.ipynb` converts selected Workout/Fitness videos to normalized 17-joint pose sequences.
 2. `02_colab_prepare_mmfit.ipynb` converts the labeled MM-Fit exercise sets to the same representation.
@@ -94,6 +94,7 @@ The current rebuild uses sixteen sequential notebooks:
 14. `13_colab_mine_hard_positives.ipynb` reuses the seven existing landmark archives and frozen v5 checkpoint to find reviewed training windows that the gate wrongly treats as `unknown`, then exports auditable sample-weight recommendations for the next retrain.
 15. `14_colab_train_v6a_hierarchical_tcn.ipynb` retires plank, preserves the historical group split, samples class -> source group -> window, and applies Notebook 13 weights only to matching training windows.
 16. `14b_colab_train_v6a1_tempered_tcn.ipynb` corrects V6-A's over-aggressive equal-group sampler by assigning each group square-root-tempered mass while preserving class balance and training-only hard-positive weights.
+17. `15_colab_train_v6b_augmentation.ipynb` freezes V6-A.1's split and sampler, visualizes and applies train-only reflection, rotation, speed, frame-drop, and coordinate-noise augmentation.
 
 Notebook 08 downloads all six versioned landmark ZIPs from GitHub by default.
 Run it on T4 and preserve `calorie_two_stage_tcn_report.zip`. Notebook 09 runs
@@ -136,6 +137,13 @@ and end-to-end Macro F1 was 71.63%, below the same-window v5 diagnostics of
 Notebook 14b is the controlled correction: group mass is proportional to the
 square root of its window count, between equal-group and raw-window sampling.
 V6-B augmentation begins only if this corrected base is acceptable.
+
+V6-A.1 recovered the regression: its gate Macro F1 was 80.39%, end-to-end
+Macro F1 was 76.76%, and unknown recall was 82.39%. On the exact same active-14
+test windows, v5 reached 76.70% end-to-end Macro F1. V6-A.1 is therefore a
+neutral, auditable sampling base rather than a claimed accuracy promotion.
+Notebook 15 implements V6-B on the frozen V6-A.1 split and saves an augmentation
+pose preview in its report before V6-C changes the feature representation.
 
 ## External evaluation
 
