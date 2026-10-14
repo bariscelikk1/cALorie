@@ -1,0 +1,105 @@
+{
+  "bench_press": {
+    "precision": 0.35,
+    "recall": 0.7368421052631579,
+    "f1-score": 0.4745762711864407,
+    "support": 19.0
+  },
+  "bicep_curl": {
+    "precision": 0.653179190751445,
+    "recall": 0.9826086956521739,
+    "f1-score": 0.7847222222222222,
+    "support": 115.0
+  },
+  "deadlift": {
+    "precision": 0.13414634146341464,
+    "recall": 0.8461538461538461,
+    "f1-score": 0.23157894736842105,
+    "support": 13.0
+  },
+  "dumbbell_row": {
+    "precision": 0.8970588235294118,
+    "recall": 0.648936170212766,
+    "f1-score": 0.7530864197530864,
+    "support": 94.0
+  },
+  "jumping_jack": {
+    "precision": 0.8769230769230769,
+    "recall": 1.0,
+    "f1-score": 0.9344262295081968,
+    "support": 57.0
+  },
+  "lat_pulldown": {
+    "precision": 0.875,
+    "recall": 1.0,
+    "f1-score": 0.9333333333333333,
+    "support": 7.0
+  },
+  "lateral_raise": {
+    "precision": 0.9659863945578231,
+    "recall": 0.9793103448275862,
+    "f1-score": 0.9726027397260274,
+    "support": 145.0
+  },
+  "lunge": {
+    "precision": 0.9920634920634921,
+    "recall": 0.6578947368421053,
+    "f1-score": 0.7911392405063291,
+    "support": 190.0
+  },
+  "pull_up": {
+    "precision": 0.3333333333333333,
+    "recall": 0.5,
+    "f1-score": 0.4,
+    "support": 4.0
+  },
+  "push_up": {
+    "precision": 0.8928571428571429,
+    "recall": 0.7575757575757576,
+    "f1-score": 0.819672131147541,
+    "support": 132.0
+  },
+  "shoulder_press": {
+    "precision": 1.0,
+    "recall": 0.9478260869565217,
+    "f1-score": 0.9732142857142857,
+    "support": 115.0
+  },
+  "sit_up": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 147.0
+  },
+  "squat": {
+    "precision": 0.9251700680272109,
+    "recall": 0.8,
+    "f1-score": 0.8580441640378549,
+    "support": 170.0
+  },
+  "tricep_extension": {
+    "precision": 0.9557522123893806,
+    "recall": 0.9818181818181818,
+    "f1-score": 0.968609865470852,
+    "support": 110.0
+  },
+  "unknown": {
+    "precision": 0.7754777070063694,
+    "recall": 0.7457886676875957,
+    "f1-score": 0.760343481654957,
+    "support": 653.0
+  },
+  "accuracy": 0.8214104515474379,
+  "macro avg": {
+    "precision": 0.7751298521934733,
+    "recall": 0.8389836395326461,
+    "f1-score": 0.7770232887753032,
+    "support": 1971.0
+  },
+  "weighted avg": {
+    "precision": 0.8637705827843033,
+    "recall": 0.8214104515474379,
+    "f1-score": 0.8329961373059305,
+    "support": 1971.0
+  }
+}
