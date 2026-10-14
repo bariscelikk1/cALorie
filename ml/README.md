@@ -76,7 +76,7 @@ validation.
 
 ## Colab notebooks
 
-The current rebuild uses seventeen sequential notebooks:
+The current rebuild uses eighteen sequential notebooks:
 
 1. `01_colab_extract_workoutfitness.ipynb` converts selected Workout/Fitness videos to normalized 17-joint pose sequences.
 2. `02_colab_prepare_mmfit.ipynb` converts the labeled MM-Fit exercise sets to the same representation.
@@ -95,6 +95,7 @@ The current rebuild uses seventeen sequential notebooks:
 15. `14_colab_train_v6a_hierarchical_tcn.ipynb` retires plank, preserves the historical group split, samples class -> source group -> window, and applies Notebook 13 weights only to matching training windows.
 16. `14b_colab_train_v6a1_tempered_tcn.ipynb` corrects V6-A's over-aggressive equal-group sampler by assigning each group square-root-tempered mass while preserving class balance and training-only hard-positive weights.
 17. `15_colab_train_v6b_augmentation.ipynb` freezes V6-A.1's split and sampler, visualizes and applies train-only reflection, rotation, speed, frame-drop, and coordinate-noise augmentation.
+18. `16_colab_train_v6c_kinematic_features.ipynb` retains V6-B augmentation and replaces the 34-coordinate input with 100 channels of coordinates, velocity, bone vectors, and joint angles.
 
 Notebook 08 downloads all six versioned landmark ZIPs from GitHub by default.
 Run it on T4 and preserve `calorie_two_stage_tcn_report.zip`. Notebook 09 runs
@@ -144,6 +145,14 @@ test windows, v5 reached 76.70% end-to-end Macro F1. V6-A.1 is therefore a
 neutral, auditable sampling base rather than a claimed accuracy promotion.
 Notebook 15 implements V6-B on the frozen V6-A.1 split and saves an augmentation
 pose preview in its report before V6-C changes the feature representation.
+
+V6-B improved oracle exercise Macro F1 from **84.81% to 86.17%** and
+end-to-end Macro F1 from **76.76% to 78.97%** on the identical 1,971 internal
+test windows. Its gate Macro F1 decreased from **80.39% to 79.18%**, so the
+augmentation block is accepted while independent gate calibration remains
+necessary. Notebook 16 freezes this accepted V6-B setup and changes only the
+input representation: normalized x/y coordinates, frame velocity, directed
+bone vectors, and joint angles.
 
 ## External evaluation
 
