@@ -11,7 +11,7 @@ split, seed, report schema, and evaluation protocol.
 | 2 | V6-B | V6-A.1 plus train-only flip, rotation, speed, frame-drop, and coordinate-noise augmentation | Completed; accepted as augmentation base |
 | 3 | V6-C | V6-B plus velocity, bone-vector, and joint-angle features | Completed; retained as gate/feature candidate |
 | 4 | Calibration | Select and calibrate the gate threshold on a separate creator/person-separated validation set | Executed locally; V6-C selected provisionally at 0.95, but weak class coverage and draft timelines require spot-check and expansion |
-| 5 | Dense decoder | Denser inference, hysteresis, minimum action duration, and short-gap merging | Planned |
+| 5 | Dense decoder | Denser inference, hysteresis, minimum action duration, and short-gap merging | Notebook 18 completed locally; small provisional gain, pending timeline spot-check |
 | 6 | G1 | Small ST-GCN comparison on the identical split | Planned |
 | 7 | Multi-scale/refinement | If still justified, compare 32/64/128-frame TCN branches and MS-TCN-style smoothing | Conditional |
 

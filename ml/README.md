@@ -97,6 +97,7 @@ The current rebuild uses nineteen sequential notebooks:
 17. `15_colab_train_v6b_augmentation.ipynb` freezes V6-A.1's split and sampler, visualizes and applies train-only reflection, rotation, speed, frame-drop, and coordinate-noise augmentation.
 18. `16_colab_train_v6c_kinematic_features.ipynb` retains V6-B augmentation and replaces the 34-coordinate input with 100 channels of coordinates, velocity, bone vectors, and joint angles.
 19. `17_local_calibrate_gate.ipynb` runs on Mac CPU, calibrates V6-B and V6-C gates on three held-out creators, and compares the modular V6-C-gate/V6-B-classifier system without loading the locked test.
+20. `18_colab_calibrate_dense_decoder.ipynb` runs on CPU, increases inference density to eight-frame strides, and calibrates hysteresis, minimum action duration, and short-gap merging on the same excluded creator timelines.
 
 Notebook 08 downloads all six versioned landmark ZIPs from GitHub by default.
 Run it on T4 and preserve `calorie_two_stage_tcn_report.zip`. Notebook 09 runs
@@ -170,6 +171,13 @@ is evidence of strong domain shift rather than a production threshold: seven
 supported classes are absent and four present exercises have zero recall. Its
 historical timeline labels still require a final visual spot-check before the
 threshold can be frozen.
+
+Notebook 18 keeps the V6-C checkpoint and provisional 0.95 gate threshold
+frozen while calibrating only temporal decoding. Its local validation run used
+5,073 dense windows. The selected decoder improved present-class Macro F1 from
+**29.89% to 30.69%** and unknown recall from **67.88% to 68.36%**. This small
+gain confirms that temporal stabilization reduces flicker but cannot solve the
+remaining data-domain and exercise-class errors.
 
 ## External evaluation
 
