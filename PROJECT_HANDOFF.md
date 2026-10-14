@@ -21,8 +21,9 @@ Do not use locked tests for tuning or promote unresolved draft labels.
   End-to-end F1/accuracy were recomputed directly from prediction CSVs.
 - Notebook 21 was created and pushed in commit `c57581b`. It loads fixed
   models and compares V6-C, all three G2 classifiers, and their equal ensemble
-  on three existing excluded-source calibration groups. It uses CPU, needs
-  the user's G2 ZIP upload, and does not train or select thresholds.
+  on three existing excluded-source calibration groups. It uses CPU and now
+  downloads the G2 ZIP automatically from pinned GitHub commit 3e3ce3c,
+  verifies its SHA-256, and does not train or select thresholds.
 
 ## G2 results and decision
 
@@ -83,3 +84,12 @@ The user requests checkpoint commits and pushes after meaningful updates,
 with enough durable context for another assistant/person to continue.
 Explain notebook hardware explicitly (CPU or T4), provide a direct Colab link,
 and name the output ZIP to send back. Prefer Turkish, clear practical steps.
+
+## Notebook input preference
+
+The user requests automatic downloads for notebook inputs already archived
+on GitHub. Do not prompt for manual re-upload of those files. Pin a source
+commit, verify checksums, reuse valid cached downloads, and fail clearly if
+verification fails. Notebook 21 now follows this rule for the G2 report.
+
+Automatic-download update validated with mocked HTTP: initial download, cache reuse, corrupt-cache replacement, checksum rejection, and temporary-file cleanup pass. All notebook Python cells compile; full inference remains unverified.

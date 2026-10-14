@@ -26,3 +26,9 @@ or collaborator can continue after a chat failure.
 - In `PROJECT_HANDOFF.md`, record current branch, completed work, decisions,
   important evidence, next action, and what was/was not tested. Use repository
   paths and durable links rather than relying on chat memory or local paths.
+
+## Notebook input delivery
+
+For inputs already archived on GitHub, download them automatically from a
+pinned commit and verify integrity. Do not ask the user to upload the same
+archive again. Clearly state CPU/T4 and the output archive name.
