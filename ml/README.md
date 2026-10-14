@@ -182,10 +182,14 @@ remaining data-domain and exercise-class errors.
 
 Notebook 19 is the controlled graph-model comparison. Its 17 graph nodes use
 normalized x/y coordinates and velocity while anatomical edges replace V6-C's
-flattened bone-vector and angle representation. ST-GCN is promoted only for a
-meaningful Macro F1 improvement that does not sacrifice unknown rejection and
-also survives later creator-separated evaluation; otherwise V6-C remains the
-production candidate.
+flattened bone-vector and angle representation. G1 improved oracle exercise
+Macro F1 from **85.57% to 88.09%**, but its gate Macro F1 fell from **82.03% to
+74.52%** and unknown recall collapsed from **74.58% to 16.85%** at the
+validation-selected 0.10 threshold. End-to-end Macro F1 therefore fell to
+**67.93%**, so the full ST-GCN is rejected. A diagnostic V6-C gate plus G1
+classifier reached **79.25%** Macro F1, essentially tied with V6-C's **79.33%**;
+this test-set combination is retained only as a hypothesis for independent
+validation.
 
 ## External evaluation
 

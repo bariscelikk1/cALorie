@@ -1,0 +1,153 @@
+{
+  "experiment": "g1_small_stgcn_comparison",
+  "active_supported_class_count": 14,
+  "retired_classes_mapped_to_unknown": [
+    "plank"
+  ],
+  "training_archives": [
+    "calorie_workoutfitness_landmarks_v1.zip",
+    "calorie_mmfit_landmarks_v1.zip",
+    "calorie_mmfit_unknown_v1.zip",
+    "calorie_youtube_mixed_landmarks_v3.zip",
+    "calorie_youtube_additional_landmarks_v1.zip",
+    "calorie_youtube_training_landmarks_v4.zip",
+    "calorie_workoutfitness_gate_hardneg_v1.zip"
+  ],
+  "seed": 42,
+  "window_frames": 64,
+  "stride_frames": 32,
+  "augmentation": {
+    "horizontal_flip_probability": 0.5,
+    "rotation_probability": 0.7,
+    "max_rotation_degrees": 7.0,
+    "speed_probability": 0.5,
+    "speed_range": [
+      0.85,
+      1.15
+    ],
+    "frame_drop_probability": 0.35,
+    "frame_drop_fraction_range": [
+      0.05,
+      0.12
+    ],
+    "coordinate_noise_probability": 0.8,
+    "coordinate_noise_std": 0.008
+  },
+  "node_feature_representation": {
+    "coordinates_xy_per_joint": 2,
+    "velocity_xy_per_joint": 2
+  },
+  "input_channels_per_joint": 4,
+  "graph_nodes": 17,
+  "skeleton_edges": [
+    [
+      5,
+      6
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      7,
+      9
+    ],
+    [
+      6,
+      8
+    ],
+    [
+      8,
+      10
+    ],
+    [
+      5,
+      11
+    ],
+    [
+      6,
+      12
+    ],
+    [
+      11,
+      12
+    ],
+    [
+      11,
+      13
+    ],
+    [
+      13,
+      15
+    ],
+    [
+      12,
+      14
+    ],
+    [
+      14,
+      16
+    ]
+  ],
+  "parameter_count": {
+    "gate": 321350,
+    "exercise": 322898,
+    "total": 644248
+  },
+  "sampler": {
+    "group_temperature": 0.5,
+    "gate": "binary_class_then_sqrt_group_mass_then_window_x_hard_positive_weight",
+    "exercise": "canonical_class_then_sqrt_group_mass_then_window",
+    "matched_hard_positive_training_windows": 172
+  },
+  "gate_threshold": 0.1,
+  "threshold_selection": "interim group-separated validation; not final calibration",
+  "gate": {
+    "accuracy": 0.7808219178082192,
+    "balanced_accuracy": 0.7387591296850999,
+    "macro_f1": 0.7451958181413376
+  },
+  "exercise_classifier_oracle": {
+    "accuracy": 0.9339908952959028,
+    "balanced_accuracy": 0.9217015050031979,
+    "macro_f1": 0.8809237282578114
+  },
+  "end_to_end": {
+    "accuracy": 0.6423135464231354,
+    "balanced_accuracy": 0.8336061696239415,
+    "macro_f1": 0.6792504510817512
+  },
+  "classes": [
+    "bench_press",
+    "bicep_curl",
+    "deadlift",
+    "dumbbell_row",
+    "jumping_jack",
+    "lat_pulldown",
+    "lateral_raise",
+    "lunge",
+    "pull_up",
+    "push_up",
+    "shoulder_press",
+    "sit_up",
+    "squat",
+    "tricep_extension",
+    "unknown"
+  ],
+  "supported_classes": [
+    "bench_press",
+    "bicep_curl",
+    "deadlift",
+    "dumbbell_row",
+    "jumping_jack",
+    "lat_pulldown",
+    "lateral_raise",
+    "lunge",
+    "pull_up",
+    "push_up",
+    "shoulder_press",
+    "sit_up",
+    "squat",
+    "tricep_extension"
+  ]
+}

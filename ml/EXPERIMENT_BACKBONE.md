@@ -12,7 +12,7 @@ split, seed, report schema, and evaluation protocol.
 | 3 | V6-C | V6-B plus velocity, bone-vector, and joint-angle features | Completed; retained as gate/feature candidate |
 | 4 | Calibration | Select and calibrate the gate threshold on a separate creator/person-separated validation set | Executed locally; V6-C selected provisionally at 0.95, but weak class coverage and draft timelines require spot-check and expansion |
 | 5 | Dense decoder | Denser inference, hysteresis, minimum action duration, and short-gap merging | Notebook 18 completed locally; small provisional gain, pending timeline spot-check |
-| 6 | G1 | Small ST-GCN comparison on the identical split | Notebook 19 ready; awaiting controlled T4 training report |
+| 6 | G1 | Small ST-GCN comparison on the identical split | Completed; full ST-GCN rejected, graph classifier retained as a modular candidate |
 | 7 | Multi-scale/refinement | If still justified, compare 32/64/128-frame TCN branches and MS-TCN-style smoothing | Conditional |
 
 The active recognition target contains 14 dynamic exercises. `plank` is retired
