@@ -98,6 +98,7 @@ The current rebuild uses nineteen sequential notebooks:
 18. `16_colab_train_v6c_kinematic_features.ipynb` retains V6-B augmentation and replaces the 34-coordinate input with 100 channels of coordinates, velocity, bone vectors, and joint angles.
 19. `17_local_calibrate_gate.ipynb` runs on Mac CPU, calibrates V6-B and V6-C gates on three held-out creators, and compares the modular V6-C-gate/V6-B-classifier system without loading the locked test.
 20. `18_colab_calibrate_dense_decoder.ipynb` runs on CPU, increases inference density to eight-frame strides, and calibrates hysteresis, minimum action duration, and short-gap merging on the same excluded creator timelines.
+21. `19_colab_compare_stgcn.ipynb` trains a small two-stage ST-GCN on the exact V6 split, sampler, augmentation, and test windows, then exports a side-by-side comparison with V6-C.
 
 Notebook 08 downloads all six versioned landmark ZIPs from GitHub by default.
 Run it on T4 and preserve `calorie_two_stage_tcn_report.zip`. Notebook 09 runs
@@ -178,6 +179,13 @@ frozen while calibrating only temporal decoding. Its local validation run used
 **29.89% to 30.69%** and unknown recall from **67.88% to 68.36%**. This small
 gain confirms that temporal stabilization reduces flicker but cannot solve the
 remaining data-domain and exercise-class errors.
+
+Notebook 19 is the controlled graph-model comparison. Its 17 graph nodes use
+normalized x/y coordinates and velocity while anatomical edges replace V6-C's
+flattened bone-vector and angle representation. ST-GCN is promoted only for a
+meaningful Macro F1 improvement that does not sacrifice unknown rejection and
+also survives later creator-separated evaluation; otherwise V6-C remains the
+production candidate.
 
 ## External evaluation
 
