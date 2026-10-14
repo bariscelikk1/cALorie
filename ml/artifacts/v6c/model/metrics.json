@@ -1,0 +1,99 @@
+{
+  "experiment": "v6c_kinematic_pose_features",
+  "active_supported_class_count": 14,
+  "retired_classes_mapped_to_unknown": [
+    "plank"
+  ],
+  "training_archives": [
+    "calorie_workoutfitness_landmarks_v1.zip",
+    "calorie_mmfit_landmarks_v1.zip",
+    "calorie_mmfit_unknown_v1.zip",
+    "calorie_youtube_mixed_landmarks_v3.zip",
+    "calorie_youtube_additional_landmarks_v1.zip",
+    "calorie_youtube_training_landmarks_v4.zip",
+    "calorie_workoutfitness_gate_hardneg_v1.zip"
+  ],
+  "seed": 42,
+  "window_frames": 64,
+  "stride_frames": 32,
+  "augmentation": {
+    "horizontal_flip_probability": 0.5,
+    "rotation_probability": 0.7,
+    "max_rotation_degrees": 7.0,
+    "speed_probability": 0.5,
+    "speed_range": [
+      0.85,
+      1.15
+    ],
+    "frame_drop_probability": 0.35,
+    "frame_drop_fraction_range": [
+      0.05,
+      0.12
+    ],
+    "coordinate_noise_probability": 0.8,
+    "coordinate_noise_std": 0.008
+  },
+  "feature_representation": {
+    "coordinates_xy": 34,
+    "velocity_xy": 34,
+    "bone_vectors_xy": 24,
+    "joint_angles": 8
+  },
+  "input_features": 100,
+  "sampler": {
+    "group_temperature": 0.5,
+    "gate": "binary_class_then_sqrt_group_mass_then_window_x_hard_positive_weight",
+    "exercise": "canonical_class_then_sqrt_group_mass_then_window",
+    "matched_hard_positive_training_windows": 172
+  },
+  "gate_threshold": 0.675,
+  "threshold_selection": "interim group-separated validation; not final calibration",
+  "gate": {
+    "accuracy": 0.8442415017757483,
+    "balanced_accuracy": 0.8136091855728318,
+    "macro_f1": 0.8202561696462228
+  },
+  "exercise_classifier_oracle": {
+    "accuracy": 0.9233687405159332,
+    "balanced_accuracy": 0.8728081262925163,
+    "macro_f1": 0.8556981638923505
+  },
+  "end_to_end": {
+    "accuracy": 0.8290208016235413,
+    "balanced_accuracy": 0.8238458670375075,
+    "macro_f1": 0.7933018176803217
+  },
+  "classes": [
+    "bench_press",
+    "bicep_curl",
+    "deadlift",
+    "dumbbell_row",
+    "jumping_jack",
+    "lat_pulldown",
+    "lateral_raise",
+    "lunge",
+    "pull_up",
+    "push_up",
+    "shoulder_press",
+    "sit_up",
+    "squat",
+    "tricep_extension",
+    "unknown"
+  ],
+  "supported_classes": [
+    "bench_press",
+    "bicep_curl",
+    "deadlift",
+    "dumbbell_row",
+    "jumping_jack",
+    "lat_pulldown",
+    "lateral_raise",
+    "lunge",
+    "pull_up",
+    "push_up",
+    "shoulder_press",
+    "sit_up",
+    "squat",
+    "tricep_extension"
+  ]
+}

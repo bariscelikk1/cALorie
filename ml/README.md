@@ -76,7 +76,7 @@ validation.
 
 ## Colab notebooks
 
-The current rebuild uses eighteen sequential notebooks:
+The current rebuild uses nineteen sequential notebooks:
 
 1. `01_colab_extract_workoutfitness.ipynb` converts selected Workout/Fitness videos to normalized 17-joint pose sequences.
 2. `02_colab_prepare_mmfit.ipynb` converts the labeled MM-Fit exercise sets to the same representation.
@@ -96,6 +96,7 @@ The current rebuild uses eighteen sequential notebooks:
 16. `14b_colab_train_v6a1_tempered_tcn.ipynb` corrects V6-A's over-aggressive equal-group sampler by assigning each group square-root-tempered mass while preserving class balance and training-only hard-positive weights.
 17. `15_colab_train_v6b_augmentation.ipynb` freezes V6-A.1's split and sampler, visualizes and applies train-only reflection, rotation, speed, frame-drop, and coordinate-noise augmentation.
 18. `16_colab_train_v6c_kinematic_features.ipynb` retains V6-B augmentation and replaces the 34-coordinate input with 100 channels of coordinates, velocity, bone vectors, and joint angles.
+19. `17_local_calibrate_gate.ipynb` runs on Mac CPU, calibrates V6-B and V6-C gates on three held-out creators, and compares the modular V6-C-gate/V6-B-classifier system without loading the locked test.
 
 Notebook 08 downloads all six versioned landmark ZIPs from GitHub by default.
 Run it on T4 and preserve `calorie_two_stage_tcn_report.zip`. Notebook 09 runs
@@ -153,6 +154,16 @@ augmentation block is accepted while independent gate calibration remains
 necessary. Notebook 16 freezes this accepted V6-B setup and changes only the
 input representation: normalized x/y coordinates, frame velocity, directed
 bone vectors, and joint angles.
+
+V6-C improved gate Macro F1 from **79.18% to 82.03%**, internal end-to-end
+Macro F1 from **78.97% to 79.33%**, and end-to-end balanced accuracy from
+**80.43% to 82.38%**. Its oracle exercise Macro F1 decreased from **86.17% to
+85.57%**. Because the two-stage checkpoints are modular, a diagnostic V6-C
+gate plus V6-B exercise classifier reached **81.15%** end-to-end Macro F1 on
+the same internal test. That hybrid is not promoted from test evidence.
+Notebook 17 uses three excluded creator groups for provisional calibration and
+system comparison. It runs on local CPU and never reads the locked long-video
+test; its historical timeline labels still require a final spot-check.
 
 ## External evaluation
 
