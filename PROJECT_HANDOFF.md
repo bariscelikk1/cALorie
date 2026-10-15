@@ -93,3 +93,25 @@ commit, verify checksums, reuse valid cached downloads, and fail clearly if
 verification fails. Notebook 21 now follows this rule for the G2 report.
 
 Automatic-download update validated with mocked HTTP: initial download, cache reuse, corrupt-cache replacement, checksum rejection, and temporary-file cleanup pass. All notebook Python cells compile; full inference remains unverified.
+
+## New YouTube candidate batch (2026-10-15)
+
+The user requested about one hour of previously unused, long YouTube workout
+footage aligned with the active 14-class target. A 61:59 candidate batch is in
+`ml/data/youtube_long_workouts_v2/`:
+
+- Legally Swole `zxqCV_eQHZY` (31:38): rare weighted/machine movements,
+  including deadlift, lat pulldown, row, curl, and triceps extension candidates.
+- Daniel Nikolic `Fk1wnNX4wQ8` (30:21): bodyweight/HIIT source containing
+  candidate push-up, squat, lunge, sit-up, jumping-jack motion and useful
+  unsupported compound negatives.
+
+Both IDs and creators are new relative to the 14-source existing manifest.
+YouTube metadata and chapter lists were inspected, but full timelines were not
+visually reviewed. Raw-video licenses were not declared by YouTube metadata.
+Every generated timeline row is therefore draft, second-review-required,
+unassigned, and excluded from training. Do not extract/promote landmarks until
+complete visual review, license/use review, adjudication, and strict audit.
+The draft structural audit covers 42 rows with zero errors. Its 42 warnings are
+the expected coarse-boundary warnings from chapter-only metadata; see
+`ml/data/youtube_long_workouts_v2/draft_annotation_audit.json`.

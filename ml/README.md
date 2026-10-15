@@ -193,6 +193,11 @@ validation.
 
 ## External evaluation
 
+The next long-workout candidate batch is documented in
+`data/youtube_long_workouts_v2/`. It contains 61:59 from two new creators, but
+all timeline rows remain draft and `use_for_training=false` until full visual
+review and adjudication.
+
 Notebook 04 exports model predictions, but it cannot measure accuracy without
 independent human labels. Score an exported mixed-video analysis with:
 
