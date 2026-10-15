@@ -46,22 +46,18 @@ those predictions are not in the G2 archive.
 
 ## Immediate next action
 
-The user has been given Notebook 21 and should return
-`calorie_g2_creator_comparison_report.zip`. Do not assume it has run yet.
-Compare the systems on the same sources and inspect per-source and per-class
-metrics. Do not compare its present-class F1 directly with the 15-label
-internal test or automatically promote a model.
+Run Notebook 22 on CPU and return
+`calorie_youtube_long_workouts_v2_review_landmarks.zip`. The notebook requires
+the reviewer to watch and save all 42 intervals before landmark extraction can
+begin. It then exports full-video continuous landmarks, first-pass labels,
+contact sheets, audit evidence, and checksums without raw video. Do not train
+from this archive yet: independently review every low-confidence row plus at
+least 10% of the remainder, adjudicate disagreements, run the strict audit,
+then build labelled training clips.
 
-Notebook 21: `ml/notebooks/21_colab_compare_g2_creators.ipynb`
+Notebook 22: `ml/notebooks/22_colab_review_extract_youtube_long_v2.ipynb`
 
-Colab: https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/21_colab_compare_g2_creators.ipynb
-
-The three sources were already used by Notebook 17; they are not a fresh
-locked test. Their historical draft-label concerns and missing exercise
-coverage remain unresolved. Notebook 21 explicitly reports provisional
-results, fixes the gate at 0.675, and performs no threshold/weight sweep.
-Its actual ensemble score is a new measurement on this source set; it does
-not repair Notebook 20's old validation field.
+Colab: https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/22_colab_review_extract_youtube_long_v2.ipynb
 
 ## Verification and limitations
 
@@ -127,3 +123,12 @@ complete visual review, license/use review, adjudication, and strict audit.
 The draft structural audit covers 42 rows with zero errors. Its 42 warnings are
 the expected coarse-boundary warnings from chapter-only metadata; see
 `ml/data/youtube_long_workouts_v2/draft_annotation_audit.json`.
+
+Notebook 22 uses immutable commit `b4591d836a6e3a26df0e3add7c0afede30c35d59`
+for the candidate and draft-label inputs and verifies their SHA-256 digests.
+It provides an interactive full-interval review panel, blocks extraction while
+any row remains draft or the audit fails, and keeps every resulting row and
+continuous landmark source at `use_for_training=false`. The output archive is
+`calorie_youtube_long_workouts_v2_review_landmarks.zip`. Notebook JSON and all
+Python cells parse locally; YouTube download, widget interaction, and MediaPipe
+extraction require the Colab runtime and have not been run end to end locally.

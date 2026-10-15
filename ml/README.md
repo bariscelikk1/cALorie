@@ -76,7 +76,7 @@ validation.
 
 ## Colab notebooks
 
-The current rebuild uses nineteen sequential notebooks:
+The current rebuild uses twenty-four sequential notebooks:
 
 1. `01_colab_extract_workoutfitness.ipynb` converts selected Workout/Fitness videos to normalized 17-joint pose sequences.
 2. `02_colab_prepare_mmfit.ipynb` converts the labeled MM-Fit exercise sets to the same representation.
@@ -99,6 +99,9 @@ The current rebuild uses nineteen sequential notebooks:
 19. `17_local_calibrate_gate.ipynb` runs on Mac CPU, calibrates V6-B and V6-C gates on three held-out creators, and compares the modular V6-C-gate/V6-B-classifier system without loading the locked test.
 20. `18_colab_calibrate_dense_decoder.ipynb` runs on CPU, increases inference density to eight-frame strides, and calibrates hysteresis, minimum action duration, and short-gap merging on the same excluded creator timelines.
 21. `19_colab_compare_stgcn.ipynb` trains a small two-stage ST-GCN on the exact V6 split, sampler, augmentation, and test windows, then exports a side-by-side comparison with V6-C.
+22. `20_colab_train_pose_model_suite.ipynb` trains BiGRU, Pose Transformer, and Adaptive GCN classifiers on the frozen V6 split and compares them with V6-C.
+23. `21_colab_compare_g2_creators.ipynb` compares the frozen G2 classifiers on the existing three-creator calibration set without tuning or promotion.
+24. `22_colab_review_extract_youtube_long_v2.ipynb` guides a full first-pass visual review of two new long videos, audits all 42 intervals, and then exports continuous 15 FPS landmarks for independent second review.
 
 Notebook 08 downloads all six versioned landmark ZIPs from GitHub by default.
 Run it on T4 and preserve `calorie_two_stage_tcn_report.zip`. Notebook 09 runs
@@ -196,7 +199,9 @@ validation.
 The next long-workout candidate batch is documented in
 `data/youtube_long_workouts_v2/`. It contains 61:59 from two new creators, but
 all timeline rows remain draft and `use_for_training=false` until full visual
-review and adjudication.
+review and adjudication. Notebook 22 performs the first visual review and
+continuous landmark extraction on CPU; its output also remains excluded from
+training until an independent second review passes.
 
 Notebook 04 exports model predictions, but it cannot measure accuracy without
 independent human labels. Score an exported mixed-video analysis with:
