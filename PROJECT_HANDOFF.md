@@ -94,6 +94,18 @@ verification fails. Notebook 21 now follows this rule for the G2 report.
 
 Automatic-download update validated with mocked HTTP: initial download, cache reuse, corrupt-cache replacement, checksum rejection, and temporary-file cleanup pass. All notebook Python cells compile; full inference remains unverified.
 
+## Notebook 21 returned result (2026-10-15)
+
+The user returned `calorie_g2_creator_comparison_report.zip`; it is preserved
+under `ml/artifacts/g2/creator_comparison/` with extracted evidence and SHA-256
+checksums. On the same 1,198 windows from three existing calibration creators,
+V6-C ranked first at 30.39% present-class Macro F1. Equal ensemble scored
+29.79%, BiGRU 28.48%, Adaptive GCN 28.41%, and Pose Transformer 27.40%.
+Accuracy was about 49% and all systems shared 56.45% unknown recall because the
+gate was frozen. Seven supported classes are absent. This confirms substantial
+creator-domain weakness and does not authorize model promotion; V6-C remains
+the reference while new people and missing movements are collected.
+
 ## New YouTube candidate batch (2026-10-15)
 
 The user requested about one hour of previously unused, long YouTube workout

@@ -1,0 +1,113 @@
+{
+  "experiment": "g2_existing_creator_provisional_comparison",
+  "evidence_status": "provisional_existing_creator_calibration_not_locked_test",
+  "promotion_allowed": false,
+  "gate_threshold": 0.675,
+  "threshold_tuned_here": false,
+  "trained_here": false,
+  "creator_groups": [
+    "youtube:W2Bm9dfQjbk",
+    "youtube:c4TomZjzobY",
+    "youtube:oLsonHQJOUc"
+  ],
+  "present_labels": [
+    "bicep_curl",
+    "dumbbell_row",
+    "lunge",
+    "push_up",
+    "sit_up",
+    "squat",
+    "tricep_extension",
+    "unknown"
+  ],
+  "missing_supported_classes": [
+    "bench_press",
+    "deadlift",
+    "jumping_jack",
+    "lat_pulldown",
+    "lateral_raise",
+    "pull_up",
+    "shoulder_press"
+  ],
+  "models": [
+    {
+      "model": "v6c",
+      "windows": 1198,
+      "present_label_count": 8,
+      "macro_f1_present_labels": 0.30387574973684484,
+      "accuracy": 0.49165275459098495,
+      "creator_mean_macro_f1_present_labels": 0.45569739265268927,
+      "unknown_recall": 0.5644796380090498,
+      "oracle_exercise_macro_f1_present_labels": 0.412859880794423,
+      "macro_f1_delta_vs_v6c_pp": 0.0
+    },
+    {
+      "model": "bigru",
+      "windows": 1198,
+      "present_label_count": 8,
+      "macro_f1_present_labels": 0.28476311926791115,
+      "accuracy": 0.49081803005008345,
+      "creator_mean_macro_f1_present_labels": 0.4444394388109442,
+      "unknown_recall": 0.5644796380090498,
+      "oracle_exercise_macro_f1_present_labels": 0.3749536178107607,
+      "macro_f1_delta_vs_v6c_pp": -1.911263046893369
+    },
+    {
+      "model": "pose_transformer",
+      "windows": 1198,
+      "present_label_count": 8,
+      "macro_f1_present_labels": 0.2740130077919037,
+      "accuracy": 0.49165275459098495,
+      "creator_mean_macro_f1_present_labels": 0.4296859553805817,
+      "unknown_recall": 0.5644796380090498,
+      "oracle_exercise_macro_f1_present_labels": 0.37959183673469393,
+      "macro_f1_delta_vs_v6c_pp": -2.986274194494115
+    },
+    {
+      "model": "adaptive_gcn",
+      "windows": 1198,
+      "present_label_count": 8,
+      "macro_f1_present_labels": 0.2841246514256537,
+      "accuracy": 0.48831385642737896,
+      "creator_mean_macro_f1_present_labels": 0.44482070575729454,
+      "unknown_recall": 0.5644796380090498,
+      "oracle_exercise_macro_f1_present_labels": 0.3098459839037156,
+      "macro_f1_delta_vs_v6c_pp": -1.975109831119115
+    },
+    {
+      "model": "equal_ensemble",
+      "windows": 1198,
+      "present_label_count": 8,
+      "macro_f1_present_labels": 0.2979352036906547,
+      "accuracy": 0.49165275459098495,
+      "creator_mean_macro_f1_present_labels": 0.449845906217708,
+      "unknown_recall": 0.5644796380090498,
+      "oracle_exercise_macro_f1_present_labels": 0.40728726381003,
+      "macro_f1_delta_vs_v6c_pp": -0.5940546046190154
+    }
+  ],
+  "input_digests": {
+    "v6c_report": "d2e8263c04954f13157ca76221de5d408b04b1ec",
+    "calibration_landmarks": "948db2dece517a6afa0a8cefd789381222db9a76",
+    "g2_report": "c2bcb5b01c65872ad6b990b0eb20639d177dc86281a07abcd270710dd366aea7"
+  },
+  "digest_algorithms": {
+    "v6c_report": "git_blob_sha1",
+    "calibration_landmarks": "git_blob_sha1",
+    "g2_report": "sha256"
+  },
+  "repository_commit": "3e3ce3c343d9b6adfcc3d63fc9276c31a74a074f",
+  "inference_seconds": {
+    "bigru": 8.888944250999998,
+    "pose_transformer": 5.22246061300001,
+    "adaptive_gcn": 26.782950686999982
+  },
+  "limitations": [
+    "Existing calibration creators, not a fresh locked test",
+    "Historical draft-label concerns are unresolved",
+    "Incomplete exercise coverage; correlated windows are not independent people",
+    "No threshold or ensemble-weight tuning; no automatic model promotion",
+    "G2 split metadata was not exported; exclusion relies on pinned Notebook 20 protocol and V6 split audit",
+    "This ensemble score is computed from actual averaged predictions on this set; it does not repair Notebook 20 internal validation"
+  ]
+}
