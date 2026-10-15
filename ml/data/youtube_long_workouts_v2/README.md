@@ -16,12 +16,15 @@ creator was reused.
 
 ## Important status
 
-This is a **candidate and draft-annotation package**, not accepted training
-data. The channel descriptions and YouTube chapter boundaries were used only to
-locate likely intervals. They cannot establish a ground-truth label.
+This is a **candidate and first-pass annotation package**, not accepted
+training data. The original channel descriptions and YouTube chapter
+boundaries were used only to locate likely intervals. A later visual pass
+expanded the 42 draft rows to 118 motion-oriented first-pass intervals, but
+that pass cannot establish independently approved ground truth.
 
 - `use_for_training=false` for every row;
-- every label has `review_status=draft` and `needs_second_review=true`;
+- every first-pass label remains `use_for_training=false` and requires an
+  independent second review;
 - the raw-video license field remains `unspecified`; do not redistribute raw
   video and review intended use before acquisition;
 - visually inspect the complete timeline, body visibility, person count,
@@ -32,22 +35,26 @@ locate likely intervals. They cannot establish a ground-truth label.
   and transitions remain `unknown` unless a reviewer establishes one canonical
   supported motion for the full interval.
 
-The draft files live in `annotations/draft/`. They cover the complete source
-duration without overlap, but their chapter-level boundaries are intentionally
-coarse. A reviewer must split exercise, rest, setup, and transition frames more
-precisely.
+The original chapter-derived files live in `annotations/draft/`. The visual
+first pass lives in `annotations/first_pass/` and covers the complete source
+duration without overlap. A second reviewer must still check exercise, rest,
+setup, transition, and boundary decisions.
 
 `draft_annotation_audit.json` records the pre-review structural audit: 42 rows,
 zero errors, and 42 expected warnings for the intentionally coarse five-second
 chapter boundaries. The `metadata_prefill_only` reviewer value identifies the
 automated draft source; it does not represent human review.
 
+`first_pass_annotation_audit.json` records 118 rows and zero structural errors.
+Its 118 coarse-boundary warnings are expected for this pass and are one reason
+the labels cannot enter training yet.
+
 ## Review sequence
 
 1. Confirm each source is still public and record the applicable usage/license
    decision. Download privately for project review; do not commit raw videos.
-2. Watch both videos from start to finish. Correct every boundary and visible
-   motion label using `ml/data/ANNOTATION_GUIDE.md`.
+2. Use Notebook 22's continuous landmarks and pose previews to audit whether
+   the first-pass intervals have usable pose coverage.
 3. Keep ambiguous variants and compound movements as `unknown`; document why.
 4. Produce an independent second review for all low-confidence rows and at
    least 10% of the remaining intervals.

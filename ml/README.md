@@ -18,8 +18,9 @@ an additional `unknown` class. Exercise-specific state machines count complete
 repetitions. Plank was retired from the active target after v5; future training
 maps archived plank samples to `unknown` while historical reports remain intact.
 
-See `EXPERIMENT_BACKBONE.md` for the fixed post-v5 implementation sequence and
-`ACCURACY_RECOVERY_PLAN.md` for the interpretation of the v5 external results.
+See `EXPERIMENT_BACKBONE.md` for the fixed post-v5 implementation sequence,
+`ACCURACY_RECOVERY_PLAN.md` for the interpretation of the v5 external results,
+and `POST_V6C_ROADMAP.md` for the ordered plan after the G2 creator comparison.
 
 ## Verified progress
 
@@ -101,7 +102,7 @@ The current rebuild uses twenty-four sequential notebooks:
 21. `19_colab_compare_stgcn.ipynb` trains a small two-stage ST-GCN on the exact V6 split, sampler, augmentation, and test windows, then exports a side-by-side comparison with V6-C.
 22. `20_colab_train_pose_model_suite.ipynb` trains BiGRU, Pose Transformer, and Adaptive GCN classifiers on the frozen V6 split and compares them with V6-C.
 23. `21_colab_compare_g2_creators.ipynb` compares the frozen G2 classifiers on the existing three-creator calibration set without tuning or promotion.
-24. `22_colab_review_extract_youtube_long_v2.ipynb` guides a full first-pass visual review of two new long videos, audits all 42 intervals, and then exports continuous 15 FPS landmarks for independent second review.
+24. `22_colab_review_extract_youtube_long_v2.ipynb` loads 118 visually prepared first-pass intervals for two new long videos, audits them, downloads 720p sources, and exports continuous 15 FPS landmarks for independent second review.
 
 Notebook 08 downloads all six versioned landmark ZIPs from GitHub by default.
 Run it on T4 and preserve `calorie_two_stage_tcn_report.zip`. Notebook 09 runs
@@ -197,11 +198,14 @@ validation.
 ## External evaluation
 
 The next long-workout candidate batch is documented in
-`data/youtube_long_workouts_v2/`. It contains 61:59 from two new creators, but
-all timeline rows remain draft and `use_for_training=false` until full visual
-review and adjudication. Notebook 22 performs the first visual review and
-continuous landmark extraction on CPU; its output also remains excluded from
-training until an independent second review passes.
+`data/youtube_long_workouts_v2/`. It contains 61:59 from two new creators and
+118 visually prepared first-pass intervals. Every row remains
+`use_for_training=false`: the first pass is evidence for Notebook 22, not an
+independent approval. Notebook 22 runs on CPU, downloads the 720p sources, and
+extracts continuous landmarks. Its output remains excluded from training until
+pose coverage is audited, an independent second review is adjudicated, and the
+strict timeline audit passes. The subsequent controlled work is defined in
+`POST_V6C_ROADMAP.md`.
 
 Notebook 04 exports model predictions, but it cannot measure accuracy without
 independent human labels. Score an exported mixed-video analysis with:

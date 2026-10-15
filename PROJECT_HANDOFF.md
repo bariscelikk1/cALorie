@@ -10,6 +10,8 @@ Plank is retired to unknown in post-v5 experiments.
 
 Read `ml/EXPERIMENT_BACKBONE.md`, `ml/README.md`, `ml/AGENTS.md`, and
 `ml/data/ANNOTATION_GUIDE.md` for the experiment and annotation contracts.
+Read `ml/POST_V6C_ROADMAP.md` for the ordered post-G2 plan, hardware choices,
+promotion gates, and proposed Notebook 23-30 sequence.
 Do not use locked tests for tuning or promote unresolved draft labels.
 
 ## Latest completed work
@@ -46,14 +48,16 @@ those predictions are not in the G2 archive.
 
 ## Immediate next action
 
-Run Notebook 22 on CPU and return
+Finish Notebook 22 on CPU and return
 `calorie_youtube_long_workouts_v2_review_landmarks.zip`. The notebook requires
-the reviewer to watch and save all 42 intervals before landmark extraction can
-begin. It then exports full-video continuous landmarks, first-pass labels,
+no training and does not benefit from a T4. Its current 720p run exports
+full-video continuous landmarks, 118 visually prepared first-pass intervals,
 contact sheets, audit evidence, and checksums without raw video. Do not train
-from this archive yet: independently review every low-confidence row plus at
-least 10% of the remainder, adjudicate disagreements, run the strict audit,
-then build labelled training clips.
+from this archive yet: audit pose coverage, independently review every
+low-confidence row plus at least 10% of the remainder, adjudicate disagreements,
+run the strict audit, and then build labelled training clips in the proposed
+CPU Notebook 23. The first retraining experiment is proposed Notebook 24 on a
+T4 and changes only the added reviewed data while keeping V6-C fixed.
 
 Notebook 22: `ml/notebooks/22_colab_review_extract_youtube_long_v2.ipynb`
 
@@ -124,11 +128,25 @@ The draft structural audit covers 42 rows with zero errors. Its 42 warnings are
 the expected coarse-boundary warnings from chapter-only metadata; see
 `ml/data/youtube_long_workouts_v2/draft_annotation_audit.json`.
 
-Notebook 22 uses immutable commit `b4591d836a6e3a26df0e3add7c0afede30c35d59`
-for the candidate and draft-label inputs and verifies their SHA-256 digests.
-It provides an interactive full-interval review panel, blocks extraction while
-any row remains draft or the audit fails, and keeps every resulting row and
-continuous landmark source at `use_for_training=false`. The output archive is
-`calorie_youtube_long_workouts_v2_review_landmarks.zip`. Notebook JSON and all
-Python cells parse locally; YouTube download, widget interaction, and MediaPipe
-extraction require the Colab runtime and have not been run end to end locally.
+The first-pass visual pass expanded the two timelines from 42 chapter-derived
+draft rows to 118 motion-oriented intervals: 62 for Daniel Nikolic and 56 for
+Legally Swole. The structural audit reports zero errors; all 118 coarse-boundary
+warnings are expected because this is still a first pass. Commit `5265a0e`
+updated Notebook 22 to use these labels and request 720p sources. It keeps every
+resulting row and continuous landmark source at `use_for_training=false`. The
+output archive is `calorie_youtube_long_workouts_v2_review_landmarks.zip`.
+Notebook JSON and all Python cells parse locally; the active Colab download and
+MediaPipe extraction have not yet returned their final report.
+
+## Post-G2 roadmap checkpoint (2026-10-15)
+
+`ml/POST_V6C_ROADMAP.md` records the durable execution plan requested by the
+user. The diagnosis is that cross-creator coverage, open-set rejection, action
+boundaries, and pose missingness are now stronger bottlenecks than raw model
+size. The order is: finish and independently approve the new evidence; exact
+V6-C data-only retrain; visibility/missingness ablation; complete-action
+temporal samples; CrossMax-inspired multi-stream gate; self-supervised temporal
+pretraining; one conditional PoseC3D comparison; then boundary-aware dense
+decoding. CPU/T4 choices, required artifacts, evaluation rules, stop rules, and
+primary research references are included so a future assistant can continue
+without reconstructing this chat.
