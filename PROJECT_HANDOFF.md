@@ -197,6 +197,15 @@ Android VR, web-safari HLS, and generic exact-360p strategies with diagnostics.
 This is a download-path fix only; benchmark sources, resolution, labels, and
 model policy are unchanged.
 
+The next run downloaded the sources but failed at the first contact-sheet seek
+with `Could not decode frame at 0.50s`. A valid container/height probe is not
+enough because Colab OpenCV may not decode the selected VP9/AV1/HLS-derived
+stream. Notebook 28 now tests OpenCV seeking at two timestamps and, only when
+needed, transcodes the temporary source with ffmpeg to H.264/yuv420p 360p
+video without audio. Contact sheets and landmark extraction then consume the
+same verified decode-safe path. Raw and normalized videos remain outside the
+output ZIP.
+
 Notebook 23: `ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb`
 
 Colab: https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb
