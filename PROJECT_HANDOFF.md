@@ -48,18 +48,17 @@ those predictions are not in the G2 archive.
 
 ## Immediate next action
 
-Notebook 22 is complete and its verified report is archived under
-`ml/artifacts/youtube_long_v2/landmarks/`. Run CPU Notebook 23 for conservative
-clip/manifest creation. It processes all 20 supported intervals and 12
-deterministic unknown intervals. The user
-rejected the 32-click manual workflow. The current version automatically saves
-the completed Codex contact-sheet label audit, applies two-second supported and
-four-second unknown edge trims, and exports; the widget remains optional for
-overrides. Metadata explicitly says that human full-motion review is not
-claimed.
-Do not train from the Notebook 22 archive directly.
-The first retraining experiment remains proposed Notebook 24 on a T4; it
-changes only the added reviewed data while keeping V6-C fixed.
+Notebook 22 and CPU Notebook 23 are complete. Notebook 23's returned package is
+verified and archived under `ml/artifacts/youtube_long_v2/reviewed_clips/`.
+It contains 32 clips from two new train-only groups: 20 supported clips across
+nine classes and 12 unknown clips, totaling 15,195 frames. All checksums,
+manifest paths, finite-array checks, and pose schemas pass. The conservative
+contact-sheet audit does not claim frame-accurate full-motion review.
+
+The next controlled experiment is Notebook 24 on a T4 GPU. It must preserve the
+exact V6-C architecture, features, augmentation, seed, sampler, old group
+splits, validation evidence, and test evidence. The only change is adding the
+two Notebook 23 source groups to training.
 
 Notebook 23: `ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb`
 

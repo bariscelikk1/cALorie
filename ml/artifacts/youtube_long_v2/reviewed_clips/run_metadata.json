@@ -1,0 +1,14 @@
+{
+  "notebook": "23_colab_review_build_youtube_long_v2.ipynb",
+  "runtime": "CPU",
+  "source_report_sha256": "f97bf6844f465e7c4bc09f3131bd41edbcda32e20f334ae59a2dfc95b5a48506",
+  "source_report_commit": "5146096fed1282fc3b82a8878687613cf3ccfe33",
+  "review_targets": 32,
+  "exported_clips": 32,
+  "groups": [
+    "youtube:Fk1wnNX4wQ8",
+    "youtube:zxqCV_eQHZY"
+  ],
+  "training_allowed": true,
+  "split_rule": "keep each group_id wholly within one train/validation/test partition"
+}
