@@ -482,7 +482,15 @@ press around minutes 4–6 and seated lateral raises around minutes 32–35 that
 the initial 37-region selection missed. Four draft locators are in
 `ml/data/youtube_creator_benchmark_v1/supplemental_candidates_v1.csv`, commit
 `0e2ae05fd5a82ea6e55afbc068b6ab7ebd1b53f9`. CPU Notebook 29B
-(`ml/notebooks/29b_colab_supplement_creator_rgb_review.ipynb`) downloads only
-that existing external-test video and returns 2-FPS RGB sheets for those four
-regions. It requires only Colab `Run all`, no upload. These are not final
-labels; wait for its ZIP before revising class coverage.
+(`ml/notebooks/29b_colab_supplement_creator_rgb_review.ipynb`) reuses or
+downloads only that existing external-test video and returns 2-FPS RGB sheets
+for those four regions. These are not final labels; wait for its ZIP before
+revising class coverage. The first Notebook 29B run was blocked by YouTube's
+"Sign in to confirm you're not a bot" challenge on Colab, across all four
+download variants. This is an access block, not a missing video format.
+Notebook 29's earlier ZIP proves that its source was decoded there, but the
+raw source was deliberately not exported and Colab storage may have expired.
+The repaired Notebook 29B first reuses a live Notebook 29 Colab cache, then
+looks for `MyDrive/cALorie/source_videos/phFvFuLUFEw.mp4` (360p preferred,
+saved 720p accepted), and only then tries yt-dlp. It stops after the first
+bot challenge. Do not put the raw video in GitHub or the review ZIP.
