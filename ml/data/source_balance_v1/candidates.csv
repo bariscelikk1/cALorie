@@ -1,0 +1,9 @@
+video_id,creator,title,source_url,target_classes,role,status,training_allowed,selection_basis
+1TEOaMX7uL8,Jeff Nippard,Back workout,https://www.youtube.com/watch?v=1TEOaMX7uL8,lat_pulldown|pull_up,train_candidate,metadata_only,false,Description lists wide-grip lat pulldown and pull-up sets; visible motion and full repetitions unverified
+J1ldBhooepw,Ryan Humiston,6 Lat Pulldown Exercises To Build The Best Back Workout,https://www.youtube.com/watch?v=J1ldBhooepw,lat_pulldown,train_candidate,metadata_only,false,Description names multiple lat pulldown variations; visible motion and canonical variants unverified
+k61_gCDQb5Q,Goku Pump,Pull up Workout Follow Along,https://www.youtube.com/watch?v=k61_gCDQb5Q,pull_up,train_candidate,metadata_only,false,Description lists repeated pull-up sets and variations; visible motion unverified
+tWdbFSaEXWY,Michael Eckert,Beginner Pull Up Workout Follow Along,https://www.youtube.com/watch?v=tWdbFSaEXWY,pull_up,train_candidate,metadata_only,false,Description names a coached pull-up workout; visible motion unverified
+jTRwWrnVGuE,Rowan Row,Home Back Workout Dumbbells Only,https://www.youtube.com/watch?v=jTRwWrnVGuE,dumbbell_row,train_candidate,metadata_only,false,Title suggests dumbbell back work; actual row intervals unverified
+-koP10y1qZI,Howcast,How to Do a Dumbbell Row,https://www.youtube.com/watch?v=-koP10y1qZI,dumbbell_row,train_candidate,metadata_only,false,Transcript describes one-arm dumbbell row demonstrations; duration and usable reps unverified
+UCjNb0nTn10,Sydney Cummings,10 Minute Sit-Up Challenge Workout,https://www.youtube.com/watch?v=UCjNb0nTn10,sit_up,train_candidate,metadata_only,false,Title names sit-up challenge; visible motion and variants unverified
+6MYtjzEF6IA,Nick Walker,The Best 10 Minute Abs Workout,https://www.youtube.com/watch?v=6MYtjzEF6IA,sit_up,train_candidate,metadata_only,false,Description lists straight-leg sit-up and alternating sit-up reach; canonical mapping unverified

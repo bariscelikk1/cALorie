@@ -536,3 +536,14 @@ Its priority is to lock the six-creator labels on CPU, score frozen candidates
 once, then decide whether new creator-diverse training data or model changes
 are warranted. The current web worker still runs its earlier heuristic
 classifier; research checkpoint scores are not deployed product scores.
+
+## Source/class confounding intervention (2026-10-17)
+
+`ml/data/source_balance_v1/` now records eight **metadata-only** training
+candidate videos from distinct new creators for dumbbell row, sit-up, lat
+pulldown, and pull-up. `ml/scripts/audit_source_balance.py` checks their IDs
+and creator names against existing and locked external inventories, and shows
+that the long-v2 retrain added only one creator for row/pulldown while pull-up
+and sit-up remained single-source. No candidate was downloaded, visually
+reviewed, labeled, or trained; all have `training_allowed=false`. Next perform
+CPU visual/pose screening and independent labels before a T4 data-only retrain.
