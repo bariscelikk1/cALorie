@@ -137,6 +137,19 @@ regressed by 10.96 points. Do not promote the full checkpoint; carry its
 exercise classifier as a provisional frozen component into the gate-only
 Notebook 27 experiment.
 
+Notebook 27 is implemented as
+`ml/notebooks/27_colab_multistream_open_set_gate.ipynb`. It freezes Notebook
+26's temporal exercise classifier and trains three binary TCN gates over joint
+coordinates, bone vectors, and velocity. Validation compares mean probability,
+weakest-stream-weighted probability, and a prototype-distance fusion. Selection
+requires at least 85% validation unknown rejection; only the selected fusion
+and threshold define the primary unchanged-test result.
+
+Colab: https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/27_colab_multistream_open_set_gate.ipynb
+
+Runtime: T4 GPU. Expected output:
+`calorie_v6f_multistream_open_set_gate_report.zip`.
+
 Notebook 23: `ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb`
 
 Colab: https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb
