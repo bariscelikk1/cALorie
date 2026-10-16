@@ -128,6 +128,15 @@ Colab: https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/t
 Runtime: T4 GPU. Expected output:
 `calorie_v6e_complete_action_temporal_report.zip`.
 
+Notebook 26 has returned and is archived under
+`ml/artifacts/v6e_complete_action_temporal/`. It added 3,035 train-only cycle
+candidates while preserving all 1,971 test keys. Oracle exercise Macro F1 rose
+to 89.11%, the strongest classifier result so far. Gate Macro F1 remained below
+V6-C at 80.18%, so end-to-end Macro F1 reached only 79.56%. MM-Fit w18 accuracy
+regressed by 10.96 points. Do not promote the full checkpoint; carry its
+exercise classifier as a provisional frozen component into the gate-only
+Notebook 27 experiment.
+
 Notebook 23: `ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb`
 
 Colab: https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb
