@@ -514,3 +514,16 @@ locators as locked labels. Notebook 29B's dense RGB rerun is optional only if
 pose plus archived coarse RGB cannot settle visual ambiguities; it is not the
 normal path for landmark extraction. The creator sources stay external test
 only, and no model score may be promoted before independent interval review.
+
+CPU Notebook 29C (`ml/notebooks/29c_colab_creator_label_review_queue.ipynb`)
+is the next reproducible `Run all` step. It downloads only five small CSV/JSON
+inputs from pinned commit `9f09b3dcba4376285fab0a6260821111c721d765`,
+checks their SHA-256 hashes, combines 37 existing first-pass regions with four
+supplemental pose-reviewed locators, and produces a 41-row draft review queue,
+independent-review template, draft class coverage, overlap diagnostics, and
+one ZIP. It does not download video, run pose extraction, score checkpoints,
+or mark any row final. Local execution verified 41 rows across six creators and
+found one first-pass core three seconds outside its earlier coarse locator
+(`ojs_squat_02`), which is flagged for review rather than silently clipped.
+The final external test remains on hold until independent motion/boundary
+review and the timeline audit actually pass.

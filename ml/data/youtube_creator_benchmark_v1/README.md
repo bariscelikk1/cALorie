@@ -92,6 +92,11 @@ accepted. These are not final scores or accepted benchmark labels.
 The accepted Michelle Briehler source also shows unselected standard dumbbell
 bench press and seated lateral raise work in its full-timeline storyboards.
 `supplemental_candidates_v1.csv` records four new **draft** locators for those
-motions. CPU Notebook 29B extracts 2-FPS RGB evidence around them; they do not
-restore 14-class coverage until their motion and boundaries are reviewed.
+motions. The archived 15-FPS landmarks were reused to produce 2-FPS pose
+sheets in `ml/artifacts/youtube_creator_benchmark_v1/supplemental_pose_review/`;
+Notebook 29B RGB extraction is optional when pose plus the existing 10-second
+RGB storyboard leaves a real visual ambiguity. The four draft rows do not
+restore 14-class coverage until their motion and boundaries are independently
+reviewed. CPU Notebook 29C assembles all 41 draft regions into a review queue
+and audit bundle without video downloads or model scoring.
 
