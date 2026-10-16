@@ -48,16 +48,12 @@ those predictions are not in the G2 archive.
 
 ## Immediate next action
 
-Finish Notebook 22 on CPU and return
-`calorie_youtube_long_workouts_v2_review_landmarks.zip`. The notebook requires
-no training and does not benefit from a T4. Its current 720p run exports
-full-video continuous landmarks, 118 visually prepared first-pass intervals,
-contact sheets, audit evidence, and checksums without raw video. Do not train
-from this archive yet: audit pose coverage, independently review every
-low-confidence row plus at least 10% of the remainder, adjudicate disagreements,
-run the strict audit, and then build labelled training clips in the proposed
-CPU Notebook 23. The first retraining experiment is proposed Notebook 24 on a
-T4 and changes only the added reviewed data while keeping V6-C fixed.
+Notebook 22 is complete and its verified report is archived under
+`ml/artifacts/youtube_long_v2/landmarks/`. Build and run CPU Notebook 23 for
+independent full-motion boundary review, adjudication, strict audit, and clean
+clip/manifest creation. Do not train from the Notebook 22 archive directly.
+The first retraining experiment remains proposed Notebook 24 on a T4; it
+changes only the added reviewed data while keeping V6-C fixed.
 
 Notebook 22: `ml/notebooks/22_colab_review_extract_youtube_long_v2.ipynb`
 
@@ -135,8 +131,12 @@ warnings are expected because this is still a first pass. Commit `5265a0e`
 updated Notebook 22 to use these labels and request 720p sources. It keeps every
 resulting row and continuous landmark source at `use_for_training=false`. The
 output archive is `calorie_youtube_long_workouts_v2_review_landmarks.zip`.
-Notebook JSON and all Python cells parse locally; the active Colab download and
-MediaPipe extraction have not yet returned their final report.
+Notebook JSON and all Python cells parse locally. The returned report passes
+ZIP and internal checksum verification. Its two continuous arrays contain
+55,787 finite 17 x 4 frames at 15 FPS. Detection is 99.52% and 99.56%; the 20
+supported intervals have at least 99.44% detection. Four pose-quality flags are
+all in `unknown` material. A second inspection of all 118 contact sheets found
+no obvious label mismatch, but it does not approve motion boundaries.
 
 The user's first Notebook 22 run downloaded the Legally Swole source correctly
 at 1280x720 and 30 FPS (56,949 frames), then the single fixed-format `yt-dlp`

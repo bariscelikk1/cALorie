@@ -1,0 +1,3 @@
+video_id,creator,group_id,landmark_path,sampled_frames,duration_s,target_fps,source_fps,detection_rate,status,label_status,use_for_training
+zxqCV_eQHZY,Legally Swole,youtube:zxqCV_eQHZY,continuous_landmarks/legally_swole__zxqCV_eQHZY.npz,28475,1898.2667236328125,15.0,30.0,0.995153643546971,ok,first_pass_reviewed_needs_independent_second_review,False
+Fk1wnNX4wQ8,Daniel Nikolic,youtube:Fk1wnNX4wQ8,continuous_landmarks/daniel_nikolic__Fk1wnNX4wQ8.npz,27312,1820.7332763671875,15.0,30.0,0.99556971294669,ok,first_pass_reviewed_needs_independent_second_review,False

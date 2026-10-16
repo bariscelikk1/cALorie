@@ -199,6 +199,7 @@ Append one row here or in the stage report:
 | Date | Stage/run | Only changed block | Primary metrics | Creator regressions | Decision | Commit/report |
 | --- | --- | --- | --- | --- | --- | --- |
 | 2026-10-15 | G2 creator comparison | classifier family | V6-C 30.39%; ensemble 29.79%; BiGRU 28.48%; AGCN 28.41%; transformer 27.40% present-class Macro F1 | all systems remain weak; seven classes absent | retain V6-C; improve evidence first | `ml/artifacts/g2/creator_comparison/` |
+| 2026-10-16 | Notebook 22 pose audit | two new continuous landmark sources | 55,787 finite frames; 99.52% and 99.56% detection; supported-interval minimum 99.44% | labels still need full-motion boundary approval | accept pose extraction; proceed to CPU Notebook 23 | `ml/artifacts/youtube_long_v2/landmarks/` |
 
 ## Research basis
 

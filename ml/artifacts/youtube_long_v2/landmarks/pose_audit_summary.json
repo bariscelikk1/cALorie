@@ -1,0 +1,104 @@
+{
+  "all_landmark_values_finite": true,
+  "archive_integrity": "zip test and all internal SHA256SUMS passed",
+  "archive_sha256": "f97bf6844f465e7c4bc09f3131bd41edbcda32e20f334ae59a2dfc95b5a48506",
+  "contact_sheet_label_audit": {
+    "boundary_approval": false,
+    "next_requirement": "independent full-motion boundary review and adjudication before training",
+    "obvious_canonical_label_mismatches": 0,
+    "rows_inspected": 118,
+    "scope": "start/middle/end contact-sheet label check only"
+  },
+  "intervals": {
+    "pose_flagged_detection_below_0_95_or_gap_above_1s": 4,
+    "supported": 20,
+    "supported_min_detection_rate": 0.9944444444444444,
+    "supported_total_duration_s": 767.0,
+    "total": 118,
+    "unknown": 98
+  },
+  "sources": [
+    {
+      "detection_rate": 0.99556971294669,
+      "frames": 27312,
+      "max_consecutive_missing_s": 1.4666666666666666,
+      "median_visible_joints_at_0_5": 16.0,
+      "stem": "daniel_nikolic__Fk1wnNX4wQ8",
+      "video_id": "Fk1wnNX4wQ8"
+    },
+    {
+      "detection_rate": 0.995153643546971,
+      "frames": 28475,
+      "max_consecutive_missing_s": 0.7333333333333333,
+      "median_visible_joints_at_0_5": 15.0,
+      "stem": "legally_swole__zxqCV_eQHZY",
+      "video_id": "zxqCV_eQHZY"
+    }
+  ],
+  "supported_by_label": {
+    "bicep_curl": {
+      "duration_s": 104.0,
+      "frames": 1560,
+      "intervals": 2,
+      "mean_detection_rate": 1.0,
+      "min_detection_rate": 1.0
+    },
+    "deadlift": {
+      "duration_s": 52.0,
+      "frames": 780,
+      "intervals": 1,
+      "mean_detection_rate": 0.9974358974358974,
+      "min_detection_rate": 0.9974358974358974
+    },
+    "dumbbell_row": {
+      "duration_s": 52.0,
+      "frames": 780,
+      "intervals": 1,
+      "mean_detection_rate": 1.0,
+      "min_detection_rate": 1.0
+    },
+    "jumping_jack": {
+      "duration_s": 45.0,
+      "frames": 675,
+      "intervals": 1,
+      "mean_detection_rate": 1.0,
+      "min_detection_rate": 1.0
+    },
+    "lat_pulldown": {
+      "duration_s": 52.0,
+      "frames": 780,
+      "intervals": 1,
+      "mean_detection_rate": 1.0,
+      "min_detection_rate": 1.0
+    },
+    "lunge": {
+      "duration_s": 130.0,
+      "frames": 1950,
+      "intervals": 4,
+      "mean_detection_rate": 1.0,
+      "min_detection_rate": 1.0
+    },
+    "push_up": {
+      "duration_s": 101.0,
+      "frames": 1515,
+      "intervals": 4,
+      "mean_detection_rate": 1.0,
+      "min_detection_rate": 1.0
+    },
+    "squat": {
+      "duration_s": 129.0,
+      "frames": 1935,
+      "intervals": 4,
+      "mean_detection_rate": 0.9982843137254902,
+      "min_detection_rate": 0.9944444444444444
+    },
+    "tricep_extension": {
+      "duration_s": 102.0,
+      "frames": 1530,
+      "intervals": 2,
+      "mean_detection_rate": 1.0,
+      "min_detection_rate": 1.0
+    }
+  },
+  "total_sampled_frames": 55787
+}
