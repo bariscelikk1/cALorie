@@ -469,10 +469,20 @@ and four TIFF x DAN candidate push-up regions show cooldown/stretching.
 GAINSBYBRAINS changes from sit-ups to other abdominal movements inside the
 broad candidate. Only 12 of 14 classes currently have plausible unambiguous
 core support; bench press may become a 13th after adjudication, while lateral
-raise needs a new source or interval. All labels remain draft, and no valid
+raise needs a newly reviewed interval. All labels remain draft, and no valid
 six-source promotion score exists.
 
 Next: review full 2-FPS pages around proposed edges, independently repeat
 ambiguous labels, build continuous timelines (unknown for rest/transition),
 run the annotation audit, then lock labels before frozen-model scoring. Keep
 the six source videos outside all training and threshold work.
+
+Full-timeline Michelle Briehler storyboards revealed standard dumbbell bench
+press around minutes 4–6 and seated lateral raises around minutes 32–35 that
+the initial 37-region selection missed. Four draft locators are in
+`ml/data/youtube_creator_benchmark_v1/supplemental_candidates_v1.csv`, commit
+`0e2ae05fd5a82ea6e55afbc068b6ab7ebd1b53f9`. CPU Notebook 29B
+(`ml/notebooks/29b_colab_supplement_creator_rgb_review.ipynb`) downloads only
+that existing external-test video and returns 2-FPS RGB sheets for those four
+regions. It requires only Colab `Run all`, no upload. These are not final
+labels; wait for its ZIP before revising class coverage.

@@ -89,3 +89,9 @@ The current draft therefore has plausible core movement for only 12 of 14
 classes without resolving the bench-press variant, or 13 if that variant is
 accepted. These are not final scores or accepted benchmark labels.
 
+The accepted Michelle Briehler source also shows unselected standard dumbbell
+bench press and seated lateral raise work in its full-timeline storyboards.
+`supplemental_candidates_v1.csv` records four new **draft** locators for those
+motions. CPU Notebook 29B extracts 2-FPS RGB evidence around them; they do not
+restore 14-class coverage until their motion and boundaries are reviewed.
+
