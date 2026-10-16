@@ -60,6 +60,17 @@ exact V6-C architecture, features, augmentation, seed, sampler, old group
 splits, validation evidence, and test evidence. The only change is adding the
 two Notebook 23 source groups to training.
 
+Notebook 24 is implemented as
+`ml/notebooks/24_colab_retrain_v6c_youtube_long_v2.ipynb`. It automatically
+downloads all inputs from pinned commit
+`5df5acd57785d1d03fc78c1f97cf7f85b0bbceb0`, verifies the new data archive and
+critical control files, structurally tests every ZIP, and asserts that the old
+window evidence and 1,971 V6-C test keys and labels are unchanged. The two new
+groups contribute 464 train-only windows. The expected output is
+`calorie_v6c_longv2_data_retrain_report.zip`.
+
+Colab: https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/24_colab_retrain_v6c_youtube_long_v2.ipynb
+
 Notebook 23: `ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb`
 
 Colab: https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb

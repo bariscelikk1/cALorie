@@ -77,7 +77,7 @@ validation.
 
 ## Colab notebooks
 
-The current rebuild uses twenty-five sequential notebooks:
+The current rebuild uses twenty-six sequential notebooks:
 
 1. `01_colab_extract_workoutfitness.ipynb` converts selected Workout/Fitness videos to normalized 17-joint pose sequences.
 2. `02_colab_prepare_mmfit.ipynb` converts the labeled MM-Fit exercise sets to the same representation.
@@ -104,6 +104,7 @@ The current rebuild uses twenty-five sequential notebooks:
 23. `21_colab_compare_g2_creators.ipynb` compares the frozen G2 classifiers on the existing three-creator calibration set without tuning or promotion.
 24. `22_colab_review_extract_youtube_long_v2.ipynb` loads 118 visually prepared first-pass intervals for two new long videos, audits them, downloads 720p sources, and exports continuous 15 FPS landmarks for independent second review.
 25. `23_colab_review_build_youtube_long_v2.ipynb` runs on CPU, downloads and verifies Notebook 22's archived report, applies the recorded second contact-sheet label audit plus conservative trims to all 20 supported and 12 deterministic unknown intervals, and automatically exports source-group-safe clips and a compatible manifest; an optional widget can override any decision.
+26. `24_colab_retrain_v6c_youtube_long_v2.ipynb` runs on a T4 GPU and retrains the exact V6-C system with only the two verified Notebook 23 groups added to training; all old assignments and the 1,971-window test remain frozen, and the notebook exports baseline deltas plus creator-level evidence.
 
 Notebook 08 downloads all six versioned landmark ZIPs from GitHub by default.
 Run it on T4 and preserve `calorie_two_stage_tcn_report.zip`. Notebook 09 runs
