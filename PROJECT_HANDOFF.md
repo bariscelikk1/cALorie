@@ -548,5 +548,5 @@ and sit-up remained single-source. No candidate was downloaded, visually
 reviewed, labeled, or trained; all have `training_allowed=false`. Next perform
 CPU visual/pose screening and independent labels before a T4 data-only retrain.
 The CPU `Run all` contact-sheet screen is
-`ml/notebooks/34_colab_screen_source_balance_candidates.ipynb`; it gracefully
+`ml/notebooks/29d_colab_screen_source_balance_candidates.ipynb`; it gracefully
 records unavailable sources and packages one ZIP without raw video.

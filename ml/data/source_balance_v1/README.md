@@ -26,12 +26,12 @@ Run `python3 ml/scripts/audit_source_balance.py` from the repo root to inspect
 class-by-source and group support and to check candidate video/creator IDs
 against the reserved inventories. This audit does not promote candidates.
 
-CPU `Run all` notebook `ml/notebooks/34_colab_screen_source_balance_candidates.ipynb`
+CPU `Run all` notebook `ml/notebooks/29d_colab_screen_source_balance_candidates.ipynb`
 fetches this pinned manifest automatically, attempts only 360p video, records
 unavailable sources without aborting the batch, and returns contact sheets and
 metadata in one ZIP. It excludes raw video and performs no landmark extraction
-or training. Notebook numbering is intentionally outside reserved 30–33 model
-experiments: this is a separate data-intake screen.
+or training. It follows the 29C review notebook as a separate data-intake
+screen; reserved 30–33 model experiments keep their numbering.
 
 Acquisition target: at least two independently filmed new creators for each
 of the four classes, with several clear complete repetitions per creator,
