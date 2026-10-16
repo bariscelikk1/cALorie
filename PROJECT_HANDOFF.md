@@ -494,3 +494,23 @@ The repaired Notebook 29B first reuses a live Notebook 29 Colab cache, then
 looks for `MyDrive/cALorie/source_videos/phFvFuLUFEw.mp4` (360p preferred,
 saved 720p accepted), and only then tries yt-dlp. It stops after the first
 bot challenge. Do not put the raw video in GitHub or the review ZIP.
+
+## Supplemental pose review from archived landmarks (2026-10-17)
+
+The user correctly noted that creator videos were collected to extract
+landmarks, and those landmarks already exist. The accepted gap-fill evidence
+ZIP, archived at `ml/artifacts/youtube_creator_benchmark_v1/gapfill_evidence/`,
+contains all 33,796 continuous 15 FPS landmark frames for Michelle Briehler
+`phFvFuLUFEw` (ZIP SHA-256 `4d0f3efed5216f0f46e96478c9777fc652814a346046f5866309357efc38e050`).
+No new pose extraction or video download is needed for the four supplemental
+regions. `ml/scripts/render_creator_supplement_pose_review.py` reproduced 43
+2 FPS pose contact-sheet pages and copied four existing 10-second RGB context
+pages into `ml/artifacts/youtube_creator_benchmark_v1/supplemental_pose_review/`.
+The ZIP is also available in the user-facing outputs folder. All internal
+checksums and ZIP structure were verified. The bench regions visibly show
+repeated supine presses, while the seated arm-elevation regions require more
+careful canonical-label and boundary review. Do not treat these four draft
+locators as locked labels. Notebook 29B's dense RGB rerun is optional only if
+pose plus archived coarse RGB cannot settle visual ambiguities; it is not the
+normal path for landmark extraction. The creator sources stay external test
+only, and no model score may be promoted before independent interval review.
