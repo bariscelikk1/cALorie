@@ -49,11 +49,20 @@ those predictions are not in the G2 archive.
 ## Immediate next action
 
 Notebook 22 is complete and its verified report is archived under
-`ml/artifacts/youtube_long_v2/landmarks/`. Build and run CPU Notebook 23 for
-independent full-motion boundary review, adjudication, strict audit, and clean
-clip/manifest creation. Do not train from the Notebook 22 archive directly.
+`ml/artifacts/youtube_long_v2/landmarks/`. Run CPU Notebook 23 for independent
+full-motion label/boundary review and clean clip/manifest creation. It reviews
+all 20 supported intervals and 12 deterministic unknown intervals, preserves
+review progress, and blocks export until every target has a saved decision.
+Do not train from the Notebook 22 archive directly.
 The first retraining experiment remains proposed Notebook 24 on a T4; it
 changes only the added reviewed data while keeping V6-C fixed.
+
+Notebook 23: `ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb`
+
+Colab: https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb
+
+Runtime: CPU. Expected output:
+`calorie_youtube_long_workouts_v2_reviewed_clips.zip`.
 
 Notebook 22: `ml/notebooks/22_colab_review_extract_youtube_long_v2.ipynb`
 
@@ -158,3 +167,15 @@ pretraining; one conditional PoseC3D comparison; then boundary-aware dense
 decoding. CPU/T4 choices, required artifacts, evaluation rules, stop rules, and
 primary research references are included so a future assistant can continue
 without reconstructing this chat.
+
+## Notebook 23 implementation (2026-10-16)
+
+Notebook 23 automatically downloads the 31.98 MB Notebook 22 archive from
+pinned commit `5146096fed1282fc3b82a8878687613cf3ccfe33` and verifies outer
+and internal hashes. It reuses Notebook 22 video files when the same Colab
+runtime is alive; otherwise it downloads 360p copies only for review clips.
+Training arrays always come from the 720p-derived continuous landmarks. A
+local dry run verified target selection and conservative slicing for 32 clips:
+20 supported clips across nine classes and 12 unknown clips. Notebook JSON and
+all Python cells parse; Colab video download, widget interaction, and final ZIP
+export remain to be run by the user.
