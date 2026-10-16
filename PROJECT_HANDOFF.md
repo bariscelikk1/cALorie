@@ -187,6 +187,16 @@ Colab: https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/t
 Runtime: CPU. Expected output:
 `calorie_creator_benchmark_v1_evidence.zip`.
 
+The first Notebook 28 run reached STRIQfit `Kw89u6WtPC8` after downloading the
+earlier sources, but all three old download attempts failed: Colab's Node was
+below yt-dlp's supported JavaScript-runtime requirement, progressive/DASH
+requests returned unavailable or HTTP 403, and web-safari exposed only images.
+The revised notebook installs current Deno automatically, passes its absolute
+path to yt-dlp, enables EJS through npm, and tries default, web-embedded,
+Android VR, web-safari HLS, and generic exact-360p strategies with diagnostics.
+This is a download-path fix only; benchmark sources, resolution, labels, and
+model policy are unchanged.
+
 Notebook 23: `ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb`
 
 Colab: https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb
