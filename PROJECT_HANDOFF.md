@@ -114,6 +114,20 @@ Notebook 26 should implement complete-action temporal sampling on the
 windows stay unchanged. This avoids stacking temporal changes on an unpromoted
 visibility representation.
 
+Notebook 26 is implemented as
+`ml/notebooks/26_colab_complete_action_temporal_resampling.ipynb`. It retains
+every Notebook 24 fixed window and adds at most six deterministic cycle
+candidates per supported training clip. Candidate duration is estimated from
+pose-motion autocorrelation; samples are resampled to 64 cumulative-motion
+phase positions. Architecture, 100-channel features, augmentation, sampler,
+validation, and test stay frozen. The report includes a temporal-cycle audit
+and comparisons with both original V6-C and Notebook 24.
+
+Colab: https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/26_colab_complete_action_temporal_resampling.ipynb
+
+Runtime: T4 GPU. Expected output:
+`calorie_v6e_complete_action_temporal_report.zip`.
+
 Notebook 23: `ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb`
 
 Colab: https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb
