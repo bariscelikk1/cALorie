@@ -1,0 +1,16 @@
+canonical_class,ojs-UW8ULhs,fJQmoPKvjTg,Kw89u6WtPC8,accepted_source_count,status
+squat,1,0,0,1,single_source_visible
+push_up,1,1,0,2,multi_source_visible
+jumping_jack,1,0,0,1,single_source_visible
+pull_up,0,0,1,1,single_source_visible
+lunge,1,0,0,1,single_source_visible
+sit_up,0,0,0,0,gap_needs_replacement
+shoulder_press,0,1,0,1,single_source_visible
+dumbbell_row,0,1,0,1,single_source_visible
+tricep_extension,0,1,0,1,single_source_visible
+bicep_curl,0,1,0,1,single_source_visible
+lateral_raise,0,1,0,1,single_source_visible
+bench_press,0,1,0,1,single_source_visible
+deadlift,0,0,0,0,gap_needs_replacement
+lat_pulldown,0,0,0,0,gap_needs_replacement
+

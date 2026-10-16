@@ -1,0 +1,16 @@
+{
+  "notebook": "28_colab_extract_creator_benchmark_v1.ipynb",
+  "runtime": "CPU",
+  "target_fps": 15.0,
+  "pinned_data_commit": "062f43d86208f06930ae87297c421abe82e164b9",
+  "benchmark_role": "locked_external_test",
+  "training_allowed": false,
+  "calibration_allowed": false,
+  "threshold_selection_allowed": false,
+  "model_predictions_included": false,
+  "source_count": 4,
+  "creator_count": 4,
+  "projected_supported_class_count": 14,
+  "label_status": "unlabeled_evidence_needs_visible_motion_review",
+  "next_step": "independent visible-motion timeline review before frozen-model evaluation"
+}

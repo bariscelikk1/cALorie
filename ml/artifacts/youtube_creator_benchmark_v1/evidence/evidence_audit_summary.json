@@ -1,0 +1,28 @@
+{
+  "audit_date": "2026-10-16",
+  "archive_sha256": "3c9930fc3086b68240082668648722836c8959c373a58268347788d7ab24b3c4",
+  "zip_integrity_passed": true,
+  "internal_checksums_passed": true,
+  "contact_sheet_pages_reviewed": 85,
+  "total_sources": 4,
+  "retained_sources": 3,
+  "rejected_sources": 1,
+  "retained_frames": 125151,
+  "retained_duration_s": 8343.2131,
+  "retained_weighted_detection_rate": 0.99103483,
+  "source_level_visible_supported_classes": 11,
+  "missing_classes_after_source_audit": [
+    "deadlift",
+    "lat_pulldown",
+    "sit_up"
+  ],
+  "rejected_video_id": "PY6DrbX4W4o",
+  "rejection_reason": "illustration_slide_deck_not_filmed_human_motion",
+  "benchmark_role": "locked_external_test",
+  "training_allowed": false,
+  "calibration_allowed": false,
+  "threshold_selection_allowed": false,
+  "model_predictions_reviewed": false,
+  "interval_boundaries_approved": false,
+  "next_step": "run CPU Notebook 28B for three visually prechecked gap-fill sources"
+}

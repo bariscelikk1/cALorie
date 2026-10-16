@@ -1,0 +1,6 @@
+video_id,creator,contact_sheet_pages,sampled_frames,duration_s,detection_rate,max_missing_run_s,visual_content,source_decision,reason
+ojs-UW8ULhs,BullyJuice,31,54626,3641.6714,0.995405,2.600,filmed_real_person,retain_for_interval_review,"Full timeline shows one visible athlete and repeated supported plus unsupported movements"
+fJQmoPKvjTg,TIFF x DAN,19,33331,2222.0000,0.990669,10.000,filmed_real_person,retain_for_interval_review,"Full timeline shows one visible athlete; long direct-detection gaps occur around rests/transitions"
+PY6DrbX4W4o,Buddy Fitness,14,7451,496.6800,0.813850,10.733,illustration_slide_deck,reject_source,"Exercise drawings and still diagrams are not filmed human motion and are invalid for a pose benchmark"
+Kw89u6WtPC8,STRIQfit,21,37194,2479.5417,0.984944,7.333,filmed_real_person,retain_for_interval_review,"Full timeline shows one visible athlete with repeated pull-up sets and unsupported calisthenics"
+

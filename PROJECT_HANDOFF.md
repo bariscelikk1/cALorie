@@ -371,3 +371,29 @@ decisions from the already completed 118-sheet second label audit and records
 their exact provenance, so `Run all` reaches the ZIP automatically. Manual
 changes remain possible through the widget before rerunning only the export
 cell.
+
+## Notebook 28 returned evidence (2026-10-16)
+
+The user returned `calorie_creator_benchmark_v1_evidence.zip`. Its outer
+SHA-256 is
+`3c9930fc3086b68240082668648722836c8959c373a58268347788d7ab24b3c4`;
+ZIP integrity and every internal checksum pass. Four finite `frames x 17 x 4`
+arrays contain 132,602 frames at 15 FPS. BullyJuice, TIFF x DAN, and STRIQfit
+provide 125,151 frames across 139.05 minutes at a weighted 99.10% direct pose
+detection rate.
+
+All 85 contact sheets were inspected. Buddy Fitness `PY6DrbX4W4o` is an
+instructional slide deck made from drawings and still diagrams rather than a
+filmed person. Its apparent 81.39% pose detection is therefore meaningless for
+this benchmark, and the entire source is rejected. The other three sources
+show real people and retain source-level visible support for 11 of 14 classes;
+exact action intervals are not yet approved.
+
+The rejected source removes `deadlift`, `lat_pulldown`, and `sit_up` coverage.
+Three unused replacement creators were checked against the exclusion inventory,
+official chapters, and downloaded full-video storyboards: Michelle Briehler
+`phFvFuLUFEw`, Criticalbench `lKHGBuanBsY`, and TRAIN WITH GAINSBYBRAINS
+`7-mVPCVJMtI`. Their storyboards visibly show real people and the missing
+motions. The next compute unit is CPU Notebook 28B, which extracts only these
+three gap-fill sources. It preserves the locked-test rules and requires only
+`Runtime -> Run all`.

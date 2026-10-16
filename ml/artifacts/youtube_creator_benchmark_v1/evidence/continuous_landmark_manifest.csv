@@ -1,0 +1,5 @@
+video_id,creator,group_id,benchmark_role,landmark_path,sampled_frames,duration_s,target_fps,source_fps,detection_rate,status,label_status,training_allowed,calibration_allowed,threshold_selection_allowed
+ojs-UW8ULhs,BullyJuice,youtube:ojs-UW8ULhs,locked_external_test,continuous_landmarks/ojs-UW8ULhs.npz,54626,3641.67138671875,15.0,29.97002997002997,0.9954051184417677,ok,unlabeled_evidence_needs_visible_motion_review,False,False,False
+fJQmoPKvjTg,TIFF x DAN,youtube:fJQmoPKvjTg,locked_external_test,continuous_landmarks/fJQmoPKvjTg.npz,33331,2222.0,15.0,30.0,0.9906693468542798,ok,unlabeled_evidence_needs_visible_motion_review,False,False,False
+PY6DrbX4W4o,Buddy Fitness,youtube:PY6DrbX4W4o,locked_external_test,continuous_landmarks/PY6DrbX4W4o.npz,7451,496.67999267578125,15.0,25.0,0.8138504898671319,ok,unlabeled_evidence_needs_visible_motion_review,False,False,False
+Kw89u6WtPC8,STRIQfit,youtube:Kw89u6WtPC8,locked_external_test,continuous_landmarks/Kw89u6WtPC8.npz,37194,2479.541748046875,15.0,24.0,0.984943808141098,ok,unlabeled_evidence_needs_visible_motion_review,False,False,False
