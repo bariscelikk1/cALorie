@@ -68,9 +68,11 @@ must also avoid a material unknown-recall or creator-level regression.
 | 2 | 25 | T4 GPU | Add visibility/missingness channels and realistic pose-failure augmentation | missingness ablation report |
 | 3 | 26 | T4 GPU | Build complete-action and phase-aware temporal samples | temporal-window ablation report |
 | 4 | 27 | T4 GPU | Add multi-stream open-set scoring to the retained TCN | gate/open-set report |
-| 5 | 28 | T4 GPU | Pretrain on unlabeled continuous landmarks, then fine-tune | pretraining report |
-| 6 | 29 | T4 GPU | Compare PoseC3D only if the earlier stages still leave a pose-noise gap | backbone comparison report |
-| 7 | 30 | CPU first; T4 if trained | Add boundary-aware long-video decoding | dense timeline report |
+| 5 | 28, then 29 | CPU | Build and label a locked external creator benchmark spanning all 14 classes | creator coverage/evidence ZIP, then reviewed benchmark ZIP |
+| 6 | 30 | CPU/T4 evaluation | Evaluate frozen V6-C and V6-F candidates without tuning | comprehensive creator comparison report |
+| 7 | 31 | T4 GPU | Pretrain on unlabeled continuous landmarks, then fine-tune | pretraining report |
+| 8 | 32 | T4 GPU | Compare PoseC3D only if the earlier stages still leave a pose-noise gap | backbone comparison report |
+| 9 | 33 | CPU first; T4 if trained | Add boundary-aware long-video decoding | dense timeline report |
 
 Notebook numbers after 22 are reservations. Each notebook is implemented and
 committed only when its preceding evidence and gate are complete.
@@ -148,7 +150,34 @@ This experiment addresses the shared 56.45% unknown recall in Notebook 21.
 It must report supported-class damage at each operating point, not only unknown
 AUROC.
 
-### Stage 5 — use unlabeled continuous landmarks
+### Stage 5 — lock a comprehensive creator benchmark
+
+The current creator comparison covers only three supported movements, so it
+cannot decide whether the aggregate candidate is broadly better across the
+14-class product target. Before any more representation or backbone work,
+build a test-only benchmark with previously unused creators and videos.
+
+Notebook 28 downloads temporary 720p videos, creates compact full-timeline
+visual evidence, and extracts continuous landmarks. Notebook 29 turns only
+motion-reviewed intervals into a locked benchmark. Neither notebook trains,
+calibrates, selects a threshold, or inspects model predictions. The frozen
+comparison follows only after the labels and source groups are sealed.
+
+The initial candidate pool is under
+`ml/data/youtube_creator_benchmark_v1/`. Search-time metadata projects all 14
+classes across four new creators. Accepted coverage must be recomputed from
+visible motion; missing and single-creator cells remain explicit rather than
+being filled by guessed labels.
+
+### Stage 6 — compare frozen candidates on the new benchmark
+
+Run original V6-C and the Notebook 27 V6-F candidate with their already fixed
+thresholds and checkpoints. Report per-class support, Macro F1, accuracy,
+unknown precision/recall, creator-level results, and confidence intervals.
+This benchmark may reject a candidate, but it must never be used to tune or
+select one.
+
+### Stage 7 — use unlabeled continuous landmarks
 
 Pretrain the temporal encoder on continuous landmarks with masked sequence
 reconstruction, then compare a contrastive tuning stage before supervised
@@ -160,7 +189,7 @@ representation does not improve creator-separated clustering or probing; that
 prevents an expensive pretraining idea from silently changing the production
 model.
 
-### Stage 6 — one final backbone comparison
+### Stage 8 — one final backbone comparison
 
 If the earlier audits show that noisy or missing keypoints still dominate,
 compare PoseC3D heatmap volumes with the best retained V6-C pipeline. Heatmap
@@ -169,7 +198,7 @@ discard. Use the same groups and evaluation protocol. Do not reopen a broad
 architecture search: BiGRU, Pose Transformer, Adaptive GCN, and the full G1
 ST-GCN have already failed to replace V6-C under the project tests.
 
-### Stage 7 — stabilize complete long-video output
+### Stage 9 — stabilize complete long-video output
 
 Once the frame/window classifier improves, add a boundary head or temporal
 segmentation refinement and calibrate minimum duration, hysteresis, short-gap

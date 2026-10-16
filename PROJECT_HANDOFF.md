@@ -156,9 +156,23 @@ probability at threshold 0.65 while satisfying 90.96% validation unknown
 rejection. On the unchanged test, gate Macro F1 is 83.95%, frozen temporal
 exercise Macro F1 is 89.11%, end-to-end Macro F1 is 81.72%, and accuracy is
 84.17%. This is the strongest aggregate candidate. MM-Fit w13 and held-out
-YouTube present-class regressions prevent production promotion. Notebook 28
-should freeze this selected gate and test only self-supervised initialization
-of the temporal exercise encoder.
+YouTube present-class regressions prevent production promotion.
+
+The user explicitly reprioritized the next work: build a comprehensive locked
+creator benchmark before self-supervised pretraining. The existing creator
+comparison contains only lunge, push-up, squat, and unknown, so it cannot
+support a 14-class promotion decision. The new candidate package is under
+`ml/data/youtube_creator_benchmark_v1/`. It projects all 14 supported classes
+across four previously unused creators (BullyJuice, TIFF x DAN, Buddy Fitness,
+and STRIQfit), with roughly 140 minutes of source video. Every row is external
+test only: training, calibration, and threshold selection are forbidden.
+Coverage is metadata-derived until visible-motion review.
+
+Notebook 28 is now reserved for CPU evidence extraction: temporary 720p
+downloads, metadata capture, compact full-timeline contact sheets, and
+continuous 15 FPS landmarks. Notebook 29 will build reviewed benchmark
+intervals, and Notebook 30 will compare frozen V6-C and V6-F. Self-supervised
+pretraining moves to Notebook 31.
 
 Notebook 23: `ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb`
 
