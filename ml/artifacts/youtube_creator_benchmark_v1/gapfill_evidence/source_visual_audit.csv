@@ -1,0 +1,4 @@
+video_id,creator,contact_sheet_pages,sampled_frames,duration_s,detection_rate,visual_content,source_decision,accepted_classes,reason
+phFvFuLUFEw,Michelle Briehler,19,33796,2253.0,0.968695,filmed_real_person,accept_selected_intervals,deadlift|lat_pulldown,"Full timeline shows a real person; official RDL and lat-pulldown chapters contain multiple visually confirmed work segments"
+lKHGBuanBsY,Criticalbench,17,30427,2028.4,0.971111,filmed_real_person,accept_selected_intervals,deadlift,"Full timeline shows a real coach; the official deadlift chapter contains a long visible demonstration block"
+7-mVPCVJMtI,TRAIN WITH GAINSBYBRAINS,16,27302,1820.08,0.999780,filmed_real_person,accept_selected_intervals,sit_up,"Full timeline shows a real person; the official 16:18-18:18 sit-up chapter visibly contains continuous repetitions"

@@ -1,0 +1,17 @@
+{
+  "notebook": "28b_colab_extract_creator_benchmark_gapfill.ipynb",
+  "runtime": "CPU",
+  "target_fps": 15.0,
+  "pinned_data_commit": "4beaa4fa120f4a6995c760673d81c27e43ad5eee",
+  "benchmark_role": "locked_external_test",
+  "training_allowed": false,
+  "calibration_allowed": false,
+  "threshold_selection_allowed": false,
+  "model_predictions_included": false,
+  "source_count": 3,
+  "source_selection": "storyboard_visual_pass_needs_pose_extraction",
+  "creator_count": 3,
+  "projected_supported_class_count": 14,
+  "label_status": "unlabeled_evidence_needs_visible_motion_review",
+  "next_step": "merge with accepted Notebook 28 evidence, then independently lock visible-motion intervals"
+}

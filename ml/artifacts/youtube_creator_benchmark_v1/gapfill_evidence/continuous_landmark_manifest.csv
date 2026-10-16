@@ -1,0 +1,4 @@
+video_id,creator,group_id,benchmark_role,landmark_path,sampled_frames,duration_s,target_fps,source_fps,detection_rate,status,label_status,training_allowed,calibration_allowed,threshold_selection_allowed
+phFvFuLUFEw,Michelle Briehler,youtube:phFvFuLUFEw,locked_external_test,continuous_landmarks/phFvFuLUFEw.npz,33796,2253.0,15.0,30.0,0.9686945200615458,ok,unlabeled_evidence_needs_visible_motion_review,False,False,False
+lKHGBuanBsY,Criticalbench,youtube:lKHGBuanBsY,locked_external_test,continuous_landmarks/lKHGBuanBsY.npz,30427,2028.4000244140625,15.0,25.0,0.9711111841456601,ok,unlabeled_evidence_needs_visible_motion_review,False,False,False
+7-mVPCVJMtI,TRAIN WITH GAINSBYBRAINS,youtube:7-mVPCVJMtI,locked_external_test,continuous_landmarks/7-mVPCVJMtI.npz,27302,1820.0799560546875,15.0,25.0,0.9997802358801553,ok,unlabeled_evidence_needs_visible_motion_review,False,False,False

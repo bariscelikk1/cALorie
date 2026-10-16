@@ -57,6 +57,14 @@ Notebook 28B performs the same evidence-only extraction for the three gap-fill
 sources. It does not rerun the already valid BullyJuice, TIFF x DAN, or STRIQfit
 videos and never includes the rejected Buddy Fitness source.
 
+Notebook 28B returned successfully. ZIP integrity, all 64 internal checksums,
+and all three landmark arrays passed. Independent review of its 52 contact
+sheets accepted conservative deadlift, lat-pulldown, and sit-up work segments.
+`locked_intervals_v1.csv` now freezes 37 visible-motion intervals across the
+six accepted creators. It covers all 14 supported classes, 1,664 seconds, and
+24,960 frames at 15 FPS; its minimum retained-interval pose detection rate is
+99.88%. No model prediction was inspected while assigning these labels.
+
 The benchmark is not complete merely because every class has projected
 coverage. The acceptance audit must report visible-motion support per class,
 creator, and source, and must keep weak or missing cells explicit.

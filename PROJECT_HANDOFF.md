@@ -414,3 +414,27 @@ hashes, inspect every contact sheet, reject unsuitable sources or intervals,
 and merge accepted evidence with the three retained Notebook 28 sources. Do
 not train, calibrate, choose thresholds, or inspect model predictions until
 the six-source interval labels and coverage audit are frozen.
+
+## Notebook 28B returned evidence and label lock (2026-10-16)
+
+The user returned `calorie_creator_benchmark_v1_gapfill_evidence.zip`; outer
+SHA-256 is
+`4d0f3efed5216f0f46e96478c9777fc652814a346046f5866309357efc38e050`.
+ZIP integrity and all 64 internal checksums pass. The three arrays add 91,525
+finite frames over 101.69 minutes with a 97.97% weighted source detection rate.
+
+All 52 new contact sheets were reviewed independently of model predictions.
+All three sources show real people. Conservative visible-motion segments were
+accepted for deadlift and lat pulldown from Michelle Briehler, a second
+deadlift creator from Criticalbench, and sit-up from TRAIN WITH GAINSBYBRAINS.
+Together with the three retained Notebook 28 sources,
+`ml/data/youtube_creator_benchmark_v1/locked_intervals_v1.csv` freezes 37
+intervals covering all 14 supported classes, 1,664 seconds and 24,960 frames.
+The minimum retained-interval pose detection rate is 99.88%.
+
+The benchmark labels are now immutable for the first comparison. Build the
+six-source evaluation arrays, keep all unlabeled timeline material as unknown,
+and evaluate the already frozen V6-C baseline and V6-F candidate without any
+training, calibration, threshold selection, or label changes. Report overall
+accuracy, supported Macro F1, per-class recall, unknown rejection, creator
+metrics, and confusion matrices before making a promotion decision.
