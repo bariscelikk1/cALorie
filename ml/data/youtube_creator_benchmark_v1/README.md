@@ -80,3 +80,12 @@ videos with Notebook 28B's yt-dlp fallbacks, and packages 2 FPS RGB contact
 sheets with five seconds of context around each candidate. Its ZIP is evidence
 for motion-based relabeling and second review, not a benchmark or training set.
 
+Notebook 29 returned one ZIP on 2026-10-17. Its first-pass audit lives in
+`ml/artifacts/youtube_creator_benchmark_v1/dense_review_evidence/`. Five
+proposed regions contain no supported target action, and the two proposed
+`lateral_raise` regions show a compound upright-row-to-90-degree-raise
+movement. Two `bench_press` twist-press regions require variant adjudication.
+The current draft therefore has plausible core movement for only 12 of 14
+classes without resolving the bench-press variant, or 13 if that variant is
+accepted. These are not final scores or accepted benchmark labels.
+

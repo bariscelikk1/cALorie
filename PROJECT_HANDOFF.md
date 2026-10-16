@@ -448,3 +448,31 @@ candidate and source CSV hashes, reuses Notebook 28B's Deno/EJS and 360p
 download fallbacks, and produces one ZIP with 2 FPS contact sheets and five
 seconds of context around each of the 37 draft regions. The ZIP contains no
 raw video or model predictions. Review it before any label lock.
+
+## Notebook 29 returned; dense RGB first pass (2026-10-17)
+
+The user returned `calorie_creator_benchmark_dense_review_evidence.zip`.
+Outer SHA-256:
+`5f2f28a7a89177d1e6675d742bf60c9a4851f657baee89d710694716022e9301`.
+ZIP integrity and all 367 internal checksums pass. It has 363 contact-sheet
+pages for the 37 draft regions, no raw video or model predictions. The first
+pass inspected overview montages containing two sampled tiles per page (726
+tiles total); it did not inspect every 2-FPS frame. The ZIP and review table
+are in `ml/artifacts/youtube_creator_benchmark_v1/dense_review_evidence/`.
+
+First-pass outcomes: 26 regions have plausible target cores but need trimming;
+five have no supported target action; two proposed lateral raises are compound
+upright-row-to-90-degree-raise movements and stay unknown; two floor twist
+presses need bench-press variant adjudication; two broad Michelle RDL regions
+need splitting. Criticalbench's second deadlift region contains explanation,
+and four TIFF x DAN candidate push-up regions show cooldown/stretching.
+GAINSBYBRAINS changes from sit-ups to other abdominal movements inside the
+broad candidate. Only 12 of 14 classes currently have plausible unambiguous
+core support; bench press may become a 13th after adjudication, while lateral
+raise needs a new source or interval. All labels remain draft, and no valid
+six-source promotion score exists.
+
+Next: review full 2-FPS pages around proposed edges, independently repeat
+ambiguous labels, build continuous timelines (unknown for rest/transition),
+run the annotation audit, then lock labels before frozen-model scoring. Keep
+the six source videos outside all training and threshold work.

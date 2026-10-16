@@ -1,0 +1,24 @@
+{
+  "review_date": "2026-10-17",
+  "archive_sha256": "5f2f28a7a89177d1e6675d742bf60c9a4851f657baee89d710694716022e9301",
+  "zip_integrity_passed": true,
+  "internal_checksums_verified": 367,
+  "candidate_regions": 37,
+  "contact_sheet_pages_in_archive": 363,
+  "pages_represented_in_overviews": 363,
+  "overview_tiles_inspected": 726,
+  "all_2fps_frames_reviewed": false,
+  "model_predictions_reviewed": false,
+  "first_pass_decisions": {
+    "trim_candidate": 26,
+    "relabel_unknown": 2,
+    "variant_review": 2,
+    "reject_candidate": 5,
+    "requires_split": 2
+  },
+  "label_status": "draft; no frozen six-source benchmark",
+  "training_allowed": false,
+  "calibration_allowed": false,
+  "threshold_selection_allowed": false,
+  "next_step": "Review full 2-FPS pages near all proposed boundaries, independently repeat ambiguous annotations, audit continuous timelines, then lock benchmark labels before model scoring."
+}
