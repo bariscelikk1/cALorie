@@ -101,6 +101,15 @@ on GitHub. Do not prompt for manual re-upload of those files. Pin a source
 commit, verify checksums, reuse valid cached downloads, and fail clearly if
 verification fails. Notebook 21 now follows this rule for the G2 report.
 
+The broader execution contract is now explicit in root and ML `AGENTS.md`:
+Codex prepares labels, audits, manifests, code, and GitHub artifacts locally;
+the user selects the stated CPU/T4 runtime and presses `Run all`; the notebook
+automatically obtains verified inputs, performs remote compute, and downloads
+one named output ZIP. Manual uploads, file pickers, mandatory widgets, pasted
+repair cells, and code edits are regressions in the normal workflow. Returned
+ZIPs are verified, analyzed, archived, and pushed before the next notebook is
+handed off.
+
 Automatic-download update validated with mocked HTTP: initial download, cache reuse, corrupt-cache replacement, checksum rejection, and temporary-file cleanup pass. All notebook Python cells compile; full inference remains unverified.
 
 ## Notebook 21 returned result (2026-10-15)

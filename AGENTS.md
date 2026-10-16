@@ -32,3 +32,25 @@ or collaborator can continue after a chat failure.
 For inputs already archived on GitHub, download them automatically from a
 pinned commit and verify integrity. Do not ask the user to upload the same
 archive again. Clearly state CPU/T4 and the output archive name.
+
+## Colab automation contract
+
+The user runs Colab only as remote compute. Prepare data discovery, labels,
+audits, manifests, notebook logic, and GitHub artifacts locally before handing
+off a notebook.
+
+- A delivered notebook must support `Runtime -> Run all` from a fresh Colab
+  runtime without manual uploads, file pickers, per-row review clicks, copied
+  repair cells, or editing Python.
+- Download every reusable input automatically from an immutable GitHub commit,
+  verify its SHA-256, reuse a valid cache, and fail with actionable diagnostics.
+- Resolve interactive review and labeling locally before Colab. If a manual
+  widget is useful, keep it optional and provide a deterministic automatic
+  default with honest provenance.
+- Colab performs only the expensive extraction, training, or evaluation and
+  automatically downloads one clearly named output ZIP at the end.
+- Test notebook JSON, parse every Python cell, dry-run all locally testable
+  selection/manifest logic, and document anything that still requires Colab.
+- After the user returns an output ZIP, verify it, archive it with checksums,
+  analyze it locally, update the handoff, and push the checkpoint before making
+  the next notebook.

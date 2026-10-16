@@ -35,3 +35,15 @@ out of training and document the reason.
 
 When augmentation changes, visualize representative transformed landmark
 sequences before training and change one augmentation family at a time.
+
+## Colab execution boundary
+
+ML notebooks handed to the user must run end to end with `Run all` after the
+stated CPU or T4 runtime is selected. Labels, review decisions, source lists,
+manifests, hashes, and experiment configuration belong in the repository and
+must be prepared before handoff. Inputs already in GitHub are downloaded from
+a pinned commit and checksum-verified automatically. Do not require manual
+uploads, file selection, repeated widget confirmation, or pasted recovery code
+for the normal path. Keep optional inspection controls separate from the
+automatic path and record exactly whether a decision came from human motion
+review, visual contact-sheet review, or a deterministic policy.
