@@ -527,3 +527,12 @@ found one first-pass core three seconds outside its earlier coarse locator
 (`ojs_squat_02`), which is flagged for review rather than silently clipped.
 The final external test remains on hold until independent motion/boundary
 review and the timeline audit actually pass.
+
+## Independent model and product review (2026-10-17)
+
+`ml/INDEPENDENT_REVIEW_2026-10-17.md` audits the saved V6-C/V6-F results,
+per-class support, creator shift, benchmark status, and worker integration.
+Its priority is to lock the six-creator labels on CPU, score frozen candidates
+once, then decide whether new creator-diverse training data or model changes
+are warranted. The current web worker still runs its earlier heuristic
+classifier; research checkpoint scores are not deployed product scores.
