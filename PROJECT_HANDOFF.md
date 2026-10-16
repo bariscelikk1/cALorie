@@ -213,6 +213,15 @@ also removes OpenCV random seeking from contact-sheet generation entirely:
 ffmpeg extracts timestamped JPEGs sequentially, and OpenCV reads only those
 JPEG files. MediaPipe consumes the normalized H.264 stream sequentially.
 
+A history audit then compared Notebooks 05-07, 22, and 23. The older successful
+360p extraction notebooks requested format `134` directly (video-only H.264).
+Notebook 23 later adapted to YouTube's EJS changes by downloading the official
+Deno release ZIP and trying default, `tv`, and `web_embedded` clients while
+using ffmpeg for visual review clips. Notebook 28 now reuses that proven
+pattern: format 134 first, Notebook 23 fallbacks second, Deno from the GitHub
+release asset, EJS from GitHub, unconditional H.264 normalization, and
+sequential ffmpeg contact-frame extraction.
+
 Notebook 23: `ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb`
 
 Colab: https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb
