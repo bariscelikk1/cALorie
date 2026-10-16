@@ -1,0 +1,335 @@
+{
+  "experiment": "v6d_visibility_missingness_ablation",
+  "pinned_source_commit": "7e7a586d0f0294711c8c6f9cd3f79cfaa7835c6e",
+  "only_changed_blocks": [
+    "visibility_and_missing_mask_channels",
+    "train_only_realistic_pose_failure_as_separate_variant"
+  ],
+  "unchanged_test_windows": 1971,
+  "new_train_groups": [
+    "youtube:Fk1wnNX4wQ8",
+    "youtube:zxqCV_eQHZY"
+  ],
+  "base_feature_config": {
+    "coordinates_xy": 34,
+    "velocity_xy": 34,
+    "bone_vectors_xy": 24,
+    "joint_angles": 8
+  },
+  "mask_feature_config": {
+    "coordinates_xy": 34,
+    "velocity_xy": 34,
+    "bone_vectors_xy": 24,
+    "joint_angles": 8,
+    "visibility": 17,
+    "missing_mask": 17
+  },
+  "occlusion_config": {
+    "body_part_probability": 0.35,
+    "body_part_span_frames": [
+      4,
+      12
+    ],
+    "frame_occlusion_probability": 0.25,
+    "frame_span_frames": [
+      2,
+      6
+    ],
+    "low_visibility_noise_std": 0.012
+  },
+  "controls": {
+    "original_v6c": {
+      "experiment": "v6c_kinematic_pose_features",
+      "active_supported_class_count": 14,
+      "retired_classes_mapped_to_unknown": [
+        "plank"
+      ],
+      "training_archives": [
+        "calorie_workoutfitness_landmarks_v1.zip",
+        "calorie_mmfit_landmarks_v1.zip",
+        "calorie_mmfit_unknown_v1.zip",
+        "calorie_youtube_mixed_landmarks_v3.zip",
+        "calorie_youtube_additional_landmarks_v1.zip",
+        "calorie_youtube_training_landmarks_v4.zip",
+        "calorie_workoutfitness_gate_hardneg_v1.zip"
+      ],
+      "seed": 42,
+      "window_frames": 64,
+      "stride_frames": 32,
+      "augmentation": {
+        "horizontal_flip_probability": 0.5,
+        "rotation_probability": 0.7,
+        "max_rotation_degrees": 7.0,
+        "speed_probability": 0.5,
+        "speed_range": [
+          0.85,
+          1.15
+        ],
+        "frame_drop_probability": 0.35,
+        "frame_drop_fraction_range": [
+          0.05,
+          0.12
+        ],
+        "coordinate_noise_probability": 0.8,
+        "coordinate_noise_std": 0.008
+      },
+      "feature_representation": {
+        "coordinates_xy": 34,
+        "velocity_xy": 34,
+        "bone_vectors_xy": 24,
+        "joint_angles": 8
+      },
+      "input_features": 100,
+      "sampler": {
+        "group_temperature": 0.5,
+        "gate": "binary_class_then_sqrt_group_mass_then_window_x_hard_positive_weight",
+        "exercise": "canonical_class_then_sqrt_group_mass_then_window",
+        "matched_hard_positive_training_windows": 172
+      },
+      "gate_threshold": 0.675,
+      "threshold_selection": "interim group-separated validation; not final calibration",
+      "gate": {
+        "accuracy": 0.8442415017757483,
+        "balanced_accuracy": 0.8136091855728318,
+        "macro_f1": 0.8202561696462228
+      },
+      "exercise_classifier_oracle": {
+        "accuracy": 0.9233687405159332,
+        "balanced_accuracy": 0.8728081262925163,
+        "macro_f1": 0.8556981638923505
+      },
+      "end_to_end": {
+        "accuracy": 0.8290208016235413,
+        "balanced_accuracy": 0.8238458670375075,
+        "macro_f1": 0.7933018176803217
+      },
+      "classes": [
+        "bench_press",
+        "bicep_curl",
+        "deadlift",
+        "dumbbell_row",
+        "jumping_jack",
+        "lat_pulldown",
+        "lateral_raise",
+        "lunge",
+        "pull_up",
+        "push_up",
+        "shoulder_press",
+        "sit_up",
+        "squat",
+        "tricep_extension",
+        "unknown"
+      ],
+      "supported_classes": [
+        "bench_press",
+        "bicep_curl",
+        "deadlift",
+        "dumbbell_row",
+        "jumping_jack",
+        "lat_pulldown",
+        "lateral_raise",
+        "lunge",
+        "pull_up",
+        "push_up",
+        "shoulder_press",
+        "sit_up",
+        "squat",
+        "tricep_extension"
+      ]
+    },
+    "notebook24_data_only": {
+      "experiment": "v6c_exact_plus_youtube_long_v2_train_only",
+      "active_supported_class_count": 14,
+      "retired_classes_mapped_to_unknown": [
+        "plank"
+      ],
+      "training_archives": [
+        "calorie_workoutfitness_landmarks_v1.zip",
+        "calorie_mmfit_landmarks_v1.zip",
+        "calorie_mmfit_unknown_v1.zip",
+        "calorie_youtube_mixed_landmarks_v3.zip",
+        "calorie_youtube_additional_landmarks_v1.zip",
+        "calorie_youtube_training_landmarks_v4.zip",
+        "calorie_workoutfitness_gate_hardneg_v1.zip",
+        "calorie_youtube_long_workouts_v2_reviewed_clips.zip"
+      ],
+      "pinned_source_commit": "5df5acd57785d1d03fc78c1f97cf7f85b0bbceb0",
+      "new_train_groups": [
+        "youtube:Fk1wnNX4wQ8",
+        "youtube:zxqCV_eQHZY"
+      ],
+      "added_training_windows": 464,
+      "unchanged_test_windows": 1971,
+      "only_changed_block": "two verified Notebook 23 groups added to training",
+      "seed": 42,
+      "window_frames": 64,
+      "stride_frames": 32,
+      "augmentation": {
+        "horizontal_flip_probability": 0.5,
+        "rotation_probability": 0.7,
+        "max_rotation_degrees": 7.0,
+        "speed_probability": 0.5,
+        "speed_range": [
+          0.85,
+          1.15
+        ],
+        "frame_drop_probability": 0.35,
+        "frame_drop_fraction_range": [
+          0.05,
+          0.12
+        ],
+        "coordinate_noise_probability": 0.8,
+        "coordinate_noise_std": 0.008
+      },
+      "feature_representation": {
+        "coordinates_xy": 34,
+        "velocity_xy": 34,
+        "bone_vectors_xy": 24,
+        "joint_angles": 8
+      },
+      "input_features": 100,
+      "sampler": {
+        "group_temperature": 0.5,
+        "gate": "binary_class_then_sqrt_group_mass_then_window_x_hard_positive_weight",
+        "exercise": "canonical_class_then_sqrt_group_mass_then_window",
+        "matched_hard_positive_training_windows": 172
+      },
+      "gate_threshold": 0.7999999999999999,
+      "threshold_selection": "interim group-separated validation; not final calibration",
+      "gate": {
+        "accuracy": 0.8143074581430746,
+        "balanced_accuracy": 0.8004988067214003,
+        "macro_f1": 0.7944225709817296
+      },
+      "exercise_classifier_oracle": {
+        "accuracy": 0.917298937784522,
+        "balanced_accuracy": 0.8884611624025452,
+        "macro_f1": 0.8709091924566286
+      },
+      "end_to_end": {
+        "accuracy": 0.8112633181126332,
+        "balanced_accuracy": 0.742477785135432,
+        "macro_f1": 0.7739233122241315
+      },
+      "classes": [
+        "bench_press",
+        "bicep_curl",
+        "deadlift",
+        "dumbbell_row",
+        "jumping_jack",
+        "lat_pulldown",
+        "lateral_raise",
+        "lunge",
+        "pull_up",
+        "push_up",
+        "shoulder_press",
+        "sit_up",
+        "squat",
+        "tricep_extension",
+        "unknown"
+      ],
+      "supported_classes": [
+        "bench_press",
+        "bicep_curl",
+        "deadlift",
+        "dumbbell_row",
+        "jumping_jack",
+        "lat_pulldown",
+        "lateral_raise",
+        "lunge",
+        "pull_up",
+        "push_up",
+        "shoulder_press",
+        "sit_up",
+        "squat",
+        "tricep_extension"
+      ],
+      "v6c_baseline": {
+        "gate_macro_f1": 0.8202561696462228,
+        "exercise_oracle_macro_f1": 0.8556981638923505,
+        "end_to_end_macro_f1": 0.7933018176803217,
+        "end_to_end_accuracy": 0.8290208016235413
+      },
+      "delta_vs_v6c": {
+        "gate_macro_f1": -0.025833598664493196,
+        "exercise_oracle_macro_f1": 0.015211028564278029,
+        "end_to_end_macro_f1": -0.019378505456190243,
+        "end_to_end_accuracy": -0.017757483510908112
+      }
+    }
+  },
+  "variants": {
+    "visibility_mask": {
+      "input_features": 134,
+      "realistic_occlusion": false,
+      "gate_threshold": 0.625,
+      "best_validation": {
+        "gate": 0.9086183829607322,
+        "exercise": 0.9554168220879725
+      },
+      "gate": {
+        "accuracy": 0.8584474885844748,
+        "balanced_accuracy": 0.8678870951625159,
+        "macro_f1": 0.8477700293741731
+      },
+      "exercise_classifier_oracle": {
+        "accuracy": 0.8839150227617603,
+        "balanced_accuracy": 0.8611953132198711,
+        "macro_f1": 0.83259712204214
+      },
+      "end_to_end": {
+        "accuracy": 0.8356164383561644,
+        "balanced_accuracy": 0.7749278170038835,
+        "macro_f1": 0.808809533654791
+      },
+      "delta_vs_original_v6c": {
+        "gate_macro_f1": 0.027513859727950285,
+        "exercise_oracle_macro_f1": -0.023101041850210557,
+        "end_to_end_macro_f1": 0.015507715974469316,
+        "end_to_end_accuracy": 0.006595636732623089
+      },
+      "delta_vs_notebook24_data_only": {
+        "gate_macro_f1": 0.05334745839244348,
+        "exercise_oracle_macro_f1": -0.038312070414488586,
+        "end_to_end_macro_f1": 0.03488622143065956,
+        "end_to_end_accuracy": 0.0243531202435312
+      }
+    },
+    "visibility_mask_occlusion": {
+      "input_features": 134,
+      "realistic_occlusion": true,
+      "gate_threshold": 0.825,
+      "best_validation": {
+        "gate": 0.8667515684536913,
+        "exercise": 0.9267248730960275
+      },
+      "gate": {
+        "accuracy": 0.7737189244038559,
+        "balanced_accuracy": 0.7021549891129304,
+        "macro_f1": 0.7165780676911648
+      },
+      "exercise_classifier_oracle": {
+        "accuracy": 0.9112291350531108,
+        "balanced_accuracy": 0.8519988999119767,
+        "macro_f1": 0.8333443281262989
+      },
+      "end_to_end": {
+        "accuracy": 0.8437341451040081,
+        "balanced_accuracy": 0.7907538091753569,
+        "macro_f1": 0.7703907704762428
+      },
+      "delta_vs_original_v6c": {
+        "gate_macro_f1": -0.103678101955058,
+        "exercise_oracle_macro_f1": -0.022353835766051655,
+        "end_to_end_macro_f1": -0.022911047204078883,
+        "end_to_end_accuracy": 0.014713343480466823
+      },
+      "delta_vs_notebook24_data_only": {
+        "gate_macro_f1": -0.0778445032905648,
+        "exercise_oracle_macro_f1": -0.037564864330329684,
+        "end_to_end_macro_f1": -0.00353254174788864,
+        "end_to_end_accuracy": 0.032470826991374935
+      }
+    }
+  }
+}

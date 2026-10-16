@@ -99,6 +99,21 @@ Colab: https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/t
 Runtime: T4 GPU. Expected output:
 `calorie_v6d_visibility_missingness_ablation_report.zip`.
 
+Notebook 25 has returned and is archived under
+`ml/artifacts/v6d_visibility_missingness/`. Visibility plus missing masks raised
+gate Macro F1 to 84.78% and end-to-end Macro F1 to 80.88%, 1.55 points above
+original V6-C. Oracle exercise F1 fell to 83.26%, and several substantial
+MM-Fit creators still regressed. MM-Fit has synthetic all-one visibility, so
+the added channels can reveal source identity. Do not promote the full model;
+retain the representation as a gate-specific hypothesis for Notebook 27.
+The separate pose-failure augmentation is rejected because gate F1 collapsed
+to 71.66%.
+
+Notebook 26 should implement complete-action temporal sampling on the
+100-channel V6-C representation with Notebook 24 evidence. Validation and test
+windows stay unchanged. This avoids stacking temporal changes on an unpromoted
+visibility representation.
+
 Notebook 23: `ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb`
 
 Colab: https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb

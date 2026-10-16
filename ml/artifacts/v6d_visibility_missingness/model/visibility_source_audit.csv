@@ -1,0 +1,14 @@
+source_dataset,split,windows,mean_visibility,missing_fraction
+mm-fit,test,1139,1.0,0.0
+mm-fit,train,3803,1.0,0.0
+mm-fit,validation,845,1.0,0.0
+workoutfitness-gate-hardneg-v1,test,70,0.8166527,0.17192752100840336
+workoutfitness-gate-hardneg-v1,train,195,0.8049728,0.1853978129713424
+workoutfitness-gate-hardneg-v1,validation,64,0.8260887,0.15643669577205882
+workoutfitness-video,test,80,0.8351224,0.1634420955882353
+workoutfitness-video,train,397,0.81627095,0.1840180026670618
+workoutfitness-video,validation,122,0.80745006,0.18797462632594023
+youtube_additional_workouts_v1,test,682,0.89463496,0.08761805675349318
+youtube_additional_workouts_v1,train,2092,0.9077142,0.07180057431672478
+youtube_additional_workouts_v1,validation,1110,0.91562235,0.0673729795972443
+youtube_long_workouts_v2_reviewed,train,464,0.8935368,0.10528849201318458
