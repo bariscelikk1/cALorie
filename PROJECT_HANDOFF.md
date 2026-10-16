@@ -85,6 +85,20 @@ ablation. It should retain the Notebook 24 training evidence and compare the
 100-channel V6-C input against added visibility/detection channels, while
 reporting both original V6-C and Notebook 24 as controls.
 
+Notebook 25 is implemented as
+`ml/notebooks/25_colab_visibility_missingness_ablation.ipynb`. It trains two
+separate 134-channel variants: visibility plus per-joint missing masks, then the
+same input with train-only body-part/frame pose-failure augmentation. Both use
+the frozen Notebook 24 evidence, sampler, model family, and 1,971-window test.
+The notebook audits visibility by source because MM-Fit has synthetic
+visibility values, saves augmentation previews before training, and exports
+aggregate, per-class, and creator-level comparisons against both controls.
+
+Colab: https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/25_colab_visibility_missingness_ablation.ipynb
+
+Runtime: T4 GPU. Expected output:
+`calorie_v6d_visibility_missingness_ablation_report.zip`.
+
 Notebook 23: `ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb`
 
 Colab: https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb
