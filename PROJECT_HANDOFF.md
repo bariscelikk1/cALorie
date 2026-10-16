@@ -150,6 +150,16 @@ Colab: https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/t
 Runtime: T4 GPU. Expected output:
 `calorie_v6f_multistream_open_set_gate_report.zip`.
 
+Notebook 27 has returned and is archived under
+`ml/artifacts/v6f_multistream_gate/`. Validation selected mean stream
+probability at threshold 0.65 while satisfying 90.96% validation unknown
+rejection. On the unchanged test, gate Macro F1 is 83.95%, frozen temporal
+exercise Macro F1 is 89.11%, end-to-end Macro F1 is 81.72%, and accuracy is
+84.17%. This is the strongest aggregate candidate. MM-Fit w13 and held-out
+YouTube present-class regressions prevent production promotion. Notebook 28
+should freeze this selected gate and test only self-supervised initialization
+of the temporal exercise encoder.
+
 Notebook 23: `ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb`
 
 Colab: https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb
