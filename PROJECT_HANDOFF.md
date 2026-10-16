@@ -170,9 +170,10 @@ Coverage is metadata-derived until visible-motion review.
 
 Notebook 28 is now reserved for CPU evidence extraction: temporary 360p
 downloads, metadata capture, compact full-timeline contact sheets, and
-continuous 15 FPS landmarks. Notebook 29 will build reviewed benchmark
-intervals, and Notebook 30 will compare frozen V6-C and V6-F. Self-supervised
-pretraining moves to Notebook 31.
+continuous 15 FPS landmarks. Notebook 29 now gathers denser RGB evidence for
+independent interval review; only after the labels are audited and locked can
+Notebook 30 compare frozen V6-C and V6-F. Self-supervised pretraining remains
+deferred.
 
 Notebook 28 is implemented as
 `ml/notebooks/28_colab_extract_creator_benchmark_v1.ipynb`. From a fresh Colab
@@ -439,3 +440,11 @@ sources for external test only. Once labels really are locked, compare the
 already frozen V6-C and V6-F models without training, calibration, or threshold
 selection on these sources. Report accuracy, supported Macro F1, per-class
 recall, unknown rejection, creator metrics, and confusion matrices.
+
+Notebook 29 (`ml/notebooks/29_colab_dense_creator_rgb_review.ipynb`) is the
+CPU `Run all` step to obtain denser RGB evidence without manual uploads. It
+pins commit `752e741c96a1647b880e6222aa4989a03e0b18bb`, verifies the
+candidate and source CSV hashes, reuses Notebook 28B's Deno/EJS and 360p
+download fallbacks, and produces one ZIP with 2 FPS contact sheets and five
+seconds of context around each of the 37 draft regions. The ZIP contains no
+raw video or model predictions. Review it before any label lock.

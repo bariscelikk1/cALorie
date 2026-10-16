@@ -74,3 +74,9 @@ coverage. Do not score models on these draft rows. The acceptance audit must
 report visible-motion support per class, creator, and source, and must keep
 weak or missing cells explicit.
 
+`ml/notebooks/29_colab_dense_creator_rgb_review.ipynb` is the next CPU
+`Run all` step. It fetches pinned draft locators, downloads temporary 360p
+videos with Notebook 28B's yt-dlp fallbacks, and packages 2 FPS RGB contact
+sheets with five seconds of context around each candidate. Its ZIP is evidence
+for motion-based relabeling and second review, not a benchmark or training set.
+
