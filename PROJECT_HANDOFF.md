@@ -49,10 +49,14 @@ those predictions are not in the G2 archive.
 ## Immediate next action
 
 Notebook 22 is complete and its verified report is archived under
-`ml/artifacts/youtube_long_v2/landmarks/`. Run CPU Notebook 23 for independent
-full-motion label/boundary review and clean clip/manifest creation. It reviews
-all 20 supported intervals and 12 deterministic unknown intervals, preserves
-review progress, and blocks export until every target has a saved decision.
+`ml/artifacts/youtube_long_v2/landmarks/`. Run CPU Notebook 23 for conservative
+clip/manifest creation. It processes all 20 supported intervals and 12
+deterministic unknown intervals. The user
+rejected the 32-click manual workflow. The current version automatically saves
+the completed Codex contact-sheet label audit, applies two-second supported and
+four-second unknown edge trims, and exports; the widget remains optional for
+overrides. Metadata explicitly says that human full-motion review is not
+claimed.
 Do not train from the Notebook 22 archive directly.
 The first retraining experiment remains proposed Notebook 24 on a T4; it
 changes only the added reviewed data while keeping V6-C fixed.
@@ -189,3 +193,11 @@ clients. The latter clients are current token-free fallbacks according to the
 official yt-dlp PO-token guide. The Deno release asset URL was checked, notebook
 JSON parses, and the new command markers are validated; the complete Colab
 download still requires a user rerun.
+
+The next run reached the final export assertion because `Run all` continued
+past the interactive widget before the user could save 32 decisions. This was
+an unnecessary manual burden. Notebook 23 now pre-populates all 32 conservative
+decisions from the already completed 118-sheet second label audit and records
+their exact provenance, so `Run all` reaches the ZIP automatically. Manual
+changes remain possible through the widget before rerunning only the export
+cell.
