@@ -550,3 +550,9 @@ CPU visual/pose screening and independent labels before a T4 data-only retrain.
 The CPU `Run all` contact-sheet screen is
 `ml/notebooks/29d_colab_screen_source_balance_candidates.ipynb`; it gracefully
 records unavailable sources and packages one ZIP without raw video.
+The first 29D revision had a cache-path collision: both the source-balance
+candidate CSV and locked-benchmark candidate CSV were saved as the same local
+`candidates.csv`, causing a false video-ID overlap assertion before screening.
+The input cache now preserves repository-relative paths and rechecks all four
+hashes. Rerun 29D from the top; no new labels or model outputs were created by
+the failed run.
