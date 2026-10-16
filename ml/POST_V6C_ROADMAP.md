@@ -157,7 +157,7 @@ cannot decide whether the aggregate candidate is broadly better across the
 14-class product target. Before any more representation or backbone work,
 build a test-only benchmark with previously unused creators and videos.
 
-Notebook 28 downloads temporary 720p videos, creates compact full-timeline
+Notebook 28 downloads temporary 360p videos, creates compact full-timeline
 visual evidence, and extracts continuous landmarks. Notebook 29 turns only
 motion-reviewed intervals into a locked benchmark. Neither notebook trains,
 calibrates, selects a threshold, or inspects model predictions. The frozen

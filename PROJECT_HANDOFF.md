@@ -168,7 +168,7 @@ and STRIQfit), with roughly 140 minutes of source video. Every row is external
 test only: training, calibration, and threshold selection are forbidden.
 Coverage is metadata-derived until visible-motion review.
 
-Notebook 28 is now reserved for CPU evidence extraction: temporary 720p
+Notebook 28 is now reserved for CPU evidence extraction: temporary 360p
 downloads, metadata capture, compact full-timeline contact sheets, and
 continuous 15 FPS landmarks. Notebook 29 will build reviewed benchmark
 intervals, and Notebook 30 will compare frozen V6-C and V6-F. Self-supervised
@@ -178,7 +178,7 @@ Notebook 28 is implemented as
 `ml/notebooks/28_colab_extract_creator_benchmark_v1.ipynb`. From a fresh Colab
 CPU runtime, `Run all` downloads the candidate contract from pinned commit
 `062f43d86208f06930ae87297c421abe82e164b9`, verifies hashes and source
-exclusions, downloads exact 720p temporary videos with multiple diagnostic
+exclusions, downloads 360p temporary videos with multiple diagnostic
 fallbacks, creates dense compact contact sheets, and extracts continuous 15 FPS
 landmarks. It never runs a classifier and excludes raw videos from the ZIP.
 

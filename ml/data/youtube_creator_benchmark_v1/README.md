@@ -37,7 +37,7 @@ any benchmark is finalized.
 - preserve unsupported, compound, setup, rest, transition, and occluded motion
   as `unknown`.
 
-Notebook 28 downloads temporary 720p sources, records source metadata, creates
+Notebook 28 downloads temporary 360p sources, records source metadata, creates
 compact full-timeline visual evidence, and extracts continuous 15 FPS pose
 landmarks. Its output remains unlabeled evaluation evidence. Codex then reviews
 that evidence locally and prepares motion-based timelines before frozen-model
