@@ -71,6 +71,20 @@ groups contribute 464 train-only windows. The expected output is
 
 Colab: https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/24_colab_retrain_v6c_youtube_long_v2.ipynb
 
+Notebook 24 has now returned and is archived under
+`ml/artifacts/v6c_longv2_data_retrain/`. The exact 1,971 V6-C test keys and
+labels match. Adding 464 train-only windows improved oracle exercise Macro F1
+from 85.57% to 87.09%, but gate Macro F1 fell from 82.03% to 79.44% and
+end-to-end Macro F1 fell from 79.33% to 77.39%. End-to-end unknown recall rose
+to 89.28% while lunge and squat recall fell sharply. The held-out YouTube group
+improved, but all four substantial MM-Fit creators regressed. Do not promote
+the Notebook 24 checkpoint; original V6-C remains the reference.
+
+The next experiment is T4 Notebook 25: a controlled visibility/missing-mask
+ablation. It should retain the Notebook 24 training evidence and compare the
+100-channel V6-C input against added visibility/detection channels, while
+reporting both original V6-C and Notebook 24 as controls.
+
 Notebook 23: `ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb`
 
 Colab: https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb

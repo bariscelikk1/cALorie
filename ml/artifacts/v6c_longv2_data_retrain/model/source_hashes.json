@@ -1,0 +1,14 @@
+{
+  "calorie_workoutfitness_landmarks_v1.zip": "6dd4828e73f1ac1cd83a175de5bc1caf8465cbf61b72777467fba540af339aa9",
+  "calorie_mmfit_landmarks_v1.zip": "2d3bff2c52842b276562e749fd7eaefe4925385efa7ff8c242c82ba1803413f1",
+  "calorie_mmfit_unknown_v1.zip": "b0b113b3c5c7fc501b6b3ac4a7d2dade5fb4bccf3416d2eb85fa8b9197ae5596",
+  "calorie_youtube_mixed_landmarks_v3.zip": "bd0426eda35654a95a8bac70b0357ba484e82bd29e6b3f71760fcc743f432cf4",
+  "calorie_youtube_additional_landmarks_v1.zip": "0c60478086400fdfa6974afc6b091023b46e10783a71e40929aaa2b646d02743",
+  "calorie_youtube_training_landmarks_v4.zip": "e0588c9a4a7d0257f710fec74b657e863cda5e0bc3285a640443863c9ede2b19",
+  "calorie_workoutfitness_gate_hardneg_v1.zip": "b3aab2dbcefd709f1977c4d8d3f7d0326b50444ab44db4ba6b0cf64bbae0f4f6",
+  "calorie_youtube_long_workouts_v2_reviewed_clips.zip": "84fb55b981820af702a94f0c0070960b24fdd1acb617097f1838c782cd942284",
+  "hard_positive_windows.csv": "5a4b73c04ee85659570e7931ea0e84b35c0abeb16fd3f08238e629f6eca091c5",
+  "split_assignments.csv": "8c013695fe095ceccc4ff65722d2a26e5a309674f5b877b840b71ba73dc085d6",
+  "baseline_metrics.json": "baee2ea099402ca25b0e2bc322809dfa7a0f8d1e9969204792cd5d60bfb96b2b",
+  "baseline_test_predictions.csv": "b34b6cada90355682ef7aa225e3d18dad0960dd79ce32856ebb524356734326c"
+}
