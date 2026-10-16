@@ -179,3 +179,13 @@ local dry run verified target selection and conservative slicing for 32 clips:
 20 supported clips across nine classes and 12 unknown clips. Notebook JSON and
 all Python cells parse; Colab video download, widget interaction, and final ZIP
 export remain to be run by the user.
+
+The first user run reached the review-video cell but current YouTube extraction
+exposed only limited formats because no JavaScript runtime was installed; the
+old `android_vr` fallback then returned a PO-token HTTP 403. The repaired
+Notebook 23 installs `yt-dlp[default]`, downloads the official temporary Deno
+runtime, enables `ejs:github`, and tries default, `tv`, then `web_embedded`
+clients. The latter clients are current token-free fallbacks according to the
+official yt-dlp PO-token guide. The Deno release asset URL was checked, notebook
+JSON parses, and the new command markers are validated; the complete Colab
+download still requires a user rerun.
