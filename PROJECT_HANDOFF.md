@@ -138,6 +138,14 @@ output archive is `calorie_youtube_long_workouts_v2_review_landmarks.zip`.
 Notebook JSON and all Python cells parse locally; the active Colab download and
 MediaPipe extraction have not yet returned their final report.
 
+The user's first Notebook 22 run downloaded the Legally Swole source correctly
+at 1280x720 and 30 FPS (56,949 frames), then the single fixed-format `yt-dlp`
+command failed on the Daniel Nikolic source without exposing stderr. The next
+Notebook 22 revision preserves completed downloads, adds retry/backoff and
+three exact-720p format/client strategies, validates the decoded resolution,
+and prints the final 30 lines of each failed `yt-dlp` attempt. Rerun only the
+download cell in the same Colab runtime so the completed first video is reused.
+
 ## Post-G2 roadmap checkpoint (2026-10-15)
 
 `ml/POST_V6C_ROADMAP.md` records the durable execution plan requested by the
