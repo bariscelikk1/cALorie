@@ -174,6 +174,19 @@ continuous 15 FPS landmarks. Notebook 29 will build reviewed benchmark
 intervals, and Notebook 30 will compare frozen V6-C and V6-F. Self-supervised
 pretraining moves to Notebook 31.
 
+Notebook 28 is implemented as
+`ml/notebooks/28_colab_extract_creator_benchmark_v1.ipynb`. From a fresh Colab
+CPU runtime, `Run all` downloads the candidate contract from pinned commit
+`062f43d86208f06930ae87297c421abe82e164b9`, verifies hashes and source
+exclusions, downloads exact 720p temporary videos with multiple diagnostic
+fallbacks, creates dense compact contact sheets, and extracts continuous 15 FPS
+landmarks. It never runs a classifier and excludes raw videos from the ZIP.
+
+Colab: https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/28_colab_extract_creator_benchmark_v1.ipynb
+
+Runtime: CPU. Expected output:
+`calorie_creator_benchmark_v1_evidence.zip`.
+
 Notebook 23: `ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb`
 
 Colab: https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb
