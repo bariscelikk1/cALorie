@@ -1,6 +1,6 @@
 # YouTube creator benchmark v1
 
-This batch is a locked, external evaluation candidate set for the 14 supported
+This batch is a reserved external evaluation candidate set for the 14 supported
 exercise classes. It is deliberately separate from every training,
 augmentation, calibration, and threshold-selection source.
 
@@ -58,14 +58,19 @@ sources. It does not rerun the already valid BullyJuice, TIFF x DAN, or STRIQfit
 videos and never includes the rejected Buddy Fitness source.
 
 Notebook 28B returned successfully. ZIP integrity, all 64 internal checksums,
-and all three landmark arrays passed. Independent review of its 52 contact
-sheets accepted conservative deadlift, lat-pulldown, and sit-up work segments.
-`locked_intervals_v1.csv` now freezes 37 visible-motion intervals across the
-six accepted creators. It covers all 14 supported classes, 1,664 seconds, and
-24,960 frames at 15 FPS; its minimum retained-interval pose detection rate is
-99.88%. No model prediction was inspected while assigning these labels.
+and all three landmark arrays passed. The 52 gap-fill contact sheets establish
+that the sources show real people and help locate candidate motions. They do
+not establish exact action boundaries. `candidate_intervals_v1.csv` has 37
+draft locators across 14 proposed classes, spanning 1,664 seconds. Its
+99.88% minimum pose detection is a diagnostic on those *candidate windows*,
+not evidence that every frame belongs to the proposed action. Dense pose
+review found that the Criticalbench deadlift candidate includes substantial
+standing/talking. All 37 rows require dense RGB motion review and an
+independent second review before any benchmark score is valid. No model
+prediction was inspected while proposing these labels.
 
 The benchmark is not complete merely because every class has projected
-coverage. The acceptance audit must report visible-motion support per class,
-creator, and source, and must keep weak or missing cells explicit.
+coverage. Do not score models on these draft rows. The acceptance audit must
+report visible-motion support per class, creator, and source, and must keep
+weak or missing cells explicit.
 
