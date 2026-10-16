@@ -397,3 +397,20 @@ official chapters, and downloaded full-video storyboards: Michelle Briehler
 motions. The next compute unit is CPU Notebook 28B, which extracts only these
 three gap-fill sources. It preserves the locked-test rules and requires only
 `Runtime -> Run all`.
+
+## Notebook 28B gap-fill extraction (2026-10-16)
+
+`ml/notebooks/28b_colab_extract_creator_benchmark_gapfill.ipynb` is the CPU
+`Run all` notebook for those three replacements. It pins manifest commit
+`4beaa4fa120f4a6995c760673d81c27e43ad5eee`, verifies all three input hashes,
+and asserts the exact replacement IDs before any download. It reuses Notebook
+28's Deno/EJS-enabled yt-dlp fallbacks, 360p H.264 normalization, sequential
+ffmpeg contact-sheet generation, and continuous 15 FPS MediaPipe extraction.
+
+The sole download is
+`calorie_creator_benchmark_v1_gapfill_evidence.zip`. It excludes raw videos
+and model predictions. After the user returns it, verify outer and internal
+hashes, inspect every contact sheet, reject unsuitable sources or intervals,
+and merge accepted evidence with the three retained Notebook 28 sources. Do
+not train, calibrate, choose thresholds, or inspect model predictions until
+the six-source interval labels and coverage audit are frozen.
