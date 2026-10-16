@@ -206,6 +206,13 @@ video without audio. Contact sheets and landmark extraction then consume the
 same verified decode-safe path. Raw and normalized videos remain outside the
 output ZIP.
 
+The conditional decoder check still proved nondeterministic: the contact-sheet
+cell again failed at the first OpenCV seek. Notebook 28 now normalizes every
+source once, without trying to reuse the original codec for extraction. It
+also removes OpenCV random seeking from contact-sheet generation entirely:
+ffmpeg extracts timestamped JPEGs sequentially, and OpenCV reads only those
+JPEG files. MediaPipe consumes the normalized H.264 stream sequentially.
+
 Notebook 23: `ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb`
 
 Colab: https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/23_colab_review_build_youtube_long_v2.ipynb
