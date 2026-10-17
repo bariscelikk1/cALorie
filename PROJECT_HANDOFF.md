@@ -612,4 +612,46 @@ Local Mac MediaPipe 0.10.35 aborted at PoseLandmarker startup with a Metal
 graph-service error, before producing any landmark data, so the exploratory
 local runner was removed. Use revised Notebook 29F on **Colab CPU** with the
 private Drive backup. Neither source videos nor the failed ZIP represent
-training evidence. A successful pose ZIP is still needed before quality review.
+training evidence. The successful rerun and next steps are recorded below.
+
+## Source-balance pose rerun and exploratory T4 experiment (2026-10-17)
+
+The rerun of CPU Notebook 29F succeeded: five source videos, 17 pose-ready
+windows at 15 FPS, 5,820 frames total, and 69/69 internal hashes verified.
+The source ZIP is
+`ml/artifacts/source_balance_v1/calorie_source_balance_v1_pose_audit.zip`
+(SHA-256 `f8393f2b8c0de03a01121e544d502245cfa0729bd75e56eeac66a936bc013bf0`).
+Visual triage is in `ml/data/source_balance_v1/pose_visual_triage.csv`.
+Some Goku nominal pull-up windows contain hanging knee raises, actor changes,
+or camera cuts; Ryan's pulldown windows are cropped. Do not treat all 17 as
+exercise labels.
+
+Three stronger windows have first-pass 4-FPS RGB boundary review in
+`ml/data/source_balance_v1/annotations/first_pass/`: two Rowan dumbbell-row
+passages and one Nick sit-up passage. The structural timeline audit passes
+with zero errors/warnings, but all six timeline rows remain draft and
+`use_for_training=false`. The user confirmed the proposed movement names,
+then explicitly said they had not yet watched the review clips, so there is
+**no independent visual second review**. Short 360p video-only extracts are
+outside Git at `work/source_balance_v1/review_clips/`; six boundary sheets are
+committed under `ml/artifacts/source_balance_v1/first_pass_boundary_sheets/`.
+
+`ml/scripts/build_source_balance_draft_clips.py` slices the pinned 29F pose
+archive reproducibly without extracting landmarks again. Its GitHub-archived
+output is `ml/artifacts/source_balance_v1/calorie_source_balance_v1_draft_clips.zip`
+(SHA-256 `721d69f30ec61b4c5d6a6d1a0a9782ec44b33c6511ac068458c86e0f9b671887`):
+three quarantined clips, 1,726 pose frames, **two** creator/video groups.
+The manifest has `training_allowed=false`, `review_status=draft`, and
+`status=quarantined`. This does not solve four-class source balance.
+
+The user explicitly asked to continue model work without watching the clips.
+Notebook 29G, `ml/notebooks/29g_colab_exploratory_source_balance_retrain.ipynb`,
+is a **T4 GPU exploratory diagnostic** based on Notebook 24's exact V6-C
+recipe. It explicitly opts into only these three quarantined clips; all old
+V6-C groups and the 1,971 internal test windows remain frozen. The notebook
+pins every input hash and marks exported checkpoint promotion as disallowed.
+Do not describe its eventual result as independently validated or deploy it.
+Compare end-to-end macro F1, per-class scores, creator breakdown, and unknown
+rejection against the frozen V6-C report; archive the returned ZIP and push
+it. If promising, obtain real independent visual review and a separate final
+creator-disjoint evaluation before model promotion.
