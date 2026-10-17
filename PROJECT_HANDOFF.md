@@ -655,3 +655,11 @@ Compare end-to-end macro F1, per-class scores, creator breakdown, and unknown
 rejection against the frozen V6-C report; archive the returned ZIP and push
 it. If promising, obtain real independent visual review and a separate final
 creator-disjoint evaluation before model promotion.
+
+The first 29G Colab run stopped before training because Rowan clip
+`rowan_row_02_01` contains two undetected pose frames (136 non-finite landmark
+values). The notebook now repairs sparse non-finite values by linear temporal
+interpolation per joint/channel before resampling and asserts that the full
+window tensor is finite. It also exports `pose_imputation_audit.csv`; this run
+should record exactly two repaired frames in one clip. The three source clips,
+labels, split, model recipe, and frozen test set are otherwise unchanged.
