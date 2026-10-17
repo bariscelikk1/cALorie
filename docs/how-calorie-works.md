@@ -1,4 +1,10 @@
-# How cALorie works
+# How the historical cALorie web prototype worked
+
+> [!WARNING]
+> This document describes the archived web/worker prototype and is not the
+> current project architecture. Active development is the local-first
+> pose-sequence ML pipeline on `feat/tcn-rebuild`; start with the repository
+> `README.md` and `PROJECT_HANDOFF.md`.
 
 This document explains the entire cALorie system, from selecting a video in the
 browser to displaying repetitions and estimated calories. It also explains the

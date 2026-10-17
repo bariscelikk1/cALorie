@@ -1,208 +1,119 @@
-# cALorie
+# cALorie — pose-based exercise recognition research
 
-cALorie is a university project that estimates energy expenditure from a short
-workout video. It uses pose landmarks to count repetitions, measures exercise
-pace, selects an exercise-specific MET value, and shows a transparent calorie
-estimate. It does **not** claim medical or wearable-grade accuracy.
-
-> [!IMPORTANT]
-> **Major rebuild in progress.** The deployed web application and rule-based
-> analyzer remain available as the first prototype, but the active project is
-> being reshaped into a local-first, dataset-driven exercise recognition
-> system. The new pipeline converts videos into normalized MediaPipe pose
-> sequences and will train and evaluate a TCN across 14 dynamic exercises.
-> Accuracy will be reported only from person-separated validation and test
-> sets, not from the training data.
-
-## Status
-
-V2 supports automatic segmentation of squats, jumping jacks, push-ups,
-pull-ups, lunges, sit-ups, mountain climbers, burpees and planks, plus manual
-exercise mode. Plank is duration-based; the other movements use repetition
-state machines. Evaluation videos must still be recorded with consent before
-real accuracy figures can be reported.
-
-The rebuild lives in [`ml/`](ml/). Its first Colab smoke test successfully
-processed 14/14 videos across seven exercise classes. All clips passed pose
-detection quality checks; the lowest detected-frame ratio was 95.8%. The full
-pipeline now selects 378 clips across ten classes from Workout/Fitness Video
-and adds person-grouped pose data from MM-Fit. Historical v1-v5 experiments
-trained 15 classes; the active post-v5 target retires plank and trains 14
-dynamic classes with group-separated evaluation.
-
-## Live links
-
-- Production (unchanged until explicit promotion): https://c-a-lorie.vercel.app
-- Branch preview: https://c-a-lorie-git-feat-calorie-engine-v1-ayqmonki12-7626.vercel.app
-
-## Complete technical guide
-
-Read **[How cALorie works](docs/how-calorie-works.md)** for the full architecture,
-request and video-analysis flows, exercise rules, security model, deployment,
-limitations, diagrams, and a plain-language glossary of terms such as OpenCV,
-MediaPipe, landmarks, classifiers, MET, QStash and signed URLs.
-
-The Turkish report prepared for Selami Beyhan at Yıldız Technical University is
-available as a formatted Word document:
-**[cALorie Teknik Açıklama Raporu](docs/cALorie_Teknik_Aciklama_Raporu.docx)**.
-
-## Architecture
-
-```mermaid
-flowchart LR
-  B[Browser] -->|signed PUT| S[Supabase private storage]
-  B -->|create job| N[Next.js API on Vercel]
-  N --> D[(Supabase jobs)]
-  N --> Q[QStash]
-  Q -->|signed request| W[FastAPI worker on Render]
-  W --> S
-  W -->|status + result| D
-  B -->|poll with access token| N
-```
-
-The browser never receives the Supabase service-role key. Upload claims bind a
-server-issued storage key to job creation. The worker accepts only verified
-QStash requests and re-reads weight and exercise from the database.
-
-## Analysis method
-
-1. OpenCV reads FPS, frame count, duration and frames.
-2. MediaPipe Pose extracts body landmarks and visibility values.
-3. Normalized joint/motion features classify each frame as squat, jumping jack,
-   push-up, pull-up, lunge, sit-up, mountain climber, burpee, plank, idle or
-   unknown; smoothing turns labels into timeline segments.
-4. Exercise-specific state machines count complete cycles in each segment:
-   - squat: standing → lowered → standing using knee angle;
-   - jumping jack: closed → open → closed using wrists and ankle width;
-   - push-up: extended → lowered → extended using elbow and body angles.
-5. Repetitions per minute determine light, moderate or vigorous intensity.
-6. A configured MET value is applied:
+cALorie is currently a local-first machine-learning project for recognizing
+exercise sequences from video. The active pipeline is:
 
 ```text
-Calories = MET × 3.5 × body_weight_kg / 200 × duration_minutes
+video -> MediaPipe pose landmarks -> supported/unknown gate
+      -> 14-class exercise classifier -> stable timeline segments
+      -> repetition counting -> MET-based calorie estimate -> local Python app
 ```
 
-The displayed range is ±15%, ±25% or ±35% for high, medium or low confidence.
-Confidence comes from valid-pose-frame ratio and complete counted repetitions;
-it is not random. A video with almost no valid pose frames fails instead of
-returning an invented value.
+The project does **not** claim medical, wearable-grade, or final real-world
+accuracy. MET values are population averages, and the current model scores are
+research/development evidence rather than a final-system guarantee.
 
-## Result fields
+## Source of truth
 
-- `segments`: ordered activity segments with exercise, timing, repetitions,
-  calories, confidence and warnings.
-- `exercise_totals`: aggregated repetitions and calories by exercise.
-- `duration_seconds`: FPS/frame-count duration.
-- `total_calories_estimated`, `total_calories_low`, `total_calories_high`:
-  point estimate and quality-dependent range.
-- `valid_pose_frame_ratio`: frames with the required visible landmarks.
-- `warnings`: actionable camera or movement notes.
+- Active branch: [`feat/tcn-rebuild`](https://github.com/bariscelikk1/cALorie/tree/feat/tcn-rebuild)
+- Current handoff: [`PROJECT_HANDOFF.md`](PROJECT_HANDOFF.md)
+- ML guide and experiment history: [`ml/README.md`](ml/README.md)
+- Fixed experiment contract: [`ml/EXPERIMENT_BACKBONE.md`](ml/EXPERIMENT_BACKBONE.md)
+- Current roadmap: [`ml/POST_V6C_ROADMAP.md`](ml/POST_V6C_ROADMAP.md)
+- Annotation rules: [`ml/data/ANNOTATION_GUIDE.md`](ml/data/ANNOTATION_GUIDE.md)
 
-## Local setup
+`main` is not the current project state. The historical `web/`, `worker/`,
+`supabase/`, and deployment files are retained only as archive material while
+the ML rebuild continues. They are not the active application, architecture,
+or development target. There is currently no website workflow in scope.
 
-Requirements: Node.js 20+, Python 3.11, a Supabase project and QStash account.
+## Active target
 
-Apply `supabase/schema.sql` in the Supabase SQL editor. Then configure the web:
+The model recognizes 14 dynamic exercises plus `unknown`:
 
-```bash
-cd web
-cp .env.example .env.local
-npm ci
-npm run dev
-```
+- squat
+- push-up
+- jumping jack
+- pull-up
+- lunge
+- sit-up
+- shoulder press
+- dumbbell row
+- tricep extension
+- bicep curl
+- lateral raise
+- bench press
+- deadlift
+- lat pulldown
 
-Configure and run the worker in another terminal:
+Plank was retired from the active target after v5 and maps to `unknown` in
+post-v5 work. Historical experiments and reports remain unchanged.
 
-```bash
-cd worker
-cp .env.example .env
-python3.11 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements-dev.txt
-set -a; source .env; set +a
-uvicorn main:app --reload
-```
+## Current model state
 
-QStash must call the public URL in `WORKER_PUBLIC_URL`; a local tunnel is needed
-for a complete local queue test. Do not expose a development tunnel without
-signature verification enabled.
+| Candidate | Role | Internal end-to-end Macro F1 | Internal accuracy | Decision |
+| --- | --- | ---: | ---: | --- |
+| V6-C | frozen reference | 79.33% | 82.90% | retain as baseline |
+| V6-F | strongest aggregate candidate | 81.72% | 84.17% | do not promote yet |
 
-## Environment variables
+These figures use the same 1,971-window internal development test. That test
+has informed several experiment decisions, so the numbers must not be reported
+as an untouched final evaluation. Creator-level regressions and strong domain
+shift remain unresolved. The earlier three-creator diagnostic produced roughly
+30% present-class Macro F1, showing that architecture changes alone did not
+solve generalization.
 
-Web (server-side only):
+## Current checkpoint
 
-- `SUPABASE_URL`
-- `SUPABASE_SERVICE_ROLE_KEY`
-- `QSTASH_TOKEN`
-- `WORKER_URL`
-- `UPLOAD_TOKEN_SECRET` — random string of at least 32 characters
+The active work is the Notebook 29 source-balance sequence. CPU notebooks
+29D-29F screened new creators, produced dense visual evidence, and extracted
+pose for candidate dumbbell-row, sit-up, lat-pulldown, and pull-up regions.
+Only three stronger clips from two creator/video groups currently have exact
+first-pass boundaries. They remain quarantined because no independent second
+visual review has approved them.
 
-Worker:
+[`ml/notebooks/29g_colab_exploratory_source_balance_retrain.ipynb`](ml/notebooks/29g_colab_exploratory_source_balance_retrain.ipynb)
+is the next executable diagnostic:
 
-- `SUPABASE_URL`
-- `SUPABASE_SERVICE_ROLE_KEY`
-- `WORKER_PUBLIC_URL`
-- `QSTASH_CURRENT_SIGNING_KEY`
-- `QSTASH_NEXT_SIGNING_KEY`
+- Runtime: **Colab T4 GPU**
+- Action: **Runtime -> Run all**
+- Model: exact V6-C recipe; no new architecture
+- Only change: add the three quarantined source-balance clips to training
+- Expected output: `calorie_v6c_source_balance_draft_retrain_report.zip`
+- Promotion: explicitly forbidden; the result is diagnostic only
 
-Never prefix these values with `NEXT_PUBLIC_` and never commit real `.env`
-files.
+The first 29G run stopped before training because one Rowan clip contained two
+missing pose frames. The current notebook repairs sparse missing poses by
+per-joint temporal interpolation and exports `pose_imputation_audit.csv`.
 
-## Testing
+## Evaluation rules
 
-```bash
-cd worker && pytest -q
-cd web && npm test
-cd web && npm run lint && npm run build
-```
+- Split by original person, creator, and source video before windowing.
+- Never tune thresholds or models on locked tests.
+- Never promote draft, rejected, or unresolved labels.
+- Report Macro F1, per-class recall, unknown rejection, and creator-level
+  results; accuracy alone is insufficient.
+- Keep checkpoints, predictions, split assignments, hashes, and audit outputs.
+- Treat overlapping windows as correlated samples, not independent people.
+- Preserve failed experiments and document why they were rejected.
 
-Core tests cover joint angles, invalid inputs, MET calories, state transitions,
-synthetic movement sequences, intensity and quality. API validation has its own
-web tests.
+## Important limitations
 
-## Evaluation
+- Several internal test classes have very little support.
+- Exercise class and source dataset are partly confounded.
+- External creator generalization is substantially weaker than internal
+  development performance.
+- The six-creator external benchmark is not final until its motion labels and
+  boundaries receive independent review and pass the strict timeline audit.
+- Repetition counting, long-video segmentation, calorie estimation, and the
+  local Python application remain downstream work after recognition is stable.
+- Downloaded creator videos require careful provenance and reuse review; raw
+  videos are kept out of Git.
 
-Record consented sample videos and update `evaluation/manifest.csv`. Run:
+## Working in this repository
 
-```bash
-python evaluation/run_evaluation.py
-```
-
-The reproducible CSV compares manual and predicted counts, actual and detected
-duration, pose coverage, calorie output and runtime. See `evaluation/README.md`.
-Do not report evaluation accuracy until real sample rows have been produced.
-
-## Deployment
-
-- Vercel: import the repository, choose `web/` as root and add web variables.
-- Render: use `render.yaml` and add worker secrets.
-- Supabase: apply the schema and keep the `workout-videos` bucket private.
-- QStash: use `WORKER_URL/process` and copy both signing keys to Render.
-
-## Video guidance
-
-- Keep exactly one person and all required joints in frame.
-- Use a stable camera and even lighting.
-- Squat: side or 45° view.
-- Jumping jack: front, full-body view.
-- Push-up: unobstructed side view.
-- Accepted formats: MP4, MOV, WebM; maximum 100 MB and 3 minutes.
-
-## Limitations and ethics
-
-MET values describe population averages. Actual expenditure varies with age,
-sex, technique, fitness, body composition and physiology. A monocular camera
-can lose landmarks through occlusion, loose clothing, poor lighting or an
-incorrect angle. The state-machine thresholds are explainable but must be
-evaluated on a diverse, consented dataset. Videos can contain sensitive personal
-data; use private storage and a retention/deletion policy in any public demo.
-
-## Future work
-
-- automatic exercise classification after a reliable labeled dataset exists;
-- per-user threshold calibration and more exercises;
-- durable queue workers instead of in-process background execution;
-- scheduled cleanup of stored videos and stale jobs;
-- authenticated history and stronger distributed rate limiting;
-- browser upload progress with resumable uploads;
-- evaluation charts and the final teacher presentation.
+Read [`AGENTS.md`](AGENTS.md) and the applicable subdirectory instructions
+before changing files. Colab notebooks must run end to end from a fresh runtime,
+download checksum-pinned inputs automatically, and export one clearly named
+ZIP. After a returned ZIP is verified, archive the evidence, update the
+handoff, and checkpoint the work on `feat/tcn-rebuild`.

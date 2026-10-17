@@ -2,8 +2,9 @@
 
 ## Active work
 
-Continue on `feat/tcn-rebuild`. The deployed web prototype and the newer ML
-rebuild are distinct. `main` alone does not contain the current ML work.
+Continue on `feat/tcn-rebuild`. This branch is the project source of truth;
+`main` is not the current state. Historical web, worker, Supabase, and
+deployment files are archive material and are outside the active scope.
 The target is 14 dynamic exercises plus unknown, then stable long-video
 segments, repetition counting, calorie estimation, and a local Python app.
 Plank is retired to unknown in post-v5 experiments.
@@ -46,7 +47,26 @@ selection. Actual test ensemble predictions were verified. Correcting the old
 validation metric requires new inference on the original validation windows;
 those predictions are not in the G2 archive.
 
-## Immediate next action
+## Current action — Notebook 29G
+
+The current executable step is
+`ml/notebooks/29g_colab_exploratory_source_balance_retrain.ipynb` on a Colab
+T4 GPU. It retains the exact V6-C architecture and experiment recipe and adds
+only three quarantined first-pass clips from two new creator/video groups.
+This is a diagnostic data experiment, not a new model architecture and not a
+promotion run.
+
+The first 29G run stopped before training because `rowan_row_02_01` contained
+two frames with non-finite pose values. Commit `dd67abf` repairs sparse missing
+poses by per-joint/channel temporal interpolation, asserts finite window
+tensors, and exports `pose_imputation_audit.csv`. Run the notebook from the top
+and return `calorie_v6c_source_balance_draft_retrain_report.zip`.
+
+The three clips remain `review_status=draft`, `training_allowed=false`, and
+`status=quarantined`. Even a positive result cannot promote the checkpoint
+without independent visual review and fresh creator-disjoint evidence.
+
+## Historical experiment sequence
 
 Notebook 22 and CPU Notebook 23 are complete. Notebook 23's returned package is
 verified and archived under `ml/artifacts/youtube_long_v2/reviewed_clips/`.
@@ -156,7 +176,7 @@ probability at threshold 0.65 while satisfying 90.96% validation unknown
 rejection. On the unchanged test, gate Macro F1 is 83.95%, frozen temporal
 exercise Macro F1 is 89.11%, end-to-end Macro F1 is 81.72%, and accuracy is
 84.17%. This is the strongest aggregate candidate. MM-Fit w13 and held-out
-YouTube present-class regressions prevent production promotion.
+YouTube present-class regressions prevent model promotion.
 
 The user explicitly reprioritized the next work: build a comprehensive locked
 creator benchmark before self-supervised pretraining. The existing creator
@@ -535,7 +555,7 @@ per-class support, creator shift, benchmark status, and worker integration.
 Its priority is to lock the six-creator labels on CPU, score frozen candidates
 once, then decide whether new creator-diverse training data or model changes
 are warranted. The current web worker still runs its earlier heuristic
-classifier; research checkpoint scores are not deployed product scores.
+classifier; research checkpoint scores are not complete-system scores.
 
 ## Source/class confounding intervention (2026-10-17)
 
