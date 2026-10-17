@@ -14,3 +14,9 @@ triage. `dense_review_targets.csv` contains generous locators only, each with
 label or boundary is locked. A CPU 2-FPS review must inspect actual motion,
 camera cuts, person identity, pose visibility, and canonical variants before
 any training use.
+
+CPU `Run all` notebook `ml/notebooks/29e_colab_dense_source_balance_review.ipynb`
+performs dense RGB extraction for the 17 pinned locators. It reuses 29D's Colab
+video cache when present, downloads 360p sources otherwise, records unavailable
+sources without failing the batch, and exports one ZIP without raw video or
+landmarks.

@@ -566,3 +566,5 @@ row/pull-up candidates; Ryan, Michael, Sydney, and Nick need variant review;
 Jeff is low yield and Howcast has major body-cropping risk. Nothing from this
 batch is yet a locked label or training example. The next step is CPU dense
 RGB review around the 17 locators, then pose audit and independent labeling.
+`ml/notebooks/29e_colab_dense_source_balance_review.ipynb` is the next CPU
+`Run all` step for those locators. It keeps all candidates out of training.
