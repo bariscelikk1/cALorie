@@ -28,3 +28,9 @@ Git under
 `/Users/bariscelik/Documents/Codex/2026-10-14/se/work/source_balance_v1/review_clips/`.
 They are excerpts of the private source copies, not model inputs or evidence
 of independent review. No retrain has consumed these rows.
+
+On 2026-10-17 the user confirmed the three proposed exercise names in chat,
+then explicitly said they had **not yet watched** the linked clips. This is
+recorded as label-name feedback only, not a visual second review. The
+first-pass draft clip archive remains quarantined until a real independent
+inspection resolves the motion and boundary checks.

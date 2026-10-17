@@ -76,3 +76,16 @@ Six 4-FPS RGB boundary sheets for the three strongest windows are saved in
 set-to-transition edges more precisely than the 29F one-frame-per-second
 pose pages. They do not replace the independent full-clip review required
 to enable training.
+
+`calorie_source_balance_v1_draft_clips.zip` is a CPU-only slice of the pinned
+29F landmarks using the three first-pass interval proposals. It contains
+1,726 landmark frames in three clips from **two** original video/person groups
+(two Rowan row passages and one Nick sit-up passage), plus manifest, metadata,
+and checked hashes. Outer SHA-256:
+`721d69f30ec61b4c5d6a6d1a0a9782ec44b33c6511ac068458c86e0f9b671887`.
+All three manifest rows are `status=quarantined`, `review_status=draft`, and
+`training_allowed=false`; a normal training loader must ignore them. The
+archive was built reproducibly with
+`ml/scripts/build_source_balance_draft_clips.py` and verified after creation.
+It preserves work while the independent visual review is outstanding; it is
+not evidence of model improvement or source-balance resolution.
