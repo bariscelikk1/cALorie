@@ -1,0 +1,18 @@
+review_id,video_id,start_s,end_s,target_hypothesis,priority,locator_reason
+ryan_lat_01,J1ldBhooepw,15,55,lat_pulldown,medium,Cable demonstration early in video
+ryan_lat_02,J1ldBhooepw,105,165,lat_pulldown,medium,Seated machine demonstrations interleaved with explanation
+ryan_lat_03,J1ldBhooepw,225,245,lat_pulldown,low,Late pulldown-looking demonstration
+goku_pull_01,k61_gCDQb5Q,160,230,pull_up,high,Outdoor bar sets with visible body
+goku_pull_02,k61_gCDQb5Q,295,350,pull_up,high,Repeated bar motion near minute five
+goku_pull_03,k61_gCDQb5Q,845,945,pull_up,high,Late outdoor pull-up-looking sets
+goku_pull_04,k61_gCDQb5Q,955,1060,pull_up,high,Late outdoor bar sets
+michael_pull_01,tWdbFSaEXWY,110,180,pull_up,medium,Static gym bar interval requiring assisted-versus-full review
+rowan_row_01,jTRwWrnVGuE,10,45,dumbbell_row,high,Opening full-person row-looking set
+rowan_row_02,jTRwWrnVGuE,110,165,dumbbell_row,high,Mid-video bench-supported row-looking set
+rowan_row_03,jTRwWrnVGuE,295,345,dumbbell_row,high,Late standing row-looking set
+howcast_row_01,-koP10y1qZI,35,60,dumbbell_row,low,Early row demo with camera cuts
+howcast_row_02,-koP10y1qZI,75,140,dumbbell_row,low,Late close-up row demos with body cropping
+sydney_sit_01,UCjNb0nTn10,95,180,sit_up,medium,Abs sequence with possible trunk flexion to sitting
+sydney_sit_02,UCjNb0nTn10,645,695,sit_up,medium,Late weighted trunk raise-looking interval
+nick_sit_01,6MYtjzEF6IA,445,505,sit_up,medium,Side-view seated torso-raise-looking interval
+nick_sit_02,6MYtjzEF6IA,575,630,sit_up,medium,Side-view torso-flexion interval

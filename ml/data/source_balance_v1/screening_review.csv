@@ -1,0 +1,9 @@
+video_id,creator,target_classes,screening_status,priority,visual_basis,training_allowed
+1TEOaMX7uL8,Jeff Nippard,lat_pulldown|pull_up,low_yield,low,"Five-second sheets show vlog/food for roughly the first two minutes and rapid-cut gym material after that; no sustained target set is established",false
+J1ldBhooepw,Ryan Humiston,lat_pulldown,needs_dense_review,medium,"One gym setting with seated cable demonstrations interspersed with long direct-to-camera explanation; exact lat-pulldown variants and durations unresolved",false
+k61_gCDQb5Q,Goku Pump,pull_up,needs_dense_review,high,"Many outdoor pull-up-looking sets across the video; strong camera edits and more than one person require actor identity and interval checks",false
+tWdbFSaEXWY,Michael Eckert,pull_up,needs_dense_review,medium,"Static wide gym frame around minutes 2–3 shows bar activity; assisted/jumping versus complete pull-ups cannot be decided from five-second samples",false
+jTRwWrnVGuE,Rowan Row,dumbbell_row,needs_dense_review,high,"Several full-person dumbbell-row-looking sets in a stable home camera view; push-ups and other exercises also occur",false
+-koP10y1qZI,Howcast,dumbbell_row,pose_risk,low,"Actual one-arm row demonstration appears but frequent close-ups crop body landmarks and narration interrupts sets",false
+UCjNb0nTn10,Sydney Cummings Houdyshell,sit_up,needs_dense_review,medium,"Continuous wide-frame abs routine contains many lying and seated variants; canonical full sit-up remains uncertain",false
+6MYtjzEF6IA,Nick Walker,sit_up,needs_dense_review,medium,"Stable side-view abs routine contains sit-up-like segments near minutes 8–10 but many other core moves and transitions",false

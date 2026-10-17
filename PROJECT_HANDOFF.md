@@ -556,3 +556,13 @@ candidate CSV and locked-benchmark candidate CSV were saved as the same local
 The input cache now preserves repository-relative paths and rechecks all four
 hashes. Rerun 29D from the top; no new labels or model outputs were created by
 the failed run.
+
+Notebook 29D returned `calorie_source_balance_v1_screening.zip` on 2026-10-17.
+It is archived under `ml/artifacts/source_balance_v1/`, with outer and all
+internal hashes verified. All eight 360p sources yielded 71 contact-sheet pages.
+Source-level visual triage and 17 coarse dense-review locators are in
+`ml/data/source_balance_v1/`. Rowan Row and Goku Pump are the most promising
+row/pull-up candidates; Ryan, Michael, Sydney, and Nick need variant review;
+Jeff is low yield and Howcast has major body-cropping risk. Nothing from this
+batch is yet a locked label or training example. The next step is CPU dense
+RGB review around the 17 locators, then pose audit and independent labeling.
