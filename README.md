@@ -65,26 +65,22 @@ solve generalization.
 
 ## Current checkpoint
 
-The active work is the Notebook 29 source-balance sequence. CPU notebooks
-29D-29F screened new creators, produced dense visual evidence, and extracted
-pose for candidate dumbbell-row, sit-up, lat-pulldown, and pull-up regions.
-Only three stronger clips from two creator/video groups currently have exact
-first-pass boundaries. They remain quarantined because no independent second
-visual review has approved them.
+Notebook 29G is complete and rejected as a promotion candidate. It retained
+the exact V6-C recipe and added only three quarantined clips (52 windows) from
+two new creator/video groups. All hashes pass and the expected two missing pose
+frames were repaired and audited.
 
-[`ml/notebooks/29g_colab_exploratory_source_balance_retrain.ipynb`](ml/notebooks/29g_colab_exploratory_source_balance_retrain.ipynb)
-is the next executable diagnostic:
+The gate improved by 1.52 Macro-F1 points, but the exercise classifier lost
+1.73 points and end-to-end Macro F1 fell from **79.33% to 78.23%**. The two
+target classes also regressed: `dumbbell_row` F1 fell by 12.75 points and
+`sit_up` F1 by 7.25 points. Frozen V6-C remains the reference; the 29G
+checkpoint must not be deployed or promoted.
 
-- Runtime: **Colab T4 GPU**
-- Action: **Runtime -> Run all**
-- Model: exact V6-C recipe; no new architecture
-- Only change: add the three quarantined source-balance clips to training
-- Expected output: `calorie_v6c_source_balance_draft_retrain_report.zip`
-- Promotion: explicitly forbidden; the result is diagnostic only
-
-The first 29G run stopped before training because one Rowan clip contained two
-missing pose frames. The current notebook repairs sparse missing poses by
-per-joint temporal interpolation and exports `pose_imputation_audit.csv`.
+The verified report is archived under
+[`ml/artifacts/v6c_source_balance_draft_retrain/`](ml/artifacts/v6c_source_balance_draft_retrain/).
+The next work is independent motion/boundary review and broader creator data
+for the weak/source-confounded classes. Do not start another architecture
+experiment or tune against the already-used 1,971-window internal test.
 
 ## Evaluation rules
 

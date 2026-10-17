@@ -89,3 +89,11 @@ archive was built reproducibly with
 `ml/scripts/build_source_balance_draft_clips.py` and verified after creation.
 It preserves work while the independent visual review is outstanding; it is
 not evidence of model improvement or source-balance resolution.
+
+Notebook 29G subsequently tested these three quarantined clips as an explicit
+diagnostic opt-in while holding the V6-C recipe and 1,971-window test fixed.
+The run completed, but end-to-end Macro F1 fell from 79.33% to 78.23%; both
+added target classes regressed. The checkpoint is rejected and the verified
+report is archived under `ml/artifacts/v6c_source_balance_draft_retrain/`.
+This negative result strengthens, rather than removes, the requirement for
+independent visual review and broader creator coverage before another retrain.

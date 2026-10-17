@@ -47,24 +47,29 @@ selection. Actual test ensemble predictions were verified. Correcting the old
 validation metric requires new inference on the original validation windows;
 those predictions are not in the G2 archive.
 
-## Current action — Notebook 29G
+## Current result — Notebook 29G rejected
 
-The current executable step is
-`ml/notebooks/29g_colab_exploratory_source_balance_retrain.ipynb` on a Colab
-T4 GPU. It retains the exact V6-C architecture and experiment recipe and adds
-only three quarantined first-pass clips from two new creator/video groups.
-This is a diagnostic data experiment, not a new model architecture and not a
-promotion run.
+Notebook 29G completed on 2026-10-18. The returned archive and all internal
+hashes pass. The expected repair affected exactly two frames (136 non-finite
+values) in `rowan_row_02_01`; no other pose imputation occurred. The frozen
+1,971-window test remained unchanged and the only training-data delta was 52
+windows from three quarantined clips in two new groups.
 
-The first 29G run stopped before training because `rowan_row_02_01` contained
-two frames with non-finite pose values. Commit `dd67abf` repairs sparse missing
-poses by per-joint/channel temporal interpolation, asserts finite window
-tensors, and exports `pose_imputation_audit.csv`. Run the notebook from the top
-and return `calorie_v6c_source_balance_draft_retrain_report.zip`.
+The gate improved from 82.03% to 83.55% Macro F1, but oracle exercise Macro F1
+fell from 85.57% to 83.84%. End-to-end Macro F1 fell from **79.33% to 78.23%**
+and accuracy from 82.90% to 82.45%. `dumbbell_row` end-to-end F1 fell 12.75
+points and `sit_up` fell 7.25 points. Creator deltas are mixed: the large
+external YouTube group improves, while several MM-Fit creators regress.
 
-The three clips remain `review_status=draft`, `training_allowed=false`, and
-`status=quarantined`. Even a positive result cannot promote the checkpoint
-without independent visual review and fresh creator-disjoint evidence.
+Reject the 29G checkpoint for promotion and retain frozen V6-C as the
+reference. The complete evidence is archived under
+`ml/artifacts/v6c_source_balance_draft_retrain/`.
+
+The next action is not a new architecture run. Obtain independent full-motion
+and boundary review for the quarantined clips, remove or relabel ambiguous
+segments, and expand creator-disjoint evidence for the weak/source-confounded
+classes before another controlled data retrain. Do not iteratively tune on the
+already-used internal test.
 
 ## Historical experiment sequence
 
