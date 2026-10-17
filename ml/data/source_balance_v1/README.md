@@ -52,6 +52,16 @@ Goku pull-up candidates need careful exclusion of hanging knee raises,
 camera cuts, and actor switches. Do not equate `pose_ready` with a reviewed
 canonical label.
 
+`pose_visual_triage.csv` records a provisional visual pass over representative
+29F one-frame-per-second pose contact-sheet pages, combined with the earlier
+2-FPS source triage. It is a review queue, not an
+annotation timeline: only two Rowan row windows and one Nick sit-up window
+are prioritized for exact motion/boundary inspection; several nominal
+pull-up windows visibly include hanging knee raises. The Ryan lat-pulldown
+windows are substantially cropped. The current batch therefore does not yet
+provide clean new-creator coverage for all four source-confounded classes.
+Every row remains draft with second review required and training disallowed.
+
 Acquisition target: at least two independently filmed new creators for each
 of the four classes, with several clear complete repetitions per creator,
 different camera angles or settings, and an unknown/rest timeline around the

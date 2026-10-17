@@ -1,0 +1,18 @@
+window_id,video_id,target_hypothesis,visual_triage,observed_motion_and_risk,review_status,needs_second_review,training_allowed
+ryan_lat_02_01,J1ldBhooepw,lat_pulldown,hold,Visible pulldown repetitions but lower body is cropped and the camera angle changes,draft,true,false
+ryan_lat_03_01,J1ldBhooepw,lat_pulldown,hold,Close upper-body pulldown variation with major lower joints outside frame,draft,true,false
+goku_pull_01_01,k61_gCDQb5Q,pull_up,hold,Apparent pull-ups interleaved with camera cuts and partial-body views,draft,true,false
+goku_pull_01_02,k61_gCDQb5Q,pull_up,segment_review,Some visible pull-ups but the window includes pauses and angle changes,draft,true,false
+goku_pull_02_01,k61_gCDQb5Q,pull_up,reject_whole_window,Repeated hanging knee raises are visible; the entire window cannot be labeled pull-up,draft,true,false
+goku_pull_02_02,k61_gCDQb5Q,pull_up,reject_whole_window,Hanging knee raises and rest are mixed with bar activity,draft,true,false
+goku_pull_02_03,k61_gCDQb5Q,pull_up,reject_whole_window,Hanging knee raises and grip adjustment are visible,draft,true,false
+goku_pull_03_01,k61_gCDQb5Q,pull_up,hold,Apparent pull-ups but framing is upper-body dominant with glare and nearby actors,draft,true,false
+goku_pull_03_02,k61_gCDQb5Q,pull_up,reject_whole_window,Two athletes and camera framing changes prevent a single-person continuous label,draft,true,false
+goku_pull_04_01,k61_gCDQb5Q,pull_up,hold,Bar motion is visible but actor and framing change within the window,draft,true,false
+goku_pull_04_02,k61_gCDQb5Q,pull_up,reject_whole_window,Multiple people and abrupt transitions mix hanging work with non-exercise frames,draft,true,false
+rowan_row_01_01,jTRwWrnVGuE,dumbbell_row,reject_whole_window,Only a brief row-looking passage is surrounded by setup and transition,draft,true,false
+rowan_row_02_01,jTRwWrnVGuE,dumbbell_row,priority_exact_review,Clear chest-supported dumbbell-row repetitions; find exact motion boundaries and check shot changes,draft,true,false
+rowan_row_03_01,jTRwWrnVGuE,dumbbell_row,priority_exact_review,Clear repeated bent-over dumbbell rows in a comparatively stable view; find exact boundaries,draft,true,false
+sydney_sit_01_01,UCjNb0nTn10,sit_up,variant_review,Repeated torso raises appear visible; small scale and weighted or assisted variant need canonical review,draft,true,false
+nick_sit_01_01,6MYtjzEF6IA,sit_up,priority_exact_review,Repeated straight-leg sit-ups in a stable side view; find exact motion boundaries,draft,true,false
+nick_sit_02_01,6MYtjzEF6IA,sit_up,variant_review,Repeated bent-knee twisting torso raises are a compound variation needing canonical review,draft,true,false
