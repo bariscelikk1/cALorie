@@ -44,6 +44,14 @@ for the 17 candidate windows across five sources. Its pose ZIP is evidence for
 quality and actor review, not a training set. It records source failures and
 does not export raw video or require manual uploads.
 
+The successful 29F rerun is archived at
+`ml/artifacts/source_balance_v1/calorie_source_balance_v1_pose_audit.zip`.
+All 17 candidate windows have pose evidence, but the labels and motion
+boundaries remain draft and excluded from training. In particular, the
+Goku pull-up candidates need careful exclusion of hanging knee raises,
+camera cuts, and actor switches. Do not equate `pose_ready` with a reviewed
+canonical label.
+
 Acquisition target: at least two independently filmed new creators for each
 of the four classes, with several clear complete repetitions per creator,
 different camera angles or settings, and an unknown/rest timeline around the

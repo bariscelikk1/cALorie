@@ -48,3 +48,24 @@ ZIPs. Its Drive-first source acquisition was locally checked with a real
 hash-matched 360p file. A Mac CPU MediaPipe attempt failed during task startup
 with a Metal graph-service abort in this environment; pose extraction therefore
 remains for Colab CPU. No local pose data was produced.
+
+The rerun `calorie_source_balance_v1_pose_audit.zip` is the user-returned 29F
+output (original download name ends in `-2`), SHA-256
+`f8393f2b8c0de03a01121e544d502245cfa0729bd75e56eeac66a936bc013bf0`.
+ZIP integrity and all 69 internal SHA-256 entries pass. All five sources were
+available and all 17 windows yielded 15-FPS pose (`pose_ready=17`, 5,820 sampled
+frames, frame-weighted detection rate 0.9639; minimum window rate 0.7519).
+The archive contains 17 landmark NPZ files, 41 pose contact-sheet pages, and
+no raw videos. Every window remains `review_status=draft`,
+`needs_second_review=true`, and `training_allowed=false`.
+
+Sample visual checks confirm plausible dumbbell rows in `rowan_row_03_01` and
+straight-leg sit-ups in `nick_sit_01_01`, but do not establish exact start/end
+boundaries. `goku_pull_02_01` visibly includes hanging knee raises alongside
+bar work; classifying the entire window as pull-up would be unsafe. Other Goku
+windows include camera/person changes and partial-body views. Ryan's pulldown
+frames show upper-body motion with cropped lower joints. Sydney and Nick's
+second sit-up candidates are variants requiring canonical review. No candidate
+has been promoted to a reviewed label or training clip. The next gate is
+independent motion/boundary review of the actual video and pose evidence,
+followed by the strict annotation audit before any CPU clip build or T4 retrain.
