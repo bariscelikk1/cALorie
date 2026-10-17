@@ -586,3 +586,13 @@ reviewed interval. Nothing is eligible for training yet. Next: CPU continuous
 pose-quality audit on the promising candidate windows, independent motion and
 boundary review per `ml/data/ANNOTATION_GUIDE.md`, then only audited clips can
 enter a T4 data-only V6-C retrain. The four-class multi-creator gap remains open.
+
+CPU Notebook 29F (`ml/notebooks/29f_colab_audit_source_balance_pose_candidates.ipynb`)
+implements that pose audit for the 17 first-pass windows in five videos. It
+automatically fetches checksum-pinned manifests from commit `5315822`, reuses
+29D/29E cached 360p sources or downloads them, and exports 15 FPS pose arrays,
+1 FPS overlay sheets, quality metrics, and a failure manifest in one ZIP. The
+setup was locally executed against the pinned files and produced the expected
+five sources / 17 windows; every code cell was syntax-checked. Full Colab
+video/MediaPipe execution awaits the user's Run all and returned ZIP. Every
+output remains draft and excluded from training.

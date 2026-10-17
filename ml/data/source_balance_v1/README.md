@@ -33,6 +33,17 @@ metadata in one ZIP. It excludes raw video and performs no landmark extraction
 or training. It follows the 29C review notebook as a separate data-intake
 screen; reserved 30–33 model experiments keep their numbering.
 
+After the 29E dense RGB output, `dense_visual_first_pass.csv` records a human
+contact-sheet triage. Its times are approximate locators, not motion labels or
+annotation boundaries. Every row is still draft, requires second review, and
+has `training_allowed=false`. CPU `Run all` notebook
+`ml/notebooks/29f_colab_audit_source_balance_pose_candidates.ipynb` fetches
+that exact CSV from pinned GitHub commit `5315822130c3bbd0933f82508b14a1f75fc683ea`,
+reuses the 360p Colab video cache when present, and extracts 15 FPS pose only
+for the 17 candidate windows across five sources. Its pose ZIP is evidence for
+quality and actor review, not a training set. It records source failures and
+does not export raw video or require manual uploads.
+
 Acquisition target: at least two independently filmed new creators for each
 of the four classes, with several clear complete repetitions per creator,
 different camera angles or settings, and an unknown/rest timeline around the
