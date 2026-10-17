@@ -31,3 +31,17 @@ locators, not exact temporal labels, and every row remains a draft excluded
 from training. The promising passages require continuous pose and independent
 canonical/boundary review. These candidates do not yet resolve source/class
 confounding or justify a model retrain.
+
+The first 29F ZIP, `calorie_source_balance_v1_pose_audit_colab_blocked.zip`,
+has outer SHA-256 `36eb3584789f9b8fc30e5b6080fba01d3deba8522cbf3f50b72eeeacddd8a91e`.
+All six internal hashes pass, but `pose_ready=0`: a fresh Colab runtime lost
+the temporary 29D/29E videos and YouTube returned a bot-authentication block
+for all five sources. This is access failure evidence, not a pose quality
+result. On 2026-10-17 the exact five 360p video-only files were obtained from
+the user's Mac, kept outside Git at
+`/Users/bariscelik/Documents/Codex/2026-10-14/se/work/source_balance_v1/videos/`,
+and privately backed up to the user's Drive folder
+`cALorie_source_balance_v1` (folder ID `1dztxSj58OfKoSvCzQj5dnmpNq0-Mi7Hd`).
+The repaired 29F notebook verifies their SHA-256 hashes and loads this Drive
+backup before trying YouTube. Raw videos remain excluded from Git and report
+ZIPs. A local CPU runner is in `ml/scripts/run_source_balance_pose_audit_local.py`.

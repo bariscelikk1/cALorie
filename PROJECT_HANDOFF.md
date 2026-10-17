@@ -596,3 +596,18 @@ setup was locally executed against the pinned files and produced the expected
 five sources / 17 windows; every code cell was syntax-checked. Full Colab
 video/MediaPipe execution awaits the user's Run all and returned ZIP. Every
 output remains draft and excluded from training.
+
+The user's first 29F ZIP had `pose_ready=0` because a new Colab runtime lost
+the 29D/29E video cache, and YouTube bot-authentication blocked all five
+sources. The ZIP itself and six internal hashes are sound; it is archived as
+`ml/artifacts/source_balance_v1/calorie_source_balance_v1_pose_audit_colab_blocked.zip`.
+The five exact 360p source files were then downloaded successfully on the Mac
+and preserved outside Git under
+`/Users/bariscelik/Documents/Codex/2026-10-14/se/work/source_balance_v1/videos/`.
+They are also privately backed up in the user's Google Drive folder
+`cALorie_source_balance_v1` (ID `1dztxSj58OfKoSvCzQj5dnmpNq0-Mi7Hd`).
+The revised Notebook 29F checks file hashes and uses Drive before YouTube;
+the new `ml/scripts/run_source_balance_pose_audit_local.py` can extract from
+the local preserved files. Neither source videos nor failed ZIP represent
+training evidence. Full local pose extraction was still in progress at this
+handoff checkpoint.
