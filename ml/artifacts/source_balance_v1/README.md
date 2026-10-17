@@ -20,3 +20,14 @@ performs dense RGB extraction for the 17 pinned locators. It reuses 29D's Colab
 video cache when present, downloads 360p sources otherwise, records unavailable
 sources without failing the batch, and exports one ZIP without raw video or
 landmarks.
+
+`calorie_source_balance_v1_dense_review.zip` is the user-returned 29E output,
+SHA-256 `0f868ab7fb27d0b812bd512a29393549f7eb8d7f6ddf27875ab77d57cc66052c`.
+ZIP integrity and all 187 internal SHA-256 entries pass. All 17 requested
+regions across seven available sources produced 2-FPS RGB sheets (187 pages).
+The archive contains no raw video or landmarks. The first visual triage is in
+`ml/data/source_balance_v1/dense_visual_first_pass.csv`; its windows are broad
+locators, not exact temporal labels, and every row remains a draft excluded
+from training. The promising passages require continuous pose and independent
+canonical/boundary review. These candidates do not yet resolve source/class
+confounding or justify a model retrain.

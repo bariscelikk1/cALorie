@@ -568,3 +568,21 @@ batch is yet a locked label or training example. The next step is CPU dense
 RGB review around the 17 locators, then pose audit and independent labeling.
 `ml/notebooks/29e_colab_dense_source_balance_review.ipynb` is the next CPU
 `Run all` step for those locators. It keeps all candidates out of training.
+
+Notebook 29E returned `calorie_source_balance_v1_dense_review.zip` on
+2026-10-17. The archive is under `ml/artifacts/source_balance_v1/` (outer
+SHA-256 `0f868ab7fb27d0b812bd512a29393549f7eb8d7f6ddf27875ab77d57cc66052c`);
+all 187 internal hashes pass. All 17 2-FPS RGB regions were extracted. Human
+contact-sheet first-pass decisions are recorded in
+`ml/data/source_balance_v1/dense_visual_first_pass.csv` as **draft locators**, not
+verified labels. Rowan Row has the strongest sustained dumbbell-row candidate
+around 295–332 s. Goku Pump has apparent pull-ups, especially near 295–345 s,
+but multiple people and edits require actor-specific clips. Nick Walker has
+side-view sit-up-looking sets near 463–504 s; a later twisting variant needs
+canonical review. Ryan's pulldown material is brief or cropped. Sydney's
+weighted torso raises and other abdominal work need variant review; Howcast
+is too cropped/cut, and Michael's full pull-ups are not established in the
+reviewed interval. Nothing is eligible for training yet. Next: CPU continuous
+pose-quality audit on the promising candidate windows, independent motion and
+boundary review per `ml/data/ANNOTATION_GUIDE.md`, then only audited clips can
+enter a T4 data-only V6-C retrain. The four-class multi-creator gap remains open.
