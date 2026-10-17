@@ -44,4 +44,7 @@ and privately backed up to the user's Drive folder
 `cALorie_source_balance_v1` (folder ID `1dztxSj58OfKoSvCzQj5dnmpNq0-Mi7Hd`).
 The repaired 29F notebook verifies their SHA-256 hashes and loads this Drive
 backup before trying YouTube. Raw videos remain excluded from Git and report
-ZIPs. A local CPU runner is in `ml/scripts/run_source_balance_pose_audit_local.py`.
+ZIPs. Its Drive-first source acquisition was locally checked with a real
+hash-matched 360p file. A Mac CPU MediaPipe attempt failed during task startup
+with a Metal graph-service abort in this environment; pose extraction therefore
+remains for Colab CPU. No local pose data was produced.

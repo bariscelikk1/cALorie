@@ -607,7 +607,9 @@ and preserved outside Git under
 They are also privately backed up in the user's Google Drive folder
 `cALorie_source_balance_v1` (ID `1dztxSj58OfKoSvCzQj5dnmpNq0-Mi7Hd`).
 The revised Notebook 29F checks file hashes and uses Drive before YouTube;
-the new `ml/scripts/run_source_balance_pose_audit_local.py` can extract from
-the local preserved files. Neither source videos nor failed ZIP represent
-training evidence. Full local pose extraction was still in progress at this
-handoff checkpoint.
+the Drive-first path was tested locally against a hash-matched 360p file.
+Local Mac MediaPipe 0.10.35 aborted at PoseLandmarker startup with a Metal
+graph-service error, before producing any landmark data, so the exploratory
+local runner was removed. Use revised Notebook 29F on **Colab CPU** with the
+private Drive backup. Neither source videos nor the failed ZIP represent
+training evidence. A successful pose ZIP is still needed before quality review.
