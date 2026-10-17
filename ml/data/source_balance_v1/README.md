@@ -62,6 +62,14 @@ windows are substantially cropped. The current batch therefore does not yet
 provide clean new-creator coverage for all four source-confounded classes.
 Every row remains draft with second review required and training disallowed.
 
+The first exact-window pass is in `annotations/first_pass/` with its provenance
+and per-window pose counts in `annotations/README.md`. It narrows three
+candidate windows to proposed row/sit-up motion intervals and separates
+visible setup/end transitions. The annotation audit passes structurally, but
+an independent second motion review and group split decision are still needed
+before any training clip is exported. This pass covers two original videos,
+not three independent creators.
+
 Acquisition target: at least two independently filmed new creators for each
 of the four classes, with several clear complete repetitions per creator,
 different camera angles or settings, and an unknown/rest timeline around the

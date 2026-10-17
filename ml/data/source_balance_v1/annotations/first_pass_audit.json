@@ -1,0 +1,41 @@
+{
+  "files": 3,
+  "rows": 6,
+  "errors": 0,
+  "warnings": 0,
+  "results": [
+    {
+      "file": "ml/data/source_balance_v1/annotations/first_pass/nick_sit_01_01.labels.csv",
+      "rows": 2,
+      "duration_s": 504.0,
+      "labels": {
+        "sit_up": 1,
+        "unknown": 1
+      },
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "ml/data/source_balance_v1/annotations/first_pass/rowan_row_02_01.labels.csv",
+      "rows": 2,
+      "duration_s": 155.0,
+      "labels": {
+        "dumbbell_row": 1,
+        "unknown": 1
+      },
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "file": "ml/data/source_balance_v1/annotations/first_pass/rowan_row_03_01.labels.csv",
+      "rows": 2,
+      "duration_s": 332.0,
+      "labels": {
+        "dumbbell_row": 1,
+        "unknown": 1
+      },
+      "errors": [],
+      "warnings": []
+    }
+  ]
+}

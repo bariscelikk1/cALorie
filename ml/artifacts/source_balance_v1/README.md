@@ -69,3 +69,10 @@ second sit-up candidates are variants requiring canonical review. No candidate
 has been promoted to a reviewed label or training clip. The next gate is
 independent motion/boundary review of the actual video and pose evidence,
 followed by the strict annotation audit before any CPU clip build or T4 retrain.
+
+Six 4-FPS RGB boundary sheets for the three strongest windows are saved in
+`first_pass_boundary_sheets/`. Their accompanying draft timelines are in
+`ml/data/source_balance_v1/annotations/first_pass/`. The sheets show the
+set-to-transition edges more precisely than the 29F one-frame-per-second
+pose pages. They do not replace the independent full-clip review required
+to enable training.
