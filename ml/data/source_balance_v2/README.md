@@ -72,3 +72,16 @@ Notebook 30C is the next evidence-only step. It produces 2-FPS sheets for the
 three advanced replacement locators and retries the unavailable Max Euceda
 dense pass. It still does not export landmarks or authorize training.
 
+## 30C result and pose-audit queue
+
+Notebook 30C produced evidence for all four targets and successfully recovered
+the previously unavailable Max Euceda source. `replacement_dense_visual_review.csv`
+advances the long Alex Crockford sit-up block plus two conservative Max Euceda
+row passages. Both lat-pulldown replacements are rejected for the current pose
+pipeline: Nona Bayat omits the lower legs and feet, while SilverSneakers cuts
+between side and tight upper-body views inside the demonstration.
+
+`pose_audit_targets.csv` combines those three new passages with the 15 intervals
+advanced from 30B. All 18 windows remain draft, independently unreviewed, and
+training-disabled. The next step is a 15-FPS pose coverage audit, not training.
+

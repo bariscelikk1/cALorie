@@ -17,6 +17,8 @@ SCREENING = V2 / "screening_review.csv"
 DENSE_TARGETS = V2 / "dense_review_targets.csv"
 DENSE_VISUAL_REVIEW = V2 / "dense_visual_review.csv"
 REPLACEMENT_SCREENING = V2 / "replacement_screening_review.csv"
+REPLACEMENT_DENSE_REVIEW = V2 / "replacement_dense_visual_review.csv"
+POSE_AUDIT_TARGETS = V2 / "pose_audit_targets.csv"
 RESERVED = (
     ROOT / "ml/data/source_balance_v1/candidates.csv",
     ROOT / "ml/data/youtube_creator_benchmark_v1/candidates.csv",
@@ -302,11 +304,89 @@ def audit_dense_and_replacements() -> None:
     )
 
 
+def audit_replacement_dense_and_pose_queue() -> None:
+    candidates = read_rows(CANDIDATES)
+    supplemental = read_rows(SUPPLEMENTAL)
+    source_by_id = {row["video_id"]: row for row in candidates + supplemental}
+    replacement_screening = read_rows(REPLACEMENT_SCREENING)
+    advanced_replacement_ids = {
+        row["video_id"]
+        for row in replacement_screening
+        if row["screening_decision"] == "advance_dense_review"
+    }
+    expected_review_ids = {
+        *(f"replacement_{video_id}" for video_id in advanced_replacement_ids),
+        "max_row_retry",
+    }
+    reviews = read_rows(REPLACEMENT_DENSE_REVIEW)
+    require_unique([row["review_id"] for row in reviews], "30C review ID")
+    assert {row["review_id"] for row in reviews} == expected_review_ids
+    allowed_decisions = {
+        "advance_pose_audit",
+        "reject_pose_framing",
+        "reject_camera_pose_inconsistency",
+    }
+    proposed_by_review: dict[str, list[tuple[float, float]]] = {}
+    for row in reviews:
+        review_id = row["review_id"]
+        video_id = row["video_id"]
+        assert video_id in source_by_id, video_id
+        assert row["target_class"] == source_by_id[video_id]["target_class"], review_id
+        assert row["review_decision"] in allowed_decisions, review_id
+        assert row["independent_human_review_complete"].casefold() == "false", review_id
+        assert row["training_allowed"].casefold() == "false", review_id
+        intervals = parse_intervals(row["proposed_intervals_s"])
+        if row["review_decision"] == "advance_pose_audit":
+            assert intervals, f"Advanced 30C review has no interval: {review_id}"
+            proposed_by_review[review_id] = intervals
+        else:
+            assert not intervals, f"Rejected 30C review has an interval: {review_id}"
+        prior_end = 0.0
+        for start, end in intervals:
+            assert 0 <= start < end <= float(source_by_id[video_id]["duration_s"]) + 1.0
+            assert start >= prior_end, f"Overlapping 30C intervals: {review_id}"
+            prior_end = end
+
+    dense_reviews = read_rows(DENSE_VISUAL_REVIEW)
+    for row in dense_reviews:
+        if row["review_decision"] == "advance_pose_audit":
+            proposed_by_review[row["review_id"]] = parse_intervals(
+                row["proposed_intervals_s"]
+            )
+
+    pose_targets = read_rows(POSE_AUDIT_TARGETS)
+    require_unique([row["window_id"] for row in pose_targets], "pose-audit window ID")
+    actual: dict[str, list[tuple[float, float]]] = {}
+    for row in pose_targets:
+        window_id = row["window_id"]
+        review_id = row["source_review_id"]
+        assert review_id in proposed_by_review, window_id
+        assert row["video_id"] in source_by_id, window_id
+        assert row["target_class"] == source_by_id[row["video_id"]]["target_class"], window_id
+        assert row["independent_human_review_complete"].casefold() == "false", window_id
+        assert row["training_allowed"].casefold() == "false", window_id
+        start, end = float(row["start_s"]), float(row["end_s"])
+        assert start < end, window_id
+        actual.setdefault(review_id, []).append((start, end))
+
+    assert set(actual) == set(proposed_by_review), (
+        "Pose queue must cover every advanced 30B/30C review exactly"
+    )
+    for review_id, expected in proposed_by_review.items():
+        assert actual[review_id] == expected, f"Pose queue interval mismatch: {review_id}"
+
+    print(
+        f"30C review audit passed: {len(reviews)} dense targets; "
+        f"{len(pose_targets)} pose windows queued; training disabled."
+    )
+
+
 def main() -> None:
     audit_candidates()
     audit_adjudication()
     audit_screening()
     audit_dense_and_replacements()
+    audit_replacement_dense_and_pose_queue()
 
 
 if __name__ == "__main__":
