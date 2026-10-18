@@ -38,11 +38,18 @@ audit. Run:
 python3 ml/scripts/audit_source_balance_v2.py
 ```
 
-CPU Notebook `30a_colab_screen_source_balance_v2.ipynb` pins the intake and
-reserved inventories by commit and SHA-256, verifies YouTube video/channel
-identity, attempts 360p-only downloads, exports contact sheets and metadata,
-and excludes raw video. A successful screening is still not a label or
-training approval; independent motion/boundary review remains mandatory.
+CPU Notebook `30a_colab_screen_source_balance_v2.ipynb` completed for all 12
+sources. Its unchanged output and checksum are archived under
+`artifacts/source_balance_v2/`. Visual screening advances three independent
+dumbbell-row people, two pull-up people, one sit-up person, and no lat-pulldown
+person. CHRIS HERIA and THENX show the same athlete and are grouped together.
+
+CPU Notebook `30b_colab_source_balance_v2_dense_and_replacement_screen.ipynb`
+is the next evidence step. It pins 17 dense-review regions plus five replacement
+sources, downloads only temporary 360p video, exports 2-FPS region sheets and
+5-second replacement timelines, and excludes raw video and landmarks. A
+successful run is still not a label or training approval; independent
+motion/boundary and source/use review remain mandatory.
 
 ## Verified progress
 

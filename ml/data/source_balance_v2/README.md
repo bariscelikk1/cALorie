@@ -36,3 +36,18 @@ The guard checks candidate identity separation, reserved-inventory conflicts,
 per-class creator coverage, and adjudication interval safety. Passing it does
 not promote a candidate or authorize training.
 
+## 30A screening result and 30B queue
+
+Notebook 30A produced visual evidence for all 12 initial candidates. The
+unchanged report is archived under `ml/artifacts/source_balance_v2/` and the
+Codex screen is recorded in `screening_review.csv`. Distinct channel IDs were
+not sufficient to prove person separation: CHRIS HERIA and THENX feature the
+same athlete and share one `person_identity_group`.
+
+`dense_review_targets.csv` contains 17 conservative locators across six videos
+that passed the first screen. `supplemental_candidates.csv` adds two replacement
+sit-up creators and three replacement lat-pulldown creators because 30A yielded
+only one advanced sit-up person and no advanced lat-pulldown person. Notebook
+30B creates the next visual evidence package. Every row remains
+`training_allowed=false`.
+

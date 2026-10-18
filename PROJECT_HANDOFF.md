@@ -65,14 +65,21 @@ Reject the 29G checkpoint for promotion and retain frozen V6-C as the
 reference. The complete evidence is archived under
 `ml/artifacts/v6c_source_balance_draft_retrain/`.
 
-The next action is not a new architecture run. Source-balance v2 is now the
-active intake: 12 metadata-verified candidates provide three distinct
-creator/channel IDs for each of `dumbbell_row`, `sit_up`, `lat_pulldown`, and
-`pull_up`. All remain `training_allowed=false`, with source/use and motion
-review still pending. Run CPU Notebook 30A to create contact-sheet evidence,
-then independently review motion, actor continuity, camera cuts, and exact
-boundaries before landmark extraction or retraining. Do not iteratively tune
-on the already-used internal test.
+The next action is not a new architecture run. Notebook 30A screened all 12
+initial source-balance-v2 candidates and its unchanged output is archived under
+`ml/artifacts/source_balance_v2/`; all 128 internal hashes and the outer ZIP
+hash pass. Dense review advances three dumbbell-row person groups, two pull-up
+groups, one sit-up group, and zero lat-pulldown groups. CHRIS HERIA and THENX
+feature the same athlete and are one identity group despite distinct channels.
+The original lat-pulldown candidates are rejected or held for pose cropping,
+camera cuts, and actor complexity.
+
+CPU Notebook 30B is the next `Run all` step. It creates 2-FPS sheets for 17
+retained row/sit-up/pull-up regions and 5-second full-timeline sheets for five
+new replacement sources: two sit-up and three lat-pulldown candidates. It does
+not export raw video or landmarks. Independently review motion, actor
+continuity, camera cuts, canonical mapping, and exact boundaries after the ZIP
+returns. Do not retrain or iteratively tune on the already-used internal test.
 
 The three v1 review clips received a Codex visual adjudication, explicitly not
 an independent human second review. Nick's 464.5–504.0 straight-leg sit-up
