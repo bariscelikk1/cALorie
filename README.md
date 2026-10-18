@@ -84,10 +84,14 @@ source-balance-v2 candidates, Notebook 30B completed the first dense motion and
 replacement screen, and Notebook 30C completed all four follow-up targets. The
 review now queues 18 row/sit-up/pull-up windows for pose audit. Both new
 lat-pulldown replacements were rejected for full-body pose inconsistency, while
-Alex Crockford and two Max Euceda row passages advanced. CPU Notebook 30D is
-the next `Run all` step and measures 15-FPS pose coverage without training. Do
-not start another architecture experiment or tune against the already-used
-1,971-window internal test.
+Alex Crockford and two Max Euceda row passages advanced. The first CPU Notebook
+30D run was blocked by YouTube bot checks and produced zero pose-ready windows;
+its unchanged failure report is archived. The repaired 30D is the next `Run
+all` step: it makes no YouTube request and performs a coarse 2-FPS pose-
+visibility audit on the checksum-verified 30B/30C contact-sheet frames. Those
+landmarks are audit-only, not training data, and do not replace continuous
+15-FPS extraction. Do not start another architecture experiment or tune against
+the already-used 1,971-window internal test.
 
 ## Evaluation rules
 

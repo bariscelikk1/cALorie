@@ -51,9 +51,13 @@ canonical row, sit-up, and dynamic pull-up windows now advance to pose audit;
 the new lat-pulldown candidates failed full-body pose/framing requirements.
 
 CPU Notebook `30d_colab_source_balance_v2_pose_audit.ipynb` is the next
-evidence step. It extracts continuous 15-FPS MediaPipe pose, quality metrics,
-and overlay sheets for those 18 windows, while excluding raw video and all
-training. Independent motion/boundary and source/use review remain mandatory.
+evidence step. Its first run was blocked by YouTube bot checks and the unchanged
+zero-pose report is archived. The repaired notebook makes no YouTube request;
+it reconstructs the checksum-verified 30B/30C 2-FPS contact-sheet tiles and
+exports coarse MediaPipe visibility metrics, overlays, and explicitly non-
+training landmarks for the 18 windows. This screen cannot replace continuous
+15-FPS extraction. Independent motion/boundary and source/use review remain
+mandatory.
 
 ## Verified progress
 

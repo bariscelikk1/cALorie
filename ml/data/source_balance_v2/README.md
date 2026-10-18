@@ -83,7 +83,9 @@ between side and tight upper-body views inside the demonstration.
 
 `pose_audit_targets.csv` combines those three new passages with the 15 intervals
 advanced from 30B. All 18 windows remain draft, independently unreviewed, and
-training-disabled. The next step is a 15-FPS pose coverage audit, not training.
+training-disabled. The next step is the repaired coarse 2-FPS archived-frame
+pose-visibility audit described below, not training; continuous 15-FPS source
+extraction remains a later requirement for any window that survives screening.
 
 The first Notebook 30D run could not download any of the seven YouTube sources
 because Colab received the same bot-confirmation response for every video. Its

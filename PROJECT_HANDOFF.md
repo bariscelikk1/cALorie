@@ -90,10 +90,15 @@ rejected for the current pose pipeline because of lower-body cropping,
 close-ups, and camera changes inside the demonstrations. The unchanged 30C ZIP
 is archived under `ml/artifacts/source_balance_v2_replacement_dense_review/`.
 
-CPU Notebook 30D is the next `Run all` step. It extracts continuous 15-FPS
-MediaPipe pose and overlay sheets for the 18 windows in
-`ml/data/source_balance_v2/pose_audit_targets.csv`. It exports no raw video and
-does not train. Review the returned pose coverage before independent human
+The first CPU Notebook 30D run was blocked by YouTube bot checks for all seven
+sources and produced zero pose-ready windows. Its unchanged failure report is
+archived under `ml/artifacts/source_balance_v2_pose_audit_failed_download/` and
+supports no model or quality conclusion. The repaired 30D is the next `Run all`
+step. It makes no YouTube request, verifies and reconstructs the archived 30B/
+30C 2-FPS contact-sheet tiles, and exports coarse MediaPipe visibility metrics,
+overlays, and explicitly non-training landmarks for the 18 windows in
+`ml/data/source_balance_v2/pose_audit_targets.csv`. This fallback cannot replace
+continuous 15-FPS extraction. Review its outputs before independent human
 motion/boundary approval; do not retrain or iteratively tune on the already-used
 internal test.
 
