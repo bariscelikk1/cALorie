@@ -22,6 +22,28 @@ See `EXPERIMENT_BACKBONE.md` for the fixed post-v5 implementation sequence,
 `ACCURACY_RECOVERY_PLAN.md` for the interpretation of the v5 external results,
 and `POST_V6C_ROADMAP.md` for the ordered plan after the G2 creator comparison.
 
+## Active source-balance intake
+
+The rejected Notebook 29G run showed that adding 52 windows from three draft
+clips did not fix source imbalance: end-to-end Macro F1 fell from 79.33% to
+78.23%, with large regressions for dumbbell row and sit-up. Frozen V6-C remains
+the reference.
+
+`data/source_balance_v2/` is now the active intake queue. It contains 12
+metadata-only candidates with three distinct creator/channel IDs per target
+class (`dumbbell_row`, `sit_up`, `lat_pulldown`, `pull_up`) and a fail-closed
+audit. Run:
+
+```bash
+python3 ml/scripts/audit_source_balance_v2.py
+```
+
+CPU Notebook `30a_colab_screen_source_balance_v2.ipynb` pins the intake and
+reserved inventories by commit and SHA-256, verifies YouTube video/channel
+identity, attempts 360p-only downloads, exports contact sheets and metadata,
+and excludes raw video. A successful screening is still not a label or
+training approval; independent motion/boundary review remains mandatory.
+
 ## Verified progress
 
 The landmark pipelines now produce six compatible archives: Workout/Fitness,

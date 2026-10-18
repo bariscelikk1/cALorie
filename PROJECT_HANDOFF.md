@@ -65,11 +65,22 @@ Reject the 29G checkpoint for promotion and retain frozen V6-C as the
 reference. The complete evidence is archived under
 `ml/artifacts/v6c_source_balance_draft_retrain/`.
 
-The next action is not a new architecture run. Obtain independent full-motion
-and boundary review for the quarantined clips, remove or relabel ambiguous
-segments, and expand creator-disjoint evidence for the weak/source-confounded
-classes before another controlled data retrain. Do not iteratively tune on the
-already-used internal test.
+The next action is not a new architecture run. Source-balance v2 is now the
+active intake: 12 metadata-verified candidates provide three distinct
+creator/channel IDs for each of `dumbbell_row`, `sit_up`, `lat_pulldown`, and
+`pull_up`. All remain `training_allowed=false`, with source/use and motion
+review still pending. Run CPU Notebook 30A to create contact-sheet evidence,
+then independently review motion, actor continuity, camera cuts, and exact
+boundaries before landmark extraction or retraining. Do not iteratively tune
+on the already-used internal test.
+
+The three v1 review clips received a Codex visual adjudication, explicitly not
+an independent human second review. Nick's 464.5–504.0 straight-leg sit-up
+interval is coherent but remains pending human approval. Rowan row 02 has
+several hard camera cuts and is rejected as one continuous interval. Rowan row
+03 should be split to 295.0–313.5 and 314.0–330.75 around the visible shot
+change. These decisions are recorded under `ml/data/source_balance_v2/`; every
+row remains quarantined and excluded from training.
 
 ## Historical experiment sequence
 

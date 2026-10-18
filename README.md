@@ -79,8 +79,12 @@ checkpoint must not be deployed or promoted.
 The verified report is archived under
 [`ml/artifacts/v6c_source_balance_draft_retrain/`](ml/artifacts/v6c_source_balance_draft_retrain/).
 The next work is independent motion/boundary review and broader creator data
-for the weak/source-confounded classes. Do not start another architecture
-experiment or tune against the already-used 1,971-window internal test.
+for the weak/source-confounded classes. Source-balance v2 now holds 12
+training-locked metadata candidates: three distinct creator/channel IDs for
+each of `dumbbell_row`, `sit_up`, `lat_pulldown`, and `pull_up`. CPU Notebook
+30A produces screening contact sheets without exporting raw video. Do not
+start another architecture experiment or tune against the already-used
+1,971-window internal test.
 
 ## Evaluation rules
 
