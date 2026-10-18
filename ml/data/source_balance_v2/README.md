@@ -85,3 +85,11 @@ between side and tight upper-body views inside the demonstration.
 advanced from 30B. All 18 windows remain draft, independently unreviewed, and
 training-disabled. The next step is a 15-FPS pose coverage audit, not training.
 
+The first Notebook 30D run could not download any of the seven YouTube sources
+because Colab received the same bot-confirmation response for every video. Its
+unchanged failure report is archived under
+`ml/artifacts/source_balance_v2_pose_audit_failed_download/`; it contains no
+pose evidence and changes no review decision. The repaired 30D path runs a
+coarse 2-FPS pose-visibility audit directly on the checksum-verified 30B/30C
+contact-sheet frames already stored in the repository, without YouTube access.
+
