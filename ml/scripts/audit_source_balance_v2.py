@@ -15,6 +15,8 @@ SUPPLEMENTAL = V2 / "supplemental_candidates.csv"
 ADJUDICATION = V2 / "adjudication/second_pass_codex_review.csv"
 SCREENING = V2 / "screening_review.csv"
 DENSE_TARGETS = V2 / "dense_review_targets.csv"
+DENSE_VISUAL_REVIEW = V2 / "dense_visual_review.csv"
+REPLACEMENT_SCREENING = V2 / "replacement_screening_review.csv"
 RESERVED = (
     ROOT / "ml/data/source_balance_v1/candidates.csv",
     ROOT / "ml/data/youtube_creator_benchmark_v1/candidates.csv",
@@ -216,10 +218,95 @@ def audit_screening() -> None:
     )
 
 
+def audit_dense_and_replacements() -> None:
+    targets = read_rows(DENSE_TARGETS)
+    target_by_id = {row["review_id"]: row for row in targets}
+    dense = read_rows(DENSE_VISUAL_REVIEW)
+    require_unique([row["review_id"] for row in dense], "dense visual review ID")
+    assert set(target_by_id) == {row["review_id"] for row in dense}, (
+        "Dense visual reviews must cover the target manifest exactly"
+    )
+    dense_decisions = {
+        "advance_pose_audit",
+        "hold_noncanonical_variant",
+        "reject_noncanonical_variant",
+        "reject_target_mismatch",
+        "unavailable_retry_required",
+    }
+    advanced_intervals = 0
+    for row in dense:
+        review_id = row["review_id"]
+        target = target_by_id[review_id]
+        assert row["video_id"] == target["video_id"], review_id
+        assert row["target_class"] == target["target_class"], review_id
+        assert row["review_decision"] in dense_decisions, review_id
+        assert row["independent_human_review_complete"].casefold() == "false", review_id
+        assert row["training_allowed"].casefold() == "false", review_id
+        intervals = parse_intervals(row["proposed_intervals_s"])
+        if row["review_decision"] == "advance_pose_audit":
+            assert intervals, f"Advanced dense review has no intervals: {review_id}"
+            advanced_intervals += len(intervals)
+        else:
+            assert not intervals, f"Non-advanced dense review has intervals: {review_id}"
+        prior_end = float(target["start_s"])
+        for start, end in intervals:
+            assert float(target["start_s"]) <= start < end <= float(target["end_s"]), (
+                review_id,
+                start,
+                end,
+            )
+            assert start >= prior_end, f"Overlapping dense intervals: {review_id}"
+            prior_end = end
+
+    supplemental = read_rows(SUPPLEMENTAL)
+    supplemental_by_id = {row["video_id"]: row for row in supplemental}
+    replacements = read_rows(REPLACEMENT_SCREENING)
+    require_unique([row["video_id"] for row in replacements], "replacement review video ID")
+    assert set(supplemental_by_id) == {row["video_id"] for row in replacements}, (
+        "Replacement reviews must cover the supplemental manifest exactly"
+    )
+    replacement_decisions = {
+        "advance_dense_review",
+        "hold_pose_framing",
+        "reject_target_mismatch",
+    }
+    advanced_replacements = 0
+    for row in replacements:
+        video_id = row["video_id"]
+        source = supplemental_by_id[video_id]
+        assert row["creator"] == source["creator"], video_id
+        assert row["target_class"] == source["target_class"], video_id
+        assert row["screening_decision"] in replacement_decisions, video_id
+        assert row["independent_human_review_complete"].casefold() == "false", video_id
+        assert row["training_allowed"].casefold() == "false", video_id
+        intervals = parse_intervals(row["candidate_intervals_s"])
+        if row["screening_decision"] == "advance_dense_review":
+            assert intervals, f"Advanced replacement has no locator: {video_id}"
+            advanced_replacements += 1
+        else:
+            assert not intervals, f"Held/rejected replacement has a locator: {video_id}"
+        prior_end = 0.0
+        for start, end in intervals:
+            assert 0 <= start < end <= float(source["duration_s"]) + 1.0, (
+                video_id,
+                start,
+                end,
+            )
+            assert start >= prior_end, f"Overlapping replacement intervals: {video_id}"
+            prior_end = end
+
+    print(
+        f"30B review audit passed: {len(dense)} dense regions with "
+        f"{advanced_intervals} proposed pose intervals; {advanced_replacements}/"
+        f"{len(replacements)} replacements advanced; training disabled."
+    )
+
+
 def main() -> None:
     audit_candidates()
     audit_adjudication()
     audit_screening()
+    audit_dense_and_replacements()
 
 
 if __name__ == "__main__":

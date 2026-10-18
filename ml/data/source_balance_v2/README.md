@@ -51,3 +51,20 @@ only one advanced sit-up person and no advanced lat-pulldown person. Notebook
 30B creates the next visual evidence package. Every row remains
 `training_allowed=false`.
 
+## 30B result and next evidence gate
+
+Notebook 30B returned 2-FPS evidence for 16 of 17 dense regions and screening
+evidence for all five replacement sources. The unchanged archive is stored in
+`ml/artifacts/source_balance_v2_dense_and_replacements/`. Max Euceda's dense
+pass was the only unavailable item (format/HTTP 403); it remains a retry, not a
+silently accepted interval.
+
+`dense_visual_review.csv` records the Codex dense motion screen. It advances
+canonical row, sit-up, and dynamic pull-up intervals to pose audit while
+excluding rests, instruction, chin-ups, isometric holds, kickbacks, and
+noncanonical row variants. `replacement_screening_review.csv` advances Alex
+Crockford for sit-up and Nona Bayat plus SilverSneakers for lat-pulldown dense
+review. Tone and Tighten is rejected for target mismatch; Joanna Soh is held
+for pose framing. These are not independent human decisions and do not unlock
+training.
+
