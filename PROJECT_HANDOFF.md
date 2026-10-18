@@ -104,6 +104,15 @@ independently unreviewed and training-disabled. This fallback cannot replace
 continuous 15-FPS source extraction. Do not retrain or iteratively tune on the
 already-used internal test.
 
+CPU Notebook 30E is ready as the source-controlled continuation. It contains
+no YouTube acquisition path. The user must place the seven original source
+files in `MyDrive/cALorie_source_balance_v2/videos/` or select them in Colab;
+each filename must contain its pinned video ID. The notebook records SHA-256,
+duration, FPS, and dimensions, then extracts continuous 15-FPS pose for the 18
+windows without exporting raw video. Its machine output deliberately leaves
+source identity unattested and all landmarks training-disabled pending
+independent source and motion/boundary review.
+
 The three v1 review clips received a Codex visual adjudication, explicitly not
 an independent human second review. Nick's 464.5–504.0 straight-leg sit-up
 interval is coherent but remains pending human approval. Rowan row 02 has

@@ -93,6 +93,11 @@ with visibility cautions. The unchanged result and Codex triage are archived,
 but these landmarks are not training data and do not replace source-backed
 continuous 15-FPS extraction or independent review. Do not start another
 architecture experiment or tune against the already-used 1,971-window test.
+CPU Notebook 30E is the next controlled step. It makes no YouTube request and
+accepts only user-controlled video files from Google Drive or direct Colab
+upload whose filenames contain the seven pinned source IDs. It records source
+hashes and duration checks, extracts continuous 15-FPS pose for the same 18
+windows, exports no raw video, and keeps every output training-disabled.
 
 ## Evaluation rules
 

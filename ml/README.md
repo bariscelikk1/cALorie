@@ -60,6 +60,14 @@ enabled. The unchanged result is under `artifacts/source_balance_v2_pose_audit/`
 This screen cannot replace continuous 15-FPS extraction. Independent motion/
 boundary and source/use review remain mandatory.
 
+CPU Notebook `30e_colab_source_balance_v2_continuous_pose_from_upload.ipynb`
+implements that next gate without a YouTube downloader. It mounts the user's
+Drive folder `MyDrive/cALorie_source_balance_v2/videos/` and falls back to a
+manual Colab upload widget. Filenames must contain the seven pinned video IDs.
+The notebook hashes and probes the source files, extracts continuous 15-FPS
+pose for the same 18 windows, and exports no raw video. Source identity remains
+unattested and training remains disabled until independent review.
+
 ## Verified progress
 
 The landmark pipelines now produce six compatible archives: Workout/Fitness,

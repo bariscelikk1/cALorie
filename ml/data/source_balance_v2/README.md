@@ -103,3 +103,11 @@ approval and every row remains excluded from training. The next gate is
 independent motion/boundary review plus source-backed continuous 15-FPS
 extraction; the coarse 2-FPS landmarks must never enter training.
 
+Notebook 30E (`30e_colab_source_balance_v2_continuous_pose_from_upload.ipynb`)
+is the YouTube-free continuation. It accepts only user-controlled source files
+from Drive or direct upload, matches them by the seven pinned video IDs, records
+their hashes and media properties, and extracts continuous 15-FPS pose for the
+18 retained windows. It exports no raw video. A successful run still requires
+independent source-identity, motion, and boundary review before any training
+authorization.
+
