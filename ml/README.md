@@ -50,14 +50,15 @@ archives and Codex decision tables are preserved under
 canonical row, sit-up, and dynamic pull-up windows now advance to pose audit;
 the new lat-pulldown candidates failed full-body pose/framing requirements.
 
-CPU Notebook `30d_colab_source_balance_v2_pose_audit.ipynb` is the next
-evidence step. Its first run was blocked by YouTube bot checks and the unchanged
-zero-pose report is archived. The repaired notebook makes no YouTube request;
-it reconstructs the checksum-verified 30B/30C 2-FPS contact-sheet tiles and
-exports coarse MediaPipe visibility metrics, overlays, and explicitly non-
-training landmarks for the 18 windows. This screen cannot replace continuous
-15-FPS extraction. Independent motion/boundary and source/use review remain
-mandatory.
+CPU Notebook `30d_colab_source_balance_v2_pose_audit.ipynb` is complete. Its
+first run was blocked by YouTube bot checks and the unchanged zero-pose report
+is archived. The repaired run made no YouTube request, verified the archived
+30B/30C inputs, and produced coarse 2-FPS pose for all 18 windows. All 117
+output hashes pass. Codex overlay triage marks seven windows strong and eleven
+usable with visibility cautions; none is independently reviewed or training-
+enabled. The unchanged result is under `artifacts/source_balance_v2_pose_audit/`.
+This screen cannot replace continuous 15-FPS extraction. Independent motion/
+boundary and source/use review remain mandatory.
 
 ## Verified progress
 

@@ -83,9 +83,7 @@ between side and tight upper-body views inside the demonstration.
 
 `pose_audit_targets.csv` combines those three new passages with the 15 intervals
 advanced from 30B. All 18 windows remain draft, independently unreviewed, and
-training-disabled. The next step is the repaired coarse 2-FPS archived-frame
-pose-visibility audit described below, not training; continuous 15-FPS source
-extraction remains a later requirement for any window that survives screening.
+training-disabled.
 
 The first Notebook 30D run could not download any of the seven YouTube sources
 because Colab received the same bot-confirmation response for every video. Its
@@ -94,4 +92,14 @@ unchanged failure report is archived under
 pose evidence and changes no review decision. The repaired 30D path runs a
 coarse 2-FPS pose-visibility audit directly on the checksum-verified 30B/30C
 contact-sheet frames already stored in the repository, without YouTube access.
+
+The repaired run is complete and archived unchanged under
+`ml/artifacts/source_balance_v2_pose_audit/`. All 18 windows are pose-ready and
+all 117 internal output hashes pass. `pose_visual_triage.csv` combines the
+metrics with representative overlay inspection: seven windows have strong
+coarse coverage and eleven are usable with cautions for side-view overlap,
+close framing, or intermittent pose misses. No row is an independent human
+approval and every row remains excluded from training. The next gate is
+independent motion/boundary review plus source-backed continuous 15-FPS
+extraction; the coarse 2-FPS landmarks must never enter training.
 

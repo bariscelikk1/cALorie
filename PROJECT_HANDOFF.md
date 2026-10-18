@@ -93,14 +93,16 @@ is archived under `ml/artifacts/source_balance_v2_replacement_dense_review/`.
 The first CPU Notebook 30D run was blocked by YouTube bot checks for all seven
 sources and produced zero pose-ready windows. Its unchanged failure report is
 archived under `ml/artifacts/source_balance_v2_pose_audit_failed_download/` and
-supports no model or quality conclusion. The repaired 30D is the next `Run all`
-step. It makes no YouTube request, verifies and reconstructs the archived 30B/
-30C 2-FPS contact-sheet tiles, and exports coarse MediaPipe visibility metrics,
-overlays, and explicitly non-training landmarks for the 18 windows in
-`ml/data/source_balance_v2/pose_audit_targets.csv`. This fallback cannot replace
-continuous 15-FPS extraction. Review its outputs before independent human
-motion/boundary approval; do not retrain or iteratively tune on the already-used
-internal test.
+supports no model or quality conclusion. The repaired 30D completed with zero
+YouTube requests. It verified 280 archived 30B files and 82 archived 30C files,
+then produced coarse 2-FPS pose for all 18 windows. ZIP integrity and all 117
+output hashes pass; the unchanged result is archived under
+`ml/artifacts/source_balance_v2_pose_audit/`. Codex overlay triage records seven
+strong windows and eleven usable-with-caution windows in
+`ml/data/source_balance_v2/pose_visual_triage.csv`. Every decision remains
+independently unreviewed and training-disabled. This fallback cannot replace
+continuous 15-FPS source extraction. Do not retrain or iteratively tune on the
+already-used internal test.
 
 The three v1 review clips received a Codex visual adjudication, explicitly not
 an independent human second review. Nick's 464.5–504.0 straight-leg sit-up

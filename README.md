@@ -86,12 +86,13 @@ review now queues 18 row/sit-up/pull-up windows for pose audit. Both new
 lat-pulldown replacements were rejected for full-body pose inconsistency, while
 Alex Crockford and two Max Euceda row passages advanced. The first CPU Notebook
 30D run was blocked by YouTube bot checks and produced zero pose-ready windows;
-its unchanged failure report is archived. The repaired 30D is the next `Run
-all` step: it makes no YouTube request and performs a coarse 2-FPS pose-
-visibility audit on the checksum-verified 30B/30C contact-sheet frames. Those
-landmarks are audit-only, not training data, and do not replace continuous
-15-FPS extraction. Do not start another architecture experiment or tune against
-the already-used 1,971-window internal test.
+its unchanged failure report is archived. The repaired 30D completed without a
+YouTube request: all 18 windows produced coarse 2-FPS pose and all 117 output
+hashes pass. Seven windows have strong coarse coverage and eleven remain usable
+with visibility cautions. The unchanged result and Codex triage are archived,
+but these landmarks are not training data and do not replace source-backed
+continuous 15-FPS extraction or independent review. Do not start another
+architecture experiment or tune against the already-used 1,971-window test.
 
 ## Evaluation rules
 

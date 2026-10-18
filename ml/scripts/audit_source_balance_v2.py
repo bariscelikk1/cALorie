@@ -19,6 +19,7 @@ DENSE_VISUAL_REVIEW = V2 / "dense_visual_review.csv"
 REPLACEMENT_SCREENING = V2 / "replacement_screening_review.csv"
 REPLACEMENT_DENSE_REVIEW = V2 / "replacement_dense_visual_review.csv"
 POSE_AUDIT_TARGETS = V2 / "pose_audit_targets.csv"
+POSE_VISUAL_TRIAGE = V2 / "pose_visual_triage.csv"
 RESERVED = (
     ROOT / "ml/data/source_balance_v1/candidates.csv",
     ROOT / "ml/data/youtube_creator_benchmark_v1/candidates.csv",
@@ -381,12 +382,45 @@ def audit_replacement_dense_and_pose_queue() -> None:
     )
 
 
+def audit_pose_visual_triage() -> None:
+    targets = read_rows(POSE_AUDIT_TARGETS)
+    target_by_id = {row["window_id"]: row for row in targets}
+    triage = read_rows(POSE_VISUAL_TRIAGE)
+    require_unique([row["window_id"] for row in triage], "pose triage window ID")
+    assert set(target_by_id) == {row["window_id"] for row in triage}, (
+        "Pose triage must cover the 30D target queue exactly"
+    )
+    allowed_tiers = {"strong", "usable_with_caution"}
+    for row in triage:
+        window_id = row["window_id"]
+        target = target_by_id[window_id]
+        assert row["video_id"] == target["video_id"], window_id
+        assert row["target_class"] == target["target_class"], window_id
+        assert row["coarse_pose_tier"] in allowed_tiers, window_id
+        assert row["decision"] == "retain_for_independent_review_and_source_acquisition"
+        assert 0 <= float(row["detection_rate"]) <= 1, window_id
+        assert 0 <= float(row["visible_joint_rate_33"]) <= 1, window_id
+        assert 0 <= float(row["full_body_frame_rate"]) <= 1, window_id
+        assert row["reviewer"] == "codex_visual_screening", window_id
+        assert row["independent_human_review_complete"].casefold() == "false", window_id
+        assert row["training_allowed"].casefold() == "false", window_id
+
+    tier_counts = Counter(row["coarse_pose_tier"] for row in triage)
+    assert tier_counts == {"strong": 7, "usable_with_caution": 11}, tier_counts
+    print(
+        "30D triage audit passed: 18/18 coarse-pose windows retained; "
+        "strong=7, usable_with_caution=11; independent review incomplete "
+        "and training disabled."
+    )
+
+
 def main() -> None:
     audit_candidates()
     audit_adjudication()
     audit_screening()
     audit_dense_and_replacements()
     audit_replacement_dense_and_pose_queue()
+    audit_pose_visual_triage()
 
 
 if __name__ == "__main__":
