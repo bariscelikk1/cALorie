@@ -1,5 +1,9 @@
 review_id,video_id,target_class,start_s,end_s,target_hypothesis,priority,locator_reason,training_allowed
-midas_row_full_pass,Sa0sBKUiOvU,dumbbell_row,10,625,dumbbell_row_or_adjacent_back_variant,medium,"Stable source but many 30 s exercise blocks; dense review must distinguish row motion from reverse fly and other back movements.",false
+midas_twisting_side_row,Sa0sBKUiOvU,dumbbell_row,85,155,twisting_side_row_variant,medium,"Official chapter is 90-150 s; margin includes transitions and dense review must decide whether the variant matches the canonical row class.",false
+midas_paddle_row,Sa0sBKUiOvU,dumbbell_row,205,275,paddle_row_variant,medium,"Official chapter is 210-270 s; margin includes transitions and dense review must inspect elbow path and alternating motion.",false
+midas_low_close_row,Sa0sBKUiOvU,dumbbell_row,325,395,low_close_dumbbell_row,high,"Official chapter is 330-390 s and contact sheets show a stable bent-over row stance.",false
+midas_in_out_row,Sa0sBKUiOvU,dumbbell_row,445,515,in_out_dumbbell_row_variant,medium,"Official chapter is 450-510 s; dense review must separate canonical pulls from the in/out variation.",false
+midas_alt_side_row_hold,Sa0sBKUiOvU,dumbbell_row,565,645,alternating_side_row_with_hold,low,"Official chapter is 570-648 s; review must decide whether the sustained hold and side path remain canonical.",false
 oliver_row_block_01,nixaLRF0Jd8,dumbbell_row,230,290,dumbbell_row,medium,"Bent-over dumbbell block visible around 04:00 in the 10 s sheet.",false
 oliver_row_block_02,nixaLRF0Jd8,dumbbell_row,350,410,dumbbell_row,medium,"Second bent-over dumbbell block visible around 06:00 in the 10 s sheet.",false
 oliver_row_block_03,nixaLRF0Jd8,dumbbell_row,890,960,dumbbell_row_or_kickback,low,"Broad locator around the 15-minute bent-over block; dense motion review must reject triceps kickbacks.",false
