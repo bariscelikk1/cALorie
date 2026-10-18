@@ -1,0 +1,15 @@
+review_id,video_id,target_class,start_s,end_s,target_hypothesis,priority,locator_reason,training_allowed
+midas_row_full_pass,Sa0sBKUiOvU,dumbbell_row,10,625,dumbbell_row_or_adjacent_back_variant,medium,"Stable source but many 30 s exercise blocks; dense review must distinguish row motion from reverse fly and other back movements.",false
+oliver_row_block_01,nixaLRF0Jd8,dumbbell_row,230,290,dumbbell_row,medium,"Bent-over dumbbell block visible around 04:00 in the 10 s sheet.",false
+oliver_row_block_02,nixaLRF0Jd8,dumbbell_row,350,410,dumbbell_row,medium,"Second bent-over dumbbell block visible around 06:00 in the 10 s sheet.",false
+oliver_row_block_03,nixaLRF0Jd8,dumbbell_row,890,960,dumbbell_row_or_kickback,low,"Broad locator around the 15-minute bent-over block; dense motion review must reject triceps kickbacks.",false
+oliver_row_block_04,nixaLRF0Jd8,dumbbell_row,1010,1080,dumbbell_row_or_kickback,low,"Broad locator around the 17-minute bent-over block; dense motion review must verify elbow path and load direction.",false
+max_row_full_pass,dFzUjzfih7k,dumbbell_row,5,110,single_arm_dumbbell_row,high,"Exercise-specific tutorial with repeated demonstrations and intervening instruction/setup.",false
+ashton_sit_set_01,-HusJ8P4k-4,sit_up,55,95,bent_knee_sit_up,high,"First visible counted sit-up set plus conservative transition margin.",false
+ashton_sit_set_02,-HusJ8P4k-4,sit_up,115,145,bent_knee_sit_up,high,"Second counted sit-up set plus conservative transition margin.",false
+ashton_sit_set_03,-HusJ8P4k-4,sit_up,175,205,bent_knee_sit_up,high,"Third counted sit-up set plus conservative transition margin.",false
+ashton_sit_set_04,-HusJ8P4k-4,sit_up,235,265,bent_knee_sit_up,high,"Fourth counted sit-up set plus conservative transition margin.",false
+ashton_sit_set_05,-HusJ8P4k-4,sit_up,295,325,bent_knee_sit_up,high,"Fifth counted sit-up set plus conservative transition margin.",false
+anabolic_pull_full_pass,2W9voBSJzP8,pull_up,55,285,pull_up_and_grip_variants,high,"Repeated timed pull-up blocks in a stable gym; dense review must separate work rest and grip variants.",false
+jeff_pull_full_pass,-iEDHNFNh7Q,pull_up,15,305,pull_up_and_grip_variants,high,"Repeated home pull-up blocks; dense review must separate work/rest and assess range of motion.",false
+
