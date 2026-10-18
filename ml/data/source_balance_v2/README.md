@@ -68,3 +68,7 @@ review. Tone and Tighten is rejected for target mismatch; Joanna Soh is held
 for pose framing. These are not independent human decisions and do not unlock
 training.
 
+Notebook 30C is the next evidence-only step. It produces 2-FPS sheets for the
+three advanced replacement locators and retries the unavailable Max Euceda
+dense pass. It still does not export landmarks or authorize training.
+

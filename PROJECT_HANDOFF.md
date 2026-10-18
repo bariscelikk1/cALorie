@@ -74,12 +74,20 @@ feature the same athlete and are one identity group despite distinct channels.
 The original lat-pulldown candidates are rejected or held for pose cropping,
 camera cuts, and actor complexity.
 
-CPU Notebook 30B is the next `Run all` step. It creates 2-FPS sheets for 17
-retained row/sit-up/pull-up regions and 5-second full-timeline sheets for five
-new replacement sources: two sit-up and three lat-pulldown candidates. It does
-not export raw video or landmarks. Independently review motion, actor
-continuity, camera cuts, canonical mapping, and exact boundaries after the ZIP
-returns. Do not retrain or iteratively tune on the already-used internal test.
+CPU Notebook 30B is complete. Its unchanged archive and hashes are under
+`ml/artifacts/source_balance_v2_dense_and_replacements/`. Codex dense review
+advances 15 canonical row/sit-up/dynamic-pull-up intervals to pose audit and
+rejects or holds noncanonical row variants, kickbacks, chin-ups, static holds,
+and rest/instruction frames. Of five replacement sources, Alex Crockford, Nona
+Bayat, and SilverSneakers advance to dense review; Tone and Tighten is rejected
+for target mismatch and Joanna Soh is held for framing. Max Euceda was the only
+30B download failure and remains unresolved.
+
+CPU Notebook 30C is the next `Run all` step. It creates 2-FPS evidence for the
+three advanced replacement locators and retries Max Euceda with bounded format
+and player-client fallbacks. It exports no raw video, landmarks, labels, or
+training data. Review its returned boundaries before any pose extraction; do
+not retrain or iteratively tune on the already-used internal test.
 
 The three v1 review clips received a Codex visual adjudication, explicitly not
 an independent human second review. Nick's 464.5–504.0 straight-leg sit-up
