@@ -83,11 +83,19 @@ Bayat, and SilverSneakers advance to dense review; Tone and Tighten is rejected
 for target mismatch and Joanna Soh is held for framing. Max Euceda was the only
 30B download failure and remains unresolved.
 
-CPU Notebook 30C is the next `Run all` step. It creates 2-FPS evidence for the
-three advanced replacement locators and retries Max Euceda with bounded format
-and player-client fallbacks. It exports no raw video, landmarks, labels, or
-training data. Review its returned boundaries before any pose extraction; do
-not retrain or iteratively tune on the already-used internal test.
+CPU Notebook 30C is complete. All four targets produced 2-FPS evidence and the
+Max Euceda retry succeeded. Alex Crockford's stable 529–676 s sit-up block and
+two conservative Max row passages advance. Nona Bayat and SilverSneakers are
+rejected for the current pose pipeline because of lower-body cropping,
+close-ups, and camera changes inside the demonstrations. The unchanged 30C ZIP
+is archived under `ml/artifacts/source_balance_v2_replacement_dense_review/`.
+
+CPU Notebook 30D is the next `Run all` step. It extracts continuous 15-FPS
+MediaPipe pose and overlay sheets for the 18 windows in
+`ml/data/source_balance_v2/pose_audit_targets.csv`. It exports no raw video and
+does not train. Review the returned pose coverage before independent human
+motion/boundary approval; do not retrain or iteratively tune on the already-used
+internal test.
 
 The three v1 review clips received a Codex visual adjudication, explicitly not
 an independent human second review. Nick's 464.5–504.0 straight-leg sit-up

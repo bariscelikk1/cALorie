@@ -80,14 +80,14 @@ The verified report is archived under
 [`ml/artifacts/v6c_source_balance_draft_retrain/`](ml/artifacts/v6c_source_balance_draft_retrain/).
 The next work is independent motion/boundary review and broader creator data
 for the weak/source-confounded classes. Notebook 30A screened all 12 initial
-source-balance-v2 candidates, and Notebook 30B completed the dense motion and
-replacement screen. The review advances 15 row/sit-up/pull-up intervals to pose
-audit and three replacement sources to dense review; CHRIS HERIA and THENX are
-one athlete identity, not independent creators. CPU Notebook 30C is the next
-`Run all` step: it densely screens Alex Crockford, Nona Bayat, and
-SilverSneakers and retries the unavailable Max Euceda row source. Do not start
-another architecture experiment or tune against the already-used 1,971-window
-internal test.
+source-balance-v2 candidates, Notebook 30B completed the first dense motion and
+replacement screen, and Notebook 30C completed all four follow-up targets. The
+review now queues 18 row/sit-up/pull-up windows for pose audit. Both new
+lat-pulldown replacements were rejected for full-body pose inconsistency, while
+Alex Crockford and two Max Euceda row passages advanced. CPU Notebook 30D is
+the next `Run all` step and measures 15-FPS pose coverage without training. Do
+not start another architecture experiment or tune against the already-used
+1,971-window internal test.
 
 ## Evaluation rules
 

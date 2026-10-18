@@ -44,12 +44,16 @@ sources. Its unchanged output and checksum are archived under
 dumbbell-row people, two pull-up people, one sit-up person, and no lat-pulldown
 person. CHRIS HERIA and THENX show the same athlete and are grouped together.
 
-CPU Notebook `30b_colab_source_balance_v2_dense_and_replacement_screen.ipynb`
-is the next evidence step. It pins 17 dense-review regions plus five replacement
-sources, downloads only temporary 360p video, exports 2-FPS region sheets and
-5-second replacement timelines, and excludes raw video and landmarks. A
-successful run is still not a label or training approval; independent
-motion/boundary and source/use review remain mandatory.
+Notebooks 30B and 30C completed the dense visual review. The unchanged evidence
+archives and Codex decision tables are preserved under
+`artifacts/source_balance_v2_*` and `data/source_balance_v2/`. Eighteen
+canonical row, sit-up, and dynamic pull-up windows now advance to pose audit;
+the new lat-pulldown candidates failed full-body pose/framing requirements.
+
+CPU Notebook `30d_colab_source_balance_v2_pose_audit.ipynb` is the next
+evidence step. It extracts continuous 15-FPS MediaPipe pose, quality metrics,
+and overlay sheets for those 18 windows, while excluding raw video and all
+training. Independent motion/boundary and source/use review remain mandatory.
 
 ## Verified progress
 
