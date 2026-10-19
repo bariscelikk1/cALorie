@@ -102,7 +102,8 @@ remains disabled. Notebook 31 is now complete: the seeds are stable (81.64%
 mean end-to-end Macro F1, 0.23-point standard deviation), but the research gate
 fails because the held-out YouTube creator's present-class F1 remains 12.06
 points below V6-C. The next bounded model step is validation-only ensemble gate
-calibration; the reused internal test cannot select the threshold.
+calibration in T4 Notebook 32. Its threshold grid and unknown-recall floor are
+predeclared; the reused internal test cannot select the threshold.
 
 ## Evaluation rules
 

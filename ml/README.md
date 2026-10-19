@@ -69,7 +69,7 @@ pose for the same 18 windows, and exports no raw video. Source identity remains
 unattested and training remains disabled until independent review. This data
 path is currently paused.
 
-T4 Notebook `31_colab_v6f_seed_stability.ipynb` is the active model step. It
+T4 Notebook `31_colab_v6f_seed_stability.ipynb` was the active model step. It
 repeats Notebook 27's exact V6-F gate recipe with seeds 42, 137, and 2026 while
 freezing every input, split, augmentation and sampler recipe, classifier,
 fusion, and the `0.65` gate threshold. It reports mean, standard deviation, worst seed,
@@ -80,9 +80,11 @@ production model.
 Notebook 31 is complete and archived under `artifacts/v6f_seed_stability/`.
 The three seeds are stable, but the held-out YouTube creator gate fails and the
 ensemble rejects 220 supported windows as unknown. Notebook 32 is therefore
-the next bounded experiment: choose one ensemble threshold from validation
-only under a fixed unknown-recall floor, then evaluate that frozen choice once
-on the reused internal development test. Production promotion remains disabled.
+the active bounded experiment. `32_colab_v6f_validation_gate_calibration.ipynb`
+chooses one ensemble threshold from validation only under the fixed `0.85`
+unknown-recall floor, then evaluates that frozen choice once on the reused
+internal development test. It compares only the selected threshold and the
+`0.65` reference on test. Production promotion remains disabled.
 
 ## Verified progress
 

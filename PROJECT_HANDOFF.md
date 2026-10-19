@@ -133,6 +133,13 @@ validation only, retain an unknown-recall floor, and expose the reused internal
 test exactly once after the selection is frozen. It still cannot authorize
 production promotion.
 
+T4 Notebook 32 implements that protocol. It retrains the exact three-seed
+ensemble, sweeps thresholds `0.30` through `0.80` by `0.01` on validation only,
+requires validation unknown recall of at least `0.85`, and maximizes validation
+end-to-end Macro F1. Supported accuracy and then the higher threshold are
+deterministic tie-breakers. After freezing the selected threshold, the notebook
+reports test results only for that choice and the `0.65` reference.
+
 The three v1 review clips received a Codex visual adjudication, explicitly not
 an independent human second review. Nick's 464.5–504.0 straight-leg sit-up
 interval is coherent but remains pending human approval. Rowan row 02 has
