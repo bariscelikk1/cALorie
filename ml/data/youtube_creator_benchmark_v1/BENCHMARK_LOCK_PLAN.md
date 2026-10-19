@@ -30,9 +30,12 @@ extraction, training, model scoring, or label lock.
 
 ## Phase 2 — independent visible-motion review
 
-Review every queued region against the archived dense RGB or supplemental pose
-evidence. Do not use titles, chapters, transcripts, or model predictions to
-decide a label.
+Use `ml/notebooks/29d_colab_creator_benchmark_review.ipynb` to review every
+queued region against the archived dense RGB or supplemental pose evidence.
+Its `confirmation` mode preserves the existing first-pass work as Reviewer A
+evidence; it does not count as an independent blind review. A distinct reviewer
+must use `blind` mode for the independent pass. Do not use titles, chapters,
+transcripts, or model predictions to decide a label.
 
 For each row record:
 

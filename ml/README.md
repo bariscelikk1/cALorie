@@ -32,8 +32,9 @@ The active work is the six-creator external benchmark. Existing evidence has
 41 draft regions across six reserved creator videos and all 14 proposed
 classes, but zero accepted clips and zero locked labels. Follow
 `data/youtube_creator_benchmark_v1/BENCHMARK_LOCK_PLAN.md`. CPU Notebook 29C
-is the next mechanical step: it creates an independent-review queue without
-training, scoring, downloading video, or claiming that review occurred.
+created the review queue. Notebook 29D is the active review interface:
+`confirmation` preserves the existing Reviewer A work and `blind` is reserved
+for a distinct reviewer. Neither mode alone marks the benchmark ready.
 
 ## Active source-balance intake
 

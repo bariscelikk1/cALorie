@@ -24,9 +24,11 @@ are in `ml/data/youtube_creator_benchmark_v1/BENCHMARK_LOCK_PLAN.md`.
 
 Current lock status: six reserved creators and continuous pose evidence exist;
 41 regions cover 14 proposed classes, but every region remains draft, accepted
-clips are zero, and independent motion/boundary review is incomplete. The next
-mechanical step is CPU Notebook 29C, which only creates the review queue and
-does not score or lock anything.
+clips are zero, and independent motion/boundary review is incomplete. Notebook
+29C produced a valid 41-row queue with zero locator overlaps (archive SHA-256
+`3c395d3bf5b534464bb4be92e969a96d75bf1d502676e7a26658034d11b887a`). Notebook
+29D is now active: confirmation mode preserves Reviewer A work; a distinct
+reviewer must use blind mode before adjudication and lock.
 
 ## Latest completed work
 
