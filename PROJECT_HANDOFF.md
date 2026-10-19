@@ -144,10 +144,34 @@ Notebook 32 completed on 2026-10-19 and selected threshold `0.57`. It improved
 test end-to-end Macro F1 from 82.09% to 82.39%, but accuracy fell from 85.34%
 to 83.76%, unknown recall fell from 92.04% to 83.61%, and total errors rose from
 289 to 320. The held-out YouTube and MM-Fit w18 creator gates still failed, so
-`0.57` is rejected and `0.65` remains the reference. Notebook 33 must change
-only gate training: equal creator mass within each gate label and a fixed
-group-CVaR loss over the hardest 30% of creator groups, mixed 50/50 with mean
-cross-entropy. Run all three seeds; do not select a seed or threshold on test.
+`0.57` is rejected and `0.65` remains the reference.
+
+Notebook 33 completed on 2026-10-19. Its equal-creator sampler and 50% top-30%
+group-CVaR loss failed systematically: the ensemble reached 73.53%
+end-to-end Macro F1, 72.10% accuracy, 80.55% unknown recall, and 67.91%
+supported accuracy versus Notebook 31's 82.09%, 85.34%, 92.04%, and 82.02%.
+The three seeds were stable, so this was not an unlucky initialization.
+WorkoutFitness supplied 321 of 341 training groups, many with one to three
+windows, and received about 84% of total sampler mass. Bicep-curl F1 collapsed
+from 95.40% to 15.57%; MM-Fit w13 and w18 also regressed heavily. The returned
+archive SHA-256 is
+`1627f54698687be5624bc1a571b4a0ccf24b379c0014eb0968cf773b6bfff7ac`;
+all internal hashes pass, and extracted evidence is under
+`ml/artifacts/v6f_creator_robust_gate/`. Do not promote these checkpoints.
+
+T4 Notebook 34 is the active bounded correction. It keeps every Notebook 31
+control and threshold `0.65`, but fixes creator mass to `sqrt(window_count)`,
+caps per-window weights at four times the within-gate-label median, and mixes
+20% top-30% group-CVaR with 80% ordinary cross-entropy. The recipe is frozen
+across seeds 42, 137, and 2026. A local audit of the exact training rows shifts
+sampler mass from Notebook 33's roughly 84% WorkoutFitness concentration to
+36.5% YouTube, 36.3% MM-Fit, and 27.1% WorkoutFitness, with gate labels still
+50/50. Notebook 33's reused internal-test failure informed this correction,
+so Notebook 34 remains development evidence and cannot establish production
+generalization or authorize promotion. Return
+`calorie_v6f_soft_creator_balance_report.zip` unchanged.
+
+Colab: https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/34_colab_v6f_soft_creator_balance.ipynb
 
 The three v1 review clips received a Codex visual adjudication, explicitly not
 an independent human second review. Nick's 464.5–504.0 straight-leg sit-up

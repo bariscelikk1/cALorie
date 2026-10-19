@@ -90,11 +90,25 @@ Notebook 32 is complete and archived under
 `artifacts/v6f_validation_calibration/`. Its validation-selected threshold
 `0.57` raised test Macro F1 by only 0.30 points while reducing accuracy by 1.57
 points and unknown recall by 8.42 points. It is rejected; `0.65` remains the
-reference. Notebook 33 is the active bounded experiment. It keeps threshold
-`0.65`, gives each training creator equal mass within the supported/unknown
-gate labels, and mixes ordinary cross-entropy with a top-30% creator-group
-CVaR loss. The exact recipe runs over all three seeds without test-based model
-or seed selection.
+reference. Notebook 33 is complete and rejected. Equal creator mass plus a 50%
+top-30% creator-group CVaR mixture reduced ensemble end-to-end Macro F1 from
+82.09% to 73.53%, accuracy from 85.34% to 72.10%, unknown recall from 92.04%
+to 80.55%, and supported accuracy from 82.02% to 67.91%. Hundreds of tiny
+WorkoutFitness groups received about 84% of sampler mass; bicep-curl F1 fell
+from 95.40% to 15.57%. The verified report is archived under
+`artifacts/v6f_creator_robust_gate/`, and the checkpoint is not promoted.
+
+Notebook 34 is the active development-only experiment. It keeps the frozen
+data, split, classifier, architecture, augmentation, three seeds, fusion, and
+threshold `0.65`. Creator mass is proportional to the square root of its
+window count, each per-window sampler weight is capped at four times the
+within-label median, and group-CVaR contributes 20% instead of 50%. A local
+sampler dry run assigns about 36.5% mass to YouTube, 36.3% to MM-Fit, and
+27.1% to WorkoutFitness while retaining 50/50 supported/unknown mass. Because
+Notebook 33's reused internal-test diagnostic informed this recipe, Notebook
+34 cannot establish production generalization or authorize promotion.
+
+Colab: https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/34_colab_v6f_soft_creator_balance.ipynb
 
 ## Verified progress
 

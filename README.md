@@ -106,8 +106,15 @@ calibration in T4 Notebook 32. Its threshold grid and unknown-recall floor are
 predeclared; the reused internal test cannot select the threshold. Notebook 32
 selected `0.57`, but that threshold is rejected: accuracy fell 1.57 points,
 unknown recall fell 8.42 points, and creator-domain gates still failed. The
-`0.65` reference remains active. The next experiment changes gate training with
-equal creator mass and a group-robust objective instead of changing threshold.
+`0.65` reference remains active. Notebook 33's equal-creator/group-CVaR
+training is also rejected: end-to-end Macro F1 fell from 82.09% to 73.53%,
+accuracy from 85.34% to 72.10%, and unknown recall from 92.04% to 80.55%.
+Its sampler gave roughly 84% of total mass to hundreds of tiny WorkoutFitness
+groups. T4 Notebook 34 is the active development-only correction: square-root
+creator mass, a four-times-median per-window cap, 20% group-CVaR, the same
+three seeds, and fixed threshold `0.65`. Because the reused internal-test
+diagnostic motivated this recipe, Notebook 34 cannot establish production
+generalization or authorize promotion.
 
 ## Evaluation rules
 
