@@ -122,6 +122,17 @@ mean/std/worst-seed results, class and creator breakdowns, and the predeclared
 mean-of-seeds ensemble. Do not pick the best test seed or treat a stability pass
 as production promotion.
 
+Notebook 31 completed on 2026-10-19. End-to-end Macro F1 across seeds 42, 137,
+and 2026 was 81.72%, 81.88%, and 81.33% (mean 81.64%, population standard
+deviation 0.23 percentage points). The predeclared ensemble reached 82.09%,
+but the research gate failed: held-out YouTube present-class F1 averaged 12.06
+points below V6-C, and 220 supported test windows were rejected as unknown.
+The failure is gate calibration/domain generalization rather than seed
+instability. The next bounded step must select an ensemble threshold using
+validation only, retain an unknown-recall floor, and expose the reused internal
+test exactly once after the selection is frozen. It still cannot authorize
+production promotion.
+
 The three v1 review clips received a Codex visual adjudication, explicitly not
 an independent human second review. Nick's 464.5–504.0 straight-leg sit-up
 interval is coherent but remains pending human approval. Rowan row 02 has

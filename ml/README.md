@@ -77,6 +77,13 @@ per-class and per-creator metrics, plus a predeclared mean-of-seeds ensemble.
 The test cannot select a seed or threshold, and the notebook cannot promote a
 production model.
 
+Notebook 31 is complete and archived under `artifacts/v6f_seed_stability/`.
+The three seeds are stable, but the held-out YouTube creator gate fails and the
+ensemble rejects 220 supported windows as unknown. Notebook 32 is therefore
+the next bounded experiment: choose one ensemble threshold from validation
+only under a fixed unknown-recall floor, then evaluate that frozen choice once
+on the reused internal development test. Production promotion remains disabled.
+
 ## Verified progress
 
 The landmark pipelines now produce six compatible archives: Workout/Fitness,

@@ -98,7 +98,11 @@ path, but that data branch is paused. The active model step is T4 Notebook 31:
 an exact three-seed V6-F stability audit. It freezes the data, split, temporal
 classifier, mean-probability fusion, and threshold `0.65`; only gate seeds 42,
 137, and 2026 change. No best test seed is selected and production promotion
-remains disabled.
+remains disabled. Notebook 31 is now complete: the seeds are stable (81.64%
+mean end-to-end Macro F1, 0.23-point standard deviation), but the research gate
+fails because the held-out YouTube creator's present-class F1 remains 12.06
+points below V6-C. The next bounded model step is validation-only ensemble gate
+calibration; the reused internal test cannot select the threshold.
 
 ## Evaluation rules
 
