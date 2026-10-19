@@ -103,7 +103,11 @@ mean end-to-end Macro F1, 0.23-point standard deviation), but the research gate
 fails because the held-out YouTube creator's present-class F1 remains 12.06
 points below V6-C. The next bounded model step is validation-only ensemble gate
 calibration in T4 Notebook 32. Its threshold grid and unknown-recall floor are
-predeclared; the reused internal test cannot select the threshold.
+predeclared; the reused internal test cannot select the threshold. Notebook 32
+selected `0.57`, but that threshold is rejected: accuracy fell 1.57 points,
+unknown recall fell 8.42 points, and creator-domain gates still failed. The
+`0.65` reference remains active. The next experiment changes gate training with
+equal creator mass and a group-robust objective instead of changing threshold.
 
 ## Evaluation rules
 

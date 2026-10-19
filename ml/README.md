@@ -86,6 +86,16 @@ unknown-recall floor, then evaluates that frozen choice once on the reused
 internal development test. It compares only the selected threshold and the
 `0.65` reference on test. Production promotion remains disabled.
 
+Notebook 32 is complete and archived under
+`artifacts/v6f_validation_calibration/`. Its validation-selected threshold
+`0.57` raised test Macro F1 by only 0.30 points while reducing accuracy by 1.57
+points and unknown recall by 8.42 points. It is rejected; `0.65` remains the
+reference. Notebook 33 is the active bounded experiment. It keeps threshold
+`0.65`, gives each training creator equal mass within the supported/unknown
+gate labels, and mixes ordinary cross-entropy with a top-30% creator-group
+CVaR loss. The exact recipe runs over all three seeds without test-based model
+or seed selection.
+
 ## Verified progress
 
 The landmark pipelines now produce six compatible archives: Workout/Fitness,

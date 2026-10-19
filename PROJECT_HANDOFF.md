@@ -140,6 +140,15 @@ end-to-end Macro F1. Supported accuracy and then the higher threshold are
 deterministic tie-breakers. After freezing the selected threshold, the notebook
 reports test results only for that choice and the `0.65` reference.
 
+Notebook 32 completed on 2026-10-19 and selected threshold `0.57`. It improved
+test end-to-end Macro F1 from 82.09% to 82.39%, but accuracy fell from 85.34%
+to 83.76%, unknown recall fell from 92.04% to 83.61%, and total errors rose from
+289 to 320. The held-out YouTube and MM-Fit w18 creator gates still failed, so
+`0.57` is rejected and `0.65` remains the reference. Notebook 33 must change
+only gate training: equal creator mass within each gate label and a fixed
+group-CVaR loss over the hardest 30% of creator groups, mixed 50/50 with mean
+cross-entropy. Run all three seeds; do not select a seed or threshold on test.
+
 The three v1 review clips received a Codex visual adjudication, explicitly not
 an independent human second review. Nick's 464.5–504.0 straight-leg sit-up
 interval is coherent but remains pending human approval. Rowan row 02 has
