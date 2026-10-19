@@ -61,12 +61,21 @@ This screen cannot replace continuous 15-FPS extraction. Independent motion/
 boundary and source/use review remain mandatory.
 
 CPU Notebook `30e_colab_source_balance_v2_continuous_pose_from_upload.ipynb`
-implements that next gate without a YouTube downloader. It mounts the user's
+implements a source-controlled gate without a YouTube downloader. It mounts the user's
 Drive folder `MyDrive/cALorie_source_balance_v2/videos/` and falls back to a
 manual Colab upload widget. Filenames must contain the seven pinned video IDs.
 The notebook hashes and probes the source files, extracts continuous 15-FPS
 pose for the same 18 windows, and exports no raw video. Source identity remains
-unattested and training remains disabled until independent review.
+unattested and training remains disabled until independent review. This data
+path is currently paused.
+
+T4 Notebook `31_colab_v6f_seed_stability.ipynb` is the active model step. It
+repeats Notebook 27's exact V6-F gate recipe with seeds 42, 137, and 2026 while
+freezing every input, split, augmentation and sampler recipe, classifier,
+fusion, and the `0.65` gate threshold. It reports mean, standard deviation, worst seed,
+per-class and per-creator metrics, plus a predeclared mean-of-seeds ensemble.
+The test cannot select a seed or threshold, and the notebook cannot promote a
+production model.
 
 ## Verified progress
 

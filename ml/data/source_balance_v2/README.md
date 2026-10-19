@@ -111,3 +111,7 @@ their hashes and media properties, and extracts continuous 15-FPS pose for the
 independent source-identity, motion, and boundary review before any training
 authorization.
 
+This source-acquisition branch is paused while the project runs the bounded
+V6-F three-seed stability audit in Notebook 31. No source-balance-v2 row is
+promoted, and none of the coarse pose landmarks enters that model experiment.
+

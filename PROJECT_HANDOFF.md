@@ -113,6 +113,15 @@ windows without exporting raw video. Its machine output deliberately leaves
 source identity unattested and all landmarks training-disabled pending
 independent source and motion/boundary review.
 
+The user then explicitly reprioritized model work and paused the source-video
+branch. T4 Notebook 31 is the active next run. It repeats the exact V6-F
+multi-stream gate recipe across seeds 42, 137, and 2026. The 1,971-window test,
+frozen temporal classifier, data, split, sampler, augmentation, mean-probability
+fusion, and threshold `0.65` are unchanged. The report must retain every seed,
+mean/std/worst-seed results, class and creator breakdowns, and the predeclared
+mean-of-seeds ensemble. Do not pick the best test seed or treat a stability pass
+as production promotion.
+
 The three v1 review clips received a Codex visual adjudication, explicitly not
 an independent human second review. Nick's 464.5–504.0 straight-leg sit-up
 interval is coherent but remains pending human approval. Rowan row 02 has
