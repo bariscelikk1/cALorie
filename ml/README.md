@@ -22,6 +22,19 @@ See `EXPERIMENT_BACKBONE.md` for the fixed post-v5 implementation sequence,
 `ACCURACY_RECOVERY_PLAN.md` for the interpretation of the v5 external results,
 and `POST_V6C_ROADMAP.md` for the ordered plan after the G2 creator comparison.
 
+## Active arc — lock the external creator benchmark
+
+Recognition tuning on the reused 1,971-window internal test is frozen. V6-C
+and V6-F remain fixed candidates; Notebook 34 is at most a final development
+diagnostic and cannot start another sampler/threshold/loss loop.
+
+The active work is the six-creator external benchmark. Existing evidence has
+41 draft regions across six reserved creator videos and all 14 proposed
+classes, but zero accepted clips and zero locked labels. Follow
+`data/youtube_creator_benchmark_v1/BENCHMARK_LOCK_PLAN.md`. CPU Notebook 29C
+is the next mechanical step: it creates an independent-review queue without
+training, scoring, downloading video, or claiming that review occurred.
+
 ## Active source-balance intake
 
 The rejected Notebook 29G run showed that adding 52 windows from three draft

@@ -114,7 +114,11 @@ groups. T4 Notebook 34 is the active development-only correction: square-root
 creator mass, a four-times-median per-window cap, 20% group-CVaR, the same
 three seeds, and fixed threshold `0.65`. Because the reused internal-test
 diagnostic motivated this recipe, Notebook 34 cannot establish production
-generalization or authorize promotion.
+generalization or authorize promotion. The tuning loop is now frozen: its
+result may be archived, but it must not motivate another internal-test
+iteration. The active milestone is to lock the six-creator external benchmark
+under `ml/data/youtube_creator_benchmark_v1/BENCHMARK_LOCK_PLAN.md`, then score
+the fixed V6-C and V6-F candidates once.
 
 ## Evaluation rules
 

@@ -15,6 +15,19 @@ Read `ml/POST_V6C_ROADMAP.md` for the ordered post-G2 plan, hardware choices,
 promotion gates, and proposed Notebook 23-30 sequence.
 Do not use locked tests for tuning or promote unresolved draft labels.
 
+The recognition-tuning loop is now frozen. Notebook 34 may be completed and
+archived as a final development diagnostic, but its reused 1,971-window test
+must not trigger Notebook 35 or another threshold/sampler/loss iteration. The
+active milestone is to finish and lock the six-creator external benchmark,
+then score frozen V6-C and V6-F once. The current readiness audit and lock gates
+are in `ml/data/youtube_creator_benchmark_v1/BENCHMARK_LOCK_PLAN.md`.
+
+Current lock status: six reserved creators and continuous pose evidence exist;
+41 regions cover 14 proposed classes, but every region remains draft, accepted
+clips are zero, and independent motion/boundary review is incomplete. The next
+mechanical step is CPU Notebook 29C, which only creates the review queue and
+does not score or lock anything.
+
 ## Latest completed work
 
 - V6-C remains the baseline candidate; full G1 ST-GCN was rejected.
