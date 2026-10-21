@@ -53,6 +53,15 @@ and Macro-F1 improvements. The artifact is archived under
 `ml/artifacts/youtube_creator_benchmark_v1/provisional_diagnostic/`; no Colab
 rerun is required unless independent reproduction is desired.
 
+The user-returned Colab reproduction arrived on 2026-10-21 and is preserved
+unchanged as `calorie_provisional_creator_diagnostic_report_colab.zip`
+(SHA-256 `2d095fca179f210aa340423288df2152d08cafe7da96469882bb969d891fc696`).
+All 14 internal hashes pass. Metrics and all discrete predictions exactly match
+the local reference across 35 regions and 561 windows. The largest probability
+difference is `2.47e-06`, causing no threshold or label change. This confirms
+execution reproducibility but does not upgrade the provisional labels or lock
+the benchmark.
+
 The next annotation action is a bounded independent confirmation set rather
 than another 41-row widget pass: review every medium-confidence retained row,
 all four accepted-unknown compound rows, and a stratified sample of the
