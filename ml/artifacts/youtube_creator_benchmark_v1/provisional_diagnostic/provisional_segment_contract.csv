@@ -1,0 +1,36 @@
+interval_id,video_id,creator,label,start_s,end_s,first_pass_decision,boundary_clamped_to_locator,notes,label_status,benchmark_ready,eligible_for_training,eligible_for_calibration,eligible_for_promotion
+gains_situp_01,7-mVPCVJMtI,TRAIN WITH GAINSBYBRAINS,sit_up,985.0,1028.0,trim_candidate,False,Sit-ups at start; later movement changes to V-sit/leg-extension abdominal work.,provisional_first_pass_not_locked,False,False,False,False
+striq_pullup_01,Kw89u6WtPC8,STRIQfit,pull_up,1308.0,1325.0,trim_candidate,False,Pull-ups visible after next-move preview.,provisional_first_pass_not_locked,False,False,False,False
+striq_pullup_02,Kw89u6WtPC8,STRIQfit,pull_up,1418.0,1436.0,trim_candidate,False,Pull-ups visible; cooldown/transition follows.,provisional_first_pass_not_locked,False,False,False,False
+striq_pullup_03,Kw89u6WtPC8,STRIQfit,pull_up,1528.0,1547.0,trim_candidate,False,Pull-ups visible; cooldown/transition follows.,provisional_first_pass_not_locked,False,False,False,False
+tiff_press_01,fJQmoPKvjTg,TIFF x DAN,shoulder_press,31.0,68.0,trim_candidate,False,Dumbbell shoulder press; rest begins near 70 s.,provisional_first_pass_not_locked,False,False,False,False
+tiff_lateral_01,fJQmoPKvjTg,TIFF x DAN,unknown,91.0,130.0,relabel_unknown,False,"Visible compound upright row to 90-degree raise, not isolated lateral raise.",provisional_first_pass_not_locked,False,False,False,False
+tiff_press_02,fJQmoPKvjTg,TIFF x DAN,shoulder_press,211.0,248.0,trim_candidate,False,Repeated shoulder press; rest begins near 250 s.,provisional_first_pass_not_locked,False,False,False,False
+tiff_lateral_02,fJQmoPKvjTg,TIFF x DAN,unknown,271.0,310.0,relabel_unknown,False,Second compound upright row to 90-degree raise set.,provisional_first_pass_not_locked,False,False,False,False
+tiff_row_01,fJQmoPKvjTg,TIFF x DAN,dumbbell_row,391.0,428.0,trim_candidate,False,Bent-over dumbbell rows; rest follows.,provisional_first_pass_not_locked,False,False,False,False
+tiff_row_02,fJQmoPKvjTg,TIFF x DAN,dumbbell_row,571.0,608.0,trim_candidate,False,Bent-over dumbbell rows; rest follows.,provisional_first_pass_not_locked,False,False,False,False
+tiff_curl_01,fJQmoPKvjTg,TIFF x DAN,bicep_curl,751.0,788.0,trim_candidate,False,Alternating standing curls visible; rest follows.,provisional_first_pass_not_locked,False,False,False,False
+tiff_curl_02,fJQmoPKvjTg,TIFF x DAN,bicep_curl,931.0,968.0,trim_candidate,False,Alternating standing curls visible; rest follows.,provisional_first_pass_not_locked,False,False,False,False
+tiff_bench_01,fJQmoPKvjTg,TIFF x DAN,unknown,1111.0,1150.0,variant_review,False,Floor twist press: press component visible but rotational variant needs class-rule adjudication.,provisional_first_pass_not_locked,False,False,False,False
+tiff_bench_02,fJQmoPKvjTg,TIFF x DAN,unknown,1291.0,1330.0,variant_review,False,Second floor twist press set; bench-press mapping needs adjudication.,provisional_first_pass_not_locked,False,False,False,False
+tiff_tricep_01,fJQmoPKvjTg,TIFF x DAN,tricep_extension,1531.0,1568.0,trim_candidate,False,Kneeling overhead triceps extensions; rest follows.,provisional_first_pass_not_locked,False,False,False,False
+tiff_tricep_02,fJQmoPKvjTg,TIFF x DAN,tricep_extension,1711.0,1748.0,trim_candidate,False,Second kneeling overhead triceps-extension set.,provisional_first_pass_not_locked,False,False,False,False
+tiff_pushup_01,fJQmoPKvjTg,TIFF x DAN,push_up,1925.0,1948.0,trim_candidate,False,"Dumbbell-hand push-ups, with setup and rest on either side.",provisional_first_pass_not_locked,False,False,False,False
+tiff_pushup_02,fJQmoPKvjTg,TIFF x DAN,unknown,1981.0,2020.0,reject_candidate,False,Cool-down stretching; no push-ups.,provisional_first_pass_not_locked,False,False,False,False
+tiff_pushup_03,fJQmoPKvjTg,TIFF x DAN,unknown,2041.0,2080.0,reject_candidate,False,Cool-down stretching; no push-ups.,provisional_first_pass_not_locked,False,False,False,False
+tiff_pushup_04,fJQmoPKvjTg,TIFF x DAN,unknown,2101.0,2140.0,reject_candidate,False,Cool-down stretching; no push-ups.,provisional_first_pass_not_locked,False,False,False,False
+tiff_pushup_05,fJQmoPKvjTg,TIFF x DAN,unknown,2161.0,2200.0,reject_candidate,False,Cool-down arm movements; no push-ups.,provisional_first_pass_not_locked,False,False,False,False
+critical_deadlift_01,lKHGBuanBsY,Criticalbench,deadlift,624.0,645.0,trim_candidate,False,Most of 545-645 s is explanation; actual loaded deadlift visible only near end.,provisional_first_pass_not_locked,False,False,False,False
+critical_deadlift_02,lKHGBuanBsY,Criticalbench,unknown,685.0,700.0,reject_candidate,False,Standing and explanation with bar on floor; no complete loaded deadlift visible.,provisional_first_pass_not_locked,False,False,False,False
+ojs_jj_01,ojs-UW8ULhs,BullyJuice,jumping_jack,40.0,85.0,trim_candidate,False,Visible jumping jacks after get-ready transition.,provisional_first_pass_not_locked,False,False,False,False
+ojs_squat_01,ojs-UW8ULhs,BullyJuice,squat,99.0,123.0,trim_candidate,False,Jumping jacks precede air squats; toe-touch transition follows.,provisional_first_pass_not_locked,False,False,False,False
+ojs_lunge_01,ojs-UW8ULhs,BullyJuice,lunge,638.0,675.0,trim_candidate,False,"First part is standing-log warm-up, not lunge.",provisional_first_pass_not_locked,False,False,False,False
+ojs_lunge_02,ojs-UW8ULhs,BullyJuice,lunge,724.0,784.0,trim_candidate,False,Rest precedes lunges; upright plank follows.,provisional_first_pass_not_locked,False,False,False,False
+ojs_squat_02,ojs-UW8ULhs,BullyJuice,squat,820.0,865.0,trim_candidate,True,Sumo squats visible after prior floor movement.,provisional_first_pass_not_locked,False,False,False,False
+ojs_squat_03,ojs-UW8ULhs,BullyJuice,squat,998.0,1045.0,trim_candidate,False,Ankle taps precede sumo squats.,provisional_first_pass_not_locked,False,False,False,False
+ojs_pushup_01,ojs-UW8ULhs,BullyJuice,push_up,2263.0,2280.0,trim_candidate,False,Single-arm burpee before push-ups; flutters after.,provisional_first_pass_not_locked,False,False,False,False
+ojs_pushup_02,ojs-UW8ULhs,BullyJuice,push_up,2407.0,2425.0,trim_candidate,False,Single-arm burpee before push-ups.,provisional_first_pass_not_locked,False,False,False,False
+michelle_deadlift_02,phFvFuLUFEw,Michelle Briehler,deadlift,831.0,865.0,trim_candidate,False,RDL reps after setup; verify pauses and variant mapping.,provisional_first_pass_not_locked,False,False,False,False
+michelle_latpull_01,phFvFuLUFEw,Michelle Briehler,lat_pulldown,1127.0,1175.0,trim_candidate,False,Seated lat pulldowns after setup; first movement onset needs precise review.,provisional_first_pass_not_locked,False,False,False,False
+michelle_latpull_02,phFvFuLUFEw,Michelle Briehler,lat_pulldown,1243.0,1280.0,trim_candidate,False,Seated lat pulldowns after setup; talking/standing follows.,provisional_first_pass_not_locked,False,False,False,False
+michelle_latpull_03,phFvFuLUFEw,Michelle Briehler,lat_pulldown,1346.0,1397.0,trim_candidate,False,"Second camera angle of seated lat pulldowns, setup/talking on edges.",provisional_first_pass_not_locked,False,False,False,False

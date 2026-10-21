@@ -17,8 +17,15 @@ recognition-tuning loop was frozen on 2026-10-19.
 - Accepted clips: 0. Locked labels: 0. Model predictions inspected: no.
 
 Projected or provisional class coverage is not accepted benchmark coverage.
-No V6-C, V6-F, or Notebook 34 score may be produced until the lock gates below
-pass.
+No V6-C, V6-F, or Notebook 34 result may be called a final benchmark score
+until the lock gates below pass. Notebook 35 is an explicitly provisional,
+fail-closed diagnostic exception: it may compare frozen systems on conservative
+first-pass regions, but it cannot tune, select, promote, or relabel anything.
+
+Manual review is paused. The partial Reviewer A confirmation file is not a
+lock artifact: only 27 of 41 rows were touched, all confidence values remained
+the default `medium`, and three changed labels came from the old interface
+opening the wrong evidence page. Those three changes are discarded.
 
 ## Phase 1 — reproducible review queue
 
@@ -84,3 +91,21 @@ classifier metrics separately, then combined Macro F1, per-class recall,
 unknown precision/recall, per-creator results, and bootstrap confidence
 intervals over creators or videos—not overlapping windows. The benchmark may
 reject a candidate but must never tune one.
+
+## Provisional diagnostic while manual review is paused
+
+`ml/notebooks/35_colab_provisional_creator_diagnostic.ipynb` uses only the 26
+first-pass `trim_candidate` cores and nine explicit unknown/reject/variant
+regions. It excludes both `requires_split` rows and all four
+`supplemental_pose_candidate` rows. It reports both region-level and retained
+window-level predictions, but creator-bootstrap uncertainty is computed from
+region results with creators as sampling units. Every exported row remains
+`provisional_first_pass_not_locked`; training, calibration, threshold
+selection, and promotion flags stay false.
+
+The verified provisional run contains 561 windows aggregated to the 35 fixed
+regions. V6-C reaches 60.00% region accuracy, 46.36% present-label Macro F1,
+53.85% supported accuracy, and 77.78% unknown recall. V6-F reaches 68.57%,
+67.25%, 73.08%, and 55.56% respectively. This is evidence of V6-F's stronger
+supported-motion recognition and weaker unknown rejection, not a benchmark
+lock or promotion decision.

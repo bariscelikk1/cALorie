@@ -1,0 +1,3 @@
+system,accuracy,full_15_label_macro_f1,present_label_macro_f1,supported_accuracy,unknown_precision,unknown_recall,gate_balanced_accuracy,segments,present_labels
+v6c,0.6,0.40177777777777784,0.46358974358974364,0.5384615384615384,0.4375,0.7777777777777778,0.7158119658119658,35,"['bicep_curl', 'deadlift', 'dumbbell_row', 'jumping_jack', 'lat_pulldown', 'lunge', 'pull_up', 'push_up', 'shoulder_press', 'sit_up', 'squat', 'tricep_extension', 'unknown']"
+v6f,0.6857142857142857,0.5828571428571429,0.6725274725274725,0.7307692307692307,0.4166666666666667,0.5555555555555556,0.6431623931623931,35,"['bicep_curl', 'deadlift', 'dumbbell_row', 'jumping_jack', 'lat_pulldown', 'lunge', 'pull_up', 'push_up', 'shoulder_press', 'sit_up', 'squat', 'tricep_extension', 'unknown']"

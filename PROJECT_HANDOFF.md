@@ -17,18 +17,37 @@ Do not use locked tests for tuning or promote unresolved draft labels.
 
 The recognition-tuning loop is now frozen. Notebook 34 may be completed and
 archived as a final development diagnostic, but its reused 1,971-window test
-must not trigger Notebook 35 or another threshold/sampler/loss iteration. The
-active milestone is to finish and lock the six-creator external benchmark,
-then score frozen V6-C and V6-F once. The current readiness audit and lock gates
-are in `ml/data/youtube_creator_benchmark_v1/BENCHMARK_LOCK_PLAN.md`.
+must not trigger another threshold/sampler/loss iteration. Manual benchmark
+review is paused by user request. Notebook 35 is now the bounded continuation:
+it compares frozen V6-C and V6-F on conservative first-pass regions without
+training, calibration, threshold selection, relabeling, or promotion. The
+current readiness audit and lock gates remain in
+`ml/data/youtube_creator_benchmark_v1/BENCHMARK_LOCK_PLAN.md`.
 
 Current lock status: six reserved creators and continuous pose evidence exist;
 41 regions cover 14 proposed classes, but every region remains draft, accepted
 clips are zero, and independent motion/boundary review is incomplete. Notebook
 29C produced a valid 41-row queue with zero locator overlaps (archive SHA-256
-`3c395d3bf5b534464bb4be92e969a96d75bf1d502676e7a26658034d11b887a`). Notebook
-29D is now active: confirmation mode preserves Reviewer A work; a distinct
-reviewer must use blind mode before adjudication and lock.
+`3c395d3bf5b534464bb4be92e969a96d75bf1d502676e7a26658034d11b887a`). The
+partial 29D confirmation run touched 27 rows but did not lock any label; its
+three changed labels were caused by the old wrong-page UI context and are
+discarded.
+
+Notebook `ml/notebooks/35_colab_provisional_creator_diagnostic.ipynb` requires
+no upload. It downloads and verifies the archived pose evidence plus frozen
+V6-C/V6-F checkpoints, scores 35 regions (26 supported, nine unknown), excludes
+six unresolved regions, and exports a single diagnostic ZIP. Its metrics are
+not final benchmark accuracy and cannot be used to change labels or models.
+
+Notebook 35 was executed locally end to end on the exact pinned artifacts: all
+seven input hashes passed, 561 windows were aggregated into 35 regions, and the
+report ZIP passed integrity checks. V6-F exceeds V6-C on provisional region
+accuracy (68.57% vs 60.00%), present-label Macro F1 (67.25% vs 46.36%), and
+supported accuracy (73.08% vs 53.85%), but unknown recall drops to 55.56% from
+77.78%. Paired six-creator bootstrap intervals include zero for the accuracy
+and Macro-F1 improvements. The artifact is archived under
+`ml/artifacts/youtube_creator_benchmark_v1/provisional_diagnostic/`; no Colab
+rerun is required unless independent reproduction is desired.
 
 ## Latest completed work
 

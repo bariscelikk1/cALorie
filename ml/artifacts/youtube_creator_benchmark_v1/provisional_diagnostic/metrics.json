@@ -1,0 +1,84 @@
+{
+  "experiment": "provisional_six_creator_external_diagnostic",
+  "source_commit": "922758e20c19f1a0330e4c65b3ae20806f5c71ca",
+  "seed": 42,
+  "window_frames": 64,
+  "stride_frames": 32,
+  "target_fps": 15.0,
+  "systems": {
+    "v6c": {
+      "gate_threshold": 0.675,
+      "checkpoint_sha256": "ec3cf00dccb77ab52f04374b3f4d1b4c012d8894999bd453e1034a7a33ae95b2"
+    },
+    "v6f": {
+      "fusion": "mean_probability",
+      "gate_threshold": 0.65
+    }
+  },
+  "contract": {
+    "segments": 35,
+    "supported_segments": 26,
+    "unknown_segments": 9,
+    "creators": 6,
+    "label_status": "provisional_first_pass_not_locked",
+    "excluded_unresolved_regions": 6,
+    "benchmark_ready": false,
+    "eligible_for_training": false,
+    "eligible_for_calibration": false,
+    "eligible_for_threshold_selection": false,
+    "eligible_for_promotion": false
+  },
+  "primary_metrics": {
+    "v6c": {
+      "accuracy": 0.6,
+      "full_15_label_macro_f1": 0.40177777777777784,
+      "present_label_macro_f1": 0.46358974358974364,
+      "supported_accuracy": 0.5384615384615384,
+      "unknown_precision": 0.4375,
+      "unknown_recall": 0.7777777777777778,
+      "gate_balanced_accuracy": 0.7158119658119658,
+      "segments": 35,
+      "present_labels": [
+        "bicep_curl",
+        "deadlift",
+        "dumbbell_row",
+        "jumping_jack",
+        "lat_pulldown",
+        "lunge",
+        "pull_up",
+        "push_up",
+        "shoulder_press",
+        "sit_up",
+        "squat",
+        "tricep_extension",
+        "unknown"
+      ]
+    },
+    "v6f": {
+      "accuracy": 0.6857142857142857,
+      "full_15_label_macro_f1": 0.5828571428571429,
+      "present_label_macro_f1": 0.6725274725274725,
+      "supported_accuracy": 0.7307692307692307,
+      "unknown_precision": 0.4166666666666667,
+      "unknown_recall": 0.5555555555555556,
+      "gate_balanced_accuracy": 0.6431623931623931,
+      "segments": 35,
+      "present_labels": [
+        "bicep_curl",
+        "deadlift",
+        "dumbbell_row",
+        "jumping_jack",
+        "lat_pulldown",
+        "lunge",
+        "pull_up",
+        "push_up",
+        "shoulder_press",
+        "sit_up",
+        "squat",
+        "tricep_extension",
+        "unknown"
+      ]
+    }
+  },
+  "interpretation": "Directional frozen-model diagnostic only; not final benchmark accuracy."
+}

@@ -32,9 +32,26 @@ The active work is the six-creator external benchmark. Existing evidence has
 41 draft regions across six reserved creator videos and all 14 proposed
 classes, but zero accepted clips and zero locked labels. Follow
 `data/youtube_creator_benchmark_v1/BENCHMARK_LOCK_PLAN.md`. CPU Notebook 29C
-created the review queue. Notebook 29D is the active review interface:
-`confirmation` preserves the existing Reviewer A work and `blind` is reserved
-for a distinct reviewer. Neither mode alone marks the benchmark ready.
+created the review queue. Manual Notebook 29D review is paused after its old
+page-selection bug produced three obvious wrong-context relabels; none of those
+relabels is accepted as benchmark evidence.
+
+Notebook `35_colab_provisional_creator_diagnostic.ipynb` is the current bounded
+continuation. It scores frozen V6-C and V6-F on 35 conservative first-pass
+regions (26 supported cores and nine explicit unknown regions), excludes six
+unresolved split/supplemental regions, and exports region-, class-, creator-,
+and creator-bootstrap diagnostics. It performs no training or threshold
+selection. Its results are directional only and cannot lock the benchmark or
+authorize model promotion.
+
+The notebook was also executed locally against the exact archived inputs and
+the verified output is preserved under
+`artifacts/youtube_creator_benchmark_v1/provisional_diagnostic/`. V6-F improves
+provisional region accuracy from 60.00% to 68.57%, present-label Macro F1 from
+46.36% to 67.25%, and supported accuracy from 53.85% to 73.08%. The tradeoff is
+material: unknown recall falls from 77.78% to 55.56%, and the paired creator-
+bootstrap intervals include zero for the accuracy and Macro-F1 deltas. Treat
+V6-F as the stronger recognition candidate but not as a promoted replacement.
 
 ## Active source-balance intake
 
