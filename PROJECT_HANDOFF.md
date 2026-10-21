@@ -17,21 +17,25 @@ Do not use locked tests for tuning or promote unresolved draft labels.
 
 The recognition-tuning loop is now frozen. Notebook 34 may be completed and
 archived as a final development diagnostic, but its reused 1,971-window test
-must not trigger another threshold/sampler/loss iteration. Manual benchmark
-review is paused by user request. Notebook 35 is now the bounded continuation:
-it compares frozen V6-C and V6-F on conservative first-pass regions without
-training, calibration, threshold selection, relabeling, or promotion. The
-current readiness audit and lock gates remain in
-`ml/data/youtube_creator_benchmark_v1/BENCHMARK_LOCK_PLAN.md`.
+must not trigger another threshold/sampler/loss iteration. The faulty Notebook
+29D UI path is retired, but benchmark review is not abandoned. It must continue
+from correctly matched dense evidence with auditable interval/timestamp
+provenance. Notebook 35 is a bounded interim diagnostic: it compares frozen
+V6-C and V6-F on conservative first-pass regions without training, calibration,
+threshold selection, relabeling, or promotion. The current readiness audit and
+lock gates remain in `ml/data/youtube_creator_benchmark_v1/BENCHMARK_LOCK_PLAN.md`.
 
-Current lock status: six reserved creators and continuous pose evidence exist;
-41 regions cover 14 proposed classes, but every region remains draft, accepted
-clips are zero, and independent motion/boundary review is incomplete. Notebook
-29C produced a valid 41-row queue with zero locator overlaps (archive SHA-256
-`3c395d3bf5b534464bb4be92e969a96d75bf1d502676e7a26658034d11b887a`). The
-partial 29D confirmation run touched 27 rows but did not lock any label; its
-three changed labels were caused by the old wrong-page UI context and are
-discarded.
+Current lock status: six reserved creators and continuous pose evidence exist.
+A complete correct-page Codex dense visual pass now covers all 41 regions in
+`ml/data/youtube_creator_benchmark_v1/codex_dense_adjudication_v1.csv`: 32
+supported regions, four compound regions retained as `unknown`, and five
+locators rejected because they contain no target motion. All 14 supported
+classes have retained visual evidence. This is real Reviewer-A-style work, but
+it is not an independent blind human review: all rows remain
+`benchmark_ready=false` and require confirmation. Notebook 29C's queue archive
+SHA-256 is `3c395d3bf5b534464bb4be92e969a96d75bf1d502676e7a26658034d11b887a`.
+The partial 29D run touched 27 rows but locked nothing; its three wrong-page
+label changes are discarded.
 
 Notebook `ml/notebooks/35_colab_provisional_creator_diagnostic.ipynb` requires
 no upload. It downloads and verifies the archived pose evidence plus frozen
@@ -48,6 +52,16 @@ supported accuracy (73.08% vs 53.85%), but unknown recall drops to 55.56% from
 and Macro-F1 improvements. The artifact is archived under
 `ml/artifacts/youtube_creator_benchmark_v1/provisional_diagnostic/`; no Colab
 rerun is required unless independent reproduction is desired.
+
+The next annotation action is a bounded independent confirmation set rather
+than another 41-row widget pass: review every medium-confidence retained row,
+all four accepted-unknown compound rows, and a stratified sample of the
+remaining high-confidence rows. Resolve disagreements, convert the result into
+continuous per-video timelines including rest/transition unknown segments, and
+run the structural and strict audits before any frozen benchmark evaluation.
+The exact 17-row set is already prepared in
+`ml/data/youtube_creator_benchmark_v1/independent_confirmation_queue_v1.csv`;
+its independent-decision fields are deliberately blank.
 
 ## Latest completed work
 

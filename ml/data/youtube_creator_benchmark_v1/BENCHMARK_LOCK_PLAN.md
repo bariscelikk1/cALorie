@@ -9,12 +9,15 @@ recognition-tuning loop was frozen on 2026-10-19.
 - Continuous 15 FPS landmarks and full-timeline visual evidence already exist.
 - There are 37 original draft locators plus four supplemental Michelle
   Briehler locators: 41 regions total across all 14 proposed classes.
-- The RGB first pass inspected only two overview tiles per dense contact-sheet
-  page, not every 2 FPS frame.
-- First-pass decisions are 26 trim candidates, five rejects, two relabel-to-
-  unknown candidates, two unresolved variants, and two regions requiring a
-  split. The four supplemental regions remain low-confidence drafts.
-- Accepted clips: 0. Locked labels: 0. Model predictions inspected: no.
+- A complete correct-page Codex visual pass inspected the dense 2-FPS RGB
+  evidence for all 37 original locators and the 2-FPS pose plus RGB context for
+  all four supplemental locators.
+- `codex_dense_adjudication_v1.csv` retains 32 supported exercise regions and
+  four compound `unknown` regions, and rejects five no-target-motion locators.
+  All 14 supported classes have at least one retained region.
+- Locked labels: 0. This pass is not independent or blind. Frozen-model reports
+  existed before it, although predictions were not used for any label or
+  boundary decision.
 
 Projected or provisional class coverage is not accepted benchmark coverage.
 No V6-C, V6-F, or Notebook 34 result may be called a final benchmark score
@@ -22,10 +25,22 @@ until the lock gates below pass. Notebook 35 is an explicitly provisional,
 fail-closed diagnostic exception: it may compare frozen systems on conservative
 first-pass regions, but it cannot tune, select, promote, or relabel anything.
 
-Manual review is paused. The partial Reviewer A confirmation file is not a
-lock artifact: only 27 of 41 rows were touched, all confidence values remained
-the default `medium`, and three changed labels came from the old interface
-opening the wrong evidence page. Those three changes are discarded.
+The faulty Notebook 29D interface is retired, not the review requirement. The
+partial Reviewer A confirmation file is not a lock artifact: only 27 of 41
+rows were touched, all confidence values remained the default `medium`, and
+three changed labels came from the old interface opening the wrong evidence
+page. Those three changes are discarded. Review continues from the archived
+dense evidence with the evidence page explicitly matched to each interval and
+timestamp before a decision is recorded.
+
+The replacement Reviewer-A-style artifact is
+`codex_dense_adjudication_v1.csv`; its evidence and limitations are documented
+in `CODEX_DENSE_ADJUDICATION_V1.md`. The earlier two Michelle RDL split flags
+were corrected after full dense inspection showed repeated continuous RDL
+cycles with ordinary top-position phases. Both TIFF twist-press regions remain
+unsupported compound motion and are retained as `unknown`, while the
+supplemental Michelle evidence provides canonical bench press and lateral
+raise regions.
 
 ## Phase 1 — reproducible review queue
 
@@ -37,12 +52,13 @@ extraction, training, model scoring, or label lock.
 
 ## Phase 2 — independent visible-motion review
 
-Use `ml/notebooks/29d_colab_creator_benchmark_review.ipynb` to review every
-queued region against the archived dense RGB or supplemental pose evidence.
-Its `confirmation` mode preserves the existing first-pass work as Reviewer A
-evidence; it does not count as an independent blind review. A distinct reviewer
-must use `blind` mode for the independent pass. Do not use titles, chapters,
-transcripts, or model predictions to decide a label.
+Do not reuse the faulty Notebook 29D UI. The independent pass should consume
+the evidence paths and timestamps in `codex_dense_adjudication_v1.csv`
+directly. It must cover all medium-confidence retained rows, all accepted
+`unknown` compound rows, and a stratified sample of the remaining
+high-confidence rows. This satisfies the required edge-case coverage without
+forcing another 41-row click-through. Do not use titles, chapters, transcripts,
+or model predictions to decide a label.
 
 For each row record:
 
@@ -92,7 +108,7 @@ unknown precision/recall, per-creator results, and bootstrap confidence
 intervals over creators or videos—not overlapping windows. The benchmark may
 reject a candidate but must never tune one.
 
-## Provisional diagnostic while manual review is paused
+## Provisional diagnostic while review is repaired
 
 `ml/notebooks/35_colab_provisional_creator_diagnostic.ipynb` uses only the 26
 first-pass `trim_candidate` cores and nine explicit unknown/reject/variant

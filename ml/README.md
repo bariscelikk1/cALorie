@@ -29,12 +29,23 @@ and V6-F remain fixed candidates; Notebook 34 is at most a final development
 diagnostic and cannot start another sampler/threshold/loss loop.
 
 The active work is the six-creator external benchmark. Existing evidence has
-41 draft regions across six reserved creator videos and all 14 proposed
-classes, but zero accepted clips and zero locked labels. Follow
+41 candidate regions across six reserved creator videos and all 14 proposed
+classes, but zero locked labels. Follow
 `data/youtube_creator_benchmark_v1/BENCHMARK_LOCK_PLAN.md`. CPU Notebook 29C
-created the review queue. Manual Notebook 29D review is paused after its old
+created the review queue. The old Notebook 29D interface is retired after its
 page-selection bug produced three obvious wrong-context relabels; none of those
-relabels is accepted as benchmark evidence.
+relabels is accepted as benchmark evidence. Manual visible-motion review itself
+is not abandoned: it continues from the archived dense evidence through a
+correct-page, auditable adjudication path.
+
+That correct-page Codex pass is now recorded in
+`data/youtube_creator_benchmark_v1/codex_dense_adjudication_v1.csv`. It retains
+32 supported regions and four compound `unknown` regions, rejects five
+no-target-motion locators, and restores visible candidate coverage for all 14
+supported classes using the four supplemental Michelle regions. It is not a
+blind or independent human pass, so every retained row remains
+`benchmark_ready=false`; the next step is bounded independent confirmation and
+timeline audit, not a repeat of the broken 41-row UI.
 
 Notebook `35_colab_provisional_creator_diagnostic.ipynb` is the current bounded
 continuation. It scores frozen V6-C and V6-F on 35 conservative first-pass
