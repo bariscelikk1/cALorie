@@ -38,3 +38,20 @@ That bounded set is materialized as `independent_confirmation_queue_v1.csv`:
 17 rows total (eight medium-confidence regions, four compound unknowns, and
 five high-confidence controls). Its decision fields are intentionally blank;
 they must not be prefilled or inferred from the Codex pass.
+
+Run the reproducible structural audit with:
+
+```bash
+python3 ml/scripts/audit_creator_benchmark_adjudication.py \
+  --adjudication ml/data/youtube_creator_benchmark_v1/codex_dense_adjudication_v1.csv \
+  --original-candidates ml/data/youtube_creator_benchmark_v1/candidate_intervals_v1.csv \
+  --supplemental-candidates ml/data/youtube_creator_benchmark_v1/supplemental_candidates_v1.csv \
+  --confirmation-queue ml/data/youtube_creator_benchmark_v1/independent_confirmation_queue_v1.csv \
+  --report ml/data/youtube_creator_benchmark_v1/codex_dense_adjudication_audit_v1.json
+```
+
+The current audit passes with zero structural errors: 41/41 candidate IDs,
+36 retained non-overlapping regions, 14/14 supported classes, and complete
+coverage of the required confirmation subset. It deliberately reports
+`benchmark_locked=false` while the 17 independent decisions and continuous
+timeline audit remain incomplete.

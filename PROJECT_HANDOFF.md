@@ -72,6 +72,14 @@ The exact 17-row set is already prepared in
 `ml/data/youtube_creator_benchmark_v1/independent_confirmation_queue_v1.csv`;
 its independent-decision fields are deliberately blank.
 
+`ml/scripts/audit_creator_benchmark_adjudication.py` now enforces the interim
+contract. Its committed report has zero structural errors: all 41 IDs match,
+36 retained regions are non-overlapping within video, all 14 supported classes
+are present, and the 17-row queue covers every medium-confidence and accepted-
+unknown row. The report remains fail-closed with `benchmark_locked=false`
+because those independent decisions and continuous timeline audits are still
+pending.
+
 ## Latest completed work
 
 - V6-C remains the baseline candidate; full G1 ST-GCN was rejected.
