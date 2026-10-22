@@ -42,6 +42,11 @@ is expected to accept it. Examples:
 
 - bodyweight, sumo, pulse, and kick squat variants may map to `squat` after
   review;
+- conventional crunches, anchored sit-ups, and incline-bench sit-ups may map
+  to `sit_up` when repeated torso flexion is the dominant visible motion;
+- V-ups/jackknives, reverse crunches or leg raises, and GHD-style
+  hyperextension movements remain `unknown` rather than being forced into
+  `sit_up`;
 - plank and plank variants map to `unknown` in the post-v5 target;
 - close-grip push-ups may map to `push_up`;
 - a compound sequence containing multiple unsupported phases remains

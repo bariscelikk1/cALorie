@@ -957,3 +957,26 @@ with Colab Python 3.13's already-loaded native Pillow encoder (`17 given`,
 resizing, labels, tiling, and JPEG encoding now use OpenCV only. Reopen the
 latest notebook and run all from a fresh CPU runtime; inputs and output
 contract are unchanged.
+
+Notebook 38 returned successfully on 2026-10-23 as
+`calorie_repcount_visual_adjudication_v1.zip` (SHA-256
+`335a0f6bf07d0920b0dc84954a8feec43113947239cced35f8982b6ea0ee5a63`).
+The archive and all 72 internally listed files pass checksum verification. It
+contains eight silent previews and 61 dense JPEG pages, with no raw video,
+training, or locked-benchmark access.
+
+Dense visual adjudication resolves all eight pending clips. `stu1_53`,
+`stu3_54`, `stu5_52`, `stu6_50`, `stu8_49`, and `stu9_56` map to `sit_up`;
+`stu2_67` maps to `squat`; and `stu9_12` maps to `lateral_raise`. The final
+frozen V6-F diagnostic is 11/30 overall (36.7%), 6/18 on supported visible
+clips (33.3%), and 5/12 unknown rejections (41.7%). It scores 6/10 on squat,
+0/7 on sit-up, and 0/1 on lateral raise. This is a source-shift diagnostic,
+not person-disjoint accuracy.
+
+The final row calls are in
+`ml/data/repcount_development_v1/final_visible_adjudication_v1.csv`. Keep the
+two observed duplicate source groups intact: `stu8_49` with `stu9_56`, and
+`stu1_69` with `stu6_59`. Every row remains `training_allowed=false`. The next
+experiment must predeclare source-group-disjoint roles, remain
+non-promotable, keep threshold 0.65 fixed, and leave the locked creator
+benchmark untouched.

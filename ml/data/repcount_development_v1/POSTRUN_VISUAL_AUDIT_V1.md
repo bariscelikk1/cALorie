@@ -34,12 +34,37 @@ These values include medium-confidence contact-sheet calls. They are not valid
 for promotion, threshold selection, or comparison with the locked creator
 benchmark.
 
+## Dense visual adjudication update
+
+Notebook 38 returned dense 4 FPS evidence and silent previews for all eight
+medium-confidence rows. Frame-by-frame review resolves every one of them:
+
+- `stu1_53`, `stu3_54`, `stu5_52`, `stu6_50`, `stu8_49`, and `stu9_56` map to
+  `sit_up` under the clarified torso-flexion rule;
+- `stu2_67` contains clear repeated bodyweight squats and maps to `squat`;
+- `stu9_12` is a bent-elbow dumbbell lateral raise and maps to
+  `lateral_raise`.
+
+The final row-level calls are recorded in
+`final_visible_adjudication_v1.csv`. Against those calls, frozen V6-F matches
+11/30 clips (36.7%): 6/18 supported clips (33.3%) and 5/12 unknown clips
+(41.7%). By class it is 6/10 for `squat`, 0/7 for `sit_up`, and 0/1 for
+`lateral_raise`. The lower result is expected: six clips previously credited
+as correct unknown rejections are now correctly recognized as supported
+`sit_up` examples.
+
+Two source collisions remain explicit: `stu8_49` and `stu9_56` share one
+outdoor crunch source, while `stu1_69` and `stu6_59` appear to share one
+orange-rig squat source. Any future split must keep each source group intact.
+This is still a source-shift diagnostic, not person-disjoint accuracy.
+
 ## Decision
 
 - Do not train Notebook 38 from the original `train_pool` split.
 - Retain this package as a source-shift/error-analysis set.
-- Before any RepCount training experiment, inspect the rows marked
-  `needs_second_review=true` from video, replace `person_id` with an explicitly
-  unverified source code, and use clip/source-disjoint development roles rather
-  than claiming person-disjoint validation.
+- The eight second-review rows are resolved, but every RepCount row remains
+  `training_allowed=false` until a predeclared source-group-disjoint exploratory
+  split is created. Never treat `stuN` as a person ID.
+- A future RepCount retrain is non-promotable and must preserve untouched
+  diagnostic source groups; it must not use these rows for threshold tuning.
 - The frozen threshold remains 0.65; this audit does not tune it.
