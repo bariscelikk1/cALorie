@@ -914,3 +914,28 @@ interpolation per joint/channel before resampling and asserts that the full
 window tensor is finite. It also exports `pose_imputation_audit.csv`; this run
 should record exactly two repaired frames in one clip. The three source clips,
 labels, split, model recipe, and frozen test set are otherwise unchanged.
+## RepCount external development v1 returned and audited (2026-10-23)
+
+Notebook 37 returned `calorie_repcount_external_development_v1_report.zip`
+(SHA-256 `fddd4e63f1162c1b48d1d81165c6e204127226824e5af500f452161f8a7219ef`).
+The archive has 71 checksum-listed files; all internal hashes pass. Pose
+extraction succeeded for all 30 clips, raw video is absent, and no training,
+calibration, threshold change, or locked-benchmark access occurred.
+
+Post-run RGB contact-sheet review found that the report's 8/30 metadata
+alignment is not model accuracy. Published `situp` includes heterogeneous
+crunch, V-up, GHD, reverse-crunch, and sit-up variants, while one nominal squat
+clip does not visibly establish a squat in the selected bounds. The corrected
+first-pass visible-target agreement is 16/30, still diagnostic-only. More
+importantly, `stuN` is not a verified identity: the three `stu10` clips visibly
+show different people, and `stu8_49`/`stu9_56` appear to share an actor and
+scene. The role partition is therefore not person-disjoint validation.
+
+The unchanged report is archived under
+`ml/artifacts/repcount_external_development_v1/`; row-level contact-sheet calls
+and the blocking audit are under `ml/data/repcount_development_v1/`. Notebook
+37 wording now describes `stuN` as unverified source codes. Do not launch a
+RepCount retrain from the original `train_pool`. Next, perform video review for
+the medium-confidence rows, define clip/source-disjoint development roles, and
+only then build a quarantined training experiment. The frozen V6-F threshold
+remains 0.65.
