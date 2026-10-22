@@ -100,3 +100,22 @@ restore 14-class coverage until their motion and boundaries are independently
 reviewed. CPU Notebook 29C assembles all 41 draft regions into a review queue
 and audit bundle without video downloads or model scoring.
 
+## Locked region benchmark v1
+
+The dense pass and bounded 17-row independent confirmation are now complete.
+The immutable inputs, resolved adjudication, audit reports, and final
+classification contract are:
+
+- `codex_dense_adjudication_v1.csv`
+- `independent_confirmation_completed_v1.csv`
+- `independent_confirmation_audit_v1.json`
+- `resolved_region_adjudication_v1.csv`
+- `locked_region_benchmark_v1.csv`
+- `locked_region_benchmark_audit_v1.json`
+
+The locked contract has 36 non-overlapping regions across six creator videos,
+with all 14 supported classes and four compound `unknown` regions. It is valid
+only for frozen region-classification evaluation. The complete-video gaps are
+not continuous ground truth, so this contract cannot support long-video
+segmentation, transition, or timeline claims.
+

@@ -1,7 +1,28 @@
 # Six-creator benchmark lock plan
 
-Status: **not locked**. This file starts the evaluation-first arc after the
+Status: **region-classification benchmark locked; continuous long-video
+benchmark not locked**. This file starts the evaluation-first arc after the
 recognition-tuning loop was frozen on 2026-10-19.
+
+## Region benchmark v1 lock (2026-10-22)
+
+The bounded independent confirmation pass is complete. The returned 17-row
+file has no missing decisions, 100% decision and label agreement, and 88.24%
+exact boundary agreement with the dense Codex pass. Two boundaries were
+corrected before lock: `michelle_lateral_01` ends at 1968 s and
+`ojs_squat_01` starts at 103 s, excluding its jumping-jack lead-in.
+
+`locked_region_benchmark_v1.csv` is now the immutable classification contract:
+36 retained regions, six creator videos, all 14 supported labels, and four
+explicit compound `unknown` regions. The structural lock audit has zero errors,
+and the three source/evidence archives match their recorded SHA-256 values.
+This authorizes one frozen **region-classification** evaluation of the already
+fixed V6-C and V6-F checkpoints. It does not authorize tuning or relabeling.
+
+The lock is deliberately scope-limited. Gaps outside these reviewed regions
+are not continuous timeline ground truth. Therefore long-video segmentation,
+transition, and full-timeline metrics remain blocked until a separate
+continuous annotation and strict timeline audit is complete.
 
 ## Current evidence
 
@@ -101,12 +122,13 @@ The benchmark becomes locked only when all of the following are true:
 
 ## First frozen evaluation
 
-After the lock, evaluate original V6-C and Notebook 27/31 V6-F exactly once
-with their already fixed checkpoints and thresholds. Report gate and exercise
-classifier metrics separately, then combined Macro F1, per-class recall,
-unknown precision/recall, per-creator results, and bootstrap confidence
-intervals over creators or videos—not overlapping windows. The benchmark may
-reject a candidate but must never tune one.
+The region lock now permits evaluating original V6-C and Notebook 27/31 V6-F
+exactly once with their already fixed checkpoints and thresholds. Report gate
+and exercise-classifier metrics separately, then combined Macro F1, per-class
+recall, unknown precision/recall, per-creator results, and bootstrap confidence
+intervals over creators or videos—not overlapping windows. Do not report
+long-video segmentation metrics from this contract. The benchmark may reject
+a candidate but must never tune one.
 
 ## Provisional diagnostic while review is repaired
 

@@ -1,0 +1,89 @@
+{
+  "archive_checks": [
+    {
+      "actual_sha256": "3c9930fc3086b68240082668648722836c8959c373a58268347788d7ab24b3c4",
+      "archive": "calorie_creator_benchmark_v1_evidence.zip",
+      "expected_sha256": "3c9930fc3086b68240082668648722836c8959c373a58268347788d7ab24b3c4",
+      "status": "verified"
+    },
+    {
+      "actual_sha256": "4d0f3efed5216f0f46e96478c9777fc652814a346046f5866309357efc38e050",
+      "archive": "calorie_creator_benchmark_v1_gapfill_evidence.zip",
+      "expected_sha256": "4d0f3efed5216f0f46e96478c9777fc652814a346046f5866309357efc38e050",
+      "status": "verified"
+    },
+    {
+      "actual_sha256": "5f2f28a7a89177d1e6675d742bf60c9a4851f657baee89d710694716022e9301",
+      "archive": "calorie_creator_benchmark_dense_review_evidence.zip",
+      "expected_sha256": "5f2f28a7a89177d1e6675d742bf60c9a4851f657baee89d710694716022e9301",
+      "status": "verified"
+    }
+  ],
+  "counts": {
+    "creator_videos": 6,
+    "labels_including_unknown": 15,
+    "regions": 36,
+    "supported_labels": 14
+  },
+  "duration_s_by_label": {
+    "bench_press": 86.0,
+    "bicep_curl": 74.0,
+    "deadlift": 195.0,
+    "dumbbell_row": 74.0,
+    "jumping_jack": 45.0,
+    "lat_pulldown": 136.0,
+    "lateral_raise": 76.0,
+    "lunge": 96.0,
+    "pull_up": 54.0,
+    "push_up": 58.0,
+    "shoulder_press": 74.0,
+    "sit_up": 43.0,
+    "squat": 112.0,
+    "tricep_extension": 74.0,
+    "unknown": 152.0
+  },
+  "errors": [],
+  "full_timeline_benchmark_locked": false,
+  "full_timeline_blocker": "unreviewed gaps in the six complete videos are not continuous timeline ground truth",
+  "input_sha256": {
+    "independent_confirmation": "ee234ee1379ad6aa5210d0f0e0c23f4058250897c4e96b2eb71d2aa77dc78199",
+    "manifest_1": "40f6c6feb293d9a58c5ef836ac2515af4d59bedd15571506df602cce0422d954",
+    "manifest_2": "e807a6db5b3587d669c2ef05ba6b84d1bc184da90c182b3f07be9f1bce54ee4b",
+    "resolved_region_adjudication": "86b9b70d37d75b7cbfbf2620159aaa7e3d3d920eb9b50a0800590da6644176c3"
+  },
+  "output_sha256": "86bb7780b17e7872e00fc427eed5de6267845b2b9a99e85e260486e039ff041d",
+  "prohibitions": {
+    "calibration": true,
+    "prediction_guided_relabeling": true,
+    "threshold_selection": true,
+    "training": true
+  },
+  "region_benchmark_locked": true,
+  "regions_by_creator": {
+    "BullyJuice": 8,
+    "Criticalbench": 1,
+    "Michelle Briehler": 10,
+    "STRIQfit": 3,
+    "TIFF x DAN": 13,
+    "TRAIN WITH GAINSBYBRAINS": 1
+  },
+  "regions_by_label": {
+    "bench_press": 2,
+    "bicep_curl": 2,
+    "deadlift": 4,
+    "dumbbell_row": 2,
+    "jumping_jack": 1,
+    "lat_pulldown": 3,
+    "lateral_raise": 2,
+    "lunge": 2,
+    "pull_up": 3,
+    "push_up": 3,
+    "shoulder_press": 2,
+    "sit_up": 1,
+    "squat": 3,
+    "tricep_extension": 2,
+    "unknown": 4
+  },
+  "status": "locked_region_classification_v1",
+  "warnings": []
+}

@@ -1,0 +1,64 @@
+{
+  "agreement": {
+    "decision": 1.0,
+    "exact_boundary": 0.8823529411764706,
+    "label": 1.0
+  },
+  "benchmark_locked": false,
+  "confirmation_complete": true,
+  "corrections": [
+    {
+      "boundary_changed": true,
+      "decision_changed": false,
+      "independent": {
+        "decision": "accept_supported",
+        "end_s": "1968",
+        "label": "lateral_raise",
+        "start_s": "1940"
+      },
+      "interval_id": "michelle_lateral_01",
+      "label_changed": false,
+      "source": {
+        "decision": "accept_supported",
+        "end_s": "1972",
+        "label": "lateral_raise",
+        "start_s": "1940"
+      }
+    },
+    {
+      "boundary_changed": true,
+      "decision_changed": false,
+      "independent": {
+        "decision": "accept_supported",
+        "end_s": "123",
+        "label": "squat",
+        "start_s": "103"
+      },
+      "interval_id": "ojs_squat_01",
+      "label_changed": false,
+      "source": {
+        "decision": "accept_supported",
+        "end_s": "123",
+        "label": "squat",
+        "start_s": "93"
+      }
+    }
+  ],
+  "counts": {
+    "adjudication_rows": 41,
+    "confirmation_rows": 17,
+    "confirmed_without_change": 15,
+    "corrected_rows": 2,
+    "unresolved_retained_second_reviews": 0
+  },
+  "errors": [],
+  "independent_reviewer_ids": [
+    "baris"
+  ],
+  "lock_blockers": [
+    "continuous reviewed timelines and strict timeline audit are not complete",
+    "first frozen benchmark evaluation has not run"
+  ],
+  "status": "confirmation_pass_benchmark_unlocked",
+  "warnings": []
+}

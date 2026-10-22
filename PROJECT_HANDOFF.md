@@ -25,7 +25,9 @@ V6-C and V6-F on conservative first-pass regions without training, calibration,
 threshold selection, relabeling, or promotion. The current readiness audit and
 lock gates remain in `ml/data/youtube_creator_benchmark_v1/BENCHMARK_LOCK_PLAN.md`.
 
-Current lock status: six reserved creators and continuous pose evidence exist.
+Current lock status: the **region-classification benchmark is locked**, while
+the continuous long-video benchmark remains unlocked. Six reserved creators
+and continuous pose evidence exist.
 A complete correct-page Codex dense visual pass now covers all 41 regions in
 `ml/data/youtube_creator_benchmark_v1/codex_dense_adjudication_v1.csv`: 32
 supported regions, four compound regions retained as `unknown`, and five
@@ -62,23 +64,21 @@ difference is `2.47e-06`, causing no threshold or label change. This confirms
 execution reproducibility but does not upgrade the provisional labels or lock
 the benchmark.
 
-The next annotation action is a bounded independent confirmation set rather
-than another 41-row widget pass: review every medium-confidence retained row,
-all four accepted-unknown compound rows, and a stratified sample of the
-remaining high-confidence rows. Resolve disagreements, convert the result into
-continuous per-video timelines including rest/transition unknown segments, and
-run the structural and strict audits before any frozen benchmark evaluation.
-The exact 17-row set is already prepared in
-`ml/data/youtube_creator_benchmark_v1/independent_confirmation_queue_v1.csv`;
-its independent-decision fields are deliberately blank.
+The bounded independent confirmation set is complete. Reviewer `baris`
+confirmed all 17 required rows: decision and label agreement are 100%, exact
+boundary agreement is 88.24%, and two boundaries were corrected. The returned
+CSV is preserved unchanged; the confirmation audit passes with zero errors and
+no unresolved retained second reviews.
 
-`ml/scripts/audit_creator_benchmark_adjudication.py` now enforces the interim
-contract. Its committed report has zero structural errors: all 41 IDs match,
-36 retained regions are non-overlapping within video, all 14 supported classes
-are present, and the 17-row queue covers every medium-confidence and accepted-
-unknown row. The report remains fail-closed with `benchmark_locked=false`
-because those independent decisions and continuous timeline audits are still
-pending.
+`ml/scripts/process_creator_benchmark_confirmation.py` validates the completed
+review and creates `resolved_region_adjudication_v1.csv` without mutating either
+reviewer's source file. `ml/scripts/build_creator_region_benchmark.py` then
+locks `locked_region_benchmark_v1.csv`: 36 non-overlapping regions, six creator
+videos, 14 supported classes plus unknown, and verified source archive hashes.
+Training, calibration, threshold selection, and prediction-guided relabeling
+remain forbidden. The next action is the one-time frozen V6-C/V6-F region
+evaluation. Full-timeline segmentation evaluation remains blocked because
+unreviewed video gaps are not continuous ground truth.
 
 A self-contained local review screen for that exact 17-row queue is under
 `ml/artifacts/youtube_creator_benchmark_v1/independent_confirmation_ui/`.
