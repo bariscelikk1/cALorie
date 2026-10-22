@@ -949,3 +949,11 @@ in `calorie_repcount_visual_adjudication_v1.zip`. There are no uploads, widgets,
 labels, model scores, training steps, or locked-benchmark reads. Full source
 videos are deleted before packaging. Run it on Colab CPU and return its ZIP;
 then adjudicate those eight rows locally before defining any training pool.
+
+Notebook 38's first Colab run reached evidence rendering but failed on the
+first JPEG save because its explicit Pillow 11.1 Python layer was incompatible
+with Colab Python 3.13's already-loaded native Pillow encoder (`17 given`,
+`16` accepted). The notebook no longer installs or imports Pillow. Dense-sheet
+resizing, labels, tiling, and JPEG encoding now use OpenCV only. Reopen the
+latest notebook and run all from a fresh CPU runtime; inputs and output
+contract are unchanged.
