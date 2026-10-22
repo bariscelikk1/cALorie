@@ -90,6 +90,20 @@ bottom in Colab and preserve the returned
 is a region-classification benchmark only; it cannot establish continuous
 long-video segmentation quality.
 
+Notebook 36 is complete. The unchanged Colab archive and extracted report are
+under `ml/artifacts/youtube_creator_benchmark_v1/locked_region_benchmark_v1/`;
+the outer SHA-256 is
+`f85531da08a989f4796e8743b53e19a2c66a85c7151fd15e21bcf263eb49594a`, and
+all 13 internal hashes pass. V6-F wins the frozen comparison: 69.44% versus
+52.78% accuracy, 67.11% versus 44.59% 15-label Macro F1, and 71.88% versus
+53.13% supported accuracy. Paired creator-bootstrap intervals for all three
+deltas remain above zero. V6-F is therefore the preferred recognition
+candidate, not a production-ready model. Both systems recover only two of four
+true unknown regions; V6-F still sends nine supported regions to `unknown` and
+has zero recall on lateral raise, sit-up, squat, and tricep extension. Freeze
+this result and continue gate/data development without using or repeatedly
+consulting the locked rows.
+
 A self-contained local review screen for that exact 17-row queue is under
 `ml/artifacts/youtube_creator_benchmark_v1/independent_confirmation_ui/`.
 It contains the correctly matched dense RGB overviews and the four supplemental

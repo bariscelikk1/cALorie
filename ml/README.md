@@ -73,6 +73,15 @@ training, calibration, threshold selection, or relabeling. The resulting
 metrics apply only to locked-region classification, not continuous long-video
 segmentation.
 
+Notebook 36 is complete and archived under
+`artifacts/youtube_creator_benchmark_v1/locked_region_benchmark_v1/`. V6-F
+wins the frozen head-to-head: 69.44% accuracy and 67.11% 15-label Macro F1,
+versus 52.78% and 44.59% for V6-C. The paired creator-bootstrap accuracy,
+Macro-F1, and supported-accuracy deltas remain above zero. V6-F is now the
+preferred recognition candidate, but it is not production-ready: unknown
+recall is 50%, unknown precision is 18.18%, and four supported classes have
+zero recall. The locked 36 rows must not be used for tuning or training.
+
 ## Active source-balance intake
 
 The rejected Notebook 29G run showed that adding 52 windows from three draft
