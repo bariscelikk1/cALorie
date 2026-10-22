@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>cALorie · Bağımsız Doğrulama</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">cALorie benchmark arc</p>
+      <h1>17 kritik örnek · bağımsız doğrulama</h1>
+    </div>
+    <div class="progress-wrap" aria-label="İlerleme">
+      <strong id="progressText">0 / 17</strong>
+      <div class="progress"><span id="progressBar"></span></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro card">
+      <div>
+        <h2>Tek işin: görüntüdeki harekete bakmak</h2>
+        <p>Öneri doğruysa <b>Onayla + sonraki</b>. Yanlışsa <b>Düzelt</b> ve doğru kararı gir. Video başlığına ya da önceki model tahminine göre karar verme.</p>
+      </div>
+      <label class="reviewer">İnceleyen
+        <input id="reviewerId" type="text" value="baris" autocomplete="off">
+      </label>
+    </section>
+
+    <section class="card case-head">
+      <div>
+        <span id="caseNumber" class="pill"></span>
+        <span id="reason" class="muted"></span>
+        <h2 id="intervalId"></h2>
+      </div>
+      <div id="proposal" class="proposal"></div>
+    </section>
+
+    <section class="card evidence-card">
+      <div class="evidence-head">
+        <div>
+          <h2>Görsel kanıt</h2>
+          <p id="evidenceHint" class="muted"></p>
+        </div>
+        <button id="toggleGallery" class="ghost" hidden>Tüm pose sayfalarını göster</button>
+      </div>
+      <div id="evidence" class="evidence"></div>
+    </section>
+
+    <section class="card decision-card">
+      <div class="choice-row" role="group" aria-label="Karar">
+        <button id="agreeBtn" class="primary">✓ Öneri doğru · Onayla + sonraki</button>
+        <button id="correctBtn" class="secondary">✎ Yanlış · Düzelt</button>
+        <button id="unsureBtn" class="ghost">? Emin değilim</button>
+      </div>
+
+      <form id="correctionForm" hidden>
+        <div class="form-grid">
+          <label>Karar
+            <select id="decision">
+              <option value="accept_supported">Desteklenen hareket</option>
+              <option value="accept_unknown">Bileşik / unknown</option>
+              <option value="reject_no_target_motion">Kullanılamaz / hedef hareket yok</option>
+            </select>
+          </label>
+          <label>Etiket
+            <select id="label"></select>
+          </label>
+          <label>Başlangıç (sn)
+            <input id="start" type="number" step="0.5">
+          </label>
+          <label>Bitiş (sn)
+            <input id="end" type="number" step="0.5">
+          </label>
+          <label>Güven
+            <select id="confidence">
+              <option value="high">Yüksek</option>
+              <option value="medium">Orta</option>
+              <option value="low">Düşük</option>
+            </select>
+          </label>
+          <label class="wide">Not (kısa)
+            <textarea id="notes" rows="2" placeholder="Neyi düzelttiğini yaz"></textarea>
+          </label>
+        </div>
+        <button id="saveCorrection" type="submit" class="primary">Düzeltmeyi kaydet + sonraki</button>
+      </form>
+
+      <div class="nav-row">
+        <button id="prevBtn" class="ghost">← Önceki</button>
+        <div id="savedState" class="muted"></div>
+        <button id="nextBtn" class="ghost">Sonraki →</button>
+      </div>
+    </section>
+
+    <section id="finishCard" class="card finish" hidden>
+      <h2>Tamamlandı</h2>
+      <p>17 kararın tamamı tarayıcıda kaydedildi. Şimdi tek CSV indir; sonraki audit ve benchmark kilidini ben halledeceğim.</p>
+      <button id="downloadBtn" class="primary">Tamamlanmış CSV'yi indir</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

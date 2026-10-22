@@ -80,6 +80,16 @@ unknown row. The report remains fail-closed with `benchmark_locked=false`
 because those independent decisions and continuous timeline audits are still
 pending.
 
+A self-contained local review screen for that exact 17-row queue is under
+`ml/artifacts/youtube_creator_benchmark_v1/independent_confirmation_ui/`.
+It contains the correctly matched dense RGB overviews and the four supplemental
+RGB-plus-pose evidence sets, stores progress in browser local storage, and
+exports `calorie_creator_independent_confirmation_completed.csv`. The normal
+path is one-click confirmation; correction fields appear only for disagreements.
+This replaces the upload-based Notebook 29D workflow but does not itself lock
+the benchmark. Import and audit the completed CSV, adjudicate disagreements,
+then build continuous per-video timelines before final evaluation.
+
 ## Latest completed work
 
 - V6-C remains the baseline candidate; full G1 ST-GCN was rejected.
