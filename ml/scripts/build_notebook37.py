@@ -46,12 +46,12 @@ cells = [
     ),
     code(
         """
-        %pip install -q "pylance>=0.37,<0.40" mediapipe==0.10.35 opencv-python-headless==4.11.0.86 pandas==2.2.3
+        %pip install -q --pre --upgrade --extra-index-url https://pypi.fury.io/lance-format pylance mediapipe==0.10.35 opencv-python-headless==4.11.0.86 pandas==2.2.3
         """
     ),
     code(
         """
-        import hashlib, json, math, os, re, shutil, urllib.request, zipfile
+        import hashlib, importlib.metadata, json, math, os, re, shutil, urllib.request, zipfile
         from pathlib import Path
 
         import cv2
@@ -88,6 +88,7 @@ cells = [
         for path in (INPUTS, VIDEOS, POSE, EVIDENCE, REPORT): path.mkdir(parents=True, exist_ok=True)
 
         print("Device:", DEVICE)
+        print("PyLance:", importlib.metadata.version("pylance"))
         print("Pinned project commit:", SOURCE_COMMIT)
         print("Pinned RepCount-A Lance revision:", LANCE_REVISION)
         """
