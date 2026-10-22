@@ -939,3 +939,13 @@ RepCount retrain from the original `train_pool`. Next, perform video review for
 the medium-confidence rows, define clip/source-disjoint development roles, and
 only then build a quarantined training experiment. The frozen V6-F threshold
 remains 0.65.
+
+CPU Notebook 38,
+`ml/notebooks/38_colab_repcount_visual_adjudication_packet.ipynb`, is the next
+step. It pins the post-run review CSV from commit `6b0dca6`, fetches only the
+eight medium-confidence RepCount clips from the pinned Lance revision, and
+automatically returns dense 4 FPS sheets plus silent 240p/8 FPS review previews
+in `calorie_repcount_visual_adjudication_v1.zip`. There are no uploads, widgets,
+labels, model scores, training steps, or locked-benchmark reads. Full source
+videos are deleted before packaging. Run it on Colab CPU and return its ZIP;
+then adjudicate those eight rows locally before defining any training pool.
