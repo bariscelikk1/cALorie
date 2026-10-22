@@ -80,6 +80,16 @@ remain forbidden. The next action is the one-time frozen V6-C/V6-F region
 evaluation. Full-timeline segmentation evaluation remains blocked because
 unreviewed video gaps are not continuous ground truth.
 
+Notebook `ml/notebooks/36_colab_locked_creator_region_benchmark.ipynb` is that
+one-time evaluation. It pins the lock commit and every input hash, verifies the
+36-region contract before inference, then compares frozen V6-C and V6-F with
+their already-fixed thresholds. It performs no training, calibration,
+threshold search, relabeling, or model promotion. Run it once from top to
+bottom in Colab and preserve the returned
+`calorie_locked_creator_region_benchmark_v1_report.zip` unchanged. Its result
+is a region-classification benchmark only; it cannot establish continuous
+long-video segmentation quality.
+
 A self-contained local review screen for that exact 17-row queue is under
 `ml/artifacts/youtube_creator_benchmark_v1/independent_confirmation_ui/`.
 It contains the correctly matched dense RGB overviews and the four supplemental

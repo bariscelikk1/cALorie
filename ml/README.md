@@ -43,12 +43,13 @@ That correct-page Codex pass is now recorded in
 32 supported regions and four compound `unknown` regions, rejects five
 no-target-motion locators, and restores visible candidate coverage for all 14
 supported classes using the four supplemental Michelle regions. It is not a
-blind or independent human pass, so every retained row remains
-`benchmark_ready=false`; the next step is bounded independent confirmation and
-timeline audit, not a repeat of the broken 41-row UI.
+blind or independent human pass. Its bounded independent confirmation has now
+been completed, audited, and resolved without mutating either reviewer's source
+file. The result is the locked 36-region classification contract described
+below; the broken 41-row UI remains retired.
 
-Notebook `35_colab_provisional_creator_diagnostic.ipynb` is the current bounded
-continuation. It scores frozen V6-C and V6-F on 35 conservative first-pass
+Notebook `35_colab_provisional_creator_diagnostic.ipynb` is the historical
+bounded diagnostic. It scores frozen V6-C and V6-F on 35 conservative first-pass
 regions (26 supported cores and nine explicit unknown regions), excludes six
 unresolved split/supplemental regions, and exports region-, class-, creator-,
 and creator-bootstrap diagnostics. It performs no training or threshold
@@ -63,6 +64,14 @@ provisional region accuracy from 60.00% to 68.57%, present-label Macro F1 from
 material: unknown recall falls from 77.78% to 55.56%, and the paired creator-
 bootstrap intervals include zero for the accuracy and Macro-F1 deltas. Treat
 V6-F as the stronger recognition candidate but not as a promoted replacement.
+
+Notebook `36_colab_locked_creator_region_benchmark.ipynb` is the active,
+one-time frozen evaluation. It verifies the immutable 36-region contract and
+all evidence/model hashes, creates deterministic 64-frame windows, compares
+the fixed V6-C and V6-F systems, and exports one report ZIP. It performs no
+training, calibration, threshold selection, or relabeling. The resulting
+metrics apply only to locked-region classification, not continuous long-video
+segmentation.
 
 ## Active source-balance intake
 

@@ -119,3 +119,10 @@ only for frozen region-classification evaluation. The complete-video gaps are
 not continuous ground truth, so this contract cannot support long-video
 segmentation, transition, or timeline claims.
 
+Run `ml/notebooks/36_colab_locked_creator_region_benchmark.ipynb` once for the
+frozen V6-C/V6-F comparison. The notebook pins and verifies this contract,
+the lock audit, both pose-evidence archives, and all model checkpoints. Its
+output is `calorie_locked_creator_region_benchmark_v1_report.zip`. Do not use
+the benchmark result to tune thresholds, change labels, or retrain either
+system.
+
