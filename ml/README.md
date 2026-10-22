@@ -82,6 +82,26 @@ preferred recognition candidate, but it is not production-ready: unknown
 recall is 50%, unknown precision is 18.18%, and four supported classes have
 zero recall. The locked 36 rows must not be used for tuning or training.
 
+## Active arc — RepCount external development intake
+
+The frozen comparison is finished; do not rescore or tune on its 36 locked
+regions. The next step is a separate development-only source-shift intake.
+`data/repcount_development_v1/` predeclares 30 RepCount-A videos from ten
+people: squat and sit-up positives plus unsupported front raise as an unknown
+confuser. Seven people form a review-only train pool and three disjoint people
+form development validation. No row is currently eligible for training.
+
+CPU Notebook `37_colab_repcount_external_development_intake.ipynb` fetches the
+exact embedded video blobs from a pinned public Lance revision, without a
+YouTube downloader or manual file upload. It uses published repetition-cycle
+bounds to create contact sheets and 15-FPS pose arrays, then runs frozen V6-F
+at the unchanged `0.65` threshold. The exported ZIP excludes raw video and
+contains source/pose audits, per-window probabilities, per-video diagnostics,
+evidence sheets, hashes, and compact derived pose. Treat its reported agreement
+as provisional screening, not locked-benchmark accuracy. Review visible motion
+before promoting any of the seven-person train pool; never train on the three
+development-validation people.
+
 ## Active source-balance intake
 
 The rejected Notebook 29G run showed that adding 52 windows from three draft

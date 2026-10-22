@@ -104,6 +104,23 @@ has zero recall on lateral raise, sit-up, squat, and tricep extension. Freeze
 this result and continue gate/data development without using or repeatedly
 consulting the locked rows.
 
+The next arc is external **development** data, not another pass over the locked
+benchmark. `ml/data/repcount_development_v1/` fixes a 30-video RepCount-A
+intake: ten people, with one squat, one sit-up, and one unsupported front raise
+per person. `stu1` through `stu7` are review-only train-pool candidates;
+`stu8` through `stu10` are person-disjoint development validation. Every row
+starts `metadata_only` and `training_allowed=false`.
+
+Notebook `ml/notebooks/37_colab_repcount_external_development_intake.ipynb`
+automatically reads only those 30 embedded video blobs from a pinned public
+RepCount-A Lance revision, so it uses neither YouTube nor manual upload. It
+extracts cycle-bounded contact sheets and 15-FPS MediaPipe pose, scores the
+already-frozen V6-F model at threshold `0.65`, deletes raw video before export,
+and returns a single diagnostic ZIP. Its provisional metadata-alignment figures
+are not benchmark accuracy and cannot select a threshold or promote labels.
+Visible-motion review is required before any train-pool row can be admitted;
+the three development-validation people remain evaluation-only.
+
 A self-contained local review screen for that exact 17-row queue is under
 `ml/artifacts/youtube_creator_benchmark_v1/independent_confirmation_ui/`.
 It contains the correctly matched dense RGB overviews and the four supplemental
