@@ -215,6 +215,7 @@ Every row remains `training_allowed=false`.
 | Notebook 36 | One-time locked benchmark; V6-F won; result frozen. |
 | Notebooks 37-38 | RepCount diagnosis and adjudication; no training yet. |
 | Notebook 39 | RepCount gate rotation built and dry-run locally; awaiting Colab result. |
+| Notebook 40 | RepCount-A intake v2 pilot evidence (64 clips); dry-run locally; awaiting Colab result. |
 
 The full history is in [PROJECT_HANDOFF.md](https://github.com/bariscelikk1/cALorie/blob/feat/tcn-rebuild/PROJECT_HANDOFF.md).
 Failed experiments are evidence; do not delete or rewrite them as successes.
@@ -266,6 +267,7 @@ not require uploads, file pickers, pasted fixes, widgets, or per-row clicks.
 - [38 — dense adjudication packet](https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/38_colab_repcount_visual_adjudication_packet.ipynb)
 - [39 — RepCount gate rotation; T4; awaiting run](https://colab.research.google.com/github/bariscelikk1/cALorie/blob/94c7cb9d7252eb58b2ee889f589109fa42720370/ml/notebooks/39_colab_repcount_gate_rotation.ipynb)
   (commit-pinned: Colab can misread the `/` in the branch name, so use commit links)
+- [40 — RepCount-A intake v2 pilot; CPU; awaiting run](https://colab.research.google.com/github/bariscelikk1/cALorie/blob/b1e3f527c61942cf774c266d3936ffe7c95db824/ml/notebooks/40_colab_repcount_intake_v2_pilot.ipynb)
 
 Notebook 37 originally failed because its Lance build did not support `hf://`.
 Notebook 38 originally failed because Pillow conflicted with Colab Python 3.13
