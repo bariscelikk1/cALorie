@@ -220,8 +220,10 @@ Failed experiments are evidence; do not delete or rewrite them as successes.
 
 ## Immediate next step
 
-Design and audit a RepCount development experiment before implementing it.
-Notebook 39 does not exist yet.
+The RepCount experiment design is predeclared and approved:
+[gate rotation v1 design](https://github.com/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/data/repcount_development_v1/gate_rotation_v1/DESIGN.md)
+and its [fold manifest](https://github.com/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/data/repcount_development_v1/gate_rotation_v1/folds.csv).
+Notebook 39 does not exist yet; build it against that design.
 
 Minimum contract:
 
@@ -231,8 +233,9 @@ Minimum contract:
 3. Predeclare source-group-disjoint roles and keep both duplicate groups intact.
 4. Create a new versioned experiment manifest for any rows changing from
    `training_allowed=false`; never mutate the evidence CSV.
-5. Keep an untouched RepCount diagnostic subset outside training and early
-   stopping.
+5. Score every RepCount clip only with gates that never trained on its
+   source group (3-fold source-group rotation, chosen over a fixed holdout
+   that held one false-unknown); never use RepCount for early stopping.
 6. Keep threshold 0.65 fixed so the first run measures a data effect.
 7. Separate gate, oracle-classifier, and end-to-end errors.
 8. Keep the run non-promotable because identity is uncertain, support is tiny,

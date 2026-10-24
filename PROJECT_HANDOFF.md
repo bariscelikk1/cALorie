@@ -994,3 +994,41 @@ is an unverified source code rather than a person identity. The root README and
 RepCount intake README now point to the current interpretation instead of the
 retired person-disjoint assumption. No model, label, metric, or experiment
 artifact changed in this documentation-only checkpoint.
+
+## RepCount gate rotation v1 design predeclared (2026-10-24)
+
+The Notebook 39 design is written down and approved by the user, but the
+notebook does not exist yet. Design:
+`ml/data/repcount_development_v1/gate_rotation_v1/DESIGN.md`. Fold manifest:
+`ml/data/repcount_development_v1/gate_rotation_v1/folds.csv`, generated and
+checked by `ml/scripts/build_repcount_gate_rotation_v1.py` (`--check` mode).
+
+A fixed hash-selected one-third holdout was audited first and rejected: it
+held only one supported clip that V6-F sends to `unknown` (`stu3_54`), so it
+could not measure the research question. The user chose a 3-fold
+source-group rotation instead. All 28 source groups sit in exactly one
+evaluation fold, and both duplicate groups stay intact. Each clip is scored
+only by gates that never trained on its group, and no RepCount clip is used
+for early stopping. This replaces the "one permanent untouched subset"
+reading of contract item 5. Out-of-fold support: 8 gate false-unknowns,
+7 gate false-accepts, and 4 wrong-class errors, which gate retraining cannot
+fix.
+
+Only the three gate streams change, following Notebook 31's `train_gate`
+recipe. The V6-E classifier, fusion, threshold 0.65, and all hyperparameters
+stay frozen. A three-seed control arm (no RepCount data) separates the data
+effect from retraining noise. The stopping rule is predeclared: one run, with
+reruns only for crashes or bugs. The data effect counts as supported only if
+the seed-median out-of-fold false-unknown count is at most 5/18 and below
+the control, unknown rejection is at least the control and at least 5/12,
+and internal-test Macro F1 is no more than 1.0 pp below the control.
+Whatever the outcome, the run is non-promotable. The locked benchmark is
+not read.
+
+Tested locally: the fold builder is deterministic, both duplicate groups are
+intact, no group spans folds, and every evidence row remains
+`training_allowed=false`. Not yet tested: Notebook 39 itself, including
+whether the Notebook 37 report ZIP exposes per-window pose arrays in the
+expected `(T, 17, 4)` layout. Next action: build Notebook 39 against this
+design, dry-run its manifest and window logic locally, push, and give the
+Colab link.
