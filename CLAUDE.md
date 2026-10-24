@@ -264,7 +264,8 @@ not require uploads, file pickers, pasted fixes, widgets, or per-row clicks.
 - [36 — locked creator benchmark](https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/36_colab_locked_creator_region_benchmark.ipynb)
 - [37 — RepCount intake](https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/37_colab_repcount_external_development_intake.ipynb)
 - [38 — dense adjudication packet](https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/38_colab_repcount_visual_adjudication_packet.ipynb)
-- [39 — RepCount gate rotation; T4; awaiting run](https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/39_colab_repcount_gate_rotation.ipynb)
+- [39 — RepCount gate rotation; T4; awaiting run](https://colab.research.google.com/github/bariscelikk1/cALorie/blob/94c7cb9d7252eb58b2ee889f589109fa42720370/ml/notebooks/39_colab_repcount_gate_rotation.ipynb)
+  (commit-pinned: Colab can misread the `/` in the branch name, so use commit links)
 
 Notebook 37 originally failed because its Lance build did not support `hf://`.
 Notebook 38 originally failed because Pillow conflicted with Colab Python 3.13
