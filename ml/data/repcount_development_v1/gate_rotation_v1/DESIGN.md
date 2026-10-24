@@ -67,11 +67,18 @@ that fold's gates.
 
 | Arm | Gate training data | Runs |
 | --- | --- | --- |
-| Control | Existing V6-F pool only | 3 seeds (42, 137, 2026) |
-| Treatment | Existing pool + RepCount clips outside the scored fold | 3 folds x 3 seeds |
+| Control | Existing V6-F pool only | Notebook 31's archived gates, seeds 42, 137, 2026 |
+| Treatment | Existing pool + RepCount clips outside the scored fold | 3 folds x 3 seeds, same training seeds as Notebook 31 |
 
 The control separates the data effect from retraining noise. Control gates
 score all 30 clips (none were trained on RepCount). Runtime: Colab T4.
+
+Implementation note (2026-10-24, before any run): the control reuses Notebook
+31's checksummed gate checkpoints instead of retraining them. They are
+exactly this arm: same pool, recipe, and seeds, with no RepCount data. Notebook
+39 first checks that they reproduce Notebook 31's internal-test Macro F1
+(within 0.3 pp), and that frozen V6-F reproduces Notebook 37's 30 clip
+predictions. If either check fails, the notebook stops.
 
 ## Reported errors (kept separate)
 

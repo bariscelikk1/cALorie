@@ -214,6 +214,7 @@ Every row remains `training_allowed=false`.
 | Notebook 35 | Provisional diagnostic superseded by Notebook 36. |
 | Notebook 36 | One-time locked benchmark; V6-F won; result frozen. |
 | Notebooks 37-38 | RepCount diagnosis and adjudication; no training yet. |
+| Notebook 39 | RepCount gate rotation built and dry-run locally; awaiting Colab result. |
 
 The full history is in [PROJECT_HANDOFF.md](https://github.com/bariscelikk1/cALorie/blob/feat/tcn-rebuild/PROJECT_HANDOFF.md).
 Failed experiments are evidence; do not delete or rewrite them as successes.
@@ -223,7 +224,8 @@ Failed experiments are evidence; do not delete or rewrite them as successes.
 The RepCount experiment design is predeclared and approved:
 [gate rotation v1 design](https://github.com/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/data/repcount_development_v1/gate_rotation_v1/DESIGN.md)
 and its [fold manifest](https://github.com/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/data/repcount_development_v1/gate_rotation_v1/folds.csv).
-Notebook 39 does not exist yet; build it against that design.
+Notebook 39 implements it and passed a local CPU dry run; it has not run on
+Colab yet. Run it on a T4 and archive the returned ZIP before anything else.
 
 Minimum contract:
 
@@ -262,6 +264,7 @@ not require uploads, file pickers, pasted fixes, widgets, or per-row clicks.
 - [36 — locked creator benchmark](https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/36_colab_locked_creator_region_benchmark.ipynb)
 - [37 — RepCount intake](https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/37_colab_repcount_external_development_intake.ipynb)
 - [38 — dense adjudication packet](https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/38_colab_repcount_visual_adjudication_packet.ipynb)
+- [39 — RepCount gate rotation; T4; awaiting run](https://colab.research.google.com/github/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/notebooks/39_colab_repcount_gate_rotation.ipynb)
 
 Notebook 37 originally failed because its Lance build did not support `hf://`.
 Notebook 38 originally failed because Pillow conflicted with Colab Python 3.13
