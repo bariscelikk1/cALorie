@@ -1068,3 +1068,22 @@ about 3x Notebook 31), and GPU/CPU numerical differences beyond the parity
 tolerance. Next action: the user runs Notebook 39 on a T4 and returns the
 ZIP. Archive it unchanged, verify its checksums, and analyze it against the
 stopping rule without rerunning.
+
+## RepCount-A intake v2 plan drafted (2026-10-24, not approved)
+
+The full RepCount-A metadata (pinned `d4c2ad3`, all three JSONL hashes
+verified) holds 1,040 videos. About 760 cover six supported classes
+(squat, sit_up, pull_up, bench_press, push_up, jumping_jack), and about 280
+are unknown candidates. The draft plan is in
+`ml/data/repcount_intake_v2/INTAKE_PLAN.md`. It covers a ~60-clip pilot
+before scaling, scene-embedding source groups validated on the two known v1
+pairs, and train/dev/sealed-test roles that keep v1 and pilot clips out of the
+sealed test. Labeling uses three tiers: automatic pose-rule gates, Claude
+visual review of failures plus a 10% audit, and a 20-clip user spot-check.
+It proposes a new `auto_verified` review status, limited to non-promotable
+experiments. That status changes the annotation contract and awaits user
+approval. No notebook has been built.
+
+The Notebook 39 Colab link in `CLAUDE.md` is now commit-pinned. It opens in
+Colab from the in-app browser. The user still sees a white screen, which
+points to their browser or session, not the link.
