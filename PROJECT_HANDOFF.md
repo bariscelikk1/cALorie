@@ -1119,3 +1119,24 @@ Next action: the user runs Notebook 40 on CPU and returns the ZIP. Then
 archive it, compute scene embeddings and calibrate grouping on the v1 pairs,
 visually review all 64 pilot clips, and finalize the tier-1 rules (once, on
 pilot clips only).
+
+## Notebook 40 pilot evidence returned (2026-10-25)
+
+The user's browser shows a blank page for every Colab link, even though the
+links render in the in-app browser. Because Notebook 40 is CPU-only, Claude
+ran it on the user's Mac from the same pinned inputs. Provenance is in
+`ml/artifacts/repcount_intake_v2/pilot/README.md`. The first run lost 33
+clips to temporary Hugging Face errors and was discarded. The notebook now
+retries blob reads (commit `e5e539151e4f037eaeab55d0c721900abde918f5`), and the rerun returned all 94 clips
+with 0 errors. Archived ZIP SHA-256:
+`e9bb439a62ea224120aab256809a6d3dd6e737cb487d7a7a4b7cf8c5cbf54bae`. All 414 internal hashes pass.
+
+Pose detection: 60 pilot clips `ok`; 4 below 80% (3 bench press: `stu1_5`
+with mid-clip face cutaways, `stu4_4`, `stu7_7`; 1 other: `stu5_28`).
+Every other bucket had a median detection of 100%.
+
+Next: compute scene embeddings and calibrate grouping on the v1 pairs,
+visually review all 64 pilot contact sheets, and fix the tier-1 rules once
+on pilot clips only. Notebook 39 (GPU) is still unrun. It could run on the
+Mac's Apple GPU (MPS) if Colab stays unusable; that would need a small
+device option and is not built.
