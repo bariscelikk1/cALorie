@@ -51,7 +51,7 @@ cells = [
     ),
     code(
         r'''
-        import hashlib, importlib.metadata, json, math, os, shutil, traceback, urllib.request, zipfile
+        import hashlib, importlib.metadata, json, math, os, shutil, time, traceback, urllib.request, zipfile
         from pathlib import Path
 
         import cv2
@@ -287,17 +287,33 @@ cells = [
             return fill_missing(np.stack(poses)), fill_missing(np.stack(raw)), np.asarray(timestamps, np.float32), np.asarray(detected, bool)
 
 
+        FETCH_ATTEMPTS = 6
+
+
+        def fetch_blob(row):
+            # Hugging Face sometimes fails a run of requests temporarily; wait and reopen before giving up.
+            for attempt in range(FETCH_ATTEMPTS):
+                try:
+                    blob = datasets[row.lance_split].take_blobs("video_blob", ids=[int(row.lance_row_id)])[0]
+                    payload = blob.read()
+                    return payload.to_pybytes() if hasattr(payload, "to_pybytes") else payload
+                except OSError as error:
+                    if attempt == FETCH_ATTEMPTS - 1:
+                        raise
+                    wait_s = min(15 * 2 ** attempt, 240)
+                    print(f"{row.video_id}: fetch attempt {attempt + 1} failed ({type(error).__name__}); retrying in {wait_s}s")
+                    time.sleep(wait_s)
+                    uri = f"hf://datasets/lmms-lab-eval/repcounta-lance/data/{row.lance_split}.lance"
+                    datasets[row.lance_split] = lance.dataset(uri, storage_options={"hf_revision": LANCE_REVISION, "hf_enable_resolve_cache": "true"})
+
+
         audit_rows = []
         for row in tqdm(selected.itertuples(index=False), total=len(selected), desc="Clips"):
             record = {"video_id": row.video_id, "role": row.role, "status": "ok", "error": ""}
             extension = str(row.video_ext or ".mp4")
             video_path = VIDEOS / f"{row.video_id}{extension if extension.startswith('.') else '.' + extension}"
             try:
-                blob = datasets[row.lance_split].take_blobs("video_blob", ids=[int(row.lance_row_id)])[0]
-                payload = blob.read()
-                if hasattr(payload, "to_pybytes"):
-                    payload = payload.to_pybytes()
-                video_path.write_bytes(payload)
+                video_path.write_bytes(fetch_blob(row))
                 assert video_path.stat().st_size == int(row.video_size_bytes), "blob size mismatch"
                 record["video_sha256"] = sha256(video_path)
                 info = probe(video_path)
