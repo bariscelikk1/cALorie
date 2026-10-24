@@ -1,0 +1,414 @@
+#!/usr/bin/env python3
+"""Build Notebook 40: RepCount-A intake v2 pilot evidence packet."""
+
+import json
+from pathlib import Path
+from textwrap import dedent
+
+
+ROOT = Path(__file__).resolve().parents[2]
+OUTPUT = ROOT / "ml/notebooks/40_colab_repcount_intake_v2_pilot.ipynb"
+
+
+def md(source):
+    return {"cell_type": "markdown", "metadata": {}, "source": dedent(source).lstrip().splitlines(True)}
+
+
+def code(source):
+    return {
+        "cell_type": "code",
+        "execution_count": None,
+        "metadata": {},
+        "outputs": [],
+        "source": dedent(source).lstrip().splitlines(True),
+    }
+
+
+cells = [
+    md(
+        """
+        # cALorie Notebook 40 — RepCount-A intake v2 pilot
+
+        **Runtime: CPU. Run all.** Output: `calorie_repcount_intake_v2_pilot.zip`.
+
+        Evidence only. No labels, training, model scoring, or locked-benchmark access.
+
+        - **64 pilot clips** (8 per bucket): 15-FPS MediaPipe pose inside RepCount's annotated
+          repetition bounds, a 12-frame contact sheet, and 3 scene thumbnails.
+        - **30 v1 clips:** scene thumbnails only, to calibrate source grouping on the two known
+          duplicate pairs.
+        - Videos are read one at a time from the revision-pinned Hugging Face Lance mirror and
+          deleted right after processing. Raw video never enters the ZIP.
+        - A clip that fails is recorded in `source_audit.csv` instead of stopping the run.
+
+        Plan: `ml/data/repcount_intake_v2/INTAKE_PLAN.md`.
+        """
+    ),
+    code(
+        """
+        %pip install -q --pre --upgrade --extra-index-url https://pypi.fury.io/lance-format pylance mediapipe==0.10.35 opencv-python-headless==4.11.0.86 pandas==2.2.3
+        """
+    ),
+    code(
+        r'''
+        import hashlib, importlib.metadata, json, math, os, shutil, traceback, urllib.request, zipfile
+        from pathlib import Path
+
+        import cv2
+        import lance
+        import mediapipe as mp
+        import numpy as np
+        import pandas as pd
+        from tqdm.auto import tqdm
+
+        try:
+            from IPython.display import display
+        except ImportError:  # local dry run outside IPython
+            display = print
+
+        # Local dry-run switches. Colab leaves all of these unset.
+        DRY_RUN = os.environ.get("CALORIE_DRY_RUN") == "1"
+        LOCAL_REPO = os.environ.get("CALORIE_LOCAL_REPO")
+        WORK = Path(os.environ.get("CALORIE_WORK", "/content")) / "calorie_repcount_intake_v2_pilot_work"
+
+        PLAN_COMMIT = "1319d6f8eda4ad07c2972dca56d8242ca779b1f7"
+        SELECTION_PATH = "ml/data/repcount_intake_v2/pilot_selection.csv"
+        SELECTION_SHA256 = "64630d53e747eb91c65464782407c88e95347ea846f5a8820022217cef1bfd15"
+        LANCE_REVISION = "ae2e0b0496124d900d4e54a8e92f7ec15a292afd"
+        TARGET_FPS = 15.0
+        SHEET_TILES = (4, 3)  # columns, rows
+        SCENE_POSITIONS = (0.15, 0.50, 0.85)
+        SCENE_MAX_SIDE = 256
+        MIN_POSE_DETECTION = 0.8
+
+        if WORK.exists():
+            shutil.rmtree(WORK)
+        INPUTS, VIDEOS, POSE, SHEETS, SCENE, REPORT = [WORK / x for x in ("inputs", "videos", "pose", "sheets", "scene", "report")]
+        for path in (INPUTS, VIDEOS, POSE, SHEETS, SCENE, REPORT):
+            path.mkdir(parents=True, exist_ok=True)
+        print("Dry run:", DRY_RUN, "| PyLance:", importlib.metadata.version("pylance"), "| MediaPipe:", mp.__version__, "| OpenCV:", cv2.__version__)
+        '''
+    ),
+    code(
+        r'''
+        def sha256(path):
+            digest = hashlib.sha256()
+            with open(path, "rb") as handle:
+                for chunk in iter(lambda: handle.read(1 << 20), b""):
+                    digest.update(chunk)
+            return digest.hexdigest()
+
+
+        target = INPUTS / "pilot_selection.csv"
+        if LOCAL_REPO:
+            shutil.copy2(Path(LOCAL_REPO) / SELECTION_PATH, target)
+        else:
+            urllib.request.urlretrieve(f"https://raw.githubusercontent.com/bariscelikk1/cALorie/{PLAN_COMMIT}/{SELECTION_PATH}", target)
+        assert sha256(target) == SELECTION_SHA256, "pilot_selection.csv changed; this notebook is pinned to the approved selection."
+        selection = pd.read_csv(target)
+        assert selection.video_id.is_unique
+        assert (selection.role == "pilot").sum() == 64 and (selection.role == "v1_scene_reference").sum() == 30
+        assert selection[selection.role == "pilot"].groupby("pilot_bucket").size().eq(8).all()
+        if DRY_RUN:
+            selection = pd.concat([selection[selection.role == "pilot"].head(2), selection[selection.role != "pilot"].head(2)], ignore_index=True)
+        display(selection.groupby(["role", "pilot_bucket"], dropna=False).size())
+        '''
+    ),
+    md(
+        """
+        ## Match the selection to the pinned Lance mirror
+        """
+    ),
+    code(
+        r'''
+        scalar_columns = ["video_id", "source_name", "action_type", "count", "cycle_bounds_json", "video_ext", "video_size_bytes"]
+        datasets, parts = {}, []
+        for split in ("train", "validation", "test"):
+            uri = f"hf://datasets/lmms-lab-eval/repcounta-lance/data/{split}.lance"
+            ds = lance.dataset(uri, storage_options={"hf_revision": LANCE_REVISION, "hf_enable_resolve_cache": "true"})
+            frame = ds.to_table(columns=scalar_columns, with_row_id=True).to_pandas()
+            frame["lance_split"] = split
+            datasets[split] = ds
+            parts.append(frame)
+        mirror = pd.concat(parts, ignore_index=True).rename(columns={"_rowid": "lance_row_id"})
+        assert mirror.video_id.is_unique
+        selected = selection.merge(mirror, on="video_id", how="left", validate="one_to_one")
+        assert selected.lance_row_id.notna().all(), selected[selected.lance_row_id.isna()].video_id.tolist()
+        assert selected.published_action.eq(selected.action_type).all()
+        assert selected.published_count.astype(int).eq(selected["count"].astype(int)).all()
+        print("Matched", len(selected), "rows; selected GB:", round(selected.video_size_bytes.sum() / 1e9, 2))
+        '''
+    ),
+    md(
+        """
+        ## Per-clip evidence
+
+        For each clip: read the blob, check its size, render the evidence, extract pose (pilot only),
+        then delete the video before the next clip.
+        """
+    ),
+    code(
+        r'''
+        MODEL_PATH = WORK / "pose_landmarker_full.task"
+        MODEL_URL = "https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_full/float16/latest/pose_landmarker_full.task"
+        urllib.request.urlretrieve(MODEL_URL, MODEL_PATH)
+        POSE_MODEL_SHA256 = sha256(MODEL_PATH)
+        KEEP_17 = [0, 2, 5, 7, 8, 11, 12, 13, 14, 15, 16, 23, 24, 25, 26, 27, 28]
+        LEFT_SHOULDER, RIGHT_SHOULDER, LEFT_HIP, RIGHT_HIP = 5, 6, 11, 12
+
+
+        def parse_bounds(value):
+            try:
+                value = json.loads(value) if isinstance(value, str) else value
+            except json.JSONDecodeError:
+                return []
+            numbers = []
+
+            def walk(item):
+                if isinstance(item, dict):
+                    for child in item.values():
+                        walk(child)
+                elif isinstance(item, (list, tuple, np.ndarray)):
+                    for child in item:
+                        walk(child)
+                elif isinstance(item, (int, float)) and np.isfinite(item):
+                    numbers.append(float(item))
+
+            walk(value)
+            return sorted(x for x in numbers if x >= 0)
+
+
+        def probe(path):
+            cap = cv2.VideoCapture(str(path))
+            assert cap.isOpened(), path
+            fps = float(cap.get(cv2.CAP_PROP_FPS) or 0)
+            frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT) or 0)
+            width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH) or 0)
+            height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT) or 0)
+            cap.release()
+            assert fps > 0 and frames > 0 and width > 0 and height > 0, (path, fps, frames, width, height)
+            return {"source_fps": fps, "source_frames": frames, "duration_s": frames / fps, "width": width, "height": height}
+
+
+        def read_frame(cap, time_s):
+            cap.set(cv2.CAP_PROP_POS_MSEC, float(time_s) * 1000)
+            ok, frame = cap.read()
+            assert ok, time_s
+            return frame
+
+
+        def fit(frame, width, height):
+            scale = min(width / frame.shape[1], height / frame.shape[0])
+            return cv2.resize(frame, (max(1, int(round(frame.shape[1] * scale))), max(1, int(round(frame.shape[0] * scale)))), interpolation=cv2.INTER_AREA)
+
+
+        def contact_sheet(path, video_id, start_s, end_s):
+            columns, rows = SHEET_TILES
+            cap = cv2.VideoCapture(str(path))
+            sheet = np.zeros((rows * 205, columns * 320, 3), dtype=np.uint8)
+            for index, time_s in enumerate(np.linspace(start_s, end_s, columns * rows)):
+                resized = fit(read_frame(cap, time_s), 320, 180)
+                tile = np.zeros((205, 320, 3), dtype=np.uint8)
+                x0 = (320 - resized.shape[1]) // 2
+                y0 = 25 + (180 - resized.shape[0]) // 2
+                tile[y0:y0 + resized.shape[0], x0:x0 + resized.shape[1]] = resized
+                cv2.putText(tile, f"{video_id} | {time_s:.2f}s", (7, 17), cv2.FONT_HERSHEY_SIMPLEX, 0.43, (0, 255, 255), 1, cv2.LINE_AA)
+                sheet[(index // columns) * 205:(index // columns + 1) * 205, (index % columns) * 320:(index % columns + 1) * 320] = tile
+            cap.release()
+            output = SHEETS / f"{video_id}.jpg"
+            assert cv2.imwrite(str(output), sheet, [cv2.IMWRITE_JPEG_QUALITY, 88])
+            return output
+
+
+        def scene_thumbnails(path, video_id, duration_s):
+            cap = cv2.VideoCapture(str(path))
+            outputs = []
+            for index, position in enumerate(SCENE_POSITIONS):
+                frame = fit(read_frame(cap, duration_s * position), SCENE_MAX_SIDE, SCENE_MAX_SIDE)
+                output = SCENE / f"{video_id}_{index}.jpg"
+                assert cv2.imwrite(str(output), frame, [cv2.IMWRITE_JPEG_QUALITY, 90])
+                outputs.append(output)
+            cap.release()
+            return outputs
+
+
+        def normalize_pose(frame):
+            xyz = frame[:, :3].copy()
+            hip = (xyz[LEFT_HIP] + xyz[RIGHT_HIP]) / 2
+            shoulder = (xyz[LEFT_SHOULDER] + xyz[RIGHT_SHOULDER]) / 2
+            scale = max(float(np.linalg.norm(xyz[LEFT_SHOULDER] - xyz[RIGHT_SHOULDER])), float(np.linalg.norm(shoulder - hip)), 1e-6)
+            return np.concatenate([(xyz - hip) / scale, frame[:, 3:4]], axis=1)
+
+
+        def fill_missing(sequence):
+            flat = sequence.reshape(len(sequence), -1)
+            return pd.DataFrame(flat).interpolate(limit_direction="both").fillna(0).to_numpy().reshape(sequence.shape).astype(np.float32)
+
+
+        def extract_pose(path, start_frame, end_frame, source_fps):
+            cap = cv2.VideoCapture(str(path))
+            assert cap.isOpened()
+            cap.set(cv2.CAP_PROP_POS_FRAMES, int(start_frame))
+            next_sample = start_frame / source_fps
+            frame_index = int(start_frame)
+            poses, timestamps, detected, raw = [], [], [], []
+            options = mp.tasks.vision.PoseLandmarkerOptions(
+                base_options=mp.tasks.BaseOptions(model_asset_path=str(MODEL_PATH)),
+                running_mode=mp.tasks.vision.RunningMode.VIDEO, num_poses=1,
+                min_pose_detection_confidence=0.5, min_pose_presence_confidence=0.5,
+                min_tracking_confidence=0.5, output_segmentation_masks=False,
+            )
+            with mp.tasks.vision.PoseLandmarker.create_from_options(options) as landmarker:
+                while frame_index <= int(end_frame):
+                    ok, frame = cap.read()
+                    if not ok:
+                        break
+                    time_s = frame_index / source_fps
+                    frame_index += 1
+                    if time_s + 1e-9 < next_sample:
+                        continue
+                    next_sample += 1 / TARGET_FPS
+                    image = mp.Image(image_format=mp.ImageFormat.SRGB, data=cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
+                    result = landmarker.detect_for_video(image, int(round(time_s * 1000)))
+                    if result.pose_landmarks:
+                        points = result.pose_landmarks[0]
+                        pose = np.asarray([[points[i].x, points[i].y, points[i].z, float(points[i].visibility or 0)] for i in KEEP_17], dtype=np.float32)
+                        poses.append(normalize_pose(pose))
+                        raw.append(pose)
+                        detected.append(True)
+                    else:
+                        poses.append(np.full((17, 4), np.nan, dtype=np.float32))
+                        raw.append(np.full((17, 4), np.nan, dtype=np.float32))
+                        detected.append(False)
+                    timestamps.append(time_s)
+            cap.release()
+            assert poses, "no frames sampled"
+            # Unnormalized image-space landmarks are kept for orientation rules (e.g. supine vs prone).
+            return fill_missing(np.stack(poses)), fill_missing(np.stack(raw)), np.asarray(timestamps, np.float32), np.asarray(detected, bool)
+
+
+        audit_rows = []
+        for row in tqdm(selected.itertuples(index=False), total=len(selected), desc="Clips"):
+            record = {"video_id": row.video_id, "role": row.role, "status": "ok", "error": ""}
+            extension = str(row.video_ext or ".mp4")
+            video_path = VIDEOS / f"{row.video_id}{extension if extension.startswith('.') else '.' + extension}"
+            try:
+                blob = datasets[row.lance_split].take_blobs("video_blob", ids=[int(row.lance_row_id)])[0]
+                payload = blob.read()
+                if hasattr(payload, "to_pybytes"):
+                    payload = payload.to_pybytes()
+                video_path.write_bytes(payload)
+                assert video_path.stat().st_size == int(row.video_size_bytes), "blob size mismatch"
+                record["video_sha256"] = sha256(video_path)
+                info = probe(video_path)
+                record.update(info)
+                bounds = parse_bounds(row.cycle_bounds_json)
+                start_frame = max(0, int(math.floor(min(bounds)))) if bounds else 0
+                end_frame = min(info["source_frames"] - 1, int(math.ceil(max(bounds)))) if bounds else info["source_frames"] - 1
+                assert end_frame > start_frame, ("bad bounds", bounds)
+                record.update({"cycle_boundary_count": len(bounds), "annotated_start_frame": start_frame, "annotated_end_frame": end_frame,
+                               "annotated_start_s": start_frame / info["source_fps"], "annotated_end_s": end_frame / info["source_fps"]})
+                scene_thumbnails(video_path, row.video_id, info["duration_s"])
+                if row.role == "pilot":
+                    contact_sheet(video_path, row.video_id, record["annotated_start_s"], record["annotated_end_s"])
+                    landmarks, image_landmarks, timestamps, detected = extract_pose(video_path, start_frame, end_frame, info["source_fps"])
+                    np.savez_compressed(POSE / f"{row.video_id}.npz", landmarks=landmarks, image_landmarks=image_landmarks,
+                                        timestamps_s=timestamps, detected=detected, target_fps=np.float32(TARGET_FPS),
+                                        source_fps=np.float32(info["source_fps"]), video_id=row.video_id)
+                    record.update({"sampled_frames": len(landmarks), "pose_detection_rate": float(detected.mean())})
+                    if detected.mean() < MIN_POSE_DETECTION:
+                        record["status"] = "low_pose_detection"
+            except Exception as error:  # record and continue; the audit reports every failure
+                record.update({"status": "error", "error": f"{type(error).__name__}: {error}"})
+                traceback.print_exc()
+            finally:
+                video_path.unlink(missing_ok=True)  # licensed raw media never persists
+            audit_rows.append(record)
+
+        source_audit = selected.drop(columns=["cycle_bounds_json"]).merge(pd.DataFrame(audit_rows), on=["video_id", "role"], validate="one_to_one")
+        source_audit.to_csv(REPORT / "source_audit.csv", index=False)
+        assert not any(VIDEOS.iterdir()), "Raw video left on disk."
+        display(source_audit.groupby(["role", "status"]).size())
+        display(source_audit[source_audit.status != "ok"][["video_id", "role", "status", "error"]])
+        '''
+    ),
+    md(
+        """
+        ## Package and download
+        """
+    ),
+    code(
+        r'''
+        failed = int((source_audit.status == "error").sum())
+
+
+        def package_version(name):
+            try:
+                return importlib.metadata.version(name)
+            except importlib.metadata.PackageNotFoundError:
+                return None
+
+
+        run_metadata = {
+            "notebook": "40_colab_repcount_intake_v2_pilot.ipynb",
+            "experiment": "repcount_intake_v2_pilot",
+            "plan": "ml/data/repcount_intake_v2/INTAKE_PLAN.md",
+            "plan_commit": PLAN_COMMIT, "selection_sha256": SELECTION_SHA256,
+            "repcount_lance_revision": LANCE_REVISION, "dry_run": DRY_RUN,
+            "pose_model_url": MODEL_URL, "pose_model_sha256": POSE_MODEL_SHA256,
+            "packages": {name: package_version(name) for name in ("pylance", "mediapipe", "opencv-python-headless", "pandas", "numpy")},
+            "opencv_runtime": cv2.__version__,
+            "target_fps": TARGET_FPS, "rows": int(len(source_audit)),
+            "pilot_rows": int((source_audit.role == "pilot").sum()), "errors": failed,
+            "raw_video_packaged": False, "labels_created": False, "training_performed": False,
+            "model_scored": False, "locked_benchmark_read": False,
+        }
+        (REPORT / "run_metadata.json").write_text(json.dumps(run_metadata, indent=2) + "\n")
+        (REPORT / "README.md").write_text(
+            "# cALorie RepCount-A intake v2 pilot evidence\n\n"
+            + ("DRY RUN: a 4-clip local test, not the pilot.\n\n" if DRY_RUN else "")
+            + "Pose, contact sheets, and scene thumbnails for 64 pilot clips, plus scene thumbnails for the 30 v1 "
+            "clips. No labels, training, model scoring, or locked-benchmark access. Raw video is excluded. "
+            f"Clips with errors: {failed} (see source_audit.csv).\n"
+        )
+        shutil.copy2(INPUTS / "pilot_selection.csv", REPORT / "pilot_selection.csv")
+        for folder in (POSE, SHEETS, SCENE):
+            shutil.copytree(folder, REPORT / folder.name, dirs_exist_ok=True)
+        assert not list(REPORT.rglob("*.mp4")), "Raw video must not be packaged."
+        checksum_lines = [f"{sha256(path)}  {path.relative_to(REPORT)}" for path in sorted(p for p in REPORT.rglob("*") if p.is_file())]
+        (REPORT / "SHA256SUMS.txt").write_text("\n".join(checksum_lines) + "\n")
+        zip_path = WORK.parent / ("calorie_repcount_intake_v2_pilot" + ("_DRYRUN" if DRY_RUN else "") + ".zip")
+        with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as archive:
+            for path in sorted(p for p in REPORT.rglob("*") if p.is_file()):
+                archive.write(path, Path("report") / path.relative_to(REPORT))
+        print("Created:", zip_path, round(zip_path.stat().st_size / 1e6, 1), "MB | clips with errors:", failed)
+        try:
+            from google.colab import files
+            files.download(str(zip_path))
+        except ImportError:
+            print("Not on Colab; ZIP left at", zip_path)
+        '''
+    ),
+    md(
+        """
+        ## Return the ZIP
+
+        Send back `calorie_repcount_intake_v2_pilot.zip` unchanged. A few clip errors are fine;
+        they are listed in `source_audit.csv`.
+        """
+    ),
+]
+
+notebook = {
+    "cells": cells,
+    "metadata": {
+        "accelerator": "CPU",
+        "colab": {"name": OUTPUT.name, "provenance": []},
+        "kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"},
+        "language_info": {"name": "python", "version": "3"},
+    },
+    "nbformat": 4,
+    "nbformat_minor": 5,
+}
+OUTPUT.write_text(json.dumps(notebook, indent=1, ensure_ascii=False) + "\n")
+print(OUTPUT)
