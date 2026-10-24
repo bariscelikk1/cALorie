@@ -1,7 +1,8 @@
-# RepCount-A intake v2 — plan (DRAFT, not approved)
+# RepCount-A intake v2 — plan (approved 2026-10-24)
 
-Status: proposal written 2026-10-24. No notebook, download, or label exists
-yet. Nothing here changes `ml/data/repcount_development_v1/`.
+Status: approved by the user on 2026-10-24, including `auto_verified` for
+non-promotable experiments only (now in `ANNOTATION_GUIDE.md`). The pilot
+notebook is Notebook 40. Nothing here changes `ml/data/repcount_development_v1/`.
 
 ## Goal
 

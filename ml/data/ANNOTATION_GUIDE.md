@@ -15,11 +15,24 @@ Required fields retain the existing v1 schema. New annotation batches should
 also fill the four QA fields in `templates/timeline_labels_v2.csv`:
 
 - `annotation_confidence`: `high`, `medium`, or `low`;
-- `review_status`: `draft`, `reviewed`, `adjudicated`, or `rejected`;
+- `review_status`: `draft`, `reviewed`, `adjudicated`, `auto_verified`, or
+  `rejected`;
 - `reviewer`: stable reviewer name or ID;
 - `needs_second_review`: `true` for ambiguous boundaries or labels.
 
 Low confidence is useful evidence. Never force an uncertain supported label.
+
+### `auto_verified` (approved by the user 2026-10-24)
+
+`auto_verified` means a row passed predeclared automatic pose and
+repetition checks, and its class passed a sampled visual audit, but no person
+or assistant viewed that specific row. Rules:
+
+- `annotation_source` must name the rule set version and the audit result.
+- `auto_verified` rows may be used only in non-promotable experiments.
+- A promotable model needs every training row it uses to be `reviewed` or
+  `adjudicated`.
+- Never relabel an `auto_verified` row as `reviewed` unless it was viewed.
 
 ## Label decision order
 
