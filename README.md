@@ -15,6 +15,7 @@ research/development evidence rather than a final-system guarantee.
 
 ## Source of truth
 
+- Claude migration handoff: [`CLAUDE.md`](CLAUDE.md)
 - Active branch: [`feat/tcn-rebuild`](https://github.com/bariscelikk1/cALorie/tree/feat/tcn-rebuild)
 - Current handoff: [`PROJECT_HANDOFF.md`](PROJECT_HANDOFF.md)
 - ML guide and experiment history: [`ml/README.md`](ml/README.md)

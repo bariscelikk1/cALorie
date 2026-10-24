@@ -106,10 +106,11 @@ consulting the locked rows.
 
 The next arc is external **development** data, not another pass over the locked
 benchmark. `ml/data/repcount_development_v1/` fixes a 30-video RepCount-A
-intake: ten people, with one squat, one sit-up, and one unsupported front raise
-per person. `stu1` through `stu7` are review-only train-pool candidates;
-`stu8` through `stu10` are person-disjoint development validation. Every row
-starts `metadata_only` and `training_allowed=false`.
+intake: ten published source codes, each with one squat, one sit-up, and one
+unsupported front raise. Post-run visual review proved that `stuN` is not a
+verified person identity, so the original `stu1`-`stu7` versus `stu8`-`stu10`
+person-disjoint interpretation is retired. Every row starts `metadata_only`
+and `training_allowed=false`; future roles must be source-group-disjoint.
 
 Notebook `ml/notebooks/37_colab_repcount_external_development_intake.ipynb`
 automatically reads only those 30 embedded video blobs from a pinned public
@@ -118,8 +119,9 @@ extracts cycle-bounded contact sheets and 15-FPS MediaPipe pose, scores the
 already-frozen V6-F model at threshold `0.65`, deletes raw video before export,
 and returns a single diagnostic ZIP. Its provisional metadata-alignment figures
 are not benchmark accuracy and cannot select a threshold or promote labels.
-Visible-motion review is required before any train-pool row can be admitted;
-the three development-validation people remain evaluation-only.
+Visible-motion review is required before any row can be admitted. A new
+versioned experiment manifest must explicitly define training and untouched
+development roles without treating the source codes as identities.
 
 A self-contained local review screen for that exact 17-row queue is under
 `ml/artifacts/youtube_creator_benchmark_v1/independent_confirmation_ui/`.
@@ -980,3 +982,15 @@ two observed duplicate source groups intact: `stu8_49` with `stu9_56`, and
 experiment must predeclare source-group-disjoint roles, remain
 non-promotable, keep threshold 0.65 fixed, and leave the locked creator
 benchmark untouched.
+
+## Claude migration handoff (2026-10-24)
+
+`CLAUDE.md` is now the migration entry point for continuing the project with
+Claude. It links the active branch, draft PR, required contracts, model
+artifacts, locked benchmark, RepCount evidence, direct Colab notebooks, failed
+experiments, collaboration preferences, and the exact constraints for the next
+development experiment. It also records the post-run correction that `stuN`
+is an unverified source code rather than a person identity. The root README and
+RepCount intake README now point to the current interpretation instead of the
+retired person-disjoint assumption. No model, label, metric, or experiment
+artifact changed in this documentation-only checkpoint.
