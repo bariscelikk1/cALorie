@@ -1140,3 +1140,26 @@ visually review all 64 pilot contact sheets, and fix the tier-1 rules once
 on pilot clips only. Notebook 39 (GPU) is still unrun. It could run on the
 Mac's Apple GPU (MPS) if Colab stays unusable; that would need a small
 device option and is not built.
+
+## Intake v2 pilot reviewed; grouping and tier-1 rules locked (2026-10-25)
+
+Details: `ml/data/repcount_intake_v2/PILOT_RESULTS.md`. Claude reviewed all 64
+pilot contact sheets (`pilot_visual_review_v1.csv`). 51 are usable, and 13 are
+not: edited cutaways, talking-head tutorials, crowded or partner scenes, and
+compound moves such as muscle-ups and push-up-to-pike. For usable clips, the
+published action matched the visible motion in every supported bucket.
+
+Scene grouping (`ml/scripts/repcount_intake_v2_scene_groups.py`) uses a frozen
+ResNet-50 with a 0.85 cosine merge threshold. On the 94 clips it merges
+exactly the two known v1 duplicate pairs (0.929, 0.987); the closest distinct
+pair is 0.794. Pairs from 0.78 to 0.90 get a visual check in the full intake.
+
+Tier-1 rules `tier1_v1` (`ml/scripts/repcount_intake_v2_tier1.py`)
+auto-accept 27 of 64 pilot clips with 0 wrong or unusable, and send all 13
+unusable clips to review. Front-raise and `others` clips are always reviewed.
+Because the rules were set on the pilot itself, the real error rate must come
+from the 10% audit in the full intake.
+
+Next: build CPU shard notebooks for the remaining ~950 clips (same evidence
+as Notebook 40), run them locally, then group, apply tier-1, audit, review,
+and assign roles. Notebook 39 (GPU) is still unrun.

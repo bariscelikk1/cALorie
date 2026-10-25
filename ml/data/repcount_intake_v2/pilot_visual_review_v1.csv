@@ -1,0 +1,65 @@
+video_id,pilot_bucket,visible_target,visible_variant,usable,confidence,issue_tags,notes,reviewer,review_status
+train160,bench_press,bench_press,barbell_bench_press,true,high,portrait,Side view of flat barbell bench press.,claude_visual_contact_sheet,reviewed
+stu8_12,bench_press,bench_press,barbell_bench_press,true,high,tight_crop,Head-to-hip crop; legs out of frame.,claude_visual_contact_sheet,reviewed
+stu5_8,bench_press,bench_press,barbell_bench_press,true,high,,Clean side view.,claude_visual_contact_sheet,reviewed
+stu10_5,bench_press,bench_press,barbell_bench_press,true,medium,camera_cut,Several sets edited together from different angles.,claude_visual_contact_sheet,reviewed
+stu2_6,bench_press,bench_press,barbell_bench_press,true,high,multi_person,Spotter standing over the lifter.,claude_visual_contact_sheet,reviewed
+stu4_4,bench_press,bench_press,barbell_bench_press,true,high,multi_person;portrait,Feet-end view with spotter behind the head.,claude_visual_contact_sheet,reviewed
+stu7_7,bench_press,bench_press,barbell_bench_press,true,high,camera_cut;text_overlay,Title overlay then a cut to a closer angle.,claude_visual_contact_sheet,reviewed
+stu1_5,bench_press,bench_press,barbell_bench_press,false,high,cutaway,Mid-clip face and muscle close-ups replace the lift for about a third of the interval.,claude_visual_contact_sheet,reviewed
+stu6_22,jumping_jack,jumping_jack,jumping_jack,true,high,,Clean front view.,claude_visual_contact_sheet,reviewed
+stu5_18,jumping_jack,jumping_jack,jumping_jack,true,high,text_overlay,Timer overlay; brief up-next inset at the end.,claude_visual_contact_sheet,reviewed
+stu1_26,jumping_jack,jumping_jack,jumping_jack,true,high,tight_crop;motion_blur,Legs cut at the knees in some frames.,claude_visual_contact_sheet,reviewed
+stu8_34,jumping_jack,jumping_jack,jumping_jack,true,medium,oblique_view,Three-quarter view; sloppy form.,claude_visual_contact_sheet,reviewed
+stu7_32,jumping_jack,jumping_jack,instruction_mixed,false,high,talking_head;cutaway,Tutorial: talking head and leg close-ups dominate; few continuous reps.,claude_visual_contact_sheet,reviewed
+stu2_33,jumping_jack,jumping_jack,unclear_leg_pattern,false,low,backlit;portrait,Silhouette; some frames look like a lunge stance. Not decidable.,claude_visual_contact_sheet,reviewed
+train1640,jumping_jack,jumping_jack,jumping_jack,true,medium,camera_cut;high_angle,Overhead angle then a cut to a front view.,claude_visual_contact_sheet,reviewed
+stu3_27,jumping_jack,jumping_jack,jumping_jack,true,high,text_overlay,Counter overlay; clean.,claude_visual_contact_sheet,reviewed
+stu9_37,pull_up,pull_up,pull_up,true,high,camera_cut;text_overlay,Edited angles; all pull-ups.,claude_visual_contact_sheet,reviewed
+train2523,pull_up,pull_up,pull_up,true,high,portrait,Back view.,claude_visual_contact_sheet,reviewed
+stu7_41,pull_up,pull_up,doorframe_pull_up,true,medium,portrait,Doorframe bar; small figure.,claude_visual_contact_sheet,reviewed
+stu1_32,pull_up,pull_up,pull_up,true,high,,Back view on a home tower.,claude_visual_contact_sheet,reviewed
+stu2_38,pull_up,unknown,muscle_up,false,high,multi_person;crowd,Muscle-ups (body passes over the bar) in front of a crowd.,claude_visual_contact_sheet,reviewed
+stu3_41,pull_up,pull_up,pull_up,true,medium,tight_crop,Low angle; legs out of frame.,claude_visual_contact_sheet,reviewed
+stu5_35,pull_up,pull_up,pull_up,true,high,portrait,Front view in a hallway.,claude_visual_contact_sheet,reviewed
+stu8_35,pull_up,pull_up,pull_up,true,high,oblique_view,Outdoor side angle.,claude_visual_contact_sheet,reviewed
+stu6_42,push_up,push_up,push_up,true,high,,Clean side view.,claude_visual_contact_sheet,reviewed
+stu1_49,push_up,push_up,push_up_handles,false,high,cutaway;tight_crop,Mostly muscle close-ups with overlays.,claude_visual_contact_sheet,reviewed
+stu7_50,push_up,push_up,push_up,true,high,text_overlay,Counter overlay.,claude_visual_contact_sheet,reviewed
+stu4_40,push_up,push_up,form_demo_push_up,true,medium,text_overlay,Form demo including deliberate faulty reps; still push-up motion.,claude_visual_contact_sheet,reviewed
+stu3_49,push_up,push_up,variant_compilation,false,high,text_overlay,Plyometric and exotic variants (flying and Lalanne) in sequence.,claude_visual_contact_sheet,reviewed
+stu8_43,push_up,push_up,push_up,true,high,text_overlay,Clean side view.,claude_visual_contact_sheet,reviewed
+stu10_42,push_up,push_up,instruction_mixed,false,high,talking_head;camera_cut,Talking-head segments between push-up demos.,claude_visual_contact_sheet,reviewed
+train2737,push_up,unknown,push_up_to_pike,false,high,picture_in_picture,Compound push-up to downward-dog pike.,claude_visual_contact_sheet,reviewed
+test1977,sit_up,sit_up,medicine_ball_sit_up_throw,true,medium,multi_person,Two athletes side by side throwing balls at a wall.,claude_visual_contact_sheet,reviewed
+stu8_54,sit_up,sit_up,partner_held_sit_up,false,high,multi_person;occlusion;text_overlay,Three people; subtitles and partner occlude the performer.,claude_visual_contact_sheet,reviewed
+stu5_55,sit_up,sit_up,decline_crunch,true,medium,handheld;tight_crop,Handheld close camera; parts of the body leave the frame.,claude_visual_contact_sheet,reviewed
+stu2_56,sit_up,sit_up,anchored_sit_up,true,high,,Clean side view.,claude_visual_contact_sheet,reviewed
+stu1_62,sit_up,sit_up,pool_partner_sit_up,false,high,multi_person;occlusion,Performer falls back into a pool; body underwater.,claude_visual_contact_sheet,reviewed
+stu4_53,sit_up,sit_up,full_sit_up,true,high,,Clean outdoor side view.,claude_visual_contact_sheet,reviewed
+stu3_56,sit_up,sit_up,partner_held_sit_up,true,medium,multi_person;crowd;camera_cut,Partner holds feet; crowd; one cutaway to the crowd.,claude_visual_contact_sheet,reviewed
+stu7_59,sit_up,sit_up,decline_bench_sit_up,true,high,camera_cut,Decline bench; one angle change.,claude_visual_contact_sheet,reviewed
+stu6_64,squat,squat,barbell_back_squat,true,high,occlusion,Plates partly occlude the body.,claude_visual_contact_sheet,reviewed
+stu4_72,squat,squat,bodyweight_squat,true,high,multi_person,Coach stands beside the performer.,claude_visual_contact_sheet,reviewed
+stu8_61,squat,squat,barbell_back_squat,true,high,text_overlay,Back view.,claude_visual_contact_sheet,reviewed
+stu5_65,squat,squat,bodyweight_squat,true,high,,Three-quarter rear view.,claude_visual_contact_sheet,reviewed
+stu9_66,squat,squat,bodyweight_squat,true,medium,handheld;portrait,Camera walks around the performer.,claude_visual_contact_sheet,reviewed
+stu3_66,squat,squat,squat_with_jump,true,medium,,Wide-stance squats with a jump between some reps.,claude_visual_contact_sheet,reviewed
+train3912,squat,squat,overhead_squat,true,high,,Front view overhead squat.,claude_visual_contact_sheet,reviewed
+stu7_64,squat,squat,front_squat,true,high,camera_cut,Cross-arm front squat; angle change.,claude_visual_contact_sheet,reviewed
+train970,unknown_front_raise,unknown,cable_front_raise,true,high,handheld;tight_crop;portrait,Upper body only.,claude_visual_contact_sheet,reviewed
+stu7_16,unknown_front_raise,unknown,plate_front_raise,true,high,,Side view.,claude_visual_contact_sheet,reviewed
+stu10_23,unknown_front_raise,unknown,band_front_raise,true,high,portrait;camera_cut,Side then front view.,claude_visual_contact_sheet,reviewed
+stu3_18,unknown_front_raise,unknown,bent_over_dumbbell_raise,true,medium,,Bent-over raise; resembles a dumbbell row. Needs second review.,claude_visual_contact_sheet,reviewed
+stu2_23,unknown_front_raise,unknown,seated_rear_delt_fly,true,medium,,Seated bent-over reverse fly; a lateral-raise confuser.,claude_visual_contact_sheet,reviewed
+stu1_14,unknown_front_raise,unknown,shoulder_complex,false,high,,Front raise plus lateral raise plus overhead press complex; contains supported motions.,claude_visual_contact_sheet,reviewed
+stu4_8,unknown_front_raise,unknown,front_raise_to_overhead,true,high,portrait,Side view.,claude_visual_contact_sheet,reviewed
+stu6_9,unknown_front_raise,unknown,instruction_mixed,false,high,talking_head;multi_person,Two-person tutorial; few reps.,claude_visual_contact_sheet,reviewed
+stu12_15,unknown_other,unknown,pommel_horse,true,high,text_overlay,Broadcast; moving camera.,claude_visual_contact_sheet,reviewed
+stu13_29,unknown_other,unknown,pommel_horse,true,high,text_overlay,Broadcast; moving camera.,claude_visual_contact_sheet,reviewed
+stu11_17,unknown_other,unknown,pommel_horse,true,medium,camera_cut;small_subject,Several angles; distant shots.,claude_visual_contact_sheet,reviewed
+stu10_0,unknown_other,unknown,battle_rope,true,high,multi_person;camera_cut;text_overlay,Trainer visible in wide shots.,claude_visual_contact_sheet,reviewed
+stu9_0,unknown_other,unknown,battle_rope,true,high,handheld;text_overlay,Close crop at the start.,claude_visual_contact_sheet,reviewed
+stu5_28,unknown_other,unknown,soccer_ball_drill,false,high,title_card;tight_crop;camera_cut,Edited drill montage with title cards.,claude_visual_contact_sheet,reviewed
+stu8_0,unknown_other,unknown,battle_rope,true,medium,small_subject;text_overlay,Distant performer behind camera UI.,claude_visual_contact_sheet,reviewed
+stu1_1,unknown_other,unknown,battle_rope,true,high,text_overlay,Clean front view.,claude_visual_contact_sheet,reviewed
