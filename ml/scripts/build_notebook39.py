@@ -123,10 +123,16 @@ cells = [
         seed_everything(RUN_SEEDS[0])
         torch.backends.cudnn.deterministic = True
         torch.backends.cudnn.benchmark = False
-        DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        # Local runs may opt into Apple-silicon GPUs with CALORIE_DEVICE=mps; Colab uses CUDA.
+        if torch.cuda.is_available():
+            DEVICE = torch.device("cuda")
+        elif os.environ.get("CALORIE_DEVICE") == "mps" and torch.backends.mps.is_available():
+            DEVICE = torch.device("mps")
+        else:
+            DEVICE = torch.device("cpu")
         print("Device:", DEVICE, "| dry run:", DRY_RUN)
         if not DRY_RUN:
-            assert DEVICE.type == "cuda", "Select a T4 runtime before training."
+            assert DEVICE.type in ("cuda", "mps"), "Select a T4 runtime before training."
         '''
     ),
     md(
@@ -908,6 +914,8 @@ cells = [
                 del gates
                 if DEVICE.type == "cuda":
                     torch.cuda.empty_cache()
+                elif DEVICE.type == "mps":
+                    torch.mps.empty_cache()
         '''
     ),
     md(
