@@ -1221,3 +1221,9 @@ Next: the user's 20-clip spot-check, then assign train/dev/sealed-test roles
 by role group, then predeclare a training experiment that retrains the
 classifier as well as the gate (Notebook 39 showed gate-only retraining
 cannot fix sit-ups).
+
+## Intake v2 spot-check passed (2026-10-27)
+
+The user checked 20 hash-sampled usable clips (`spotcheck_sample_v1.csv`)
+and found all 20 labels correct. Next: assign train/dev/sealed-test roles by
+role group, then predeclare the classifier-plus-gate training experiment.

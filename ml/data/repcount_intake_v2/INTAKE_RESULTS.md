@@ -55,5 +55,13 @@ clips go only to train or dev.
 
 ## Not done
 
-- No user spot-check yet (the plan's tier 3: 20 random clips).
+- User spot-check done: 20 of 20 correct (see below).
 - No train/dev/sealed-test assignment and no training run.
+
+## User spot-check (2026-10-27)
+
+`spotcheck_sample_v1.csv`: 20 usable clips drawn by a fixed hash rule (3 per
+supported class plus 2 unknown; 17 `reviewed`, 3 `auto_verified`). The user
+judged all 20 labels correct from the contact sheets. This is the
+independent second review the plan required. With 20 clips, it shows the
+error rate is likely low but cannot rule out a few percent.
