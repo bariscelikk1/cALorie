@@ -1191,3 +1191,17 @@ median), end-to-end from 13 to 18 of 30, and internal Macro F1 from 81.64% to
 `bench_press` by the frozen V6-E classifier. So the next RepCount training
 experiment must retrain the classifier as well as the gate. Per the design,
 no rerun or tuning follows from this result.
+
+## Intake v2: all evidence in; tier-1 and audit done (2026-10-27)
+
+Evidence for 945 of 946 clips is archived (`ml/artifacts/repcount_intake_v2/full/`).
+Role groups are in `full_role_groups_v1.csv`: merge at 0.84, 857 groups,
+largest 15, and 670 clips eligible for the sealed test. Tier-1 `tier1_v1`
+(`full_tier1_v1.csv`) auto-accepts only 201 of 945 (21%; the pilot gave 42%),
+so 744 clips need review. The audit (`full_review_queue_v1.csv`, 28 clips)
+found 1 wrong label (bench press `stu8_11` is a leg machine) and 2 unusable
+clips (jumping jack `train1715` is a group class; squat `stu8_64` shows legs
+only). No class exceeded the 1-error rule, so auto-accept stands. Bench press
+sat at the limit, so its remaining 7 auto-accepts are also reviewed (stricter
+than the rule). The review of the remaining 646 clips continues in
+`full_visual_review_v1.csv` (133 rows so far).

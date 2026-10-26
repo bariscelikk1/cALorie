@@ -104,3 +104,31 @@ stu10_14,unknown,plate_front_raise,true,medium,,Low camera angle.,claude_visual_
 stu3_14,unknown,cable_front_raise,true,high,,Side view.,claude_visual_contact_sheet,reviewed
 stu4_11,unknown,plate_front_raise_to_overhead,true,high,text_overlay,Front-raise overlay text.,claude_visual_contact_sheet,reviewed
 stu11_6,unknown,hammer_throw,true,medium,small_subject,Athletics broadcast.,claude_visual_contact_sheet,reviewed
+stu7_8,bench_press,barbell_bench_press,true,high,camera_cut,Audit sample: correct.,claude_visual_contact_sheet,reviewed
+stu8_11,unknown,seated_leg_machine,true,medium,text_overlay,Audit sample: WRONG auto-accept; seated leg machine (not bench press).,claude_visual_contact_sheet,reviewed
+val77,bench_press,dumbbell_bench_press,true,high,,Audit sample: correct.,claude_visual_contact_sheet,reviewed
+stu10_29,jumping_jack,jumping_jack,true,high,,Audit sample: correct.,claude_visual_contact_sheet,reviewed
+stu3_26,jumping_jack,jumping_jack,true,high,text_overlay,Audit sample: correct.,claude_visual_contact_sheet,reviewed
+stu3_30,jumping_jack,jumping_jack,true,high,portrait;text_overlay,Audit sample: correct.,claude_visual_contact_sheet,reviewed
+stu7_34,jumping_jack,jumping_jack,true,high,picture_in_picture;text_overlay,Audit sample: correct.,claude_visual_contact_sheet,reviewed
+stu9_30,jumping_jack,jumping_jack,true,high,text_overlay,Audit sample: correct.,claude_visual_contact_sheet,reviewed
+stu9_34,jumping_jack,jumping_jack,true,medium,camera_cut,Audit sample: correct.,claude_visual_contact_sheet,reviewed
+train1715,jumping_jack,group_class,false,high,multi_person;crowd,Audit sample: UNUSABLE auto-accept; many people jumping.,claude_visual_contact_sheet,reviewed
+stu5_37,pull_up,box_assisted_pull_up,true,medium,small_subject,Audit sample: correct (box-assisted).,claude_visual_contact_sheet,reviewed
+stu9_38,pull_up,pull_up,true,high,camera_cut;text_overlay,Audit sample: correct; brief end card.,claude_visual_contact_sheet,reviewed
+test1454,pull_up,pull_up,true,medium,portrait;backlit,Audit sample: correct.,claude_visual_contact_sheet,reviewed
+stu1_48,push_up,push_up,true,high,high_angle,Audit sample: correct.,claude_visual_contact_sheet,reviewed
+stu4_47,push_up,push_up,true,medium,multi_person;portrait,Audit sample: correct; bystanders.,claude_visual_contact_sheet,reviewed
+stu8_46,push_up,push_up,true,high,text_overlay,Audit sample: correct.,claude_visual_contact_sheet,reviewed
+stu2_57,sit_up,machine_ab_crunch,true,medium,,Audit sample: correct (torso-flexion machine).,claude_visual_contact_sheet,reviewed
+stu6_56,sit_up,sit_up,true,medium,portrait,Audit sample: correct.,claude_visual_contact_sheet,reviewed
+stu8_57,sit_up,v_sit_crunch,true,medium,camera_cut,Audit sample: correct.,claude_visual_contact_sheet,reviewed
+stu3_69,squat,bodyweight_squat,true,high,portrait,Audit sample: correct.,claude_visual_contact_sheet,reviewed
+stu4_65,squat,squat_jump,true,medium,text_overlay,Audit sample: correct.,claude_visual_contact_sheet,reviewed
+stu5_63,squat,bodyweight_squat,true,high,text_overlay,Audit sample: correct.,claude_visual_contact_sheet,reviewed
+stu7_68,squat,bodyweight_squat,true,high,,Audit sample: correct.,claude_visual_contact_sheet,reviewed
+stu8_64,squat,bodyweight_squat,false,high,tight_crop,Audit sample: UNUSABLE auto-accept; legs only.,claude_visual_contact_sheet,reviewed
+val1250,squat,barbell_back_squat,true,high,,Audit sample: correct.,claude_visual_contact_sheet,reviewed
+stu2_0,unknown,battle_rope,true,high,,Audit sample: correct.,claude_visual_contact_sheet,reviewed
+stu5_2,unknown,battle_rope,true,high,text_overlay,Audit sample: correct.,claude_visual_contact_sheet,reviewed
+stu6_0,unknown,battle_rope,true,high,text_overlay,Audit sample: correct.,claude_visual_contact_sheet,reviewed
