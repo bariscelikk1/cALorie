@@ -1178,3 +1178,16 @@ front raise `stu9_17` is a behind-the-neck shoulder press.
 Notebook 39 gained an opt-in `CALORIE_DEVICE=mps` (commit `d34a840`). A dry
 run on the Mac's GPU passed both parity checks. The single predeclared real
 run started on MPS on 2026-10-26; its result is not in yet.
+
+## Notebook 39 result: data effect not supported (2026-10-26)
+
+The single predeclared run finished on the Mac's GPU. Archive:
+`ml/artifacts/repcount_gate_rotation_v1/` (README has the full table). The
+verdict is `data_effect_not_supported`: the seed-median false-unknown count
+was 6/18 against a required at most 5/18. The other four criteria passed.
+Observations, not claims: unknown rejection rose from 7 to 11 of 12 (control
+median), end-to-end from 13 to 18 of 30, and internal Macro F1 from 81.64% to
+82.26%. Sit-ups stayed at 0/7, because accepted sit-ups are classified as
+`bench_press` by the frozen V6-E classifier. So the next RepCount training
+experiment must retrain the classifier as well as the gate. Per the design,
+no rerun or tuning follows from this result.

@@ -214,7 +214,7 @@ Every row remains `training_allowed=false`.
 | Notebook 35 | Provisional diagnostic superseded by Notebook 36. |
 | Notebook 36 | One-time locked benchmark; V6-F won; result frozen. |
 | Notebooks 37-38 | RepCount diagnosis and adjudication; no training yet. |
-| Notebook 39 | RepCount gate rotation built and dry-run locally; awaiting Colab result. |
+| Notebook 39 | Ran once on Mac GPU: data effect not supported (false-unknown 6/18 vs required 5/18); sit-ups 0/7 because the frozen classifier calls them bench press. |
 | Notebook 40 | RepCount-A intake v2 pilot evidence (64 clips); dry-run locally; awaiting Colab result. |
 
 The full history is in [PROJECT_HANDOFF.md](https://github.com/bariscelikk1/cALorie/blob/feat/tcn-rebuild/PROJECT_HANDOFF.md).
