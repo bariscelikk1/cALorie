@@ -1205,3 +1205,19 @@ only). No class exceeded the 1-error rule, so auto-accept stands. Bench press
 sat at the limit, so its remaining 7 auto-accepts are also reviewed (stricter
 than the rule). The review of the remaining 646 clips continues in
 `full_visual_review_v1.csv` (133 rows so far).
+
+## Intake v2 labeled: 718 usable clips (2026-10-27)
+
+Claude reviewed every clip that tier-1 did not auto-accept (779 full-intake
+plus 64 pilot), plus the audit sample. Final table:
+`ml/data/repcount_intake_v2/intake_v2_labels_v1.csv`; summary in
+`INTAKE_RESULTS.md`. 718 of 1,009 clips are usable: unknown 229, squat 99,
+jumping_jack 90, bench_press 81, pull_up 80, sit_up 68, push_up 58, plus a few
+lateral raises, deadlifts, and shoulder presses. Published RepCount labels
+were wrong for 41 usable clips; visible motion decided every label. All rows
+remain `training_allowed=false`.
+
+Next: the user's 20-clip spot-check, then assign train/dev/sealed-test roles
+by role group, then predeclare a training experiment that retrains the
+classifier as well as the gate (Notebook 39 showed gate-only retraining
+cannot fix sit-ups).
