@@ -164,22 +164,28 @@ def rule_bucket(published_action: str) -> str:
 AUTO_LABEL = {"unknown_battle_rope_or_pommel": "unknown"}
 
 
+def score(report_dir: Path, row) -> dict:
+    f = features(report_dir / "pose" / f"{row.video_id}.npz", int(row.published_count))
+    bucket = rule_bucket(row.published_action)
+    decision, reasons = decide(bucket, f)
+    return {"video_id": row.video_id, "published_action": row.published_action, "rule_bucket": bucket,
+            "tier1_decision": decision,
+            "tier1_label": AUTO_LABEL.get(bucket, bucket) if decision == "auto_accept" else "",
+            "tier1_fail_reasons": reasons, "rule_set": RULE_SET, **f}
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("report_dir", type=Path, help="extracted Notebook 40 report/ directory")
     parser.add_argument("output", type=Path)
+    parser.add_argument("report_dirs", type=Path, nargs="+", help="extracted Notebook 40/41 report/ directories")
     args = parser.parse_args()
-    selection = pd.read_csv(args.report_dir / "pilot_selection.csv")
     rows = []
-    for row in selection[selection.role == "pilot"].itertuples(index=False):
-        path = args.report_dir / "pose" / f"{row.video_id}.npz"
-        f = features(path, int(row.published_count))
-        bucket = rule_bucket(row.published_action)
-        decision, reasons = decide(bucket, f)
-        rows.append({"video_id": row.video_id, "published_action": row.published_action, "rule_bucket": bucket,
-                     "tier1_decision": decision,
-                     "tier1_label": AUTO_LABEL.get(bucket, bucket) if decision == "auto_accept" else "",
-                     "tier1_fail_reasons": reasons, "rule_set": RULE_SET, **f})
+    for report_dir in args.report_dirs:
+        name = "pilot_selection.csv" if (report_dir / "pilot_selection.csv").exists() else "full_selection.csv"
+        selection = pd.read_csv(report_dir / name)
+        # Only clips whose pose was extracted in this report (pilot rows or this shard's rows).
+        has_pose = selection.video_id.map(lambda v: (report_dir / "pose" / f"{v}.npz").exists())
+        rows += [score(report_dir, row) for row in selection[has_pose].itertuples(index=False)]
     pd.DataFrame(rows).to_csv(args.output, index=False, float_format="%.4f")
     print(f"wrote {args.output}: {len(rows)} clips, {sum(r['tier1_decision'] == 'auto_accept' for r in rows)} auto-accepted")
 

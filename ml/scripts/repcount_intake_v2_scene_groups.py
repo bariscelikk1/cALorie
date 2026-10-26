@@ -18,18 +18,19 @@ GRAY_ZONE = (0.78, 0.90)  # pairs here need a visual check in the full intake
 THUMBNAILS_PER_CLIP = 3
 
 
-def embed(scene_dir: Path) -> tuple[list[str], np.ndarray]:
+def embed(scene_dirs: list[Path]) -> tuple[list[str], np.ndarray]:
     """Frozen ImageNet ResNet-50; each clip is the normalized mean of its 3 thumbnail embeddings."""
     weights = torchvision.models.ResNet50_Weights.IMAGENET1K_V2
     model = torchvision.models.resnet50(weights=weights)
     model.fc = torch.nn.Identity()
     model.eval()
     prep = weights.transforms()
-    ids = sorted({path.name.rsplit("_", 1)[0] for path in scene_dir.glob("*.jpg")})
+    folder = {path.name.rsplit("_", 1)[0]: d for d in scene_dirs for path in d.glob("*.jpg")}
+    ids = sorted(folder)
     vectors = []
     with torch.no_grad():
         for video_id in ids:
-            images = torch.stack([prep(read_image(str(scene_dir / f"{video_id}_{i}.jpg"))) for i in range(THUMBNAILS_PER_CLIP)])
+            images = torch.stack([prep(read_image(str(folder[video_id] / f"{video_id}_{i}.jpg"))) for i in range(THUMBNAILS_PER_CLIP)])
             e = model(images)
             e = e / e.norm(dim=1, keepdim=True)
             mean = e.mean(0)
@@ -66,11 +67,11 @@ def groups(ids: list[str], vectors: np.ndarray) -> tuple[pd.DataFrame, pd.DataFr
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("scene_dir", type=Path, help="report/scene directory of thumbnails")
     parser.add_argument("groups_csv", type=Path)
     parser.add_argument("gray_zone_csv", type=Path)
+    parser.add_argument("scene_dirs", type=Path, nargs="+", help="report/scene directories of thumbnails")
     args = parser.parse_args()
-    ids, vectors = embed(args.scene_dir)
+    ids, vectors = embed(args.scene_dirs)
     assignment, gray = groups(ids, vectors)
     assignment.to_csv(args.groups_csv, index=False)
     gray.sort_values("similarity", ascending=False).to_csv(args.gray_zone_csv, index=False)
