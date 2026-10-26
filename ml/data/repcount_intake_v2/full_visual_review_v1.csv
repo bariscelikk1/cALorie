@@ -77,3 +77,30 @@ stu11_8,unknown,rowing_machine,true,high,text_overlay,Rowing ergometer side view
 stu12_0,unknown,rowing_machine,true,high,text_overlay,Rowing ergometer front view with timer.,claude_visual_contact_sheet,reviewed
 stu12_10,unknown,rowing_boat,false,high,multi_person;small_subject,Distant crew boat; several people.,claude_visual_contact_sheet,reviewed
 stu12_9,unknown,rowing_boat,false,high,multi_person,Crew boat; several people overlap.,claude_visual_contact_sheet,reviewed
+stu5_4,bench_press,instruction_mixed,false,high,text_overlay;camera_cut;title_card,Tutorial with captions and a paper-title slide.,claude_visual_contact_sheet,reviewed
+stu8_10,bench_press,barbell_bench_press,true,medium,multi_person;camera_cut;text_overlay,Several dated sets with a spotter.,claude_visual_contact_sheet,reviewed
+stu3_21,jumping_jack,jumping_jack,true,high,,Outdoor front view.,claude_visual_contact_sheet,reviewed
+stu3_24,jumping_jack,jumping_jack,true,high,multi_person,Child in the background.,claude_visual_contact_sheet,reviewed
+stu5_22,jumping_jack,jumping_jack,false,medium,cutaway;dark,Dark studio with feet close-up cutaways.,claude_visual_contact_sheet,reviewed
+stu5_27,jumping_jack,jumping_jack,true,medium,,Some reps are a cross-jack variant.,claude_visual_contact_sheet,reviewed
+stu1_35,pull_up,pull_up,true,medium,multi_person;crowd,Event with judges standing beside the performer.,claude_visual_contact_sheet,reviewed
+stu5_40,pull_up,pull_up,true,medium,portrait;small_subject,Same room as stu4_38 (same source).,claude_visual_contact_sheet,reviewed
+stu6_34,pull_up,instruction_mixed,false,high,talking_head;title_card,Tutorial with talking head and logos.,claude_visual_contact_sheet,reviewed
+test1496,pull_up,pull_up,false,low,backlit,Washed out; body barely visible.,claude_visual_contact_sheet,reviewed
+stu10_52,push_up,push_up,true,high,text_overlay,Front view with counter.,claude_visual_contact_sheet,reviewed
+stu2_53,push_up,push_up,true,medium,multi_person,Bystander in the background; some knee push-ups.,claude_visual_contact_sheet,reviewed
+stu2_54,push_up,push_up,true,high,,Dog beside the performer; front view.,claude_visual_contact_sheet,reviewed
+stu5_43,push_up,instruction_mixed,false,high,talking_head;camera_cut,Tutorial with talking head.,claude_visual_contact_sheet,reviewed
+stu5_47,push_up,instruction_mixed,false,high,title_card;cutaway,Tutorial with title card and close-ups.,claude_visual_contact_sheet,reviewed
+stu1_56,unknown,leg_raise_crunch,true,medium,text_overlay,Legs held vertical; reverse-crunch style stays unknown.,claude_visual_contact_sheet,reviewed
+stu6_57,squat,barbell_back_squat,true,medium,portrait;multi_person;small_subject,Coach beside the rack.,claude_visual_contact_sheet,reviewed
+stu6_65,squat,bodyweight_squat,true,high,,Front view.,claude_visual_contact_sheet,reviewed
+stu7_65,squat,instruction_mixed,false,medium,text_overlay;talking_head,Zercher squat explainer ending in a talking head.,claude_visual_contact_sheet,reviewed
+stu12_12,unknown,pommel_horse,true,medium,text_overlay;small_subject,Broadcast.,claude_visual_contact_sheet,reviewed
+stu12_28,unknown,pommel_horse,true,medium,text_overlay;small_subject,Broadcast.,claude_visual_contact_sheet,reviewed
+stu12_37,unknown,pommel_horse,true,medium,text_overlay;small_subject,Broadcast.,claude_visual_contact_sheet,reviewed
+stu10_13,unknown,instruction_mixed,false,high,cutaway;tight_crop,Back-muscle close-ups dominate; brief lateral raises.,claude_visual_contact_sheet,reviewed
+stu10_14,unknown,plate_front_raise,true,medium,,Low camera angle.,claude_visual_contact_sheet,reviewed
+stu3_14,unknown,cable_front_raise,true,high,,Side view.,claude_visual_contact_sheet,reviewed
+stu4_11,unknown,plate_front_raise_to_overhead,true,high,text_overlay,Front-raise overlay text.,claude_visual_contact_sheet,reviewed
+stu11_6,unknown,hammer_throw,true,medium,small_subject,Athletics broadcast.,claude_visual_contact_sheet,reviewed
