@@ -1,0 +1,79 @@
+video_id,visible_target,visible_variant,usable,confidence,issue_tags,notes,reviewer,review_status
+stu10_10,bench_press,barbell_bench_press,true,medium,camera_cut,Two settings edited together; all bench press.,claude_visual_contact_sheet,reviewed
+stu10_3,bench_press,incline_bench_press,true,medium,small_subject,Incline press; distant camera.,claude_visual_contact_sheet,reviewed
+stu10_4,bench_press,barbell_bench_press,true,high,,Clean side view.,claude_visual_contact_sheet,reviewed
+stu10_8,bench_press,barbell_bench_press,true,high,multi_person;portrait,Spotter behind.,claude_visual_contact_sheet,reviewed
+stu1_8,bench_press,barbell_bench_press,true,medium,multi_person;portrait;small_subject,Spotter; small figure.,claude_visual_contact_sheet,reviewed
+stu2_9,bench_press,barbell_bench_press,true,medium,multi_person;crowd,Spotter and crowded gym.,claude_visual_contact_sheet,reviewed
+stu5_6,bench_press,dumbbell_bench_press,true,high,,Close high angle.,claude_visual_contact_sheet,reviewed
+stu7_13,squat,barbell_back_squat,true,medium,camera_cut;text_overlay,Published bench_pressing but visibly a barbell back squat (overlay says Barbell Squat).,claude_visual_contact_sheet,reviewed
+stu8_13,bench_press,barbell_bench_press,true,medium,small_subject,Side view.,claude_visual_contact_sheet,reviewed
+stu8_14,bench_press,instruction_mixed,false,high,cutaway;title_card,Tutorial with anatomy diagram cutaways.,claude_visual_contact_sheet,reviewed
+stu8_3,bench_press,barbell_bench_press,true,high,text_overlay,Three-quarter view.,claude_visual_contact_sheet,reviewed
+stu8_4,deadlift,barbell_deadlift,true,medium,camera_cut;text_overlay,Published bench_pressing but visibly a deadlift from the floor.,claude_visual_contact_sheet,reviewed
+stu8_9,bench_press,barbell_bench_press,true,high,text_overlay,Several sets with weight overlays.,claude_visual_contact_sheet,reviewed
+stu9_10,bench_press,barbell_bench_press,true,medium,multi_person,Two spotters standing over the lifter.,claude_visual_contact_sheet,reviewed
+stu9_11,bench_press,mixed_with_rest,false,high,camera_cut,Rest and sitting segments between reps.,claude_visual_contact_sheet,reviewed
+stu9_4,bench_press,incline_dumbbell_press,true,medium,camera_cut;cutaway,Incline dumbbell press; white intro frame.,claude_visual_contact_sheet,reviewed
+test118,bench_press,barbell_bench_press,true,high,multi_person,Spotter behind; clean side view.,claude_visual_contact_sheet,reviewed
+train156,bench_press,dumbbell_bench_press,true,medium,tight_crop;multi_person,Close crop; spotter legs in frame.,claude_visual_contact_sheet,reviewed
+stu2_32,jumping_jack,jumping_jack,true,medium,tight_crop,Legs mostly out of frame.,claude_visual_contact_sheet,reviewed
+stu3_29,jumping_jack,workout_montage,false,high,camera_cut;cutaway;multi_person,Montage of different people and title cards.,claude_visual_contact_sheet,reviewed
+stu4_26,unknown,high_knee_jack,false,medium,text_overlay,High-knee jack variant alternating with knee raises.,claude_visual_contact_sheet,reviewed
+stu1_34,pull_up,instruction_mixed,false,high,title_card;cutaway,Tutorial with before/after stills and text slides.,claude_visual_contact_sheet,reviewed
+stu2_40,pull_up,pull_up,true,medium,portrait;small_subject,Front view.,claude_visual_contact_sheet,reviewed
+stu3_32,pull_up,pull_up,true,high,text_overlay,Outdoor front view.,claude_visual_contact_sheet,reviewed
+stu3_33,pull_up,pull_up,true,medium,portrait;small_subject,Dark indoor.,claude_visual_contact_sheet,reviewed
+stu3_39,pull_up,program_montage,false,medium,text_overlay;camera_cut,Training-plan montage; text panel covers half the frame.,claude_visual_contact_sheet,reviewed
+stu4_34,pull_up,mixed_with_talking,false,high,camera_cut;talking_head,Talking segments between sets.,claude_visual_contact_sheet,reviewed
+stu4_38,pull_up,pull_up,true,medium,portrait,Indoor.,claude_visual_contact_sheet,reviewed
+stu5_34,pull_up,pull_up,true,medium,camera_cut;cutaway,Challenge video; brief close-up.,claude_visual_contact_sheet,reviewed
+stu7_42,pull_up,pull_up,true,high,portrait,Front view.,claude_visual_contact_sheet,reviewed
+stu7_44,unknown,crowd_scene,false,high,crowd,Festival crowd; no visible pull-up.,claude_visual_contact_sheet,reviewed
+stu9_43,unknown,muscle_up,false,high,crowd;multi_person,Muscle-ups at a crowded event.,claude_visual_contact_sheet,reviewed
+stu9_44,pull_up,pull_up,true,medium,camera_cut,Outdoor front view; close-up in the last frame.,claude_visual_contact_sheet,reviewed
+train2502,unknown,undecidable,false,low,rotated;dark,Rotated dark footage; motion not decidable.,claude_visual_contact_sheet,reviewed
+stu10_41,push_up,push_up,true,medium,high_angle;handheld,Moving high camera.,claude_visual_contact_sheet,reviewed
+stu1_44,push_up,push_up,true,high,camera_cut,Side then front view.,claude_visual_contact_sheet,reviewed
+stu1_51,push_up,instruction_mixed,false,high,cutaway;title_card,Tutorial with close-ups and logo card.,claude_visual_contact_sheet,reviewed
+stu3_47,unknown,static_plank_or_undecidable,false,low,,High plank held in every sampled frame; push-up motion not visible.,claude_visual_contact_sheet,reviewed
+stu5_45,push_up,push_up,true,high,,Clean side view.,claude_visual_contact_sheet,reviewed
+stu6_39,push_up,progression_levels,false,medium,text_overlay,Level-by-level push-up progression variants.,claude_visual_contact_sheet,reviewed
+stu6_41,push_up,push_up,true,high,text_overlay,Counter overlay; side view.,claude_visual_contact_sheet,reviewed
+stu9_52,push_up,push_up,true,medium,handheld;tight_crop,Close handheld camera.,claude_visual_contact_sheet,reviewed
+test1624,unknown,burpee_or_inchworm,false,medium,,Push-up combined with a pike or jump.,claude_visual_contact_sheet,reviewed
+train2659,unknown,undecidable,false,low,dark;tight_crop,Too dark and close to decide.,claude_visual_contact_sheet,reviewed
+stu4_60,unknown,tuck_crunch,true,medium,text_overlay,Knees and torso meet; jackknife-like tuck stays unknown per the v1 rule.,claude_visual_contact_sheet,reviewed
+stu5_49,sit_up,variant_demo,false,medium,camera_cut;title_card,Mixed sit-up and leg-raise demo; logo card.,claude_visual_contact_sheet,reviewed
+stu5_58,sit_up,instruction_mixed,false,high,talking_head;multi_person,Trainer explanation between reps.,claude_visual_contact_sheet,reviewed
+stu6_48,sit_up,crunch,true,high,text_overlay,Crunches on a mat.,claude_visual_contact_sheet,reviewed
+stu7_60,unknown,standing_oblique_crunch,true,medium,text_overlay,Standing knee-to-elbow crunch; not a sit-up.,claude_visual_contact_sheet,reviewed
+stu8_56,sit_up,weighted_plate_sit_up,true,medium,,Sit-up holding a plate overhead.,claude_visual_contact_sheet,reviewed
+test2023,unknown,undecidable,false,low,tight_crop;occlusion,Performer inside a vehicle; motion unclear.,claude_visual_contact_sheet,reviewed
+train3367,sit_up,machine_sit_up,false,low,handheld;motion_blur,Blurry outdoor sit-up machine.,claude_visual_contact_sheet,reviewed
+stu5_70,squat,barbell_back_squat,true,high,,Side view in a rack.,claude_visual_contact_sheet,reviewed
+test2298,squat,barbell_back_squat,true,medium,portrait;occlusion,Plates occlude the body.,claude_visual_contact_sheet,reviewed
+test2320,unknown,no_person_visible,false,high,portrait,Gym floor; no performer visible in the samples.,claude_visual_contact_sheet,reviewed
+test2326,squat,bodyweight_squat,true,high,portrait,Front-left view.,claude_visual_contact_sheet,reviewed
+stu11_18,unknown,pommel_horse,true,medium,text_overlay;small_subject,Broadcast.,claude_visual_contact_sheet,reviewed
+stu11_25,unknown,pommel_horse,true,medium,text_overlay;camera_cut;small_subject,Broadcast.,claude_visual_contact_sheet,reviewed
+stu12_24,unknown,pommel_horse,true,medium,text_overlay;small_subject,Broadcast.,claude_visual_contact_sheet,reviewed
+stu12_35,unknown,pommel_horse,true,medium,text_overlay;small_subject,Broadcast.,claude_visual_contact_sheet,reviewed
+stu13_12,unknown,pommel_horse,true,medium,text_overlay;small_subject,Broadcast.,claude_visual_contact_sheet,reviewed
+stu13_22,unknown,pommel_horse,true,medium,text_overlay;small_subject,Broadcast.,claude_visual_contact_sheet,reviewed
+stu13_24,unknown,pommel_horse,true,medium,text_overlay;small_subject,Broadcast.,claude_visual_contact_sheet,reviewed
+stu13_37,unknown,pommel_horse,true,medium,text_overlay;small_subject,Broadcast.,claude_visual_contact_sheet,reviewed
+stu2_14,unknown,front_and_lateral_raise_alternating,false,high,text_overlay;camera_cut,Alternates front raises with lateral raises (a supported class).,claude_visual_contact_sheet,reviewed
+stu3_9,unknown,plate_front_raise,true,high,text_overlay,Front view.,claude_visual_contact_sheet,reviewed
+stu9_17,shoulder_press,behind_neck_shoulder_press,true,medium,text_overlay;cutaway,Published front_raise but visibly a behind-the-neck shoulder press; brief anatomy overlay frames.,claude_visual_contact_sheet,reviewed
+stu9_27,unknown,seated_rear_delt_fly,true,medium,,Bent-over rear-delt fly; lateral-raise confuser.,claude_visual_contact_sheet,reviewed
+test539,unknown,dumbbell_front_raise,true,medium,multi_person,Trainer stands beside the performer.,claude_visual_contact_sheet,reviewed
+test558,unknown,close_up,false,high,tight_crop;cutaway,Slow-motion arm close-up only.,claude_visual_contact_sheet,reviewed
+train1025,unknown,dumbbell_front_raise,true,medium,portrait;small_subject,Standing front raise.,claude_visual_contact_sheet,reviewed
+train929,unknown,instruction_mixed,false,high,talking_head;multi_person;text_overlay,Two-person tutorial.,claude_visual_contact_sheet,reviewed
+train941,unknown,seated_dumbbell_front_raise,true,medium,small_subject,Seated on a bench.,claude_visual_contact_sheet,reviewed
+stu11_4,unknown,hammer_throw,true,medium,small_subject;text_overlay,Athletics broadcast.,claude_visual_contact_sheet,reviewed
+stu11_8,unknown,rowing_machine,true,high,text_overlay,Rowing ergometer side view.,claude_visual_contact_sheet,reviewed
+stu12_0,unknown,rowing_machine,true,high,text_overlay,Rowing ergometer front view with timer.,claude_visual_contact_sheet,reviewed
+stu12_10,unknown,rowing_boat,false,high,multi_person;small_subject,Distant crew boat; several people.,claude_visual_contact_sheet,reviewed
+stu12_9,unknown,rowing_boat,false,high,multi_person,Crew boat; several people overlap.,claude_visual_contact_sheet,reviewed

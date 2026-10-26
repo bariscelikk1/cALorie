@@ -1163,3 +1163,18 @@ from the 10% audit in the full intake.
 Next: build CPU shard notebooks for the remaining ~950 clips (same evidence
 as Notebook 40), run them locally, then group, apply tier-1, audit, review,
 and assign roles. Notebook 39 (GPU) is still unrun.
+
+## Full intake running; review checkpoint; Notebook 39 on MPS (2026-10-26)
+
+Notebooks 41 (8 shards, 946 clips) are running on the user's Mac. Review has
+started on finished clips: `ml/data/repcount_intake_v2/full_visual_review_v1.csv`
+is a partial checkpoint (78 tier-1 review clips from shards 0 and 4; the
+audit sample is drawn only after all shards finish). On new clips, tier-1
+auto-accepted only 21 of 99 (pilot: 27 of 64), so the rules are stricter
+than the pilot suggested. Three published labels were visibly wrong: bench
+press `stu8_4` is a deadlift, bench press `stu7_13` is a back squat, and
+front raise `stu9_17` is a behind-the-neck shoulder press.
+
+Notebook 39 gained an opt-in `CALORIE_DEVICE=mps` (commit `d34a840`). A dry
+run on the Mac's GPU passed both parity checks. The single predeclared real
+run started on MPS on 2026-10-26; its result is not in yet.
