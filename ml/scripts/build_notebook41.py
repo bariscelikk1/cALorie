@@ -86,6 +86,30 @@ def build(shard):
     return output
 
 
+# Clips that failed in the first shard runs (2026-10-26); re-fetched once with the fixed code.
+MAKEUP_IDS = ["stu1_10", "stu7_55", "stu9_19", "train133", "train2542"]
+
+
+def build_makeup():
+    output = build(0)
+    text = output.read_text()
+    replacements = [
+        ("shard 0 of 7", "make-up batch"), ("calorie_repcount_intake_v2_shard0", "calorie_repcount_intake_v2_makeup"),
+        ("41_colab_repcount_intake_v2_shard0.ipynb", "41_colab_repcount_intake_v2_makeup.ipynb"),
+        ("SHARD = 0", f"SHARD = 'makeup'\\nMAKEUP_IDS = {MAKEUP_IDS!r}"),
+        ("selection = selection[selection.shard == SHARD]", "selection = selection[selection.video_id.isin(MAKEUP_IDS)]"),
+        ("assert 110 <= len(selection) <= 125, len(selection)", "assert len(selection) == len(MAKEUP_IDS), len(selection)"),
+    ]
+    for old, new in replacements:
+        assert old in text, old
+        text = text.replace(old, new)
+    makeup = output.with_name("41_colab_repcount_intake_v2_makeup.ipynb")
+    makeup.write_text(text)
+    build(0)  # restore shard 0 notebook
+    return makeup
+
+
 if __name__ == "__main__":
     for shard in range(N_SHARDS):
         print(build(shard))
+    print(build_makeup())

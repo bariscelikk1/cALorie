@@ -191,10 +191,13 @@ cells = [
 
 
         def read_frame(cap, time_s):
-            cap.set(cv2.CAP_PROP_POS_MSEC, float(time_s) * 1000)
-            ok, frame = cap.read()
-            assert ok, time_s
-            return frame
+            # Some files cannot decode their last frames; step back up to 1 s before giving up.
+            for back_s in (0.0, 0.25, 0.5, 1.0):
+                cap.set(cv2.CAP_PROP_POS_MSEC, max(0.0, float(time_s) - back_s) * 1000)
+                ok, frame = cap.read()
+                if ok:
+                    return frame
+            raise AssertionError(time_s)
 
 
         def fit(frame, width, height):
@@ -297,7 +300,7 @@ cells = [
                     blob = datasets[row.lance_split].take_blobs("video_blob", ids=[int(row.lance_row_id)])[0]
                     payload = blob.read()
                     return payload.to_pybytes() if hasattr(payload, "to_pybytes") else payload
-                except OSError as error:
+                except (OSError, ValueError) as error:  # Lance surfaces HF read failures as either
                     if attempt == FETCH_ATTEMPTS - 1:
                         raise
                     wait_s = min(15 * 2 ** attempt, 240)
