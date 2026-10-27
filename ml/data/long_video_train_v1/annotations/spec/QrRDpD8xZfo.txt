@@ -1,0 +1,48 @@
+0 122 intro talking_to_camera unknown high  # 
+122 300 exercise standing_warmup unknown high  # marching, arm swings, hip openers
+300 304 transition up_next_card unknown high  # 
+304 349 exercise dumbbell_deadlift deadlift high  # 
+349 364 transition up_next_card unknown high  # 
+364 409 exercise dumbbell_sumo_squat squat medium 2nd # rule 5
+409 424 transition up_next_card unknown high  # 
+424 469 exercise dumbbell_shoulder_press shoulder_press high  # 
+469 484 transition up_next_card unknown high  # 
+484 529 exercise two_dumbbell_bent_over_row dumbbell_row high  # rule 3
+529 544 transition up_next_card unknown high  # 
+544 589 exercise dumbbell_reverse_lunge lunge high  # 
+589 604 transition up_next_card unknown high  # 
+604 649 exercise tricep_kickback tricep_extension medium 2nd # rule 6
+649 664 transition up_next_card unknown high  # 
+664 709 exercise standing_twist unknown high  # 
+709 724 transition up_next_card unknown high  # 
+724 769 exercise dumbbell_deadlift deadlift high  # 
+769 784 transition up_next_card unknown high  # 
+784 829 exercise dumbbell_sumo_squat squat medium 2nd # rule 5
+829 844 transition up_next_card unknown high  # 
+844 889 exercise dumbbell_shoulder_press shoulder_press high  # 
+889 904 transition up_next_card unknown high  # 
+904 949 exercise two_dumbbell_bent_over_row dumbbell_row high  # rule 3
+949 964 transition up_next_card unknown high  # 
+964 1009 exercise dumbbell_reverse_lunge lunge high  # 
+1009 1024 transition up_next_card unknown high  # 
+1024 1069 exercise tricep_kickback tricep_extension medium 2nd # rule 6
+1069 1084 transition up_next_card unknown high  # 
+1084 1129 exercise standing_twist unknown high  # 
+1129 1144 transition up_next_card unknown high  # 
+1144 1189 exercise dumbbell_deadlift deadlift high  # 
+1189 1204 transition up_next_card unknown high  # 
+1204 1249 exercise dumbbell_sumo_squat squat medium 2nd # rule 5
+1249 1264 transition up_next_card unknown high  # 
+1264 1309 exercise dumbbell_shoulder_press shoulder_press high  # 
+1309 1324 transition up_next_card unknown high  # 
+1324 1369 exercise two_dumbbell_bent_over_row dumbbell_row high  # rule 3
+1369 1384 transition up_next_card unknown high  # 
+1384 1429 exercise dumbbell_reverse_lunge lunge high  # 
+1429 1444 transition up_next_card unknown high  # 
+1444 1489 exercise tricep_kickback tricep_extension medium 2nd # rule 6
+1489 1504 transition up_next_card unknown high  # 
+1504 1549 exercise standing_twist unknown high  # 
+1549 1552 transition stretch_title unknown high  # 
+1552 1734 cooldown standing_stretches unknown high  # 
+1734 1738 outro well_done_card unknown high  # 
+1738 1774 outro talking_to_camera unknown high  # 
