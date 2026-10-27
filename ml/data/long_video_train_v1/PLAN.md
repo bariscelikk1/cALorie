@@ -86,3 +86,13 @@ example, a dev-chosen threshold), then stop.
 About 8 hours of video: roughly 4 hours of local processing, about 160
 label pages (my side), about 1 hour of your review, then about 1 hour of
 training on the Mac GPU.
+
+## Selection log
+
+- 2026-10-27: The exclusion list (`exclusions.csv`) covers 55 channels:
+  every earlier source, the 8 locked-test creators, and the 2 animated test
+  channels. Screened-out test videos are never reused. The first 12 queries
+  gave 9 eligible videos (201 of 302 hits were from already-used creators).
+- Revision 1: 12 more queries appended (514 hits). 16 videos are picked
+  greedily in hash order, meeting every coverage rule (`selected=True` in
+  `candidates.csv`). Awaiting the user's OK before download.
