@@ -1,0 +1,42 @@
+0 18 intro cinematic_intro_title unknown high # montage clips and title card
+18 80 intro talking_to_camera unknown high
+80 120 exercise band_mobility_warmup unknown high # banded shoulder mobility
+120 162 transition talking_walking unknown high
+162 184 exercise pull_up pull_up high # set 1
+184 224 rest band_setup unknown high
+224 264 exercise band_assisted_pull_up pull_up medium # sets 2-3 with band
+264 300 transition walk_and_title unknown high
+300 332 exercise barbell_bent_over_row unknown medium 2nd # warm-up set; barbell row is not the supported dumbbell_row class
+332 360 rest loading_plates unknown high
+360 380 exercise barbell_bent_over_row unknown medium 2nd
+380 424 rest talking_rest unknown high
+424 446 exercise barbell_bent_over_row unknown medium 2nd
+446 488 rest loading_plates unknown high
+488 512 exercise barbell_bent_over_row unknown medium 2nd
+512 528 rest rest unknown high
+528 568 exercise barbell_bent_over_row unknown medium 2nd # set 4 with close-ups
+568 600 transition talking_title unknown high
+600 648 exercise incline_bench_one_arm_dumbbell_row dumbbell_row high # sets 1-2
+648 660 rest rest unknown high
+660 680 exercise incline_bench_one_arm_dumbbell_row dumbbell_row high # set 3
+680 722 transition talking_setup unknown high
+722 766 exercise lat_pulldown_wide_grip lat_pulldown high
+766 780 transition grip_change unknown medium
+780 818 exercise lat_pulldown_reverse_grip lat_pulldown high
+818 830 rest rest unknown high
+830 860 exercise lat_pulldown lat_pulldown high
+860 874 transition walk_and_title unknown high
+874 902 exercise seated_cable_row unknown high # cable row is not dumbbell_row
+902 912 rest setup unknown high
+912 962 exercise seated_cable_row unknown high # drop set
+962 970 transition walk unknown high
+970 1000 exercise alternating_dumbbell_curl bicep_curl high
+1000 1026 rest talking_rest unknown high
+1026 1042 transition preacher_setup unknown high
+1042 1080 exercise preacher_curl bicep_curl medium
+1080 1094 rest rest unknown high
+1094 1124 exercise preacher_and_hammer_curl bicep_curl medium
+1124 1140 rest walk unknown high
+1140 1182 exercise preacher_and_hammer_curl bicep_curl medium
+1182 1190 rest rest unknown high
+1190 1258 outro talking_to_camera unknown high
