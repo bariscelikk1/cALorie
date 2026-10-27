@@ -2,3 +2,5 @@ video_id,verdict,reason,screened_by,screened_on
 ED5EaUC5EkA,reject,"vlog: mostly talking to camera, ad and title cards, frequent edited cuts, other people in frame",claude_visual_screen_1_per_10s,2026-10-27
 VqHtkQWLBvg,reject,"animated 3D figure, not real footage; title, rest-countdown, and Up Next cards every minute (closest user category: edited cuts)",claude_visual_screen_1_per_10s,2026-10-27
 q_vXOV1BmIQ,keep,"one real performer, fixed camera, continuous follow-along; small Up Next inset only",claude_visual_screen_1_per_10s,2026-10-27
+fWT-_jx41Jc,keep,"one real performer, mostly continuous gym work; some talking to camera in the first ~3 min and moderate angle cuts (to be labeled unknown/transition)",claude_visual_screen_1_per_10s,2026-10-27
+jDj0h5JfEiE,reject,"animated 3D figure, not real footage; rest-countdown cards every set",claude_visual_screen_1_per_10s,2026-10-27

@@ -162,3 +162,7 @@ measurement only. Nothing is promoted on this basis alone.
   same rule; their partial processing was stopped and deleted. Every new pick
   must still pass screening (real person, not mostly talking, cuts, or
   crowds).
+- Screening 3: `fWT-_jx41Jc` is kept (real performer; some opening talk and
+  angle cuts will be labeled unknown/transition). `jDj0h5JfEiE` (Roberta's
+  Gym) is rejected as an animated figure. The rule-based rerun picks
+  `CIxNJbit9BA`, another Roberta's Gym video, which needs screening too.
