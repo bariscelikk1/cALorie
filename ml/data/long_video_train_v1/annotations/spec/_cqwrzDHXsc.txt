@@ -1,0 +1,72 @@
+0 18 intro logo_and_title unknown high  # 
+18 208 exercise dynamic_warmup unknown high  # jacks, squats, inchworms, arm circles
+208 234 transition workout_title_and_preview unknown high  # 
+234 272 exercise single_arm_dumbbell_snatch unknown high  # 
+272 288 transition next_preview_screen unknown high  # 
+288 334 exercise sumo_squat_to_overhead_reach unknown high  # compound
+334 348 transition next_preview_screen unknown high  # 
+348 396 exercise sumo_squat_to_overhead_reach unknown high  # other side
+396 408 transition next_preview_screen unknown high  # 
+408 456 exercise single_arm_dumbbell_row dumbbell_row high  # 
+456 470 transition next_preview_screen unknown high  # 
+470 516 exercise reverse_lunge_with_curl lunge medium 2nd # lunge with curl
+516 530 transition next_preview_screen unknown high  # 
+530 578 exercise lunge_to_overhead_press unknown high  # compound
+578 592 transition next_preview_screen unknown high  # 
+592 638 exercise kneeling_lunge_press unknown high  # compound
+638 652 transition next_preview_screen unknown high  # 
+652 700 exercise lying_dumbbell_chest_press bench_press medium 2nd # supine floor press (rule 2)
+700 714 transition next_preview_screen unknown high  # 
+714 762 exercise dumbbell_halo_rotation unknown high  # 
+762 776 transition next_preview_screen unknown high  # 
+776 820 exercise curtsy_lunge_with_goblet lunge medium 2nd # curtsy lunge variant
+820 838 transition next_preview_screen unknown high  # 
+838 884 exercise dumbbell_swing_clean unknown high  # 
+884 898 transition next_preview_screen unknown high  # 
+898 944 exercise reverse_lunge_goblet lunge high  # 
+944 958 transition next_preview_screen unknown high  # 
+958 1006 exercise single_arm_row_and_kickback unknown high  # compound
+1006 1018 transition next_preview_screen unknown high  # 
+1018 1066 exercise lying_leg_raise_with_dumbbell unknown high  # 
+1066 1080 transition next_preview_screen unknown high  # 
+1080 1126 exercise sumo_squat_with_side_kick unknown high  # compound
+1126 1140 transition next_preview_screen unknown high  # 
+1140 1186 exercise standing_dumbbell_wood_chop unknown high  # 
+1186 1200 transition next_preview_screen unknown high  # 
+1200 1250 exercise bent_over_rear_delt_row unknown medium 2nd # row variant with elbows wide
+1250 1264 transition next_preview_screen unknown high  # 
+1264 1310 exercise lying_dumbbell_pullover_crunch unknown high  # 
+1310 1324 transition next_preview_screen unknown high  # 
+1324 1374 exercise wide_sumo_squat_hold_pulse squat medium 2nd # sumo squat pulses (rule 5)
+1374 1384 transition next_preview_screen unknown high  # 
+1384 1428 exercise downward_dog_to_plank unknown high  # 
+1428 1440 transition next_preview_screen unknown high  # 
+1440 1484 exercise squat_to_overhead_press unknown high  # compound thruster
+1484 1508 transition next_preview_screen unknown high  # 
+1508 1554 exercise lying_leg_raise_with_dumbbell unknown high  # 
+1554 1574 transition next_preview_screen unknown high  # 
+1574 1620 exercise goblet_squat_to_reverse_lunge unknown medium 2nd # alternating compound
+1620 1690 transition next_preview_screen unknown high  # 
+1690 1736 exercise reverse_lunge_goblet lunge high  # 
+1736 1754 transition next_preview_screen unknown high  # 
+1754 1798 exercise seated_straddle_overhead_press shoulder_press medium 2nd # seated wide-leg press
+1798 1814 transition next_preview_screen unknown high  # 
+1814 1858 exercise glute_bridge_chest_press bench_press medium 2nd # rule 2
+1858 1876 transition next_preview_screen unknown high  # 
+1876 1922 exercise kneeling_dumbbell_press shoulder_press medium 2nd # rule 8
+1922 1938 transition next_preview_screen unknown high  # 
+1938 1984 exercise bent_over_row_and_curl unknown high  # compound
+1984 1998 transition next_preview_screen unknown high  # 
+1998 2044 exercise goblet_squat squat high  # 
+2044 2058 transition next_preview_screen unknown high  # 
+2058 2104 exercise plank_with_leg_lift unknown high  # 
+2104 2120 transition next_preview_screen unknown high  # 
+2120 2160 exercise kneeling_lean_back unknown high  # 
+2160 2180 transition next_preview_screen unknown high  # 
+2180 2226 exercise side_lunge_with_goblet unknown medium 2nd # lateral lunge stays unknown
+2226 2244 transition next_preview_screen unknown high  # 
+2244 2292 exercise lying_dumbbell_crunch sit_up medium 2nd # crunch holding dumbbell (rule 7)
+2292 2294 transition next_preview_screen unknown high  # 
+2294 2354 cooldown stretching unknown high  # 
+2354 2478 cooldown stretching unknown high  # 
+2478 2495 outro thanks_cards unknown high  # 
