@@ -1314,3 +1314,15 @@ and (v2) rows; v2's gate kills curls and lateral raises that its classifier
 gets right. Dev control (smoothed): V6-F Macro F1 29.7%, exercise called
 unknown 37.7%; v2 24-26% and 50-62%. This supports running section 3 as
 planned (retrain with the 11 train videos), which still needs the user's go.
+
+## Long-video training v1 (Notebook 45): dev FAIL on the gate (2026-10-27)
+
+v2 recipe + 9,049 windows from the 11 train videos, 3 seeds, vs frozen v2,
+on the 5 dev videos (`ml/artifacts/long_video_training_v1/`). Failed one of
+five criteria: exercise time called unknown did not drop (−2.3 pp vs the
+15 pp bar). Passed the rest: smoothed Macro F1 +6.3 pp (CI +1.8 to +8.4),
+downtime handling +6.6 pp, internal test +2.2 pp. Lunge, shoulder press and
+sit-up improved a lot; curls, lateral raises, rows, and tricep extensions
+did not. The classifier learned from the new data; the gate did not. Not
+promoted; locked test untouched. One documented follow-up is allowed by the
+plan; it needs the user's choice before anything runs.
