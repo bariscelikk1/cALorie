@@ -1,0 +1,91 @@
+0 12 intro title_and_instructions unknown high  # 
+12 26 transition exercise_preview_grid unknown high  # 
+26 66 exercise kettlebell_around_the_world unknown high  #  (EMOM reps then rest; boundary approximate)
+66 77 rest emom_rest unknown medium  # 
+77 87 transition next_exercise_preview unknown high  # 
+87 127 exercise kettlebell_bent_over_row dumbbell_row medium 2nd # single-weight row; kettlebell instead of dumbbell (EMOM reps then rest; boundary approximate)
+127 138 rest emom_rest unknown medium  # 
+138 148 transition next_exercise_preview unknown high  # 
+148 188 exercise kneeling_kettlebell_press shoulder_press medium 2nd # kneeling press (rule 8) (EMOM reps then rest; boundary approximate)
+188 199 rest emom_rest unknown medium  # 
+199 209 transition next_exercise_preview unknown high  # 
+209 249 exercise kettlebell_plank_reach unknown high  #  (EMOM reps then rest; boundary approximate)
+249 260 rest emom_rest unknown medium  # 
+260 270 transition next_exercise_preview unknown high  # 
+270 310 exercise overhead_kettlebell_march unknown high  #  (EMOM reps then rest; boundary approximate)
+310 321 rest emom_rest unknown medium  # 
+321 331 transition next_exercise_preview unknown high  # 
+331 371 exercise kettlebell_plank_row unknown high  #  (EMOM reps then rest; boundary approximate)
+371 382 rest emom_rest unknown medium  # 
+382 392 transition next_exercise_preview unknown high  # 
+392 432 exercise kettlebell_around_the_world unknown high  #  (EMOM reps then rest; boundary approximate)
+432 443 rest emom_rest unknown medium  # 
+443 453 transition next_exercise_preview unknown high  # 
+453 493 exercise kettlebell_bent_over_row dumbbell_row medium 2nd # single-weight row; kettlebell instead of dumbbell (EMOM reps then rest; boundary approximate)
+493 504 rest emom_rest unknown medium  # 
+504 514 transition next_exercise_preview unknown high  # 
+514 554 exercise kneeling_kettlebell_press shoulder_press medium 2nd # kneeling press (rule 8) (EMOM reps then rest; boundary approximate)
+554 565 rest emom_rest unknown medium  # 
+565 575 transition next_exercise_preview unknown high  # 
+575 615 exercise kettlebell_plank_reach unknown high  #  (EMOM reps then rest; boundary approximate)
+615 626 rest emom_rest unknown medium  # 
+626 636 transition next_exercise_preview unknown high  # 
+636 676 exercise overhead_kettlebell_march unknown high  #  (EMOM reps then rest; boundary approximate)
+676 687 rest emom_rest unknown medium  # 
+687 697 transition next_exercise_preview unknown high  # 
+697 737 exercise kettlebell_plank_row unknown high  #  (EMOM reps then rest; boundary approximate)
+737 748 rest emom_rest unknown medium  # 
+748 758 transition next_exercise_preview unknown high  # 
+758 798 exercise kettlebell_around_the_world unknown high  #  (EMOM reps then rest; boundary approximate)
+798 809 rest emom_rest unknown medium  # 
+809 819 transition next_exercise_preview unknown high  # 
+819 859 exercise kettlebell_bent_over_row dumbbell_row medium 2nd # single-weight row; kettlebell instead of dumbbell (EMOM reps then rest; boundary approximate)
+859 870 rest emom_rest unknown medium  # 
+870 880 transition next_exercise_preview unknown high  # 
+880 920 exercise kneeling_kettlebell_press shoulder_press medium 2nd # kneeling press (rule 8) (EMOM reps then rest; boundary approximate)
+920 931 rest emom_rest unknown medium  # 
+931 941 transition next_exercise_preview unknown high  # 
+941 981 exercise kettlebell_plank_reach unknown high  #  (EMOM reps then rest; boundary approximate)
+981 992 rest emom_rest unknown medium  # 
+992 1002 transition next_exercise_preview unknown high  # 
+1002 1042 exercise overhead_kettlebell_march unknown high  #  (EMOM reps then rest; boundary approximate)
+1042 1053 rest emom_rest unknown medium  # 
+1053 1063 transition next_exercise_preview unknown high  # 
+1063 1103 exercise kettlebell_plank_row unknown high  #  (EMOM reps then rest; boundary approximate)
+1103 1114 rest emom_rest unknown medium  # 
+1114 1124 transition next_exercise_preview unknown high  # 
+1124 1164 exercise kettlebell_around_the_world unknown high  #  (EMOM reps then rest; boundary approximate)
+1164 1175 rest emom_rest unknown medium  # 
+1175 1185 transition next_exercise_preview unknown high  # 
+1185 1225 exercise kettlebell_bent_over_row dumbbell_row medium 2nd # single-weight row; kettlebell instead of dumbbell (EMOM reps then rest; boundary approximate)
+1225 1236 rest emom_rest unknown medium  # 
+1236 1246 transition next_exercise_preview unknown high  # 
+1246 1286 exercise kneeling_kettlebell_press shoulder_press medium 2nd # kneeling press (rule 8) (EMOM reps then rest; boundary approximate)
+1286 1297 rest emom_rest unknown medium  # 
+1297 1307 transition next_exercise_preview unknown high  # 
+1307 1347 exercise kettlebell_plank_reach unknown high  #  (EMOM reps then rest; boundary approximate)
+1347 1358 rest emom_rest unknown medium  # 
+1358 1368 transition next_exercise_preview unknown high  # 
+1368 1408 exercise overhead_kettlebell_march unknown high  #  (EMOM reps then rest; boundary approximate)
+1408 1419 rest emom_rest unknown medium  # 
+1419 1429 transition next_exercise_preview unknown high  # 
+1429 1469 exercise kettlebell_plank_row unknown high  #  (EMOM reps then rest; boundary approximate)
+1469 1480 rest emom_rest unknown medium  # 
+1480 1490 transition next_exercise_preview unknown high  # 
+1490 1530 exercise kettlebell_around_the_world unknown high  #  (EMOM reps then rest; boundary approximate)
+1530 1541 rest emom_rest unknown medium  # 
+1541 1551 transition next_exercise_preview unknown high  # 
+1551 1591 exercise kettlebell_bent_over_row dumbbell_row medium 2nd # single-weight row; kettlebell instead of dumbbell (EMOM reps then rest; boundary approximate)
+1591 1602 rest emom_rest unknown medium  # 
+1602 1612 transition next_exercise_preview unknown high  # 
+1612 1652 exercise kneeling_kettlebell_press shoulder_press medium 2nd # kneeling press (rule 8) (EMOM reps then rest; boundary approximate)
+1652 1663 rest emom_rest unknown medium  # 
+1663 1673 transition next_exercise_preview unknown high  # 
+1673 1713 exercise kettlebell_plank_reach unknown high  #  (EMOM reps then rest; boundary approximate)
+1713 1724 rest emom_rest unknown medium  # 
+1724 1734 transition next_exercise_preview unknown high  # 
+1734 1774 exercise overhead_kettlebell_march unknown high  #  (EMOM reps then rest; boundary approximate)
+1774 1785 rest emom_rest unknown medium  # 
+1785 1795 transition next_exercise_preview unknown high  # 
+1795 1824 exercise kettlebell_plank_row unknown high  #  (EMOM reps; boundary approximate)
+1824 1833 outro end_card unknown high  # 
