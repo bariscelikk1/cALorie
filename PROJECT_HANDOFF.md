@@ -1286,3 +1286,19 @@ flicker, but loses curls (31→7%) and lateral raises (84→7%). Sit-up, row,
 lunge, shoulder press, and tricep extension are 0% for both. Main bottleneck
 on real sessions: the gate is far too strict, and the uncovered classes need
 data. Nothing was tuned on this set.
+
+## Long-video training v1: 16 timelines labeled and reviewed (2026-10-27)
+
+Data for the approved plan in `ml/data/long_video_train_v1/PLAN.md`: 16
+full-session YouTube videos (11 train, 5 dev by hash; test-set creators
+excluded), labeled second by second: 948 segments, 8.31 h, about 66%
+`unknown`. Supported-exercise minutes range from 28 (shoulder press) to 1
+(jumping jack). The user's hash-drawn 10% second review was 95/95 correct
+(`second_review_sample_v1.csv`). Of 126 flagged rows, 106 were adjudicated
+by `ml/scripts/adjudicate_long_video_train_v1.py` (rules 1-10, the
+compound/unsupported default, or types the user verified in the sample).
+20 rows stay `needs_second_review=true` until the user confirms proposed
+rules 11-16 (Arnold/push/single-arm press, Smith RDL, Zottman/partial curl,
+mixed lateral-raise and skull-crusher sets, lunge with arm transfer). Strict
+audit passes (0 errors, 0 warnings). Next: PLAN.md section 2, the dev
+diagnosis, reported to the user before any training.

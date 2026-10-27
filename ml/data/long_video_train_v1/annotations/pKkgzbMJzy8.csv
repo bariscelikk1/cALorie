@@ -10,7 +10,7 @@ pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),304.0,330.0,05:04.0,
 pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),330.0,392.0,05:30.0,06:32.0,rest,walking_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
 pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),392.0,422.0,06:32.0,07:02.0,exercise,two_dumbbell_bent_over_row,dumbbell_row,train,false,claude_visual_overview_2s,2.0,rule 3,high,reviewed,claude_visual,false
 pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),422.0,482.0,07:02.0,08:02.0,rest,walking_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
-pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),482.0,512.0,08:02.0,08:32.0,exercise,bulgarian_split_squat,lunge,train,false,claude_visual_overview_2s,2.0,rule 4,medium,reviewed,claude_visual,true
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),482.0,512.0,08:02.0,08:32.0,exercise,bulgarian_split_squat,lunge,train,false,claude_visual_overview_2s,2.0,rule 4; adjudicated 2026-10-27 by rule 4,medium,adjudicated,claude_visual,false
 pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),512.0,572.0,08:32.0,09:32.0,rest,seated_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
 pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),572.0,602.0,09:32.0,10:02.0,exercise,dumbbell_bench_press,bench_press,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
 pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),602.0,662.0,10:02.0,11:02.0,rest,walking_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
@@ -22,7 +22,7 @@ pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),844.0,870.0,14:04.0,
 pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),870.0,932.0,14:30.0,15:32.0,rest,walking_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
 pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),932.0,962.0,15:32.0,16:02.0,exercise,two_dumbbell_bent_over_row,dumbbell_row,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
 pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),962.0,1022.0,16:02.0,17:02.0,rest,walking_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
-pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1022.0,1054.0,17:02.0,17:34.0,exercise,bulgarian_split_squat,lunge,train,false,claude_visual_overview_2s,2.0,,medium,reviewed,claude_visual,true
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1022.0,1054.0,17:02.0,17:34.0,exercise,bulgarian_split_squat,lunge,train,false,claude_visual_overview_2s,2.0,adjudicated 2026-10-27 by rule 4,medium,adjudicated,claude_visual,false
 pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1054.0,1114.0,17:34.0,18:34.0,rest,seated_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
 pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1114.0,1144.0,18:34.0,19:04.0,exercise,dumbbell_bench_press,bench_press,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
 pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1144.0,1202.0,19:04.0,20:02.0,rest,walking_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
@@ -34,7 +34,7 @@ pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1384.0,1414.0,23:04.
 pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1414.0,1474.0,23:34.0,24:34.0,rest,walking_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
 pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1474.0,1504.0,24:34.0,25:04.0,exercise,two_dumbbell_bent_over_row,dumbbell_row,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
 pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1504.0,1564.0,25:04.0,26:04.0,rest,seated_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
-pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1564.0,1594.0,26:04.0,26:34.0,exercise,bulgarian_split_squat,lunge,train,false,claude_visual_overview_2s,2.0,,medium,reviewed,claude_visual,true
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1564.0,1594.0,26:04.0,26:34.0,exercise,bulgarian_split_squat,lunge,train,false,claude_visual_overview_2s,2.0,adjudicated 2026-10-27 by rule 4,medium,adjudicated,claude_visual,false
 pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1594.0,1654.0,26:34.0,27:34.0,rest,seated_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
 pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1654.0,1684.0,27:34.0,28:04.0,exercise,dumbbell_bench_press,bench_press,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
 pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1684.0,1744.0,28:04.0,29:04.0,rest,walking_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
