@@ -1240,3 +1240,14 @@ The internal cost is concentrated in sit-up (−15.4) and pull-up (−16.7)
 recall, plus unknown (−4.6). The sealed test remains unseen, so a
 predeclared v2 with one change can still be judged honestly. Stage B did not
 run.
+
+## Training v2 stage A: PASS (2026-10-27)
+
+Notebook 43 (Notebook 42 plus a 50% RepCount sampler cap) ran once on the
+Mac GPU; the archive is `ml/artifacts/repcount_training_v2_stage_a/`. All
+seven criteria held. On RepCount dev, Macro F1 rose from 61.4% to 85.4% (CI
++17.2 to +31.8 pp), sit-ups from 0% to 90%, and unknown rejection from 82% to
+91%. Internal Macro F1 fell 1.61 pp (limit 2.00); internal sit-up recall
+recovered (98% to 99%). Next: stage B, one scoring of the frozen v2 models on
+the sealed test with the same rule, after the user's go-ahead. Still
+non-promotable.
