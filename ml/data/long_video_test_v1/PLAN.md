@@ -116,3 +116,16 @@ measurement only. Nothing is promoted on this basis alone.
 3. After the user's OK: download, pose, and evidence locally; archive.
 4. Claude labels; user second review; audit; lock.
 5. Build and dry-run the scorer, run it once per model, archive, report.
+
+## Selection log
+
+- 2026-10-27: The exclusion list (`exclusions.csv`) covers 48 videos, 45
+  channels, and 47 creator names. The first metadata search (12 queries,
+  snapshot in `search_snapshot.json`) left 20 passing videos (12 after one
+  per channel). No valid set of 8 exists, because no passing video mentions
+  pull-ups.
+- Revision 1, before any video was watched: 3 pull-up queries appended to the
+  same snapshot. Still no passing pull-up video. The 8 pull-up videos found
+  were rejected for listing fewer than 3 supported exercises (6), a group
+  scene (1), or an unclear setting (1). Waiting on a user decision about the
+  coverage rule.
