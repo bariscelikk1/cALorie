@@ -217,3 +217,9 @@ measurement only. Nothing is promoted on this basis alone.
 - **Evaluation 1 (2026-10-27):** V6-F vs v2, scored once. Primary answer: not
   shown better (−0.3 pp, CI −6.2 to +7.6). Details are in
   `ml/artifacts/long_video_test_v1/eval1/README.md`. Evaluations used: 1.
+- **Evaluation 2 (predeclared 2026-10-28, before scoring):** the frozen final
+  model, Notebook 46 (did not pass the 15-point dev gate bar; frozen by the
+  user's decision for the final report), scored once with
+  `ml/scripts/score_long_video_test_v1_eval2.py`. Primary: smoothed pooled
+  Macro F1, final seed median minus V6-F, video bootstrap. V6-F and v2 must
+  reproduce evaluation 1 within 0.005. Evaluations used after this: 2.
