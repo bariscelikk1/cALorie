@@ -129,3 +129,11 @@ measurement only. Nothing is promoted on this basis alone.
   were rejected for listing fewer than 3 supported exercises (6), a group
   scene (1), or an unclear setting (1). Waiting on a user decision about the
   coverage rule.
+- Revision 2 (user decision): one video listing only 2 supported exercises
+  may enter if one is pull-up; all other rules unchanged. Two script bugs
+  were fixed at the same time: the shortlist loop did not run when fewer than
+  20 videos were eligible, and the exception had bypassed the setting check.
+  Rerun from the unchanged snapshot: 348 hits, 21 passing, 13 after one per
+  channel; the first valid 8 in hash order are marked `selected=True` in
+  `candidates.csv` (about 4 hours). Awaiting the user's OK before any
+  download.

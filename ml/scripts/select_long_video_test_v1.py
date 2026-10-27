@@ -28,7 +28,8 @@ QUERIES = [  # fixed before any result was seen
     "push day workout follow along bench press shoulder press",
     "follow along upper body gym workout real time",
     "full body barbell workout follow along",
-    # Revision 1 (2026-10-27, before any video was watched): no passing video mentioned pull-ups,
+    # Revision 2 (user decision, 2026-10-27): one video listing only 2 supported exercises may enter if
+    # one of them is pull_up. Revision 1 (2026-10-27, before any video was watched): no passing video mentioned pull-ups,
     # which the coverage rule requires. These queries are appended; earlier results are kept as saved.
     "pull up workout follow along full body",
     "calisthenics workout follow along pull ups push ups",
@@ -125,12 +126,15 @@ def main() -> None:
         found = [k for k, pattern in EXERCISES.items() if re.search(pattern, t)]
         r.update({"exercises": ";".join(found), "setting": "gym" if re.search(GYM, t) else ("home" if re.search(HOME, t) else "unclear"),
                   "chapters": len(info.get("chapters") or []), "license": info.get("license") or ""})
+        exception = len(found) == 2 and "pull_up" in found  # revision 2: at most one per set (checked in valid())
         if re.search(GROUP, t):
             r["reject_reason"] = "group_or_partner"
-        elif len(found) < 3:
+        elif len(found) < 3 and not exception:
             r["reject_reason"] = "fewer_than_3_supported"
         elif r["setting"] == "unclear":
             r["reject_reason"] = "setting_unclear"
+        else:
+            r["pullup_exception"] = exception
 
     passing = [r for r in rows if not r["reject_reason"]]
     # One video per channel: keep each channel's first video in hash order.
@@ -145,17 +149,20 @@ def main() -> None:
         ex = set(itertools.chain.from_iterable(r["exercises"].split(";") for r in combo))
         settings = [r["setting"] for r in combo]
         return (set(COVERED) <= ex and len(ex & set(UNCOVERED)) >= 4
-                and settings.count("home") >= 3 and settings.count("gym") >= 3)
+                and settings.count("home") >= 3 and settings.count("gym") >= 3
+                and sum(bool(r.get("pullup_exception")) for r in combo) <= 1)
 
-    size, pick, shortlist = SHORTLIST_SIZE, None, eligible[:SHORTLIST_SIZE]
-    while pick is None and size <= len(eligible) + 5:
+    size, pick = SHORTLIST_SIZE, None
+    while True:  # grow the shortlist in steps of 5 until a valid set exists or every eligible video is in
         shortlist = eligible[:size]
         pick = next((c for c in itertools.combinations(shortlist, PICK) if valid(c)), None)
+        if pick is not None or size >= len(eligible):
+            break
         size += 5
     chosen = {r["video_id"] for r in pick} if pick else set()
     shortlist_ids = {r["video_id"] for r in shortlist}
     fields = ["video_id", "channel_id", "channel", "title", "duration_s", "query", "exercises", "setting", "chapters",
-              "license", "reject_reason", "shortlisted", "selected"]
+              "license", "pullup_exception", "reject_reason", "shortlisted", "selected"]
     with (args.out_dir / "candidates.csv").open("w", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=fields, extrasaction="ignore", lineterminator="\n")
         writer.writeheader()
