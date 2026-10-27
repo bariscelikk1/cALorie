@@ -1,0 +1,53 @@
+0 30 intro logos_and_warmup_title unknown high
+30 62 exercise bodyweight_squat squat high # warm-up squats
+62 92 exercise inchworm_low_lunge unknown high
+92 120 exercise reverse_lunge_with_rotation lunge medium 2nd # rule 4
+120 150 exercise shoulder_and_toe_taps unknown high
+150 180 exercise down_ups unknown high
+180 192 rest rest unknown high
+192 224 exercise dumbbell_sumo_squat_forward_raise unknown medium # compound
+224 254 exercise dumbbell_thruster unknown high
+254 286 exercise deadlift_and_bent_over_row unknown medium 2nd # alternating deadlift and row
+286 294 rest rest unknown high
+294 334 exercise dumbbell_sumo_squat_forward_raise unknown medium
+334 360 exercise dumbbell_thruster unknown high
+360 386 exercise deadlift_and_bent_over_row unknown medium 2nd
+386 396 rest rest unknown high
+396 430 exercise dumbbell_sumo_squat_forward_raise unknown medium
+430 456 exercise dumbbell_thruster unknown high
+456 484 exercise deadlift_and_bent_over_row unknown medium 2nd
+484 494 rest rest unknown high
+494 546 exercise lateral_lunge_and_calf_balance unknown medium # lateral lunge stays unknown
+546 590 exercise snatch_to_reverse_lunge unknown high
+590 598 rest rest unknown high
+598 658 exercise lateral_lunge_and_calf_balance unknown medium
+658 694 exercise snatch_to_reverse_lunge unknown high
+694 702 rest rest unknown high
+702 746 exercise lateral_lunge_and_calf_balance unknown medium
+746 790 exercise snatch_to_reverse_lunge unknown high
+790 796 rest rest unknown high
+796 836 exercise lateral_lunge_and_calf_balance unknown medium
+836 892 exercise snatch_to_reverse_lunge unknown high
+892 904 rest rest_lie_down unknown high
+904 938 exercise chest_press_with_glute_bridge bench_press medium 2nd # rule 2
+938 976 exercise skull_crusher_tabletop_legs tricep_extension medium 2nd # lying tricep extension with legs up
+976 1000 exercise chest_press_with_glute_bridge bench_press medium 2nd
+1000 1024 exercise skull_crusher_tabletop_legs tricep_extension medium 2nd
+1024 1036 rest rest unknown high
+1036 1078 exercise zombie_sit_up sit_up medium 2nd # full sit-up with arms forward
+1078 1104 exercise hollow_hold unknown high
+1104 1136 exercise dumbbell_scissor_pass unknown high
+1136 1146 exercise weighted_tabletop_hold unknown high
+1146 1172 exercise crunch_to_hollow_hold unknown medium
+1172 1192 exercise crunch_pulses sit_up medium 2nd # rule 7
+1192 1202 rest rest unknown high
+1202 1232 exercise zombie_sit_up sit_up medium 2nd
+1232 1254 exercise hollow_hold unknown high
+1254 1282 exercise dumbbell_scissor_pass unknown high
+1282 1306 exercise weighted_tabletop_hold unknown high
+1306 1332 exercise crunch_to_hollow_hold unknown medium
+1332 1356 exercise crunch_pulses sit_up medium 2nd
+1356 1362 transition stretch_title_card unknown high
+1362 1546 cooldown stretches unknown high
+1546 1560 outro talking unknown high
+1560 1572 outro subscribe_end_card unknown high
