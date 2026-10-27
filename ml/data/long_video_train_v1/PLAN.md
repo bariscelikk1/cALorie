@@ -135,3 +135,36 @@ Notebook 45 (`ml/notebooks/45_long_video_training_v1.ipynb`) is Notebook 43
   (2,000 draws). Internal-test rule uses the seed mean, as in v2.
 - Early stopping stays on V6-A validation; dev, the locked tests, and the
   RepCount sealed test are never used for training or stopping.
+
+## Follow-up 1: gate balance (DRAFT, awaiting user approval)
+
+Chosen after Notebook 45 failed the gate criterion, so it is a post-hoc
+follow-up and is labeled that way. The plan allows exactly one; after it,
+this arc stops whatever the result.
+
+**Evidence behind it.** In Notebook 45's gate sampler, long-video windows
+held 29.7% of the `unknown` class but only 8.9% of the `supported` class. The
+gate mostly learned "this kind of footage means unknown".
+
+**One change (Notebook 46).** After the existing weights and the 50% RepCount
+cap, rescale the gate sampler so long-video windows hold exactly **25%** of
+each gate class (supported and unknown); the other windows in each class are
+scaled to keep the class mass. RepCount stays under its 50% cap (expected
+about 41% of supported and 45% of unknown); the notebook asserts both.
+
+**Fixed:** the Notebook 45 classifiers are reused frozen (they passed);
+only the 3 gates are retrained per seed (42, 137, 2026). Same windows,
+features, augmentation, threshold 0.65, fusion, and early stopping on V6-A
+validation.
+
+**Pass rule:** identical to section 3, against the same frozen v2 control on
+the 5 dev videos (smoothed, seed medians):
+1. Exercise time called `unknown` drops by at least 15 points.
+2. Macro F1 gains at least 5 points, with a 5-video bootstrap CI above zero.
+3. Downtime called `unknown` stays within 10 points of control.
+4. Internal test Macro F1 is no more than 2 points below control.
+Also reported, not judged: the same numbers against Notebook 45.
+
+**If it passes:** evaluation 2, once, on the locked long-video test.
+**If it fails:** report it and close this arc; the next step would need new
+data or a new design, planned separately.
