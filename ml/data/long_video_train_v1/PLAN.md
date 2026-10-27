@@ -1,6 +1,6 @@
-# Long-video training v1 — plan (DRAFT, not approved)
+# Long-video training v1 — plan (approved 2026-10-27)
 
-Status: proposal written 2026-10-27. Nothing is collected or built.
+Status: approved 2026-10-27. Data collected and labeled; section 2 done (see `ml/artifacts/long_video_train_v1/dev_diagnosis_v1/`).
 
 ## What evaluation 1 showed (locked long-video test, measurement only)
 

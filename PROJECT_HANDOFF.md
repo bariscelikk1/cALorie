@@ -1302,3 +1302,15 @@ The other 20 were adjudicated after the user approved rules 11-18
 mixed sets keep the main class, lunge with arm moves -> lunge). Strict
 audit passes (0 errors, 0 warnings). Next: PLAN.md section 2, the dev
 diagnosis, reported to the user before any training.
+
+## Long-video dev diagnosis: a data problem, not a threshold problem (2026-10-27)
+
+PLAN.md section 2 (`ml/artifacts/long_video_train_v1/dev_diagnosis_v1/`).
+On the 5 dev videos, V6-F and all three v2 seeds read as a data problem by
+the predeclared rule: gate AUROC for exercise vs downtime is only 0.61-0.65,
+and no threshold frees 15 points of exercise time without letting downtime
+through. The classifier also fails lunge, shoulder press, tricep extension,
+and (v2) rows; v2's gate kills curls and lateral raises that its classifier
+gets right. Dev control (smoothed): V6-F Macro F1 29.7%, exercise called
+unknown 37.7%; v2 24-26% and 50-62%. This supports running section 3 as
+planned (retrain with the 11 train videos), which still needs the user's go.
