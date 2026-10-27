@@ -1,0 +1,41 @@
+0 22 intro app_setup_screen unknown high # workout app sidebar throughout
+22 82 exercise scorpion_stretch unknown high # warm-up
+82 100 rest countdown unknown high
+100 128 exercise scorpion_stretch unknown high
+128 150 transition stand_and_countdown unknown high
+150 180 exercise jumping_jack jumping_jack medium # small figure; app demo inset
+180 212 transition setup_bench unknown high
+212 246 exercise dumbbell_bench_press bench_press high
+246 330 rest seated_phone_rest unknown high
+330 366 exercise dumbbell_bench_press bench_press high
+366 446 rest seated_phone_rest unknown high
+446 486 exercise dumbbell_bench_press bench_press high
+486 548 transition setup_bar unknown high
+548 590 exercise inverted_row unknown high # bodyweight row under a bar; not dumbbell_row
+590 656 rest lying_rest unknown high
+656 680 exercise inverted_row unknown high
+680 740 rest lying_rest unknown high
+740 772 exercise inverted_row unknown high
+772 852 transition setup_dumbbells unknown high
+852 884 exercise standing_dumbbell_lateral_raise lateral_raise high
+884 960 rest seated_rest unknown high
+960 994 exercise standing_dumbbell_lateral_raise lateral_raise high
+994 1072 rest rest unknown high
+1072 1094 exercise standing_dumbbell_lateral_raise lateral_raise high
+1094 1172 transition rest_and_setup unknown high
+1172 1200 exercise standing_dumbbell_curl bicep_curl high
+1200 1276 rest rest unknown high
+1276 1302 exercise standing_dumbbell_curl bicep_curl high
+1302 1376 rest seated_rest unknown high
+1376 1402 exercise standing_dumbbell_curl bicep_curl high
+1402 1478 transition setup_bench unknown high
+1478 1516 exercise dumbbell_skull_crusher tricep_extension high
+1516 1594 rest seated_phone_rest unknown high
+1594 1630 exercise dumbbell_skull_crusher tricep_extension high
+1630 1706 rest seated_rest unknown high
+1706 1748 exercise dumbbell_skull_crusher tricep_extension high
+1748 1782 transition cooldown_countdown unknown high
+1782 1814 exercise passive_dead_hang unknown high
+1814 1830 rest countdown unknown high
+1830 1874 exercise cobra_stretch unknown high
+1874 1894 outro app_summary unknown high
