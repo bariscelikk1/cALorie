@@ -1,0 +1,58 @@
+0 10 intro montage unknown high # 
+10 62 intro talking_to_camera unknown high # 
+62 70 transition get_ready_preview unknown high # 
+70 190 exercise dynamic_warmup unknown high # good mornings, walks, windmills, arm swings
+190 210 transition get_ready_preview_screen unknown high # full-screen preview cards
+210 240 exercise barbell_deadlift deadlift high # 
+240 250 transition up_next_preview_screen unknown high # full-screen Up Next card with small inset
+250 280 exercise barbell_bent_over_row unknown medium 2nd # barbell row is not the supported dumbbell_row class
+280 290 transition up_next_preview_screen unknown high # full-screen Up Next card with small inset
+290 320 exercise hang_clean_to_press unknown high # compound
+320 330 transition up_next_preview_screen unknown high # full-screen Up Next card with small inset
+330 360 exercise staggered_stance_barbell_squat squat medium 2nd # staggered-stance squat variant
+360 370 transition up_next_preview_screen unknown high # full-screen Up Next card with small inset
+370 400 exercise barbell_deadlift deadlift high # 
+400 410 transition up_next_preview_screen unknown high # full-screen Up Next card with small inset
+410 440 exercise barbell_bent_over_row unknown medium 2nd # barbell row is not the supported dumbbell_row class
+440 450 transition up_next_preview_screen unknown high # full-screen Up Next card with small inset
+450 480 exercise hang_clean_to_press unknown high # compound
+480 490 transition up_next_preview_screen unknown high # full-screen Up Next card with small inset
+490 520 exercise staggered_stance_barbell_squat squat medium 2nd # staggered-stance squat variant
+520 550 transition get_ready_preview_screen unknown high # full-screen preview cards
+550 580 exercise sumo_deadlift_high_pull unknown high # compound
+580 590 transition up_next_preview_screen unknown high # full-screen Up Next card with small inset
+590 620 exercise barbell_bicep_curl bicep_curl high # 
+620 630 transition up_next_preview_screen unknown high # full-screen Up Next card with small inset
+630 660 exercise side_lunge_with_knee_drive unknown medium 2nd # lateral lunge plus knee drive
+660 670 transition up_next_preview_screen unknown high # full-screen Up Next card with small inset
+670 700 exercise side_lunge_with_knee_drive unknown medium 2nd # lateral lunge plus knee drive
+700 710 transition up_next_preview_screen unknown high # full-screen Up Next card with small inset
+710 740 exercise sumo_deadlift_high_pull unknown high # compound
+740 750 transition up_next_preview_screen unknown high # full-screen Up Next card with small inset
+750 780 exercise barbell_bicep_curl bicep_curl high # 
+780 790 transition up_next_preview_screen unknown high # full-screen Up Next card with small inset
+790 820 exercise side_lunge_with_knee_drive unknown medium 2nd # lateral lunge plus knee drive
+820 830 transition up_next_preview_screen unknown high # full-screen Up Next card with small inset
+830 860 exercise side_lunge_with_knee_drive unknown medium 2nd # lateral lunge plus knee drive
+860 890 transition get_ready_preview_screen unknown high # full-screen preview cards
+890 920 exercise barbell_thruster unknown high # compound squat to press
+920 930 transition up_next_preview_screen unknown high # full-screen Up Next card with small inset
+930 960 exercise kneel_to_squat unknown medium 2nd # 
+960 970 transition up_next_preview_screen unknown high # full-screen Up Next card with small inset
+970 1000 exercise glute_bridge_dumbbell_chest_press bench_press medium 2nd # supine dumbbell press with hips bridged, mapped like floor press
+1000 1010 transition up_next_preview_screen unknown high # full-screen Up Next card with small inset
+1010 1040 exercise weighted_glute_bridge unknown high # 
+1040 1050 transition up_next_preview_screen unknown high # full-screen Up Next card with small inset
+1050 1080 exercise barbell_thruster unknown high # compound squat to press
+1080 1090 transition up_next_preview_screen unknown high # full-screen Up Next card with small inset
+1090 1120 exercise kneel_to_squat unknown medium 2nd # 
+1120 1130 transition up_next_preview_screen unknown high # full-screen Up Next card with small inset
+1130 1160 exercise glute_bridge_dumbbell_chest_press bench_press medium 2nd # supine dumbbell press with hips bridged, mapped like floor press
+1160 1170 transition up_next_preview_screen unknown high # full-screen Up Next card with small inset
+1170 1200 exercise weighted_glute_bridge unknown high # 
+1200 1220 transition get_ready_finisher unknown high # 
+1220 1280 exercise deadlift_to_burpee_finisher unknown medium # compound max-rep finisher
+1280 1300 transition get_ready_cooldown unknown high # 
+1300 1414 exercise cooldown_stretches unknown high # dog in frame
+1414 1420 transition workout_complete_card unknown high # 
+1420 1462 outro talking_and_end_card unknown high # 
