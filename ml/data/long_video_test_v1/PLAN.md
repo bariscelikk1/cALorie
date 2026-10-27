@@ -183,3 +183,8 @@ measurement only. Nothing is promoted on this basis alone.
   pages (`annotations/*.csv`, compact specs in `annotations/spec/`); strict
   audit passes. Note: `9vXCA2i982Q` listed pull-ups in its description but no
   pull-up is visible, so none is labeled; pull-ups remain in 3 videos.
+- Second review (2026-10-27): the user judged all 44 hash-sampled segments
+  correct and approved 10 edge-case rules (now in `ANNOTATION_GUIDE.md`). All
+  58 flagged rows were adjudicated by rule or guide default. **The set is
+  locked** (`LOCK.json` holds the hashes of every annotation file and evidence
+  ZIP). Evaluations so far: 0.

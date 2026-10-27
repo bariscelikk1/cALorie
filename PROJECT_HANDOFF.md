@@ -1264,3 +1264,13 @@ confusions. Dev had shown 90% sit-ups, which was optimistic. Per the v2 plan
 the RepCount arc closes: v2 is not promoted, and no v3 cap sweep follows. The
 sealed test is now spent. Any further attempt needs a new idea, a new plan,
 and a fresh held-out set.
+
+## Long-video test set v1 locked (2026-10-27)
+
+8 new-creator, real-person follow-along videos (3.87 h) were selected by a
+logged rule (`ml/data/long_video_test_v1/PLAN.md`, 6 screened-out videos with
+reasons), processed locally, and labeled second by second: 437 segments,
+about 70% `unknown` time. The user second-reviewed a 44-segment hash sample
+(all correct) and approved 10 edge-case rules, which are added to the
+annotation guide. The set is locked (`LOCK.json`). Next: predeclare and run
+the full-session scorer (V6-F vs v2; raw and fixed smoothed decoders) once.

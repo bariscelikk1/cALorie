@@ -68,6 +68,21 @@ is expected to accept it. Examples:
 When a new edge case changes one of these decisions, update this guide and
 recheck every earlier row with the same pattern.
 
+### Edge-case rulings (user-approved 2026-10-27, long-video test v1)
+
+1. Barbell bent-over row -> `unknown` (the supported class is `dumbbell_row`).
+2. Supine dumbbell floor press and glute-bridge dumbbell press -> `bench_press`.
+3. Chest-supported and two-dumbbell bent-over rows -> `dumbbell_row`.
+4. Split squats and forward/reverse lunges with a knee drive or reach -> `lunge`
+   (lateral lunges stay `unknown`).
+5. Staggered, sumo, in-and-out, and step-out squats -> `squat`.
+6. Dumbbell tricep kickback -> `tricep_extension`.
+7. Crunch variants with arms overhead or reaching to the knees -> `sit_up`.
+8. Single-arm kneeling dumbbell press -> `shoulder_press`.
+9. Push-ups with feet on a ball, on dumbbell handles, or side-to-side -> `push_up`.
+10. Pull-ups with the head cropped or in dark footage -> `pull_up` when the
+    motion is visible.
+
 ## Temporal boundaries
 
 - `start_s` is the first frame where the labeled state is visibly established.
