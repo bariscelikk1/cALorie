@@ -104,6 +104,9 @@ def main() -> None:
     bad_names = {r["creator"].strip().lower() for r in excluded if r["creator"]}
     screening_path = args.out_dir / "screening.csv"  # user rule: drop mostly-talking / edited / multi-person videos after viewing
     screened_out = {r["video_id"]: r["reason"] for r in csv.DictReader(screening_path.open()) if r["verdict"] == "reject"} if screening_path.exists() else {}
+    # Clarification (2026-10-27): a video rejected as animated excludes its whole channel.
+    animated_ids = {v for v, why in screened_out.items() if "animated" in why}
+    animated_channels = set()  # filled below from the snapshot hits
 
     snapshot_path = args.out_dir / "search_snapshot.json"
     snapshot = json.loads(snapshot_path.read_text()) if snapshot_path.exists() else None
@@ -115,11 +118,14 @@ def main() -> None:
                     hits[entry["id"]] = {"video_id": entry["id"], "query": query, "title": entry.get("title", ""),
                                          "duration_s": entry.get("duration") or 0, "channel_id": entry.get("channel_id", ""),
                                          "channel": entry.get("channel") or entry.get("uploader") or ""}
+    animated_channels |= {h["channel_id"] for h in hits.values() if h["video_id"] in animated_ids}
     rows = []
     for h in hits.values():
         reason = ""
         if h["video_id"] in screened_out:
             reason = "screened_out"
+        elif h["channel_id"] in animated_channels:
+            reason = "screened_out_channel_animated"
         elif h["video_id"] in bad_videos or h["channel_id"] in bad_channels or h["channel"].strip().lower() in bad_names:
             reason = "existing_source"
         elif not MIN_S <= float(h["duration_s"] or 0) <= MAX_S:

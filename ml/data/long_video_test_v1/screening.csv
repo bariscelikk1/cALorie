@@ -4,3 +4,8 @@ VqHtkQWLBvg,reject,"animated 3D figure, not real footage; title, rest-countdown,
 q_vXOV1BmIQ,keep,"one real performer, fixed camera, continuous follow-along; small Up Next inset only",claude_visual_screen_1_per_10s,2026-10-27
 fWT-_jx41Jc,keep,"one real performer, mostly continuous gym work; some talking to camera in the first ~3 min and moderate angle cuts (to be labeled unknown/transition)",claude_visual_screen_1_per_10s,2026-10-27
 jDj0h5JfEiE,reject,"animated 3D figure, not real footage; rest-countdown cards every set",claude_visual_screen_1_per_10s,2026-10-27
+Acy3T5ikjAE,keep,"one real performer, fixed camera, continuous barbell work; short talking intro and brief Up Next preview screens (to be labeled transition)",claude_visual_screen_1_per_10s,2026-10-27
+LlUU6ZscVYk,keep,"one real performer, fixed outdoor camera, continuous circuit; a dog sometimes in frame; pull-ups partly cropped at the top edge",claude_visual_screen_1_per_10s,2026-10-27
+CIxNJbit9BA,reject,"animated 3D figure, not real footage (second animated video from Roberta's Gym; channel excluded)",claude_visual_screen_1_per_10s,2026-10-27
+GY1JhB9BEkk,reject,"two performers exercising side by side the whole video (several people)",claude_visual_screen_1_per_10s,2026-10-27
+DlemEQnOvnM,keep,"one real performer, mostly continuous gym work; one short talking-to-camera segment, some angle and location cuts, bystanders in background",claude_visual_screen_1_per_10s,2026-10-27

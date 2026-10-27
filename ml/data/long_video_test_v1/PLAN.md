@@ -166,3 +166,8 @@ measurement only. Nothing is promoted on this basis alone.
   angle cuts will be labeled unknown/transition). `jDj0h5JfEiE` (Roberta's
   Gym) is rejected as an animated figure. The rule-based rerun picks
   `CIxNJbit9BA`, another Roberta's Gym video, which needs screening too.
+- Screening 4: `DlemEQnOvnM` is kept. `CIxNJbit9BA` (a second animated
+  Roberta's Gym video) and `GY1JhB9BEkk` (two performers side by side) are
+  rejected. Clarification: a video rejected as animated now excludes its
+  whole channel. The rerun picks `82SSypK-pao` (Chris & Edi) and
+  `9vXCA2i982Q` (Lucie Braunschweig), which need screening.
