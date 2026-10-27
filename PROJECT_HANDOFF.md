@@ -1337,3 +1337,14 @@ downtime handling −3.8 pp (allowed −10). Best model of the project on dev, b
 it did not pass the predeclared rule. Arc closed per PLAN.md. The project
 deadline is 2026-11-02; the user decides whether this model is frozen as the
 final model and scored once on the locked long-video test.
+
+## Final model frozen; evaluation 2 on the locked long-video test (2026-10-28)
+
+The user froze Notebook 46 as the final model (`ml/artifacts/final_model_v1/`,
+labeled as not passing the 15-point dev gate bar). Scored once on the locked
+8-video test (`ml/artifacts/long_video_test_v1/eval2/`): smoothed Macro F1
+47.6% vs V6-F 32.6% (+15.0 pp, video bootstrap CI +2.2 to +25.2) and v2 32.3%.
+Exercise time called unknown fell from 55% to 39%. Big gains on bench, push-up,
+pull-up, sit-up, lunge, row, and shoulder press; tricep extension stays 0%,
+lateral raise and lat pulldown lost ground. No more experiments: the project
+is being packed up by 2026-11-02 (final report, README, clean repo; no app).

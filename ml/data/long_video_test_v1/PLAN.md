@@ -223,3 +223,7 @@ measurement only. Nothing is promoted on this basis alone.
   `ml/scripts/score_long_video_test_v1_eval2.py`. Primary: smoothed pooled
   Macro F1, final seed median minus V6-F, video bootstrap. V6-F and v2 must
   reproduce evaluation 1 within 0.005. Evaluations used after this: 2.
+- **Evaluation 2 (2026-10-28):** final model (Notebook 46) vs V6-F, scored
+  once. Smoothed Macro F1 47.6% vs 32.6% (+15.0 pp, CI +2.2 to +25.2): final
+  better. Details: `ml/artifacts/long_video_test_v1/eval2/README.md`.
+  Evaluations used: 2.
