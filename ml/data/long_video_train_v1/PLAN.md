@@ -111,3 +111,27 @@ training on the Mac GPU.
   `Ferc_0UlN4g`, `R4S-eSPDXIg`, `5vmnb_T_YH4`, `uawtllYyD5g`, `_cqwrzDHXsc`;
   the other 11 are **train**. Evidence is in
   `ml/artifacts/long_video_train_v1/`. Next: label all 16 timelines.
+
+## Section 3 implementation details (fixed 2026-10-27, before any training)
+
+Notebook 45 (`ml/notebooks/45_long_video_training_v1.ipynb`) is Notebook 43
+(the v2 recipe) with one change: the 11 train videos' windows join the pool.
+
+- **Windows:** 64 frames every 32 frames from frame 0 over each train video.
+  A window's label is the majority `current_tcn_label` over its frames; it is
+  kept only if that label covers at least 75% of the frames and at least 50%
+  of the frames have a detected pose. No phase windows are added.
+- **Sampler:** one source group per video (`longvideo:<id>`), same
+  square-root group tempering; the 50% RepCount cap is unchanged and applied
+  after, as in v2. Long-video windows go into both the gate pool (supported
+  vs unknown) and, if supported, the classifier pool.
+- **Control:** the frozen v2 seeds 42, 137, 2026 from Notebook 43 (same recipe,
+  same seeds). Parity: their internal-test Macro F1 must reproduce Notebook 43
+  within 0.003, and their dev numbers must reproduce the dev diagnosis within
+  0.005.
+- **Scoring:** the evaluation-1 full-session scorer
+  (`score_long_video_test_v1.py`), smoothed decoder, pooled over the 5 dev
+  videos; seed medians per arm. The bootstrap resamples the 5 dev videos
+  (2,000 draws). Internal-test rule uses the seed mean, as in v2.
+- Early stopping stays on V6-A validation; dev, the locked tests, and the
+  RepCount sealed test are never used for training or stopping.
