@@ -1,0 +1,92 @@
+0 62 intro talking_and_instructions unknown high  # 
+62 76 transition up_next_preview unknown high  # 
+76 106 exercise narrow_shoulder_press_right shoulder_press high  # 
+106 121 transition up_next_preview unknown high  # performer often previews the next move
+121 151 exercise narrow_shoulder_press_left shoulder_press high  # 
+151 166 transition up_next_preview unknown high  # performer often previews the next move
+166 196 exercise in_and_out_press_right shoulder_press medium 2nd # overhead press alternating grips
+196 211 transition up_next_preview unknown high  # performer often previews the next move
+211 241 exercise in_and_out_press_left shoulder_press medium 2nd # overhead press alternating grips
+241 256 transition up_next_preview unknown high  # performer often previews the next move
+256 286 exercise lateral_raise_with_hold_right lateral_raise high  # 
+286 302 transition up_next_preview unknown high  # performer often previews the next move
+302 332 exercise lateral_raise_with_hold_left lateral_raise high  # 
+332 347 transition up_next_preview unknown high  # performer often previews the next move
+347 377 exercise curl_into_arnold_press_right unknown high  # compound
+377 392 transition up_next_preview unknown high  # performer often previews the next move
+392 422 exercise curl_into_arnold_press_left unknown high  # compound
+422 437 transition up_next_preview unknown high  # performer often previews the next move
+437 467 exercise upright_row_right unknown high  # 
+467 482 transition up_next_preview unknown high  # performer often previews the next move
+482 512 exercise upright_row_left unknown high  # 
+512 527 transition up_next_preview unknown high  # performer often previews the next move
+527 557 exercise hammer_curl_right bicep_curl high  # 
+557 572 transition up_next_preview unknown high  # performer often previews the next move
+572 602 exercise hammer_curl_left bicep_curl high  # 
+602 617 transition up_next_preview unknown high  # performer often previews the next move
+617 647 exercise curl_out_into_wide_press_right unknown high  # compound
+647 662 transition up_next_preview unknown high  # performer often previews the next move
+662 692 exercise curl_out_into_wide_press_left unknown high  # compound
+692 707 transition up_next_preview unknown high  # performer often previews the next move
+707 737 exercise front_raise_into_rear_delt_raise_right unknown high  # 
+737 752 transition up_next_preview unknown high  # performer often previews the next move
+752 782 exercise front_raise_into_rear_delt_raise_left unknown high  # 
+782 798 transition up_next_preview unknown high  # performer often previews the next move
+798 828 exercise shoulder_external_rotation_right unknown high  # 
+828 843 transition up_next_preview unknown high  # performer often previews the next move
+843 873 exercise shoulder_external_rotation_left unknown high  # 
+873 888 transition up_next_preview unknown high  # performer often previews the next move
+888 918 exercise twist_in_curl_right bicep_curl high  # 
+918 933 transition up_next_preview unknown high  # performer often previews the next move
+933 963 exercise twist_in_curl_left bicep_curl high  # 
+963 978 transition up_next_preview unknown high  # performer often previews the next move
+978 1008 exercise shoulder_press_right shoulder_press high  # 
+1008 1023 transition up_next_preview unknown high  # performer often previews the next move
+1023 1053 exercise shoulder_press_left shoulder_press high  # 
+1053 1068 transition up_next_preview unknown high  # performer often previews the next move
+1068 1098 exercise half_curl_into_shoulder_raise_right unknown high  # compound
+1098 1113 transition up_next_preview unknown high  # performer often previews the next move
+1113 1143 exercise half_curl_into_shoulder_raise_left unknown high  # compound
+1143 1158 transition up_next_preview unknown high  # performer often previews the next move
+1158 1188 exercise top_half_curl_right bicep_curl medium 2nd # partial-range curl
+1188 1204 transition up_next_preview unknown high  # performer often previews the next move
+1204 1234 exercise top_half_curl_left bicep_curl medium 2nd # partial-range curl
+1234 1249 transition up_next_preview unknown high  # performer often previews the next move
+1249 1279 exercise y_raise_right unknown medium 2nd # lateral-raise confuser
+1279 1294 transition up_next_preview unknown high  # performer often previews the next move
+1294 1324 exercise y_raise_left unknown medium 2nd # lateral-raise confuser
+1324 1339 transition up_next_preview unknown high  # performer often previews the next move
+1339 1369 exercise curl_with_grip_twist_right bicep_curl high  # 
+1369 1384 transition up_next_preview unknown high  # performer often previews the next move
+1384 1414 exercise curl_with_grip_twist_left bicep_curl high  # 
+1414 1436 transition up_next_preview unknown high  # performer often previews the next move
+1436 1476 exercise narrow_shoulder_press shoulder_press high  # 
+1476 1496 transition up_next_preview unknown high  # 
+1496 1536 exercise in_and_out_press shoulder_press medium 2nd # overhead press alternating grips
+1536 1556 transition up_next_preview unknown high  # 
+1556 1596 exercise lateral_raise_with_hold lateral_raise high  # 
+1596 1616 transition up_next_preview unknown high  # 
+1616 1656 exercise curl_into_arnold_press unknown high  # compound
+1656 1676 transition up_next_preview unknown high  # 
+1676 1716 exercise upright_row unknown high  # 
+1716 1736 transition up_next_preview unknown high  # 
+1736 1776 exercise hammer_curl bicep_curl high  # 
+1776 1796 transition up_next_preview unknown high  # 
+1796 1836 exercise curl_out_into_wide_press unknown high  # compound
+1836 1856 transition up_next_preview unknown high  # 
+1856 1896 exercise front_raise_into_rear_delt_raise unknown high  # 
+1896 1916 transition up_next_preview unknown high  # 
+1916 1956 exercise shoulder_external_rotation unknown high  # 
+1956 1976 transition up_next_preview unknown high  # 
+1976 2016 exercise twist_in_curl bicep_curl high  # 
+2016 2036 transition up_next_preview unknown high  # 
+2036 2076 exercise shoulder_press shoulder_press high  # 
+2076 2096 transition up_next_preview unknown high  # 
+2096 2136 exercise half_curl_into_shoulder_raise unknown high  # compound
+2136 2156 transition up_next_preview unknown high  # 
+2156 2196 exercise top_half_curl bicep_curl medium 2nd # partial-range curl
+2196 2216 transition up_next_preview unknown high  # 
+2216 2256 exercise y_raise unknown medium 2nd # lateral-raise confuser
+2256 2276 transition up_next_preview unknown high  # 
+2276 2316 exercise curl_with_grip_twist bicep_curl high  # 
+2316 2338 outro workout_complete_talking unknown high  # 
