@@ -1,0 +1,42 @@
+0 32 intro montage_and_logo unknown high
+32 124 exercise dynamic_warmup unknown high # lunges, toe touches, hip openers
+124 200 rest warmup_end_and_instructions unknown high
+200 212 exercise inchworm_warmup unknown high
+212 214 transition countdown unknown high
+214 240 exercise stiff_leg_dumbbell_deadlift deadlift high
+240 304 rest walking_rest unknown high
+304 330 exercise arnold_press shoulder_press medium 2nd # rotating press variant
+330 392 rest walking_rest unknown high
+392 422 exercise two_dumbbell_bent_over_row dumbbell_row high # rule 3
+422 482 rest walking_rest unknown high
+482 512 exercise bulgarian_split_squat lunge medium 2nd # rule 4
+512 572 rest seated_rest unknown high
+572 602 exercise dumbbell_bench_press bench_press high
+602 662 rest walking_rest unknown high
+662 692 exercise dumbbell_curl bicep_curl high
+692 754 rest walking_rest unknown high
+754 788 exercise stiff_leg_dumbbell_deadlift deadlift high
+788 844 rest walking_rest unknown high
+844 870 exercise arnold_press shoulder_press medium 2nd
+870 932 rest walking_rest unknown high
+932 962 exercise two_dumbbell_bent_over_row dumbbell_row high
+962 1022 rest walking_rest unknown high
+1022 1054 exercise bulgarian_split_squat lunge medium 2nd
+1054 1114 rest seated_rest unknown high
+1114 1144 exercise dumbbell_bench_press bench_press high
+1144 1202 rest walking_rest unknown high
+1202 1234 exercise dumbbell_curl bicep_curl high
+1234 1294 rest seated_rest unknown high
+1294 1324 exercise stiff_leg_dumbbell_deadlift deadlift high
+1324 1384 rest seated_rest unknown high
+1384 1414 exercise arnold_press shoulder_press medium 2nd
+1414 1474 rest walking_rest unknown high
+1474 1504 exercise two_dumbbell_bent_over_row dumbbell_row high
+1504 1564 rest seated_rest unknown high
+1564 1594 exercise bulgarian_split_squat lunge medium 2nd
+1594 1654 rest seated_rest unknown high
+1654 1684 exercise dumbbell_bench_press bench_press high
+1684 1744 rest walking_rest unknown high
+1744 1774 exercise dumbbell_curl bicep_curl high
+1774 1806 outro done_and_flexing unknown high
+1806 1942 outro sponsor_ad unknown high

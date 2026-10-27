@@ -1,0 +1,43 @@
+video_id,video_file,start_s,end_s,start_time,end_time,segment_type,fine_label,current_tcn_label,split,use_for_training,annotation_source,boundary_precision_s,notes,annotation_confidence,review_status,reviewer,needs_second_review
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),0.0,32.0,00:00.0,00:32.0,intro,montage_and_logo,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),32.0,124.0,00:32.0,02:04.0,exercise,dynamic_warmup,unknown,train,false,claude_visual_overview_2s,2.0,"lunges, toe touches, hip openers",high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),124.0,200.0,02:04.0,03:20.0,rest,warmup_end_and_instructions,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),200.0,212.0,03:20.0,03:32.0,exercise,inchworm_warmup,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),212.0,214.0,03:32.0,03:34.0,transition,countdown,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),214.0,240.0,03:34.0,04:00.0,exercise,stiff_leg_dumbbell_deadlift,deadlift,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),240.0,304.0,04:00.0,05:04.0,rest,walking_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),304.0,330.0,05:04.0,05:30.0,exercise,arnold_press,shoulder_press,train,false,claude_visual_overview_2s,2.0,rotating press variant,medium,reviewed,claude_visual,true
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),330.0,392.0,05:30.0,06:32.0,rest,walking_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),392.0,422.0,06:32.0,07:02.0,exercise,two_dumbbell_bent_over_row,dumbbell_row,train,false,claude_visual_overview_2s,2.0,rule 3,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),422.0,482.0,07:02.0,08:02.0,rest,walking_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),482.0,512.0,08:02.0,08:32.0,exercise,bulgarian_split_squat,lunge,train,false,claude_visual_overview_2s,2.0,rule 4,medium,reviewed,claude_visual,true
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),512.0,572.0,08:32.0,09:32.0,rest,seated_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),572.0,602.0,09:32.0,10:02.0,exercise,dumbbell_bench_press,bench_press,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),602.0,662.0,10:02.0,11:02.0,rest,walking_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),662.0,692.0,11:02.0,11:32.0,exercise,dumbbell_curl,bicep_curl,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),692.0,754.0,11:32.0,12:34.0,rest,walking_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),754.0,788.0,12:34.0,13:08.0,exercise,stiff_leg_dumbbell_deadlift,deadlift,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),788.0,844.0,13:08.0,14:04.0,rest,walking_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),844.0,870.0,14:04.0,14:30.0,exercise,arnold_press,shoulder_press,train,false,claude_visual_overview_2s,2.0,,medium,reviewed,claude_visual,true
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),870.0,932.0,14:30.0,15:32.0,rest,walking_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),932.0,962.0,15:32.0,16:02.0,exercise,two_dumbbell_bent_over_row,dumbbell_row,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),962.0,1022.0,16:02.0,17:02.0,rest,walking_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1022.0,1054.0,17:02.0,17:34.0,exercise,bulgarian_split_squat,lunge,train,false,claude_visual_overview_2s,2.0,,medium,reviewed,claude_visual,true
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1054.0,1114.0,17:34.0,18:34.0,rest,seated_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1114.0,1144.0,18:34.0,19:04.0,exercise,dumbbell_bench_press,bench_press,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1144.0,1202.0,19:04.0,20:02.0,rest,walking_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1202.0,1234.0,20:02.0,20:34.0,exercise,dumbbell_curl,bicep_curl,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1234.0,1294.0,20:34.0,21:34.0,rest,seated_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1294.0,1324.0,21:34.0,22:04.0,exercise,stiff_leg_dumbbell_deadlift,deadlift,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1324.0,1384.0,22:04.0,23:04.0,rest,seated_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1384.0,1414.0,23:04.0,23:34.0,exercise,arnold_press,shoulder_press,train,false,claude_visual_overview_2s,2.0,,medium,reviewed,claude_visual,true
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1414.0,1474.0,23:34.0,24:34.0,rest,walking_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1474.0,1504.0,24:34.0,25:04.0,exercise,two_dumbbell_bent_over_row,dumbbell_row,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1504.0,1564.0,25:04.0,26:04.0,rest,seated_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1564.0,1594.0,26:04.0,26:34.0,exercise,bulgarian_split_squat,lunge,train,false,claude_visual_overview_2s,2.0,,medium,reviewed,claude_visual,true
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1594.0,1654.0,26:34.0,27:34.0,rest,seated_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1654.0,1684.0,27:34.0,28:04.0,exercise,dumbbell_bench_press,bench_press,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1684.0,1744.0,28:04.0,29:04.0,rest,walking_rest,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1744.0,1774.0,29:04.0,29:34.0,exercise,dumbbell_curl,bicep_curl,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1774.0,1806.0,29:34.0,30:06.0,outro,done_and_flexing,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
+pKkgzbMJzy8,pKkgzbMJzy8.mp4 (deleted after pose extraction),1806.0,1942.0,30:06.0,32:22.0,outro,sponsor_ad,unknown,train,false,claude_visual_overview_2s,2.0,,high,reviewed,claude_visual,false
