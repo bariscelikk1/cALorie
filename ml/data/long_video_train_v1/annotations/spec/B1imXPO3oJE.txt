@@ -1,0 +1,64 @@
+0 28 intro talking_to_camera unknown high  # 
+28 36 transition title_card unknown high  # 
+36 192 exercise dynamic_warmup unknown high  # arm swings, toe touches, rotations
+192 207 transition lets_workout_card_setup unknown high  # 
+207 252 exercise two_dumbbell_bent_over_row dumbbell_row high  # rule 3
+252 266 rest rest_countdown unknown high  # 
+266 311 exercise overhead_tricep_extension tricep_extension high  # 
+311 326 rest rest_countdown unknown high  # 
+326 371 exercise dumbbell_bicep_curl bicep_curl high  # 
+371 387 rest rest_countdown unknown high  # 
+387 432 exercise wide_bicep_curl bicep_curl high  # 
+432 447 rest rest_countdown unknown high  # 
+447 492 exercise single_arm_overhead_press shoulder_press high  # 
+492 507 rest rest_countdown unknown high  # 
+507 552 exercise single_arm_overhead_press shoulder_press high  # other side
+552 566 rest rest_countdown unknown high  # 
+566 611 exercise bent_over_lateral_raise_row unknown medium 2nd # rear delt raise and row alternating
+611 627 rest rest_countdown unknown high  # 
+627 672 exercise two_dumbbell_bent_over_row dumbbell_row high  # rule 3
+672 686 rest rest_countdown unknown high  # 
+686 731 exercise quadruped_dumbbell_row unknown medium  # tabletop row
+731 747 rest rest_countdown unknown high  # 
+747 792 exercise side_plank_leg_lift unknown high  # 
+792 808 rest rest_countdown unknown high  # 
+808 853 exercise side_plank_leg_lift unknown high  # other side
+853 865 rest rest_countdown unknown high  # 
+865 910 exercise lying_reverse_crunch unknown high  # 
+910 927 rest rest_countdown unknown high  # 
+927 972 exercise seated_dumbbell_russian_twist unknown high  # 
+972 988 rest rest_countdown unknown high  # 
+988 1033 exercise lying_dumbbell_chest_fly unknown high  # 
+1033 1048 rest rest_countdown unknown high  # 
+1048 1093 exercise lying_single_arm_floor_press bench_press medium 2nd # rule 2
+1093 1107 rest rest_countdown unknown high  # 
+1107 1152 exercise tricep_kickback tricep_extension medium 2nd # rule 6
+1152 1167 rest rest_countdown unknown high  # 
+1167 1212 exercise dumbbell_bicep_curl bicep_curl high  # 
+1212 1226 rest rest_countdown unknown high  # 
+1226 1271 exercise hammer_curl bicep_curl high  # 
+1271 1288 rest rest_countdown unknown high  # 
+1288 1333 exercise staggered_curl_with_side_step unknown medium 2nd # curl while stepping
+1333 1347 rest rest_countdown unknown high  # 
+1347 1392 exercise dumbbell_upright_row unknown high  # 
+1392 1408 rest rest_countdown unknown high  # 
+1408 1453 exercise overhead_shoulder_press shoulder_press high  # 
+1453 1467 rest rest_countdown unknown high  # 
+1467 1512 exercise bent_over_reverse_fly unknown high  # 
+1512 1527 rest rest_countdown unknown high  # 
+1527 1572 exercise push_up push_up high  # 
+1572 1588 rest rest_countdown unknown high  # 
+1588 1633 exercise lying_dumbbell_chest_press bench_press medium 2nd # rule 2
+1633 1648 rest rest_countdown unknown high  # 
+1648 1693 exercise lying_dumbbell_chest_press bench_press medium 2nd # rule 2
+1693 1707 rest rest_countdown unknown high  # 
+1707 1752 exercise sit_up_reach sit_up medium 2nd # rule 7
+1752 1766 rest rest_countdown unknown high  # 
+1766 1811 exercise dead_bug unknown high  # 
+1811 1828 rest rest_countdown unknown high  # 
+1828 1873 exercise lying_leg_raise unknown high  # 
+1873 1878 rest rest_countdown unknown high  # 
+1878 1884 transition you_did_it_card unknown high  # 
+1884 2026 cooldown stretches unknown high  # 
+2026 2040 outro workout_complete unknown high  # 
+2040 2047 outro end_card unknown high  # 
