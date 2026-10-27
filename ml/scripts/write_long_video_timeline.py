@@ -26,6 +26,7 @@ def main() -> None:
     parser.add_argument("duration_s", type=float)
     parser.add_argument("spec", type=Path)
     parser.add_argument("output", type=Path)
+    parser.add_argument("--split", default="locked_test", help="split value written to every row")
     args = parser.parse_args()
     rows, previous_end = [], 0.0
     for line in args.spec.read_text().splitlines():
@@ -41,7 +42,7 @@ def main() -> None:
             "video_id": args.video_id, "video_file": f"{args.video_id}.mp4 (deleted after pose extraction)",
             "start_s": f"{start:.1f}", "end_s": f"{end:.1f}", "start_time": clock(start), "end_time": clock(end),
             "segment_type": parts[2], "fine_label": parts[3], "current_tcn_label": parts[4],
-            "split": "locked_test", "use_for_training": "false",
+            "split": args.split, "use_for_training": "false",
             "annotation_source": "claude_visual_overview_2s", "boundary_precision_s": "2.0",
             "notes": notes.strip(), "annotation_confidence": parts[5], "review_status": "reviewed",
             "reviewer": "claude_visual", "needs_second_review": "true" if "2nd" in parts[6:] else "false",

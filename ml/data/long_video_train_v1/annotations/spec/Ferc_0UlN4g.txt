@@ -1,0 +1,28 @@
+0 22 intro standing_title unknown high
+22 110 exercise dynamic_warmup unknown high # arm circles, reaches, toe touches
+110 146 exercise adductor_and_hip_stretches unknown high
+146 164 rest standing unknown high
+164 302 exercise smith_machine_romanian_deadlift deadlift medium 2nd # Smith-bar RDL, dark side view, close-up cutaways
+302 372 exercise quad_and_hamstring_stretches unknown high
+372 486 exercise smith_machine_front_squat squat medium 2nd # dark side view, close-up cutaways
+486 556 exercise hamstring_and_quad_stretches unknown high
+556 604 rest seated_rest unknown high
+604 730 exercise dumbbell_bench_press bench_press high
+730 770 transition stand_and_stretch unknown high
+770 786 rest talking_to_camera unknown high
+786 1094 exercise staggered_stance_dumbbell_deadlift deadlift medium 2nd # kickstand RDL, alternating sides, dark
+1094 1136 exercise smith_bar_knee_drive_step unknown medium # supported single-leg knee drive
+1136 1152 exercise hamstring_stretch unknown high
+1152 1208 rest standing unknown high
+1208 1270 exercise dumbbell_lateral_raise lateral_raise high
+1270 1306 exercise shoulder_stretches unknown high
+1306 1360 exercise smith_machine_romanian_deadlift deadlift medium 2nd
+1360 1410 exercise smith_machine_front_squat squat medium 2nd
+1410 1438 exercise stretch_and_walk unknown high
+1438 1444 rest seated unknown high
+1444 1496 exercise dumbbell_bench_press bench_press high
+1496 1516 transition stand_and_stretch unknown high
+1516 1656 exercise staggered_stance_dumbbell_deadlift deadlift medium 2nd
+1656 1686 rest standing unknown high
+1686 1760 exercise dumbbell_lateral_raise lateral_raise high
+1760 1828 cooldown stretches unknown high
