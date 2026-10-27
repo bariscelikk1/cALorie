@@ -1,6 +1,6 @@
-# Long-video test set v1 — plan (DRAFT, not approved)
+# Long-video test set v1 — plan (approved 2026-10-27)
 
-Status: proposal written 2026-10-27. Nothing is collected.
+Status: approved by the user on 2026-10-27, including YouTube as the source with raw video deleted after processing.
 
 ## Why
 
