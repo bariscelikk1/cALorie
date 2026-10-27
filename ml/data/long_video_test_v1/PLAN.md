@@ -146,3 +146,9 @@ measurement only. Nothing is promoted on this basis alone.
   `screening.csv`. The intake pipeline is
   `ml/scripts/long_video_intake_v1.py` (local Mac; raw video deleted per
   video).
+- Screening 2: `VqHtkQWLBvg` (the pull-up exception video) is rejected: it
+  shows an animated 3D figure, not real footage, with rest and title cards
+  every minute. `q_vXOV1BmIQ` is kept. The rerun finds no valid set, because
+  no remaining eligible video brings pull-ups. The other 6 videos stay
+  selected and are being processed. Waiting on a user decision about
+  pull-ups.
