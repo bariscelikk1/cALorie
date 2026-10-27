@@ -1326,3 +1326,14 @@ sit-up improved a lot; curls, lateral raises, rows, and tricep extensions
 did not. The classifier learned from the new data; the gate did not. Not
 promoted; locked test untouched. One documented follow-up is allowed by the
 plan; it needs the user's choice before anything runs.
+
+## Long-video follow-up 1 (Notebook 46): dev FAIL, close; arc closed (2026-10-28)
+
+Gate rebalanced so long-video windows hold 25% of each gate class; Notebook 45
+classifiers frozen (`ml/artifacts/long_video_gate_balance_v1/`). Missed only
+the gate bar: exercise time called unknown fell 10.3 pp (needed 15). Smoothed
+dev Macro F1 +10.0 pp vs v2 (CI +3.4 to +11.5), internal test +3.1 pp,
+downtime handling −3.8 pp (allowed −10). Best model of the project on dev, but
+it did not pass the predeclared rule. Arc closed per PLAN.md. The project
+deadline is 2026-11-02; the user decides whether this model is frozen as the
+final model and scored once on the locked long-video test.
