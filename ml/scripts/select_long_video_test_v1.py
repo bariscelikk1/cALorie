@@ -34,7 +34,13 @@ QUERIES = [  # fixed before any result was seen
     "pull up workout follow along full body",
     "calisthenics workout follow along pull ups push ups",
     "home workout with pull up bar follow along 30 minutes",
+    # Revision 3 (user decision, 2026-10-27): last pull-up search; if still no valid set, require 5 of 6 covered.
+    "pull up bar workout follow along 25 minutes real time",
+    "calisthenics full body workout follow along 30 min pull ups dips squats",
+    "back and biceps workout follow along pull ups rows curls",
+    "outdoor calisthenics park workout follow along pull ups",
 ]
+FALLBACK_COVERED_MIN = 5  # used only if no set covers all 6 after revision 3
 RESULTS_PER_QUERY = 30
 MIN_S, MAX_S = 20 * 60, 45 * 60
 SHORTLIST_SIZE, PICK = 20, 8
@@ -60,6 +66,20 @@ UNCOVERED = [k for k in EXERCISES if k not in COVERED]
 GYM = r"\bgym\b|\bbarbell\b|\bmachine\b|\bcable\b|\bbench press\b|\blat pull[\s-]?down"
 HOME = r"\bhome\b|\bno equipment\b|\bbodyweight\b|\bliving room\b"
 GROUP = r"\bclass\b|\bgroup\b|\bbootcamp\b|\bpartner\b|\bcouples?\b|\bkids\b"
+
+
+shortlist_used = [None]
+
+
+def search_pick(eligible, valid):
+    size = SHORTLIST_SIZE
+    while True:  # grow the shortlist in steps of 5 until a valid set exists or every eligible video is in
+        shortlist = eligible[:size]
+        pick = next((c for c in itertools.combinations(shortlist, PICK) if valid(c)), None)
+        if pick is not None or size >= len(eligible):
+            shortlist_used[0] = shortlist
+            return pick
+        size += 5
 
 
 def run(ytdlp: str, *args: str) -> list[dict]:
@@ -149,20 +169,21 @@ def main() -> None:
             seen.add(r["channel_id"])
             eligible.append(r)
 
+    covered_min = len(COVERED)
+
     def valid(combo):
         ex = set(itertools.chain.from_iterable(r["exercises"].split(";") for r in combo))
         settings = [r["setting"] for r in combo]
-        return (set(COVERED) <= ex and len(ex & set(UNCOVERED)) >= 4
+        return (len(ex & set(COVERED)) >= covered_min and len(ex & set(UNCOVERED)) >= 4
                 and settings.count("home") >= 3 and settings.count("gym") >= 3
                 and sum(bool(r.get("pullup_exception")) for r in combo) <= 1)
 
-    size, pick = SHORTLIST_SIZE, None
-    while True:  # grow the shortlist in steps of 5 until a valid set exists or every eligible video is in
-        shortlist = eligible[:size]
-        pick = next((c for c in itertools.combinations(shortlist, PICK) if valid(c)), None)
-        if pick is not None or size >= len(eligible):
+    for covered_min in (len(COVERED), FALLBACK_COVERED_MIN):
+        pick = search_pick(eligible, valid)
+        if pick is not None:
             break
-        size += 5
+    shortlist = shortlist_used[0]
+    print(f"covered-class rule used: {covered_min} of {len(COVERED)}")
     chosen = {r["video_id"] for r in pick} if pick else set()
     shortlist_ids = {r["video_id"] for r in shortlist}
     fields = ["video_id", "channel_id", "channel", "title", "duration_s", "query", "exercises", "setting", "chapters",

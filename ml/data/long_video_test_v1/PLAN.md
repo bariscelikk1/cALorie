@@ -152,3 +152,13 @@ measurement only. Nothing is promoted on this basis alone.
   no remaining eligible video brings pull-ups. The other 6 videos stay
   selected and are being processed. Waiting on a user decision about
   pull-ups.
+- Revision 3 (user decision): 4 more pull-up queries appended to the
+  snapshot (434 hits total), with a 5-of-6 fallback only if no full set
+  exists. The fallback was not needed: 9 eligible videos now list pull-ups.
+  The first valid 8 in hash order (6 of 6 covered) are `fWT-_jx41Jc`
+  (Analis Cruz), `wVW6iF82Yrk`, `q_vXOV1BmIQ`, `LlUU6ZscVYk` (Old Dog
+  Fitness), `DlemEQnOvnM` (The Ordinary Boy), `jDj0h5JfEiE`, `Acy3T5ikjAE`,
+  and `GY1JhB9BEkk`. `ayAG8Zwzzbw` and `BEO5oeYg8q4` dropped out under the
+  same rule; their partial processing was stopped and deleted. Every new pick
+  must still pass screening (real person, not mostly talking, cuts, or
+  crowds).
