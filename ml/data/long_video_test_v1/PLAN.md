@@ -171,3 +171,11 @@ measurement only. Nothing is promoted on this basis alone.
   rejected. Clarification: a video rejected as animated now excludes its
   whole channel. The rerun picks `82SSypK-pao` (Chris & Edi) and
   `9vXCA2i982Q` (Lucie Braunschweig), which need screening.
+- Screening 5: `82SSypK-pao` and `9vXCA2i982Q` are kept. `wVW6iF82Yrk` is
+  rejected: full-screen 60 s countdown graphics cover about half its runtime.
+  The rerun adds `v0aPyBQMgIE` (KineticsTrainer), which is kept.
+- **Final set (all 8 screened and kept, 6 of 6 covered classes):**
+  `fWT-_jx41Jc`, `q_vXOV1BmIQ`, `LlUU6ZscVYk`, `DlemEQnOvnM`, `Acy3T5ikjAE`,
+  `v0aPyBQMgIE`, `82SSypK-pao`, `9vXCA2i982Q`, about 4.0 h in total.
+  Evidence is in `ml/artifacts/long_video_test_v1/`. Next: full-timeline
+  labeling.

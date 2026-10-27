@@ -9,3 +9,7 @@ LlUU6ZscVYk,keep,"one real performer, fixed outdoor camera, continuous circuit; 
 CIxNJbit9BA,reject,"animated 3D figure, not real footage (second animated video from Roberta's Gym; channel excluded)",claude_visual_screen_1_per_10s,2026-10-27
 GY1JhB9BEkk,reject,"two performers exercising side by side the whole video (several people)",claude_visual_screen_1_per_10s,2026-10-27
 DlemEQnOvnM,keep,"one real performer, mostly continuous gym work; one short talking-to-camera segment, some angle and location cuts, bystanders in background",claude_visual_screen_1_per_10s,2026-10-27
+82SSypK-pao,keep,"one real performer, fixed studio camera, continuous; brief overlay cards and one short ad",claude_visual_screen_1_per_10s,2026-10-27
+9vXCA2i982Q,keep,"one real performer outdoors, fixed camera, continuous; small Up Next inset; dog in one frame",claude_visual_screen_1_per_10s,2026-10-27
+wVW6iF82Yrk,reject,"full-screen 60 s Coming-up countdown graphics between every set, about half the runtime (edited cuts)",claude_visual_screen_1_per_10s,2026-10-27
+v0aPyBQMgIE,keep,"one real performer, fixed home-gym camera, continuous sets; app-style timer sidebar with an occasional small demo inset",claude_visual_screen_1_per_10s,2026-10-27
