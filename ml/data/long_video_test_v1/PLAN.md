@@ -179,3 +179,7 @@ measurement only. Nothing is promoted on this basis alone.
   `v0aPyBQMgIE`, `82SSypK-pao`, `9vXCA2i982Q`, about 4.0 h in total.
   Evidence is in `ml/artifacts/long_video_test_v1/`. Next: full-timeline
   labeling.
+- Labeling (2026-10-27): all 8 timelines written from the 2 s overview
+  pages (`annotations/*.csv`, compact specs in `annotations/spec/`); strict
+  audit passes. Note: `9vXCA2i982Q` listed pull-ups in its description but no
+  pull-up is visible, so none is labeled; pull-ups remain in 3 videos.
