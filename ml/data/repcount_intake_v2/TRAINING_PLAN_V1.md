@@ -1,7 +1,7 @@
-# RepCount-A training v1 — plan (DRAFT, not approved)
+# RepCount-A training v1 — plan (approved 2026-10-27)
 
-Status: proposal written 2026-10-27. Nothing is built. No role file exists
-yet; the numbers below come from a preview of the rule in section 1.
+Status: approved by the user on 2026-10-27. Roles: `training_v1_roles.csv`;
+stage A runs as Notebook 42.
 
 ## Question
 
@@ -24,8 +24,9 @@ Groups come from `full_role_groups_v1.csv`. A group is never split.
    contains no pilot or v1 clip; every clip in it is `reviewed` (no
    `auto_verified`); and it does not push any class past its 20% target.
 2. **Dev (about 15% per class):** the same walk over the remaining groups.
-3. **Train:** everything else, including all v1 clips and the tiny classes
-   (lateral raise 8, deadlift 3, shoulder press 2).
+3. **Train:** everything else, including the tiny classes (lateral raise 8,
+   deadlift 3, shoulder press 2). The 30 v1 clips follow their group's role
+   (train or dev; never sealed test).
 
 Preview of that rule:
 
