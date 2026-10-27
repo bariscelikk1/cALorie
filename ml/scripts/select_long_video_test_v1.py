@@ -82,6 +82,8 @@ def main() -> None:
     bad_videos = {r["video_id"] for r in excluded if r["video_id"]}
     bad_channels = {r["channel_id"] for r in excluded if r["channel_id"]}
     bad_names = {r["creator"].strip().lower() for r in excluded if r["creator"]}
+    screening_path = args.out_dir / "screening.csv"  # user rule: drop mostly-talking / edited / multi-person videos after viewing
+    screened_out = {r["video_id"]: r["reason"] for r in csv.DictReader(screening_path.open()) if r["verdict"] == "reject"} if screening_path.exists() else {}
 
     snapshot_path = args.out_dir / "search_snapshot.json"
     snapshot = json.loads(snapshot_path.read_text()) if snapshot_path.exists() else None
@@ -96,7 +98,9 @@ def main() -> None:
     rows = []
     for h in hits.values():
         reason = ""
-        if h["video_id"] in bad_videos or h["channel_id"] in bad_channels or h["channel"].strip().lower() in bad_names:
+        if h["video_id"] in screened_out:
+            reason = "screened_out"
+        elif h["video_id"] in bad_videos or h["channel_id"] in bad_channels or h["channel"].strip().lower() in bad_names:
             reason = "existing_source"
         elif not MIN_S <= float(h["duration_s"] or 0) <= MAX_S:
             reason = "duration"

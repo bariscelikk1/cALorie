@@ -137,3 +137,12 @@ measurement only. Nothing is promoted on this basis alone.
   channel; the first valid 8 in hash order are marked `selected=True` in
   `candidates.csv` (about 4 hours). Awaiting the user's OK before any
   download.
+- Screening (user rule: replace mostly-talking, edited, or multi-person
+  videos with the next valid set): `ED5EaUC5EkA` (Muscle & Strength / Sadik
+  Hadzovic) was rejected after viewing 1 frame per 10 s. It is a vlog with
+  mostly talking to camera, ad and title cards, frequent cuts, and other
+  people in frame. The rerun from the unchanged snapshot replaces it with
+  `BEO5oeYg8q4` (ACHV PEAK); the other 7 are unchanged. The log is in
+  `screening.csv`. The intake pipeline is
+  `ml/scripts/long_video_intake_v1.py` (local Mac; raw video deleted per
+  video).
