@@ -217,6 +217,7 @@ Every row remains `training_allowed=false`.
 | Notebook 39 | Ran once on Mac GPU: data effect not supported (false-unknown 6/18 vs required 5/18); sit-ups 0/7 because the frozen classifier calls them bench press. |
 | Notebook 40 | RepCount-A intake v2 pilot evidence (64 clips); ran locally on the Mac. |
 | Notebooks 41 | Full RepCount-A intake (946 clips) ran locally; 718 usable labeled clips in `ml/data/repcount_intake_v2/intake_v2_labels_v1.csv`. |
+| Notebook 42 | Training v1 stage A failed one guard: dev Macro F1 61%→86%, sit-ups 0%→80%, but internal Macro F1 −2.24 pp (limit −2.00). Sealed test unseen. |
 
 The full history is in [PROJECT_HANDOFF.md](https://github.com/bariscelikk1/cALorie/blob/feat/tcn-rebuild/PROJECT_HANDOFF.md).
 Failed experiments are evidence; do not delete or rewrite them as successes.

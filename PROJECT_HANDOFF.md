@@ -1227,3 +1227,16 @@ cannot fix sit-ups).
 The user checked 20 hash-sampled usable clips (`spotcheck_sample_v1.csv`)
 and found all 20 labels correct. Next: assign train/dev/sealed-test roles by
 role group, then predeclare the classifier-plus-gate training experiment.
+
+## Training v1 stage A: fail by 0.24 pp on the internal guard (2026-10-27)
+
+Notebook 42 ran once on the Mac GPU; the archive is
+`ml/artifacts/repcount_training_v1_stage_a/` (README has the full table). The
+verdict is `stage_a_fail`: six of seven criteria passed, but internal-test
+Macro F1 dropped 2.24 pp against a 2.00 pp limit. On RepCount dev the gains
+were large and group-robust: Macro F1 61% to 86% (bootstrap CI +17.7 to +33.4
+pp), sit-ups 0% to 80%, squats 69% to 88%, unknown rejection 82% to 94%.
+The internal cost is concentrated in sit-up (−15.4) and pull-up (−16.7)
+recall, plus unknown (−4.6). The sealed test remains unseen, so a
+predeclared v2 with one change can still be judged honestly. Stage B did not
+run.
