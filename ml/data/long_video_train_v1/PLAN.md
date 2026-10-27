@@ -136,7 +136,7 @@ Notebook 45 (`ml/notebooks/45_long_video_training_v1.ipynb`) is Notebook 43
 - Early stopping stays on V6-A validation; dev, the locked tests, and the
   RepCount sealed test are never used for training or stopping.
 
-## Follow-up 1: gate balance (DRAFT, awaiting user approval)
+## Follow-up 1: gate balance (approved by the user 2026-10-28)
 
 Chosen after Notebook 45 failed the gate criterion, so it is a post-hoc
 follow-up and is labeled that way. The plan allows exactly one; after it,
