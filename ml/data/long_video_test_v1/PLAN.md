@@ -188,3 +188,29 @@ measurement only. Nothing is promoted on this basis alone.
   58 flagged rows were adjudicated by rule or guide default. **The set is
   locked** (`LOCK.json` holds the hashes of every annotation file and evidence
   ZIP). Evaluations so far: 0.
+
+## Scoring details (predeclared 2026-10-27, before any evaluation)
+
+- Models: **V6-F** (V6-E classifier + original V6-F gates,
+  `ml/artifacts/v6f_multistream_gate/model/`) and **v2** (the 3 frozen seeds
+  from `ml/artifacts/repcount_training_v2_stage_a/`). Gate threshold 0.65,
+  mean of 3 gate streams.
+- Dense windows: a 64-frame window centered every 8 frames (0.53 s); edges
+  are padded by repeating the first/last frame. Truth is the label at the
+  window center.
+- Decoders: raw; smoothed = majority vote over 9 consecutive centers (about
+  5 s; ties keep the raw label), then any run shorter than 4 s merges into
+  its longer neighbor (repeat until none).
+- Metrics are pooled over all 8 videos (every center weighs the same):
+  15-label Macro F1 and accuracy, both with and without a ±2 s boundary
+  guard; exercise-block F1 (same label, IoU at least 0.5, one-to-one
+  greedy); label switches per minute versus truth; share of rest, transition,
+  intro, and outro time called `unknown`; share of supported-exercise time
+  called `unknown`; per-class recall. Per-video tables are reported.
+- v2 summary = median over its 3 seeds of each metric.
+- **Primary question:** smoothed pooled Macro F1, v2 minus V6-F. Answer
+  "v2 better" only if the 95% interval from 2,000 video-level bootstrap
+  resamples is above zero. This is a measurement only; nothing is promoted or
+  tuned from it.
+- The scorer is dry-run first on stitched non-test RepCount clips. The
+  locked set is then scored exactly once; that counts as evaluation 1.
