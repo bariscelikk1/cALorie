@@ -1297,8 +1297,8 @@ excluded), labeled second by second: 948 segments, 8.31 h, about 66%
 (`second_review_sample_v1.csv`). Of 126 flagged rows, 106 were adjudicated
 by `ml/scripts/adjudicate_long_video_train_v1.py` (rules 1-10, the
 compound/unsupported default, or types the user verified in the sample).
-20 rows stay `needs_second_review=true` until the user confirms proposed
-rules 11-16 (Arnold/push/single-arm press, Smith RDL, Zottman/partial curl,
-mixed lateral-raise and skull-crusher sets, lunge with arm transfer). Strict
+The other 20 were adjudicated after the user approved rules 11-18
+(Arnold/push/single-arm press, Smith RDL, Zottman/partial curl,
+mixed sets keep the main class, lunge with arm moves -> lunge). Strict
 audit passes (0 errors, 0 warnings). Next: PLAN.md section 2, the dev
 diagnosis, reported to the user before any training.

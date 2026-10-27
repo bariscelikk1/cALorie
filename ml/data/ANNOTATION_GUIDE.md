@@ -83,6 +83,21 @@ recheck every earlier row with the same pattern.
 10. Pull-ups with the head cropped or in dark footage -> `pull_up` when the
     motion is visible.
 
+### Edge-case rulings (user-approved 2026-10-27, long-video training v1)
+
+11. Stiff-leg, single-leg, kickstand, staggered, and Smith-machine Romanian
+    deadlifts -> `deadlift`.
+12. Single-kettlebell bent-over row -> `dumbbell_row`.
+13. Arnold, push, single-arm, seated, and in-and-out presses -> `shoulder_press`.
+14. Zottman and partial-range (top-half) curls -> `bicep_curl`.
+15. Knee push-ups and push-up pulses -> `push_up`.
+16. Smith-machine front squats and sumo-squat pulses -> `squat`.
+17. A set that mixes variations of one move (lateral-raise variations,
+    skull crushers alternating with presses) keeps the main class.
+18. A forward or reverse lunge with an arm move (curl, weight pass, overhead
+    transfer) -> `lunge`. Side lunges, squat-to-press, and other compounds
+    stay `unknown`.
+
 ## Temporal boundaries
 
 - `start_s` is the first frame where the labeled state is visibly established.

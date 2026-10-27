@@ -3,8 +3,8 @@
 Each flagged fine_label maps to the basis that settles it: one of the ten
 user-approved edge-case rules (ANNOTATION_GUIDE.md), the guide's compound or
 unsupported default, or a type the user verified directly in the 95-row
-second-review sample (2026-10-27, 95/95 correct). Types that rest only on the
-proposed rules 11-16 stay flagged until the user confirms those rules.
+second-review sample (2026-10-27, 95/95 correct). Rules 11-18 (user-approved
+2026-10-27 after the review) cover the rest.
 Labels never change here; only review_status, needs_second_review and notes.
 """
 from __future__ import annotations
@@ -30,6 +30,15 @@ RULES = {
                "kneeling_overhead_press"],
     "rule 9": ["dead_stop_staggered_push_up", "dumbbell_push_up", "knee_push_up",
                "push_up_knee_down", "push_up_pulses"],
+    "rule 11": ["smith_machine_romanian_deadlift"],
+    "rule 13": ["arnold_press", "single_arm_push_press_left",
+                "single_arm_push_press_right", "seated_straddle_overhead_press",
+                "single_arm_overhead_press"],
+    "rule 14": ["zottman_curl", "top_half_curl", "top_half_curl_left",
+                "top_half_curl_right"],
+    "rule 17": ["lateral_raise_variations", "lying_tricep_extension_and_press"],
+    "rule 18": ["overhead_to_shoulder_transfer_reverse_lunge",
+                "reverse_lunge_dumbbell_pass_through"],
     "class definition": ["single_arm_overhead_tricep_extension",
                          "skull_crusher_tabletop_legs"],
     "compound/unsupported default": [
