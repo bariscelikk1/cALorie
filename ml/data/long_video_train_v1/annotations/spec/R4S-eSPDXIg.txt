@@ -1,0 +1,55 @@
+0 10 intro title unknown high # 
+10 24 transition structure_and_up_first_screen unknown high # 
+24 69 exercise overhead_to_shoulder_transfer_reverse_lunge lunge medium 2nd # lunge plus overhead transfer
+69 84 transition rest_next_screen unknown high # 
+84 129 exercise overhead_to_shoulder_transfer_reverse_lunge lunge medium 2nd # set 2
+129 144 transition rest_next_screen unknown high # 
+144 189 exercise upright_row_to_squat unknown high  # compound
+189 204 transition rest_next_screen unknown high # 
+204 249 exercise single_arm_row_to_cossack_squat_right unknown high  # compound
+249 266 transition rest_next_screen unknown high # 
+266 311 exercise single_arm_row_to_cossack_squat_left unknown high  # compound
+311 326 transition rest_next_screen unknown high # 
+326 371 exercise reverse_lunge_with_bicep_curl lunge medium 2nd # alternating lunge with curl
+371 386 transition rest_next_screen unknown high # 
+386 431 exercise push_up_pulses push_up medium 2nd # partial-range push-ups
+431 446 transition rest_next_screen unknown high # 
+446 478 exercise push_up_hold unknown high  # isometric
+478 496 transition rest_next_screen unknown high # 
+496 541 exercise single_arm_squat_heel_raise_press_right unknown high  # compound squat to press
+541 556 transition rest_next_screen unknown high # 
+556 601 exercise single_arm_squat_heel_raise_press_left unknown high  # compound
+601 616 transition rest_next_screen unknown high # 
+616 661 exercise roll_up_to_seated_overhead_press unknown high  # compound
+661 676 transition rest_next_screen unknown high # 
+676 721 exercise bent_over_row_plus_good_morning unknown medium 2nd # alternating row and hinge
+721 736 transition rest_next_screen unknown high # 
+736 781 exercise leg_extension_to_lift_hip_raise unknown high  # 
+781 796 transition rest_next_screen unknown high # 
+796 841 exercise alternating_lying_tricep_extension tricep_extension high  # 
+841 856 transition rest_next_screen unknown high # 
+856 901 exercise single_arm_push_press_right shoulder_press medium 2nd # push press with leg drive
+901 916 transition rest_next_screen unknown high # 
+916 961 exercise single_arm_push_press_left shoulder_press medium 2nd # 
+961 976 transition rest_next_screen unknown high # 
+976 1010 exercise weighted_hollow_hold_leg_lifts unknown high  # 
+1010 1026 transition rest_next_screen unknown high # 
+1026 1071 exercise kneeling_around_the_world_rotation unknown high  # 
+1071 1086 transition rest_next_screen unknown high # 
+1086 1131 exercise dumbbell_swing unknown high  # 
+1131 1146 transition rest_next_screen unknown high # 
+1146 1191 exercise bicep_curl_to_romanian_deadlift unknown medium 2nd # alternating curl and RDL
+1191 1206 transition rest_next_screen unknown high # 
+1206 1251 exercise single_arm_chest_press_glute_bridge_right unknown high  # compound
+1251 1266 transition rest_next_screen unknown high # 
+1266 1311 exercise single_arm_chest_press_glute_bridge_left unknown high  # compound
+1311 1326 transition rest_next_screen unknown high # 
+1326 1371 exercise snatch_to_overhead_reverse_lunge_right unknown high  # compound
+1371 1386 transition rest_next_screen unknown high # 
+1386 1431 exercise snatch_to_overhead_reverse_lunge_left unknown high  # compound
+1431 1446 transition rest_next_screen unknown high # 
+1446 1491 exercise kneeling_overhead_tricep_extension_to_front_raise unknown medium 2nd # alternating tricep extension and front raise
+1491 1506 transition rest_next_screen unknown high # 
+1506 1551 exercise reverse_lunge_dumbbell_pass_through lunge medium 2nd # lunge with pass-under
+1551 1552 transition final_seconds unknown high # 
+1552 1559 outro thanks_card unknown high # 
