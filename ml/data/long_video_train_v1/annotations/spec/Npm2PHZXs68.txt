@@ -1,0 +1,44 @@
+0 4 intro title unknown high  # 
+4 12 transition first_exercise_preview unknown high  # 
+12 52 exercise goblet_squat squat high  # 
+52 72 transition next_preview_rest unknown high  # 
+72 112 exercise dumbbell_reverse_lunge lunge high  # 
+112 132 transition next_preview_rest unknown high  # 
+132 172 exercise overhead_shoulder_press shoulder_press high  # 
+172 192 transition next_preview_rest unknown high  # 
+192 232 exercise single_arm_dumbbell_row dumbbell_row high  # 
+232 252 transition next_preview_rest unknown high  # 
+252 292 exercise single_arm_dumbbell_row dumbbell_row high  # other side
+292 312 transition next_preview_rest unknown high  # 
+312 352 exercise dumbbell_romanian_deadlift deadlift high  # 
+352 372 transition next_preview_rest unknown high  # 
+372 412 exercise lateral_lunge_with_curl unknown medium 2nd # lateral lunge stays unknown
+412 432 transition next_preview_rest unknown high  # 
+432 472 exercise dumbbell_bicep_curl bicep_curl high  # 
+472 492 transition next_preview_rest unknown high  # 
+492 532 exercise sumo_squat squat medium 2nd # rule 5
+532 552 transition next_preview_rest unknown high  # 
+552 592 exercise single_leg_romanian_deadlift deadlift medium 2nd # single-leg RDL
+592 612 transition next_preview_rest unknown high  # 
+612 652 exercise single_leg_romanian_deadlift deadlift medium 2nd # other side
+652 672 transition next_preview_rest unknown high  # 
+672 712 exercise squat_to_curl unknown high  # compound
+712 732 transition next_preview_rest unknown high  # 
+732 772 exercise knee_drive_balance unknown high  # 
+772 792 transition next_preview_rest unknown high  # 
+792 832 exercise knee_drive_balance unknown high  # other side
+832 852 transition next_preview_rest unknown high  # 
+852 892 exercise squat_to_overhead_press unknown high  # compound thruster
+892 912 transition next_preview_rest unknown high  # 
+912 952 exercise dumbbell_push_up push_up medium 2nd # rule 9
+952 972 transition next_preview_rest unknown high  # 
+972 1012 exercise lying_dumbbell_chest_press bench_press medium 2nd # rule 2
+1012 1032 transition next_preview_rest unknown high  # 
+1032 1072 exercise lying_dumbbell_leg_raise_crunch unknown high  # 
+1072 1092 transition next_preview_rest unknown high # 
+1092 1210 exercise plank_rotation unknown high # 
+1210 1212 transition next unknown high # 
+1212 1272 exercise forearm_plank_hold unknown high # 
+1272 1292 transition workout_complete_card unknown high # 
+1292 1352 cooldown stretches unknown high # 
+1352 1370 outro subscribe_end_card unknown high # 
