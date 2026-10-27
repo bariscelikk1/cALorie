@@ -220,6 +220,7 @@ Every row remains `training_allowed=false`.
 | Notebook 42 | Training v1 stage A failed one guard: dev Macro F1 61%→86%, sit-ups 0%→80%, but internal Macro F1 −2.24 pp (limit −2.00). Sealed test unseen. |
 | Notebook 43 | Training v2 (50% RepCount cap) stage A passed on dev (Macro F1 61%→85%, sit-ups 0%→90%, internal −1.61 pp). |
 | Notebook 44 | v2 stage B on the sealed test FAILED one criterion: sit-ups 42.9% (needed 50%). Macro F1 57%→75%, squats 44%→72%, unknown rejection 80%→94%. Arc closed; v2 not promoted; sealed test spent. |
+| Long-video test v1 | Locked 8-video 3.9 h full-session set; evaluation 1: V6-F 32.6% vs v2 32.3% smoothed Macro F1 (no difference); both reject >50% of real exercise time as unknown. |
 
 The full history is in [PROJECT_HANDOFF.md](https://github.com/bariscelikk1/cALorie/blob/feat/tcn-rebuild/PROJECT_HANDOFF.md).
 Failed experiments are evidence; do not delete or rewrite them as successes.

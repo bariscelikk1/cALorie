@@ -214,3 +214,6 @@ measurement only. Nothing is promoted on this basis alone.
   tuned from it.
 - The scorer is dry-run first on stitched non-test RepCount clips. The
   locked set is then scored exactly once; that counts as evaluation 1.
+- **Evaluation 1 (2026-10-27):** V6-F vs v2, scored once. Primary answer: not
+  shown better (−0.3 pp, CI −6.2 to +7.6). Details are in
+  `ml/artifacts/long_video_test_v1/eval1/README.md`. Evaluations used: 1.

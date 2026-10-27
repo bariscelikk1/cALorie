@@ -1,0 +1,21 @@
+{
+  "primary_metric": "smoothed pooled 15-label Macro F1",
+  "v2_minus_v6f": -0.0031072594549881316,
+  "bootstrap_95ci": [
+    -0.06244992957432217,
+    0.07608789453915757
+  ],
+  "answer": "not_shown_better",
+  "videos": [
+    "82SSypK-pao",
+    "9vXCA2i982Q",
+    "Acy3T5ikjAE",
+    "DlemEQnOvnM",
+    "LlUU6ZscVYk",
+    "fWT-_jx41Jc",
+    "q_vXOV1BmIQ",
+    "v0aPyBQMgIE"
+  ],
+  "promotion": false,
+  "evaluation_number": 1
+}

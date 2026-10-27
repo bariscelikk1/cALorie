@@ -1274,3 +1274,15 @@ about 70% `unknown` time. The user second-reviewed a 44-segment hash sample
 (all correct) and approved 10 edge-case rules, which are added to the
 annotation guide. The set is locked (`LOCK.json`). Next: predeclare and run
 the full-session scorer (V6-F vs v2; raw and fixed smoothed decoders) once.
+
+## Long-video evaluation 1: full sessions expose the gate (2026-10-27)
+
+First scoring on the locked long-video set
+(`ml/artifacts/long_video_test_v1/eval1/`). Smoothed 15-label Macro F1 was
+V6-F 32.6% and v2 32.3%: v2 is not shown better (CI −6.2 to +7.6 pp). Both
+reject more than half of real exercise time as `unknown` (V6-F 55%, v2 65%).
+v2 improves push-ups (25→82%), squats, jumping jacks, downtime handling, and
+flicker, but loses curls (31→7%) and lateral raises (84→7%). Sit-up, row,
+lunge, shoulder press, and tricep extension are 0% for both. Main bottleneck
+on real sessions: the gate is far too strict, and the uncovered classes need
+data. Nothing was tuned on this set.
