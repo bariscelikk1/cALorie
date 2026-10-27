@@ -1251,3 +1251,16 @@ seven criteria held. On RepCount dev, Macro F1 rose from 61.4% to 85.4% (CI
 recovered (98% to 99%). Next: stage B, one scoring of the frozen v2 models on
 the sealed test with the same rule, after the user's go-ahead. Still
 non-promotable.
+
+## Training v2 stage B (sealed test): FAIL on sit-ups; RepCount arc closed (2026-10-27)
+
+Notebook 44 scored the frozen v2 models once on the 140-clip sealed test;
+the archive is `ml/artifacts/repcount_training_v2_stage_b/`. Six of seven
+criteria held, but the sit-up recall seed median was 42.9% (required 50%).
+v2 versus V6-F on the sealed test: Macro F1 57.3% to 75.4% (CI +11.4 to +26.3
+pp), squats 44% to 72%, unknown rejection 80% to 94%, real exercises called
+unknown 40 to 26. Remaining sit-up misses are gate rejections, not bench-press
+confusions. Dev had shown 90% sit-ups, which was optimistic. Per the v2 plan
+the RepCount arc closes: v2 is not promoted, and no v3 cap sweep follows. The
+sealed test is now spent. Any further attempt needs a new idea, a new plan,
+and a fresh held-out set.
