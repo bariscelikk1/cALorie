@@ -106,3 +106,8 @@ training on the Mac GPU.
   3 lateral-raise queries appended (549 hits). The new 16 meet every rule.
 - Operational note: one lane was stopped by mistake (a process match on a
   rejected ID); its 3 unprocessed videos were rerun. No data was lost.
+- Final 16 (all screened and kept; 6 rejects replaced by rule): 8.31 h.
+  Roles by hash (`roles.csv`, salt `long_video_train_v1_roles`): **dev**
+  `Ferc_0UlN4g`, `R4S-eSPDXIg`, `5vmnb_T_YH4`, `uawtllYyD5g`, `_cqwrzDHXsc`;
+  the other 11 are **train**. Evidence is in
+  `ml/artifacts/long_video_train_v1/`. Next: label all 16 timelines.
