@@ -96,3 +96,13 @@ training on the Mac GPU.
 - Revision 1: 12 more queries appended (514 hits). 16 videos are picked
   greedily in hash order, meeting every coverage rule (`selected=True` in
   `candidates.csv`). Awaiting the user's OK before download.
+- Screening (user rule: replace mostly-talking, edited, multi-person, or
+  animated videos with the next valid set by the same rule): rejected
+  `2lGaGusBPEI` (rest-timer screens, talking, cuts), `JofVPb0wtv8` and
+  `UKfNi0IIndA` (two performers, same channel), `mpZBFMfOfAw` (three
+  performers), and `wRR8HUMdh00` (split screen with a second figure). Every
+  decision is in `screening.csv`.
+- Revision 2: after those rejects no valid set had 4 lateral-raise videos;
+  3 lateral-raise queries appended (549 hits). The new 16 meet every rule.
+- Operational note: one lane was stopped by mistake (a process match on a
+  rejected ID); its 3 unprocessed videos were rerun. No data was lost.

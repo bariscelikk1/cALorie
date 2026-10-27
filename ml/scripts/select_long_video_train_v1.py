@@ -48,6 +48,10 @@ QUERIES = [  # fixed before any result was seen; aimed at the weak classes
     "sit ups crunches and dumbbell workout follow along",
     "triceps biceps shoulders dumbbell workout 30 minutes",
     "back and shoulders dumbbell workout follow along home",
+    # Revision 2 (2026-10-27, after screening rejects): no remaining eligible set had 4 lateral-raise videos.
+    "shoulder workout follow along lateral raises front raises dumbbells 25 min",
+    "dumbbell shoulders and arms workout follow along lateral raise",
+    "upper body sculpt follow along lateral raises bicep curls",
 ]
 RESULTS_PER_QUERY = 30
 PICK = 16
