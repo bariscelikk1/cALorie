@@ -103,3 +103,16 @@ Notebook 46 exactly as it is today.
   test never shares a channel with train.
 - Result: 8 train (4.4 h) and 6 test (2.6 h) videos, `candidates.csv` (`role`
   column). Awaiting the user's OK before any download.
+
+## Notebook 47 (built 2026-10-28, offline; passed a local dry run)
+
+`ml/scripts/build_notebook47.py` -> `ml/notebooks/47_long_video_round2.ipynb`.
+Notebook 46's sampler (v2 pool, 50% RepCount cap, long-video windows at 25% of
+each gate class) with one change: it trains on every labeled long video. The
+classifier and the three gates are retrained, three seeds. Control: the frozen
+Notebook 46 model (internal-test parity within 0.003 is asserted). The old
+locked long-video test v1 videos are training data from here on (plan
+section 2); the 6 round-2 test videos are verified against `LOCK.json` and can
+never be in the training list. The notebook runs the predeclared four-part rule
+and refuses a real run until round-2 data and `LOCK.json` are in the repository
+(a round-1 dev stand-in exercises the code path in a dry run only).
