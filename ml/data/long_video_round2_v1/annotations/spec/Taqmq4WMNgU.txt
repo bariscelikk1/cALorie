@@ -9,9 +9,9 @@
 696 740 exercise dumbbell_lunges_larger_step lunge medium # boundaries approximate (no on-screen timer), about +/-6 s
 740 750 rest pause_between_sets unknown medium
 750 776 exercise dumbbell_bicep_curl bicep_curl medium # boundaries approximate (no on-screen timer), about +/-6 s
-776 856 exercise unclear_leg_and_arm_work unknown low # not identified; kept unknown rather than guessed
+776 856 exercise unclear_leg_and_arm_work unknown medium # not identified; kept unknown rather than guessed
 856 886 exercise dumbbell_front_raise unknown medium # arms straight to chest height: front raise, not lateral raise
-886 960 exercise unclear_hinge_and_single_arm_work unknown low # not identified; kept unknown
+886 960 exercise unclear_hinge_and_single_arm_work unknown medium # not identified; kept unknown
 960 970 transition hinge_setup unknown medium
 970 980 exercise bent_over_two_dumbbell_row dumbbell_row medium # rule 3; boundaries approximate (no on-screen timer), about +/-6 s
 980 982 rest stand_and_smile unknown high
