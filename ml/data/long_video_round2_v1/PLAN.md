@@ -136,3 +136,11 @@ and refuses a real run until round-2 data and `LOCK.json` are in the repository
   the same rules (the other seven train videos stay fixed; coverage needs were
   already met, so the first eligible creator in train-pool hash order):
   **`Xyea2DCicKU`** (Matt Jones, 23 min, home; squat, curl, deadlift, row, lunge).
+- **Labeling and review (2026-10-28):** all 14 timelines labeled second by second
+  (704 segments, 6.9 h; strict audit clean). User spot-check of a 10% hash sample
+  (71 segments, 42 train and 29 test): 71/71 correct. User approved rules 19-23
+  (`ANNOTATION_GUIDE.md`) and accepted the 12 pose-identified `74B9SxqtMug`
+  segments; all 43 flagged rows adjudicated by
+  `ml/scripts/adjudicate_long_video_round2_v1.py`. The 6 test videos are locked in
+  `LOCK.json` (labels and evidence hashes) before any scoring. Evaluations used on
+  this test set: 0. Next: Notebook 47.

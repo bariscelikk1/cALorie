@@ -1,0 +1,26 @@
+{
+  "locked_on": "2026-10-28",
+  "status": "locked_test_set",
+  "rules": "Never train, calibrate, choose thresholds or decoders, or relabel from predictions. Scored once by Notebook 47; log every evaluation in PLAN.md.",
+  "annotations": {
+    "7bD2iKKNoCE.csv": "e7620b9ebf5c81c2c4bfb702448581137ca3a053342ef3084764fcf37dbfc32b",
+    "K59aLtJH0ok.csv": "46120bd736fe96b31a3e8dcc68426276a621ac2584f7faf5fc5fe8e924aad823",
+    "YEG6y9r-ELM.csv": "3c79203e60253843d3f22aeae0cbecde78ca4d0855b385de5f1f0d411e188504",
+    "cv10-qXYE1U.csv": "64b9be53ec45092bc2b4bd038d2fd905078fcb8f09098d107534197fb244857e",
+    "lMhDB_naNBY.csv": "474df6eb444b4c81527e68c8992626a0e70704b92b4fdde9193b7d0e04b2b637",
+    "o3xDawAnb-M.csv": "344fefaddcc783831981f700f96b646ae6b4201fcbc2d13eb1e956f06e260d94"
+  },
+  "evidence": {
+    "7bD2iKKNoCE": "38540d23742eef3a3e80c4e47be969f5856f91065da76228650baf8271519b90",
+    "K59aLtJH0ok": "00e6899cbc9053442f7a9b209bfa9207df3a75802a8498af8296008fb9c21248",
+    "YEG6y9r-ELM": "b14da83ed4e7a4635c21fe461829d98969bd0a68c0d2a4bb625e1ed796f9cf4d",
+    "cv10-qXYE1U": "396e37e1239f4e5ae4852e974e1ca6ab5cf638b3bcb08ef807caf931b540f640",
+    "lMhDB_naNBY": "85fd8277a6147a056a5caff18d7203f3cfaeb7fe69333b10501a38cf9e5c19df",
+    "o3xDawAnb-M": "65808fb779cd660aa80fc38ae16b66fbdb917de92aee3c1caaf38fad89e541a2"
+  },
+  "second_review": {
+    "sample": "second_review_sample_v1.csv",
+    "result": "71 of 71 correct (user)",
+    "flagged_rows_adjudicated": 43
+  }
+}

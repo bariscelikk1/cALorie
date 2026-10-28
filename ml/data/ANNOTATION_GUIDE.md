@@ -98,6 +98,22 @@ recheck every earlier row with the same pattern.
     transfer) -> `lunge`. Side lunges, squat-to-press, and other compounds
     stay `unknown`.
 
+### Edge-case rulings (user-approved 2026-10-28, long-video round 2)
+
+19. Bent-arm lateral raises and alternating raises to the side -> `lateral_raise`
+    (a lateral-raise variation, as in rule 17).
+20. Kettlebell shoulder presses, floor presses, and bent-over or gorilla rows
+    take the same class as the dumbbell move (`shoulder_press`, `bench_press`,
+    `dumbbell_row`).
+21. Cross-body curls -> `bicep_curl` (as in rule 14).
+22. Lying close-grip presses, and lying presses with a fly mixed in ->
+    `bench_press`. A pure lying fly stays `unknown`.
+23. Jumping jacks used as a short active-rest block -> `jumping_jack`.
+
+Segments whose on-screen exercise name was unreadable (tiny figure) and were
+identified from pose keypoints and frames are accepted where the user's review
+sample from the same video was correct (`74B9SxqtMug`, 12 segments).
+
 ## Temporal boundaries
 
 - `start_s` is the first frame where the labeled state is visibly established.
