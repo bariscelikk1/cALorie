@@ -1,4 +1,4 @@
-# Rep counting and calories for the web page — plan (DRAFT, awaiting approval)
+# Rep counting and calories for the web page — plan (approved by the user 2026-10-28)
 
 Status: written 2026-10-28. Nothing is built. Deadline for the whole project:
 2026-11-02.
