@@ -1,4 +1,4 @@
-# Long-video round 2 — plan (DRAFT, awaiting approval)
+# Long-video round 2 — plan (approved by the user 2026-10-28)
 
 Status: written 2026-10-28. Nothing is collected or built. Project deadline
 2026-11-02, so this is a 4-day plan with a fallback.
