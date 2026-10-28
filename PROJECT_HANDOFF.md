@@ -1357,3 +1357,15 @@ to it. The legacy website, worker, Supabase, Render, evaluation, examples,
 and docs folders moved unchanged to `archive/legacy_web_app/`.
 `review_pages/` (creator frames) is now git-ignored. No experiments are in
 progress; rep counting, calories, and an app were not built.
+
+## Small local web page (2026-10-28)
+
+`ml/app/calorie_pipeline.py` (video -> ffmpeg 15 FPS/360p -> MediaPipe pose ->
+final model, three seeds averaged -> smoothed timeline) and `ml/app/app.py`
+(Streamlit). Checks: the seed-averaged model scores 35.5% smoothed Macro F1 on
+the 5 dev videos (seed median 35.7%); re-extracted pose from the first 90 s of
+a dev video matched the stored pose (median abs diff 0.011); the page ran
+end to end through Streamlit's headless tester on a 45 s clip (lunges found,
+some intro/rest mislabeled as pull-up). The raw test video was deleted. The
+seed-averaged ensemble was not scored on the locked test; the 47.6% figure is
+the per-seed median.

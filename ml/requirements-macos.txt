@@ -10,3 +10,4 @@ tqdm
 yt-dlp
 jupyterlab
 ipykernel
+streamlit

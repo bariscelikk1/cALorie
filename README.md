@@ -30,7 +30,8 @@ extension. Everything else is `unknown`.
 | --- | --- |
 | Pose extraction, gate, classifier, timeline scoring | Done |
 | Labeled real-session data and locked test | Done |
-| Repetition counting, calorie estimate, app | Not built |
+| Small local web page (video in, exercise timeline out) | Done: `ml/app/` |
+| Repetition counting, calorie estimate | Not built |
 
 ## Where things are
 
@@ -39,11 +40,26 @@ extension. Everything else is `unknown`.
 | [`FINAL_REPORT.md`](FINAL_REPORT.md) | Final results, limitations, next steps |
 | [`ml/artifacts/final_model_v1/`](ml/artifacts/final_model_v1/) | Frozen final model and [model card](ml/artifacts/final_model_v1/MODEL_CARD.md) |
 | [`ml/artifacts/long_video_test_v1/eval2/`](ml/artifacts/long_video_test_v1/eval2/) | Final locked-test scoring |
+| [`ml/app/`](ml/app/) | The small web page and the video-to-timeline pipeline |
 | [`ml/notebooks/`](ml/notebooks/) | Every experiment notebook (01-46) |
 | [`ml/scripts/`](ml/scripts/) | Builders, intake, labeling, audit, and scoring scripts |
 | [`ml/data/`](ml/data/) | Labels, splits, plans, and the [annotation guide](ml/data/ANNOTATION_GUIDE.md) |
 | [`PROJECT_HANDOFF.md`](PROJECT_HANDOFF.md) | Full chronological experiment log |
 | [`archive/legacy_web_app/`](archive/legacy_web_app/) | The old website, worker, and database code (not maintained) |
+
+## Try it on your own video
+
+```bash
+pip install -r ml/requirements-macos.txt   # also needs ffmpeg
+streamlit run ml/app/app.py
+```
+
+Upload one video of one person with the whole body in view. The page shows the
+exercise timeline, time per exercise, and a CSV download. It runs on your
+computer only. It is a research prototype: it averages the three final-model
+seeds (checked on the dev videos: 35.5% Macro F1 vs 35.7% for the seed median),
+it mislabels some intro and rest moments, and it does not count reps or
+estimate calories. Command line: `python ml/app/calorie_pipeline.py VIDEO`.
 
 ## Reproduce the final score
 

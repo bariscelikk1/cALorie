@@ -9,3 +9,4 @@ __pycache__/
 
 # Review pages contain creators' video frames; never commit them.
 review_pages/
+ml/app/pose_landmarker_full.task

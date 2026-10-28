@@ -32,7 +32,8 @@ talking, other moves) should come out as `unknown`.
 | Labeled real-session data and locked test set | Done |
 | Repetition counting | **Not built** |
 | Calorie estimate (MET-based) | **Not built** |
-| App or website | **Not built** (out of scope at the end) |
+| Small local web page (video in, timeline out) | Done, minimal (`ml/app/`); averages the three seeds |
+| Full app (accounts, reps, calories) | **Not built** |
 
 ## 3. The final model
 
@@ -137,7 +138,7 @@ full history is in `PROJECT_HANDOFF.md`.
 - The locked test has only 8 videos, so the uncertainty is wide.
 - Results are for single-person, front-facing follow-along videos. Crowds,
   edits, and unusual camera angles were excluded.
-- No rep counting, calories, or app.
+- No rep counting or calories. The web page is minimal and was tested end to end on one 45-second clip, where it recognized the lunges but also mislabeled some intro and rest moments as pull-ups.
 
 ## 8. If the project continues
 
@@ -146,7 +147,7 @@ full history is in `PROJECT_HANDOFF.md`.
 2. A new locked test, because this one has been used twice.
 3. Rep counting from the pose signal per detected segment, then MET-based
    calories (exercise × duration × body weight).
-4. A small local web page on top of the timeline script.
+4. Reps and calories inside the web page.
 
 ## 9. Reproduce
 
