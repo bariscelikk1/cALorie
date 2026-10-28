@@ -82,3 +82,24 @@ Notebook 46 exactly as it is today.
 - Training on the old test and dev videos means there is no untouched
   benchmark left except the 6 new videos.
 - Reps and calories are not touched.
+
+## Selection log
+
+- 2026-10-28: Exclusion list (`exclusions.csv`, 130 rows, 75 channels) = every
+  earlier source, the 8 locked-test videos and creators, the 16 round-1 train/dev
+  videos, and the 5 round-1 screening rejects (kept in `screening.csv`).
+  Selector: `ml/scripts/select_long_video_round2_v1.py`.
+- Saved round-1 search results leave only 10 eligible creators (train 8 / test 2
+  picked, five weak classes unmet). Revision 1: 24 queries appended
+  (aimed at tricep, lateral raise, curl, row, shoulder press; written before any
+  new result). 835 hits, 15 eligible creators: still short.
+- Revision 2: 26 more long-tail queries, written before any new result (494 of
+  835 earlier hits were already-used creators). 1,135 hits, 27 eligible creators,
+  13 of them list lateral raises.
+- Selector fix: plain hash-order greedy missed a valid set, so the search
+  now backtracks in the same hash order (first valid set by hash rank). Rules
+  unchanged: train needs each weak class in >=4 videos and >=2 home/>=2 gym;
+  test needs >=3 per weak class and >=1 home/>=1 gym; one video per channel,
+  test never shares a channel with train.
+- Result: 8 train (4.4 h) and 6 test (2.6 h) videos, `candidates.csv` (`role`
+  column). Awaiting the user's OK before any download.

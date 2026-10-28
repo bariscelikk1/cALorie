@@ -1,0 +1,6 @@
+video_id,verdict,reason,screened_by,screened_on
+2lGaGusBPEI,reject,"full-screen black rest-timer screens (~1.5 min each), talking to camera, close-up and angle cuts (edited cuts / mostly talking)",claude_visual_screen_1_per_10s,2026-10-27
+JofVPb0wtv8,reject,two performers exercising side by side the whole video (several people),claude_visual_screen_1_per_10s,2026-10-27
+mpZBFMfOfAw,reject,three performers exercising together (several people),claude_visual_screen_1_per_10s,2026-10-27
+UKfNi0IIndA,reject,two performers side by side (several people); same channel as JofVPb0wtv8,claude_visual_screen_1_per_10s,2026-10-27
+wRR8HUMdh00,reject,split screen: a second figure (low-impact demo of the same performer) shown side by side for much of the video (several people in frame),claude_visual_screen_1_per_10s,2026-10-27
