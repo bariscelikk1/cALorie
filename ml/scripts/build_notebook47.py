@@ -286,3 +286,55 @@ notebook = {
 }
 OUTPUT.write_text(json.dumps(notebook, indent=1, ensure_ascii=False) + "\n")
 print(OUTPUT, "| round2_ready:", ROUND2_READY, "| commit:", COMMIT[:8])
+
+
+# ---- Per-seed notebooks (smaller Colab runs): train one seed, save its models, no test scoring ------------------
+SEED_TREATMENT = patched("".join(cells[20]["source"]), [
+    ('    treatment_frames[seed] = dev_frames((classifier, gates))\n'
+     '    treatment_dev.append({"arm": "treatment", "seed": seed, **lvscore.metrics(list(treatment_frames[seed].values()))})\n', ''),
+    ('display(pd.DataFrame(treatment_dev)[["arm", "seed", "macro_f1", "supported_called_unknown", "downtime_called_unknown"]])\n', ''),
+    ("treatment_frames, treatment_dev, treatment_internal", "treatment_internal"),
+])
+SEED_SAVE = '''
+internal_df = pd.DataFrame(treatment_internal)
+display(internal_df[["seed", "end_to_end_macro_f1", "unknown_recall", "uncovered_mean_recall"]])
+internal_df.to_csv(REPORT / "internal_test_metrics.csv", index=False)
+long_audit.to_csv(REPORT / "long_video_window_audit.csv", index=False)
+sampler_audit.to_csv(REPORT / "sampler_audit.csv", index=False)
+pd.DataFrame(history_rows).to_csv(REPORT / "training_history.csv", index=False)
+pd.DataFrame(best_rows).to_csv(REPORT / "best_validation.csv", index=False)
+(REPORT / "run_metadata.json").write_text(json.dumps({
+    "notebook": f"47_long_video_round2_seed{RUN_SEEDS[0]}.ipynb", "seed": RUN_SEEDS[0], "inputs_commit": LONG_COMMIT,
+    "training_commit": TRAINING_COMMIT, "device": str(DEVICE), "max_epochs": MAX_EPOCHS, "patience": PATIENCE,
+    "fixed_fusion": FIXED_FUSION, "fixed_threshold": FIXED_THRESHOLD, "repcount_cap": REPCOUNT_CAP, "long_gate_share": LONG_GATE_SHARE,
+    "long_train_videos": LONG_TRAIN, "long_train_windows": int(len(long_train_idx)), "dry_run": DRY_RUN,
+    "round2_test_videos_read": False, "nothing_tuned": True, "input_hashes": {name: sha256(path) for name, path in PATHS.items()}}, indent=2) + "\\n")
+lines = [f"{sha256(p)}  {p.relative_to(REPORT)}" for p in sorted(q for q in REPORT.rglob("*") if q.is_file())]
+(REPORT / "SHA256SUMS.txt").write_text("\\n".join(lines) + "\\n")
+zip_path = Path(shutil.make_archive(str(WORK / f"nb47_seed{RUN_SEEDS[0]}" + ("_DRYRUN" if DRY_RUN else "")), "zip", root_dir=REPORT))
+print("Created:", zip_path, round(zip_path.stat().st_size / 1e6, 1), "MB")
+try:  # on Colab, hand the ZIP to the browser automatically
+    from google.colab import files
+    files.download(str(zip_path))
+except ImportError:
+    pass
+'''
+for seed in (42, 137, 2026):
+    seed_config = patched("".join(cells[2]["source"]), [("RUN_SEEDS = [42] if DRY_RUN else [42, 137, 2026]", f"RUN_SEEDS = [{seed}]")])
+    seed_cells = [
+        md(f"""
+            # cALorie Notebook 47, part {(42, 137, 2026).index(seed) + 1} of 3 — seed {seed}
+
+            **Runtime: T4 GPU. Run all.** Trains the classifier and the three gates for seed {seed} only (about 40-60 min) and
+            downloads `nb47_seed{seed}.zip`. The round-2 test videos are not scored here; the three ZIPs are scored together,
+            once, afterwards. Same recipe and data as Notebook 47 (`ml/data/long_video_round2_v1/PLAN.md`).
+            """),
+        cells[1], code(seed_config), cells[3], cells[4], cells[5], cells[6], cells[7], cells[8], cells[9], cells[10],
+        cells[11], cells[12], cells[13], cells[14], cells[15], cells[16],
+        md("## Train this seed: classifier and three gates\n"), code(SEED_TREATMENT), md("## Save and download\n"), code(SEED_SAVE),
+    ]
+    nbk = {**notebook, "cells": seed_cells}
+    out = ROOT / f"ml/notebooks/47_long_video_round2_seed{seed}.ipynb"
+    nbk["metadata"] = {**notebook["metadata"], "colab": {**notebook["metadata"]["colab"], "name": out.name}}
+    out.write_text(json.dumps(nbk, indent=1, ensure_ascii=False) + "\n")
+    print(out)
