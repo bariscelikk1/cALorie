@@ -312,7 +312,7 @@ pd.DataFrame(best_rows).to_csv(REPORT / "best_validation.csv", index=False)
     "round2_test_videos_read": False, "nothing_tuned": True, "input_hashes": {name: sha256(path) for name, path in PATHS.items()}}, indent=2) + "\\n")
 lines = [f"{sha256(p)}  {p.relative_to(REPORT)}" for p in sorted(q for q in REPORT.rglob("*") if q.is_file())]
 (REPORT / "SHA256SUMS.txt").write_text("\\n".join(lines) + "\\n")
-zip_path = Path(shutil.make_archive(str(WORK / f"nb47_seed{RUN_SEEDS[0]}" + ("_DRYRUN" if DRY_RUN else "")), "zip", root_dir=REPORT))
+zip_path = Path(shutil.make_archive(str(WORK / (f"nb47_seed{RUN_SEEDS[0]}" + ("_DRYRUN" if DRY_RUN else ""))), "zip", root_dir=REPORT))
 print("Created:", zip_path, round(zip_path.stat().st_size / 1e6, 1), "MB")
 try:  # on Colab, hand the ZIP to the browser automatically
     from google.colab import files
