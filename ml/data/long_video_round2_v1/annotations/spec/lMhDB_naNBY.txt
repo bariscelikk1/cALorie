@@ -1,0 +1,48 @@
+0 32 intro host_talking_green_screen unknown high
+32 44 intro get_ready_countdown unknown high
+44 104 exercise dumbbell_romanian_deadlift deadlift medium # rule 11: hinge with straight arms (pose: elbows 167-179, torso 26 deg)
+104 118 exercise jumping_jacks_active_rest jumping_jack medium 2nd # 14 s active-rest block, arms overhead and legs wide
+118 166 exercise bent_over_two_dumbbell_row dumbbell_row medium # rule 3: torso 50-69 deg, elbows bend (pose)
+166 180 rest rest_14s_countdown unknown high
+180 226 exercise standing_dumbbell_overhead_press shoulder_press medium 2nd # upright, wrists rise above shoulders (pose)
+226 286 exercise dumbbell_romanian_deadlift deadlift medium # rule 11: hinge with straight arms (pose: elbows 167-179, torso 26 deg)
+286 330 exercise bent_over_two_dumbbell_row dumbbell_row medium # rule 3: torso 50-69 deg, elbows bend (pose)
+330 344 rest rest_14s_countdown unknown high
+344 404 exercise goblet_or_front_rack_squat squat high # dumbbells at chest, knees to ~50 deg
+404 436 rest rest_kneeling_30s unknown high
+436 494 exercise dumbbell_romanian_deadlift deadlift medium # rule 11: hinge with straight arms (pose: elbows 167-179, torso 26 deg)
+494 508 exercise jumping_jacks_active_rest jumping_jack medium 2nd # 14 s active-rest block, arms overhead and legs wide
+508 510 rest rest_14s_countdown unknown high
+510 556 exercise bent_over_two_dumbbell_row dumbbell_row medium # rule 3: torso 50-69 deg, elbows bend (pose)
+556 572 rest rest_14s_countdown unknown high
+572 618 exercise standing_dumbbell_overhead_press shoulder_press medium 2nd # upright, wrists rise above shoulders (pose)
+618 620 rest rest_14s_countdown unknown high
+620 678 exercise dumbbell_romanian_deadlift deadlift medium # rule 11: hinge with straight arms (pose: elbows 167-179, torso 26 deg)
+678 722 exercise bent_over_two_dumbbell_row dumbbell_row medium # rule 3: torso 50-69 deg, elbows bend (pose)
+722 738 rest rest_14s_countdown unknown high
+738 798 exercise goblet_or_front_rack_squat squat high # dumbbells at chest, knees to ~50 deg
+798 828 rest rest_kneeling_30s unknown high
+828 888 exercise dumbbell_romanian_deadlift deadlift medium # rule 11: hinge with straight arms (pose: elbows 167-179, torso 26 deg)
+888 902 exercise jumping_jacks_active_rest jumping_jack medium 2nd # 14 s active-rest block, arms overhead and legs wide
+902 948 exercise bent_over_two_dumbbell_row dumbbell_row medium # rule 3: torso 50-69 deg, elbows bend (pose)
+948 964 rest rest_14s_countdown unknown high
+964 1010 exercise standing_dumbbell_overhead_press shoulder_press medium 2nd # upright, wrists rise above shoulders (pose)
+1010 1070 exercise dumbbell_romanian_deadlift deadlift medium # rule 11: hinge with straight arms (pose: elbows 167-179, torso 26 deg)
+1070 1114 exercise bent_over_two_dumbbell_row dumbbell_row medium # rule 3: torso 50-69 deg, elbows bend (pose)
+1114 1130 rest rest_14s_countdown unknown high
+1130 1190 exercise goblet_or_front_rack_squat squat high # dumbbells at chest, knees to ~50 deg
+1190 1220 rest rest_kneeling_30s unknown high
+1220 1280 exercise dumbbell_romanian_deadlift deadlift medium # rule 11: hinge with straight arms (pose: elbows 167-179, torso 26 deg)
+1280 1294 exercise jumping_jacks_active_rest jumping_jack medium 2nd # 14 s active-rest block, arms overhead and legs wide
+1294 1296 rest rest_14s_countdown unknown high
+1296 1340 exercise bent_over_two_dumbbell_row dumbbell_row medium # rule 3: torso 50-69 deg, elbows bend (pose)
+1340 1354 rest rest_14s_countdown unknown high
+1354 1400 exercise standing_dumbbell_overhead_press shoulder_press medium 2nd # upright, wrists rise above shoulders (pose)
+1400 1402 rest rest_14s_countdown unknown high
+1402 1462 exercise dumbbell_romanian_deadlift deadlift medium # rule 11: hinge with straight arms (pose: elbows 167-179, torso 26 deg)
+1462 1506 exercise bent_over_two_dumbbell_row dumbbell_row medium # rule 3: torso 50-69 deg, elbows bend (pose)
+1506 1522 rest rest_14s_countdown unknown high
+1522 1582 exercise goblet_or_front_rack_squat squat high # dumbbells at chest, knees to ~50 deg
+1582 1594 outro completed_end_of_workout_card unknown high
+1594 1606 outro host_kneeling_subscribe_prompt unknown high
+1606 1616.9 outro thank_you_end_screen unknown high
