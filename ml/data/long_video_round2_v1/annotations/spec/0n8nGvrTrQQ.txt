@@ -1,0 +1,62 @@
+0 18 intro get_ready_countdown_with_preview unknown high
+18 58 exercise dumbbell_shoulder_press shoulder_press high
+58 78 rest rest_countdown_next_preview unknown high
+78 118 exercise neutral_grip_bent_over_row dumbbell_row high # rule 3: two-dumbbell row
+118 138 rest rest_countdown_next_preview unknown high
+138 178 exercise dumbbell_shoulder_press shoulder_press high
+178 198 rest rest_countdown_next_preview unknown high
+198 238 exercise neutral_grip_bent_over_row dumbbell_row high # rule 3: two-dumbbell row
+238 258 rest rest_countdown_next_preview unknown high
+258 298 exercise dumbbell_shoulder_press shoulder_press high
+298 318 rest rest_countdown_next_preview unknown high
+318 358 exercise neutral_grip_bent_over_row dumbbell_row high # rule 3: two-dumbbell row
+358 378 rest rest_countdown_next_preview unknown high
+378 418 exercise glute_bridge_chest_press bench_press medium # rule 2: glute-bridge dumbbell press
+418 438 rest rest_countdown_next_preview unknown high
+438 478 exercise lying_dumbbell_pullover unknown medium # pullover is unsupported
+478 498 rest rest_countdown_next_preview unknown high
+498 538 exercise glute_bridge_chest_press bench_press medium # rule 2: glute-bridge dumbbell press
+538 558 rest rest_countdown_next_preview unknown high
+558 598 exercise lying_dumbbell_pullover unknown medium # pullover is unsupported
+598 618 rest rest_countdown_next_preview unknown high
+618 658 exercise glute_bridge_chest_press bench_press medium # rule 2: glute-bridge dumbbell press
+658 678 rest rest_countdown_next_preview unknown high
+678 718 exercise lying_dumbbell_pullover unknown medium # pullover is unsupported
+718 738 rest rest_countdown_next_preview unknown high
+738 778 exercise lateral_raise lateral_raise high
+778 798 rest rest_countdown_next_preview unknown high
+798 838 exercise renegade_row unknown medium # plank row: compound, unsupported
+838 858 rest rest_countdown_next_preview unknown high
+858 898 exercise lateral_raise lateral_raise high
+898 918 rest rest_countdown_next_preview unknown high
+918 958 exercise renegade_row unknown medium # plank row: compound, unsupported
+958 978 rest rest_countdown_next_preview unknown high
+978 1018 exercise lateral_raise lateral_raise high
+1018 1038 rest rest_countdown_next_preview unknown high
+1038 1078 exercise renegade_row unknown medium # plank row: compound, unsupported
+1078 1098 rest rest_countdown_next_preview unknown high
+1098 1138 exercise alternating_cross_body_front_raise unknown medium # front raise is not a lateral raise
+1138 1158 rest rest_countdown_next_preview unknown high
+1158 1198 exercise dumbbell_shoulder_shrug unknown high # shrug unsupported
+1198 1218 rest rest_countdown_next_preview unknown high
+1218 1258 exercise alternating_cross_body_front_raise unknown medium # front raise is not a lateral raise
+1258 1278 rest rest_countdown_next_preview unknown high
+1278 1318 exercise dumbbell_shoulder_shrug unknown high # shrug unsupported
+1318 1338 rest rest_countdown_next_preview unknown high
+1338 1378 exercise alternating_cross_body_front_raise unknown medium # front raise is not a lateral raise
+1378 1398 rest rest_countdown_next_preview unknown high
+1398 1438 exercise dumbbell_shoulder_shrug unknown high # shrug unsupported
+1438 1458 rest rest_countdown_next_preview unknown high
+1458 1498 exercise narrow_to_wide_bicep_curl bicep_curl high
+1498 1518 rest rest_countdown_next_preview unknown high
+1518 1558 exercise overhead_triceps_extension tricep_extension high
+1558 1578 rest rest_countdown_next_preview unknown high
+1578 1618 exercise narrow_to_wide_bicep_curl bicep_curl high
+1618 1638 rest rest_countdown_next_preview unknown high
+1638 1678 exercise overhead_triceps_extension tricep_extension high
+1678 1698 rest rest_countdown_next_preview unknown high
+1698 1738 exercise narrow_to_wide_bicep_curl bicep_curl high
+1738 1758 rest rest_countdown_next_preview unknown high
+1758 1798 exercise overhead_triceps_extension tricep_extension high
+1798 1804 transition workout_complete unknown high
+1804 1818.8 outro subscribe_end_card unknown high

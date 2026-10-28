@@ -1,0 +1,14 @@
+0 92 intro host_talking_and_exercise_preview unknown high
+92 112 intro title_card_and_first_preview unknown high
+112 168 exercise sumo_squat_to_sumo_rdl unknown medium # compound squat + hinge, unsupported as one move
+168 224 exercise front_rack_squat_to_shoulder_press unknown medium # compound thruster
+224 296 exercise forward_lunge_to_bicep_curl_left lunge medium # rule 18: lunge with arm move
+296 368 exercise forward_lunge_to_hammer_curl_right lunge medium # rule 18: lunge with arm move
+368 430 exercise reverse_grip_bent_over_row dumbbell_row high # rule 3: two-dumbbell row
+430 470 rest rest_countdown_30s unknown high
+470 526 exercise sumo_squat_to_sumo_rdl unknown medium # compound squat + hinge, unsupported as one move
+526 582 exercise front_rack_squat_to_shoulder_press unknown medium # compound thruster
+582 654 exercise forward_lunge_to_bicep_curl_left lunge medium # rule 18: lunge with arm move
+654 726 exercise forward_lunge_to_hammer_curl_right lunge medium # rule 18: lunge with arm move
+726 788 exercise reverse_grip_bent_over_row dumbbell_row high # rule 3: two-dumbbell row
+788 828 rest rest_countdown_30s unknown high
