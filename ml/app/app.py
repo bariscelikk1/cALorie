@@ -12,6 +12,7 @@ import streamlit as st
 import torch
 
 import calorie_pipeline as cp
+import reps_and_calories as rc
 
 st.set_page_config(page_title="cALorie", page_icon="🏋️")
 st.title("cALorie")
@@ -24,6 +25,7 @@ def get_models():
     return device, cp.load_final_model(torch.device(device))
 
 
+weight = st.number_input("Your body weight (kg), used only for the calorie estimate", 30.0, 250.0, 70.0, 1.0)
 upload = st.file_uploader("Workout video (one person, whole body in view)", type=["mp4", "mov", "m4v", "webm", "mkv"])
 if upload is not None:
     device, models = get_models()
@@ -56,10 +58,15 @@ if upload is not None:
     if exercise.empty:
         st.info("No supported exercise was recognized in this video.")
     else:
-        st.subheader("Time per exercise")
-        per = exercise.groupby("label").seconds.sum().sort_values(ascending=False)
-        st.dataframe(per.rename("seconds").round(0).astype(int).rename_axis("exercise").reset_index().assign(
-            exercise=lambda d: d.exercise.str.replace("_", " ")), hide_index=True)
+        st.subheader("Per exercise")
+        summary = rc.summarize_exercises(table, pose, weight)
+        shown_summary = summary.assign(
+            exercise=summary.exercise.str.replace("_", " "),
+            reps=summary.reps.map(lambda v: "not validated" if v != v or v is None else str(int(v))),
+            calories=summary.apply(lambda r: f"{r.kcal} ({r.kcal_low}-{r.kcal_high})", axis=1))[["exercise", "seconds", "reps", "calories"]]
+        st.dataframe(shown_summary, hide_index=True)
+        st.metric("Estimated calories (recognized exercise time only)", f"{int(summary.kcal.sum())} kcal",
+                  f"range {int(summary.kcal_low.sum())}-{int(summary.kcal_high.sum())}", delta_color="off")
 
     st.subheader("Segments")
     shown = table.assign(start=table.start_s.map(cp.fmt), end=table.end_s.map(cp.fmt),
@@ -67,4 +74,5 @@ if upload is not None:
     st.dataframe(shown, hide_index=True)
     st.download_button("Download timeline (CSV)", table.to_csv(index=False), "timeline.csv", "text/csv")
     st.caption("Accuracy on unseen full workouts: 47.6% Macro F1; about 39% of real exercise time is missed and tricep extension is "
-               "not recognized. Reps and calories are not estimated. See FINAL_REPORT.md.")
+               "not recognized. Reps are shown only for the five exercises where the counter was checked (about 68% of RepCount test clips were within one rep) "
+               "and calories use one fixed MET per exercise with a ±35% range. See FINAL_REPORT.md.")

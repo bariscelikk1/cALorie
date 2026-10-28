@@ -1369,3 +1369,14 @@ end to end through Streamlit's headless tester on a 45 s clip (lunges found,
 some intro/rest mislabeled as pull-up). The raw test video was deleted. The
 seed-averaged ensemble was not scored on the locked test; the 47.6% figure is
 the per-seed median.
+
+## Rep counting and calories added to the web page (2026-10-28)
+
+Plan `ml/app/REPS_AND_CALORIES_PLAN.md` (approved). `ml/app/reps_and_calories.py`:
+generic peak counter (tuned on 73 RepCount dev clips only, frozen at commit
+315ec17) and MET calories (2024 Adult Compendium categories, ±35% range).
+Results (`ml/artifacts/rep_counting_v1/`): dev 80% within one rep, train 75%,
+sealed test (scored once) 68% within one rep and 39% exact. Reps are shown only
+for jumping jack, pull-up, push-up, sit-up, squat (rule set on dev); other
+classes show "reps not validated". Calories are unvalidated. The page ran
+end to end in Streamlit's headless tester.

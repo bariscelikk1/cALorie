@@ -31,7 +31,7 @@ extension. Everything else is `unknown`.
 | Pose extraction, gate, classifier, timeline scoring | Done |
 | Labeled real-session data and locked test | Done |
 | Small local web page (video in, exercise timeline out) | Done: `ml/app/` |
-| Repetition counting, calorie estimate | Not built |
+| Rep counting (5 exercises) and MET calorie estimate in the page | Done, approximate (`ml/app/`) |
 
 ## Where things are
 
@@ -58,8 +58,9 @@ Upload one video of one person with the whole body in view. The page shows the
 exercise timeline, time per exercise, and a CSV download. It runs on your
 computer only. It is a research prototype: it averages the three final-model
 seeds (checked on the dev videos: 35.5% Macro F1 vs 35.7% for the seed median),
-it mislabels some intro and rest moments, and it does not count reps or
-estimate calories. Command line: `python ml/app/calorie_pipeline.py VIDEO`.
+it mislabels some intro and rest moments, reps are counted only for five
+exercises (68% of unseen RepCount clips within one rep), and calories use one
+fixed MET per exercise with a ±35% range; enter your weight in the page. Command line: `python ml/app/calorie_pipeline.py VIDEO`.
 
 ## Reproduce the final score
 

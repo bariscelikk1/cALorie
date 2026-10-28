@@ -58,3 +58,28 @@ def estimate_calories(label: str, weight_kg: float, seconds: float) -> tuple[flo
         return 0.0, 0.0, 0.0
     kcal = MET[label] * 3.5 * weight_kg / 200.0 * (seconds / 60.0)
     return kcal, kcal * (1 - CALORIE_RANGE), kcal * (1 + CALORIE_RANGE)
+
+
+# Classes whose dev clips were within one rep at least 50% of the time (decided on dev; plan section 1).
+REP_VALIDATED = {"jumping_jack", "pull_up", "push_up", "sit_up", "squat"}
+
+
+def summarize_exercises(table, pose: np.ndarray, weight_kg: float):
+    """Per-exercise totals from a timeline table (start_s, end_s, label) and the full pose."""
+    import pandas as pd
+    rows = {}
+    for r in table.itertuples():
+        if r.label == "unknown":
+            continue
+        seg = pose[int(r.start_s * FPS):int(r.end_s * FPS)]
+        row = rows.setdefault(r.label, {"exercise": r.label, "seconds": 0.0, "reps": 0})
+        row["seconds"] += r.end_s - r.start_s
+        row["reps"] += count_reps(seg) if r.label in REP_VALIDATED else 0
+    out = []
+    for label, row in rows.items():
+        kcal, low, high = estimate_calories(label, weight_kg, row["seconds"])
+        out.append({"exercise": label, "seconds": round(row["seconds"]),
+                    "reps": row["reps"] if label in REP_VALIDATED else None,
+                    "kcal": round(kcal), "kcal_low": round(low), "kcal_high": round(high)})
+    return pd.DataFrame(out).sort_values("seconds", ascending=False).reset_index(drop=True) if out else pd.DataFrame(
+        columns=["exercise", "seconds", "reps", "kcal", "kcal_low", "kcal_high"])
