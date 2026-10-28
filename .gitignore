@@ -6,3 +6,6 @@ __pycache__/
 .env
 .env.local
 .env.*.local
+
+# Review pages contain creators' video frames; never commit them.
+review_pages/

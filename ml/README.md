@@ -1,5 +1,10 @@
 # cALorie ML
 
+> **Final state (2026-10-28):** the final model is frozen in
+> `artifacts/final_model_v1/` (Notebook 46). Results and limits are in the
+> root [`FINAL_REPORT.md`](../FINAL_REPORT.md). The sections below are the
+> historical working notes, kept unchanged.
+
 New long-video labels must follow `data/ANNOTATION_GUIDE.md` and pass the
 timeline audit before landmark extraction:
 

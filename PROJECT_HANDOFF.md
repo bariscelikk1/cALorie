@@ -1348,3 +1348,12 @@ Exercise time called unknown fell from 55% to 39%. Big gains on bench, push-up,
 pull-up, sit-up, lunge, row, and shoulder press; tricep extension stays 0%,
 lateral raise and lat pulldown lost ground. No more experiments: the project
 is being packed up by 2026-11-02 (final report, README, clean repo; no app).
+
+## Project packed up: final report, README, repo cleanup (2026-10-28)
+
+`FINAL_REPORT.md` written (results, limits, history, reproduction). Root
+`README.md` rewritten for the final state; `ml/README.md` and `CLAUDE.md` point
+to it. The legacy website, worker, Supabase, Render, evaluation, examples,
+and docs folders moved unchanged to `archive/legacy_web_app/`.
+`review_pages/` (creator frames) is now git-ignored. No experiments are in
+progress; rep counting, calories, and an app were not built.

@@ -1,6 +1,10 @@
 # cALorie — Claude master handoff
 
-Last updated: 2026-10-24 (Europe/Istanbul)
+Last updated: 2026-10-28 (Europe/Istanbul)
+
+**Final state:** the project is packed up (deadline 2026-11-02). The final
+model is frozen in `ml/artifacts/final_model_v1/` and summarized in
+[`FINAL_REPORT.md`](FINAL_REPORT.md). Legacy web code is in `archive/`.
 
 This is the fastest safe entry point for continuing cALorie with Claude. The
 linked repository evidence remains the source of truth. Read the documents in
@@ -221,39 +225,22 @@ Every row remains `training_allowed=false`.
 | Notebook 43 | Training v2 (50% RepCount cap) stage A passed on dev (Macro F1 61%→85%, sit-ups 0%→90%, internal −1.61 pp). |
 | Notebook 44 | v2 stage B on the sealed test FAILED one criterion: sit-ups 42.9% (needed 50%). Macro F1 57%→75%, squats 44%→72%, unknown rejection 80%→94%. Arc closed; v2 not promoted; sealed test spent. |
 | Long-video test v1 | Locked 8-video 3.9 h full-session set; evaluation 1: V6-F 32.6% vs v2 32.3% smoothed Macro F1 (no difference); both reject >50% of real exercise time as unknown. |
+| Notebook 45 | v2 + 11 long-video train videos: dev fail on the gate bar (exercise called unknown −2.3 pp); Macro F1 +6.3 pp. |
+| Notebook 46 | Gate rebalanced (long video = 25% of each gate class): dev fail, close (−10.3 pp vs 15 needed); Macro F1 +10 pp. Frozen as the final model by user decision. |
+| Evaluation 2 | Final model on the locked long-video test: 47.6% vs V6-F 32.6% smoothed Macro F1 (+15.0 pp, CI +2.2 to +25.2). Test used twice; retire it. |
 
 The full history is in [PROJECT_HANDOFF.md](https://github.com/bariscelikk1/cALorie/blob/feat/tcn-rebuild/PROJECT_HANDOFF.md).
 Failed experiments are evidence; do not delete or rewrite them as successes.
 
 ## Immediate next step
 
-The RepCount experiment design is predeclared and approved:
-[gate rotation v1 design](https://github.com/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/data/repcount_development_v1/gate_rotation_v1/DESIGN.md)
-and its [fold manifest](https://github.com/bariscelikk1/cALorie/blob/feat/tcn-rebuild/ml/data/repcount_development_v1/gate_rotation_v1/folds.csv).
-Notebook 39 implements it and passed a local CPU dry run; it has not run on
-Colab yet. Run it on a T4 and archive the returned ZIP before anything else.
-
-Minimum contract:
-
-1. Do not touch the locked benchmark for training, calibration, threshold
-   selection, relabeling, or repeated consultation.
-2. Treat `stuN` as source codes, not people.
-3. Predeclare source-group-disjoint roles and keep both duplicate groups intact.
-4. Create a new versioned experiment manifest for any rows changing from
-   `training_allowed=false`; never mutate the evidence CSV.
-5. Score every RepCount clip only with gates that never trained on its
-   source group (3-fold source-group rotation, chosen over a fixed holdout
-   that held one false-unknown); never use RepCount for early stopping.
-6. Keep threshold 0.65 fixed so the first run measures a data effect.
-7. Separate gate, oracle-classifier, and end-to-end errors.
-8. Keep the run non-promotable because identity is uncertain, support is tiny,
-   and the source license is `other`.
-9. Predeclare a stopping rule and do not reopen tuning on the reused
-   1,971-window internal test.
-
-Research question: can adjudicated source-diverse development data reduce
-false-unknown errors on real sit-ups and squats without damaging unknown
-rejection on a source-disjoint development holdout?
+None in progress. The experiment arc is closed and the final model is frozen
+(`ml/artifacts/final_model_v1/MODEL_CARD.md`). If work resumes, follow
+`FINAL_REPORT.md` section 8: more real-session data for tricep extension,
+lateral raise, curl, row, and shoulder press; a **new** locked test (the
+long-video test v1 has been used twice); then rep counting and calories.
+The RepCount gate-rotation text that used to be here is historical
+(Notebook 39 ran; see the table above).
 
 ## Colab contract and direct links
 
@@ -317,14 +304,8 @@ Do not reintroduce those failed paths.
 ## Paste this as Claude's first task
 
 > Continue cALorie from https://github.com/bariscelikk1/cALorie on branch
-> `feat/tcn-rebuild`; `main` and the historical website are not active. Read
-> `CLAUDE.md`, `AGENTS.md`, the latest `PROJECT_HANDOFF.md`, `ml/AGENTS.md`,
-> `ml/EXPERIMENT_BACKBONE.md`, and `ml/data/ANNOTATION_GUIDE.md` before acting.
-> The frozen creator benchmark says V6-F beats V6-C at 67.11% vs 44.59% region
-> Macro F1 but is not production-ready. The latest RepCount adjudication
-> finalized 30 clips and exposes V6-F at 11/30, including 0/7 sit-ups. Do not
-> tune on the locked benchmark or reused 1,971-window internal test. First
-> propose and audit a source-group-disjoint, non-promotable RepCount
-> development experiment with threshold 0.65 fixed; do not create Notebook 39
-> until its roles and stopping rule are explicit. After each meaningful unit,
-> update the handoff, commit, and push. Give direct Colab links for notebooks.
+> `feat/tcn-rebuild`. Read `CLAUDE.md`, `FINAL_REPORT.md`, `AGENTS.md`, the
+> latest `PROJECT_HANDOFF.md`, and `ml/data/ANNOTATION_GUIDE.md` first. The
+> final model (Notebook 46) scores 47.6% smoothed Macro F1 on the locked
+> long-video test, which is now spent. Predeclare any new experiment and its
+> pass rule before running it; never tune on locked or reused test sets.
