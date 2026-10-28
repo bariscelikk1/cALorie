@@ -293,7 +293,8 @@ SEED_TREATMENT = patched("".join(cells[20]["source"]), [
     ('    treatment_frames[seed] = dev_frames((classifier, gates))\n'
      '    treatment_dev.append({"arm": "treatment", "seed": seed, **lvscore.metrics(list(treatment_frames[seed].values()))})\n', ''),
     ('display(pd.DataFrame(treatment_dev)[["arm", "seed", "macro_f1", "supported_called_unknown", "downtime_called_unknown"]])\n', ''),
-    ("treatment_frames, treatment_dev, treatment_internal", "treatment_internal"),
+    ("treatment_frames, treatment_dev, treatment_internal, history_rows, best_rows = {}, [], [], [], []",
+     "treatment_internal, history_rows, best_rows = [], [], []"),
 ])
 SEED_SAVE = '''
 internal_df = pd.DataFrame(treatment_internal)
