@@ -116,3 +116,23 @@ section 2); the 6 round-2 test videos are verified against `LOCK.json` and can
 never be in the training list. The notebook runs the predeclared four-part rule
 and refuses a real run until round-2 data and `LOCK.json` are in the repository
 (a round-1 dev stand-in exercises the code path in a dry run only).
+- **Download and screening (2026-10-28, user approved):** 14 videos downloaded
+  in 4 lanes (`ml/scripts/long_video_intake_v1.py --prefix long_video_round2_v1`),
+  screened at 1 frame per 10 s (`screening.csv`). Reject: **`kla05C_4eio`**
+  (VitruvianPhysique, test): a vlog, mostly talking to camera with many cuts and
+  unrelated meme and movie clips. Replacement by the same rules (the other five
+  test videos stay fixed; the first eligible creator in test-pool hash order
+  that completes the coverage needs): **`o3xDawAnb-M`** (PushYourself w/ Tony
+  Jay, 21 min, home; lists row, lateral raise, shoulder press, triceps, curl).
+- Reject: **`1Mbuyc5uW4s`** (train): a gym vlog, the creator talks to camera
+  for long stretches with many handheld angles and cuts. Replacement by the same
+  rules (the other seven train videos stay fixed; first eligible creator in
+  train-pool hash order that completes the coverage needs, which was one more
+  lateral-raise video): **`74B9SxqtMug`** (Tiffany's Training, 25 min, home;
+  curl, lateral raise, triceps).
+- Reject: **`tPnVxUmFcqI`** (train): a motivational montage of archival
+  bodybuilding clips (dozens of different people, constant cuts); metadata
+  looked like a workout but the footage is not a follow-along. Replacement by
+  the same rules (the other seven train videos stay fixed; coverage needs were
+  already met, so the first eligible creator in train-pool hash order):
+  **`Xyea2DCicKU`** (Matt Jones, 23 min, home; squat, curl, deadlift, row, lunge).

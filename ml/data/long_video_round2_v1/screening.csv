@@ -4,3 +4,19 @@ JofVPb0wtv8,reject,two performers exercising side by side the whole video (sever
 mpZBFMfOfAw,reject,three performers exercising together (several people),claude_visual_screen_1_per_10s,2026-10-27
 UKfNi0IIndA,reject,two performers side by side (several people); same channel as JofVPb0wtv8,claude_visual_screen_1_per_10s,2026-10-27
 wRR8HUMdh00,reject,split screen: a second figure (low-impact demo of the same performer) shown side by side for much of the video (several people in frame),claude_visual_screen_1_per_10s,2026-10-27
+W4NXAKBMtcw,keep,"one performer, fixed gym camera, timer overlays, continuous dumbbell circuit; warm-up and cool-down included",claude_visual_screen_1_per_10s,2026-10-28
+0n8nGvrTrQQ,keep,"one performer outdoors, fixed camera, timer overlays, crossfade transitions between exercises; continuous",claude_visual_screen_1_per_10s,2026-10-28
+MZzAxivUZBI,keep,"one performer, fixed studio camera, rep-count overlays, continuous dumbbell circuit",claude_visual_screen_1_per_10s,2026-10-28
+lMhDB_naNBY,keep,"one performer, fixed camera, 40 s talking intro then continuous timed circuit with inset previews",claude_visual_screen_1_per_10s,2026-10-28
+K59aLtJH0ok,keep,"one performer, fixed camera, timer overlays, continuous dumbbell workout",claude_visual_screen_1_per_10s,2026-10-28
+7bD2iKKNoCE,keep,"one performer, fixed camera, 80 s talking intro, then timed supersets with rest cards; continuous",claude_visual_screen_1_per_10s,2026-10-28
+cv10-qXYE1U,keep,"one performer, fixed camera, timer overlays, continuous kettlebell workout",claude_visual_screen_1_per_10s,2026-10-28
+YEG6y9r-ELM,keep,"one performer, fixed camera, timer overlays and short water breaks; continuous",claude_visual_screen_1_per_10s,2026-10-28
+kla05C_4eio,reject,"vlog: mostly talking to camera, many cuts and angle changes, unrelated meme and movie clips, brief exercise inserts (mostly talking / edited cuts)",claude_visual_screen_1_per_10s,2026-10-28
+o3xDawAnb-M,keep,"one performer, fixed living-room camera, timer overlays and short water breaks; continuous (replacement for kla05C_4eio)",claude_visual_screen_1_per_10s,2026-10-28
+1Mbuyc5uW4s,reject,"gym vlog: creator talks to camera for long stretches, many handheld angles and cuts, exercise shown in short edited inserts (mostly talking / edited cuts)",claude_visual_screen_1_per_10s,2026-10-28
+o_Wefk-AOOA,keep,"one performer, fixed home camera, timer and rest-card overlays; continuous 7-exercise circuit with free-style warm-up and cool-down",claude_visual_screen_1_per_10s,2026-10-28
+Taqmq4WMNgU,keep,"one performer, fixed home camera, continuous dumbbell circuit incl. floor work; lower image quality but pose found",claude_visual_screen_1_per_10s,2026-10-28
+J2Z-OcVCOvI,keep,"one performer, fixed camera, timer and next-exercise overlays; continuous strength and HIIT blocks",claude_visual_screen_1_per_10s,2026-10-28
+tPnVxUmFcqI,reject,"montage of archival bodybuilding clips: dozens of different people, constant cuts, voice-over and titles, not one performer (several people / edited cuts)",claude_visual_screen_1_per_10s,2026-10-28
+74B9SxqtMug,keep,"one performer, fixed outdoor camera, timer and up-next overlays; continuous dumbbell circuit with warm-up and cool-down (replacement for 1Mbuyc5uW4s)",claude_visual_screen_1_per_10s,2026-10-28
