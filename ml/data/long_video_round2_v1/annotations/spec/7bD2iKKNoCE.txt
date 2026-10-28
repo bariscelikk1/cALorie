@@ -1,0 +1,49 @@
+0 72 intro host_talking_to_camera unknown high
+72 76 intro title_card_25_min_shoulder_workout unknown high
+76 293 exercise warm_up_band_pull_aparts_and_cat_cow unknown high # resistance-band mobility and quadruped warm-up
+293 303 transition up_next_workout_supersets_card unknown high
+303 333 exercise lateral_raise lateral_raise high # named on screen: Lateral Raise
+333 363 exercise front_raise unknown high # front raise is not a lateral raise
+363 393 rest rest_30s_with_up_next_card unknown high
+393 423 exercise lateral_raise lateral_raise high # named on screen: Lateral Raise
+423 453 exercise front_raise unknown high # front raise is not a lateral raise
+453 483 rest rest_30s_with_up_next_card unknown high
+483 513 exercise lateral_raise lateral_raise high # named on screen: Lateral Raise
+513 543 exercise front_raise unknown high # front raise is not a lateral raise
+543 573 rest rest_30s_with_up_next_card unknown high
+573 603 exercise alt_single_arm_kneeling_shoulder_press shoulder_press high # rule 8: kneeling single-arm press
+603 633 exercise plank_to_push_up unknown medium # plank to push-up compound; not scored as push_up
+633 663 rest rest_30s_with_up_next_card unknown high
+663 693 exercise alt_single_arm_kneeling_shoulder_press shoulder_press high # rule 8: kneeling single-arm press
+693 723 exercise plank_to_push_up unknown medium # plank to push-up compound; not scored as push_up
+723 753 rest rest_30s_with_up_next_card unknown high
+753 783 exercise alt_single_arm_kneeling_shoulder_press shoulder_press high # rule 8: kneeling single-arm press
+783 813 exercise plank_to_push_up unknown medium # plank to push-up compound; not scored as push_up
+813 843 rest rest_30s_with_up_next_card unknown high
+843 873 exercise alternating_lateral_raise lateral_raise high # named on screen: Alternating Lateral Raise
+873 903 exercise alternating_front_raise unknown high # front raise is not a lateral raise
+903 933 rest rest_30s_with_up_next_card unknown high
+933 963 exercise alternating_lateral_raise lateral_raise high # named on screen: Alternating Lateral Raise
+963 993 exercise alternating_front_raise unknown high # front raise is not a lateral raise
+993 1023 rest rest_30s_with_up_next_card unknown high
+1023 1053 exercise alternating_lateral_raise lateral_raise high # named on screen: Alternating Lateral Raise
+1053 1083 exercise alternating_front_raise unknown high # front raise is not a lateral raise
+1083 1113 rest rest_30s_with_up_next_card unknown high
+1113 1143 exercise alt_single_arm_kneeling_shoulder_press shoulder_press high # rule 8: kneeling single-arm press
+1143 1173 exercise forearm_plank_hold unknown high # plank retired to unknown
+1173 1203 rest rest_30s_with_up_next_card unknown high
+1203 1233 exercise alt_single_arm_kneeling_shoulder_press shoulder_press high # rule 8: kneeling single-arm press
+1233 1263 exercise forearm_plank_hold unknown high # plank retired to unknown
+1263 1293 rest rest_30s_with_up_next_card unknown high
+1293 1323 exercise alt_single_arm_kneeling_shoulder_press shoulder_press high # rule 8: kneeling single-arm press
+1323 1353 exercise forearm_plank_hold unknown high # plank retired to unknown
+1353 1383 rest rest_30s_with_up_next_card unknown high
+1383 1413 exercise rear_delt_fly unknown high # bent-over rear delt fly is unsupported
+1413 1443 exercise alternating_arnold_press shoulder_press high # rule 13: Arnold press
+1443 1473 rest rest_30s_with_up_next_card unknown high
+1473 1503 exercise rear_delt_fly unknown high # bent-over rear delt fly is unsupported
+1503 1533 exercise alternating_arnold_press shoulder_press high # rule 13: Arnold press
+1533 1563 rest rest_30s_with_up_next_card unknown high
+1563 1593 exercise rear_delt_fly unknown high # bent-over rear delt fly is unsupported
+1593 1623 exercise alternating_arnold_press shoulder_press high # rule 13: Arnold press
+1623 1645.1 outro workout_complete_and_end unknown high
