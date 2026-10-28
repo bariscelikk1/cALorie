@@ -59,7 +59,7 @@ def resize_width(frame: np.ndarray, width: int) -> np.ndarray:
     return cv2.resize(frame, (width, max(1, round(frame.shape[0] * width / frame.shape[1]))), interpolation=cv2.INTER_AREA)
 
 
-def process(video_id: str, work: Path, out_dir: Path, ytdlp: str, model: Path) -> dict:
+def process(video_id: str, work: Path, out_dir: Path, ytdlp: str, model: Path, prefix: str = "long_video_test_v1") -> dict:
     vdir = work / video_id
     if vdir.exists():
         shutil.rmtree(vdir)
@@ -127,7 +127,7 @@ def process(video_id: str, work: Path, out_dir: Path, ytdlp: str, model: Path) -
     if record["status"] == "ok":
         files = sorted(p for p in vdir.rglob("*") if p.is_file() and p.name != "format.txt")
         (vdir / "SHA256SUMS.txt").write_text("".join(f"{sha256(p)}  {p.relative_to(vdir)}\n" for p in files))
-        zip_path = out_dir / f"long_video_test_v1_{video_id}.zip"
+        zip_path = out_dir / f"{prefix}_{video_id}.zip"
         with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_STORED) as archive:  # JPEG and npz are already compressed
             for p in sorted(q for q in vdir.rglob("*") if q.is_file() and q.name != "format.txt"):
                 archive.write(p, Path(video_id) / p.relative_to(vdir))
@@ -141,6 +141,7 @@ def main() -> None:
     parser.add_argument("out_dir", type=Path)
     parser.add_argument("video_ids", nargs="+")
     parser.add_argument("--yt-dlp", default="yt-dlp")
+    parser.add_argument("--prefix", default="long_video_test_v1", help="ZIP name prefix")
     args = parser.parse_args()
     args.work.mkdir(parents=True, exist_ok=True)
     args.out_dir.mkdir(parents=True, exist_ok=True)
@@ -148,7 +149,7 @@ def main() -> None:
     if not model.exists():
         urllib.request.urlretrieve(MODEL_URL, model)
     for video_id in args.video_ids:
-        record = process(video_id, args.work, args.out_dir, args.yt_dlp, model)
+        record = process(video_id, args.work, args.out_dir, args.yt_dlp, model, args.prefix)
         record["pose_model_sha256"] = sha256(model)
         with (args.out_dir / "intake_log.jsonl").open("a") as log:
             log.write(json.dumps(record) + "\n")
