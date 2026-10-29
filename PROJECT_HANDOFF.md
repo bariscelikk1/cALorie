@@ -1380,3 +1380,13 @@ sealed test (scored once) 68% within one rep and 39% exact. Reps are shown only
 for jumping jack, pull-up, push-up, sit-up, squat (rule set on dev); other
 classes show "reps not validated". Calories are unvalidated. The page ran
 end to end in Streamlit's headless tester.
+
+## Round 2: more real-session data; Notebook 47 replaces Notebook 46 (2026-10-30)
+
+14 new follow-along videos (8 train, 6 locked test; 3 screening rejects replaced), labeled and reviewed
+(71/71 sample, rules 19-23). Notebook 47 (trained on a Colab T4 in 3 per-seed parts on all 32 labeled long
+videos) scored once on the locked 6-video test: smoothed Macro F1 43.5% vs 38.7% for Notebook 46 (+4.8 pp,
+bootstrap interval +1.9 to +7.8), weak-class recall 48.3 → 61.7%, exercise time called unknown 35.0 → 30.1%,
+rest handling unchanged. All four predeclared criteria pass, so Notebook 47 is the new final model
+(`ml/artifacts/final_model_v2/`). Dumbbell row got worse (41 → 22%). The web page now loads v2. The round-2
+test is spent. Final report, README, charts, and slides still describe v1 and are being updated.

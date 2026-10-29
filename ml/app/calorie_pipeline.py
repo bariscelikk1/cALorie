@@ -35,7 +35,7 @@ FPS = 15
 KEEP_17 = [0, 2, 5, 7, 8, 11, 12, 13, 14, 15, 16, 23, 24, 25, 26, 27, 28]
 LEFT_SHOULDER, RIGHT_SHOULDER, LEFT_HIP, RIGHT_HIP = 5, 6, 11, 12
 MODEL_URL = "https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_full/float16/latest/pose_landmarker_full.task"
-MODEL_DIR = ROOT / "ml/artifacts/final_model_v1/models"
+MODEL_DIR = ROOT / "ml/artifacts/final_model_v2/models"  # v1 (Notebook 46) is ml/artifacts/final_model_v1
 SEEDS = (42, 137, 2026)
 
 
@@ -98,7 +98,7 @@ def extract_pose(video: Path, progress=None) -> tuple[np.ndarray, float]:
 def load_final_model(device):
     seeds = []
     for seed in SEEDS:
-        ck = load(str(MODEL_DIR / f"seed_{seed}_classifier_from_nb45.pt"), device)
+        ck = load(str(MODEL_DIR / f"seed_{seed}_classifier.pt"), device)
         assert list(ck["supported_classes"]) == SUPPORTED
         cls = SmallTCN(100, 14).to(device); cls.load_state_dict(ck["exercise_state_dict"]); cls.eval()
         gates = {}

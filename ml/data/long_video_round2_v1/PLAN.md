@@ -149,3 +149,8 @@ and refuses a real run until round-2 data and `LOCK.json` are in the repository
   train/test disjointness verified) against frozen Notebook 46, scored once with
   `ml/scripts/score_nb47_round2_v1.py` using the four-part rule in PLAN.md section 3. Evaluations used on
   this test set after this run: 1.
+- **Evaluation 1 result (2026-10-30):** Notebook 47 replaces Notebook 46: all four criteria pass (Macro F1
+  +4.8 pp, bootstrap interval +1.9 to +7.8; weak-class recall 48.3 → 61.7%; exercise time called unknown
+  35.0 → 30.1%; rest called unknown +0.2 pp). Dumbbell row recall fell 41 → 22%. Details:
+  `ml/artifacts/long_video_round2_test_v1/eval1/README.md`. The test set is spent; do not tune on it. Final
+  model v2: `ml/artifacts/final_model_v2/`.
