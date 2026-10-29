@@ -144,3 +144,8 @@ and refuses a real run until round-2 data and `LOCK.json` are in the repository
   `ml/scripts/adjudicate_long_video_round2_v1.py`. The 6 test videos are locked in
   `LOCK.json` (labels and evidence hashes) before any scoring. Evaluations used on
   this test set: 0. Next: Notebook 47.
+- **Evaluation 1 on the round-2 test (predeclared 2026-10-30, before scoring):** the three Notebook 47 seed
+  ZIPs (`ml/artifacts/long_video_round2_training_v1/`, trained on a Colab T4; checksums, lock hashes, and
+  train/test disjointness verified) against frozen Notebook 46, scored once with
+  `ml/scripts/score_nb47_round2_v1.py` using the four-part rule in PLAN.md section 3. Evaluations used on
+  this test set after this run: 1.
