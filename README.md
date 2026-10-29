@@ -9,12 +9,11 @@ which one.
 video -> MediaPipe pose -> gate (exercise or unknown) -> 14-class classifier -> exercise timeline
 ```
 
-**Final result (2026-10-28):** on a locked test of 8 unseen full workout
-videos (3.9 h), the final model reaches **47.6% smoothed Macro F1** and
-**73% accuracy over time**, versus 32.6% for the previous best model
-(+15.0 points, 95% interval +2.2 to +25.2). It is a research result, not a
-production system: 39% of real exercise time is still missed, and tricep
-extension is never recognized.
+**Final result (2026-10-30):** on a locked test of 6 unseen full workouts from new creators (2.6 h), the final
+model (v2) reaches **43.5% smoothed Macro F1**, up from 38.7% for the previous final model (+4.8 points, 95%
+interval +1.9 to +7.8), and recognizes **62% of weak-exercise time (was 48%)**. On the earlier locked test the
+previous model scored 47.6% against 32.6% for the early model. It is a research result, not a production
+system: about 30% of real exercise time is still missed, and dumbbell row got worse in the last round.
 
 **Read the [final report](FINAL_REPORT.md)** for results, limits, and history.
 
@@ -38,8 +37,10 @@ extension. Everything else is `unknown`.
 | Path | What it holds |
 | --- | --- |
 | [`FINAL_REPORT.md`](FINAL_REPORT.md) | Final results, limitations, next steps |
-| [`ml/artifacts/final_model_v1/`](ml/artifacts/final_model_v1/) | Frozen final model and [model card](ml/artifacts/final_model_v1/MODEL_CARD.md) |
-| [`ml/artifacts/long_video_test_v1/eval2/`](ml/artifacts/long_video_test_v1/eval2/) | Final locked-test scoring |
+| [`ml/artifacts/final_model_v2/`](ml/artifacts/final_model_v2/) | Frozen final model, [model card](ml/artifacts/final_model_v2/MODEL_CARD.md), charts, and the slide deck (`cALorie_final_presentation.pptx`) |
+| [`ml/artifacts/final_model_v1/`](ml/artifacts/final_model_v1/) | Previous final model (baseline) |
+| [`ml/artifacts/long_video_round2_test_v1/eval1/`](ml/artifacts/long_video_round2_test_v1/eval1/) | Final locked-test scoring (v2 vs v1) |
+| [`ml/artifacts/long_video_test_v1/eval2/`](ml/artifacts/long_video_test_v1/eval2/) | Earlier locked-test scoring (v1) |
 | [`ml/app/`](ml/app/) | The small web page and the video-to-timeline pipeline |
 | [`ml/notebooks/`](ml/notebooks/) | Every experiment notebook (01-46) |
 | [`ml/scripts/`](ml/scripts/) | Builders, intake, labeling, audit, and scoring scripts |
@@ -57,24 +58,25 @@ streamlit run ml/app/app.py
 Upload one video of one person with the whole body in view. The page shows the
 exercise timeline, time per exercise, and a CSV download. It runs on your
 computer only. It is a research prototype: it averages the three final-model
-seeds (checked on the dev videos: 35.5% Macro F1 vs 35.7% for the seed median),
+seeds (checked on the dev videos for the earlier model: 35.5% Macro F1 vs 35.7% for the seed median; not re-scored separately for v2),
 it mislabels some intro and rest moments, reps are counted only for five
 exercises (68% of unseen RepCount clips within one rep), and calories use one
 fixed MET per exercise with a ±35% range; enter your weight in the page. Command line: `python ml/app/calorie_pipeline.py VIDEO`.
 
-## Reproduce the final score
+## Reproduce the final score (v2 vs v1 on the locked round-2 test)
 
 ```bash
 python3 -m venv .venv && . .venv/bin/activate
 pip install -r ml/requirements-macos.txt
 cd ml/scripts
-python score_long_video_test_v1_eval2.py ../.. /tmp/eval2 --device mps
+python score_nb47_round2_v1.py ../.. /tmp/eval \
+  ../artifacts/long_video_round2_training_v1/nb47_seed42.zip \
+  ../artifacts/long_video_round2_training_v1/nb47_seed137.zip \
+  ../artifacts/long_video_round2_training_v1/nb47_seed2026.zip --device mps
 ```
 
-It checks the locked test's checksums, rescoring the old models must match
-evaluation 1, and it writes the same tables as
-`ml/artifacts/long_video_test_v1/eval2/`. Use `--device cpu` without an Apple
-GPU.
+It checks the locked test's checksums and writes the same tables as
+`ml/artifacts/long_video_round2_test_v1/eval1/`. Use `--device cpu` without an Apple GPU.
 
 ## Data and license notes
 

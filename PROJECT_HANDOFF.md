@@ -1390,3 +1390,11 @@ bootstrap interval +1.9 to +7.8), weak-class recall 48.3 → 61.7%, exercise tim
 rest handling unchanged. All four predeclared criteria pass, so Notebook 47 is the new final model
 (`ml/artifacts/final_model_v2/`). Dumbbell row got worse (41 → 22%). The web page now loads v2. The round-2
 test is spent. Final report, README, charts, and slides still describe v1 and are being updated.
+
+## Packaging for the 2026-11-02 deadline (2026-10-30)
+
+Final model v2 documented in `FINAL_REPORT.md`, `README.md`, `CLAUDE.md`, and its model card. Charts
+(`ml/scripts/make_final_figures.py`, built only from archived result files) and a 10-slide deck
+(`ml/artifacts/final_model_v2/cALorie_final_presentation.pptx`, built by `ml/scripts/build_final_deck.js`,
+visually checked by rendering in Keynote) are in `ml/artifacts/final_model_v2/`. The web page loads v2 and its
+caption states the v2 numbers. No experiments are in progress; both locked long-video tests are spent.

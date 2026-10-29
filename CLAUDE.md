@@ -1,9 +1,9 @@
 # cALorie — Claude master handoff
 
-Last updated: 2026-10-28 (Europe/Istanbul)
+Last updated: 2026-10-30 (Europe/Istanbul)
 
 **Final state:** the project is packed up (deadline 2026-11-02). The final
-model is frozen in `ml/artifacts/final_model_v1/` and summarized in
+model (v2, Notebook 47) is frozen in `ml/artifacts/final_model_v2/` (v1 is `final_model_v1/`) and summarized in
 [`FINAL_REPORT.md`](FINAL_REPORT.md). Legacy web code is in `archive/`.
 
 This is the fastest safe entry point for continuing cALorie with Claude. The
@@ -228,6 +228,7 @@ Every row remains `training_allowed=false`.
 | Notebook 45 | v2 + 11 long-video train videos: dev fail on the gate bar (exercise called unknown −2.3 pp); Macro F1 +6.3 pp. |
 | Notebook 46 | Gate rebalanced (long video = 25% of each gate class): dev fail, close (−10.3 pp vs 15 needed); Macro F1 +10 pp. Frozen as the final model by user decision. |
 | Evaluation 2 | Final model on the locked long-video test: 47.6% vs V6-F 32.6% smoothed Macro F1 (+15.0 pp, CI +2.2 to +25.2). Test used twice; retire it. |
+| Round 2 + Notebook 47 | 14 more labeled videos (6 locked test); Notebook 47 (32 long videos, Colab T4) replaces Notebook 46: Macro F1 43.5 vs 38.7 (+4.8, CI +1.9 to +7.8), weak-class recall 48.3 -> 61.7, all four predeclared criteria pass. Dumbbell row worse (41 -> 22). Both locked tests are now spent. |
 
 The full history is in [PROJECT_HANDOFF.md](https://github.com/bariscelikk1/cALorie/blob/feat/tcn-rebuild/PROJECT_HANDOFF.md).
 Failed experiments are evidence; do not delete or rewrite them as successes.
@@ -238,7 +239,7 @@ None in progress. The experiment arc is closed and the final model is frozen
 (`ml/artifacts/final_model_v1/MODEL_CARD.md`). If work resumes, follow
 `FINAL_REPORT.md` section 8: more real-session data for tricep extension,
 lateral raise, curl, row, and shoulder press; a **new** locked test (the
-long-video test v1 has been used twice); then rep counting and calories.
+both locked long-video tests are spent); rep counting and calories exist only as an approximate local page.
 The RepCount gate-rotation text that used to be here is historical
 (Notebook 39 ran; see the table above).
 
@@ -306,6 +307,6 @@ Do not reintroduce those failed paths.
 > Continue cALorie from https://github.com/bariscelikk1/cALorie on branch
 > `feat/tcn-rebuild`. Read `CLAUDE.md`, `FINAL_REPORT.md`, `AGENTS.md`, the
 > latest `PROJECT_HANDOFF.md`, and `ml/data/ANNOTATION_GUIDE.md` first. The
-> final model (Notebook 46) scores 47.6% smoothed Macro F1 on the locked
-> long-video test, which is now spent. Predeclare any new experiment and its
+> final model (Notebook 47) scores 43.5% smoothed Macro F1 on the locked
+> round-2 test (previous final model 38.7%); both locked long-video tests are now spent. Predeclare any new experiment and its
 > pass rule before running it; never tune on locked or reused test sets.

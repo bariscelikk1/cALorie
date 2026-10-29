@@ -73,6 +73,6 @@ if upload is not None:
                          label=table.label.str.replace("_", " "))[["start", "end", "label"]]
     st.dataframe(shown, hide_index=True)
     st.download_button("Download timeline (CSV)", table.to_csv(index=False), "timeline.csv", "text/csv")
-    st.caption("Accuracy on unseen full workouts: 47.6% Macro F1; about 39% of real exercise time is missed and tricep extension is "
-               "not recognized. Reps are shown only for the five exercises where the counter was checked (about 68% of RepCount test clips were within one rep) "
-               "and calories use one fixed MET per exercise with a ±35% range. See FINAL_REPORT.md.")
+    st.caption("Research prototype. On 6 unseen full workouts it scores 43.5% Macro F1; about 30% of real exercise time is still missed "
+               "and dumbbell row is weak. Reps are shown only for the five exercises where the counter was checked (about 68% of RepCount test clips "
+               "were within one rep) and calories use one fixed MET per exercise with a ±35% range. See FINAL_REPORT.md.")
