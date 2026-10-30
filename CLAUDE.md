@@ -19,7 +19,7 @@ the required order before changing data, labels, models, or notebooks.
 - Last scientific checkpoint before this handoff:
   https://github.com/bariscelikk1/cALorie/commit/16109002bb4b2e3c8f002e964cecc495799fab13
 
-`feat/tcn-rebuild` is the current project. `main` is not current. The old
+`main` now contains `feat/tcn-rebuild` (merged 2026-10-30, PR #2); both are the current project. The old
 website, worker, Supabase, and deployment code is historical archive material.
 There is no active website workflow. Do not restart or redesign it unless the
 user explicitly changes scope.
@@ -305,7 +305,7 @@ Do not reintroduce those failed paths.
 ## Paste this as Claude's first task
 
 > Continue cALorie from https://github.com/bariscelikk1/cALorie on branch
-> `feat/tcn-rebuild`. Read `CLAUDE.md`, `FINAL_REPORT.md`, `AGENTS.md`, the
+> `main` (it contains the former `feat/tcn-rebuild`). Read `CLAUDE.md`, `FINAL_REPORT.md`, `AGENTS.md`, the
 > latest `PROJECT_HANDOFF.md`, and `ml/data/ANNOTATION_GUIDE.md` first. The
 > final model (Notebook 47) scores 43.5% smoothed Macro F1 on the locked
 > round-2 test (previous final model 38.7%); both locked long-video tests are now spent. Predeclare any new experiment and its
