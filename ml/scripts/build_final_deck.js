@@ -64,11 +64,11 @@ notes(s, "Macro F1 averages the score over exercises so rare ones count equally.
 section("Data");
 s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Data" });
 s.addText("The fix: label real workouts, second by second", { placeholder: "title" });
-stat(s, 0.6, 1.7, 2.7, "38", "workout videos, labeled by hand-written rules", C.accent1);
-stat(s, 3.65, 1.7, 2.7, "19 h", "of real follow-along workouts, raw video deleted", C.accent2);
+stat(s, 0.6, 1.7, 2.7, "34 h", "of video turned into pose data, from about 2,900 clips and videos", C.accent1);
+stat(s, 3.65, 1.7, 2.7, "19 h", "of it real follow-along workouts: 38 videos labeled second by second", C.accent2);
 stat(s, 6.7, 1.7, 2.7, "100%", "of 210 random segments spot-checked by hand were correct", C.accent4);
-s.addText("Every second is rest, warm-up, a supported exercise, or “unknown”. Two sets of videos were locked away and never used to train or tune anything.", { x: 0.6, y: 3.95, w: 8.8, h: 0.9, fontSize: 16, fontFace: "Calibri", color: C.text2, margin: 0, isTextBox: true, objectName: "caption" });
-notes(s, "We collected 38 follow-along videos from creators we had not used before, screened out vlogs and montages, and labeled every second using a 23-rule annotation guide. The spot checks were 44 of 44, 95 of 95, and 71 of 71 correct. Two test sets were locked with file fingerprints before any model was scored.");
+s.addText("Every second of these 38 workouts is rest, warm-up, a supported exercise, or “unknown”. Together with about 2,850 shorter clips, that is roughly 34 hours of video turned into body-pose data. Two video sets were locked away and never used to train or tune.", { x: 0.6, y: 3.95, w: 8.8, h: 0.9, fontSize: 16, fontFace: "Calibri", color: C.text2, margin: 0, isTextBox: true, objectName: "caption" });
+notes(s, "In total about 34 hours of video was processed: roughly 1,800 short training clips (7.7 h), 1,040 RepCount clips (7.3 h), and 38 long workouts (18.8 h). We collected the 38 follow-along videos from creators we had not used before, screened out vlogs and montages, and labeled every second using a 23-rule annotation guide. The spot checks were 44 of 44, 95 of 95, and 71 of 71 correct. Two test sets were locked with file fingerprints before any model was scored.");
 
 // 5 ---------------------------------------------------------------------------------------------------------
 section("Results");

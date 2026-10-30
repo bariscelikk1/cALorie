@@ -28,6 +28,7 @@ warm-ups, talking, other moves) should come out as `unknown`.
 | 14-class exercise classifier (TCN) | Done |
 | Full-session timeline scoring and smoothing | Done |
 | Labeled real-session data (38 workouts, 19 h) and two locked tests | Done |
+| Total video turned into pose data | about 34 h: 1,814 short training clips (7.7 h), 1,039 RepCount clips (7.3 h), 38 long workouts (18.8 h) |
 | Small local web page (video in, timeline, reps, calories out) | Done, minimal (`ml/app/`) |
 | Repetition counting | Done for 5 exercises, approximate (sealed test: 68% of clips within one rep, 39% exact) |
 | Calorie estimate (MET-based) | Done, not validated (one fixed MET per exercise, ±35% range) |
