@@ -134,7 +134,7 @@ Failed and borderline experiments were kept as evidence, not rewritten as succes
 - Round-2 test scoring: `python ml/scripts/score_nb47_round2_v1.py <repo> <out> <3 seed ZIPs> --device mps`
   (run from `ml/scripts/`); training notebooks `ml/notebooks/47_long_video_round2_seed{42,137,2026}.ipynb`
   (Colab T4, built by `ml/scripts/build_notebook47.py`).
-- Web page: `streamlit run ml/app/app.py`.
+- Web page: `./ml/app/run_app.sh` (dark local page; long videos up to 4 GB).
 - Charts: `ml/scripts/make_final_figures.py`; slides: `ml/artifacts/final_model_v2/cALorie_final_presentation.pptx`.
 - Environment: `ml/requirements-macos.txt`.
 

@@ -11,3 +11,4 @@ __pycache__/
 review_pages/
 ml/app/pose_landmarker_full.task
 review_pages_r2/
+.claude/

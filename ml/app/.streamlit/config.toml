@@ -1,0 +1,14 @@
+[server]
+maxUploadSize = 4096        # MB: long workout videos are often several hundred MB
+headless = false
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "dark"
+primaryColor = "#EB6834"
+backgroundColor = "#12151C"
+secondaryBackgroundColor = "#1C2130"
+textColor = "#F2F3F7"
+font = "sans serif"
