@@ -1,0 +1,59 @@
+0 14 intro montage_and_title_cards unknown high  # 
+14 24 transition get_ready_preview unknown high  # 
+24 84 exercise dumbbell_floor_press_superset_reverse_grip bench_press medium 2nd # supine floor press mapped like bench press
+84 104 transition up_next_preview_screen unknown high  # 
+104 144 exercise alternating_tricep_kickback tricep_extension medium 2nd # bent-over elbow extension
+144 164 transition up_next_preview_screen unknown high  # 
+164 230 exercise kneeling_single_arm_shoulder_press shoulder_press high  # right then left
+230 250 transition up_next_preview_screen unknown high  # 
+250 290 exercise glute_bridge_dumbbell_press bench_press medium 2nd # supine press with hips bridged
+290 310 transition up_next_preview_screen unknown high  # 
+310 374 exercise kneeling_overhead_tricep_extension tricep_extension high  # right then left
+374 394 transition up_next_preview_screen unknown high  # 
+394 434 exercise kneeling_arnold_press shoulder_press high  # 
+434 454 transition up_next_preview_screen unknown high  # 
+454 494 exercise chest_scoop_plus_lateral_raise unknown medium 2nd # compound; includes lateral raise phase
+494 514 transition up_next_preview_screen unknown high  # 
+514 554 exercise skull_crusher_plus_close_press unknown medium  # compound
+554 574 transition up_next_preview_screen unknown high  # 
+574 638 exercise kneeling_front_press shoulder_press medium 2nd # neutral-grip single-arm press; right then left
+638 686 transition rest_with_subscribe_ad unknown high  # 45 s rest with full-screen ad
+686 746 exercise dumbbell_floor_press_superset_reverse_grip bench_press medium 2nd # supine floor press mapped like bench press
+746 766 transition up_next_preview_screen unknown high  # 
+766 806 exercise alternating_tricep_kickback tricep_extension medium 2nd # bent-over elbow extension
+806 826 transition up_next_preview_screen unknown high  # 
+826 892 exercise kneeling_single_arm_shoulder_press shoulder_press high  # right then left
+892 912 transition up_next_preview_screen unknown high  # 
+912 952 exercise glute_bridge_dumbbell_press bench_press medium 2nd # supine press with hips bridged
+952 972 transition up_next_preview_screen unknown high  # 
+972 1036 exercise kneeling_overhead_tricep_extension tricep_extension high  # right then left
+1036 1056 transition up_next_preview_screen unknown high  # 
+1056 1096 exercise kneeling_arnold_press shoulder_press high  # 
+1096 1116 transition up_next_preview_screen unknown high  # 
+1116 1156 exercise chest_scoop_plus_lateral_raise unknown medium 2nd # compound; includes lateral raise phase
+1156 1176 transition up_next_preview_screen unknown high  # 
+1176 1216 exercise skull_crusher_plus_close_press unknown medium  # compound
+1216 1236 transition up_next_preview_screen unknown high  # 
+1236 1300 exercise kneeling_front_press shoulder_press medium 2nd # neutral-grip single-arm press; right then left
+1300 1346 transition rest_with_subscribe_ad unknown high  # 45 s rest with full-screen ad
+1346 1406 exercise dumbbell_floor_press_superset_reverse_grip bench_press medium 2nd # supine floor press mapped like bench press
+1406 1426 transition up_next_preview_screen unknown high  # 
+1426 1466 exercise alternating_tricep_kickback tricep_extension medium 2nd # bent-over elbow extension
+1466 1486 transition up_next_preview_screen unknown high  # 
+1486 1552 exercise kneeling_single_arm_shoulder_press shoulder_press high  # right then left
+1552 1572 transition up_next_preview_screen unknown high  # 
+1572 1612 exercise glute_bridge_dumbbell_press bench_press medium 2nd # supine press with hips bridged
+1612 1632 transition up_next_preview_screen unknown high  # 
+1632 1696 exercise kneeling_overhead_tricep_extension tricep_extension high  # right then left
+1696 1716 transition up_next_preview_screen unknown high  # 
+1716 1756 exercise kneeling_arnold_press shoulder_press high  # 
+1756 1776 transition up_next_preview_screen unknown high  # 
+1776 1816 exercise chest_scoop_plus_lateral_raise unknown medium 2nd # compound; includes lateral raise phase
+1816 1836 transition up_next_preview_screen unknown high  # 
+1836 1876 exercise skull_crusher_plus_close_press unknown medium  # compound
+1876 1896 transition up_next_preview_screen unknown high  # 
+1896 1960 exercise kneeling_front_press shoulder_press medium 2nd # neutral-grip single-arm press; right then left
+1960 1984 transition finisher_title_and_preview unknown high  # 
+1984 2016 exercise lying_dumbbell_chest_fly unknown high  # 
+2016 2034 exercise dumbbell_push_up push_up medium 2nd # push-ups on dumbbell handles; dark
+2034 2064 outro great_job_and_subscribe_card unknown high  # 

@@ -1,0 +1,105 @@
+{
+  "bench_press": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 0.0
+  },
+  "bicep_curl": {
+    "precision": 0.7012987012987013,
+    "recall": 1.0,
+    "f1-score": 0.8244274809160306,
+    "support": 54.0
+  },
+  "deadlift": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 0.0
+  },
+  "dumbbell_row": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 54.0
+  },
+  "jumping_jack": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 0.0
+  },
+  "lat_pulldown": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 0.0
+  },
+  "lateral_raise": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 0.0
+  },
+  "lunge": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 82.0
+  },
+  "pull_up": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 0.0
+  },
+  "push_up": {
+    "precision": 1.0,
+    "recall": 0.5357142857142857,
+    "f1-score": 0.6976744186046512,
+    "support": 28.0
+  },
+  "shoulder_press": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 0.0
+  },
+  "sit_up": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 14.0
+  },
+  "squat": {
+    "precision": 0.16279069767441862,
+    "recall": 0.75,
+    "f1-score": 0.267515923566879,
+    "support": 28.0
+  },
+  "tricep_extension": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 54.0
+  },
+  "unknown": {
+    "precision": 0.7425595238095238,
+    "recall": 0.5644796380090498,
+    "f1-score": 0.6413881748071979,
+    "support": 884.0
+  },
+  "accuracy": 0.49165275459098495,
+  "macro avg": {
+    "precision": 0.17377659485217625,
+    "recall": 0.19001292824822233,
+    "f1-score": 0.16206706652631725,
+    "support": 1198.0
+  },
+  "weighted avg": {
+    "precision": 0.606720274167473,
+    "recall": 0.49165275459098495,
+    "f1-score": 0.5329979633387574,
+    "support": 1198.0
+  }
+}

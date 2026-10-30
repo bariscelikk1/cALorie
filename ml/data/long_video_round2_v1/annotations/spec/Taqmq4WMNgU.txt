@@ -1,0 +1,28 @@
+0 46 intro host_talking_to_camera unknown high
+46 170 exercise dynamic_warmup_arm_circles_hops_wide_stance unknown high # warm-up without weights
+170 176 transition pick_up_dumbbells unknown high
+176 526 exercise dumbbell_squat_to_overhead_press_block unknown medium # compound thruster-style squat+press; boundaries approximate (no on-screen timer), about +/-6 s
+526 540 transition swap_dumbbells unknown high
+540 642 exercise forward_lunges_with_dumbbells_at_sides lunge medium # boundaries approximate (no on-screen timer), about +/-6 s
+642 668 exercise dumbbell_bicep_curl bicep_curl medium # boundaries approximate (no on-screen timer), about +/-6 s
+668 696 rest hands_on_hips_rest unknown high
+696 740 exercise dumbbell_lunges_larger_step lunge medium # boundaries approximate (no on-screen timer), about +/-6 s
+740 750 rest pause_between_sets unknown medium
+750 776 exercise dumbbell_bicep_curl bicep_curl medium # boundaries approximate (no on-screen timer), about +/-6 s
+776 856 exercise unclear_leg_and_arm_work unknown medium # not identified; kept unknown rather than guessed
+856 886 exercise dumbbell_front_raise unknown medium # arms straight to chest height: front raise, not lateral raise
+886 960 exercise unclear_hinge_and_single_arm_work unknown medium # not identified; kept unknown
+960 970 transition hinge_setup unknown medium
+970 980 exercise bent_over_two_dumbbell_row dumbbell_row medium # rule 3; boundaries approximate (no on-screen timer), about +/-6 s
+980 982 rest stand_and_smile unknown high
+982 1056 exercise single_leg_romanian_deadlift deadlift medium # rule 11; boundaries approximate (no on-screen timer), about +/-6 s
+1056 1108 exercise bent_over_two_dumbbell_row dumbbell_row medium # rule 3; torso held bent, elbows pulled back; boundaries approximate (no on-screen timer), about +/-6 s
+1108 1200 exercise single_leg_romanian_deadlift deadlift medium # rule 11; boundaries approximate (no on-screen timer), about +/-6 s
+1200 1246 exercise bent_over_two_dumbbell_row dumbbell_row medium # rule 3; boundaries approximate (no on-screen timer), about +/-6 s
+1246 1344 exercise single_leg_romanian_deadlift deadlift medium # rule 11; includes a short pause near 20:50; boundaries approximate (no on-screen timer), about +/-6 s
+1344 1380 exercise bent_over_two_dumbbell_row dumbbell_row medium # rule 3; boundaries approximate (no on-screen timer), about +/-6 s
+1380 1386 transition get_down_to_floor unknown high
+1386 1860 exercise floor_core_work_with_dumbbells_unidentified unknown medium # supine and seated floor moves with legs raised; not forced into sit_up
+1860 1932 cooldown lying_and_seated_stretch unknown high
+1932 2060 cooldown standing_stretches unknown high
+2060 2068.6 outro host_wave_goodbye unknown high

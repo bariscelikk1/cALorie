@@ -1,0 +1,13 @@
+torch
+numpy
+pandas==2.2.3
+scikit-learn
+matplotlib
+seaborn
+mediapipe==0.10.35
+opencv-python-headless
+tqdm
+yt-dlp
+jupyterlab
+ipykernel
+streamlit

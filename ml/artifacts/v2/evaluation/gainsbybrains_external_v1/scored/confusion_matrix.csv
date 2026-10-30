@@ -1,0 +1,11 @@
+true_class,bench_press,bicep_curl,deadlift,dumbbell_row,jumping_jack,plank,pull_up,push_up,squat,unknown
+bench_press,0,0,0,0,0,0,0,0,0,0
+bicep_curl,0,0,0,0,0,0,0,0,0,0
+deadlift,0,0,0,0,0,0,0,0,0,0
+dumbbell_row,0,0,0,0,0,0,0,0,0,0
+jumping_jack,0,0,0,0,0,0,31,0,0,6
+plank,0,9,0,0,0,36,0,1,0,28
+pull_up,0,0,0,0,0,0,0,0,0,0
+push_up,0,0,0,0,0,0,0,0,0,0
+squat,0,0,35,0,0,0,0,0,73,2
+unknown,48,179,40,1,0,36,14,0,36,115

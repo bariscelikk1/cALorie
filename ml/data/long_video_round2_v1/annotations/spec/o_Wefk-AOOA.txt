@@ -1,0 +1,47 @@
+0 18 intro title_card_format_card_and_host_greeting unknown high
+18 198 exercise free_style_warm_up unknown high # labeled Free-Style Warm-Up on screen
+198 214 transition pick_up_dumbbells_and_countdown unknown high
+214 244 exercise dumbbell_bicep_curl bicep_curl high
+244 274 rest rest_30s_countdown unknown high
+274 304 exercise dumbbell_bicep_curl bicep_curl high
+304 334 rest rest_30s_countdown unknown high
+334 364 exercise dumbbell_bicep_curl bicep_curl high
+364 394 rest rest_30s_countdown unknown high
+394 424 exercise kneeling_dumbbell_shoulder_press shoulder_press high # kneeling two-dumbbell press (rule 8 family)
+424 454 rest rest_30s_countdown unknown high
+454 484 exercise kneeling_dumbbell_shoulder_press shoulder_press high # kneeling two-dumbbell press (rule 8 family)
+484 514 rest rest_30s_countdown unknown high
+514 544 exercise kneeling_dumbbell_shoulder_press shoulder_press high # kneeling two-dumbbell press (rule 8 family)
+544 574 rest rest_30s_countdown unknown high
+574 604 exercise dumbbell_hammer_curl bicep_curl high
+604 634 rest rest_30s_countdown unknown high
+634 664 exercise dumbbell_hammer_curl bicep_curl high
+664 694 rest rest_30s_countdown unknown high
+694 724 exercise dumbbell_hammer_curl bicep_curl high
+724 754 rest rest_30s_countdown unknown high
+754 784 exercise kneeling_dumbbell_lateral_raise lateral_raise high
+784 814 rest rest_30s_countdown unknown high
+814 844 exercise kneeling_dumbbell_lateral_raise lateral_raise high
+844 874 rest rest_30s_countdown unknown high
+874 904 exercise kneeling_dumbbell_lateral_raise lateral_raise high
+904 934 rest rest_30s_countdown unknown high
+934 964 exercise dumbbell_front_raise unknown high # front raise is not a lateral raise
+964 994 rest rest_30s_countdown unknown high
+994 1024 exercise dumbbell_front_raise unknown high # front raise is not a lateral raise
+1024 1054 rest rest_30s_countdown unknown high
+1054 1084 exercise dumbbell_front_raise unknown high # front raise is not a lateral raise
+1084 1114 rest rest_30s_countdown unknown high
+1114 1144 exercise dumbbell_tricep_kickback tricep_extension medium # rule 6: kickback
+1144 1174 rest rest_30s_countdown unknown high
+1174 1204 exercise dumbbell_tricep_kickback tricep_extension medium # rule 6: kickback
+1204 1234 rest rest_30s_countdown unknown high
+1234 1264 exercise dumbbell_tricep_kickback tricep_extension medium # rule 6: kickback
+1264 1294 rest rest_30s_countdown unknown high
+1294 1324 exercise kneeling_arnold_press shoulder_press high # rule 13: Arnold press
+1324 1354 rest rest_30s_countdown unknown high
+1354 1384 exercise kneeling_arnold_press shoulder_press high # rule 13: Arnold press
+1384 1414 rest rest_30s_countdown unknown high
+1414 1444 exercise kneeling_arnold_press shoulder_press high # rule 13: Arnold press
+1444 1530 transition workout_complete_and_host_talking unknown high
+1530 1712 cooldown free_style_cool_down unknown high
+1712 1734.1 outro finished_card_and_goodbye unknown high

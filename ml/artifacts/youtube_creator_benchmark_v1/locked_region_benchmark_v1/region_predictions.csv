@@ -1,0 +1,37 @@
+interval_id,video_id,creator,true_label,window_count,v6c_gate_supported_probability,v6c_exercise_prediction,v6c_prediction,v6f_gate_supported_probability,v6f_exercise_prediction,v6f_prediction
+gains_situp_01,7-mVPCVJMtI,TRAIN WITH GAINSBYBRAINS,sit_up,20,1.3171553803204006e-07,bench_press,unknown,0.10159355401992798,lunge,unknown
+striq_pullup_01,Kw89u6WtPC8,STRIQfit,pull_up,7,0.9999997019767761,pull_up,pull_up,0.9975703358650208,pull_up,pull_up
+striq_pullup_02,Kw89u6WtPC8,STRIQfit,pull_up,8,0.9999998807907104,pull_up,pull_up,0.9978451132774353,pull_up,pull_up
+striq_pullup_03,Kw89u6WtPC8,STRIQfit,pull_up,8,0.9999998807907104,pull_up,pull_up,0.9961463212966919,pull_up,pull_up
+tiff_press_01,fJQmoPKvjTg,TIFF x DAN,shoulder_press,17,0.9999205470085144,shoulder_press,shoulder_press,0.9958814978599548,shoulder_press,shoulder_press
+tiff_lateral_01,fJQmoPKvjTg,TIFF x DAN,unknown,18,0.7178770899772644,squat,squat,0.8307197093963623,lateral_raise,lateral_raise
+tiff_press_02,fJQmoPKvjTg,TIFF x DAN,shoulder_press,17,0.9993969202041626,shoulder_press,shoulder_press,0.9955263733863831,shoulder_press,shoulder_press
+tiff_lateral_02,fJQmoPKvjTg,TIFF x DAN,unknown,18,0.888891875743866,squat,squat,0.87095046043396,lateral_raise,lateral_raise
+tiff_row_01,fJQmoPKvjTg,TIFF x DAN,dumbbell_row,17,0.5152602791786194,deadlift,unknown,0.786273717880249,dumbbell_row,dumbbell_row
+tiff_row_02,fJQmoPKvjTg,TIFF x DAN,dumbbell_row,17,0.3903926908969879,deadlift,unknown,0.8278670310974121,dumbbell_row,dumbbell_row
+tiff_curl_01,fJQmoPKvjTg,TIFF x DAN,bicep_curl,17,0.995019793510437,bicep_curl,bicep_curl,0.7415993809700012,bicep_curl,bicep_curl
+tiff_curl_02,fJQmoPKvjTg,TIFF x DAN,bicep_curl,17,0.9923844933509827,bicep_curl,bicep_curl,0.9051300287246704,bicep_curl,bicep_curl
+tiff_bench_01,fJQmoPKvjTg,TIFF x DAN,unknown,17,1.623369598746649e-07,bench_press,unknown,0.33195844292640686,bench_press,unknown
+tiff_bench_02,fJQmoPKvjTg,TIFF x DAN,unknown,17,2.1138031769396548e-08,bench_press,unknown,0.16583649814128876,bench_press,unknown
+tiff_tricep_01,fJQmoPKvjTg,TIFF x DAN,tricep_extension,17,4.840860157173665e-09,lat_pulldown,unknown,0.07168379426002502,lat_pulldown,unknown
+tiff_tricep_02,fJQmoPKvjTg,TIFF x DAN,tricep_extension,17,5.8570581273897915e-08,lat_pulldown,unknown,0.10870153456926346,lat_pulldown,unknown
+tiff_pushup_01,fJQmoPKvjTg,TIFF x DAN,push_up,10,0.9997328519821167,push_up,push_up,0.7909902334213257,push_up,push_up
+critical_deadlift_01,lKHGBuanBsY,Criticalbench,deadlift,9,0.9985317587852478,bicep_curl,bicep_curl,0.8364362716674805,deadlift,deadlift
+ojs_jj_01,ojs-UW8ULhs,BullyJuice,jumping_jack,21,0.03190295770764351,jumping_jack,unknown,0.6595519185066223,jumping_jack,jumping_jack
+ojs_squat_01,ojs-UW8ULhs,BullyJuice,squat,9,0.5521678328514099,squat,unknown,0.5721023082733154,lunge,unknown
+ojs_lunge_01,ojs-UW8ULhs,BullyJuice,lunge,17,0.9417470097541809,squat,squat,0.7998049259185791,lunge,lunge
+ojs_lunge_02,ojs-UW8ULhs,BullyJuice,lunge,27,0.9204325675964355,squat,squat,0.6655975580215454,lunge,lunge
+ojs_squat_02,ojs-UW8ULhs,BullyJuice,squat,21,0.4471828043460846,squat,unknown,0.4108925461769104,lunge,unknown
+ojs_squat_03,ojs-UW8ULhs,BullyJuice,squat,22,0.47501298785209656,squat,unknown,0.5074417591094971,lunge,unknown
+ojs_pushup_01,ojs-UW8ULhs,BullyJuice,push_up,7,0.9998900294303894,push_up,push_up,0.9245505928993225,push_up,push_up
+ojs_pushup_02,ojs-UW8ULhs,BullyJuice,push_up,8,0.9728738069534302,push_up,push_up,0.8340393900871277,push_up,push_up
+michelle_bench_01,phFvFuLUFEw,Michelle Briehler,bench_press,22,0.9998565316200256,bench_press,bench_press,0.9482935070991516,bench_press,bench_press
+michelle_bench_02,phFvFuLUFEw,Michelle Briehler,bench_press,17,0.99989253282547,bench_press,bench_press,0.8865682482719421,bench_press,bench_press
+michelle_deadlift_01,phFvFuLUFEw,Michelle Briehler,deadlift,42,0.6489784121513367,deadlift,unknown,0.8140063285827637,deadlift,deadlift
+michelle_deadlift_02,phFvFuLUFEw,Michelle Briehler,deadlift,15,0.9801992177963257,deadlift,deadlift,0.9117072820663452,deadlift,deadlift
+michelle_deadlift_03,phFvFuLUFEw,Michelle Briehler,deadlift,23,0.964028537273407,deadlift,deadlift,0.6642450094223022,deadlift,deadlift
+michelle_latpull_01,phFvFuLUFEw,Michelle Briehler,lat_pulldown,22,0.9999883770942688,lat_pulldown,lat_pulldown,0.913622260093689,lat_pulldown,lat_pulldown
+michelle_latpull_02,phFvFuLUFEw,Michelle Briehler,lat_pulldown,17,0.9999942779541016,lat_pulldown,lat_pulldown,0.9727199673652649,lat_pulldown,lat_pulldown
+michelle_latpull_03,phFvFuLUFEw,Michelle Briehler,lat_pulldown,23,0.9353178143501282,lat_pulldown,lat_pulldown,0.4217410981655121,lat_pulldown,unknown
+michelle_lateral_01,phFvFuLUFEw,Michelle Briehler,lateral_raise,13,2.486996830697308e-09,lat_pulldown,unknown,0.29326313734054565,lunge,unknown
+michelle_lateral_02,phFvFuLUFEw,Michelle Briehler,lateral_raise,22,0.011385813355445862,lat_pulldown,unknown,0.2666292190551758,lunge,unknown

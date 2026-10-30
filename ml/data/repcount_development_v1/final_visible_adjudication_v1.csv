@@ -1,0 +1,31 @@
+video_id,source_action,visible_target,visible_variant,source_group_id,review_stage,confidence,training_allowed,frozen_v6f_prediction,model_matches_visible,adjudication_notes
+stu1_18,front_raise,unknown,bent_over_dumbbell_front_or_rear_raise,stu1_18,dense_visual_adjudicated,high,false,deadlift,false,Unsupported raise motion.
+stu2_15,front_raise,unknown,two_hand_plate_front_raise_overhead,stu2_15,dense_visual_adjudicated,high,false,lateral_raise,false,Unsupported overhead front-raise variant.
+stu3_8,front_raise,unknown,alternating_dumbbell_front_raise,stu3_8,dense_visual_adjudicated,high,false,bicep_curl,false,Unsupported front raise.
+stu4_13,front_raise,unknown,weighted_two_arm_front_raise,stu4_13,dense_visual_adjudicated,high,false,jumping_jack,false,Unsupported front raise.
+stu5_14,front_raise,unknown,seated_front_raise,stu5_14,dense_visual_adjudicated,high,false,unknown,true,Correct open-set rejection.
+stu6_13,front_raise,unknown,alternating_dumbbell_front_raise,stu6_13,dense_visual_adjudicated,high,false,bicep_curl,false,Unsupported front raise.
+stu7_21,front_raise,unknown,two_arm_dumbbell_front_raise,stu7_21,dense_visual_adjudicated,high,false,bicep_curl,false,Unsupported front raise.
+stu8_20,front_raise,unknown,cable_front_raise,stu8_20,dense_visual_adjudicated,high,false,unknown,true,Correct open-set rejection.
+stu9_12,front_raise,lateral_raise,bent_elbow_dumbbell_lateral_raise,stu9_12,dense_visual_adjudicated,high,false,jumping_jack,false,Dense evidence shows repeated shoulder abduction.
+stu10_19,front_raise,unknown,barbell_plate_raise_to_overhead,stu10_19,dense_visual_adjudicated,high,false,jumping_jack,false,Unsupported overhead raise.
+stu1_53,situp,sit_up,conventional_crunch,stu1_53,dense_visual_adjudicated,high,false,unknown,false,Repeated torso flexion maps to sit_up.
+stu2_59,situp,unknown,v_up_or_jackknife,stu2_59,dense_visual_adjudicated,high,false,unknown,true,V-up or jackknife remains outside sit_up.
+stu3_54,situp,sit_up,conventional_crunch,stu3_54,dense_visual_adjudicated,high,false,unknown,false,Repeated torso flexion maps to sit_up.
+stu4_52,situp,sit_up,full_sit_up,stu4_52,dense_visual_adjudicated,high,false,unknown,false,Visible repeated full sit-ups.
+stu5_52,situp,sit_up,anchored_sit_up,stu5_52,dense_visual_adjudicated,high,false,unknown,false,Anchored feet do not change the dominant torso-flexion class.
+stu6_50,situp,sit_up,incline_bench_sit_up,stu6_50,dense_visual_adjudicated,high,false,bench_press,false,Incline bench sit-up maps to sit_up.
+stu7_58,situp,unknown,ghd_hyperextension,stu7_58,dense_visual_adjudicated,high,false,unknown,true,GHD-style hyperextension remains outside sit_up.
+stu8_49,situp,sit_up,conventional_crunch,outdoor_crunch_shared_01,dense_visual_adjudicated,high,false,unknown,false,Repeated crunch; same source as stu9_56.
+stu9_56,situp,sit_up,conventional_crunch,outdoor_crunch_shared_01,dense_visual_adjudicated,high,false,unknown,false,Repeated crunch; same source as stu8_49.
+stu10_59,situp,unknown,leg_raise_or_reverse_crunch,stu10_59,dense_visual_adjudicated,high,false,unknown,true,Leg raise or reverse crunch remains outside sit_up.
+stu1_69,squat,squat,goblet_or_loaded_squat,orange_rig_squat_shared_01,dense_visual_adjudicated,high,false,squat,true,Clear repeated squat; likely same source as stu6_59.
+stu2_67,squat,squat,bodyweight_squat,stu2_67,dense_visual_adjudicated,high,false,unknown,false,Dense evidence shows clear repeated bodyweight squats.
+stu3_63,squat,squat,band_abducted_squat,stu3_63,dense_visual_adjudicated,high,false,unknown,false,Clear banded squat variant.
+stu4_67,squat,squat,overhead_squat,stu4_67,dense_visual_adjudicated,high,false,squat,true,Clear overhead squat variant.
+stu5_69,squat,squat,bodyweight_squat,stu5_69,dense_visual_adjudicated,high,false,lat_pulldown,false,Clear repeated squat.
+stu6_59,squat,squat,goblet_squat,orange_rig_squat_shared_01,dense_visual_adjudicated,high,false,squat,true,Clear repeated squat; likely same source as stu1_69.
+stu7_62,squat,squat,barbell_back_squat,stu7_62,dense_visual_adjudicated,high,false,bench_press,false,Clear barbell back squat.
+stu8_59,squat,squat,barbell_back_squat,stu8_59,dense_visual_adjudicated,high,false,squat,true,Clear barbell back squat.
+stu9_70,squat,squat,barbell_back_squat,stu9_70,dense_visual_adjudicated,high,false,squat,true,Clear barbell back squat.
+stu10_67,squat,squat,bodyweight_squat,stu10_67,dense_visual_adjudicated,high,false,squat,true,Clear repeated bodyweight squat.

@@ -1,0 +1,70 @@
+0 34 intro talking_to_camera unknown high  # 
+34 44 transition warmup_preview unknown high  # 
+44 74 exercise arm_swing_and_reach unknown high  # warm-up
+74 104 exercise squat_with_rotation_reach unknown high  # warm-up
+104 134 exercise inchworm_walkout unknown high  # warm-up
+134 164 exercise downward_dog_to_plank unknown high  # warm-up
+164 194 exercise quadruped_cat_cow unknown high  # warm-up
+194 224 exercise crab_reach unknown high  # warm-up
+224 244 transition workout_preview_countdown unknown high  # 
+244 284 exercise seated_straddle_reach unknown high  # 
+284 304 transition rest_next_preview unknown high  # 20 s rest with preview inset
+304 344 exercise kneel_to_squat unknown medium 2nd # 
+344 364 transition rest_next_preview unknown high  # 20 s rest with preview inset
+364 404 exercise three_legged_dog_kick unknown high  # 
+404 424 transition rest_next_preview unknown high  # 20 s rest with preview inset
+424 464 exercise cossack_squat unknown medium 2nd # side-to-side deep lunge
+464 484 transition rest_next_preview unknown high  # 20 s rest with preview inset
+484 524 exercise kneeling_back_lean unknown high  # 
+524 544 transition rest_next_preview unknown high  # 20 s rest with preview inset
+544 584 exercise split_squat_right lunge high  # dog runs through frame
+584 604 transition rest_next_preview unknown high  # 20 s rest with preview inset
+604 644 exercise split_squat_left lunge high  # 
+644 664 transition rest_next_preview unknown high  # 20 s rest with preview inset
+664 704 exercise crab_table_reach unknown high  # 
+704 724 transition rest_next_preview unknown high  # 20 s rest with preview inset
+724 764 exercise crow_hold_hops unknown high  # 
+764 784 transition rest_next_preview unknown high  # 20 s rest with preview inset
+784 824 exercise glute_bridge_march unknown high  # 
+824 844 transition rest_next_preview unknown high  # 20 s rest with preview inset
+844 884 exercise seated_tricep_dip unknown high  # 
+884 904 transition rest_next_preview unknown high  # 20 s rest with preview inset
+904 944 exercise seated_leg_kicks unknown high  # 
+944 964 transition rest_next_preview unknown high  # 20 s rest with preview inset
+964 1004 exercise reverse_lunge_knee_drive_right lunge medium 2nd # lunge plus knee drive
+1004 1024 transition rest_next_preview unknown high  # 20 s rest with preview inset
+1024 1064 exercise reverse_lunge_knee_drive_left lunge medium 2nd # 
+1064 1084 transition rest_next_preview unknown high  # 20 s rest with preview inset
+1084 1124 exercise sumo_squat squat high  # 
+1124 1144 transition rest_next_preview unknown high  # 20 s rest with preview inset
+1144 1184 exercise elbow_plank_hip_shift unknown high  # 
+1184 1204 transition rest_next_preview unknown high  # 20 s rest with preview inset
+1204 1244 exercise side_plank_rotation_right unknown high  # 
+1244 1264 transition rest_next_preview unknown high  # 20 s rest with preview inset
+1264 1304 exercise side_plank_rotation_left unknown high  # 
+1304 1324 transition rest_next_preview unknown high  # 20 s rest with preview inset
+1324 1364 exercise push_up push_up high  # 
+1364 1384 transition rest_next_preview unknown high  # 20 s rest with preview inset
+1384 1424 exercise bear_hover unknown high  # 
+1424 1444 transition rest_next_preview unknown high  # 20 s rest with preview inset
+1444 1484 exercise quadruped_donkey_kick unknown high  # 
+1484 1504 transition rest_next_preview unknown high  # 20 s rest with preview inset
+1504 1544 exercise dolphin_pike unknown high  # 
+1544 1564 transition rest_next_preview unknown high  # 20 s rest with preview inset
+1564 1604 exercise superman unknown high  # dog in frame
+1604 1624 transition rest_next_preview unknown high  # 20 s rest with preview inset
+1624 1664 exercise swimmer unknown high  # 
+1664 1684 transition rest_next_preview unknown high  # 20 s rest with preview inset
+1684 1724 exercise down_dog_to_plank unknown high  # 
+1724 1744 transition rest_next_preview unknown high  # 20 s rest with preview inset
+1744 1784 exercise dead_bug unknown high  # 
+1784 1804 transition rest_next_preview unknown high  # 20 s rest with preview inset
+1804 1844 exercise straight_leg_crunch_reach sit_up medium 2nd # crunch reaching toward knees with legs extended
+1844 1864 transition rest_next_preview unknown high  # 20 s rest with preview inset
+1864 1904 exercise bicycle_crunch unknown high  # 
+1904 1924 transition rest_next_preview unknown high  # 20 s rest with preview inset
+1924 1964 exercise lying_leg_raise unknown high  # 
+1964 1984 transition rest_next_preview unknown high  # 20 s rest with preview inset
+1984 2024 exercise single_leg_raise_scissors unknown high  # 
+2024 2028 outro done_card unknown high  # 
+2028 2310 cooldown stretching unknown high  # child pose, cat-cow, hip and arm stretches

@@ -1,0 +1,19 @@
+review_id,video_id,target_class,start_s,end_s,target_hypothesis,priority,locator_reason,training_allowed
+midas_twisting_side_row,Sa0sBKUiOvU,dumbbell_row,85,155,twisting_side_row_variant,medium,"Official chapter is 90-150 s; margin includes transitions and dense review must decide whether the variant matches the canonical row class.",false
+midas_paddle_row,Sa0sBKUiOvU,dumbbell_row,205,275,paddle_row_variant,medium,"Official chapter is 210-270 s; margin includes transitions and dense review must inspect elbow path and alternating motion.",false
+midas_low_close_row,Sa0sBKUiOvU,dumbbell_row,325,395,low_close_dumbbell_row,high,"Official chapter is 330-390 s and contact sheets show a stable bent-over row stance.",false
+midas_in_out_row,Sa0sBKUiOvU,dumbbell_row,445,515,in_out_dumbbell_row_variant,medium,"Official chapter is 450-510 s; dense review must separate canonical pulls from the in/out variation.",false
+midas_alt_side_row_hold,Sa0sBKUiOvU,dumbbell_row,565,645,alternating_side_row_with_hold,low,"Official chapter is 570-648 s; review must decide whether the sustained hold and side path remain canonical.",false
+oliver_row_block_01,nixaLRF0Jd8,dumbbell_row,230,290,dumbbell_row,medium,"Bent-over dumbbell block visible around 04:00 in the 10 s sheet.",false
+oliver_row_block_02,nixaLRF0Jd8,dumbbell_row,350,410,dumbbell_row,medium,"Second bent-over dumbbell block visible around 06:00 in the 10 s sheet.",false
+oliver_row_block_03,nixaLRF0Jd8,dumbbell_row,890,960,dumbbell_row_or_kickback,low,"Broad locator around the 15-minute bent-over block; dense motion review must reject triceps kickbacks.",false
+oliver_row_block_04,nixaLRF0Jd8,dumbbell_row,1010,1080,dumbbell_row_or_kickback,low,"Broad locator around the 17-minute bent-over block; dense motion review must verify elbow path and load direction.",false
+max_row_full_pass,dFzUjzfih7k,dumbbell_row,5,110,single_arm_dumbbell_row,high,"Exercise-specific tutorial with repeated demonstrations and intervening instruction/setup.",false
+ashton_sit_set_01,-HusJ8P4k-4,sit_up,55,95,bent_knee_sit_up,high,"First visible counted sit-up set plus conservative transition margin.",false
+ashton_sit_set_02,-HusJ8P4k-4,sit_up,115,145,bent_knee_sit_up,high,"Second counted sit-up set plus conservative transition margin.",false
+ashton_sit_set_03,-HusJ8P4k-4,sit_up,175,205,bent_knee_sit_up,high,"Third counted sit-up set plus conservative transition margin.",false
+ashton_sit_set_04,-HusJ8P4k-4,sit_up,235,265,bent_knee_sit_up,high,"Fourth counted sit-up set plus conservative transition margin.",false
+ashton_sit_set_05,-HusJ8P4k-4,sit_up,295,325,bent_knee_sit_up,high,"Fifth counted sit-up set plus conservative transition margin.",false
+anabolic_pull_full_pass,2W9voBSJzP8,pull_up,55,285,pull_up_and_grip_variants,high,"Repeated timed pull-up blocks in a stable gym; dense review must separate work rest and grip variants.",false
+jeff_pull_full_pass,-iEDHNFNh7Q,pull_up,15,305,pull_up_and_grip_variants,high,"Repeated home pull-up blocks; dense review must separate work/rest and assess range of motion.",false
+

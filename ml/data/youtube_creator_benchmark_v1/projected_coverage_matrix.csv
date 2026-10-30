@@ -1,0 +1,15 @@
+canonical_class,BullyJuice,TIFF_x_DAN,STRIQfit,Michelle_Briehler,Criticalbench,TRAIN_WITH_GAINSBYBRAINS,projected_creator_count,target_status
+squat,1,0,0,0,1,0,2,multi_creator_projected
+push_up,1,1,0,0,0,0,2,multi_creator_projected
+jumping_jack,1,0,0,0,0,0,1,single_creator_projected
+pull_up,0,0,1,0,0,0,1,single_creator_projected
+lunge,1,0,0,1,1,0,3,multi_creator_projected
+sit_up,0,0,0,0,0,1,1,single_creator_projected
+shoulder_press,0,1,0,0,1,0,2,multi_creator_projected
+dumbbell_row,0,1,0,0,1,0,2,multi_creator_projected
+tricep_extension,0,1,0,0,1,0,2,multi_creator_projected
+bicep_curl,0,1,0,0,1,0,2,multi_creator_projected
+lateral_raise,0,1,0,1,0,0,2,multi_creator_projected
+bench_press,0,1,0,1,1,0,3,multi_creator_projected
+deadlift,0,0,0,1,1,0,2,multi_creator_projected
+lat_pulldown,0,0,0,1,0,0,1,single_creator_projected

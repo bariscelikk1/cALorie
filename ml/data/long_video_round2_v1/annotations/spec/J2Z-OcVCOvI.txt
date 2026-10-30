@@ -1,0 +1,91 @@
+0 32 intro title_and_workout_menu unknown high
+32 196 exercise warm_up_jacks_arm_circles_inchworm unknown high
+196 206 transition block_1_title_and_first_preview unknown high
+206 246 exercise dumbbell_shoulder_press shoulder_press high
+246 266 rest rest_countdown_with_next_preview unknown high
+266 306 exercise bent_over_two_dumbbell_row dumbbell_row high # rule 3
+306 326 rest rest_countdown_with_next_preview unknown high
+326 366 exercise lateral_raise lateral_raise high
+366 386 rest rest_countdown_with_next_preview unknown high
+386 426 exercise lying_chest_press_and_fly bench_press medium 2nd # rule 2/17: lying press, fly mixed in
+426 446 rest rest_countdown_with_next_preview unknown high
+446 486 exercise renegade_row unknown medium # plank row: compound, unsupported
+486 506 rest rest_countdown_with_next_preview unknown high
+506 546 exercise lying_dumbbell_pullover_or_extension unknown low 2nd # lying overhead move; identity unclear so not forced
+546 566 rest rest_countdown_with_next_preview unknown high
+566 606 exercise dumbbell_shoulder_press shoulder_press high
+606 626 rest rest_countdown_with_next_preview unknown high
+626 666 exercise bent_over_two_dumbbell_row dumbbell_row high # rule 3
+666 686 rest rest_countdown_with_next_preview unknown high
+686 726 exercise lateral_raise lateral_raise high
+726 746 rest rest_countdown_with_next_preview unknown high
+746 786 exercise lying_chest_press_and_fly bench_press medium 2nd # rule 2/17: lying press, fly mixed in
+786 806 rest rest_countdown_with_next_preview unknown high
+806 846 exercise renegade_row unknown medium # plank row: compound, unsupported
+846 866 rest rest_countdown_with_next_preview unknown high
+866 906 exercise lying_dumbbell_pullover_or_extension unknown low 2nd # lying overhead move; identity unclear so not forced
+906 932 rest rest_countdown_with_next_preview unknown high
+932 962 exercise high_knees unknown high
+962 972 rest rest_countdown_with_next_preview unknown high
+972 1002 exercise mountain_climbers unknown high
+1002 1012 rest rest_countdown_with_next_preview unknown high
+1012 1042 exercise in_and_out_squats squat medium 2nd # rule 5: in-and-out squats
+1042 1052 rest rest_countdown_with_next_preview unknown high
+1052 1082 exercise butt_kicks unknown high
+1082 1092 rest rest_countdown_with_next_preview unknown high
+1092 1122 exercise skaters unknown high
+1122 1132 rest rest_countdown_with_next_preview unknown high
+1132 1162 exercise high_knees unknown high
+1162 1172 rest rest_countdown_with_next_preview unknown high
+1172 1202 exercise mountain_climbers unknown high
+1202 1212 rest rest_countdown_with_next_preview unknown high
+1212 1242 exercise in_and_out_squats squat medium 2nd # rule 5: in-and-out squats
+1242 1252 rest rest_countdown_with_next_preview unknown high
+1252 1282 exercise butt_kicks unknown high
+1282 1292 rest rest_countdown_with_next_preview unknown high
+1292 1322 exercise skaters unknown high
+1322 1372 rest block_title_card_and_rest unknown high
+1372 1412 exercise dumbbell_shoulder_press shoulder_press high
+1412 1432 rest rest_countdown_with_next_preview unknown high
+1432 1472 exercise upright_row unknown high # upright row is unsupported
+1472 1492 rest rest_countdown_with_next_preview unknown high
+1492 1532 exercise one_arm_row_and_kickback unknown medium # row+kickback compound
+1532 1552 rest rest_countdown_with_next_preview unknown high
+1552 1592 exercise one_arm_row_and_kickback unknown medium # row+kickback compound
+1592 1612 rest rest_countdown_with_next_preview unknown high
+1612 1652 exercise alternating_bicep_curl bicep_curl high
+1652 1672 rest rest_countdown_with_next_preview unknown high
+1672 1712 exercise overhead_triceps_extension tricep_extension high # single dumbbell overhead
+1712 1732 rest rest_countdown_with_next_preview unknown high
+1732 1772 exercise dumbbell_shoulder_press shoulder_press high
+1772 1792 rest rest_countdown_with_next_preview unknown high
+1792 1832 exercise upright_row unknown high # upright row is unsupported
+1832 1852 rest rest_countdown_with_next_preview unknown high
+1852 1892 exercise one_arm_row_and_kickback unknown medium # row+kickback compound
+1892 1912 rest rest_countdown_with_next_preview unknown high
+1912 1952 exercise one_arm_row_and_kickback unknown medium # row+kickback compound
+1952 1972 rest rest_countdown_with_next_preview unknown high
+1972 2012 exercise alternating_bicep_curl bicep_curl high
+2012 2032 rest rest_countdown_with_next_preview unknown high
+2032 2072 exercise overhead_triceps_extension tricep_extension high # single dumbbell overhead
+2072 2124 rest block_title_card_and_rest unknown high
+2124 2154 exercise high_knees unknown high
+2154 2164 rest rest_countdown_with_next_preview unknown high
+2164 2194 exercise mountain_climbers unknown high
+2194 2204 rest rest_countdown_with_next_preview unknown high
+2204 2234 exercise in_and_out_squats squat medium 2nd # rule 5: in-and-out squats
+2234 2244 rest rest_countdown_with_next_preview unknown high
+2244 2274 exercise butt_kicks unknown high
+2274 2284 rest rest_countdown_with_next_preview unknown high
+2284 2314 exercise skaters unknown high
+2314 2324 rest rest_countdown_with_next_preview unknown high
+2324 2354 exercise high_knees unknown high
+2354 2364 rest rest_countdown_with_next_preview unknown high
+2364 2394 exercise mountain_climbers unknown high
+2394 2404 rest rest_countdown_with_next_preview unknown high
+2404 2434 exercise in_and_out_squats squat medium 2nd # rule 5: in-and-out squats
+2434 2444 rest rest_countdown_with_next_preview unknown high
+2444 2474 exercise butt_kicks unknown high
+2474 2484 rest rest_countdown_with_next_preview unknown high
+2484 2514 exercise skaters unknown high
+2514 2528.3 outro great_job_outro unknown high

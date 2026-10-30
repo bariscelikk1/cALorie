@@ -1,0 +1,57 @@
+0 16 intro title_cards unknown high
+16 254 exercise warm_up_arm_and_shoulder_mobility unknown high # timer-driven warm-up blocks with short rests
+254 268 rest rest_workout_card unknown high
+268 312 exercise bicep_curl_variation unknown medium 2nd # named 'Bicep Curl Variation' but pose shows overhead reach (wrist up to +0.86 shoulder lengths); compound-like, not forced
+312 328 rest rest_15s_with_next_card unknown high
+328 372 exercise alt_shoulder_press_variation shoulder_press medium # rule 13: alternating press variation
+372 386 rest rest_15s_with_next_card unknown high
+386 430 exercise shoulder_press_variation shoulder_press medium # rule 13
+430 446 rest rest_15s_with_next_card unknown high
+446 490 exercise bent_over_row dumbbell_row high # rule 3: two-dumbbell row
+490 506 rest rest_15s_with_next_card unknown high
+506 550 exercise right_single_arm_row_opposite_hold dumbbell_row medium # single-arm row, other arm holds
+550 564 rest rest_15s_with_next_card unknown high
+564 610 exercise left_single_arm_row_opposite_hold dumbbell_row medium # single-arm row
+610 624 rest rest_15s_with_next_card unknown high
+624 668 exercise bent_over_row_to_kickback unknown medium # row+kickback compound
+668 684 rest rest_15s_with_next_card unknown high
+684 728 exercise alternating_tricep_kickbacks tricep_extension high # rule 6: kickback
+728 744 rest rest_15s_with_next_card unknown high
+744 786 exercise supine_row_to_curl unknown medium # supine row+curl compound
+786 802 rest rest_15s_with_next_card unknown high
+802 846 exercise upright_row unknown high # upright row unsupported
+846 862 rest rest_15s_with_next_card unknown high
+862 906 exercise bicep_curl bicep_curl high
+906 922 rest rest_15s_with_next_card unknown high
+922 964 exercise alternating_hammer_curl bicep_curl high
+964 980 rest rest_15s_with_next_card unknown high
+980 1024 exercise hammer_curl_to_press unknown high # curl+press compound
+1024 1040 rest rest_15s_with_next_card unknown high
+1040 1084 exercise shoulder_press shoulder_press high
+1084 1100 rest rest_15s_with_next_card unknown high
+1100 1142 exercise arnold_press shoulder_press high # rule 13
+1142 1158 rest rest_15s_with_next_card unknown high
+1158 1202 exercise alternating_arnold_press shoulder_press high # rule 13
+1202 1218 rest rest_15s_with_next_card unknown high
+1218 1262 exercise around_the_world_arm_circles unknown medium # arms circle overhead, unsupported
+1262 1278 rest rest_15s_with_next_card unknown high
+1278 1322 exercise half_around_the_world unknown medium # unsupported
+1322 1336 rest rest_15s_with_next_card unknown high
+1336 1380 exercise lateral_raises lateral_raise high
+1380 1396 rest rest_15s_with_next_card unknown high
+1396 1440 exercise rear_raises_to_curl unknown medium # compound
+1440 1456 rest rest_15s_with_next_card unknown high
+1456 1500 exercise diagonal_curl bicep_curl medium # rule 14: curl variation
+1500 1514 rest rest_15s_with_next_card unknown high
+1514 1560 exercise tricep_extensions tricep_extension high
+1560 1574 rest rest_15s_with_next_card unknown high
+1574 1618 exercise right_tricep_kickback tricep_extension high # rule 6
+1618 1634 rest rest_15s_with_next_card unknown high
+1634 1678 exercise left_tricep_kickback tricep_extension high # rule 6
+1678 1694 rest rest_15s_with_next_card unknown high
+1694 1736 exercise alternating_shoulder_press shoulder_press high # rule 13
+1736 1752 rest rest_15s_with_next_card unknown high
+1752 1796 exercise front_raise_and_twist unknown medium # compound
+1796 1812 rest rest_15s_with_next_card unknown high
+1812 1854 exercise alternating_bent_over_row dumbbell_row high # rule 3
+1854 1875 outro workout_complete_and_fade unknown high

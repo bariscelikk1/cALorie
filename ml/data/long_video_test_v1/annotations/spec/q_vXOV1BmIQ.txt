@@ -1,0 +1,64 @@
+0 6 intro countdown_warm_moving unknown high  # 
+6 12 intro title_card unknown high  # 
+12 21 transition next_preview_screen unknown high  # 
+21 66 exercise reverse_lunge_with_overhead_reach lunge medium 2nd # lunge plus arm reach
+66 81 transition next_preview_screen unknown high  # full-screen Next card with small inset
+81 126 exercise ghost_jump_rope unknown high  # 
+126 141 transition next_preview_screen unknown high  # full-screen Next card with small inset
+141 186 exercise step_out_squat squat medium 2nd # squat with step-out
+186 201 transition next_preview_screen unknown high  # full-screen Next card with small inset
+201 246 exercise push_up_t_rotation unknown high  # compound push-up plus side plank
+246 261 transition next_preview_screen unknown high  # full-screen Next card with small inset
+261 306 exercise glute_bridge unknown high  # 
+306 321 transition next_preview_screen unknown high  # full-screen Next card with small inset
+321 366 exercise pike_shoulder_tap unknown high  # 
+366 381 transition next_preview_screen unknown high  # full-screen Next card with small inset
+381 426 exercise runner_step_back_knee_drive_right unknown high  # 
+426 441 transition next_preview_screen unknown high  # full-screen Next card with small inset
+441 486 exercise runner_step_back_knee_drive_left unknown high  # 
+486 501 transition next_preview_screen unknown high  # full-screen Next card with small inset
+501 546 exercise squat_walk unknown medium 2nd # walking in a squat
+546 561 transition next_preview_screen unknown high  # full-screen Next card with small inset
+561 606 exercise one_and_a_half_squat squat high  # 
+606 621 transition next_preview_screen unknown high  # full-screen Next card with small inset
+621 666 exercise side_to_side_push_up push_up medium 2nd # push-up with lateral hand shift
+666 681 transition next_preview_screen unknown high  # full-screen Next card with small inset
+681 726 exercise reverse_snow_angel unknown high  # 
+726 741 transition next_preview_screen unknown high  # full-screen Next card with small inset
+741 786 exercise plank_knee_rotation unknown high  # 
+786 801 transition next_preview_screen unknown high  # full-screen Next card with small inset
+801 846 exercise reverse_plank_knee_drive unknown high  # 
+846 876 transition next_preview_screen unknown high  # full-screen Next card with small inset
+876 921 exercise commando_plank unknown high  # 
+921 936 transition next_preview_screen unknown high  # full-screen Next card with small inset
+936 981 exercise overhead_prayer_crunch sit_up medium 2nd # crunch-up with arms overhead
+981 996 transition next_preview_screen unknown high  # full-screen Next card with small inset
+996 1041 exercise heel_touch unknown high  # 
+1041 1056 transition next_preview_screen unknown high  # full-screen Next card with small inset
+1056 1101 exercise push_up_plus_mountain_climber unknown high  # compound
+1101 1116 transition next_preview_screen unknown high  # full-screen Next card with small inset
+1116 1161 exercise in_and_out_squat squat medium 2nd # squats alternating narrow and wide stance
+1161 1176 transition next_preview_screen unknown high  # full-screen Next card with small inset
+1176 1221 exercise leg_extended_oblique_crunch_right unknown high  # 
+1221 1236 transition next_preview_screen unknown high  # full-screen Next card with small inset
+1236 1281 exercise leg_extended_oblique_crunch_left unknown high  # 
+1281 1296 transition next_preview_screen unknown high  # full-screen Next card with small inset
+1296 1341 exercise reverse_crunch unknown high  # 
+1341 1356 transition next_preview_screen unknown high  # full-screen Next card with small inset
+1356 1401 exercise high_knees unknown high  # 
+1401 1416 transition next_preview_screen unknown high  # full-screen Next card with small inset
+1416 1461 exercise jumping_jack jumping_jack high  # 
+1461 1476 transition next_preview_screen unknown high  # full-screen Next card with small inset
+1476 1521 exercise butt_kicks unknown high  # 
+1521 1536 transition next_preview_screen unknown high  # full-screen Next card with small inset
+1536 1581 exercise burpee unknown high  # 
+1581 1596 transition next_preview_screen unknown high  # full-screen Next card with small inset
+1596 1641 exercise standing_criss_cross_oblique_crunch unknown high  # 
+1641 1656 transition next_preview_screen unknown high  # full-screen Next card with small inset
+1656 1701 exercise mountain_climber unknown high  # 
+1701 1732 transition finisher_title_and_preview unknown high  # 
+1732 1772 exercise air_squat squat high  # 
+1772 1776 transition next_inset unknown high  # 
+1776 1820 exercise bicycle_crunch unknown high  # 
+1820 1826 outro workout_finished_card unknown high  # 
+1826 1842 outro sitting_and_walking_off unknown high  # 

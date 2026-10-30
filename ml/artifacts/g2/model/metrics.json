@@ -1,0 +1,40 @@
+{
+  "experiment": "g2_controlled_pose_model_suite",
+  "frozen_gate": "v6c",
+  "gate_threshold": 0.675,
+  "models": [
+    {
+      "model": "bigru",
+      "validation_exercise_macro_f1": 0.8992424536815979,
+      "oracle_exercise_macro_f1": 0.841254766147374,
+      "end_to_end_macro_f1": 0.8114128305868087,
+      "end_to_end_balanced_accuracy": 0.846988325601961,
+      "end_to_end_accuracy": 0.8249619482496194
+    },
+    {
+      "model": "pose_transformer",
+      "validation_exercise_macro_f1": 0.8919449764392632,
+      "oracle_exercise_macro_f1": 0.8576491615766868,
+      "end_to_end_macro_f1": 0.7887437373888857,
+      "end_to_end_balanced_accuracy": 0.8289096081354761,
+      "end_to_end_accuracy": 0.8244545915778793
+    },
+    {
+      "model": "adaptive_gcn",
+      "validation_exercise_macro_f1": 0.8252763069060365,
+      "oracle_exercise_macro_f1": 0.8656308793167916,
+      "end_to_end_macro_f1": 0.7770232887753032,
+      "end_to_end_balanced_accuracy": 0.8389836395326461,
+      "end_to_end_accuracy": 0.8214104515474379
+    },
+    {
+      "model": "equal_ensemble",
+      "validation_exercise_macro_f1": 0.8721545790089659,
+      "oracle_exercise_macro_f1": NaN,
+      "end_to_end_macro_f1": 0.8071559683900449,
+      "end_to_end_balanced_accuracy": 0.8523598189527619,
+      "end_to_end_accuracy": 0.8300355149670218
+    }
+  ],
+  "selection_rule": "validation Macro F1; test metrics reporting only"
+}

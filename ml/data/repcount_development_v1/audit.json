@@ -1,0 +1,15 @@
+{
+  "rows": 30,
+  "people": 10,
+  "actions": [
+    "front_raise",
+    "situp",
+    "squat"
+  ],
+  "train_pool_rows": 21,
+  "dev_validation_rows": 9,
+  "person_disjoint": true,
+  "training_allowed_rows": 0,
+  "errors": [],
+  "audit_pass": true
+}

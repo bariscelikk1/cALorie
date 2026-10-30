@@ -1,0 +1,66 @@
+{
+  "experiment": "v5_hard_negative_controlled_retrain",
+  "training_archives": [
+    "calorie_workoutfitness_landmarks_v1.zip",
+    "calorie_mmfit_landmarks_v1.zip",
+    "calorie_mmfit_unknown_v1.zip",
+    "calorie_youtube_mixed_landmarks_v3.zip",
+    "calorie_youtube_additional_landmarks_v1.zip",
+    "calorie_youtube_training_landmarks_v4.zip",
+    "calorie_workoutfitness_gate_hardneg_v1.zip"
+  ],
+  "seed": 42,
+  "window_frames": 64,
+  "stride_frames": 32,
+  "gate_threshold": 0.9,
+  "gate": {
+    "accuracy": 0.8406900050735667,
+    "balanced_accuracy": 0.8252763058289174,
+    "macro_f1": 0.8217158995584479
+  },
+  "exercise_classifier_oracle": {
+    "accuracy": 0.9212717638152914,
+    "balanced_accuracy": 0.9205472781588582,
+    "macro_f1": 0.8377700163993119
+  },
+  "end_to_end": {
+    "accuracy": 0.8305428716387621,
+    "balanced_accuracy": 0.7253665717003908,
+    "macro_f1": 0.7343218675628755
+  },
+  "classes": [
+    "bench_press",
+    "bicep_curl",
+    "deadlift",
+    "dumbbell_row",
+    "jumping_jack",
+    "lat_pulldown",
+    "lateral_raise",
+    "lunge",
+    "plank",
+    "pull_up",
+    "push_up",
+    "shoulder_press",
+    "sit_up",
+    "squat",
+    "tricep_extension",
+    "unknown"
+  ],
+  "supported_classes": [
+    "bench_press",
+    "bicep_curl",
+    "deadlift",
+    "dumbbell_row",
+    "jumping_jack",
+    "lat_pulldown",
+    "lateral_raise",
+    "lunge",
+    "plank",
+    "pull_up",
+    "push_up",
+    "shoulder_press",
+    "sit_up",
+    "squat",
+    "tricep_extension"
+  ]
+}

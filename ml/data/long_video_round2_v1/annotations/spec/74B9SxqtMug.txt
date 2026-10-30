@@ -1,0 +1,46 @@
+0 4 intro title_thumbnail unknown high
+4 22 intro up_next_list_and_countdown unknown high
+22 142 exercise dynamic_warm_up_arm_circles_side_bends unknown high
+142 156 transition up_next_round_1 unknown high
+156 202 exercise standing_dumbbell_shoulder_press shoulder_press medium 2nd # no readable exercise name (tiny figure); identified from pose keypoints and frames; hands go overhead from shoulder height
+202 216 rest up_next_card unknown high
+216 262 exercise standing_arms_out_to_sides_raise lateral_raise medium 2nd # no readable exercise name (tiny figure); identified from pose keypoints and frames; arms raised to the side at shoulder height
+262 276 rest up_next_card unknown high
+276 322 exercise small_arm_motion_at_chest_height unknown medium # no readable exercise name (tiny figure); identified from pose keypoints and frames; identity unclear, not forced
+322 336 rest up_next_card unknown high
+336 382 exercise alternating_arm_raise_to_side lateral_raise medium 2nd # no readable exercise name (tiny figure); identified from pose keypoints and frames; one arm at a time to shoulder height
+382 396 rest up_next_card unknown high
+396 442 exercise standing_dumbbell_exercise_wide_camera unknown medium # no readable exercise name (tiny figure); identified from pose keypoints and frames; possible squat or curl, not forced
+442 456 rest up_next_card unknown high
+456 502 exercise bent_over_dumbbell_row dumbbell_row medium 2nd # no readable exercise name (tiny figure); identified from pose keypoints and frames; rule 3 if two dumbbells
+502 516 rest up_next_card unknown high
+516 562 exercise overhead_dumbbell_triceps_extension tricep_extension medium 2nd # no readable exercise name (tiny figure); identified from pose keypoints and frames; elbows bend behind head
+562 576 rest up_next_card unknown high
+576 622 exercise standing_dumbbell_curl bicep_curl medium 2nd # no readable exercise name (tiny figure); identified from pose keypoints and frames; hands from hips to shoulders
+622 636 rest up_next_card unknown high
+636 682 exercise hinge_with_dumbbells_and_swing unknown medium # no readable exercise name (tiny figure); identified from pose keypoints and frames; hinge plus lift, compound, not forced
+682 696 rest up_next_card unknown high
+696 742 exercise deep_hinge_and_pull_with_dumbbells unknown medium # no readable exercise name (tiny figure); identified from pose keypoints and frames; hinge plus pull, not forced
+742 756 rest up_next_card unknown high
+756 802 exercise standing_dumbbell_shoulder_press shoulder_press medium 2nd # no readable exercise name (tiny figure); identified from pose keypoints and frames; hands go overhead from shoulder height
+802 816 rest up_next_card unknown high
+816 862 exercise standing_arms_out_to_sides_raise lateral_raise medium 2nd # no readable exercise name (tiny figure); identified from pose keypoints and frames; arms raised to the side at shoulder height
+862 876 rest up_next_card unknown high
+876 922 exercise small_arm_motion_at_chest_height unknown medium # no readable exercise name (tiny figure); identified from pose keypoints and frames; identity unclear, not forced
+922 936 rest up_next_card unknown high
+936 982 exercise alternating_arm_raise_to_side lateral_raise medium 2nd # no readable exercise name (tiny figure); identified from pose keypoints and frames; one arm at a time to shoulder height
+982 996 rest up_next_card unknown high
+996 1042 exercise standing_dumbbell_exercise_wide_camera unknown medium # no readable exercise name (tiny figure); identified from pose keypoints and frames; possible squat or curl, not forced
+1042 1056 rest up_next_card unknown high
+1056 1102 exercise bent_over_dumbbell_row dumbbell_row medium 2nd # no readable exercise name (tiny figure); identified from pose keypoints and frames; rule 3 if two dumbbells
+1102 1116 rest up_next_card unknown high
+1116 1162 exercise overhead_dumbbell_triceps_extension tricep_extension medium 2nd # no readable exercise name (tiny figure); identified from pose keypoints and frames; elbows bend behind head
+1162 1176 rest up_next_card unknown high
+1176 1222 exercise standing_dumbbell_curl bicep_curl medium 2nd # no readable exercise name (tiny figure); identified from pose keypoints and frames; hands from hips to shoulders
+1222 1236 rest up_next_card unknown high
+1236 1282 exercise hinge_with_dumbbells_and_swing unknown medium # no readable exercise name (tiny figure); identified from pose keypoints and frames; hinge plus lift, compound, not forced
+1282 1296 rest up_next_card unknown high
+1296 1342 exercise deep_hinge_and_pull_with_dumbbells unknown medium # no readable exercise name (tiny figure); identified from pose keypoints and frames; hinge plus pull, not forced
+1342 1356 transition up_next_cool_down unknown high
+1356 1500 cooldown standing_stretches_and_reaches unknown high
+1500 1525.5 outro thanks_for_joining_and_end_logo unknown high

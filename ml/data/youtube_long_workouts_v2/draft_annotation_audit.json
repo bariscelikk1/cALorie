@@ -1,0 +1,81 @@
+{
+  "files": 2,
+  "rows": 42,
+  "errors": 0,
+  "warnings": 42,
+  "results": [
+    {
+      "file": "ml/data/youtube_long_workouts_v2/annotations/draft/daniel_nikolic__Fk1wnNX4wQ8.labels.csv",
+      "rows": 24,
+      "duration_s": 1821.0,
+      "labels": {
+        "jumping_jack": 1,
+        "lunge": 1,
+        "push_up": 1,
+        "unknown": 21
+      },
+      "errors": [],
+      "warnings": [
+        "daniel_nikolic__Fk1wnNX4wQ8.labels.csv:2: boundary precision is coarse (5s)",
+        "daniel_nikolic__Fk1wnNX4wQ8.labels.csv:3: boundary precision is coarse (5s)",
+        "daniel_nikolic__Fk1wnNX4wQ8.labels.csv:4: boundary precision is coarse (5s)",
+        "daniel_nikolic__Fk1wnNX4wQ8.labels.csv:5: boundary precision is coarse (5s)",
+        "daniel_nikolic__Fk1wnNX4wQ8.labels.csv:6: boundary precision is coarse (5s)",
+        "daniel_nikolic__Fk1wnNX4wQ8.labels.csv:7: boundary precision is coarse (5s)",
+        "daniel_nikolic__Fk1wnNX4wQ8.labels.csv:8: boundary precision is coarse (5s)",
+        "daniel_nikolic__Fk1wnNX4wQ8.labels.csv:9: boundary precision is coarse (5s)",
+        "daniel_nikolic__Fk1wnNX4wQ8.labels.csv:10: boundary precision is coarse (5s)",
+        "daniel_nikolic__Fk1wnNX4wQ8.labels.csv:11: boundary precision is coarse (5s)",
+        "daniel_nikolic__Fk1wnNX4wQ8.labels.csv:12: boundary precision is coarse (5s)",
+        "daniel_nikolic__Fk1wnNX4wQ8.labels.csv:13: boundary precision is coarse (5s)",
+        "daniel_nikolic__Fk1wnNX4wQ8.labels.csv:14: boundary precision is coarse (5s)",
+        "daniel_nikolic__Fk1wnNX4wQ8.labels.csv:15: boundary precision is coarse (5s)",
+        "daniel_nikolic__Fk1wnNX4wQ8.labels.csv:16: boundary precision is coarse (5s)",
+        "daniel_nikolic__Fk1wnNX4wQ8.labels.csv:17: boundary precision is coarse (5s)",
+        "daniel_nikolic__Fk1wnNX4wQ8.labels.csv:18: boundary precision is coarse (5s)",
+        "daniel_nikolic__Fk1wnNX4wQ8.labels.csv:19: boundary precision is coarse (5s)",
+        "daniel_nikolic__Fk1wnNX4wQ8.labels.csv:20: boundary precision is coarse (5s)",
+        "daniel_nikolic__Fk1wnNX4wQ8.labels.csv:21: boundary precision is coarse (5s)",
+        "daniel_nikolic__Fk1wnNX4wQ8.labels.csv:22: boundary precision is coarse (5s)",
+        "daniel_nikolic__Fk1wnNX4wQ8.labels.csv:23: boundary precision is coarse (5s)",
+        "daniel_nikolic__Fk1wnNX4wQ8.labels.csv:24: boundary precision is coarse (5s)",
+        "daniel_nikolic__Fk1wnNX4wQ8.labels.csv:25: boundary precision is coarse (5s)"
+      ]
+    },
+    {
+      "file": "ml/data/youtube_long_workouts_v2/annotations/draft/legally_swole__zxqCV_eQHZY.labels.csv",
+      "rows": 18,
+      "duration_s": 1898.0,
+      "labels": {
+        "bicep_curl": 2,
+        "deadlift": 1,
+        "dumbbell_row": 1,
+        "lat_pulldown": 1,
+        "squat": 2,
+        "tricep_extension": 2,
+        "unknown": 9
+      },
+      "errors": [],
+      "warnings": [
+        "legally_swole__zxqCV_eQHZY.labels.csv:2: boundary precision is coarse (5s)",
+        "legally_swole__zxqCV_eQHZY.labels.csv:3: boundary precision is coarse (5s)",
+        "legally_swole__zxqCV_eQHZY.labels.csv:4: boundary precision is coarse (5s)",
+        "legally_swole__zxqCV_eQHZY.labels.csv:5: boundary precision is coarse (5s)",
+        "legally_swole__zxqCV_eQHZY.labels.csv:6: boundary precision is coarse (5s)",
+        "legally_swole__zxqCV_eQHZY.labels.csv:7: boundary precision is coarse (5s)",
+        "legally_swole__zxqCV_eQHZY.labels.csv:8: boundary precision is coarse (5s)",
+        "legally_swole__zxqCV_eQHZY.labels.csv:9: boundary precision is coarse (5s)",
+        "legally_swole__zxqCV_eQHZY.labels.csv:10: boundary precision is coarse (5s)",
+        "legally_swole__zxqCV_eQHZY.labels.csv:11: boundary precision is coarse (5s)",
+        "legally_swole__zxqCV_eQHZY.labels.csv:12: boundary precision is coarse (5s)",
+        "legally_swole__zxqCV_eQHZY.labels.csv:13: boundary precision is coarse (5s)",
+        "legally_swole__zxqCV_eQHZY.labels.csv:14: boundary precision is coarse (5s)",
+        "legally_swole__zxqCV_eQHZY.labels.csv:15: boundary precision is coarse (5s)",
+        "legally_swole__zxqCV_eQHZY.labels.csv:16: boundary precision is coarse (5s)",
+        "legally_swole__zxqCV_eQHZY.labels.csv:17: boundary precision is coarse (5s)",
+        "legally_swole__zxqCV_eQHZY.labels.csv:18: boundary precision is coarse (5s)",
+        "legally_swole__zxqCV_eQHZY.labels.csv:19: boundary precision is coarse (5s)"
+      ]
+    }
+  ]
+}

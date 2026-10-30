@@ -1,0 +1,28 @@
+{
+  "video": "jumping_jacks_and_burpees.webm",
+  "video_source": "https://commons.wikimedia.org/wiki/File:Jumping_jacks_and_burpees.webm",
+  "video_license": "CC BY-SA 4.0",
+  "video_sha256": "1c8370a29c52b5b1538f03f8c63be6cdc9333dea3cbd77cc8f2af0dbe496d5b4",
+  "duration_s": 45.21187854521188,
+  "pose_detection_rate": 0.9970544918998527,
+  "classes": [
+    "bench_press",
+    "bicep_curl",
+    "deadlift",
+    "dumbbell_row",
+    "jumping_jack",
+    "lat_pulldown",
+    "lateral_raise",
+    "lunge",
+    "plank",
+    "pull_up",
+    "push_up",
+    "shoulder_press",
+    "sit_up",
+    "squat",
+    "tricep_extension",
+    "unknown"
+  ],
+  "confidence_threshold": 0.55,
+  "segments": 14
+}

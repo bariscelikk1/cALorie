@@ -1,0 +1,81 @@
+0 12 intro montage_and_title unknown high  # 
+12 62 exercise cat_cow_rotation unknown high  # warm-up
+62 72 transition next_preview unknown high  # 
+72 122 exercise thread_the_needle_twist unknown high  # warm-up
+122 132 transition next_preview unknown high  # 
+132 182 exercise plank_to_downward_dog unknown high  # warm-up
+182 192 transition next_preview unknown high  # 
+192 242 exercise standing_spine_roll unknown high  # warm-up
+242 252 transition next_preview unknown high  # 
+252 302 exercise jumping_jack jumping_jack high  # 
+302 312 transition next_preview unknown high  # 
+312 362 exercise alternating_hammer_curl_to_press unknown high  # compound
+362 372 transition next_preview unknown high  # 
+372 422 exercise biceps_curl bicep_curl high  # 
+422 432 transition next_preview unknown high  # 
+432 482 exercise lateral_raise_to_overhead unknown medium 2nd # raise continuing overhead
+482 492 transition next_preview unknown high  # 
+492 542 exercise bent_over_reverse_fly unknown high  # 
+542 552 transition next_preview unknown high  # 
+552 602 exercise hammer_curl bicep_curl high  # 
+602 612 transition next_preview unknown high  # 
+612 662 exercise hold_and_arm_rotation unknown high  # 
+662 672 transition next_preview unknown high  # 
+672 722 exercise overhead_tricep_extension tricep_extension high  # 
+722 732 transition next_preview unknown high  # 
+732 782 exercise lateral_raise_to_front_raise unknown medium 2nd # alternating lateral and front raise
+782 792 transition next_preview unknown high  # 
+792 842 exercise zottman_curl bicep_curl medium 2nd # curl with rotating grip
+842 852 transition next_preview unknown high  # 
+852 902 exercise bent_over_wide_row unknown medium 2nd # wide-elbow row
+902 912 transition next_preview unknown high  # 
+912 962 exercise overhead_press shoulder_press high  # 
+962 972 transition next_preview unknown high  # 
+972 1022 exercise lying_dumbbell_leg_raise unknown high  # 
+1022 1032 transition next_preview unknown high  # 
+1032 1082 exercise lying_dumbbell_leg_raise unknown high  # other side
+1082 1092 transition next_preview unknown high  # 
+1092 1142 exercise hollow_tuck_crunch unknown high  # 
+1142 1152 transition next_preview unknown high  # 
+1152 1202 exercise supported_single_leg_raise unknown high  # 
+1202 1212 transition next_preview unknown high  # 
+1212 1262 exercise supported_single_leg_raise unknown high  # other side
+1262 1272 transition next_preview unknown high  # 
+1272 1322 exercise half_kneeling_windmill unknown high  # 
+1322 1332 transition next_preview unknown high  # 
+1332 1382 exercise half_kneeling_windmill unknown high  # other side
+1382 1392 transition next_preview unknown high  # 
+1392 1442 exercise biceps_curl_wide bicep_curl high  # 
+1442 1452 transition next_preview unknown high  # 
+1452 1502 exercise front_raise_with_rotation unknown high  # 
+1502 1512 transition next_preview unknown high  # 
+1512 1562 exercise bent_over_tricep_kickback tricep_extension medium 2nd # rule 6
+1562 1572 transition next_preview unknown high  # 
+1572 1622 exercise around_the_world_overhead_press unknown high  # 
+1622 1632 transition next_preview unknown high  # 
+1632 1682 exercise alternating_biceps_curl_to_front_raise unknown medium 2nd # compound
+1682 1692 transition next_preview unknown high  # 
+1692 1742 exercise close_grip_tricep_extension tricep_extension high  # 
+1742 1752 transition next_preview unknown high  # 
+1752 1802 exercise side_plank_with_dumbbell unknown high  # 
+1802 1812 transition next_preview unknown high  # 
+1812 1862 exercise push_up_knee_down push_up medium 2nd # knee push-ups (rule 9)
+1862 1872 transition next_preview unknown high  # 
+1872 1922 exercise lying_pullover_plus_fly unknown high  # 
+1922 1932 transition next_preview unknown high  # 
+1932 1982 exercise lying_skull_crusher tricep_extension high  # 
+1982 1992 transition next_preview unknown high  # 
+1992 2042 exercise dead_stop_staggered_push_up push_up medium 2nd # rule 9
+2042 2052 transition next_preview unknown high  # 
+2052 2102 exercise bear_hold_tap unknown high  # 
+2102 2112 transition next_preview unknown high  # 
+2112 2162 cooldown child_pose_and_side_reach unknown high  # cool-down
+2162 2172 transition next_preview unknown high  # 
+2172 2222 cooldown seated_shoulder_stretch unknown high  # cool-down
+2222 2232 transition next_preview unknown high  # 
+2232 2282 cooldown seated_side_bend unknown high  # cool-down
+2282 2292 transition next_preview unknown high  # 
+2292 2342 cooldown cobra_twist unknown high  # cool-down
+2342 2352 transition next_preview unknown high  # 
+2352 2402 cooldown lying_scorpion unknown high  # cool-down
+2402 2423 outro subscribe_and_thanks unknown high  # 

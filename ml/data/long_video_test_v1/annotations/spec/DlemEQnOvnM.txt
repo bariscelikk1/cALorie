@@ -1,0 +1,36 @@
+0 62 intro talking_to_camera unknown high
+62 70 transition motorbike_pov unknown high # riding to the gym
+70 98 intro talking_to_camera unknown high
+98 118 exercise pull_up pull_up medium 2nd # small, dark figure
+118 144 rest talking_and_changing unknown high
+144 172 exercise pull_up pull_up high
+172 208 rest talking_to_camera unknown high
+208 228 exercise pull_up pull_up high
+228 236 rest talking_to_camera unknown high
+236 240 transition setup unknown high
+240 276 exercise barbell_bent_over_row unknown medium 2nd # barbell row is not the supported dumbbell_row class
+276 304 rest talking_to_camera unknown high
+304 372 exercise barbell_bent_over_row unknown medium 2nd # two sets with a brief re-grip
+372 374 transition camera_cut unknown high
+374 416 exercise lat_pulldown lat_pulldown high
+416 424 rest setup unknown high
+424 452 exercise lat_pulldown lat_pulldown high
+452 484 rest talking_to_camera unknown high
+484 516 exercise lat_pulldown lat_pulldown medium 2nd # another person stands close beside him
+516 538 rest seated_talking unknown high
+538 622 exercise lat_pulldown lat_pulldown high # wide then close grip, two stations
+622 624 transition camera_cut unknown high
+624 654 exercise kneeling_cable_pulldown unknown medium 2nd # kneeling, arms overhead
+654 664 rest talking unknown high
+664 702 exercise one_arm_dumbbell_row dumbbell_row high
+702 704 transition camera_cut unknown high
+704 738 exercise chest_supported_dumbbell_row dumbbell_row medium 2nd # prone on an incline bench
+738 796 rest seated_talking unknown high
+796 828 rest talking_to_camera unknown high
+828 1272 exercise dumbbell_preacher_curl bicep_curl high # many sets with short pauses
+1272 1274 transition camera_cut unknown high
+1274 1310 exercise standing_dumbbell_curl bicep_curl high # side view
+1310 1346 rest talking_to_camera unknown high
+1346 1396 exercise standing_dumbbell_curl bicep_curl medium # side view, partly turned away
+1396 1404 transition camera_cut unknown high
+1404 1479 outro shirtless_posing unknown high

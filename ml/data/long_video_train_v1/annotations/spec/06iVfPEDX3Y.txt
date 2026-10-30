@@ -1,0 +1,45 @@
+0 132 exercise marching_and_arm_warmup unknown high # warm-up
+132 136 transition pick_up_weights unknown high
+136 176 exercise squat_to_overhead_press unknown high # compound thruster
+176 180 transition setup unknown high
+180 234 exercise reverse_lunge_with_overhead_press unknown high # compound
+234 240 transition get_down unknown high
+240 278 exercise knee_push_up push_up medium 2nd # knees down
+278 284 rest rest unknown high
+284 330 exercise push_up push_up medium
+330 336 transition stand_up unknown high
+336 380 exercise standing_shoulder_press_and_raise shoulder_press medium 2nd # mixed press and front raise
+380 384 transition setup unknown high
+384 430 exercise reverse_lunge_with_curl lunge medium 2nd
+430 476 exercise lateral_raise_variations lateral_raise medium 2nd
+476 482 transition setup unknown high
+482 528 exercise bent_over_reverse_fly unknown high
+528 538 rest rest unknown high
+538 568 exercise standing_arm_circles unknown medium
+568 572 transition setup unknown high
+572 616 exercise squat_to_overhead_press unknown high # round 2
+616 618 transition setup unknown high
+618 666 exercise reverse_lunge_with_overhead_press unknown high
+666 674 transition get_down unknown high
+674 758 exercise push_up push_up medium # with breaks
+758 768 transition stand_up unknown high
+768 822 exercise standing_shoulder_press_and_raise shoulder_press medium 2nd
+822 824 transition setup unknown high
+824 870 exercise reverse_lunge_with_curl lunge medium 2nd
+870 912 exercise lateral_raise_variations lateral_raise medium 2nd
+912 958 exercise bent_over_reverse_fly unknown high
+958 984 rest rest_and_pick_up unknown high
+984 1036 exercise squat_to_overhead_press unknown high # round 3
+1036 1040 transition setup unknown high
+1040 1094 exercise reverse_lunge_with_overhead_press unknown high
+1094 1100 transition get_down unknown high
+1100 1192 exercise push_up push_up medium
+1192 1200 transition stand_up unknown high
+1200 1238 exercise standing_shoulder_press_and_raise shoulder_press medium 2nd
+1238 1242 transition setup unknown high
+1242 1290 exercise reverse_lunge_with_curl lunge medium 2nd
+1290 1340 exercise lateral_raise_variations lateral_raise medium 2nd
+1340 1394 exercise bent_over_reverse_fly unknown high
+1394 1420 exercise standing_arm_circles unknown medium
+1420 1442 transition put_down_weights unknown high
+1442 1695 cooldown stretches_and_squat_mobility unknown high

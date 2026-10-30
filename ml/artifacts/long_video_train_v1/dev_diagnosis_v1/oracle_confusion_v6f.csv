@@ -1,0 +1,15 @@
+,bench_press,bicep_curl,deadlift,dumbbell_row,jumping_jack,lat_pulldown,lateral_raise,lunge,pull_up,push_up,shoulder_press,sit_up,squat,tricep_extension
+bench_press,505,0,0,0,0,0,0,0,0,0,0,0,0,0
+bicep_curl,0,746,0,0,2,0,0,0,0,0,0,0,2,0
+deadlift,0,38,1097,0,5,0,0,4,0,0,0,0,56,0
+dumbbell_row,0,0,93,151,0,0,0,0,0,15,0,0,0,0
+jumping_jack,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+lat_pulldown,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+lateral_raise,0,197,4,0,0,0,242,0,0,0,0,0,0,0
+lunge,10,43,421,0,0,0,1,89,78,7,0,0,368,0
+pull_up,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+push_up,2,0,0,0,0,0,0,0,0,251,0,0,0,0
+shoulder_press,3,208,4,0,2,63,0,0,64,0,308,0,418,0
+sit_up,172,0,0,0,0,3,0,71,0,0,3,0,10,0
+squat,89,35,5,0,0,69,0,6,0,0,0,0,453,0
+tricep_extension,83,0,0,0,0,0,0,0,1,0,0,0,0,0

@@ -1,0 +1,27 @@
+{
+  "evaluation_number": 2,
+  "final_model": "Notebook 46 (frozen; did not pass the 15-point dev gate bar)",
+  "primary_metric": "smoothed pooled 15-label Macro F1",
+  "final_minus_v6f": 0.150344412065333,
+  "final_minus_v6f_bootstrap_95ci": [
+    0.021889145579844706,
+    0.252098469176632
+  ],
+  "final_minus_v2": 0.15345167152032113,
+  "final_minus_v2_bootstrap_95ci": [
+    0.056780599247919936,
+    0.22917244599535472
+  ],
+  "videos": [
+    "82SSypK-pao",
+    "9vXCA2i982Q",
+    "Acy3T5ikjAE",
+    "DlemEQnOvnM",
+    "LlUU6ZscVYk",
+    "fWT-_jx41Jc",
+    "q_vXOV1BmIQ",
+    "v0aPyBQMgIE"
+  ],
+  "promotion": false,
+  "answer_vs_v6f": "final_better"
+}

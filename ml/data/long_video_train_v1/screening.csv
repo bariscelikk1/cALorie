@@ -1,0 +1,23 @@
+video_id,verdict,reason,screened_by,screened_on
+5Cmw0wvYWP0,keep,"one real performer, fixed studio camera, continuous; sit-ups, split squats, goblet squats",claude_visual_screen_1_per_10s,2026-10-27
+06iVfPEDX3Y,keep,"one real performer, fixed camera, continuous dumbbell circuit",claude_visual_screen_1_per_10s,2026-10-27
+2lGaGusBPEI,reject,"full-screen black rest-timer screens (~1.5 min each), talking to camera, close-up and angle cuts (edited cuts / mostly talking)",claude_visual_screen_1_per_10s,2026-10-27
+Ferc_0UlN4g,keep,"one real performer; dark gym with wide/close angle changes but continuous sets",claude_visual_screen_1_per_10s,2026-10-27
+5vmnb_T_YH4,keep,"one real performer, fixed camera; 10 s full-screen next-exercise cards between 30 s sets (labeled transition), like Acy3T5ikjAE in the test set",claude_visual_screen_1_per_10s,2026-10-27
+B1imXPO3oJE,keep,"one real performer, fixed studio camera, continuous; small demo inset",claude_visual_screen_1_per_10s,2026-10-27
+R4S-eSPDXIg,keep,"one real performer, fixed home-gym camera; 5 s next/rest cards between sets",claude_visual_screen_1_per_10s,2026-10-27
+jnJzNbtuR2Y,keep,"one real performer, fixed studio camera, continuous kettlebell/dumbbell rounds; brief faded next-up cards",claude_visual_screen_1_per_10s,2026-10-27
+JofVPb0wtv8,reject,"two performers exercising side by side the whole video (several people)",claude_visual_screen_1_per_10s,2026-10-27
+QrRDpD8xZfo,keep,"one real performer, fixed camera, continuous; small dog in frame at times",claude_visual_screen_1_per_10s,2026-10-27
+mpZBFMfOfAw,reject,"three performers exercising together (several people)",claude_visual_screen_1_per_10s,2026-10-27
+wqvRwr5ogFw,keep,"one real performer, seated on a bench, fixed camera, continuous; cat in frame",claude_visual_screen_1_per_10s,2026-10-27
+c9Y_0jdZaE0,keep,"one real performer, fixed gym camera, continuous",claude_visual_screen_1_per_10s,2026-10-27
+UKfNi0IIndA,reject,"two performers side by side (several people); same channel as JofVPb0wtv8",claude_visual_screen_1_per_10s,2026-10-27
+wRR8HUMdh00,reject,"split screen: a second figure (low-impact demo of the same performer) shown side by side for much of the video (several people in frame)",claude_visual_screen_1_per_10s,2026-10-27
+Npm2PHZXs68,keep,"one real performer, fixed camera, continuous; small next-up inset",claude_visual_screen_1_per_10s,2026-10-27
+vvSRFH3jGEY,keep,"one real performer outdoors, fixed camera; BREAK overlay during rests",claude_visual_screen_1_per_10s,2026-10-27
+yNN12hIAUyo,keep,"one real performer, fixed home camera, continuous; exercise-name overlay",claude_visual_screen_1_per_10s,2026-10-27
+pKkgzbMJzy8,keep,"one real performer, real-time gym sets with 60 s rests and some close-up cuts; not mostly talking (like DlemEQnOvnM in the test set)",claude_visual_screen_1_per_10s,2026-10-27
+uawtllYyD5g,keep,"one real performer, fixed camera, continuous; Up Next text cards",claude_visual_screen_1_per_10s,2026-10-27
+_cqwrzDHXsc,keep,"one real performer outdoors, fixed camera; blurred next-up preview screens",claude_visual_screen_1_per_10s,2026-10-27
+weY7aAK9lEY,keep,"one real performer, fixed home camera, continuous; brief NEXT cards",claude_visual_screen_1_per_10s,2026-10-27

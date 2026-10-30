@@ -1,0 +1,44 @@
+Lock verified: 8 annotations, 8 evidence ZIPs
+scored 82SSypK-pao
+scored 9vXCA2i982Q
+scored Acy3T5ikjAE
+scored DlemEQnOvnM
+scored LlUU6ZscVYk
+scored fWT-_jx41Jc
+scored q_vXOV1BmIQ
+scored v0aPyBQMgIE
+Parity with evaluation 1 passed.
+{
+  "evaluation_number": 2,
+  "final_model": "Notebook 46 (frozen; did not pass the 15-point dev gate bar)",
+  "primary_metric": "smoothed pooled 15-label Macro F1",
+  "final_minus_v6f": 0.150344412065333,
+  "final_minus_v6f_bootstrap_95ci": [
+    0.021889145579844706,
+    0.252098469176632
+  ],
+  "final_minus_v2": 0.15345167152032113,
+  "final_minus_v2_bootstrap_95ci": [
+    0.056780599247919936,
+    0.22917244599535472
+  ],
+  "videos": [
+    "82SSypK-pao",
+    "9vXCA2i982Q",
+    "Acy3T5ikjAE",
+    "DlemEQnOvnM",
+    "LlUU6ZscVYk",
+    "fWT-_jx41Jc",
+    "q_vXOV1BmIQ",
+    "v0aPyBQMgIE"
+  ],
+  "promotion": false,
+  "answer_vs_v6f": "final_better"
+}
+                 model  decoder  macro_f1  accuracy  block_f1  switches_per_min_pred  downtime_called_unknown  supported_called_unknown
+                   v6f      raw     0.306     0.612     0.065                  5.910                    0.737                     0.541
+                   v6f smoothed     0.326     0.631     0.242                  1.494                    0.779                     0.551
+        v2_seed_median      raw     0.310     0.657     0.076                  5.751                    0.840                     0.621
+        v2_seed_median smoothed     0.323     0.677     0.253                  1.154                    0.875                     0.651
+final_nb46_seed_median      raw     0.458     0.712     0.096                  6.401                    0.814                     0.381
+final_nb46_seed_median smoothed     0.476     0.732     0.322                  1.563                    0.848                     0.394

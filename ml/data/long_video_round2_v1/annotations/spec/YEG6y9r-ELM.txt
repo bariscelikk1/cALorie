@@ -1,0 +1,56 @@
+0 40 intro host_greeting_channel_cards_and_get_ready unknown high
+40 76 exercise bicep_curls bicep_curl high
+76 94 rest rest_break_with_next_card unknown high
+94 130 exercise tricep_extensions tricep_extension high # named on screen; overhead
+130 148 rest rest_break_with_next_card unknown high
+148 184 exercise bent_arm_lateral lateral_raise medium 2nd # rule 17 family: bent-arm lateral raise variation
+184 202 rest rest_break_with_next_card unknown high
+202 238 exercise bicep_curls bicep_curl high
+238 255 rest rest_break_with_next_card unknown high
+255 291 exercise tricep_extensions tricep_extension high # named on screen; overhead
+291 309 rest rest_break_with_next_card unknown high
+309 345 exercise bent_arm_lateral lateral_raise medium 2nd # rule 17 family: bent-arm lateral raise variation
+345 363 rest rest_break_with_next_card unknown high
+363 399 exercise bicep_curls bicep_curl high
+399 417 rest rest_break_with_next_card unknown high
+417 453 exercise tricep_extensions tricep_extension high # named on screen; overhead
+453 471 rest rest_break_with_next_card unknown high
+471 507 exercise bent_arm_lateral lateral_raise medium 2nd # rule 17 family: bent-arm lateral raise variation
+507 535 rest water_break unknown high
+535 571 exercise dumbbell_around_the_world unknown high # arms circle overhead and out, unsupported
+571 589 rest rest_break_with_next_card unknown high
+589 625 exercise standing_back_rows dumbbell_row medium # rule 3: two-dumbbell bent-over row
+625 645 rest rest_break_with_next_card unknown high
+645 681 exercise hammer_curls bicep_curl high # neutral-grip curl
+681 697 rest rest_break_with_next_card unknown high
+697 733 exercise dumbbell_around_the_world unknown high # arms circle overhead and out, unsupported
+733 751 rest rest_break_with_next_card unknown high
+751 787 exercise standing_back_rows dumbbell_row medium # rule 3: two-dumbbell bent-over row
+787 805 rest rest_break_with_next_card unknown high
+805 841 exercise hammer_curls bicep_curl high # neutral-grip curl
+841 859 rest rest_break_with_next_card unknown high
+859 895 exercise dumbbell_around_the_world unknown high # arms circle overhead and out, unsupported
+895 913 rest rest_break_with_next_card unknown high
+913 949 exercise standing_back_rows dumbbell_row medium # rule 3: two-dumbbell bent-over row
+949 967 rest rest_break_with_next_card unknown high
+967 1003 exercise hammer_curls bicep_curl high # neutral-grip curl
+1003 1033 rest water_break unknown high
+1033 1069 exercise lateral_raises lateral_raise high # named on screen
+1069 1087 rest rest_break_with_next_card unknown high
+1087 1123 exercise standing_back_rows_arms_facing_in dumbbell_row medium # rule 3: neutral-grip row
+1123 1141 rest rest_break_with_next_card unknown high
+1141 1177 exercise shoulder_external_rotation unknown high # rotator-cuff rotation, unsupported
+1177 1195 rest rest_break_with_next_card unknown high
+1195 1231 exercise lateral_raises lateral_raise high # named on screen
+1231 1249 rest rest_break_with_next_card unknown high
+1249 1285 exercise standing_back_rows_arms_facing_in dumbbell_row medium # rule 3: neutral-grip row
+1285 1303 rest rest_break_with_next_card unknown high
+1303 1339 exercise shoulder_external_rotation unknown high # rotator-cuff rotation, unsupported
+1339 1357 rest rest_break_with_next_card unknown high
+1357 1393 exercise lateral_raises lateral_raise high # named on screen
+1393 1411 rest rest_break_with_next_card unknown high
+1411 1447 exercise standing_back_rows_arms_facing_in dumbbell_row medium # rule 3: neutral-grip row
+1447 1465 rest rest_break_with_next_card unknown high
+1465 1501 exercise shoulder_external_rotation unknown high # rotator-cuff rotation, unsupported
+1501 1530 cooldown standing_stretch_and_wrap_up unknown high
+1530 1546.2 outro channel_promo_card unknown high

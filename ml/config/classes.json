@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "exercises": [
+    "squat",
+    "push_up",
+    "jumping_jack",
+    "pull_up",
+    "lunge",
+    "sit_up",
+    "bench_press",
+    "deadlift",
+    "shoulder_press",
+    "dumbbell_row",
+    "tricep_extension",
+    "bicep_curl",
+    "lateral_raise",
+    "lat_pulldown"
+  ],
+  "non_exercise_classes": ["unknown"],
+  "static_exercises": [],
+  "retired_exercises": ["plank"]
+}

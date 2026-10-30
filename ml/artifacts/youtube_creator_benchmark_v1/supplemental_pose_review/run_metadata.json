@@ -1,0 +1,15 @@
+{
+  "source_id": "phFvFuLUFEw",
+  "source_zip_sha256": "4d0f3efed5216f0f46e96478c9777fc652814a346046f5866309357efc38e050",
+  "candidates_sha256": "ef7bd5376ab7164a824eeb2402a11f6201b1f18d163c06cdecddf1ceff563a5c",
+  "sample_fps": 2,
+  "source_landmark_fps": 15,
+  "coarse_rgb_interval_s": 10,
+  "labels_locked": false,
+  "training_allowed": false,
+  "calibration_allowed": false,
+  "threshold_selection_allowed": false,
+  "raw_video_included": false,
+  "model_predictions_included": false,
+  "warning": "Pose supports motion review but cannot prove equipment or exact RGB boundaries."
+}

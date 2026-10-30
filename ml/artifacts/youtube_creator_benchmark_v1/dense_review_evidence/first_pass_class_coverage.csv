@@ -1,0 +1,15 @@
+canonical_class,proposed_regions,plausible_trimmed_cores,needs_split,variant_review,relabel_unknown,reject,first_pass_support_status,benchmark_ready
+bench_press,2,0,0,2,0,0,variant_unresolved,false
+bicep_curl,2,2,0,0,0,0,provisional_visible_core,false
+deadlift,5,2,2,0,0,1,provisional_visible_core,false
+dumbbell_row,2,2,0,0,0,0,provisional_visible_core,false
+jumping_jack,1,1,0,0,0,0,provisional_visible_core,false
+lat_pulldown,3,3,0,0,0,0,provisional_visible_core,false
+lateral_raise,2,0,0,0,2,0,no_supported_core,false
+lunge,2,2,0,0,0,0,provisional_visible_core,false
+pull_up,3,3,0,0,0,0,provisional_visible_core,false
+push_up,7,3,0,0,0,4,provisional_visible_core,false
+shoulder_press,2,2,0,0,0,0,provisional_visible_core,false
+sit_up,1,1,0,0,0,0,provisional_visible_core,false
+squat,3,3,0,0,0,0,provisional_visible_core,false
+tricep_extension,2,2,0,0,0,0,provisional_visible_core,false

@@ -1,0 +1,71 @@
+0 30 intro title_and_workout_preview unknown high
+30 218 exercise dynamic_warmup unknown high # arm swings, twists, folds
+218 248 transition first_round_title_and_setup unknown high
+248 280 exercise dumbbell_chest_press bench_press high # rule 2: lying dumbbell press
+280 302 rest rest_between_sets unknown high
+302 332 exercise dumbbell_chest_press bench_press high # rule 2: lying dumbbell press
+332 352 rest rest_between_sets unknown high
+352 384 exercise dumbbell_chest_press bench_press high # rule 2: lying dumbbell press
+384 404 rest rest_between_sets unknown high
+404 436 exercise lying_chest_fly unknown medium 2nd # fly is not a press; unsupported
+436 456 rest rest_between_sets unknown high
+456 488 exercise lying_chest_fly unknown medium 2nd # fly is not a press; unsupported
+488 508 rest rest_between_sets unknown high
+508 540 exercise lying_chest_fly unknown medium 2nd # fly is not a press; unsupported
+540 560 rest rest_between_sets unknown high
+560 592 exercise decline_dumbbell_press_floor bench_press medium # rule 2: lying press with legs raised
+592 612 rest rest_between_sets unknown high
+612 644 exercise decline_dumbbell_press_floor bench_press medium # rule 2: lying press with legs raised
+644 664 rest rest_between_sets unknown high
+664 696 exercise decline_dumbbell_press_floor bench_press medium # rule 2: lying press with legs raised
+696 716 rest rest_between_sets unknown high
+716 748 exercise single_arm_chest_press_right bench_press medium # rule 2: lying single-arm press
+748 768 rest rest_between_sets unknown high
+768 800 exercise single_arm_chest_press_left bench_press medium # rule 2
+800 820 rest rest_between_sets unknown high
+820 852 exercise single_arm_chest_press_right bench_press medium # rule 2: lying single-arm press
+852 874 rest rest_between_sets unknown high
+874 904 exercise single_arm_chest_press_left bench_press medium # rule 2
+904 926 rest rest_between_sets unknown high
+926 956 exercise single_arm_chest_press_right bench_press medium # rule 2: lying single-arm press
+956 978 rest rest_between_sets unknown high
+978 1008 exercise single_arm_chest_press_left bench_press medium # rule 2
+1008 1030 rest rest_between_sets unknown high
+1030 1060 exercise hammer_curl bicep_curl high
+1060 1080 rest rest_between_sets unknown high
+1080 1112 exercise hammer_curl bicep_curl high
+1112 1132 rest rest_between_sets unknown high
+1132 1164 exercise hammer_curl bicep_curl high
+1164 1186 rest rest_between_sets unknown high
+1186 1216 exercise alternating_bicep_curl bicep_curl high
+1216 1238 rest rest_between_sets unknown high
+1238 1268 exercise alternating_bicep_curl bicep_curl high
+1268 1290 rest rest_between_sets unknown high
+1290 1320 exercise alternating_bicep_curl bicep_curl high
+1320 1342 rest rest_between_sets unknown high
+1342 1372 exercise zottman_curl bicep_curl medium # rule 14
+1372 1392 rest rest_between_sets unknown high
+1392 1424 exercise zottman_curl bicep_curl medium # rule 14
+1424 1444 rest rest_between_sets unknown high
+1444 1476 exercise zottman_curl bicep_curl medium # rule 14
+1476 1498 rest rest_between_sets unknown high
+1498 1528 exercise overhead_triceps_extension tricep_extension high # two dumbbells overhead
+1528 1550 rest rest_between_sets unknown high
+1550 1580 exercise overhead_triceps_extension tricep_extension high # two dumbbells overhead
+1580 1602 rest rest_between_sets unknown high
+1602 1632 exercise overhead_triceps_extension tricep_extension high # two dumbbells overhead
+1632 1654 rest rest_between_sets unknown high
+1654 1684 exercise dumbbell_skull_crusher tricep_extension medium # lying triceps extension
+1684 1704 rest rest_between_sets unknown high
+1704 1736 exercise dumbbell_skull_crusher tricep_extension medium # lying triceps extension
+1736 1756 rest rest_between_sets unknown high
+1756 1788 exercise dumbbell_skull_crusher tricep_extension medium # lying triceps extension
+1788 1808 rest rest_between_sets unknown high
+1808 1840 exercise close_grip_dumbbell_press bench_press medium 2nd # lying close-grip press, triceps focus
+1840 1860 rest rest_between_sets unknown high
+1860 1892 exercise close_grip_dumbbell_press bench_press medium 2nd # lying close-grip press, triceps focus
+1892 1914 rest rest_between_sets unknown high
+1914 1944 exercise close_grip_dumbbell_press bench_press medium 2nd # lying close-grip press, triceps focus
+1944 1988 transition done_and_thank_you_screen unknown high
+1988 2152 cooldown floor_and_standing_stretches unknown high
+2152 2188 outro subscribe_overlay_and_fade unknown high

@@ -1,0 +1,145 @@
+scored 5vmnb_T_YH4
+scored Ferc_0UlN4g
+scored R4S-eSPDXIg
+scored _cqwrzDHXsc
+scored uawtllYyD5g
+{
+  "dev_videos": [
+    "5vmnb_T_YH4",
+    "Ferc_0UlN4g",
+    "R4S-eSPDXIg",
+    "_cqwrzDHXsc",
+    "uawtllYyD5g"
+  ],
+  "threshold": 0.65,
+  "models": {
+    "v2_seed137": {
+      "gate_quantiles_supported": [
+        0.273,
+        0.442,
+        0.589,
+        0.776,
+        0.947
+      ],
+      "gate_quantiles_downtime": [
+        0.101,
+        0.234,
+        0.45,
+        0.647,
+        0.859
+      ],
+      "gate_quantiles_unknown_exercise": [
+        0.071,
+        0.165,
+        0.363,
+        0.614,
+        0.793
+      ],
+      "auroc_supported_vs_downtime": 0.646046506224934,
+      "auroc_supported_vs_unknown_exercise": 0.6998372426654867,
+      "supported_called_unknown_at_065": 0.5999692165614899,
+      "downtime_called_unknown_at_065": 0.7536388140161725,
+      "lowest_threshold_within_10pt_downtime": 0.6,
+      "supported_called_unknown_drop_there": 0.07742034785285523,
+      "rejected_supported_share": 0.5999692165614899,
+      "oracle_supported_accuracy": 0.6008927197167924,
+      "reading": "data_problem"
+    },
+    "v2_seed2026": {
+      "gate_quantiles_supported": [
+        0.088,
+        0.315,
+        0.605,
+        0.833,
+        0.964
+      ],
+      "gate_quantiles_downtime": [
+        0.041,
+        0.159,
+        0.433,
+        0.677,
+        0.906
+      ],
+      "gate_quantiles_unknown_exercise": [
+        0.025,
+        0.146,
+        0.342,
+        0.657,
+        0.876
+      ],
+      "auroc_supported_vs_downtime": 0.6098028241937913,
+      "auroc_supported_vs_unknown_exercise": 0.6378271658483611,
+      "supported_called_unknown_at_065": 0.5488687086347545,
+      "downtime_called_unknown_at_065": 0.7036837376460018,
+      "lowest_threshold_within_10pt_downtime": 0.55,
+      "supported_called_unknown_drop_there": 0.0931199014929967,
+      "rejected_supported_share": 0.5488687086347545,
+      "oracle_supported_accuracy": 0.5702631983992612,
+      "reading": "data_problem"
+    },
+    "v2_seed42": {
+      "gate_quantiles_supported": [
+        0.288,
+        0.455,
+        0.653,
+        0.83,
+        0.945
+      ],
+      "gate_quantiles_downtime": [
+        0.073,
+        0.219,
+        0.443,
+        0.718,
+        0.897
+      ],
+      "gate_quantiles_unknown_exercise": [
+        0.033,
+        0.12,
+        0.326,
+        0.629,
+        0.866
+      ],
+      "auroc_supported_vs_downtime": 0.652316757986719,
+      "auroc_supported_vs_unknown_exercise": 0.7188740384633325,
+      "supported_called_unknown_at_065": 0.4943820224719101,
+      "downtime_called_unknown_at_065": 0.6824797843665769,
+      "lowest_threshold_within_10pt_downtime": 0.55,
+      "supported_called_unknown_drop_there": 0.14375865784208097,
+      "rejected_supported_share": 0.4943820224719101,
+      "oracle_supported_accuracy": 0.582268739418193,
+      "reading": "data_problem"
+    },
+    "v6f": {
+      "gate_quantiles_supported": [
+        0.215,
+        0.426,
+        0.728,
+        0.911,
+        0.983
+      ],
+      "gate_quantiles_downtime": [
+        0.042,
+        0.244,
+        0.571,
+        0.819,
+        0.951
+      ],
+      "gate_quantiles_unknown_exercise": [
+        0.024,
+        0.276,
+        0.547,
+        0.773,
+        0.938
+      ],
+      "auroc_supported_vs_downtime": 0.6152405678700834,
+      "auroc_supported_vs_unknown_exercise": 0.6336589904964105,
+      "supported_called_unknown_at_065": 0.3921810066184393,
+      "downtime_called_unknown_at_065": 0.5739442946990116,
+      "lowest_threshold_within_10pt_downtime": 0.55,
+      "supported_called_unknown_drop_there": 0.06325996613821766,
+      "rejected_supported_share": 0.3921810066184393,
+      "oracle_supported_accuracy": 0.5913498537786671,
+      "reading": "data_problem"
+    }
+  }
+}

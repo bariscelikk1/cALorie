@@ -1,0 +1,75 @@
+0 18 intro title_text unknown high  # 
+18 34 transition first_exercise_preview unknown high  # 
+34 64 exercise dumbbell_front_squat squat high  # 
+64 78 transition next_exercise_preview unknown high  # full-screen preview card
+78 108 exercise squat_jump_and_touch unknown medium 2nd # jump squat touching the floor
+108 124 transition next_exercise_preview unknown high  # full-screen preview card
+124 154 exercise weighted_sit_up sit_up high  # 
+154 168 transition next_exercise_preview unknown high  # full-screen preview card
+168 198 exercise seated_z_press shoulder_press high  # 
+198 214 transition next_exercise_preview unknown high  # full-screen preview card
+214 244 exercise burpee unknown high  # 
+244 258 transition next_exercise_preview unknown high  # full-screen preview card
+258 288 exercise lying_toe_touch unknown high  # legs-up toe touch crunch
+288 304 transition next_exercise_preview unknown high  # full-screen preview card
+304 334 exercise dumbbell_reverse_lunge_right lunge high  # 
+334 348 transition next_exercise_preview unknown high  # full-screen preview card
+348 378 exercise dumbbell_reverse_lunge_left lunge high  # 
+378 394 transition next_exercise_preview unknown high  # full-screen preview card
+394 424 exercise push_up push_up high  # 
+424 438 transition next_exercise_preview unknown high  # full-screen preview card
+438 468 exercise alternating_single_leg_v_up unknown high  # 
+468 484 transition next_exercise_preview unknown high  # full-screen preview card
+484 514 exercise two_dumbbell_bent_over_row dumbbell_row high  # rule 3
+514 528 transition next_exercise_preview unknown high  # full-screen preview card
+528 558 exercise plank_hold unknown high  # 
+558 588 transition round_complete_and_preview unknown high  # 
+588 618 exercise dumbbell_front_squat squat high  # 
+618 634 transition next_exercise_preview unknown high  # full-screen preview card
+634 664 exercise squat_jump_and_touch unknown medium 2nd # jump squat touching the floor
+664 680 transition next_exercise_preview unknown high  # full-screen preview card
+680 710 exercise weighted_sit_up sit_up high  # 
+710 724 transition next_exercise_preview unknown high  # full-screen preview card
+724 754 exercise seated_z_press shoulder_press high  # 
+754 770 transition next_exercise_preview unknown high  # full-screen preview card
+770 800 exercise burpee unknown high  # 
+800 814 transition next_exercise_preview unknown high  # full-screen preview card
+814 844 exercise lying_toe_touch unknown high  # legs-up toe touch crunch
+844 858 transition next_exercise_preview unknown high  # full-screen preview card
+858 888 exercise dumbbell_reverse_lunge_right lunge high  # 
+888 904 transition next_exercise_preview unknown high  # full-screen preview card
+904 934 exercise dumbbell_reverse_lunge_left lunge high  # 
+934 948 transition next_exercise_preview unknown high  # full-screen preview card
+948 978 exercise push_up push_up high  # 
+978 994 transition next_exercise_preview unknown high  # full-screen preview card
+994 1024 exercise alternating_single_leg_v_up unknown high  # 
+1024 1040 transition next_exercise_preview unknown high  # full-screen preview card
+1040 1070 exercise two_dumbbell_bent_over_row dumbbell_row high  # rule 3
+1070 1084 transition next_exercise_preview unknown high  # full-screen preview card
+1084 1114 exercise plank_hold unknown high  # 
+1114 1144 transition round_complete_and_preview unknown high  # 
+1144 1174 exercise dumbbell_front_squat squat high  # 
+1174 1190 transition next_exercise_preview unknown high  # full-screen preview card
+1190 1220 exercise squat_jump_and_touch unknown medium 2nd # jump squat touching the floor
+1220 1234 transition next_exercise_preview unknown high  # full-screen preview card
+1234 1264 exercise weighted_sit_up sit_up high  # 
+1264 1280 transition next_exercise_preview unknown high  # full-screen preview card
+1280 1310 exercise seated_z_press shoulder_press high  # 
+1310 1324 transition next_exercise_preview unknown high  # full-screen preview card
+1324 1354 exercise burpee unknown high  # 
+1354 1370 transition next_exercise_preview unknown high  # full-screen preview card
+1370 1400 exercise lying_toe_touch unknown high  # legs-up toe touch crunch
+1400 1414 transition next_exercise_preview unknown high  # full-screen preview card
+1414 1444 exercise dumbbell_reverse_lunge_right lunge high  # 
+1444 1460 transition next_exercise_preview unknown high  # full-screen preview card
+1460 1490 exercise dumbbell_reverse_lunge_left lunge high  # 
+1490 1506 transition next_exercise_preview unknown high  # full-screen preview card
+1506 1536 exercise push_up push_up high  # 
+1536 1550 transition next_exercise_preview unknown high  # full-screen preview card
+1550 1580 exercise alternating_single_leg_v_up unknown high  # 
+1580 1596 transition next_exercise_preview unknown high  # full-screen preview card
+1596 1626 exercise two_dumbbell_bent_over_row dumbbell_row high  # rule 3
+1626 1640 transition next_exercise_preview unknown high  # full-screen preview card
+1640 1670 exercise plank_hold unknown high  # 
+1670 1678 outro workout_complete_card unknown high  # 
+1678 1689 outro end_screen unknown high  # 

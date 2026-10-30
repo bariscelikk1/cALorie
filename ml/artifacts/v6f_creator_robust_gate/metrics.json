@@ -1,0 +1,159 @@
+{
+  "experiment": "v6f_creator_robust_gate",
+  "pinned_training_source_commit": "9874773e4681464bb00f5f0fb4dc3459caf75d6c",
+  "notebook31_reference_commit": "9520bcc810e03bb20f951ae707dde81ef090f73f",
+  "run_seeds": [
+    42,
+    137,
+    2026
+  ],
+  "fusion": "mean_probability",
+  "threshold": 0.65,
+  "group_temperature": 0.0,
+  "group_cvar_fraction": 0.3,
+  "group_cvar_mix": 0.5,
+  "test_window_count": 1971,
+  "oracle_exercise_classifier": {
+    "accuracy": 0.9309559939301972,
+    "balanced_accuracy": 0.9043423855241995,
+    "macro_f1": 0.891089836219429
+  },
+  "notebook31_reference_ensemble": {
+    "gate_accuracy": 0.8619989852866565,
+    "gate_balanced_accuracy": 0.8767239796712732,
+    "gate_macro_f1": 0.8526287085274966,
+    "end_to_end_accuracy": 0.8533739218670725,
+    "end_to_end_balanced_accuracy": 0.8108490940477956,
+    "end_to_end_macro_f1": 0.8208577926208631,
+    "unknown_recall": 0.9203675344563553,
+    "supported_accuracy": 0.8201820940819423
+  },
+  "creator_robust_ensemble": {
+    "gate_accuracy": 0.730593607305936,
+    "gate_balanced_accuracy": 0.7494939894545312,
+    "gate_macro_f1": 0.719732790402049,
+    "end_to_end_accuracy": 0.7209538305428717,
+    "end_to_end_balanced_accuracy": 0.7417625098581125,
+    "end_to_end_macro_f1": 0.7352546233217372,
+    "unknown_recall": 0.8055130168453293,
+    "supported_accuracy": 0.6790591805766313
+  },
+  "seed_summary": [
+    {
+      "run_seed": 42,
+      "fusion": "mean_probability",
+      "threshold": 0.65,
+      "validation_gate_accuracy": 0.8411957029425502,
+      "validation_gate_balanced_accuracy": 0.8406151391279404,
+      "validation_gate_macro_f1": 0.8379936260371043,
+      "validation_end_to_end_accuracy": 0.8187762727697337,
+      "validation_end_to_end_balanced_accuracy": 0.834430299865566,
+      "validation_end_to_end_macro_f1": 0.8015855807544339,
+      "validation_unknown_recall": 0.8370535714285714,
+      "validation_supported_accuracy": 0.8056224899598393,
+      "test_gate_accuracy": 0.7382039573820396,
+      "test_gate_balanced_accuracy": 0.7644564482358764,
+      "test_gate_macro_f1": 0.7294265002596563,
+      "test_end_to_end_accuracy": 0.7214611872146118,
+      "test_end_to_end_balanced_accuracy": 0.7364481062782219,
+      "test_end_to_end_macro_f1": 0.724766205089874,
+      "test_unknown_recall": 0.8422664624808576,
+      "test_supported_accuracy": 0.661608497723824
+    },
+    {
+      "run_seed": 137,
+      "fusion": "mean_probability",
+      "threshold": 0.65,
+      "validation_gate_accuracy": 0.8430639887902849,
+      "validation_gate_balanced_accuracy": 0.8292379338783706,
+      "validation_gate_macro_f1": 0.8350826677426159,
+      "validation_end_to_end_accuracy": 0.8206445586174684,
+      "validation_end_to_end_balanced_accuracy": 0.8488118213228446,
+      "validation_end_to_end_macro_f1": 0.8097049584254231,
+      "validation_unknown_recall": 0.7444196428571429,
+      "validation_supported_accuracy": 0.8755020080321285,
+      "test_gate_accuracy": 0.7163876204972095,
+      "test_gate_balanced_accuracy": 0.7199414631199065,
+      "test_gate_macro_f1": 0.7001997509167835,
+      "test_end_to_end_accuracy": 0.7052257737189244,
+      "test_end_to_end_balanced_accuracy": 0.7421438973953346,
+      "test_end_to_end_macro_f1": 0.7249571202855356,
+      "test_unknown_recall": 0.7304747320061256,
+      "test_supported_accuracy": 0.6927162367223065
+    },
+    {
+      "run_seed": 2026,
+      "fusion": "mean_probability",
+      "threshold": 0.65,
+      "validation_gate_accuracy": 0.8136384866884633,
+      "validation_gate_balanced_accuracy": 0.8053445926563396,
+      "validation_gate_macro_f1": 0.8072425058909725,
+      "validation_end_to_end_accuracy": 0.791219056515647,
+      "validation_end_to_end_balanced_accuracy": 0.8177161581837721,
+      "validation_end_to_end_macro_f1": 0.7906790516191493,
+      "validation_unknown_recall": 0.7544642857142857,
+      "validation_supported_accuracy": 0.8176706827309237,
+      "test_gate_accuracy": 0.715372907153729,
+      "test_gate_balanced_accuracy": 0.7327044317460908,
+      "test_gate_macro_f1": 0.7040211786088556,
+      "test_end_to_end_accuracy": 0.7062404870624048,
+      "test_end_to_end_balanced_accuracy": 0.7131769999500689,
+      "test_end_to_end_macro_f1": 0.7130336820400724,
+      "test_unknown_recall": 0.7840735068912711,
+      "test_supported_accuracy": 0.6676783004552352
+    }
+  ],
+  "aggregate_summary": [
+    {
+      "metric": "test_gate_macro_f1",
+      "mean": 0.7112158099284319,
+      "std": 0.012971064185492464,
+      "minimum": 0.7001997509167835,
+      "maximum": 0.7294265002596563
+    },
+    {
+      "metric": "test_end_to_end_macro_f1",
+      "mean": 0.7209190024718274,
+      "std": 0.005576308270207217,
+      "minimum": 0.7130336820400724,
+      "maximum": 0.7249571202855356
+    },
+    {
+      "metric": "test_end_to_end_accuracy",
+      "mean": 0.7109758159986471,
+      "std": 0.00742584082533406,
+      "minimum": 0.7052257737189244,
+      "maximum": 0.7214611872146118
+    },
+    {
+      "metric": "test_unknown_recall",
+      "mean": 0.785604900459418,
+      "std": 0.04565162739216207,
+      "minimum": 0.7304747320061256,
+      "maximum": 0.8422664624808576
+    },
+    {
+      "metric": "test_supported_accuracy",
+      "mean": 0.6740010116337887,
+      "std": 0.013463663787765453,
+      "minimum": 0.661608497723824,
+      "maximum": 0.6927162367223065
+    }
+  ],
+  "outcome_gates": {
+    "fixed_recipe_threshold_and_three_seeds": true,
+    "seed_macro_f1_std_at_most_0_01": true,
+    "ensemble_macro_f1_at_least_reference": false,
+    "ensemble_accuracy_within_0_005_of_reference": false,
+    "ensemble_unknown_recall_at_least_0_90": false,
+    "ensemble_supported_accuracy_at_least_reference": false,
+    "youtube_present_f1_delta_vs_v6c_at_least_minus_0_05": false,
+    "w13_present_f1_delta_vs_v6c_at_least_minus_0_05": false,
+    "w18_present_f1_delta_vs_v6c_at_least_minus_0_05": false,
+    "research_creator_robust_pass": false,
+    "production_promotion_allowed": false
+  },
+  "test_used_for_recipe_seed_or_threshold_selection": false,
+  "internal_test_is_reused_development_evidence": true,
+  "production_promoted": false
+}

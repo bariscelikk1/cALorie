@@ -1,0 +1,31 @@
+video_id,source_action,published_target,visible_target,decision,confidence,needs_second_review,visible_variant,frozen_v6f_prediction,model_matches_visible,notes
+stu1_18,front_raise,unknown,unknown,relabel_unknown,high,false,bent_over_dumbbell_front_or_rear_raise,deadlift,false,Unsupported raise motion; deadlift prediction is a supported-class false positive.
+stu2_15,front_raise,unknown,unknown,relabel_unknown,high,false,two_hand_plate_front_raise_overhead,lateral_raise,false,Unsupported overhead front-raise variant; not a canonical lateral raise.
+stu3_8,front_raise,unknown,unknown,relabel_unknown,high,false,alternating_dumbbell_front_raise,bicep_curl,false,Unsupported front raise; bicep-curl prediction is a supported-class false positive.
+stu4_13,front_raise,unknown,unknown,relabel_unknown,high,false,weighted_two_arm_front_raise,jumping_jack,false,Unsupported front raise; jumping-jack prediction is a supported-class false positive.
+stu5_14,front_raise,unknown,unknown,relabel_unknown,high,false,seated_front_raise,unknown,true,Correct open-set rejection from the contact sheet.
+stu6_13,front_raise,unknown,unknown,relabel_unknown,high,false,alternating_dumbbell_front_raise,bicep_curl,false,Unsupported front raise; bicep-curl prediction is a supported-class false positive.
+stu7_21,front_raise,unknown,unknown,relabel_unknown,high,false,two_arm_dumbbell_front_raise,bicep_curl,false,Unsupported front raise; bicep-curl prediction is a supported-class false positive.
+stu8_20,front_raise,unknown,unknown,relabel_unknown,high,false,cable_front_raise,unknown,true,Correct open-set rejection from the contact sheet.
+stu9_12,front_raise,unknown,unknown,relabel_unknown,medium,true,bent_arm_raise_or_upright_row,jumping_jack,false,Motion is not cleanly canonical from the sampled frames; retain unknown pending video review.
+stu10_19,front_raise,unknown,unknown,relabel_unknown,high,false,barbell_plate_raise_to_overhead,jumping_jack,false,Weightlifting-style overhead raise is unsupported; jumping-jack prediction is false positive.
+stu1_53,situp,sit_up,unknown,relabel_unknown,medium,true,short_range_crunch,unknown,true,Contact sheet does not establish the canonical full sit-up range; retain unknown pending video review.
+stu2_59,situp,sit_up,unknown,relabel_unknown,high,false,v_up_or_jackknife,unknown,true,Visible straight-leg jackknife motion is not canonical sit_up.
+stu3_54,situp,sit_up,unknown,relabel_unknown,medium,true,short_range_crunch,unknown,true,Limited torso range; retain unknown pending video review.
+stu4_52,situp,sit_up,sit_up,accept_visible_label,high,false,full_sit_up,unknown,false,Visible repeated supine-to-upright sit-ups.
+stu5_52,situp,sit_up,sit_up,accept_visible_label,medium,true,assisted_or_anchored_sit_up,unknown,false,Visible sit-up pattern but assistance and framing merit a second video review.
+stu6_50,situp,sit_up,sit_up,accept_visible_label,medium,true,incline_bench_sit_up,bench_press,false,Incline sit-up pattern is visible; equipment variant merits second review.
+stu7_58,situp,sit_up,unknown,relabel_unknown,high,false,ghd_situp_or_trunk_extension,unknown,true,Large hyperextension/GHD variant is outside the current canonical class.
+stu8_49,situp,sit_up,unknown,relabel_unknown,medium,true,short_range_crunch,unknown,true,Limited range; also appears to share actor and scene with stu9_56.
+stu9_56,situp,sit_up,unknown,relabel_unknown,medium,true,short_range_crunch,unknown,true,Limited range; visual actor/scene collision with stu8_49 invalidates person-disjoint assumptions.
+stu10_59,situp,sit_up,unknown,relabel_unknown,high,false,leg_raise_or_reverse_crunch,unknown,true,Visible motion is leg raise/reverse crunch rather than sit_up.
+stu1_69,squat,squat,squat,accept_visible_label,high,false,goblet_or_loaded_squat,squat,true,Clear repeated squat motion.
+stu2_67,squat,squat,unknown,relabel_unknown,medium,true,no_clear_squat_in_selected_bounds,unknown,true,Contact sheet shows standing/setup with no clearly established repeated squat; inspect video before reuse.
+stu3_63,squat,squat,squat,accept_visible_label,high,false,band_abducted_squat,unknown,false,Clear banded squat variant; gate rejection is a false negative.
+stu4_67,squat,squat,squat,accept_visible_label,high,false,overhead_squat,squat,true,Clear overhead squat variant.
+stu5_69,squat,squat,squat,accept_visible_label,high,false,bodyweight_squat,lat_pulldown,false,Clear squat; lat-pulldown prediction is a severe supported-class error.
+stu6_59,squat,squat,squat,accept_visible_label,high,false,goblet_squat,squat,true,Clear repeated squat motion.
+stu7_62,squat,squat,squat,accept_visible_label,high,false,barbell_back_squat,bench_press,false,Clear barbell squat; bench-press prediction is a severe supported-class error.
+stu8_59,squat,squat,squat,accept_visible_label,high,false,barbell_back_squat,squat,true,Clear repeated barbell squat motion.
+stu9_70,squat,squat,squat,accept_visible_label,high,false,barbell_back_squat,squat,true,Clear repeated squat motion.
+stu10_67,squat,squat,squat,accept_visible_label,high,false,bodyweight_squat,squat,true,Clear repeated bodyweight squat motion.

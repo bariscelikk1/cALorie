@@ -1,0 +1,42 @@
+video_id,video_file,start_s,end_s,start_time,end_time,segment_type,fine_label,current_tcn_label,split,use_for_training,annotation_source,boundary_precision_s,notes
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,0,13,00:00.0,00:13.0,intro,intro,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Opening and setup
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,13,44,00:13.0,00:44.0,exercise,close_push_up,push_up,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Narrow-hand push-up
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,44,74,00:44.0,01:14.0,exercise,plank_up,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Alternates forearms and high plank
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,74,104,01:14.0,01:44.0,exercise,shoulder_tap,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,High-plank shoulder taps
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,104,134,01:44.0,02:14.0,exercise,alternating_superman,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Prone opposite arm and leg lift
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,134,164,02:14.0,02:44.0,exercise,push_up_extension,push_up,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Push-up with alternating extension
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,164,194,02:44.0,03:14.0,exercise,plank_extension,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,High-plank alternating arm and leg extension
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,194,224,03:14.0,03:44.0,exercise,reverse_lunge,lunge,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Alternating backward lunge
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,224,254,03:44.0,04:14.0,exercise,knee_jump,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Kneeling-to-feet explosive jump
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,254,284,04:14.0,04:44.0,exercise,calf_jump,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Small jumps kept on toes
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,284,314,04:44.0,05:14.0,exercise,bodyweight_crunch,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,"Short floor crunch, not full sit-up"
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,314,344,05:14.0,05:44.0,exercise,heel_tap,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Alternating oblique heel tap
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,344,374,05:44.0,06:14.0,exercise,side_oblique_crunch_left,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,First-side short oblique crunch
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,374,404,06:14.0,06:44.0,exercise,side_plank_up_left,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,First-side dynamic side plank
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,404,434,06:44.0,07:14.0,exercise,side_oblique_crunch_right,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Mirrored oblique crunch
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,434,464,07:14.0,07:44.0,exercise,side_plank_up_right,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Mirrored dynamic side plank
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,464,494,07:44.0,08:14.0,exercise,side_plank_rotation,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Side plank with torso rotation
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,494,524,08:14.0,08:44.0,exercise,plank_forward_reach,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Alternating forward reach from plank
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,524,554,08:44.0,09:14.0,exercise,prone_arm_rotation_to_push_up,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Prone arm sweep ending in push-up stance
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,554,584,09:14.0,09:44.0,exercise,back_static_hold,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Prone static back extension hold
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,584,614,09:44.0,10:14.0,rest,rest_and_stretch,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Explicit rest and stretch interval
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,614,644,10:14.0,10:44.0,exercise,jumping_lunge,lunge,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Alternating split-lunge jumps
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,644,674,10:44.0,11:14.0,exercise,controlled_squat,squat,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Controlled bodyweight squats
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,674,704,11:14.0,11:44.0,exercise,standing_toe_touch,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Standing hinge and toe touch
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,704,734,11:44.0,12:14.0,exercise,squat_in_out,squat,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Continuous narrow-wide squat pattern
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,734,764,12:14.0,12:44.0,exercise,lateral_lunge,lunge,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Alternating side lunge
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,764,794,12:44.0,13:14.0,exercise,jump_squat,squat,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Explosive squat jump
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,794,824,13:14.0,13:44.0,exercise,frog_hop,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Plank-position feet-to-hands hops
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,824,854,13:44.0,14:14.0,exercise,straight_leg_walkout,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Standing hinge walking hands to plank
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,854,884,14:14.0,14:44.0,exercise,twisting_crunch,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Supine elbow-to-knee twisting crunch
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,884,914,14:44.0,15:14.0,exercise,reverse_crunch,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Knees drawn toward chest
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,914,944,15:14.0,15:44.0,exercise,lying_leg_raise,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Straight-to-bent leg raise
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,944,974,15:44.0,16:14.0,rest,rest_and_stretch,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Explicit rest and stretch interval
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,974,1004,16:14.0,16:44.0,exercise,plank_knee_in,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Alternating knee drive from forearm plank
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,1004,1034,16:44.0,17:14.0,exercise,forearm_push_up,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Forearm triceps press
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,1034,1064,17:14.0,17:44.0,exercise,lying_leg_raise_hip_lift,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Leg raise with hip lift at top
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,1064,1094,17:44.0,18:14.0,exercise,curtsy_lunge_jump,lunge,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Jumping curtsy lunge
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,1094,1124,18:14.0,18:44.0,exercise,burpee,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Full burpee
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,1124,1154,18:44.0,19:14.0,exercise,extended_plank,plank,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Static extended forearm plank
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,1154,1184,19:14.0,19:44.0,exercise,mountain_climber,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Alternating fast knee drive in high plank
+IeGrTqW5lek,fraser_wilson__IeGrTqW5lek.mp4,1184,1225.265708,19:44.0,20:25.3,exercise,high_knees,unknown,train_v2,true,youtube_chapters_cross_checked_with_visible_video,1.0,Running in place with high knees

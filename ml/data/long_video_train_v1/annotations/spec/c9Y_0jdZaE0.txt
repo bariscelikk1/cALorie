@@ -1,0 +1,39 @@
+0 44 intro kneeling_talking_with_titles unknown high
+44 72 exercise kneeling_dumbbell_warmup unknown medium # halos and reaches
+72 112 exercise standing_overhead_press shoulder_press medium
+112 122 transition setup unknown high
+122 166 exercise standing_overhead_press shoulder_press medium
+166 192 transition setup unknown high
+192 238 exercise standing_dumbbell_curl bicep_curl medium
+238 246 transition kneel unknown high
+246 290 exercise single_arm_dumbbell_curl bicep_curl medium
+290 312 transition walk_and_setup unknown high
+312 344 exercise single_arm_overhead_tricep_extension tricep_extension medium 2nd # arm overhead bending at elbow
+344 366 transition setup unknown high
+366 374 exercise bent_over_single_arm_row dumbbell_row medium
+374 408 exercise single_arm_overhead_press shoulder_press medium 2nd # arm straight overhead
+408 420 transition get_down unknown high
+420 528 exercise plank_renegade_row_push_up unknown high # floor compound
+528 552 transition setup unknown high
+552 590 exercise two_dumbbell_bent_over_row dumbbell_row high # rule 3
+590 604 rest standing unknown high
+604 650 exercise two_dumbbell_bent_over_row dumbbell_row high
+650 660 transition lie_down unknown high
+660 772 exercise lying_dumbbell_floor_press bench_press medium 2nd # rule 2
+772 798 transition stand_up_and_setup unknown high
+798 830 exercise standing_curl_to_press unknown medium # compound
+830 852 transition setup unknown high
+852 888 exercise standing_overhead_press shoulder_press medium
+888 900 transition sit_down unknown high
+900 1012 exercise lying_tricep_extension_and_press tricep_extension medium 2nd # skull crushers mixed with presses
+1012 1026 transition kneel unknown high
+1026 1130 exercise floor_crawl_and_plank unknown high
+1130 1152 transition kneel_setup unknown high
+1152 1246 exercise kneeling_overhead_press shoulder_press medium 2nd # rule 8
+1246 1272 transition walk_and_setup unknown high
+1272 1306 exercise standing_dumbbell_curl bicep_curl medium
+1306 1326 transition bend_and_pick_up unknown high
+1326 1368 exercise single_arm_hammer_curl bicep_curl medium
+1368 1384 transition get_down unknown high
+1384 1496 exercise floor_push_up_and_plank_variations unknown medium # mixed push-ups and planks
+1496 1562 outro kneeling_talking unknown high

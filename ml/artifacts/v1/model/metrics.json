@@ -1,0 +1,26 @@
+{
+  "accuracy": 0.8762725137039937,
+  "balanced_accuracy": 0.8696715582983277,
+  "macro_f1": 0.8280702804720852,
+  "seed": 42,
+  "window_frames": 64,
+  "stride_frames": 32,
+  "classes": [
+    "bench_press",
+    "bicep_curl",
+    "deadlift",
+    "dumbbell_row",
+    "jumping_jack",
+    "lat_pulldown",
+    "lateral_raise",
+    "lunge",
+    "plank",
+    "pull_up",
+    "push_up",
+    "shoulder_press",
+    "sit_up",
+    "squat",
+    "tricep_extension",
+    "unknown"
+  ]
+}

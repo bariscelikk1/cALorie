@@ -1,0 +1,67 @@
+0 50 intro talking_with_plan_overlay unknown high # dog in frame
+50 58 transition walk_to_bar unknown high
+58 76 exercise pull_up pull_up medium 2nd # head cropped at the top edge
+76 84 transition walk unknown high
+84 100 exercise push_up push_up high
+100 120 rest walk_and_dog unknown high
+120 142 exercise dumbbell_goblet_squat squat medium # dog in frame
+142 160 transition pick_up_and_lie_down unknown high
+160 192 exercise lying_in_and_out_crunch unknown medium # knee tuck in-and-out; dog jumps on him
+192 206 rest rest unknown high
+206 208 transition walk_to_bar unknown high
+208 230 exercise pull_up pull_up medium 2nd # head cropped at the top edge
+230 236 transition walk unknown high
+236 256 exercise push_up push_up high
+256 280 rest walk unknown high
+280 302 exercise dumbbell_goblet_squat squat high
+302 312 transition lie_down unknown high
+312 338 exercise lying_in_and_out_crunch unknown high
+338 366 transition setup_ball unknown high
+366 390 exercise decline_push_up_on_ball push_up medium 2nd # feet on stability ball
+390 412 rest pick_up_dumbbells unknown high
+412 438 exercise two_arm_dumbbell_bent_over_row dumbbell_row medium 2nd # two dumbbells, bent over
+438 462 rest walk unknown high
+462 512 exercise dumbbell_reverse_lunge lunge high
+512 520 transition lie_down unknown high
+520 550 exercise lying_straight_leg_raise unknown high
+550 568 rest rest unknown high
+568 594 exercise decline_push_up_on_ball push_up medium 2nd
+594 616 rest walk_and_pick_up unknown high
+616 648 exercise two_arm_dumbbell_bent_over_row dumbbell_row medium 2nd
+648 670 rest walk_out_of_frame unknown high
+670 718 exercise dumbbell_reverse_lunge lunge high
+718 724 transition lie_down unknown high
+724 754 exercise lying_straight_leg_raise unknown high
+754 794 rest walk_with_overlay unknown high
+794 832 exercise pike_press unknown high # pike push-up
+832 846 rest pick_up_kettlebell unknown high
+846 876 exercise kettlebell_sumo_squat squat medium 2nd # sumo squat variant
+876 898 transition pick_up_dumbbells unknown high
+898 920 exercise dumbbell_rear_delt_fly unknown high
+920 928 rest rest unknown high
+928 948 exercise standing_knee_to_elbow unknown high
+948 964 rest rest unknown high
+964 996 exercise pike_press unknown high
+996 1004 transition pick_up_kettlebell unknown high
+1004 1032 exercise kettlebell_sumo_squat squat medium 2nd
+1032 1050 transition pick_up_dumbbells unknown high
+1050 1070 exercise dumbbell_rear_delt_fly unknown high
+1070 1078 transition rest unknown high
+1078 1094 exercise standing_knee_to_elbow unknown high
+1094 1178 rest long_rest_walking unknown high
+1178 1226 exercise dumbbell_curl_to_hammer_curl bicep_curl high
+1226 1234 transition sit_down unknown high
+1234 1252 exercise floor_tricep_dip unknown high
+1252 1268 transition walk unknown high
+1268 1302 exercise frog_burpee unknown high
+1302 1314 rest rest unknown high
+1314 1348 exercise plank_knee_to_elbow unknown high
+1348 1382 rest dog_interaction unknown high
+1382 1448 exercise dumbbell_curl_to_hammer_curl bicep_curl high # dog lying nearby
+1448 1470 rest rest unknown high
+1470 1492 exercise floor_tricep_dip unknown high
+1492 1500 transition get_up unknown high
+1500 1536 exercise frog_burpee unknown high
+1536 1546 rest rest unknown high
+1546 1578 exercise plank_knee_to_elbow unknown high
+1578 1628 outro summary_overlay_and_rest unknown high

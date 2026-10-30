@@ -1,0 +1,1010 @@
+video_id,published_action,label,visible_variant,usable,confidence,review_status,annotation_source,issue_tags,notes,role_group,sealed_test_eligible,training_allowed
+stu10_0,battle_rope,unknown,battle_rope,True,high,reviewed,claude_visual_contact_sheet,multi_person;camera_cut;text_overlay,Trainer visible in wide shots.,role_group_0000,True,False
+stu10_1,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,multi_person;portrait,Spotter behind.,role_group_0001,True,False
+stu10_10,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,camera_cut,Two settings edited together; all bench press.,role_group_0002,False,False
+stu10_11,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,multi_person,Same scene as stu9_10; two spotters.,role_group_0003,False,False
+stu10_12,bench_pressing,unknown,seated_machine_press,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;multi_person,Upright seated machine press; not a bench press.,role_group_0004,True,False
+stu10_13,front_raise,unknown,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,cutaway;tight_crop,Back-muscle close-ups dominate; brief lateral raises.,role_group_0005,True,False
+stu10_14,front_raise,unknown,plate_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Low camera angle.,role_group_0006,True,False
+stu10_15,front_raise,unknown,dumbbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Standing front raise.,role_group_0007,False,False
+stu10_16,front_raise,unknown,dumbbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Standing front raise.,role_group_0008,False,False
+stu10_17,front_raise,unknown,dumbbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Standing front raise.,role_group_0009,False,False
+stu10_18,front_raise,unknown,shoulder_raise_complex,False,medium,reviewed,claude_visual_contact_sheet,cutaway;camera_cut,Front and lateral raises with close-up cutaways.,role_group_0010,False,False
+stu10_2,bench_pressing,bench_press,barbell_bench_press,False,high,reviewed,claude_visual_contact_sheet,occlusion;tight_crop,Plates fill the frame; body not visible.,role_group_0012,True,False
+stu10_20,front_raise,unknown,dumbbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Standing front raise.,role_group_0013,False,False
+stu10_21,front_raise,unknown,dumbbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Standing front raise.,role_group_0014,True,False
+stu10_22,front_raise,lateral_raise,dumbbell_lateral_raise,True,medium,reviewed,claude_visual_contact_sheet,,Published front_raise but visibly lateral raises (arms out to the side).,role_group_0015,False,False
+stu10_23,front_raise,unknown,band_front_raise,True,high,reviewed,claude_visual_contact_sheet,portrait;camera_cut,Side then front view.,role_group_0016,True,False
+stu10_24,front_raise,unknown,dumbbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Standing front raise.,role_group_0007,False,False
+stu10_25,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0017,False,False
+stu10_26,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0018,False,False
+stu10_27,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0019,False,False
+stu10_28,jump_jack,jumping_jack,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,talking_head;cutaway;text_overlay,Tutorial with close-up cutaways.,role_group_0020,True,False
+stu10_29,jump_jack,jumping_jack,jumping_jack,True,high,reviewed,claude_visual_contact_sheet,,Audit sample: correct.,role_group_0021,True,False
+stu10_3,bench_pressing,bench_press,incline_bench_press,True,medium,reviewed,claude_visual_contact_sheet,small_subject,Incline press; distant camera.,role_group_0022,True,False
+stu10_30,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0023,True,False
+stu10_31,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0024,True,False
+stu10_32,others,unknown,seated_ball_twist,True,medium,reviewed,claude_visual_contact_sheet,,Seated twist with a ball.,role_group_0025,False,False
+stu10_33,others,unknown,seated_ball_twist,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Seated twist with a ball.,role_group_0026,False,False
+stu10_34,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,camera_cut,Two outdoor bars.,role_group_0027,True,False
+stu10_35,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,portrait;small_subject,Indoor tower.,role_group_0028,True,False
+stu10_36,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,portrait;backlit,Light behind.,role_group_0029,True,False
+stu10_37,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,portrait;crowd,Outdoor event behind.,role_group_0030,True,False
+stu10_38,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,tight_crop,Upper body only.,role_group_0031,False,False
+stu10_39,pull_up,pull_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0032,True,False
+stu10_4,bench_pressing,bench_press,barbell_bench_press,True,high,reviewed,claude_visual_contact_sheet,,Clean side view.,role_group_0033,True,False
+stu10_40,pull_up,unknown,inverted_row,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Inverted row under a Smith bar; not a pull-up.,role_group_0034,False,False
+stu10_41,push_up,push_up,push_up,True,medium,reviewed,claude_visual_contact_sheet,high_angle;handheld,Moving high camera.,role_group_0035,True,False
+stu10_42,push_up,push_up,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,talking_head;camera_cut,Talking-head segments between push-up demos.,role_group_0036,True,False
+stu10_43,push_up,push_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0037,False,False
+stu10_44,push_up,push_up,push_up,False,medium,reviewed,claude_visual_contact_sheet,camera_cut;text_overlay,Time-lapse with knee rests.,role_group_0038,True,False
+stu10_45,push_up,push_up,push_up,False,medium,reviewed,claude_visual_contact_sheet,cutaway;camera_cut,Close-up cutaways.,role_group_0039,False,False
+stu10_46,push_up,push_up,push_up_handles,True,medium,reviewed,claude_visual_contact_sheet,camera_cut;text_overlay,Two scenes.,role_group_0040,True,False
+stu10_47,push_up,push_up,push_up_variants,False,medium,reviewed,claude_visual_contact_sheet,text_overlay,Several push-up variants in sequence.,role_group_0041,True,False
+stu10_48,push_up,push_up,instruction_mixed,False,medium,reviewed,claude_visual_contact_sheet,text_overlay;cutaway,Tutorial panels and close-up.,role_group_0042,True,False
+stu10_49,push_up,push_up,push_up,False,medium,reviewed,claude_visual_contact_sheet,multi_person,Second person on the bed; rest periods.,role_group_0043,True,False
+stu10_5,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,camera_cut,Several sets edited together from different angles.,role_group_0567,False,False
+stu10_50,push_up,push_up,push_up,True,medium,reviewed,claude_visual_contact_sheet,camera_cut,Outdoor views.,role_group_0044,True,False
+stu10_51,push_up,push_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0045,True,False
+stu10_52,push_up,push_up,push_up,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Front view with counter.,role_group_0046,True,False
+stu10_53,push_up,push_up,push_up,True,medium,reviewed,claude_visual_contact_sheet,crowd;text_overlay,Bystanders behind.,role_group_0047,True,False
+stu10_54,push_up,push_up,push_up,True,medium,reviewed,claude_visual_contact_sheet,camera_cut;dark,Pool deck.,role_group_0048,True,False
+stu10_55,situp,sit_up,sit_up,True,medium,reviewed,claude_visual_contact_sheet,portrait,Small figure on a mat.,role_group_0049,True,False
+stu10_56,situp,sit_up,partner_held_sit_up,False,medium,reviewed,claude_visual_contact_sheet,multi_person;portrait,Several people crowding the frame.,role_group_0050,True,False
+stu10_57,situp,unknown,toe_reach_crunch,True,medium,reviewed,claude_visual_contact_sheet,,Legs vertical toe-reach crunch stays unknown (reverse/leg-raise family).,role_group_0051,True,False
+stu10_58,situp,sit_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0052,False,False
+stu10_6,bench_pressing,bench_press,barbell_bench_press,False,low,reviewed,claude_visual_contact_sheet,portrait;small_subject;dark,Tiny dark figure.,role_group_0054,True,False
+stu10_60,situp,sit_up,decline_bench_sit_up,True,medium,reviewed,claude_visual_contact_sheet,,Outdoor decline bench.,role_group_0055,True,False
+stu10_61,situp,unknown,leg_raise_v_up,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Leg raises and V-ups stay unknown.,role_group_0056,True,False
+stu10_62,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0057,False,False
+stu10_63,squat,squat,barbell_back_squat,True,medium,reviewed,claude_visual_contact_sheet,portrait,Rack squat; text overlay.,role_group_0058,True,False
+stu10_64,squat,squat,barbell_back_squat,True,medium,reviewed,claude_visual_contact_sheet,portrait,Rack squat.,role_group_0059,False,False
+stu10_65,squat,squat,barbell_back_squat,True,medium,reviewed,claude_visual_contact_sheet,multi_person,Bystanders behind.,role_group_0060,False,False
+stu10_66,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0061,True,False
+stu10_68,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0063,False,False
+stu10_69,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0064,False,False
+stu10_7,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,tight_crop,Close side crop.,role_group_0065,True,False
+stu10_70,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0066,False,False
+stu10_71,squat,squat,bodyweight_squat,False,medium,reviewed,claude_visual_contact_sheet,cutaway;camera_cut,Close-up cutaways.,role_group_0067,False,False
+stu10_8,bench_pressing,bench_press,barbell_bench_press,True,high,reviewed,claude_visual_contact_sheet,multi_person;portrait,Spotter behind.,role_group_0068,False,False
+stu10_9,bench_pressing,bench_press,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,title_card;camera_cut,Tutorial with text slides.,role_group_0069,True,False
+stu11_0,others,unknown,soccer_juggling,True,medium,reviewed,claude_visual_contact_sheet,,Football juggling.,role_group_0070,False,False
+stu11_1,others,unknown,soccer_juggling,True,medium,reviewed,claude_visual_contact_sheet,small_subject,Football juggling.,role_group_0070,False,False
+stu11_10,others,unknown,rowing_machine,True,medium,reviewed,claude_visual_contact_sheet,,Rowing ergometer.,role_group_0071,True,False
+stu11_11,others,unknown,rowing_machine,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Rowing ergometer.,role_group_0072,True,False
+stu11_12,others,unknown,rowing_machine,False,medium,reviewed,claude_visual_contact_sheet,multi_person,Coach standing beside.,role_group_0073,True,False
+stu11_13,others,unknown,rowing_machine,True,medium,reviewed,claude_visual_contact_sheet,,Rowing ergometer.,role_group_0074,True,False
+stu11_14,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Broadcast.,role_group_0075,True,False
+stu11_15,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Broadcast.,role_group_0076,False,False
+stu11_16,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Broadcast.,role_group_0077,True,False
+stu11_17,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,camera_cut;small_subject,Several angles; distant shots.,role_group_0078,True,False
+stu11_18,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Broadcast.,role_group_0079,False,False
+stu11_19,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0080,True,False
+stu11_2,others,unknown,hammer_throw,True,medium,reviewed,claude_visual_contact_sheet,small_subject,Athletics broadcast.,role_group_0081,True,False
+stu11_20,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0079,False,False
+stu11_21,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0082,False,False
+stu11_22,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0083,True,False
+stu11_23,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0084,False,False
+stu11_24,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0085,False,False
+stu11_25,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;camera_cut;small_subject,Broadcast.,role_group_0086,True,False
+stu11_26,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0087,True,False
+stu11_27,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0088,False,False
+stu11_28,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0075,True,False
+stu11_29,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0089,False,False
+stu11_3,others,unknown,hammer_throw,True,medium,reviewed,claude_visual_contact_sheet,small_subject,Athletics broadcast.,role_group_0081,True,False
+stu11_30,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0089,False,False
+stu11_31,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0090,True,False
+stu11_32,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0089,False,False
+stu11_33,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0089,False,False
+stu11_34,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0084,False,False
+stu11_35,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0091,True,False
+stu11_36,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0092,False,False
+stu11_37,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0092,False,False
+stu11_38,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0092,False,False
+stu11_39,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0093,True,False
+stu11_4,others,unknown,hammer_throw,True,medium,reviewed,claude_visual_contact_sheet,small_subject;text_overlay,Athletics broadcast.,role_group_0081,True,False
+stu11_40,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0093,True,False
+stu11_41,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0075,True,False
+stu11_42,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0084,False,False
+stu11_43,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0075,True,False
+stu11_5,others,unknown,hammer_throw,True,medium,reviewed,claude_visual_contact_sheet,small_subject,Athletics broadcast.,role_group_0081,True,False
+stu11_6,others,unknown,hammer_throw,True,medium,reviewed,claude_visual_contact_sheet,small_subject,Athletics broadcast.,role_group_0081,True,False
+stu11_7,others,unknown,rowing_machine,True,medium,reviewed,claude_visual_contact_sheet,,Rowing ergometer.,role_group_0567,False,False
+stu11_8,others,unknown,rowing_machine,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Rowing ergometer side view.,role_group_0094,True,False
+stu11_9,others,unknown,rowing_machine,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Rowing ergometer with timer.,role_group_0095,False,False
+stu12_0,others,unknown,rowing_machine,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Rowing ergometer front view with timer.,role_group_0096,False,False
+stu12_1,others,unknown,rowing_boat,True,medium,reviewed,claude_visual_contact_sheet,small_subject,Single scull.,role_group_0097,True,False
+stu12_10,others,unknown,rowing_boat,False,high,reviewed,claude_visual_contact_sheet,multi_person;small_subject,Distant crew boat; several people.,role_group_0098,True,False
+stu12_11,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0088,False,False
+stu12_12,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Broadcast.,role_group_0099,True,False
+stu12_14,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0100,False,False
+stu12_15,pommelhorse,unknown,pommel_horse,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Broadcast; moving camera.,role_group_0100,False,False
+stu12_16,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0100,False,False
+stu12_17,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0100,False,False
+stu12_18,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0075,True,False
+stu12_19,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0075,True,False
+stu12_2,others,unknown,soccer_juggling,True,medium,reviewed,claude_visual_contact_sheet,,Football juggling.,role_group_0101,False,False
+stu12_20,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0085,False,False
+stu12_21,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0085,False,False
+stu12_22,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0085,False,False
+stu12_23,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0085,False,False
+stu12_24,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Broadcast.,role_group_0087,True,False
+stu12_25,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0087,True,False
+stu12_26,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0075,True,False
+stu12_27,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0075,True,False
+stu12_28,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Broadcast.,role_group_0084,False,False
+stu12_29,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0084,False,False
+stu12_3,others,unknown,hammer_throw,True,medium,reviewed,claude_visual_contact_sheet,small_subject,Athletics broadcast.,role_group_0081,True,False
+stu12_30,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0084,False,False
+stu12_31,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0092,False,False
+stu12_32,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0102,False,False
+stu12_33,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0075,True,False
+stu12_34,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0103,False,False
+stu12_35,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Broadcast.,role_group_0092,False,False
+stu12_36,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0104,False,False
+stu12_37,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Broadcast.,role_group_0092,False,False
+stu12_38,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0093,True,False
+stu12_39,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0093,True,False
+stu12_4,others,unknown,hammer_throw,True,medium,reviewed,claude_visual_contact_sheet,small_subject;text_overlay,Athletics broadcast.,role_group_0081,True,False
+stu12_40,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0093,True,False
+stu12_41,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0093,True,False
+stu12_42,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0093,True,False
+stu12_43,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0084,False,False
+stu12_5,others,unknown,rowing_boat,False,high,reviewed,claude_visual_contact_sheet,multi_person,Crew boat.,role_group_0105,True,False
+stu12_6,others,unknown,soccer_juggling,False,low,reviewed,claude_visual_contact_sheet,portrait;small_subject,Tiny figure.,role_group_0106,True,False
+stu12_7,others,unknown,rowing_machine,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Rowing ergometer with timer.,role_group_0107,False,False
+stu12_8,others,unknown,soccer_juggling,False,medium,reviewed,claude_visual_contact_sheet,handheld;tight_crop,Handheld legs-only footage.,role_group_0108,True,False
+stu12_9,others,unknown,rowing_boat,False,high,reviewed,claude_visual_contact_sheet,multi_person,Crew boat; several people overlap.,role_group_0109,True,False
+stu13_0,others,unknown,rowing_machine,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Rowing ergometer with timer.,role_group_0096,False,False
+stu13_1,others,unknown,rowing_boat,True,medium,reviewed,claude_visual_contact_sheet,small_subject,Single scull.,role_group_0110,True,False
+stu13_10,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0077,True,False
+stu13_11,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0111,True,False
+stu13_12,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Broadcast.,role_group_0084,False,False
+stu13_13,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0112,False,False
+stu13_14,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0100,False,False
+stu13_15,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0100,False,False
+stu13_16,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0100,False,False
+stu13_17,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0100,False,False
+stu13_18,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0085,False,False
+stu13_19,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0085,False,False
+stu13_2,others,unknown,hammer_throw,True,medium,reviewed,claude_visual_contact_sheet,,Athletics broadcast.,role_group_0113,True,False
+stu13_20,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0085,False,False
+stu13_21,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0114,True,False
+stu13_22,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Broadcast.,role_group_0075,True,False
+stu13_23,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0087,True,False
+stu13_24,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Broadcast.,role_group_0087,True,False
+stu13_25,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0087,True,False
+stu13_26,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0089,False,False
+stu13_27,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0089,False,False
+stu13_28,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0089,False,False
+stu13_29,pommelhorse,unknown,pommel_horse,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Broadcast; moving camera.,role_group_0084,False,False
+stu13_3,others,unknown,hammer_throw,True,medium,reviewed,claude_visual_contact_sheet,small_subject,Athletics broadcast.,role_group_0081,True,False
+stu13_30,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0084,False,False
+stu13_31,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0084,False,False
+stu13_32,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0084,False,False
+stu13_33,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0092,False,False
+stu13_34,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0075,True,False
+stu13_35,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0092,False,False
+stu13_36,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0092,False,False
+stu13_37,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Broadcast.,role_group_0092,False,False
+stu13_38,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0099,True,False
+stu13_39,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0093,True,False
+stu13_4,others,unknown,rowing_machine,False,medium,reviewed,claude_visual_contact_sheet,tight_crop,Arm close-up only.,role_group_0115,True,False
+stu13_40,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0075,True,False
+stu13_41,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0075,True,False
+stu13_42,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0116,True,False
+stu13_43,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0084,False,False
+stu13_5,others,unknown,rowing_boat,False,high,reviewed,claude_visual_contact_sheet,multi_person;small_subject,Overhead eight boat.,role_group_0117,True,False
+stu13_6,others,unknown,rowing_boat,True,medium,reviewed,claude_visual_contact_sheet,,Single scull bow view.,role_group_0118,True,False
+stu13_7,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0075,True,False
+stu13_8,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0075,True,False
+stu13_9,pommelhorse,unknown,pommel_horse,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Pommel horse broadcast.,role_group_0102,False,False
+stu1_0,battle_rope,unknown,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0119,True,False
+stu1_1,battle_rope,unknown,battle_rope,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Clean front view.,role_group_0120,True,False
+stu1_11,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,portrait;small_subject,Small figure.,role_group_0122,False,False
+stu1_12,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,portrait;small_subject,Small figure; warm lighting.,role_group_0123,True,False
+stu1_13,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;occlusion,View from behind the head with counter.,role_group_0124,False,False
+stu1_14,front_raise,unknown,shoulder_complex,False,high,reviewed,claude_visual_contact_sheet,,Front raise plus lateral raise plus overhead press complex; contains supported motions.,role_group_0125,True,False
+stu1_15,front_raise,unknown,front_and_lateral_raise_alternating,False,medium,reviewed,claude_visual_contact_sheet,,Alternates front and lateral raises.,role_group_0126,False,False
+stu1_16,front_raise,unknown,dumbbell_front_raise,False,medium,reviewed,claude_visual_contact_sheet,cutaway,Close-up cutaways.,role_group_0127,True,False
+stu1_17,front_raise,unknown,dumbbell_front_raise,False,low,reviewed,claude_visual_contact_sheet,portrait;small_subject,Tiny figure.,role_group_0128,False,False
+stu1_19,front_raise,unknown,dumbbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Standing front raise.,role_group_0130,True,False
+stu1_2,bench_pressing,bench_press,barbell_bench_press,False,high,reviewed,claude_visual_contact_sheet,occlusion,Plate hides the lifter.,role_group_0131,True,False
+stu1_20,front_raise,unknown,kettlebell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Standing front raise.,role_group_0132,True,False
+stu1_21,front_raise,unknown,cable_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Cable front raise.,role_group_0133,False,False
+stu1_22,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0134,True,False
+stu1_23,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0135,True,False
+stu1_24,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0136,True,False
+stu1_25,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0137,True,False
+stu1_26,jump_jack,jumping_jack,jumping_jack,True,high,reviewed,claude_visual_contact_sheet,tight_crop;motion_blur,Legs cut at the knees in some frames.,role_group_0138,True,False
+stu1_27,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0139,True,False
+stu1_28,others,unknown,soccer_juggling,True,medium,reviewed,claude_visual_contact_sheet,,Football juggling.,role_group_0140,False,False
+stu1_29,others,unknown,soccer_juggling,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Football juggling.,role_group_0140,False,False
+stu1_3,bench_pressing,bench_press,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,title_card;cutaway,Edited explainer with close-ups.,role_group_0141,True,False
+stu1_30,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,portrait,Back view.,role_group_0142,True,False
+stu1_31,pull_up,pull_up,pull_up,False,medium,reviewed,claude_visual_contact_sheet,multi_person;camera_cut;text_overlay,Record attempt with judges and cutaways.,role_group_0143,True,False
+stu1_32,pull_up,pull_up,pull_up,True,high,reviewed,claude_visual_contact_sheet,,Back view on a home tower.,role_group_0144,True,False
+stu1_33,pull_up,pull_up,pull_up,False,high,reviewed,claude_visual_contact_sheet,crowd;multi_person,Beach event crowd.,role_group_0145,True,False
+stu1_34,pull_up,pull_up,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,title_card;cutaway,Tutorial with before/after stills and text slides.,role_group_0146,True,False
+stu1_35,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,multi_person;crowd,Event with judges standing beside the performer.,role_group_0147,True,False
+stu1_36,pull_up,pull_up,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,talking_head;text_overlay,Talking segments between reps.,role_group_0148,True,False
+stu1_37,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,portrait,Indoor.,role_group_0149,True,False
+stu1_38,pull_up,pull_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0150,True,False
+stu1_39,pull_up,pull_up,pull_up,False,medium,reviewed,claude_visual_contact_sheet,multi_person;camera_cut;tight_crop,Coach with clipboard; close-ups.,role_group_0151,True,False
+stu1_4,bench_pressing,bench_press,dumbbell_bench_press,False,high,reviewed,claude_visual_contact_sheet,cutaway;camera_cut,Dumbbell press with close-up cutaways.,role_group_0152,False,False
+stu1_40,pull_up,pull_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0153,True,False
+stu1_41,pull_up,pull_up,pull_up,False,high,reviewed,claude_visual_contact_sheet,crowd;multi_person,Beach event crowd.,role_group_0154,True,False
+stu1_42,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,small_subject;text_overlay,Distant indoor view.,role_group_0155,True,False
+stu1_43,push_up,push_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0156,True,False
+stu1_44,push_up,push_up,push_up,True,high,reviewed,claude_visual_contact_sheet,camera_cut,Side then front view.,role_group_0157,True,False
+stu1_45,push_up,push_up,push_up,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Outdoor side view.,role_group_0158,True,False
+stu1_46,push_up,push_up,push_up,False,medium,reviewed,claude_visual_contact_sheet,cutaway;camera_cut,Close-up cutaways.,role_group_0159,False,False
+stu1_47,push_up,push_up,push_up,True,high,reviewed,claude_visual_contact_sheet,,Side view on turf.,role_group_0160,True,False
+stu1_48,push_up,push_up,push_up,True,high,reviewed,claude_visual_contact_sheet,high_angle,Audit sample: correct.,role_group_0161,True,False
+stu1_49,push_up,push_up,push_up_handles,False,high,reviewed,claude_visual_contact_sheet,cutaway;tight_crop,Mostly muscle close-ups with overlays.,role_group_0162,False,False
+stu1_5,bench_pressing,bench_press,barbell_bench_press,False,high,reviewed,claude_visual_contact_sheet,cutaway,Mid-clip face and muscle close-ups replace the lift for about a third of the interval.,role_group_0163,False,False
+stu1_50,push_up,push_up,push_up_variants,False,medium,reviewed,claude_visual_contact_sheet,text_overlay;picture_in_picture,Incline-standard-decline variant demo with insets.,role_group_0164,True,False
+stu1_51,push_up,push_up,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,cutaway;title_card,Tutorial with close-ups and logo card.,role_group_0165,False,False
+stu1_52,push_up,push_up,workout_montage,False,high,reviewed,claude_visual_contact_sheet,multi_person;title_card,Several people and title card.,role_group_0166,False,False
+stu1_54,situp,sit_up,partner_held_sit_up,True,medium,reviewed,claude_visual_contact_sheet,multi_person,Child sit-up with partner holding feet.,role_group_0167,True,False
+stu1_55,situp,sit_up,instruction_mixed,False,medium,reviewed,claude_visual_contact_sheet,text_overlay,Step-by-step tutorial panels.,role_group_0168,True,False
+stu1_56,situp,unknown,leg_raise_crunch,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Legs held vertical; reverse-crunch style stays unknown.,role_group_0169,True,False
+stu1_57,situp,sit_up,sit_up,True,medium,reviewed,claude_visual_contact_sheet,motion_blur,Blurry but clear sit-ups.,role_group_0170,True,False
+stu1_58,situp,unknown,seated_twist,True,medium,reviewed,claude_visual_contact_sheet,,Seated Russian twist; not a sit-up.,role_group_0171,True,False
+stu1_59,situp,sit_up,sit_up,False,low,reviewed,claude_visual_contact_sheet,dark;tight_crop,Dark close shot.,role_group_0172,True,False
+stu1_6,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,camera_cut;text_overlay,Several sets edited together.,role_group_0173,False,False
+stu1_60,situp,sit_up,ab_machine_crunch,True,medium,reviewed,claude_visual_contact_sheet,,Ab-roller machine crunch.,role_group_0174,False,False
+stu1_61,situp,sit_up,sit_up,False,medium,reviewed,claude_visual_contact_sheet,tight_crop;dark,Back view; head cut off.,role_group_0175,False,False
+stu1_62,situp,sit_up,pool_partner_sit_up,False,high,reviewed,claude_visual_contact_sheet,multi_person;occlusion,Performer falls back into a pool; body underwater.,role_group_0176,True,False
+stu1_63,situp,sit_up,partner_held_sit_up,True,medium,reviewed,claude_visual_contact_sheet,multi_person,Partner holds feet.,role_group_0177,True,False
+stu1_64,situp,sit_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0178,True,False
+stu1_65,situp,sit_up,decline_bench_sit_up,True,medium,reviewed,claude_visual_contact_sheet,tight_crop,Close incline bench.,role_group_0179,False,False
+stu1_66,situp,sit_up,weighted_sit_up,True,medium,reviewed,claude_visual_contact_sheet,multi_person;text_overlay,Coach holds feet; captions.,role_group_0180,True,False
+stu1_67,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0181,False,False
+stu1_68,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0181,False,False
+stu1_7,bench_pressing,shoulder_press,barbell_shoulder_press,True,medium,reviewed,claude_visual_contact_sheet,backlit,Published bench_pressing but visibly an upright overhead press seen from behind.,role_group_0183,False,False
+stu1_70,squat,squat,barbell_back_squat,True,medium,reviewed,claude_visual_contact_sheet,portrait,Rack squat.,role_group_0184,False,False
+stu1_71,squat,squat,barbell_back_squat,True,medium,reviewed,claude_visual_contact_sheet,portrait;backlit,Rack squat.,role_group_0379,True,False
+stu1_72,squat,unknown,squat_calf_raise,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Squat with calf raise compound stays unknown.,role_group_0185,False,False
+stu1_8,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,multi_person;portrait;small_subject,Spotter; small figure.,role_group_0186,True,False
+stu1_9,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,tight_crop,Feet-end view.,role_group_0187,True,False
+stu2_0,battle_rope,unknown,battle_rope,True,high,reviewed,claude_visual_contact_sheet,,Audit sample: correct.,role_group_0188,True,False
+stu2_1,battle_rope,unknown,battle_rope,True,medium,reviewed,claude_visual_contact_sheet,camera_cut,Battle ropes outdoors.,role_group_0189,True,False
+stu2_10,bench_pressing,bench_press,barbell_bench_press,True,high,reviewed,claude_visual_contact_sheet,,Clean high side view.,role_group_0190,True,False
+stu2_11,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,occlusion,Behind-the-head view.,role_group_0191,False,False
+stu2_12,bench_pressing,unknown,seated_machine_press,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Upright seated chest-press machine.,role_group_0192,True,False
+stu2_13,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,portrait;small_subject,Small figure.,role_group_0193,True,False
+stu2_14,front_raise,unknown,front_and_lateral_raise_alternating,False,high,reviewed,claude_visual_contact_sheet,text_overlay;camera_cut,Alternates front raises with lateral raises (a supported class).,role_group_0194,False,False
+stu2_16,front_raise,unknown,bent_over_barbell_row,True,medium,reviewed,claude_visual_contact_sheet,portrait,Published front_raise but visibly a barbell row; unsupported variant (dumbbell row is the supported class).,role_group_0196,False,False
+stu2_17,front_raise,unknown,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,multi_person;talking_head,Two-person tutorial.,role_group_0197,True,False
+stu2_18,front_raise,shoulder_press,dumbbell_shoulder_press,False,medium,reviewed,claude_visual_contact_sheet,text_overlay;cutaway,Published front_raise but titled dumbbell shoulder press; heavy overlays.,role_group_0198,False,False
+stu2_19,front_raise,unknown,incline_prone_raise,True,medium,reviewed,claude_visual_contact_sheet,,Chest-supported raise on an incline bench.,role_group_0199,False,False
+stu2_2,bench_pressing,bench_press,incline_smith_press,True,medium,reviewed,claude_visual_contact_sheet,portrait,Incline Smith-machine press.,role_group_0200,True,False
+stu2_20,front_raise,unknown,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,multi_person;text_overlay,Two-person tutorial.,role_group_0201,False,False
+stu2_21,front_raise,unknown,dumbbell_front_raise,False,low,reviewed,claude_visual_contact_sheet,portrait;small_subject,Tiny figure.,role_group_0202,False,False
+stu2_22,front_raise,lateral_raise,dumbbell_lateral_raise,True,medium,reviewed,claude_visual_contact_sheet,,Published front_raise but visibly lateral raises.,role_group_0203,False,False
+stu2_23,front_raise,unknown,seated_rear_delt_fly,True,medium,reviewed,claude_visual_contact_sheet,,Seated bent-over reverse fly; a lateral-raise confuser.,role_group_0204,True,False
+stu2_24,front_raise,unknown,barbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Barbell front raise.,role_group_0205,True,False
+stu2_25,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0206,True,False
+stu2_26,jump_jack,jumping_jack,jumping_jack,True,medium,reviewed,claude_visual_contact_sheet,camera_cut,Ends with a close-up.,role_group_0207,False,False
+stu2_27,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0208,True,False
+stu2_28,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0135,True,False
+stu2_29,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0209,True,False
+stu2_3,bench_pressing,bench_press,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,talking_head;multi_person;text_overlay,Tutorial with coach crouching beside the bench.,role_group_0210,True,False
+stu2_30,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0211,True,False
+stu2_31,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0212,True,False
+stu2_32,jump_jack,jumping_jack,jumping_jack,True,medium,reviewed,claude_visual_contact_sheet,tight_crop,Legs mostly out of frame.,role_group_0213,True,False
+stu2_33,jump_jack,jumping_jack,unclear_leg_pattern,False,low,reviewed,claude_visual_contact_sheet,backlit;portrait,Silhouette; some frames look like a lunge stance. Not decidable.,role_group_0214,True,False
+stu2_34,pull_up,pull_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0215,False,False
+stu2_35,pull_up,pull_up,pull_up,True,high,reviewed,claude_visual_contact_sheet,,Back view.,role_group_0216,False,False
+stu2_36,pull_up,pull_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0217,True,False
+stu2_37,pull_up,pull_up,pull_up,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Back view; captions.,role_group_0218,True,False
+stu2_38,pull_up,unknown,muscle_up,False,high,reviewed,claude_visual_contact_sheet,multi_person;crowd,Muscle-ups (body passes over the bar) in front of a crowd.,role_group_0219,True,False
+stu2_39,pull_up,pull_up,pull_up,True,high,reviewed,claude_visual_contact_sheet,,Outdoor front view.,role_group_0220,True,False
+stu2_4,bench_pressing,bench_press,barbell_bench_press,True,high,reviewed,claude_visual_contact_sheet,,Clean side view.,role_group_0567,False,False
+stu2_40,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,portrait;small_subject,Front view.,role_group_0221,True,False
+stu2_41,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,small_subject,Beach bars; distant.,role_group_0222,True,False
+stu2_42,pull_up,pull_up,pull_up,False,medium,reviewed,claude_visual_contact_sheet,multi_person;camera_cut;tight_crop,Coach and bystanders; close-ups.,role_group_0223,True,False
+stu2_43,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,camera_cut,Home tower; angle changes.,role_group_0224,False,False
+stu2_44,pull_up,pull_up,pull_up,False,high,reviewed,claude_visual_contact_sheet,crowd;multi_person,Store event crowd and mascot.,role_group_0225,True,False
+stu2_45,push_up,push_up,knee_push_up,True,medium,reviewed,claude_visual_contact_sheet,,Knee push-up side view.,role_group_0226,True,False
+stu2_46,push_up,push_up,push_up,False,medium,reviewed,claude_visual_contact_sheet,camera_cut;text_overlay,Kneeling rest segments between sets.,role_group_0227,True,False
+stu2_47,push_up,push_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0228,True,False
+stu2_48,push_up,unknown,decline_oblique_raise,False,medium,reviewed,claude_visual_contact_sheet,text_overlay,Oblique raises off a bench; not a push-up.,role_group_0229,True,False
+stu2_49,push_up,push_up,push_up,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Side view.,role_group_0230,True,False
+stu2_5,bench_pressing,bench_press,barbell_bench_press,False,high,reviewed,claude_visual_contact_sheet,tight_crop;cutaway,Close-ups with cutaways.,role_group_0231,True,False
+stu2_50,push_up,push_up,push_up,True,medium,reviewed,claude_visual_contact_sheet,,Front-side view.,role_group_0232,True,False
+stu2_51,push_up,push_up,instruction_mixed,False,medium,reviewed,claude_visual_contact_sheet,text_overlay;multi_person,Subtitled variant tutorial.,role_group_0233,False,False
+stu2_52,push_up,unknown,handstand_push_up,True,medium,reviewed,claude_visual_contact_sheet,multi_person;text_overlay,Handstand push-up against a wall; not a push-up.,role_group_0234,True,False
+stu2_53,push_up,push_up,push_up,True,medium,reviewed,claude_visual_contact_sheet,multi_person,Bystander in the background; some knee push-ups.,role_group_0235,False,False
+stu2_54,push_up,push_up,push_up,True,high,reviewed,claude_visual_contact_sheet,,Dog beside the performer; front view.,role_group_0236,True,False
+stu2_55,situp,sit_up,sit_up,True,medium,reviewed,claude_visual_contact_sheet,,Front-side view.,role_group_0544,False,False
+stu2_56,situp,sit_up,anchored_sit_up,True,high,reviewed,claude_visual_contact_sheet,,Clean side view.,role_group_0237,True,False
+stu2_57,situp,sit_up,machine_ab_crunch,True,medium,reviewed,claude_visual_contact_sheet,,Audit sample: correct (torso-flexion machine).,role_group_0238,False,False
+stu2_58,situp,sit_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0239,True,False
+stu2_6,bench_pressing,bench_press,barbell_bench_press,True,high,reviewed,claude_visual_contact_sheet,multi_person,Spotter standing over the lifter.,role_group_0241,True,False
+stu2_60,situp,sit_up,group_test,False,high,reviewed,claude_visual_contact_sheet,crowd;multi_person;title_card,Group fitness test.,role_group_0242,False,False
+stu2_61,situp,sit_up,crunch_on_bench,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Crunch on a bench.,role_group_0243,True,False
+stu2_62,situp,sit_up,partner_held_sit_up,True,medium,reviewed,claude_visual_contact_sheet,multi_person,Partner holds feet.,role_group_0244,True,False
+stu2_63,situp,sit_up,crunch,True,medium,reviewed,claude_visual_contact_sheet,multi_person,Coach legs in frame.,role_group_0245,True,False
+stu2_64,situp,sit_up,sit_up,False,medium,reviewed,claude_visual_contact_sheet,tight_crop,Head-on close view; legs hidden.,role_group_0246,True,False
+stu2_65,situp,sit_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0247,True,False
+stu2_66,situp,sit_up,crunch,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Gym mat.,role_group_0248,False,False
+stu2_68,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0061,True,False
+stu2_69,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0250,False,False
+stu2_7,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,multi_person;occlusion,Coach spots from behind the head.,role_group_0251,False,False
+stu2_70,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0252,False,False
+stu2_71,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0252,False,False
+stu2_72,squat,unknown,squat_overhead_reach,False,medium,reviewed,claude_visual_contact_sheet,,Squat with overhead reach and stand.,role_group_0253,False,False
+stu2_8,bench_pressing,unknown,mixed_gym_vlog,False,high,reviewed,claude_visual_contact_sheet,camera_cut;multi_person,Walking and various lifts; no single exercise.,role_group_0254,False,False
+stu2_9,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,multi_person;crowd,Spotter and crowded gym.,role_group_0255,False,False
+stu3_0,battle_rope,unknown,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0256,True,False
+stu3_1,battle_rope,unknown,battle_rope,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Battle-rope side plank variation.,role_group_0257,True,False
+stu3_10,front_raise,unknown,barbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Barbell front raise.,role_group_0258,True,False
+stu3_11,front_raise,unknown,seated_rear_delt_fly,True,medium,reviewed,claude_visual_contact_sheet,,Seated bent-over fly.,role_group_0259,False,False
+stu3_12,front_raise,unknown,dumbbell_front_raise,False,medium,reviewed,claude_visual_contact_sheet,multi_person,Second person walks through.,role_group_0260,False,False
+stu3_13,front_raise,unknown,seated_dumbbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Seated front raise.,role_group_0261,True,False
+stu3_14,front_raise,unknown,cable_front_raise,True,high,reviewed,claude_visual_contact_sheet,,Side view.,role_group_0262,False,False
+stu3_15,front_raise,unknown,plate_front_raise,False,medium,reviewed,claude_visual_contact_sheet,cutaway;camera_cut,Close-ups.,role_group_0263,False,False
+stu3_16,front_raise,unknown,bent_over_dumbbell_raise,False,medium,reviewed,claude_visual_contact_sheet,camera_cut;cutaway,Bent-over raise with cutaways.,role_group_0264,True,False
+stu3_17,front_raise,unknown,dumbbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,small_subject,Standing.,role_group_0265,False,False
+stu3_18,front_raise,unknown,bent_over_dumbbell_raise,True,medium,reviewed,claude_visual_contact_sheet,,Bent-over raise; resembles a dumbbell row. Needs second review.,role_group_0266,False,False
+stu3_19,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0267,False,False
+stu3_2,bench_pressing,bench_press,incline_dumbbell_press,False,medium,reviewed,claude_visual_contact_sheet,multi_person;text_overlay,Standing coach dominates the frame; tracker risk.,role_group_0268,True,False
+stu3_20,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0269,True,False
+stu3_21,jump_jack,jumping_jack,jumping_jack,True,high,reviewed,claude_visual_contact_sheet,,Outdoor front view.,role_group_0270,True,False
+stu3_22,jump_jack,jumping_jack,jumping_jack,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Text panels; side and front views.,role_group_0271,True,False
+stu3_23,jump_jack,jumping_jack,jumping_jack,True,medium,reviewed,claude_visual_contact_sheet,portrait;small_subject,Small dim figure.,role_group_0272,True,False
+stu3_24,jump_jack,jumping_jack,jumping_jack,True,high,reviewed,claude_visual_contact_sheet,multi_person,Child in the background.,role_group_0273,True,False
+stu3_25,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0274,True,False
+stu3_26,jump_jack,jumping_jack,jumping_jack,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Audit sample: correct.,role_group_0275,True,False
+stu3_27,jump_jack,jumping_jack,jumping_jack,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Counter overlay; clean.,role_group_0275,True,False
+stu3_28,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0276,False,False
+stu3_29,jump_jack,jumping_jack,workout_montage,False,high,reviewed,claude_visual_contact_sheet,camera_cut;cutaway;multi_person,Montage of different people and title cards.,role_group_0277,True,False
+stu3_3,bench_pressing,bench_press,smith_bench_press,False,low,reviewed,claude_visual_contact_sheet,dark;occlusion,Dark; lifter barely visible.,role_group_0278,True,False
+stu3_30,jump_jack,jumping_jack,jumping_jack,True,high,reviewed,claude_visual_contact_sheet,portrait;text_overlay,Audit sample: correct.,role_group_0279,False,False
+stu3_31,jump_jack,jumping_jack,jumping_jack,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Social-media overlays.,role_group_0280,True,False
+stu3_32,pull_up,pull_up,pull_up,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Outdoor front view.,role_group_0281,True,False
+stu3_33,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,portrait;small_subject,Dark indoor.,role_group_0282,True,False
+stu3_34,pull_up,pull_up,instruction_mixed,False,medium,reviewed,claude_visual_contact_sheet,text_overlay,Subtitled tutorial with close-up.,role_group_0283,True,False
+stu3_35,pull_up,pull_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0284,False,False
+stu3_36,pull_up,pull_up,instruction_mixed,False,medium,reviewed,claude_visual_contact_sheet,text_overlay;camera_cut,Tutorial with indoor cutaways.,role_group_0285,True,False
+stu3_37,pull_up,unknown,animation,False,high,reviewed,claude_visual_contact_sheet,title_card,Animated diagram; not real footage.,role_group_0286,True,False
+stu3_38,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,portrait;small_subject;text_overlay,Outdoor bar.,role_group_0287,False,False
+stu3_39,pull_up,pull_up,program_montage,False,medium,reviewed,claude_visual_contact_sheet,text_overlay;camera_cut,Training-plan montage; text panel covers half the frame.,role_group_0288,True,False
+stu3_4,bench_pressing,bench_press,barbell_bench_press,True,high,reviewed,claude_visual_contact_sheet,,Clean side view.,role_group_0289,True,False
+stu3_40,pull_up,pull_up,pull_up,True,high,reviewed,claude_visual_contact_sheet,,Back view.,role_group_0290,True,False
+stu3_41,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,tight_crop,Low angle; legs out of frame.,role_group_0291,True,False
+stu3_42,push_up,push_up,push_up,False,medium,reviewed,claude_visual_contact_sheet,cutaway;text_overlay,Close-up cutaways with counter.,role_group_0292,True,False
+stu3_43,push_up,push_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0293,True,False
+stu3_44,push_up,push_up,push_up,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;title_card,Outdoor side view with banner.,role_group_0294,True,False
+stu3_45,push_up,push_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0230,True,False
+stu3_46,push_up,push_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0295,True,False
+stu3_47,push_up,unknown,static_plank_or_undecidable,False,low,reviewed,claude_visual_contact_sheet,,High plank held in every sampled frame; push-up motion not visible.,role_group_0296,True,False
+stu3_48,push_up,unknown,tire_workout,False,medium,reviewed,claude_visual_contact_sheet,text_overlay;small_subject,Mixed tire workout.,role_group_0297,True,False
+stu3_49,push_up,push_up,variant_compilation,False,high,reviewed,claude_visual_contact_sheet,text_overlay,Plyometric and exotic variants (flying and Lalanne) in sequence.,role_group_0298,True,False
+stu3_5,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,multi_person;tight_crop,Spotter; close crop.,role_group_0299,True,False
+stu3_50,push_up,push_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0300,True,False
+stu3_51,push_up,push_up,push_up,False,medium,reviewed,claude_visual_contact_sheet,tight_crop;handheld,Close handheld; hands only.,role_group_0301,True,False
+stu3_52,situp,unknown,bicycle_crunch,False,medium,reviewed,claude_visual_contact_sheet,text_overlay;cutaway,Bicycle crunch with close-up cutaways.,role_group_0302,True,False
+stu3_53,situp,sit_up,crunch,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Outdoor crunches; small inset.,role_group_0303,True,False
+stu3_55,situp,sit_up,decline_bench_sit_up,True,medium,reviewed,claude_visual_contact_sheet,,Decline bench.,role_group_0305,True,False
+stu3_56,situp,sit_up,partner_held_sit_up,True,medium,reviewed,claude_visual_contact_sheet,multi_person;crowd;camera_cut,Partner holds feet; crowd; one cutaway to the crowd.,role_group_0306,True,False
+stu3_57,situp,sit_up,decline_bench_sit_up,True,medium,reviewed,claude_visual_contact_sheet,high_angle,Overhead view.,role_group_0307,True,False
+stu3_58,situp,sit_up,sit_up,True,medium,reviewed,claude_visual_contact_sheet,high_angle;occlusion,Overhead view; blanket.,role_group_0308,True,False
+stu3_59,squat,squat,barbell_back_squat,False,low,reviewed,claude_visual_contact_sheet,portrait;occlusion,Plates and mirror; body unclear.,role_group_0309,False,False
+stu3_6,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,camera_cut,Two angles.,role_group_0310,True,False
+stu3_60,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0311,True,False
+stu3_61,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0312,False,False
+stu3_62,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0062,True,False
+stu3_64,squat,unknown,barbell_row_or_deadlift,False,low,reviewed,claude_visual_contact_sheet,portrait;dark,Hinged barbell movement; not clearly a squat.,role_group_0314,True,False
+stu3_65,squat,squat,barbell_back_squat,True,high,reviewed,claude_visual_contact_sheet,,Front view in rack.,role_group_0060,False,False
+stu3_66,squat,squat,squat_with_jump,True,medium,reviewed,claude_visual_contact_sheet,,Wide-stance squats with a jump between some reps.,role_group_0181,False,False
+stu3_67,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0315,True,False
+stu3_68,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0316,False,False
+stu3_69,squat,squat,bodyweight_squat,True,high,reviewed,claude_visual_contact_sheet,portrait,Audit sample: correct.,role_group_0317,True,False
+stu3_7,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,occlusion,Plates partly occlude.,role_group_0318,False,False
+stu3_70,squat,squat,barbell_back_squat,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Captions.,role_group_0319,True,False
+stu3_71,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0320,False,False
+stu3_72,squat,squat,barbell_back_squat,True,medium,reviewed,claude_visual_contact_sheet,portrait,Rack side view.,role_group_0321,False,False
+stu3_9,front_raise,unknown,plate_front_raise,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Front view.,role_group_0323,True,False
+stu4_0,battle_rope,unknown,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0324,True,False
+stu4_1,battle_rope,unknown,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0325,True,False
+stu4_10,front_raise,unknown,cable_front_raise,False,low,reviewed,claude_visual_contact_sheet,portrait;small_subject,Tiny figure.,role_group_0825,False,False
+stu4_11,front_raise,unknown,plate_front_raise_to_overhead,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Front-raise overlay text.,role_group_0326,True,False
+stu4_12,front_raise,unknown,seated_cable_raise,True,medium,reviewed,claude_visual_contact_sheet,,Seated cable raise.,role_group_0129,False,False
+stu4_14,front_raise,unknown,cable_front_raise,False,medium,reviewed,claude_visual_contact_sheet,camera_cut;cutaway,Close-ups.,role_group_0328,False,False
+stu4_15,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0329,True,False
+stu4_16,jump_jack,jumping_jack,jumping_jack,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Counter overlay.,role_group_0330,True,False
+stu4_17,jump_jack,jumping_jack,jumping_jack,False,medium,reviewed,claude_visual_contact_sheet,dark;cutaway,Dark studio with close-up cutaways.,role_group_0331,True,False
+stu4_18,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0332,True,False
+stu4_19,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0333,False,False
+stu4_2,bench_pressing,deadlift,barbell_deadlift,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Published bench_pressing but visibly a conventional deadlift.,role_group_0334,True,False
+stu4_20,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0335,False,False
+stu4_21,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0336,False,False
+stu4_22,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0337,False,False
+stu4_23,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0338,False,False
+stu4_24,jump_jack,jumping_jack,jumping_jack_variants,False,medium,reviewed,claude_visual_contact_sheet,picture_in_picture;text_overlay,Mixed jack variants with preview insets.,role_group_0339,True,False
+stu4_25,jump_jack,jumping_jack,jumping_jack,False,medium,reviewed,claude_visual_contact_sheet,cutaway;camera_cut,Hand close-up cutaways.,role_group_0340,True,False
+stu4_26,jump_jack,unknown,high_knee_jack,False,medium,reviewed,claude_visual_contact_sheet,text_overlay,High-knee jack variant alternating with knee raises.,role_group_0341,False,False
+stu4_27,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0275,True,False
+stu4_28,others,unknown,soccer_juggling,True,medium,reviewed,claude_visual_contact_sheet,,Football juggling.,role_group_0140,False,False
+stu4_29,pull_up,pull_up,instruction_mixed,False,medium,reviewed,claude_visual_contact_sheet,talking_head;text_overlay,Talking between reps.,role_group_0342,False,False
+stu4_3,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;camera_cut,Brief seated intro then sets.,role_group_0343,True,False
+stu4_30,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,small_subject;text_overlay,Backyard bar.,role_group_0344,False,False
+stu4_31,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,tight_crop;text_overlay,Upper body; subtitles.,role_group_0345,False,False
+stu4_32,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Subtitled gym footage.,role_group_0346,False,False
+stu4_33,pull_up,pull_up,pull_up,False,high,reviewed,claude_visual_contact_sheet,crowd,Crowd; blurred edges.,role_group_0347,True,False
+stu4_34,pull_up,pull_up,mixed_with_talking,False,high,reviewed,claude_visual_contact_sheet,camera_cut;talking_head,Talking segments between sets.,role_group_0348,True,False
+stu4_35,pull_up,pull_up,pull_up,False,high,reviewed,claude_visual_contact_sheet,crowd;multi_person,Beach event crowd.,role_group_0154,True,False
+stu4_36,pull_up,pull_up,pull_up,False,medium,reviewed,claude_visual_contact_sheet,camera_cut;text_overlay,Edited with several angles and captions.,role_group_0349,True,False
+stu4_37,pull_up,pull_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0350,False,False
+stu4_38,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,portrait,Indoor.,role_group_0351,False,False
+stu4_39,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,portrait;text_overlay,Outdoor tower.,role_group_0352,True,False
+stu4_4,bench_pressing,bench_press,barbell_bench_press,True,high,reviewed,claude_visual_contact_sheet,multi_person;portrait,Feet-end view with spotter behind the head.,role_group_0353,True,False
+stu4_40,push_up,push_up,form_demo_push_up,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Form demo including deliberate faulty reps; still push-up motion.,role_group_0354,True,False
+stu4_41,push_up,push_up,push_up,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Same scene as stu2_46.,role_group_0227,True,False
+stu4_42,push_up,push_up,push_up,True,medium,reviewed,claude_visual_contact_sheet,multi_person;text_overlay,Bystander sitting beside.,role_group_0355,True,False
+stu4_43,push_up,push_up,form_demo_push_up,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Form demo with marks.,role_group_0356,True,False
+stu4_44,push_up,push_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0357,True,False
+stu4_45,push_up,push_up,push_up,False,medium,reviewed,claude_visual_contact_sheet,camera_cut;talking_head,Talking between sets.,role_group_0358,True,False
+stu4_46,push_up,push_up,push_up,True,medium,reviewed,claude_visual_contact_sheet,multi_person;text_overlay,Judge seated behind.,role_group_0235,False,False
+stu4_47,push_up,push_up,push_up,True,medium,reviewed,claude_visual_contact_sheet,multi_person;portrait,Audit sample: correct; bystanders.,role_group_0359,False,False
+stu4_48,push_up,unknown,animation,False,high,reviewed,claude_visual_contact_sheet,title_card,Anatomy animation; not real footage.,role_group_0360,True,False
+stu4_49,push_up,push_up,push_up,True,high,reviewed,claude_visual_contact_sheet,,Side view.,role_group_0361,True,False
+stu4_5,bench_pressing,unknown,non_exercise,False,high,reviewed,claude_visual_contact_sheet,text_overlay;tight_crop,Child sitting on an adult; not a bench press.,role_group_0362,True,False
+stu4_50,situp,sit_up,sit_up,False,high,reviewed,claude_visual_contact_sheet,tight_crop;occlusion,Close-up of a person sitting on the legs.,role_group_0362,True,False
+stu4_51,situp,unknown,reaching_crunch,True,medium,reviewed,claude_visual_contact_sheet,,Arms-up reaching crunch with lifted legs stays unknown.,role_group_0363,True,False
+stu4_53,situp,sit_up,full_sit_up,True,high,reviewed,claude_visual_contact_sheet,,Clean outdoor side view.,role_group_0365,True,False
+stu4_54,situp,sit_up,partner_held_sit_up,True,medium,reviewed,claude_visual_contact_sheet,multi_person,Partner holds feet.,role_group_0366,True,False
+stu4_55,situp,unknown,decline_leg_raise,False,medium,reviewed,claude_visual_contact_sheet,multi_person,Inverted leg raise on a decline bench.,role_group_0367,False,False
+stu4_56,situp,sit_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0368,False,False
+stu4_57,situp,sit_up,partner_held_sit_up,True,medium,reviewed,claude_visual_contact_sheet,multi_person;text_overlay,Partner holds feet; caption.,role_group_0369,True,False
+stu4_58,situp,sit_up,sit_up,False,medium,reviewed,claude_visual_contact_sheet,occlusion;multi_person,Person in the foreground blocks the view.,role_group_0370,True,False
+stu4_59,situp,sit_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0371,True,False
+stu4_6,bench_pressing,bench_press,barbell_bench_press,False,low,reviewed,claude_visual_contact_sheet,portrait;small_subject;dark,Tiny dark figure.,role_group_0372,True,False
+stu4_60,situp,unknown,tuck_crunch,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Knees and torso meet; jackknife-like tuck stays unknown per the v1 rule.,role_group_0373,True,False
+stu4_61,squat,squat,goblet_squat,True,medium,reviewed,claude_visual_contact_sheet,,Front view.,role_group_0374,False,False
+stu4_62,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0375,False,False
+stu4_63,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0376,False,False
+stu4_64,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0376,False,False
+stu4_65,squat,squat,squat_jump,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Audit sample: correct.,role_group_0377,True,False
+stu4_66,squat,squat,bodyweight_squat,False,medium,reviewed,claude_visual_contact_sheet,cutaway;camera_cut,Close-up cutaways.,role_group_0378,False,False
+stu4_68,squat,squat,barbell_back_squat,True,medium,reviewed,claude_visual_contact_sheet,portrait,Rack view.,role_group_0379,True,False
+stu4_69,squat,squat,barbell_back_squat,True,medium,reviewed,claude_visual_contact_sheet,tight_crop,Close side view.,role_group_0380,False,False
+stu4_7,bench_pressing,bench_press,dumbbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,tight_crop,Close view.,role_group_0381,False,False
+stu4_70,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0064,False,False
+stu4_71,squat,squat,box_squat,True,medium,reviewed,claude_visual_contact_sheet,small_subject,Outdoor box squat.,role_group_0064,False,False
+stu4_72,squat,squat,bodyweight_squat,True,high,reviewed,claude_visual_contact_sheet,multi_person,Coach stands beside the performer.,role_group_0382,False,False
+stu4_8,front_raise,unknown,front_raise_to_overhead,True,high,reviewed,claude_visual_contact_sheet,portrait,Side view.,role_group_0383,False,False
+stu4_9,front_raise,unknown,barbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Barbell front raise.,role_group_0384,True,False
+stu5_0,battle_rope,unknown,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0385,False,False
+stu5_1,battle_rope,unknown,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0386,True,False
+stu5_10,bench_pressing,bench_press,barbell_bench_press,False,low,reviewed,claude_visual_contact_sheet,portrait;small_subject,Too small to decide.,role_group_0387,True,False
+stu5_11,front_raise,unknown,incline_prone_raise,False,medium,reviewed,claude_visual_contact_sheet,cutaway,Close-up cutaways.,role_group_0388,True,False
+stu5_12,front_raise,unknown,incline_prone_raise,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Chest-supported raise.,role_group_0389,False,False
+stu5_13,front_raise,unknown,dumbbell_front_raise,False,low,reviewed,claude_visual_contact_sheet,portrait;small_subject,Tiny figure.,role_group_0390,False,False
+stu5_15,front_raise,unknown,shoulder_raise_complex,False,low,reviewed,claude_visual_contact_sheet,portrait;small_subject;camera_cut,Tiny figure with mixed raises.,role_group_0392,False,False
+stu5_16,front_raise,unknown,barbell_front_raise,False,medium,reviewed,claude_visual_contact_sheet,cutaway,Ends with a talking close-up.,role_group_0393,True,False
+stu5_17,front_raise,unknown,seated_dumbbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Seated front raise.,role_group_0394,True,False
+stu5_18,jump_jack,jumping_jack,jumping_jack,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Timer overlay; brief up-next inset at the end.,role_group_0395,True,False
+stu5_19,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0396,True,False
+stu5_2,battle_rope,unknown,battle_rope,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Audit sample: correct.,role_group_0397,True,False
+stu5_20,jump_jack,unknown,dumbbell_squat_jack_mixed,False,high,reviewed,claude_visual_contact_sheet,cutaway,Dumbbell squat-to-press and cutaways.,role_group_0398,True,False
+stu5_21,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0399,False,False
+stu5_22,jump_jack,jumping_jack,jumping_jack,False,medium,reviewed,claude_visual_contact_sheet,cutaway;dark,Dark studio with feet close-up cutaways.,role_group_0400,True,False
+stu5_23,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0401,False,False
+stu5_24,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0402,True,False
+stu5_25,jump_jack,jumping_jack,jumping_jack_variants,False,medium,reviewed,claude_visual_contact_sheet,picture_in_picture;text_overlay,Variant workout with preview insets.,role_group_0339,True,False
+stu5_26,jump_jack,jumping_jack,workout_montage,False,high,reviewed,claude_visual_contact_sheet,camera_cut;title_card,Several people and title cards.,role_group_0403,True,False
+stu5_27,jump_jack,jumping_jack,jumping_jack,True,medium,reviewed,claude_visual_contact_sheet,,Some reps are a cross-jack variant.,role_group_0404,True,False
+stu5_28,others,unknown,soccer_ball_drill,False,high,reviewed,claude_visual_contact_sheet,title_card;tight_crop;camera_cut,Edited drill montage with title cards.,role_group_0140,False,False
+stu5_29,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,portrait;dark,Dim room.,role_group_0405,True,False
+stu5_3,battle_rope,unknown,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0406,True,False
+stu5_30,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,tight_crop;text_overlay,Close back view.,role_group_0216,False,False
+stu5_31,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Outdoor bar; counter.,role_group_0407,False,False
+stu5_32,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,portrait;small_subject,Doorway bar.,role_group_0408,True,False
+stu5_33,pull_up,pull_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0409,True,False
+stu5_34,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,camera_cut;cutaway,Challenge video; brief close-up.,role_group_0616,False,False
+stu5_35,pull_up,pull_up,pull_up,True,high,reviewed,claude_visual_contact_sheet,portrait,Front view in a hallway.,role_group_0410,True,False
+stu5_36,pull_up,unknown,inverted_row,True,medium,reviewed,claude_visual_contact_sheet,,Body-row under a low bar; not a pull-up.,role_group_0411,False,False
+stu5_37,pull_up,pull_up,box_assisted_pull_up,True,medium,reviewed,claude_visual_contact_sheet,small_subject,Audit sample: correct (box-assisted).,role_group_0412,True,False
+stu5_38,pull_up,pull_up,pull_up,False,high,reviewed,claude_visual_contact_sheet,crowd;handheld;multi_person,Fisheye handheld beach scene with crowd.,role_group_0032,True,False
+stu5_39,pull_up,unknown,muscle_up,False,high,reviewed,claude_visual_contact_sheet,crowd;multi_person,Muscle-up competition crowd.,role_group_0219,True,False
+stu5_4,bench_pressing,bench_press,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,text_overlay;camera_cut;title_card,Tutorial with captions and a paper-title slide.,role_group_0413,True,False
+stu5_40,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,portrait;small_subject,Same room as stu4_38 (same source).,role_group_0351,False,False
+stu5_41,pull_up,pull_up,pull_up,True,high,reviewed,claude_visual_contact_sheet,,Backyard front view.,role_group_0414,False,False
+stu5_42,push_up,push_up,push_up,False,medium,reviewed,claude_visual_contact_sheet,crowd;camera_cut;handheld,Office crowd with cutaways.,role_group_0415,True,False
+stu5_43,push_up,push_up,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,talking_head;camera_cut,Tutorial with talking head.,role_group_0416,True,False
+stu5_44,push_up,push_up,form_demo_push_up,False,medium,reviewed,claude_visual_contact_sheet,text_overlay;cutaway,Form-error demo with overhead cutaway.,role_group_0417,True,False
+stu5_45,push_up,push_up,push_up,True,high,reviewed,claude_visual_contact_sheet,,Clean side view.,role_group_0418,True,False
+stu5_46,push_up,push_up,instruction_mixed,False,medium,reviewed,claude_visual_contact_sheet,text_overlay;talking_head,Subtitled tutorial ending in a talking head.,role_group_0419,True,False
+stu5_47,push_up,push_up,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,title_card;cutaway,Tutorial with title card and close-ups.,role_group_0420,True,False
+stu5_48,push_up,push_up,push_up,False,medium,reviewed,claude_visual_contact_sheet,cutaway;tight_crop,Close-up cutaways.,role_group_0421,True,False
+stu5_49,situp,sit_up,variant_demo,False,medium,reviewed,claude_visual_contact_sheet,camera_cut;title_card,Mixed sit-up and leg-raise demo; logo card.,role_group_0422,True,False
+stu5_5,bench_pressing,bench_press,incline_bench_press,False,medium,reviewed,claude_visual_contact_sheet,cutaway;camera_cut;multi_person,Moving close-ups with spotter.,role_group_0423,False,False
+stu5_50,situp,sit_up,sit_up,True,medium,reviewed,claude_visual_contact_sheet,small_subject,Distant gym view.,role_group_0424,True,False
+stu5_51,situp,sit_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0425,True,False
+stu5_53,situp,sit_up,sit_up,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Side and front views.,role_group_0427,True,False
+stu5_54,situp,unknown,push_up_tutorial,False,high,reviewed,claude_visual_contact_sheet,text_overlay,Published situp but visibly a push-up tutorial.,role_group_0428,False,False
+stu5_55,situp,sit_up,decline_crunch,True,medium,reviewed,claude_visual_contact_sheet,handheld;tight_crop,Handheld close camera; parts of the body leave the frame.,role_group_0429,True,False
+stu5_56,situp,sit_up,sit_up,False,low,reviewed,claude_visual_contact_sheet,portrait;small_subject,Tiny figure.,role_group_0430,True,False
+stu5_57,situp,sit_up,decline_bench_sit_up,False,medium,reviewed,claude_visual_contact_sheet,camera_cut,Black-and-white edit with cuts.,role_group_0431,True,False
+stu5_58,situp,sit_up,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,talking_head;multi_person,Trainer explanation between reps.,role_group_0432,True,False
+stu5_59,situp,sit_up,group_test,False,high,reviewed,claude_visual_contact_sheet,crowd;multi_person,Group fitness test.,role_group_0433,False,False
+stu5_6,bench_pressing,bench_press,dumbbell_bench_press,True,high,reviewed,claude_visual_contact_sheet,,Close high angle.,role_group_0434,False,False
+stu5_60,situp,sit_up,decline_bench_sit_up,True,medium,reviewed,claude_visual_contact_sheet,portrait;text_overlay,Captions.,role_group_0435,True,False
+stu5_61,situp,sit_up,ghd_sit_up,True,medium,reviewed,claude_visual_contact_sheet,,GHD sit-up with torso flexion (not hyperextension).,role_group_0436,False,False
+stu5_62,squat,squat,bodyweight_squat,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Timer overlays.,role_group_0249,True,False
+stu5_63,squat,squat,bodyweight_squat,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Audit sample: correct.,role_group_0377,True,False
+stu5_64,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0437,True,False
+stu5_65,squat,squat,bodyweight_squat,True,high,reviewed,claude_visual_contact_sheet,,Three-quarter rear view.,role_group_0438,True,False
+stu5_66,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0439,True,False
+stu5_67,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0316,False,False
+stu5_68,squat,squat,goblet_squat,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Front view.,role_group_0440,False,False
+stu5_7,bench_pressing,bench_press,barbell_bench_press,False,medium,reviewed,claude_visual_contact_sheet,multi_person,Three standing judges beside a small lifter; tracker risk.,role_group_0567,False,False
+stu5_70,squat,squat,barbell_back_squat,True,high,reviewed,claude_visual_contact_sheet,,Side view in a rack.,role_group_0441,False,False
+stu5_71,squat,squat,bodyweight_squat,False,medium,reviewed,claude_visual_contact_sheet,cutaway;tight_crop,Close-up cutaways.,role_group_0442,False,False
+stu5_8,bench_pressing,bench_press,barbell_bench_press,True,high,reviewed,claude_visual_contact_sheet,,Clean side view.,role_group_0443,False,False
+stu5_9,bench_pressing,bench_press,dumbbell_floor_press,True,medium,reviewed,claude_visual_contact_sheet,,Supine dumbbell press on the floor.,role_group_0444,True,False
+stu6_0,battle_rope,unknown,battle_rope,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Audit sample: correct.,role_group_0445,True,False
+stu6_1,bench_pressing,bench_press,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,talking_head;camera_cut,Tutorial with presenter segments.,role_group_0446,True,False
+stu6_10,front_raise,unknown,dumbbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Standing front raise.,role_group_0447,False,False
+stu6_11,front_raise,unknown,mixed_gym_vlog,False,high,reviewed,claude_visual_contact_sheet,camera_cut;multi_person,Several lifts and people.,role_group_0448,False,False
+stu6_12,front_raise,lateral_raise,dumbbell_lateral_raise,True,medium,reviewed,claude_visual_contact_sheet,,Published front_raise but visibly lateral raises.,role_group_0133,False,False
+stu6_14,front_raise,unknown,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,multi_person;talking_head,Two-person tutorial.,role_group_0260,False,False
+stu6_15,jump_jack,jumping_jack,jumping_jack,False,medium,reviewed,claude_visual_contact_sheet,cutaway;tight_crop,Close-up cutaways.,role_group_0450,True,False
+stu6_16,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0451,False,False
+stu6_17,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0452,True,False
+stu6_18,jump_jack,unknown,squat_jack_mixed,False,medium,reviewed,claude_visual_contact_sheet,camera_cut,Squat jumps mixed with jacks.,role_group_0453,True,False
+stu6_19,jump_jack,unknown,dumbbell_press_jack,False,medium,reviewed,claude_visual_contact_sheet,small_subject,Dumbbell overhead jack variant.,role_group_0454,False,False
+stu6_2,bench_pressing,bench_press,dumbbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,portrait;small_subject,Small figure.,role_group_0455,True,False
+stu6_20,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0456,False,False
+stu6_21,jump_jack,jumping_jack,jumping_jack,True,high,reviewed,claude_visual_contact_sheet,,Front view.,role_group_0338,False,False
+stu6_22,jump_jack,jumping_jack,jumping_jack,True,high,reviewed,claude_visual_contact_sheet,,Clean front view.,role_group_0457,False,False
+stu6_23,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0458,True,False
+stu6_24,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0459,True,False
+stu6_25,jump_jack,jumping_jack,jumping_jack,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;picture_in_picture,Timer and preview inset.,role_group_0460,True,False
+stu6_26,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Same scene as stu5_31.,role_group_0407,False,False
+stu6_27,pull_up,pull_up,pull_up,False,medium,reviewed,claude_visual_contact_sheet,camera_cut;dark,Black-and-white edit with cutaways.,role_group_0461,True,False
+stu6_28,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,portrait;text_overlay,Doorway bar with timer.,role_group_0409,True,False
+stu6_29,pull_up,pull_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0462,True,False
+stu6_3,bench_pressing,bench_press,barbell_bench_press,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Clean side view.,role_group_0463,True,False
+stu6_30,pull_up,pull_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0464,True,False
+stu6_31,pull_up,pull_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0412,True,False
+stu6_32,pull_up,pull_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0465,True,False
+stu6_33,pull_up,pull_up,pull_up,False,medium,reviewed,claude_visual_contact_sheet,camera_cut;cutaway,Same scene as stu6_27; close-up cutaways.,role_group_0461,True,False
+stu6_34,pull_up,pull_up,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,talking_head;title_card,Tutorial with talking head and logos.,role_group_0466,True,False
+stu6_35,pull_up,pull_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0467,True,False
+stu6_36,pull_up,pull_up,pull_up,True,high,reviewed,claude_visual_contact_sheet,,Back view.,role_group_0468,False,False
+stu6_37,push_up,push_up,push_up,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Side view.,role_group_0469,True,False
+stu6_38,push_up,push_up,push_up,False,medium,reviewed,claude_visual_contact_sheet,cutaway;camera_cut,Same source as stu3_42; close-ups.,role_group_0470,False,False
+stu6_39,push_up,push_up,progression_levels,False,medium,reviewed,claude_visual_contact_sheet,text_overlay,Level-by-level push-up progression variants.,role_group_0471,True,False
+stu6_4,bench_pressing,bench_press,incline_dumbbell_press,True,high,reviewed,claude_visual_contact_sheet,,Clean side view.,role_group_0472,False,False
+stu6_40,push_up,push_up,push_up,False,medium,reviewed,claude_visual_contact_sheet,text_overlay;camera_cut,Rest cards between sets.,role_group_0473,True,False
+stu6_41,push_up,push_up,push_up,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Counter overlay; side view.,role_group_0474,True,False
+stu6_42,push_up,push_up,push_up,True,high,reviewed,claude_visual_contact_sheet,,Clean side view.,role_group_0475,True,False
+stu6_43,push_up,push_up,push_up,True,medium,reviewed,claude_visual_contact_sheet,multi_person,Legs of bystanders at the top.,role_group_0476,False,False
+stu6_45,push_up,push_up,push_up,True,high,reviewed,claude_visual_contact_sheet,,Same room as stu4_49.,role_group_0361,True,False
+stu6_46,push_up,push_up,push_up,False,medium,reviewed,claude_visual_contact_sheet,camera_cut,Several outdoor and indoor scenes.,role_group_0477,True,False
+stu6_47,push_up,push_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0478,True,False
+stu6_48,situp,sit_up,crunch,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Crunches on a mat.,role_group_0479,True,False
+stu6_49,situp,sit_up,decline_bench_sit_up,False,medium,reviewed,claude_visual_contact_sheet,multi_person;cutaway,Coach and close-up cutaways.,role_group_0480,True,False
+stu6_5,bench_pressing,unknown,mixed_gym_vlog,False,high,reviewed,claude_visual_contact_sheet,camera_cut,Walking and several lifts.,role_group_0481,False,False
+stu6_51,situp,sit_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0483,True,False
+stu6_52,situp,sit_up,partner_held_sit_up,True,medium,reviewed,claude_visual_contact_sheet,multi_person;tight_crop;text_overlay,Close; partner holds feet.,role_group_0484,True,False
+stu6_53,situp,sit_up,sit_up,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Timer overlay.,role_group_0485,False,False
+stu6_54,situp,sit_up,weighted_sit_up,True,medium,reviewed,claude_visual_contact_sheet,multi_person;text_overlay,Same scene as stu1_66.,role_group_0180,True,False
+stu6_55,situp,sit_up,partner_held_sit_up,True,medium,reviewed,claude_visual_contact_sheet,multi_person,Partner holds feet; second person walks.,role_group_0486,True,False
+stu6_56,situp,sit_up,sit_up,True,medium,reviewed,claude_visual_contact_sheet,portrait,Audit sample: correct.,role_group_0487,True,False
+stu6_57,squat,squat,barbell_back_squat,True,medium,reviewed,claude_visual_contact_sheet,portrait;multi_person;small_subject,Coach beside the rack.,role_group_0488,False,False
+stu6_58,squat,squat,band_squat,False,medium,reviewed,claude_visual_contact_sheet,tight_crop;cutaway,Legs-only crop and talking cutaways.,role_group_0489,True,False
+stu6_6,front_raise,unknown,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,multi_person;cutaway,Two-person tutorial with close-ups.,role_group_0490,False,False
+stu6_60,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0491,False,False
+stu6_61,squat,squat,bodyweight_squat,True,medium,reviewed,claude_visual_contact_sheet,portrait,Outdoor.,role_group_0491,False,False
+stu6_62,squat,squat,bodyweight_squat,False,medium,reviewed,claude_visual_contact_sheet,multi_person,Second person standing beside.,role_group_0437,True,False
+stu6_63,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0492,False,False
+stu6_64,squat,squat,barbell_back_squat,True,high,reviewed,claude_visual_contact_sheet,occlusion,Plates partly occlude the body.,role_group_0493,False,False
+stu6_65,squat,squat,bodyweight_squat,True,high,reviewed,claude_visual_contact_sheet,,Front view.,role_group_0494,True,False
+stu6_66,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0495,False,False
+stu6_67,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0496,True,False
+stu6_68,squat,squat,barbell_back_squat,False,low,reviewed,claude_visual_contact_sheet,portrait;text_overlay,Overlay covers the lifter.,role_group_0497,True,False
+stu6_69,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0382,False,False
+stu6_7,front_raise,unknown,bent_over_dumbbell_raise,True,medium,reviewed,claude_visual_contact_sheet,,Bent-over raise.,role_group_0498,True,False
+stu6_70,squat,squat,bodyweight_squat,True,medium,reviewed,claude_visual_contact_sheet,backlit;text_overlay,Kitchen; backlit.,role_group_0499,True,False
+stu6_71,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0500,False,False
+stu6_8,front_raise,unknown,plate_overhead_raise,True,medium,reviewed,claude_visual_contact_sheet,,Standing plate raise to overhead.,role_group_0501,False,False
+stu6_9,front_raise,unknown,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,talking_head;multi_person,Two-person tutorial; few reps.,role_group_0502,False,False
+stu7_0,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,multi_person;dark,Spotter behind.,role_group_0503,False,False
+stu7_1,bench_pressing,deadlift,barbell_deadlift,True,medium,reviewed,claude_visual_contact_sheet,camera_cut;text_overlay,Published bench_pressing but visibly a deadlift.,role_group_0504,False,False
+stu7_10,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,multi_person;camera_cut,Spotter; some angle changes.,role_group_0505,True,False
+stu7_11,bench_pressing,bench_press,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,title_card;cutaway,Research-paper slides between reps.,role_group_0506,True,False
+stu7_12,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;occlusion,Plates partly occlude; subtitles.,role_group_0507,True,False
+stu7_13,bench_pressing,squat,barbell_back_squat,True,medium,reviewed,claude_visual_contact_sheet,camera_cut;text_overlay,Published bench_pressing but visibly a barbell back squat (overlay says Barbell Squat).,role_group_0481,False,False
+stu7_14,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,multi_person;text_overlay,Behind-the-head view; spotter.,role_group_0508,False,False
+stu7_15,front_raise,unknown,barbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Barbell front raise.,role_group_0509,False,False
+stu7_16,front_raise,unknown,plate_front_raise,True,high,reviewed,claude_visual_contact_sheet,,Side view.,role_group_0510,False,False
+stu7_17,front_raise,unknown,barbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Barbell front raise.,role_group_0511,True,False
+stu7_18,front_raise,unknown,dumbbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Standing front raise.,role_group_0512,False,False
+stu7_19,front_raise,unknown,dumbbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Standing front raise.,role_group_0013,False,False
+stu7_2,bench_pressing,bench_press,barbell_bench_press,False,medium,reviewed,claude_visual_contact_sheet,multi_person;handheld;camera_cut,Moving handheld close-ups with spotters.,role_group_0513,False,False
+stu7_20,front_raise,unknown,cable_front_raise,False,medium,reviewed,claude_visual_contact_sheet,tight_crop,Upper body only.,role_group_0514,False,False
+stu7_22,front_raise,unknown,dumbbell_front_raise,False,medium,reviewed,claude_visual_contact_sheet,camera_cut;cutaway,Close-up cutaways.,role_group_0133,False,False
+stu7_23,front_raise,unknown,seated_cable_raise,True,medium,reviewed,claude_visual_contact_sheet,,Seated cable raise.,role_group_0015,False,False
+stu7_24,jump_jack,jumping_jack,jumping_jack,True,medium,reviewed,claude_visual_contact_sheet,portrait,Front view.,role_group_0516,True,False
+stu7_25,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0517,False,False
+stu7_26,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0395,True,False
+stu7_27,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0333,False,False
+stu7_28,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0518,False,False
+stu7_29,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0519,True,False
+stu7_3,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,occlusion,Feet-end view; plates occlude.,role_group_0520,True,False
+stu7_30,jump_jack,jumping_jack,jumping_jack,True,medium,reviewed,claude_visual_contact_sheet,portrait;backlit;text_overlay,Silhouette against sky.,role_group_0521,True,False
+stu7_31,jump_jack,jumping_jack,jumping_jack,False,medium,reviewed,claude_visual_contact_sheet,tight_crop;motion_blur,Upper body only and blurry.,role_group_0522,True,False
+stu7_32,jump_jack,jumping_jack,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,talking_head;cutaway,Tutorial: talking head and leg close-ups dominate; few continuous reps.,role_group_0523,False,False
+stu7_33,jump_jack,unknown,dumbbell_press_jack,False,medium,reviewed,claude_visual_contact_sheet,,Dumbbell overhead jack variant.,role_group_0524,True,False
+stu7_34,jump_jack,jumping_jack,jumping_jack,True,high,reviewed,claude_visual_contact_sheet,picture_in_picture;text_overlay,Audit sample: correct.,role_group_0525,False,False
+stu7_35,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,backlit;small_subject,Outdoor backlit.,role_group_0526,True,False
+stu7_36,pull_up,pull_up,pull_up,False,high,reviewed,claude_visual_contact_sheet,crowd;multi_person,Competition crowd.,role_group_0527,True,False
+stu7_37,pull_up,pull_up,instruction_mixed,False,medium,reviewed,claude_visual_contact_sheet,text_overlay;title_card,Text slides between reps.,role_group_0528,True,False
+stu7_38,pull_up,pull_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0529,True,False
+stu7_39,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,camera_cut,Brief inset cutaways.,role_group_0530,True,False
+stu7_4,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,small_subject;backlit,Distant figure against windows.,role_group_0531,True,False
+stu7_40,pull_up,pull_up,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,talking_head,Talking between reps.,role_group_0031,False,False
+stu7_41,pull_up,pull_up,doorframe_pull_up,True,medium,reviewed,claude_visual_contact_sheet,portrait,Doorframe bar; small figure.,role_group_0532,True,False
+stu7_42,pull_up,pull_up,pull_up,True,high,reviewed,claude_visual_contact_sheet,portrait,Front view.,role_group_0533,True,False
+stu7_43,pull_up,unknown,crowd_scene,False,high,reviewed,claude_visual_contact_sheet,crowd;handheld,Crowd; no visible pull-up.,role_group_0534,True,False
+stu7_44,pull_up,unknown,crowd_scene,False,high,reviewed,claude_visual_contact_sheet,crowd,Festival crowd; no visible pull-up.,role_group_0534,True,False
+stu7_45,push_up,unknown,assisted_knee_push_up_demo,False,medium,reviewed,claude_visual_contact_sheet,multi_person;text_overlay,Coach assisting; tutorial.,role_group_0535,False,False
+stu7_46,push_up,push_up,push_up,False,medium,reviewed,claude_visual_contact_sheet,multi_person;camera_cut,Several children in turn.,role_group_0536,True,False
+stu7_47,push_up,push_up,push_up,False,low,reviewed,claude_visual_contact_sheet,portrait;small_subject;text_overlay,Tiny figure.,role_group_0537,True,False
+stu7_48,push_up,push_up,push_up,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Subtitles.,role_group_0538,True,False
+stu7_49,push_up,push_up,push_up,True,medium,reviewed,claude_visual_contact_sheet,,Front view.,role_group_0539,True,False
+stu7_5,bench_pressing,unknown,smith_machine_squat_or_press,False,low,reviewed,claude_visual_contact_sheet,dark;occlusion,Lifter standing in a Smith machine; motion unclear.,role_group_0540,True,False
+stu7_50,push_up,push_up,push_up,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Counter overlay.,role_group_0541,True,False
+stu7_51,push_up,push_up,push_up,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Counter overlay.,role_group_0542,True,False
+stu7_52,situp,unknown,lying_leg_raise,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Lying leg raise stays unknown.,role_group_0543,True,False
+stu7_53,situp,sit_up,sit_up,True,medium,reviewed,claude_visual_contact_sheet,tight_crop,Same scene as stu1_53 (role-group merge already applied).,role_group_0544,False,False
+stu7_54,situp,sit_up,decline_bench_sit_up,True,medium,reviewed,claude_visual_contact_sheet,high_angle,Same scene as stu3_57.,role_group_0307,True,False
+stu7_55,situp,sit_up,sit_up,True,medium,reviewed,claude_visual_contact_sheet,portrait;small_subject,Small figure on a mat.,role_group_0545,True,False
+stu7_56,situp,sit_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0365,True,False
+stu7_57,situp,sit_up,sit_up,False,low,reviewed,claude_visual_contact_sheet,motion_blur;tight_crop,Blurry close shot.,role_group_0546,True,False
+stu7_59,situp,sit_up,decline_bench_sit_up,True,high,reviewed,claude_visual_contact_sheet,camera_cut,Decline bench; one angle change.,role_group_0368,False,False
+stu7_6,bench_pressing,bench_press,barbell_bench_press,False,high,reviewed,claude_visual_contact_sheet,cutaway;tight_crop,Close-up camera tricks.,role_group_0548,True,False
+stu7_60,situp,unknown,standing_oblique_crunch,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Standing knee-to-elbow crunch; not a sit-up.,role_group_0549,False,False
+stu7_61,situp,unknown,crunch_and_leg_raise_mixed,False,medium,reviewed,claude_visual_contact_sheet,camera_cut;high_angle,Crunches mixed with leg raises and overhead cutaways.,role_group_0550,True,False
+stu7_63,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0375,False,False
+stu7_64,squat,squat,front_squat,True,high,reviewed,claude_visual_contact_sheet,camera_cut,Cross-arm front squat; angle change.,role_group_0060,False,False
+stu7_65,squat,squat,instruction_mixed,False,medium,reviewed,claude_visual_contact_sheet,text_overlay;talking_head,Zercher squat explainer ending in a talking head.,role_group_0552,True,False
+stu7_66,squat,squat,bodyweight_squat,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Front view with counter.,role_group_0553,False,False
+stu7_67,squat,squat,bodyweight_squat,True,medium,reviewed,claude_visual_contact_sheet,,Front view; slow pace.,role_group_0181,False,False
+stu7_68,squat,squat,bodyweight_squat,True,high,reviewed,claude_visual_contact_sheet,,Audit sample: correct.,role_group_0496,True,False
+stu7_69,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0253,False,False
+stu7_7,bench_pressing,bench_press,barbell_bench_press,True,high,reviewed,claude_visual_contact_sheet,camera_cut;text_overlay,Title overlay then a cut to a closer angle.,role_group_0554,True,False
+stu7_70,squat,squat,barbell_back_squat,True,high,reviewed,claude_visual_contact_sheet,,Same scene as stu9_66 (role group merged).,role_group_0491,False,False
+stu7_71,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0499,True,False
+stu7_8,bench_pressing,bench_press,barbell_bench_press,True,high,reviewed,claude_visual_contact_sheet,camera_cut,Audit sample: correct.,role_group_0555,False,False
+stu7_9,bench_pressing,bench_press,incline_dumbbell_press,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;multi_person,Bystanders in the background.,role_group_0556,True,False
+stu8_0,battle_rope,unknown,battle_rope,True,medium,reviewed,claude_visual_contact_sheet,small_subject;text_overlay,Distant performer behind camera UI.,role_group_0557,True,False
+stu8_1,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,portrait;small_subject,Small figure.,role_group_0558,True,False
+stu8_10,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,multi_person;camera_cut;text_overlay,Several dated sets with a spotter.,role_group_0559,False,False
+stu8_11,bench_pressing,unknown,seated_leg_machine,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Audit sample: WRONG auto-accept; seated leg machine (not bench press).,role_group_0560,True,False
+stu8_12,bench_pressing,bench_press,barbell_bench_press,True,high,reviewed,claude_visual_contact_sheet,tight_crop,Head-to-hip crop; legs out of frame.,role_group_0561,False,False
+stu8_13,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,small_subject,Side view.,role_group_0567,False,False
+stu8_14,bench_pressing,bench_press,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,cutaway;title_card,Tutorial with anatomy diagram cutaways.,role_group_0562,False,False
+stu8_15,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,camera_cut;text_overlay,Several sets edited.,role_group_0563,True,False
+stu8_16,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,occlusion;text_overlay,Plates partly occlude.,role_group_0318,False,False
+stu8_17,front_raise,unknown,incline_prone_raise,True,medium,reviewed,claude_visual_contact_sheet,,Chest-supported raise.,role_group_0564,True,False
+stu8_18,front_raise,unknown,barbell_front_raise,False,low,reviewed,claude_visual_contact_sheet,portrait;small_subject,Tiny figure.,role_group_0565,True,False
+stu8_19,front_raise,unknown,shoulder_raise_complex,False,medium,reviewed,claude_visual_contact_sheet,cutaway;tight_crop,Close-ups.,role_group_0566,True,False
+stu8_2,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,camera_cut;text_overlay,Several angles.,role_group_0567,False,False
+stu8_21,front_raise,unknown,dumbbell_front_raise,False,medium,reviewed,claude_visual_contact_sheet,multi_person,Second person in frame.,role_group_0260,False,False
+stu8_22,front_raise,unknown,cable_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Cable front raise.,role_group_0262,False,False
+stu8_23,front_raise,unknown,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,multi_person;text_overlay,Two-person tutorial.,role_group_0569,True,False
+stu8_24,jump_jack,unknown,star_jump_combo,False,medium,reviewed,claude_visual_contact_sheet,text_overlay,Star jump and low-high combo variants.,role_group_0024,True,False
+stu8_25,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0570,True,False
+stu8_26,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0571,False,False
+stu8_27,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0572,True,False
+stu8_28,jump_jack,jumping_jack,jumping_jack,False,medium,reviewed,claude_visual_contact_sheet,cutaway;tight_crop,Talking close-ups between reps.,role_group_0573,True,False
+stu8_29,jump_jack,jumping_jack,jumping_jack,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Counter overlay.,role_group_0341,False,False
+stu8_3,bench_pressing,bench_press,barbell_bench_press,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Three-quarter view.,role_group_0574,True,False
+stu8_30,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0575,True,False
+stu8_31,jump_jack,jumping_jack,group_class,False,high,reviewed,claude_visual_contact_sheet,multi_person,Several people including a wheelchair user.,role_group_0576,True,False
+stu8_32,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0577,True,False
+stu8_33,jump_jack,jumping_jack,jumping_jack,True,medium,reviewed,claude_visual_contact_sheet,backlit,Window behind; slight silhouette.,role_group_0578,True,False
+stu8_34,jump_jack,jumping_jack,jumping_jack,True,medium,reviewed,claude_visual_contact_sheet,oblique_view,Three-quarter view; sloppy form.,role_group_0579,False,False
+stu8_35,pull_up,pull_up,pull_up,True,high,reviewed,claude_visual_contact_sheet,oblique_view,Outdoor side angle.,role_group_0580,True,False
+stu8_36,pull_up,pull_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0581,False,False
+stu8_37,pull_up,pull_up,pull_up,False,high,reviewed,claude_visual_contact_sheet,crowd;multi_person,Outdoor event crowd.,role_group_0219,True,False
+stu8_38,pull_up,pull_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0414,False,False
+stu8_39,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,portrait;dark;text_overlay,Counter overlay.,role_group_0582,True,False
+stu8_4,bench_pressing,deadlift,barbell_deadlift,True,medium,reviewed,claude_visual_contact_sheet,camera_cut;text_overlay,Published bench_pressing but visibly a deadlift from the floor.,role_group_0583,True,False
+stu8_40,push_up,push_up,push_up_board,False,medium,reviewed,claude_visual_contact_sheet,cutaway;tight_crop,Product close-ups.,role_group_0584,True,False
+stu8_41,push_up,push_up,push_up,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Timer overlay.,role_group_0585,False,False
+stu8_42,push_up,push_up,push_up,True,medium,reviewed,claude_visual_contact_sheet,portrait;text_overlay,Small figure.,role_group_0586,True,False
+stu8_43,push_up,push_up,push_up,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Clean side view.,role_group_0587,True,False
+stu8_44,push_up,push_up,push_up,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Same scene as stu8_41.,role_group_0588,False,False
+stu8_45,push_up,push_up,push_up_variants,False,medium,reviewed,claude_visual_contact_sheet,camera_cut;cutaway,Variant sequence with flash cuts.,role_group_0589,True,False
+stu8_46,push_up,push_up,push_up,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Audit sample: correct.,role_group_0300,True,False
+stu8_47,push_up,push_up,push_up,False,medium,reviewed,claude_visual_contact_sheet,multi_person,Second person moving around.,role_group_0590,True,False
+stu8_48,push_up,unknown,push_up_row,False,medium,reviewed,claude_visual_contact_sheet,text_overlay,Push-up plus row combination.,role_group_0591,True,False
+stu8_5,bench_pressing,bench_press,barbell_bench_press,False,high,reviewed,claude_visual_contact_sheet,multi_person;occlusion,Spotter body blocks the lifter.,role_group_0593,True,False
+stu8_50,situp,sit_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0594,False,False
+stu8_51,situp,unknown,bicycle_crunch,True,medium,reviewed,claude_visual_contact_sheet,,Bicycle crunch stays unknown.,role_group_0051,True,False
+stu8_52,situp,sit_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0595,False,False
+stu8_53,situp,sit_up,sit_up,True,medium,reviewed,claude_visual_contact_sheet,tight_crop,Same scene as stu1_53.,role_group_0596,True,False
+stu8_54,situp,sit_up,partner_held_sit_up,False,high,reviewed,claude_visual_contact_sheet,multi_person;occlusion;text_overlay,Three people; subtitles and partner occlude the performer.,role_group_0597,True,False
+stu8_55,situp,unknown,v_up,False,medium,reviewed,claude_visual_contact_sheet,cutaway,V-ups with close-up cutaways.,role_group_0598,False,False
+stu8_56,situp,sit_up,weighted_plate_sit_up,True,medium,reviewed,claude_visual_contact_sheet,,Sit-up holding a plate overhead.,role_group_0599,True,False
+stu8_57,situp,sit_up,v_sit_crunch,True,medium,reviewed,claude_visual_contact_sheet,camera_cut,Audit sample: correct.,role_group_0600,True,False
+stu8_58,situp,unknown,twisting_sit_up,False,medium,reviewed,claude_visual_contact_sheet,text_overlay;title_card,Twisting sit-up tutorial.,role_group_0601,False,False
+stu8_6,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,camera_cut;tight_crop,Ends in a close-up.,role_group_0602,False,False
+stu8_60,squat,squat,smith_squat,True,medium,reviewed,claude_visual_contact_sheet,portrait;multi_person,Bystander.,role_group_0488,False,False
+stu8_61,squat,squat,barbell_back_squat,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Back view.,role_group_0603,True,False
+stu8_62,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0604,True,False
+stu8_63,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0250,False,False
+stu8_64,squat,squat,bodyweight_squat,False,high,reviewed,claude_visual_contact_sheet,tight_crop,Audit sample: UNUSABLE auto-accept; legs only.,role_group_0605,True,False
+stu8_65,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0063,False,False
+stu8_66,squat,squat,bodyweight_squat,True,medium,reviewed,claude_visual_contact_sheet,,Front view.,role_group_0494,True,False
+stu8_67,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0606,False,False
+stu8_68,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0607,True,False
+stu8_69,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0315,True,False
+stu8_7,bench_pressing,bench_press,barbell_bench_press,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Clean view.,role_group_0608,False,False
+stu8_70,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0609,True,False
+stu8_71,squat,squat,form_demo,False,medium,reviewed,claude_visual_contact_sheet,portrait;text_overlay,Wrong-form demonstration marks.,role_group_0610,True,False
+stu8_8,bench_pressing,bench_press,dumbbell_bench_press,True,high,reviewed,claude_visual_contact_sheet,,Clean view.,role_group_0611,False,False
+stu8_9,bench_pressing,bench_press,barbell_bench_press,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Several sets with weight overlays.,role_group_0612,True,False
+stu9_0,battle_rope,unknown,battle_rope,True,high,reviewed,claude_visual_contact_sheet,handheld;text_overlay,Close crop at the start.,role_group_0385,False,False
+stu9_1,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,portrait;small_subject,Small figure.,role_group_0613,True,False
+stu9_10,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,multi_person,Two spotters standing over the lifter.,role_group_0614,False,False
+stu9_11,bench_pressing,bench_press,mixed_with_rest,False,high,reviewed,claude_visual_contact_sheet,camera_cut,Rest and sitting segments between reps.,role_group_0615,False,False
+stu9_13,front_raise,unknown,cable_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Cable front raise side view.,role_group_0616,False,False
+stu9_14,front_raise,unknown,dumbbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Front view.,role_group_0617,True,False
+stu9_15,front_raise,lateral_raise,dumbbell_lateral_raise,True,high,reviewed,claude_visual_contact_sheet,,Published front_raise but visibly lateral raises.,role_group_0618,False,False
+stu9_16,front_raise,unknown,front_and_lateral_raise_alternating,False,medium,reviewed,claude_visual_contact_sheet,text_overlay,Mixed raises.,role_group_0619,False,False
+stu9_17,front_raise,shoulder_press,behind_neck_shoulder_press,True,medium,reviewed,claude_visual_contact_sheet,text_overlay;cutaway,Published front_raise but visibly a behind-the-neck shoulder press; brief anatomy overlay frames.,role_group_0620,False,False
+stu9_18,front_raise,unknown,dumbbell_front_raise,False,low,reviewed,claude_visual_contact_sheet,portrait;tight_crop,Close tiny frame.,role_group_0621,True,False
+stu9_19,front_raise,unknown,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,multi_person,Two-person tutorial.,role_group_0622,True,False
+stu9_2,bench_pressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,small_subject,Distant view.,role_group_0623,True,False
+stu9_20,front_raise,lateral_raise,dumbbell_lateral_raise,True,medium,reviewed,claude_visual_contact_sheet,,Published front_raise but visibly lateral raises.,role_group_0624,False,False
+stu9_21,front_raise,unknown,mixed_gym_vlog,False,medium,reviewed,claude_visual_contact_sheet,camera_cut;cutaway,Close-ups and cuts.,role_group_0625,False,False
+stu9_22,front_raise,unknown,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,multi_person;talking_head,Two-person tutorial.,role_group_0626,False,False
+stu9_23,front_raise,unknown,dumbbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Standing front raise.,role_group_0616,False,False
+stu9_24,front_raise,unknown,dumbbell_front_raise,False,low,reviewed,claude_visual_contact_sheet,small_subject;dark,Tiny dark figure.,role_group_0627,False,False
+stu9_25,front_raise,unknown,dumbbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Front view.,role_group_0628,True,False
+stu9_26,front_raise,unknown,front_and_lateral_raise_alternating,False,medium,reviewed,claude_visual_contact_sheet,camera_cut,Mixed raises.,role_group_0133,False,False
+stu9_27,front_raise,unknown,seated_rear_delt_fly,True,medium,reviewed,claude_visual_contact_sheet,,Bent-over rear-delt fly; lateral-raise confuser.,role_group_0629,False,False
+stu9_28,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0630,True,False
+stu9_29,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0631,True,False
+stu9_3,bench_pressing,bench_press,tv_segment,False,high,reviewed,claude_visual_contact_sheet,multi_person;camera_cut;cutaway,Television segment with hosts.,role_group_0632,True,False
+stu9_30,jump_jack,jumping_jack,jumping_jack,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Audit sample: correct.,role_group_0633,True,False
+stu9_31,jump_jack,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0634,True,False
+stu9_32,jump_jack,jumping_jack,jumping_jack,False,medium,reviewed,claude_visual_contact_sheet,cutaway;dark,Dark studio with close-ups.,role_group_0635,False,False
+stu9_33,jump_jack,jumping_jack,jumping_jack_variants,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Behind-the-back jack variant; still jacks.,role_group_0636,True,False
+stu9_34,jump_jack,jumping_jack,jumping_jack,True,medium,reviewed,claude_visual_contact_sheet,camera_cut,Audit sample: correct.,role_group_0637,True,False
+stu9_35,pull_up,pull_up,instruction_mixed,False,medium,reviewed,claude_visual_contact_sheet,text_overlay;cutaway,Tutorial close-ups and captions.,role_group_0638,True,False
+stu9_36,pull_up,unknown,inverted_row,True,medium,reviewed,claude_visual_contact_sheet,,Body-row under a low bar; not a pull-up.,role_group_0639,True,False
+stu9_37,pull_up,pull_up,pull_up,True,high,reviewed,claude_visual_contact_sheet,camera_cut;text_overlay,Edited angles; all pull-ups.,role_group_0640,True,False
+stu9_38,pull_up,pull_up,pull_up,True,high,reviewed,claude_visual_contact_sheet,camera_cut;text_overlay,Audit sample: correct; brief end card.,role_group_0641,True,False
+stu9_39,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,portrait;text_overlay,Captions.,role_group_0642,True,False
+stu9_4,bench_pressing,bench_press,incline_dumbbell_press,True,medium,reviewed,claude_visual_contact_sheet,camera_cut;cutaway,Incline dumbbell press; white intro frame.,role_group_0643,False,False
+stu9_40,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,portrait,Back view.,role_group_0644,True,False
+stu9_41,pull_up,pull_up,instruction_mixed,False,medium,reviewed,claude_visual_contact_sheet,talking_head,Talking between reps.,role_group_0645,True,False
+stu9_42,pull_up,pull_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0646,True,False
+stu9_43,pull_up,unknown,muscle_up,False,high,reviewed,claude_visual_contact_sheet,crowd;multi_person,Muscle-ups at a crowded event.,role_group_0219,True,False
+stu9_44,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,camera_cut,Outdoor front view; close-up in the last frame.,role_group_0647,True,False
+stu9_45,pull_up,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,portrait,Outdoor tower.,role_group_0648,True,False
+stu9_46,push_up,push_up,band_push_up,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Resistance band.,role_group_0649,True,False
+stu9_47,push_up,push_up,push_up,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Subtitles.,role_group_0650,True,False
+stu9_48,push_up,push_up,push_up_variants,False,medium,reviewed,claude_visual_contact_sheet,text_overlay;title_card,Workout with standard and wide push-ups plus rest cards.,role_group_0651,True,False
+stu9_49,push_up,push_up,push_up,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Outdoor side view.,role_group_0652,True,False
+stu9_5,bench_pressing,bench_press,barbell_bench_press,False,medium,reviewed,claude_visual_contact_sheet,multi_person;camera_cut;tight_crop,Coach standing; close-ups.,role_group_0653,False,False
+stu9_50,push_up,push_up,push_up,True,medium,reviewed,claude_visual_contact_sheet,small_subject;multi_person,Distant office; bystander.,role_group_0654,True,False
+stu9_51,push_up,push_up,push_up,False,medium,reviewed,claude_visual_contact_sheet,multi_person,Same scene as stu10_49; second person on the bed.,role_group_0043,True,False
+stu9_52,push_up,push_up,push_up,True,medium,reviewed,claude_visual_contact_sheet,handheld;tight_crop,Close handheld camera.,role_group_0655,True,False
+stu9_53,push_up,push_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0656,True,False
+stu9_54,push_up,push_up,push_up_variants,False,high,reviewed,claude_visual_contact_sheet,text_overlay,Numbered list of nine variants.,role_group_0298,True,False
+stu9_55,push_up,push_up,push_up,False,medium,reviewed,claude_visual_contact_sheet,tight_crop;handheld,Close handheld; body cut off.,role_group_0657,True,False
+stu9_57,situp,sit_up,sit_up,False,low,reviewed,claude_visual_contact_sheet,dark,Dark gym; poor visibility.,role_group_0658,True,False
+stu9_58,situp,sit_up,decline_bench_sit_up,True,medium,reviewed,claude_visual_contact_sheet,,Incline bench crunch.,role_group_0659,False,False
+stu9_59,situp,sit_up,decline_bench_sit_up,True,medium,reviewed,claude_visual_contact_sheet,camera_cut,Two angles.,role_group_0660,False,False
+stu9_6,bench_pressing,bench_press,barbell_bench_press,False,medium,reviewed,claude_visual_contact_sheet,text_overlay;occlusion,Subtitles and plate cover the lifter.,role_group_0661,True,False
+stu9_60,situp,sit_up,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,talking_head;text_overlay,Talking head and captions.,role_group_0662,True,False
+stu9_61,situp,sit_up,stability_ball_crunch,True,medium,reviewed,claude_visual_contact_sheet,,Crunch on a stability ball.,role_group_0663,True,False
+stu9_62,situp,sit_up,sit_up,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Captions.,role_group_0664,True,False
+stu9_63,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0665,True,False
+stu9_64,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0665,True,False
+stu9_65,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0604,True,False
+stu9_66,squat,squat,bodyweight_squat,True,medium,reviewed,claude_visual_contact_sheet,handheld;portrait,Camera walks around the performer.,role_group_0491,False,False
+stu9_67,squat,squat,barbell_back_squat,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Front view.,role_group_0666,True,False
+stu9_68,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0495,False,False
+stu9_69,squat,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0667,False,False
+stu9_7,bench_pressing,bench_press,barbell_bench_press,True,high,reviewed,claude_visual_contact_sheet,,Clean high view.,role_group_0668,True,False
+stu9_71,squat,squat,goblet_squat,True,high,reviewed,claude_visual_contact_sheet,,Front view.,role_group_0670,True,False
+stu9_8,bench_pressing,bench_press,barbell_bench_press,True,high,reviewed,claude_visual_contact_sheet,text_overlay,Clean side view.,role_group_0671,False,False
+stu9_9,bench_pressing,bench_press,barbell_bench_press,True,high,reviewed,claude_visual_contact_sheet,,Clean side view.,role_group_0672,False,False
+test118,benchpressing,bench_press,barbell_bench_press,True,high,reviewed,claude_visual_contact_sheet,multi_person,Spotter behind; clean side view.,role_group_0673,False,False
+test125,benchpressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,tight_crop,Feet-end view; legs cut off.,role_group_0674,True,False
+test127,benchpressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,backlit,Bright window behind.,role_group_0675,True,False
+test128,benchpressing,bench_press,barbell_bench_press,False,medium,reviewed,claude_visual_contact_sheet,multi_person,Several people standing around the bench.,role_group_0676,True,False
+test135,benchpressing,bench_press,barbell_bench_press,True,high,reviewed,claude_visual_contact_sheet,high_angle,Overhead view.,role_group_0677,True,False
+test138,benchpressing,bench_press,dumbbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,tight_crop,Close view.,role_group_0678,True,False
+test142,benchpressing,bench_press,barbell_bench_press,False,high,reviewed,claude_visual_contact_sheet,tight_crop;occlusion,Close-up of a face under the bar.,role_group_0679,True,False
+test1448,pullups,pull_up,pull_up,False,medium,reviewed,claude_visual_contact_sheet,rotated,Footage rotated 90 degrees.,role_group_0680,False,False
+test1454,pullups,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,portrait;backlit,Audit sample: correct.,role_group_0681,True,False
+test1463,pullups,unknown,rope_climb,False,medium,reviewed,claude_visual_contact_sheet,portrait,Rope or ring climb; not a pull-up.,role_group_0682,True,False
+test1465,pullups,pull_up,pull_up,False,low,reviewed,claude_visual_contact_sheet,motion_blur;tight_crop,Blurry close shot.,role_group_0683,True,False
+test1483,pullups,pull_up,pull_up,False,low,reviewed,claude_visual_contact_sheet,portrait;small_subject,Tiny figure in a yard.,role_group_0684,True,False
+test1496,pullups,pull_up,pull_up,False,low,reviewed,claude_visual_contact_sheet,backlit,Washed out; body barely visible.,role_group_0685,True,False
+test153,benchpressing,bench_press,barbell_bench_press,False,medium,reviewed,claude_visual_contact_sheet,multi_person;portrait,Standing spotter dominates.,role_group_0686,True,False
+test159,benchpressing,bench_press,barbell_bench_press,False,medium,reviewed,claude_visual_contact_sheet,multi_person,Standing coach dominates the frame.,role_group_0687,True,False
+test1595,pushups,unknown,hindu_push_up,True,medium,reviewed,claude_visual_contact_sheet,backlit,Dive-bomber push-up stays unknown.,role_group_0688,True,False
+test1624,pushups,unknown,burpee_or_inchworm,False,medium,reviewed,claude_visual_contact_sheet,,Push-up combined with a pike or jump.,role_group_0689,True,False
+test168,benchpressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,small_subject,Side view.,role_group_0690,True,False
+test1977,situp,sit_up,medicine_ball_sit_up_throw,True,medium,reviewed,claude_visual_contact_sheet,multi_person,Two athletes side by side throwing balls at a wall.,role_group_0691,True,False
+test1995,situp,sit_up,sit_up,False,low,reviewed,claude_visual_contact_sheet,dark;portrait;motion_blur,Dark blurry phone footage.,role_group_0692,True,False
+test2003,situp,sit_up,stability_ball_crunch,False,medium,reviewed,claude_visual_contact_sheet,tight_crop,Torso close-up.,role_group_0693,True,False
+test2015,situp,sit_up,crunch,True,medium,reviewed,claude_visual_contact_sheet,,Side view.,role_group_0694,True,False
+test2021,situp,sit_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0695,True,False
+test2023,situp,unknown,undecidable,False,low,reviewed,claude_visual_contact_sheet,tight_crop;occlusion,Performer inside a vehicle; motion unclear.,role_group_0696,True,False
+test2025,situp,sit_up,sit_up,False,low,reviewed,claude_visual_contact_sheet,backlit;portrait,Silhouette.,role_group_0697,True,False
+test2029,situp,unknown,sit_up_to_stand_complex,False,medium,reviewed,claude_visual_contact_sheet,camera_cut,Sit-up combined with standing throws.,role_group_0698,True,False
+test2295,squant,squat,box_squat,False,medium,reviewed,claude_visual_contact_sheet,multi_person,Spotters on both sides.,role_group_0699,True,False
+test2298,squant,squat,barbell_back_squat,True,medium,reviewed,claude_visual_contact_sheet,portrait;occlusion,Plates occlude the body.,role_group_0700,True,False
+test2299,squant,squat,barbell_back_squat,False,medium,reviewed,claude_visual_contact_sheet,portrait;tight_crop,Head cut off; close crop.,role_group_0701,True,False
+test2309,squant,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0702,True,False
+test2315,squant,squat,barbell_back_squat,False,medium,reviewed,claude_visual_contact_sheet,multi_person;tight_crop,Coach in front; close crop.,role_group_0703,True,False
+test2317,squant,unknown,dumbbell_lunge_squat_mixed,False,medium,reviewed,claude_visual_contact_sheet,,Squats mixed with lunges.,role_group_0704,True,False
+test2318,squant,squat,barbell_back_squat,True,medium,reviewed,claude_visual_contact_sheet,portrait,Rack side view.,role_group_0705,True,False
+test2319,squant,squat,barbell_back_squat,False,medium,reviewed,claude_visual_contact_sheet,cutaway;camera_cut,Close-up cutaways of plates.,role_group_0706,True,False
+test2320,squant,unknown,no_person_visible,False,high,reviewed,claude_visual_contact_sheet,portrait,Gym floor; no performer visible in the samples.,role_group_0707,True,False
+test2323,squant,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0708,True,False
+test2326,squant,squat,bodyweight_squat,True,high,reviewed,claude_visual_contact_sheet,portrait,Front-left view.,role_group_0709,True,False
+test2331,squant,squat,band_squat,True,medium,reviewed,claude_visual_contact_sheet,,Side view.,role_group_0710,True,False
+test2340,squant,squat,jump_squat,False,medium,reviewed,claude_visual_contact_sheet,tight_crop;camera_cut,Legs-only shots then wide.,role_group_0711,True,False
+test2349,squant,squat,barbell_back_squat,False,low,reviewed,claude_visual_contact_sheet,portrait;motion_blur,Blurry back view.,role_group_0712,True,False
+test528,frontraise,unknown,dumbbell_front_raise,False,low,reviewed,claude_visual_contact_sheet,portrait;small_subject,Tiny figure.,role_group_0713,True,False
+test531,frontraise,unknown,cable_front_raise,False,medium,reviewed,claude_visual_contact_sheet,tight_crop,Upper body only.,role_group_0714,True,False
+test534,frontraise,unknown,dumbbell_front_raise,False,low,reviewed,claude_visual_contact_sheet,motion_blur;dark,Blurry yellow-tinted footage.,role_group_0715,True,False
+test536,frontraise,lateral_raise,dumbbell_lateral_raise,True,medium,reviewed,claude_visual_contact_sheet,,Published front_raise but visibly lateral raises.,role_group_0716,False,False
+test538,frontraise,lateral_raise,seated_lateral_raise,True,medium,reviewed,claude_visual_contact_sheet,,Published front_raise but visibly seated lateral raises.,role_group_0717,True,False
+test539,frontraise,unknown,dumbbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,multi_person,Trainer stands beside the performer.,role_group_0718,True,False
+test541,frontraise,unknown,dumbbell_front_raise,False,low,reviewed,claude_visual_contact_sheet,small_subject,Tiny figure.,role_group_0719,True,False
+test545,frontraise,unknown,dumbbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Standing front raise.,role_group_0720,False,False
+test555,frontraise,lateral_raise,dumbbell_lateral_raise,False,medium,reviewed,claude_visual_contact_sheet,multi_person,Lateral raises with a second person nearby.,role_group_0721,True,False
+test557,frontraise,unknown,plate_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Plate front raise.,role_group_0722,True,False
+test558,frontraise,unknown,close_up,False,high,reviewed,claude_visual_contact_sheet,tight_crop;cutaway,Slow-motion arm close-up only.,role_group_0723,True,False
+test570,frontraise,unknown,incline_prone_raise,False,medium,reviewed,claude_visual_contact_sheet,multi_person,Second person in frame.,role_group_0724,True,False
+test571,frontraise,unknown,bent_over_dumbbell_raise,True,medium,reviewed,claude_visual_contact_sheet,,Bent-over raise.,role_group_0725,False,False
+test577,frontraise,unknown,cable_front_raise,False,low,reviewed,claude_visual_contact_sheet,portrait;tight_crop,Close tiny frame.,role_group_0726,False,False
+test584,frontraise,unknown,instruction_mixed,False,medium,reviewed,claude_visual_contact_sheet,text_overlay;cutaway,Captioned tutorial with close-ups.,role_group_0727,True,False
+test586,frontraise,unknown,plate_front_raise,False,medium,reviewed,claude_visual_contact_sheet,tight_crop,Upper body only.,role_group_0728,True,False
+test587,frontraise,lateral_raise,dumbbell_lateral_raise,True,medium,reviewed,claude_visual_contact_sheet,rotated,Lateral raises; footage rotated 90 degrees (pose still usable after normalization check).,role_group_0729,True,False
+test944,jumpjacks,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0730,True,False
+test989,jumpjacks,jumping_jack,jumping_jack,True,medium,reviewed,claude_visual_contact_sheet,tight_crop;motion_blur,Close and blurry; head cut off.,role_group_0731,True,False
+test990,jumpjacks,jumping_jack,jumping_jack,True,medium,reviewed,claude_visual_contact_sheet,portrait;small_subject,Small figure.,role_group_0732,True,False
+train1000,frontraise,unknown,dumbbell_front_raise,False,low,reviewed,claude_visual_contact_sheet,portrait;tight_crop,Close tiny frame.,role_group_0733,True,False
+train1005,frontraise,unknown,seated_dumbbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Seated front raise.,role_group_0734,False,False
+train1010,frontraise,unknown,cable_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Back view.,role_group_0735,False,False
+train1022,frontraise,unknown,barbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Barbell front raise.,role_group_0736,True,False
+train1025,frontraise,unknown,dumbbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,portrait;small_subject,Standing front raise.,role_group_0737,True,False
+train133,benchpressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,backlit,Outdoor feet-end view.,role_group_0738,True,False
+train139,benchpressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,multi_person,Spotter behind.,role_group_0739,True,False
+train143,benchpressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,tight_crop,Behind-the-head view.,role_group_0740,False,False
+train151,benchpressing,bench_press,barbell_bench_press,False,low,reviewed,claude_visual_contact_sheet,dark;motion_blur,Dark and blurry.,role_group_0741,True,False
+train156,benchpressing,bench_press,dumbbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,tight_crop;multi_person,Close crop; spotter legs in frame.,role_group_0742,True,False
+train160,benchpressing,bench_press,barbell_bench_press,True,high,reviewed,claude_visual_contact_sheet,portrait,Side view of flat barbell bench press.,role_group_0743,True,False
+train1604,jumpjacks,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0744,True,False
+train1605,jumpjacks,jumping_jack,jumping_jack,False,high,reviewed,claude_visual_contact_sheet,tight_crop,Legs only.,role_group_0745,True,False
+train1614,jumpjacks,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0746,False,False
+train1615,jumpjacks,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0747,True,False
+train1617,jumpjacks,jumping_jack,jumping_jack,False,medium,reviewed,claude_visual_contact_sheet,motion_blur;handheld,Child; shaky handheld.,role_group_0748,True,False
+train1623,jumpjacks,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0749,False,False
+train1630,jumpjacks,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0750,True,False
+train1640,jumpjacks,jumping_jack,jumping_jack,True,medium,reviewed,claude_visual_contact_sheet,camera_cut;high_angle,Overhead angle then a cut to a front view.,role_group_0751,True,False
+train1646,jumpjacks,jumping_jack,jumping_jack,True,medium,reviewed,claude_visual_contact_sheet,small_subject;dark,Dim studio.,role_group_0752,True,False
+train1665,jumpjacks,unknown,scissors_jack,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Scissors jump-jack (front-back legs) stays unknown.,role_group_0753,True,False
+train1678,jumpjacks,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0754,True,False
+train168,benchpressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,,Side view.,role_group_0755,True,False
+train1715,jumpjacks,jumping_jack,group_class,False,high,reviewed,claude_visual_contact_sheet,multi_person;crowd,Audit sample: UNUSABLE auto-accept; many people jumping.,role_group_0756,False,False
+train172,benchpressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,occlusion,Behind-the-head view.,role_group_0757,False,False
+train180,benchpressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,portrait;multi_person,Spotter behind.,role_group_0758,True,False
+train181,benchpressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,multi_person,Spotter behind; washed out.,role_group_0759,True,False
+train184,benchpressing,bench_press,dumbbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,portrait,Feet-end view.,role_group_0760,False,False
+train186,benchpressing,bench_press,barbell_bench_press,True,medium,reviewed,claude_visual_contact_sheet,multi_person,Spotter visible.,role_group_0761,True,False
+train2464,pullups,pull_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0762,False,False
+train2477,pullups,unknown,kipping_bar_muscle_up,False,medium,reviewed,claude_visual_contact_sheet,text_overlay,Kipping bar work with swing; not a strict pull-up.,role_group_0763,True,False
+train2481,pullups,pull_up,pull_up,True,high,reviewed,claude_visual_contact_sheet,,Outdoor back view.,role_group_0764,True,False
+train2484,pullups,pull_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0765,True,False
+train2501,pullups,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,portrait,Side view.,role_group_0766,False,False
+train2502,pullups,unknown,undecidable,False,low,reviewed,claude_visual_contact_sheet,rotated;dark,Rotated dark footage; motion not decidable.,role_group_0767,True,False
+train2508,pullups,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,dark,Back view.,role_group_0768,False,False
+train2523,pullups,pull_up,pull_up,True,high,reviewed,claude_visual_contact_sheet,portrait,Back view.,role_group_0769,True,False
+train2527,pullups,pull_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0770,True,False
+train2534,pullups,unknown,climbing_or_rope,False,medium,reviewed,claude_visual_contact_sheet,,Climbing on a machine frame.,role_group_0771,True,False
+train2542,pullups,unknown,monkey_bars,False,medium,reviewed,claude_visual_contact_sheet,portrait,Traversing monkey bars.,role_group_0772,True,False
+train2568,pullups,pull_up,kipping_pull_up,True,medium,reviewed,claude_visual_contact_sheet,small_subject,Distant gym view.,role_group_0773,True,False
+train2570,pullups,pull_up,pull_up,True,high,reviewed,claude_visual_contact_sheet,,Back view in a doorway.,role_group_0774,True,False
+train2645,pushups,push_up,push_up,False,low,reviewed,claude_visual_contact_sheet,handheld;motion_blur,Shaky handheld.,role_group_0775,True,False
+train2649,pushups,push_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0776,True,False
+train2659,pushups,unknown,undecidable,False,low,reviewed,claude_visual_contact_sheet,dark;tight_crop,Too dark and close to decide.,role_group_0777,True,False
+train2666,pushups,unknown,push_up_side_plank,False,medium,reviewed,claude_visual_contact_sheet,,Push-up with rotation to side plank.,role_group_0778,True,False
+train2676,pushups,push_up,push_up,False,medium,reviewed,claude_visual_contact_sheet,multi_person,Standing instructor dominates the frame.,role_group_0486,True,False
+train2685,pushups,unknown,hindu_push_up,True,medium,reviewed,claude_visual_contact_sheet,,Dive-bomber push-up stays unknown.,role_group_0779,True,False
+train2692,pushups,unknown,hindu_push_up,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Knee Hindu push-up stays unknown.,role_group_0780,False,False
+train2711,pushups,push_up,push_up,False,medium,reviewed,claude_visual_contact_sheet,tight_crop;handheld,Close handheld.,role_group_0781,True,False
+train2712,pushups,push_up,push_up_handles,True,medium,reviewed,claude_visual_contact_sheet,,Push-up handles.,role_group_0782,True,False
+train2716,pushups,push_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0783,True,False
+train2719,pushups,push_up,push_up,False,low,reviewed,claude_visual_contact_sheet,portrait;dark;motion_blur,Dark and blurry.,role_group_0784,True,False
+train2720,pushups,push_up,push_up,False,medium,reviewed,claude_visual_contact_sheet,tight_crop;text_overlay,Close front crop.,role_group_0785,True,False
+train2734,pushups,unknown,weighted_crawl_push_up,False,medium,reviewed,claude_visual_contact_sheet,,Push-up with walking and a weight vest; mixed.,role_group_0786,True,False
+train2737,pushups,unknown,push_up_to_pike,False,high,reviewed,claude_visual_contact_sheet,picture_in_picture,Compound push-up to downward-dog pike.,role_group_0787,True,False
+train2739,pushups,push_up,push_up,False,low,reviewed,claude_visual_contact_sheet,tight_crop;occlusion,Hand in front of the camera.,role_group_0788,True,False
+train2745,pushups,unknown,push_up_to_pike,True,medium,reviewed,claude_visual_contact_sheet,,Push-up to downward dog stays unknown.,role_group_0789,True,False
+train2748,pushups,unknown,undecidable,False,low,reviewed,claude_visual_contact_sheet,dark,Dark; motion unclear.,role_group_0790,True,False
+train3301,situp,sit_up,weighted_sit_up,False,low,reviewed,claude_visual_contact_sheet,tight_crop;motion_blur,Close blurry plate sit-up.,role_group_0791,True,False
+train3303,situp,unknown,butterfly_sit_up_v_up_mixed,False,medium,reviewed,claude_visual_contact_sheet,text_overlay,Mixed butterfly sit-ups and leg raises.,role_group_0792,True,False
+train3309,situp,sit_up,crunch,True,medium,reviewed,claude_visual_contact_sheet,portrait,Outdoor deck.,role_group_0793,True,False
+train3312,situp,sit_up,medicine_ball_sit_up_throw,True,medium,reviewed,claude_visual_contact_sheet,multi_person,Partner throws a medicine ball.,role_group_0794,True,False
+train3316,situp,sit_up,decline_bench_sit_up,True,medium,reviewed,claude_visual_contact_sheet,,Decline bench.,role_group_0795,False,False
+train3319,situp,sit_up,sit_up,True,medium,reviewed,claude_visual_contact_sheet,,Front-side view.,role_group_0796,True,False
+train3323,situp,sit_up,sit_up,False,low,reviewed,claude_visual_contact_sheet,portrait;motion_blur,Blurry close phone footage.,role_group_0797,True,False
+train3324,situp,unknown,v_up,True,medium,reviewed,claude_visual_contact_sheet,,V-ups stay unknown.,role_group_0798,True,False
+train3327,situp,sit_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0799,True,False
+train3335,situp,unknown,v_sit_hold_or_tuck,False,medium,reviewed,claude_visual_contact_sheet,multi_person,Coach standing; tuck hold.,role_group_0800,False,False
+train3344,situp,sit_up,sit_up,False,medium,reviewed,claude_visual_contact_sheet,camera_cut;cutaway;text_overlay,Contest with close-up cutaways.,role_group_0801,True,False
+train3348,situp,sit_up,sit_up,False,low,reviewed,claude_visual_contact_sheet,tight_crop;motion_blur,Blurry close shot.,role_group_0802,True,False
+train3365,situp,sit_up,group_class,False,high,reviewed,claude_visual_contact_sheet,multi_person,Group class.,role_group_0803,True,False
+train3366,situp,sit_up,decline_bench_sit_up,True,medium,reviewed,claude_visual_contact_sheet,,Decline bench.,role_group_0804,True,False
+train3367,situp,sit_up,machine_sit_up,False,low,reviewed,claude_visual_contact_sheet,handheld;motion_blur,Blurry outdoor sit-up machine.,role_group_0805,True,False
+train3382,situp,sit_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0806,True,False
+train3386,situp,sit_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0807,True,False
+train3898,squant,squat,barbell_back_squat,False,low,reviewed,claude_visual_contact_sheet,portrait;rotated,Rotated close shot.,role_group_0808,True,False
+train3899,squant,squat,bodyweight_squat,True,medium,reviewed,claude_visual_contact_sheet,,Front view with dowel.,role_group_0809,True,False
+train3912,squant,squat,overhead_squat,True,high,reviewed,claude_visual_contact_sheet,,Front view overhead squat.,role_group_0810,False,False
+train3921,squant,squat,barbell_back_squat,True,medium,reviewed,claude_visual_contact_sheet,portrait,Rack view.,role_group_0811,False,False
+train3932,squant,unknown,clean_and_jerk,False,medium,reviewed,claude_visual_contact_sheet,text_overlay,Clean and jerk mixed with squats.,role_group_0812,True,False
+train3944,squant,squat,barbell_back_squat,True,medium,reviewed,claude_visual_contact_sheet,occlusion,Plates partly occlude.,role_group_0813,False,False
+train3946,squant,squat,front_squat,True,medium,reviewed,claude_visual_contact_sheet,text_overlay,Front squat.,role_group_0814,True,False
+train3948,squant,squat,barbell_back_squat,False,low,reviewed,claude_visual_contact_sheet,portrait;backlit,Backlit tiny figure.,role_group_0815,True,False
+train3951,squant,squat,barbell_back_squat,False,medium,reviewed,claude_visual_contact_sheet,picture_in_picture,Split-screen multiple angles.,role_group_0816,True,False
+train3959,squant,squat,barbell_back_squat,False,low,reviewed,claude_visual_contact_sheet,occlusion;small_subject,Rack bars hide the lifter.,role_group_0817,False,False
+train929,frontraise,unknown,instruction_mixed,False,high,reviewed,claude_visual_contact_sheet,talking_head;multi_person;text_overlay,Two-person tutorial.,role_group_0818,True,False
+train940,frontraise,unknown,dumbbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Standing front raise.,role_group_0819,False,False
+train941,frontraise,unknown,seated_dumbbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,small_subject,Seated on a bench.,role_group_0820,False,False
+train951,frontraise,unknown,dumbbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Standing front raise.,role_group_0821,False,False
+train952,frontraise,unknown,medicine_ball_raise,False,low,reviewed,claude_visual_contact_sheet,backlit;motion_blur,Backlit blurry.,role_group_0822,True,False
+train954,frontraise,unknown,dumbbell_front_raise,False,low,reviewed,claude_visual_contact_sheet,portrait;small_subject,Tiny figure.,role_group_0823,True,False
+train960,frontraise,unknown,cable_front_raise,True,medium,reviewed,claude_visual_contact_sheet,,Cable machine front raise.,role_group_0824,True,False
+train970,frontraise,unknown,cable_front_raise,True,high,reviewed,claude_visual_contact_sheet,handheld;tight_crop;portrait,Upper body only.,role_group_0825,False,False
+train987,frontraise,unknown,dumbbell_front_raise,False,medium,reviewed,claude_visual_contact_sheet,tight_crop,Close crop.,role_group_0826,False,False
+train990,frontraise,unknown,dumbbell_front_raise,True,medium,reviewed,claude_visual_contact_sheet,small_subject,Standing front raise.,role_group_0827,False,False
+val1074,situp,unknown,v_up_with_ball,True,medium,reviewed,claude_visual_contact_sheet,high_angle,Ball pass V-up stays unknown.,role_group_0828,True,False
+val1075,situp,sit_up,sit_up,False,low,reviewed,claude_visual_contact_sheet,portrait;small_subject,Tiny figure.,role_group_0829,True,False
+val1076,situp,unknown,sit_up_to_stand_throw,False,medium,reviewed,claude_visual_contact_sheet,portrait,Sit-up combined with standing throw.,role_group_0830,True,False
+val1089,situp,sit_up,decline_bench_sit_up,True,medium,reviewed,claude_visual_contact_sheet,,Decline bench close view.,role_group_0831,True,False
+val1093,situp,unknown,v_up,False,medium,reviewed,claude_visual_contact_sheet,multi_person,Presenter in front of V-up demo.,role_group_0832,True,False
+val1099,situp,sit_up,sit_up,False,low,reviewed,claude_visual_contact_sheet,portrait;dark,Dark bedroom phone footage.,role_group_0833,True,False
+val1235,squant,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0834,True,False
+val1244,squant,unknown,box_step,False,medium,reviewed,claude_visual_contact_sheet,,Stepping onto a ledge; not a squat.,role_group_0835,True,False
+val1250,squant,squat,barbell_back_squat,True,high,reviewed,claude_visual_contact_sheet,,Audit sample: correct.,role_group_0836,False,False
+val1256,squant,squat,barbell_back_squat,True,medium,reviewed,claude_visual_contact_sheet,portrait,Rack view.,role_group_0837,True,False
+val1257,squant,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0838,True,False
+val1258,squant,squat,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0839,False,False
+val359,frontraise,unknown,instruction_mixed,False,medium,reviewed,claude_visual_contact_sheet,multi_person,Two people.,role_group_0840,True,False
+val568,jumpjacks,unknown,rotated_undecidable,False,high,reviewed,claude_visual_contact_sheet,rotated;text_overlay,Rotated title footage.,role_group_0841,True,False
+val578,jumpjacks,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0842,True,False
+val579,jumpjacks,unknown,battle_rope,True,medium,reviewed,claude_visual_contact_sheet,portrait;small_subject,Published jumping jack but visibly battle ropes.,role_group_0842,True,False
+val581,jumpjacks,jumping_jack,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0843,False,False
+val77,benchpressing,bench_press,dumbbell_bench_press,True,high,reviewed,claude_visual_contact_sheet,,Audit sample: correct.,role_group_0844,True,False
+val817,pullups,pull_up,pull_up,True,high,reviewed,claude_visual_contact_sheet,,Back view.,role_group_0845,False,False
+val819,pullups,pull_up,pull_up,False,medium,reviewed,claude_visual_contact_sheet,rotated,Footage rotated.,role_group_0846,False,False
+val820,pullups,pull_up,pull_up,False,medium,reviewed,claude_visual_contact_sheet,tight_crop,Back close-up only.,role_group_0847,True,False
+val824,pullups,pull_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0848,False,False
+val826,pullups,pull_up,pull_up,True,medium,reviewed,claude_visual_contact_sheet,tight_crop,Doorway; legs out of frame.,role_group_0849,True,False
+val828,pullups,unknown,suspension_row,True,medium,reviewed,claude_visual_contact_sheet,,Suspension-strap row from the floor.,role_group_0850,True,False
+val886,pushups,push_up,,True,medium,auto_verified,"tier1_v1 auto-accept; class audit passed 2026-10-27 (28 sampled clips: 1 wrong, 2 unusable; no class over the limit)",,,role_group_0851,True,False
+val890,pushups,unknown,clap_or_plyo_push_up,False,medium,reviewed,claude_visual_contact_sheet,tight_crop,Plyometric push-up with arm reach.,role_group_0852,False,False
+val892,pushups,unknown,suspension_push_up_or_row,False,medium,reviewed,claude_visual_contact_sheet,,Suspension-strap move; unclear.,role_group_0853,True,False
+val901,pushups,push_up,push_up,False,low,reviewed,claude_visual_contact_sheet,small_subject,Tiny figure behind a desk.,role_group_0854,True,False
+val912,pushups,unknown,burpee_or_frog_jump,True,medium,reviewed,claude_visual_contact_sheet,,Jumping from a crouch; not a push-up.,role_group_0855,True,False
+val914,pushups,push_up,push_up,False,low,reviewed,claude_visual_contact_sheet,motion_blur;dark,Blurry dark footage.,role_group_0856,True,False

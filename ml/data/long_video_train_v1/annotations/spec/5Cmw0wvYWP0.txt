@@ -1,0 +1,67 @@
+0 18 intro title_and_overview unknown high  # 
+18 26 intro logo_and_exercise_grid unknown high  # 
+26 40 transition round_preview unknown high  # 
+40 70 exercise goblet_squat squat high  # 
+70 80 transition next_preview unknown high  # 
+80 110 exercise dumbbell_romanian_deadlift deadlift high  # 
+110 120 transition next_preview unknown high  # 
+120 150 exercise dumbbell_hip_thrust unknown high  # 
+150 160 transition next_preview unknown high  # 
+160 190 exercise bulgarian_split_squat_left lunge medium 2nd # rule 4
+190 200 transition next_preview unknown high  # 
+200 230 exercise bulgarian_split_squat_right lunge medium 2nd # rule 4
+230 240 transition next_preview unknown high  # 
+240 270 exercise plank_pull_through unknown high  # 
+270 280 transition next_preview unknown high  # 
+280 310 exercise pullover_to_knee_crunch unknown high  # compound
+310 320 transition next_preview unknown high  # 
+320 350 exercise dumbbell_sit_up sit_up high  # 
+350 434 rest break_between_rounds unknown high  # walking and water break
+434 464 exercise goblet_squat squat high  # 
+464 474 transition next_preview unknown high  # 
+474 504 exercise dumbbell_romanian_deadlift deadlift high  # 
+504 514 transition next_preview unknown high  # 
+514 544 exercise dumbbell_hip_thrust unknown high  # 
+544 554 transition next_preview unknown high  # 
+554 584 exercise bulgarian_split_squat_left lunge medium 2nd # rule 4
+584 594 transition next_preview unknown high  # 
+594 624 exercise bulgarian_split_squat_right lunge medium 2nd # rule 4
+624 634 transition next_preview unknown high  # 
+634 664 exercise plank_pull_through unknown high  # 
+664 674 transition next_preview unknown high  # 
+674 704 exercise pullover_to_knee_crunch unknown high  # compound
+704 714 transition next_preview unknown high  # 
+714 744 exercise dumbbell_sit_up sit_up high  # 
+744 812 rest break_between_rounds unknown high  # walking and water break
+812 842 exercise goblet_squat squat high  # 
+842 852 transition next_preview unknown high  # 
+852 882 exercise dumbbell_romanian_deadlift deadlift high  # 
+882 892 transition next_preview unknown high  # 
+892 922 exercise dumbbell_hip_thrust unknown high  # 
+922 932 transition next_preview unknown high  # 
+932 962 exercise bulgarian_split_squat_left lunge medium 2nd # rule 4
+962 972 transition next_preview unknown high  # 
+972 1002 exercise bulgarian_split_squat_right lunge medium 2nd # rule 4
+1002 1012 transition next_preview unknown high  # 
+1012 1042 exercise plank_pull_through unknown high  # 
+1042 1052 transition next_preview unknown high  # 
+1052 1082 exercise pullover_to_knee_crunch unknown high  # compound
+1082 1092 transition next_preview unknown high  # 
+1092 1122 exercise dumbbell_sit_up sit_up high  # 
+1122 1222 rest break_between_rounds unknown high  # walking and water break
+1222 1252 exercise goblet_squat squat high  # 
+1252 1262 transition next_preview unknown high  # 
+1262 1292 exercise dumbbell_romanian_deadlift deadlift high  # 
+1292 1302 transition next_preview unknown high  # 
+1302 1332 exercise dumbbell_hip_thrust unknown high  # 
+1332 1342 transition next_preview unknown high  # 
+1342 1372 exercise bulgarian_split_squat_left lunge medium 2nd # rule 4
+1372 1382 transition next_preview unknown high  # 
+1382 1412 exercise bulgarian_split_squat_right lunge medium 2nd # rule 4
+1412 1422 transition next_preview unknown high  # 
+1422 1452 exercise plank_pull_through unknown high  # 
+1452 1462 transition next_preview unknown high  # 
+1462 1492 exercise pullover_to_knee_crunch unknown high  # compound
+1492 1502 transition next_preview unknown high  # 
+1502 1532 exercise dumbbell_sit_up sit_up high  # 
+1532 1558 outro cooldown_promo unknown high  # 

@@ -1,0 +1,42 @@
+0 14 intro title_and_first_up_next_card unknown high
+14 60 exercise alternating_dumbbell_punches unknown high # punches unsupported
+60 70 rest up_next_card unknown high
+70 122 exercise alternating_bicep_curls bicep_curl high
+122 130 rest up_next_card unknown high
+130 182 exercise standing_chest_squeeze_press unknown medium # standing press of two dumbbells together at chest; not bench press
+182 190 rest up_next_card unknown high
+190 244 exercise single_arm_shoulder_press_first_arm shoulder_press high # rule 8/13: half-kneeling single-arm press
+244 252 rest up_next_card unknown high
+252 304 exercise single_arm_shoulder_press_second_arm shoulder_press high # rule 8/13
+304 332 rest water_break unknown high
+332 380 exercise dumbbell_lateral_raises lateral_raise high
+380 388 rest up_next_card unknown high
+388 440 exercise overhead_triceps_extension tricep_extension high
+440 448 rest up_next_card unknown high
+448 502 exercise bent_over_reverse_fly unknown medium # rear-delt fly is not a lateral raise
+502 510 rest up_next_card unknown high
+510 562 exercise dumbbell_floor_press bench_press high # rule 2
+562 570 rest up_next_card unknown high
+570 624 exercise dumbbell_pullover unknown high # pullover unsupported
+624 652 rest water_break unknown high
+652 698 exercise dumbbell_skull_crushers tricep_extension high # lying triceps extension
+698 708 rest up_next_card unknown high
+708 760 exercise dumbbell_chest_fly unknown high # fly unsupported
+760 768 rest up_next_card unknown high
+768 820 exercise single_arm_dumbbell_row_first_arm dumbbell_row high
+820 828 rest up_next_card unknown high
+828 882 exercise single_arm_dumbbell_row_second_arm dumbbell_row high
+882 890 rest up_next_card unknown high
+890 942 exercise arnold_press shoulder_press high # rule 13
+942 970 rest water_break unknown high
+970 1018 exercise dumbbell_triceps_kickback_first_arm tricep_extension high # rule 6
+1018 1026 rest up_next_card unknown high
+1026 1078 exercise dumbbell_triceps_kickback_second_arm tricep_extension high # rule 6
+1078 1086 rest up_next_card unknown high
+1086 1140 exercise cross_body_dumbbell_curls bicep_curl medium 2nd # curl variant, rule 14 family
+1140 1148 rest up_next_card unknown high
+1148 1200 exercise standing_cross_body_dumbbell_fly unknown high # fly unsupported
+1200 1208 rest up_next_card unknown high
+1208 1262 exercise alternating_front_raise unknown high # front raise is not a lateral raise
+1262 1282 outro workout_complete_text_and_thanks_for_watching unknown high
+1282 1282.3 outro end_card_fade unknown high

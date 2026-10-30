@@ -1,0 +1,75 @@
+Lock verified: 6 test videos
+scored 7bD2iKKNoCE
+scored K59aLtJH0ok
+scored YEG6y9r-ELM
+scored cv10-qXYE1U
+scored lMhDB_naNBY
+scored o3xDawAnb-M
+{
+  "evaluation": "long_video_round2_test_v1_eval1",
+  "verdict": "replace_nb46",
+  "criteria": {
+    "smoothed_macro_f1_gain_at_least_3pp": true,
+    "weak_class_mean_recall_gain_at_least_10pp": true,
+    "supported_called_unknown_not_worse_than_3pp": true,
+    "downtime_called_unknown_not_worse_than_5pp": true
+  },
+  "macro_f1": {
+    "nb46": 0.3870367416704176,
+    "nb47": 0.43488068945815306,
+    "gain": 0.047843947787735486
+  },
+  "macro_f1_gain_bootstrap_95ci_reported_only": [
+    0.018796418860581254,
+    0.07791887750258863
+  ],
+  "weak_classes_scored": [
+    "tricep_extension",
+    "lateral_raise",
+    "bicep_curl",
+    "dumbbell_row",
+    "shoulder_press"
+  ],
+  "weak_class_mean_recall": {
+    "nb46_seed_median": 0.4826987607008487,
+    "nb47_seed_median": 0.6167888342085286
+  },
+  "supported_called_unknown": {
+    "nb46": 0.35010036604085487,
+    "nb47": 0.3008619671744008
+  },
+  "downtime_called_unknown": {
+    "nb46": 0.7631344612644702,
+    "nb47": 0.7649154051647373
+  },
+  "internal_test_macro_f1_nb47_seed_mean": 0.8586640557921553,
+  "test_videos": [
+    "7bD2iKKNoCE",
+    "K59aLtJH0ok",
+    "YEG6y9r-ELM",
+    "cv10-qXYE1U",
+    "lMhDB_naNBY",
+    "o3xDawAnb-M"
+  ],
+  "promotion": false
+}
+                          nb46_seed_median  nb47_seed_median
+macro_f1                             0.387             0.435
+accuracy                             0.691             0.722
+block_f1                             0.371             0.429
+supported_called_unknown             0.350             0.301
+downtime_called_unknown              0.763             0.765
+recall__bench_press                  0.967             0.933
+recall__bicep_curl                   0.650             0.810
+recall__deadlift                     0.984             0.983
+recall__dumbbell_row                 0.409             0.223
+recall__jumping_jack                 0.000             0.000
+recall__lat_pulldown                   NaN               NaN
+recall__lateral_raise                0.046             0.641
+recall__lunge                          NaN               NaN
+recall__pull_up                        NaN               NaN
+recall__push_up                        NaN               NaN
+recall__shoulder_press               0.713             0.687
+recall__sit_up                         NaN               NaN
+recall__squat                        0.951             0.878
+recall__tricep_extension             0.595             0.723

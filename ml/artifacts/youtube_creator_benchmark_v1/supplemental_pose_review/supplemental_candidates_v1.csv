@@ -1,0 +1,5 @@
+interval_id,video_id,creator,canonical_class,start_s,end_s,boundary_basis,review_status,annotation_confidence,needs_second_review,boundary_precision_s,benchmark_ready,model_predictions_reviewed,notes
+michelle_bench_01,phFvFuLUFEw,Michelle Briehler,bench_press,265,325,10s_full_timeline_RGB_storyboard,draft,low,true,10,false,false,Visible supine dumbbell chest press around 04:40-05:20; broad locator includes setup and rest.
+michelle_bench_02,phFvFuLUFEw,Michelle Briehler,bench_press,350,395,10s_full_timeline_RGB_storyboard,draft,low,true,10,false,false,Second supine dumbbell chest press set around 06:00-06:30; boundaries need dense review.
+michelle_lateral_01,phFvFuLUFEw,Michelle Briehler,lateral_raise,1930,1980,10s_full_timeline_RGB_storyboard,draft,low,true,10,false,false,Seated dumbbell lateral raises around 32:20-32:50; setup and next movement need separation.
+michelle_lateral_02,phFvFuLUFEw,Michelle Briehler,lateral_raise,2045,2100,10s_full_timeline_RGB_storyboard,draft,low,true,10,false,false,Seated dumbbell lateral raises around 34:20-34:50; nearby abdominal movement must stay unknown.

@@ -1,0 +1,30 @@
+{
+  "locked_on": "2026-10-27",
+  "status": "locked_test_set",
+  "rules": "Never train, calibrate, choose thresholds or decoders, or relabel from predictions. Log every evaluation in PLAN.md.",
+  "annotations": {
+    "82SSypK-pao.csv": "1df5050335aa133e77876eb9176f515aac13d867b09211dc17a01789cc66098e",
+    "9vXCA2i982Q.csv": "eb459a3f231207e1eef129efadcd60060043aaa3c56b77bebc973041dfa781c9",
+    "Acy3T5ikjAE.csv": "2b3cd6fa47a7e041e61b27bf4419d9de806ae1ef9b1f71f4255707f8a546337b",
+    "DlemEQnOvnM.csv": "ce26d33a510a64ad7ee29dbbd4895e42f2ce4f93da5fdc62ca4ef653c9f142f2",
+    "LlUU6ZscVYk.csv": "7aa2aba708b3dfb2dba2d5fd971407498c47fec16bec7024021dacc3b7ebb046",
+    "fWT-_jx41Jc.csv": "b418f3b98a67d0c48391a7a3d7fe7dca9d51b95d1a9246095d80d379ed227e7b",
+    "q_vXOV1BmIQ.csv": "62fb57145c8be234e9dc5f5b66719d29c19d20bac8f2ee123c8d267b480236bc",
+    "v0aPyBQMgIE.csv": "f3d198f221b4238761f4392f328ecb6325957e584c516bd78d66ce87e358b68a"
+  },
+  "evidence": {
+    "long_video_test_v1_82SSypK-pao.zip": "2cf01d052d4d7da75aed00ce51e5ed1e94554f54ca38d35cf812243b934a0b65",
+    "long_video_test_v1_9vXCA2i982Q.zip": "eca2a1a62b704ae20936673a46d640eaddc9cb89ebf63909303fb019ddbcc7a3",
+    "long_video_test_v1_Acy3T5ikjAE.zip": "52ed5949501cc5e4b2d97b58cb23309db0f08c4f2499c51301071a0fc655104b",
+    "long_video_test_v1_DlemEQnOvnM.zip": "6a898832041ecae4db049b5dcf60a99361de615fa23b856458ef83b917e20501",
+    "long_video_test_v1_LlUU6ZscVYk.zip": "0c3dcb3e465ef9142ceed72ab17241075ddf6515a3d78bf2f3763c4e01428a5b",
+    "long_video_test_v1_fWT-_jx41Jc.zip": "aeb732f76bcba98996f51dac1a37929be20c59ca6760073f4741e08182f9f9b1",
+    "long_video_test_v1_q_vXOV1BmIQ.zip": "3c94a671f0cfa8e9fc2855a02c37352979bdb5efcea47a61971df145534d54cc",
+    "long_video_test_v1_v0aPyBQMgIE.zip": "5dee6b20001c134876c8a0cfa0b10880fd3a182093b9b148a536d5df144cf7cf"
+  },
+  "second_review": {
+    "sample": "second_review_sample_v1.csv",
+    "result": "44 of 44 correct (user)",
+    "flagged_rows_adjudicated": 58
+  }
+}

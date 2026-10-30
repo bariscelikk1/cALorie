@@ -1,0 +1,52 @@
+0 6 intro title_card unknown high
+6 130 exercise standing_warmup unknown high # arm swings, toe touches
+130 210 exercise lunge_stretch_with_reach unknown high # warm-up stretch
+210 236 exercise dumbbell_romanian_deadlift deadlift medium
+236 250 rest break_overlay unknown high
+250 296 exercise dumbbell_shoulder_press shoulder_press high
+296 310 rest break_overlay unknown high
+310 356 exercise dumbbell_sumo_squat squat medium 2nd # rule 5
+356 416 rest break_overlay_sitting unknown high
+416 460 exercise bent_over_dumbbell_row dumbbell_row medium 2nd # two dumbbells, rule 3
+460 476 rest break_overlay unknown high
+476 520 exercise dumbbell_shoulder_press shoulder_press high
+520 536 rest break_overlay unknown high
+536 580 exercise single_leg_romanian_deadlift deadlift medium 2nd # kickstand/single-leg RDL
+580 640 rest break_overlay unknown high
+640 686 exercise dumbbell_reverse_lunge lunge high
+686 700 rest break_overlay unknown high
+700 744 exercise dumbbell_reverse_lunge lunge high # other side
+744 760 rest break_overlay unknown high
+760 806 exercise dumbbell_sumo_squat squat medium 2nd # rule 5
+806 868 rest break_overlay unknown high
+868 910 exercise dumbbell_reverse_lunge lunge high
+910 926 rest break_overlay unknown high
+926 970 exercise dumbbell_reverse_lunge lunge high # other side
+970 986 rest break_overlay unknown high
+986 1030 exercise dumbbell_sumo_squat squat medium 2nd
+1030 1090 rest break_overlay unknown high
+1090 1136 exercise dumbbell_plank_row_with_knee_drive unknown high # compound
+1136 1150 rest break_overlay unknown high
+1150 1196 exercise dumbbell_snatch_from_lunge unknown high
+1196 1210 rest break_overlay unknown high
+1210 1256 exercise lying_dumbbell_floor_press bench_press medium 2nd # rule 2
+1256 1318 rest break_overlay unknown high
+1318 1360 exercise dumbbell_plank_row_with_knee_drive unknown high
+1360 1374 rest break_overlay unknown high
+1374 1420 exercise dumbbell_snatch_from_lunge unknown high
+1420 1440 rest break_overlay unknown high
+1440 1480 exercise lying_dumbbell_floor_press bench_press medium 2nd # rule 2
+1480 1538 rest break_overlay_lying unknown high
+1538 1588 exercise lying_dumbbell_pullover_leg_raise unknown high
+1588 1600 rest break_overlay unknown high
+1600 1646 exercise lying_dumbbell_crunch_legs_up sit_up medium 2nd # crunch with legs raised, rule 7
+1646 1660 rest break_overlay unknown high
+1660 1706 exercise lying_dumbbell_leg_lift unknown high
+1706 1764 rest break_overlay unknown high
+1764 1812 exercise lying_dumbbell_pullover_leg_raise unknown high
+1812 1824 rest break_overlay unknown high
+1824 1870 exercise lying_dumbbell_crunch_legs_up sit_up medium 2nd # rule 7
+1870 1884 rest break_overlay unknown high
+1884 1926 exercise lying_dumbbell_leg_lift unknown high
+1926 2232 cooldown floor_stretches unknown high # leg raises, twists, child pose, forward fold
+2232 2238 outro we_did_it_card unknown high

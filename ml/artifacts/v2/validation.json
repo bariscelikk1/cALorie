@@ -1,0 +1,40 @@
+{
+  "artifact": "calorie_youtube_mixed_landmarks_v3.zip",
+  "sha256": "bd0426eda35654a95a8bac70b0357ba484e82bd29e6b3f71760fcc743f432cf4",
+  "archive_size_bytes": 9830015,
+  "clips": 91,
+  "source_groups": {
+    "youtube:W2Bm9dfQjbk": 25,
+    "youtube:c4TomZjzobY": 37,
+    "youtube:oLsonHQJOUc": 29
+  },
+  "classes": {
+    "bicep_curl": 3,
+    "dumbbell_row": 3,
+    "lunge": 5,
+    "plank": 3,
+    "push_up": 2,
+    "sit_up": 1,
+    "squat": 2,
+    "tricep_extension": 3,
+    "unknown": 69
+  },
+  "statuses": {
+    "low_detection": 1,
+    "ok": 90
+  },
+  "sampled_frames": 39652,
+  "detection_rate": {
+    "min": 0.3333333333333333,
+    "mean": 0.9897095457059307,
+    "max": 1.0
+  },
+  "validated_landmark_shape": [
+    "frames",
+    17,
+    4
+  ],
+  "invalid_npz_files": 0,
+  "nan_values": 0,
+  "infinite_values": 0
+}

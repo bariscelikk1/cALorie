@@ -1,0 +1,46 @@
+{
+  "experiment": "v5_existing_training_hard_positive_mining",
+  "checkpoint": "v5_hard_negative_controlled_retrain",
+  "gate_threshold": 0.9,
+  "window_frames": 64,
+  "stride_frames": 32,
+  "source_archives": [
+    "calorie_workoutfitness_landmarks_v1.zip",
+    "calorie_mmfit_landmarks_v1.zip",
+    "calorie_mmfit_unknown_v1.zip",
+    "calorie_youtube_mixed_landmarks_v3.zip",
+    "calorie_youtube_additional_landmarks_v1.zip",
+    "calorie_youtube_training_landmarks_v4.zip",
+    "calorie_workoutfitness_gate_hardneg_v1.zip"
+  ],
+  "reviewed_supported_training_windows": 4433,
+  "all_hard_positive_windows": 194,
+  "balanced_selected_windows": 194,
+  "selected_by_class": {
+    "bench_press": 12,
+    "bicep_curl": 42,
+    "deadlift": 10,
+    "dumbbell_row": 3,
+    "jumping_jack": 1,
+    "lat_pulldown": 12,
+    "lateral_raise": 13,
+    "lunge": 18,
+    "plank": 22,
+    "pull_up": 3,
+    "push_up": 22,
+    "shoulder_press": 1,
+    "sit_up": 6,
+    "squat": 26,
+    "tricep_extension": 3
+  },
+  "excluded_unreviewed_groups": [
+    "youtube:W2Bm9dfQjbk",
+    "youtube:c4TomZjzobY",
+    "youtube:oLsonHQJOUc"
+  ],
+  "validation_windows_used_for_mining": 0,
+  "internal_test_windows_used_for_mining": 0,
+  "locked_gainsbybrains_used": false,
+  "creates_new_independent_evidence": false,
+  "intended_use": "sampling weights for original training windows in Notebook 14"
+}

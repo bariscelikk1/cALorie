@@ -1,0 +1,13 @@
+accuracy,full_15_label_macro_f1,present_label_macro_f1,supported_accuracy,unknown_precision,unknown_recall,gate_balanced_accuracy,regions,present_labels,creator,system
+0.25,0.06666666666666667,0.25,0.25,0.0,0.0,0.5,8,"['jumping_jack', 'lunge', 'push_up', 'squat']",BullyJuice,v6c
+0.625,0.2,0.75,0.625,0.0,0.0,0.625,8,"['jumping_jack', 'lunge', 'push_up', 'squat']",BullyJuice,v6f
+0.0,0.0,0.0,0.0,0.0,0.0,1.0,1,['deadlift'],Criticalbench,v6c
+1.0,0.06666666666666667,1.0,1.0,0.0,0.0,1.0,1,['deadlift'],Criticalbench,v6f
+0.7,0.18666666666666665,0.7,0.7,0.0,0.0,0.7,10,"['bench_press', 'deadlift', 'lat_pulldown', 'lateral_raise']",Michelle Briehler,v6c
+0.7,0.18666666666666665,0.7,0.7,0.0,0.0,0.7,10,"['bench_press', 'deadlift', 'lat_pulldown', 'lateral_raise']",Michelle Briehler,v6f
+1.0,0.06666666666666667,1.0,1.0,0.0,0.0,1.0,3,['pull_up'],STRIQfit,v6c
+1.0,0.06666666666666667,1.0,1.0,0.0,0.0,1.0,3,['pull_up'],STRIQfit,v6f
+0.5384615384615384,0.22666666666666666,0.5666666666666667,0.5555555555555556,0.3333333333333333,0.5,0.5277777777777778,13,"['bicep_curl', 'dumbbell_row', 'push_up', 'shoulder_press', 'tricep_extension', 'unknown']",TIFF x DAN,v6c
+0.6923076923076923,0.3,0.75,0.7777777777777778,0.5,0.5,0.6388888888888888,13,"['bicep_curl', 'dumbbell_row', 'push_up', 'shoulder_press', 'tricep_extension', 'unknown']",TIFF x DAN,v6f
+0.0,0.0,0.0,0.0,0.0,0.0,0.0,1,['sit_up'],TRAIN WITH GAINSBYBRAINS,v6c
+0.0,0.0,0.0,0.0,0.0,0.0,0.0,1,['sit_up'],TRAIN WITH GAINSBYBRAINS,v6f
