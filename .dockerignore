@@ -1,0 +1,14 @@
+*
+!ml
+ml/*
+!ml/app
+!ml/scripts
+ml/scripts/*
+!ml/scripts/score_long_video_test_v1.py
+!ml/artifacts
+ml/artifacts/*
+!ml/artifacts/final_model_v2
+ml/artifacts/final_model_v2/*
+!ml/artifacts/final_model_v2/models
+**/__pycache__
+**/.venv

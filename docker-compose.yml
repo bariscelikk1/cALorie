@@ -1,0 +1,6 @@
+services:
+  calorie:
+    build: .
+    ports:
+      - "127.0.0.1:8501:8501"   # reachable only from this computer
+    restart: "no"

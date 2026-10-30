@@ -62,6 +62,19 @@ Your video is never uploaded anywhere. It is a research prototype: it averages t
 (not scored separately), reps are approximate (68% of unseen clips within one rep), and calories use one fixed
 MET per exercise with a ±35% range. Command line: `python ml/app/calorie_pipeline.py VIDEO`.
 
+## Run it on another computer (Docker)
+
+For a teacher's or friend's PC you do not need Python at all, only [Docker Desktop](https://www.docker.com/products/docker-desktop/).
+Send them `dist/calorie_docker_bundle.zip` (12 MB; only what the page needs, not the whole repo). They unzip it and run:
+
+```bash
+docker compose up --build
+```
+
+then open http://localhost:8501. It runs on the CPU (slower than on a Mac) and nothing is uploaded anywhere. Details are in
+`ml/app/DOCKER_README.txt` inside the bundle. Note: the Docker files were written and checked file by file, but the image itself has not
+been built on a machine with Docker yet.
+
 ## Reproduce the final score (v2 vs v1 on the locked round-2 test)
 
 ```bash
