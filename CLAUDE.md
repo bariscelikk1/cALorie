@@ -13,9 +13,8 @@ the required order before changing data, labels, models, or notebooks.
 ## Repository and exact working state
 
 - Repository: https://github.com/bariscelikk1/cALorie
-- Active branch: https://github.com/bariscelikk1/cALorie/tree/feat/tcn-rebuild
-- Open draft PR #2: https://github.com/bariscelikk1/cALorie/pull/2
-- PR base/head: `main` <- `feat/tcn-rebuild`
+- Active branch: `main` (https://github.com/bariscelikk1/cALorie). `feat/tcn-rebuild` was merged into it on 2026-10-30.
+- PR #2 (`main` <- `feat/tcn-rebuild`) is merged.
 - Last scientific checkpoint before this handoff:
   https://github.com/bariscelikk1/cALorie/commit/16109002bb4b2e3c8f002e964cecc495799fab13
 
@@ -25,8 +24,7 @@ There is no active website workflow. Do not restart or redesign it unless the
 user explicitly changes scope.
 
 ```bash
-git clone --branch feat/tcn-rebuild --single-branch \
-  https://github.com/bariscelikk1/cALorie.git
+git clone https://github.com/bariscelikk1/cALorie.git
 cd cALorie
 git status --short --branch
 ```
@@ -55,10 +53,11 @@ video -> MediaPipe pose landmarks -> supported/unknown gate
       -> repetition counting -> MET-based calorie estimate -> local Python app
 ```
 
-Pose extraction, open-set gating, exercise classification, controlled
-experiments, and region-level evaluation are developed. Continuous full-video
-segmentation, repetition counting, calorie estimation, and the local app are
-not production-complete.
+Pose extraction, open-set gating, exercise classification, full-video
+timeline segmentation, controlled experiments, and evaluation are developed.
+Repetition counting (five exercises), a MET-based calorie estimate, and a small
+local Streamlit page (`ml/app/`) exist but are approximate and not
+production-complete.
 
 Supported labels are `bench_press`, `bicep_curl`, `deadlift`, `dumbbell_row`,
 `jumping_jack`, `lat_pulldown`, `lateral_raise`, `lunge`, `pull_up`, `push_up`,
@@ -236,10 +235,10 @@ Failed experiments are evidence; do not delete or rewrite them as successes.
 ## Immediate next step
 
 None in progress. The experiment arc is closed and the final model is frozen
-(`ml/artifacts/final_model_v1/MODEL_CARD.md`). If work resumes, follow
+(`ml/artifacts/final_model_v2/MODEL_CARD.md`). If work resumes, follow
 `FINAL_REPORT.md` section 8: more real-session data for tricep extension,
-lateral raise, curl, row, and shoulder press; a **new** locked test (the
-both locked long-video tests are spent); rep counting and calories exist only as an approximate local page.
+lateral raise, curl, row, and shoulder press; a **new** locked test (both
+existing locked long-video tests are spent). Rep counting and calories exist only as an approximate local page.
 The RepCount gate-rotation text that used to be here is historical
 (Notebook 39 ran; see the table above).
 

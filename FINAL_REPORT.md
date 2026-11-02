@@ -1,6 +1,6 @@
 # cALorie — final report
 
-Date: 2026-10-30. Branch: `feat/tcn-rebuild`.
+Date: 2026-11-02. Branch: `main`.
 
 ## 1. What cALorie is
 

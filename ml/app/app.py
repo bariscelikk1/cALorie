@@ -101,7 +101,7 @@ def timeline_figure(table, total):
     for r in table.itertuples():
         w = (r.end_s - r.start_s) / 60
         ax.barh(0, w, left=r.start_s / 60, height=0.7, color=REST if r.label == "unknown" else PALETTE.get(r.label, VIOLET), edgecolor="#12151C", linewidth=1)
-        if r.label != "unknown" and w > total / 60 * 0.045:
+        if r.label != "unknown" and w > total / 60 * (0.012 + 0.0042 * len(r.label)):  # label must fit inside its own bar
             ax.text(r.start_s / 60 + w / 2, 0, r.label.replace("_", " "), ha="center", va="center", fontsize=7, color="#12151C", fontweight="bold", rotation=0)
     ax.set_xlim(0, total / 60); ax.set_yticks([]); ax.set_xlabel("minutes", color="#B9BDD0")
     ax.tick_params(colors="#B9BDD0")
