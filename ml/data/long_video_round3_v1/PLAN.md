@@ -57,3 +57,8 @@ About 2-3 days. Limits: 6 test videos give a wide interval; weak classes may sti
 - Revision 1 (before any new result was seen): 24 more long-tail queries appended; rules unchanged. 1,566 hits, 23 eligible creators.
 - Result: 10 train (5.2 h) and 6 test (3.1 h) videos, `candidates.csv` (`role` column). Selection uses titles and descriptions only; the
   actual footage is checked at screening. Awaiting the user's OK before any download.
+- **Scale-down (2026-11-02, user: "no time for 16, just a couple of videos for the weak exercises"):** the full download was stopped
+  before any video finished; nothing was kept. Round 3 becomes a **mini round of 6 videos taken from the approved list**, chosen from the
+  metadata alone (before any footage was seen) as the ones covering the most weak exercises: **train** `fEuM1XWZ068`, `BZiRx8zVPY8`,
+  `7xDmlGYrfww`, `HlnCRJ2Z-i8`; **test** `WopbPBumelc`, `dVtAnYQynbU`. Two test videos are too few for the pass rule above to be
+  decisive; the result is **informational** (reported with its limits, not used to replace v2 unless the user decides otherwise).
