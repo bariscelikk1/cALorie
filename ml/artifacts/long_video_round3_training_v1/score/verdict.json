@@ -1,0 +1,46 @@
+{
+  "evaluation": "long_video_round3_test_v1_eval1",
+  "verdict": "keep_v2",
+  "criteria": {
+    "smoothed_macro_f1_gain_at_least_2pp": false,
+    "weak_class_mean_recall_not_worse_than_5pp": true,
+    "dumbbell_row_recall_not_worse_than_v2": true,
+    "supported_called_unknown_not_worse_than_3pp": true,
+    "downtime_called_unknown_not_worse_than_5pp": true
+  },
+  "macro_f1": {
+    "v2": 0.2781544140242679,
+    "nb48": 0.2929701979352816,
+    "gain": 0.014815783911013736
+  },
+  "weak_classes_scored": [
+    "tricep_extension",
+    "lateral_raise",
+    "bicep_curl",
+    "dumbbell_row",
+    "shoulder_press",
+    "bench_press"
+  ],
+  "weak_class_mean_recall": {
+    "v2_seed_median": 0.3823168831814739,
+    "nb48_seed_median": 0.40821999613655097
+  },
+  "supported_called_unknown": {
+    "v2": 0.46257330113832357,
+    "nb48": 0.3897895826146947
+  },
+  "downtime_called_unknown": {
+    "v2": 0.8779026217228464,
+    "nb48": 0.8895131086142322
+  },
+  "internal_test_macro_f1_seed_mean": {
+    "v2": 0.8586640557921553,
+    "nb48": 0.8370960345427797
+  },
+  "test_videos": [
+    "WopbPBumelc",
+    "dVtAnYQynbU"
+  ],
+  "caveat": "two test videos: informational only",
+  "promotion": false
+}

@@ -116,3 +116,20 @@ About 2-3 days. Limits: 6 test videos give a wide interval; weak classes may sti
   4. rest/transition time called unknown no more than 5 pp worse.
   Internal clip-test Macro F1 is reported only. Nothing is tuned from the result. If the rule fails, v2 stays the final model; if it passes, v2 still
   stays the presented model unless the user decides otherwise, because 2 videos are weak evidence.
+
+## Result (2026-11-02): keep v2
+
+Notebook 48 (3 seeds) was scored once on the two locked round-3 test videos with `ml/scripts/score_nb48_round3_v1.py`.
+Informational only (two test videos, labels unreviewed). Verdict: **keep v2**; one of five predeclared rules failed.
+
+| Rule | v2 | nb48 | Pass |
+| --- | ---: | ---: | :---: |
+| Macro F1 gain >= 2 pp | 27.8% | 29.3% (+1.5) | no |
+| Weak-class mean recall not worse than 5 pp | 38.2% | 40.8% | yes |
+| Dumbbell row not worse than v2 | 40.1% | 56.7% | yes |
+| Supported time called unknown, not worse than 3 pp | 46.3% | 39.0% | yes |
+| Rest time called unknown, not worse than 5 pp | 87.8% | 89.0% | yes |
+
+Bench press recall 50 -> 80% and dumbbell row 40 -> 57%; shoulder press 80 -> 58%, push-up 71 -> 47%, bicep curl 59 -> 47%.
+Seeds disagree strongly (push-up recall 28-69% across the three nb48 seeds), so per-class moves are mostly noise-level evidence.
+Files: `ml/artifacts/long_video_round3_training_v1/` (3 seed ZIPs, `score/`). Nothing was tuned from this result.
