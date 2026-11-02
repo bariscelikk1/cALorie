@@ -1,4 +1,4 @@
-# Long-video round 3 — plan (DRAFT, awaiting approval)
+# Long-video round 3 — plan (approved by the user 2026-11-02)
 
 Status: written 2026-11-02. Nothing is collected or built.
 
@@ -46,3 +46,14 @@ an extra, labeled arm and only adopted if it passes the same four rules. It is n
 | Score once, report | 1 h |
 
 About 2-3 days. Limits: 6 test videos give a wide interval; weak classes may still lack data; reps and calories untouched.
+
+## Selection log
+
+- 2026-11-02: Exclusion list (`exclusions.csv`, 182 rows, 127 channels) = every earlier source, both locked test sets,
+  all round-2 train/test/reject creators, and the creators of the 14 informal short-clip check videos. Selector:
+  `ml/scripts/select_long_video_round3_v1.py` (same rules as round 2; weak classes: dumbbell row, tricep extension, bench
+  press; train needs each in >=5 videos and >=2 home/>=2 gym, test needs each in >=3 and >=1 home/>=1 gym; backtracking in hash order).
+- First pass (24 targeted queries, written before any result): 1,413 hits, 15 eligible creators; train filled (10), test could not (5 left).
+- Revision 1 (before any new result was seen): 24 more long-tail queries appended; rules unchanged. 1,566 hits, 23 eligible creators.
+- Result: 10 train (5.2 h) and 6 test (3.1 h) videos, `candidates.csv` (`role` column). Selection uses titles and descriptions only; the
+  actual footage is checked at screening. Awaiting the user's OK before any download.
