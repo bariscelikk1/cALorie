@@ -62,3 +62,6 @@ About 2-3 days. Limits: 6 test videos give a wide interval; weak classes may sti
   metadata alone (before any footage was seen) as the ones covering the most weak exercises: **train** `fEuM1XWZ068`, `BZiRx8zVPY8`,
   `7xDmlGYrfww`, `HlnCRJ2Z-i8`; **test** `WopbPBumelc`, `dVtAnYQynbU`. Two test videos are too few for the pass rule above to be
   decisive; the result is **informational** (reported with its limits, not used to replace v2 unless the user decides otherwise).
+- **Second scale-down (2026-11-02, user: "for now only 3: 2 train, 1 test"):** the 6-video download was stopped and cleaned; round 3 now
+  starts with **3 videos**: train `fEuM1XWZ068` and `BZiRx8zVPY8` (both list row, triceps, and bench press), test `WopbPBumelc`
+  (the same three). One test video is an anecdote, not a test; any result is informational only.
