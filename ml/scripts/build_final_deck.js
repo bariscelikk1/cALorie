@@ -55,9 +55,9 @@ notes(s, "The model never looks at pixels. MediaPipe turns each frame into 17 bo
 section("Problem");
 s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Problem" });
 s.addText("Short clips looked great. Real workouts did not", { placeholder: "title" });
-stat(s, 0.6, 1.7, 2.7, "82%", "score on short, trimmed clips (the usual test)", B.blue);
-stat(s, 3.65, 1.7, 2.7, "33%", "score on full, real workouts it had never seen", B.orange);
-stat(s, 6.7, 1.7, 2.7, "55%", "of real exercise time thrown away as “unknown”", B.violet);
+stat(s, 0.6, 1.7, 2.7, "82%", "early model on short, trimmed clips (a test I reused, so optimistic)", B.blue);
+stat(s, 3.65, 1.7, 2.7, "33%", "early model on full, real workouts it had never seen (final models: 44–48%)", B.orange);
+stat(s, 6.7, 1.7, 2.7, "55%", "of real exercise time the early model threw away as “unknown”", B.violet);
 s.addText("Real sessions have rests, timers, intros, camera changes, and exercises the model barely knew: sit-up, row, lunge, shoulder press, and triceps all scored 0%.", { x: 0.6, y: 3.95, w: 8.8, h: 0.9, fontSize: 16, fontFace: "Calibri", color: "C9CEDF", margin: 0, isTextBox: true, objectName: "caption" });
 notes(s, "Macro F1 averages the score over exercises so rare ones count equally. 82 percent was the old internal test of short clips. On eight full follow-along workouts, the same model scored 33 percent, and more than half of the real exercise time was rejected.");
 
