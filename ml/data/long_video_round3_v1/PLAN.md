@@ -73,7 +73,7 @@ About 2-3 days. Limits: 6 test videos give a wide interval; weak classes may sti
   (`LOCK.json`), 26-segment 10% review sample drawn. **The user chose to skip the review**, so the sample stays unchecked
   (`user_verdict` empty) and these labels are less verified than rounds 1-2. fEuM1XWZ068 minutes 12-30 were labeled from
   10 s frames and its regular 60 s timer cycle, not from the 2 s pages.
-- Run: **Notebook 48** = Notebook 47's recipe and data **plus the 2 round-3 train videos** (34 labeled long videos), 3 seeds
+- Run: **Notebook 48** = Notebook 47's recipe and data **plus the 2 round-3 train videos** (40 labeled long videos: 24 from round 1, 14 from round 2, 2 new), 3 seeds
   (42, 137, 2026), Colab T4 in three parts (`ml/notebooks/48_long_video_round3_seed*.ipynb`, built by
   `ml/scripts/build_notebook48.py`). Control = the current final model v2 (Notebook 47). Scoring: `ml/scripts/score_nb48_round3_v1.py`,
   once, on the single locked test video `WopbPBumelc` with the same scorer, decoder, and threshold as every earlier evaluation.
