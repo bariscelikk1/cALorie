@@ -54,3 +54,19 @@ The video-level bootstrap interval is reported, not judged. If nothing passes, v
 - Can: "variant A beats the old rule on held-out videos, interval X."
 - Cannot: a locked-test result, generalization to new gyms or cameras, or that a winner chosen on this same pool is unbiased.
 - Cannot: use the old v2 models here. They trained on these videos.
+
+## E6: wide residual network on pose (Notebook 50), rule fixed 2026-11-02 before any run
+
+Change: classifier and the three gates use WideTCN (widths 128-256-384-512, about 2.85 M parameters, 10x the current model);
+everything else is identical to Notebook 49 (same 5 folds, seed 42, data, recipe, decoder). Notebook 49 is the control.
+Both are scored on the same held-out videos with the old decoder (mean gate score, 0.65 cutoff, 9-window vote). Pass only if all hold:
+
+1. Pooled out-of-fold Macro F1 at least +2 points over Notebook 49.
+2. Mean recall of the weak classes (tricep extension, lateral raise, bicep curl, dumbbell row, shoulder press, bench press)
+   not worse than 3 points.
+3. Exercise time called `unknown` not worse than 3 points.
+4. Rest/transition time called `unknown` not worse than 5 points.
+5. Better Macro F1 than Notebook 49 in at least 60% of the 44 videos.
+
+One seed per fold, so a gain under about 2-3 points cannot be told apart from seed noise; the rule is deliberately not looser. If it fails,
+we keep the small model and say that size did not help. The video-bootstrap interval is reported, not judged.
