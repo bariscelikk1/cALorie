@@ -65,3 +65,23 @@ About 2-3 days. Limits: 6 test videos give a wide interval; weak classes may sti
 - **Second scale-down (2026-11-02, user: "for now only 3: 2 train, 1 test"):** the 6-video download was stopped and cleaned; round 3 now
   starts with **3 videos**: train `fEuM1XWZ068` and `BZiRx8zVPY8` (both list row, triceps, and bench press), test `WopbPBumelc`
   (the same three). One test video is an anecdote, not a test; any result is informational only.
+
+## Execution log and predeclared training run (2026-11-02, written before any training or scoring)
+
+- Done: 3 videos downloaded and pose-extracted, screened (all kept, see `screening.csv`), labeled second by second with
+  `ml/data/ANNOTATION_GUIDE.md`, flagged rows settled by written rule (`finalize_long_video_round3_v1.py`), test video locked
+  (`LOCK.json`), 26-segment 10% review sample drawn. **The user chose to skip the review**, so the sample stays unchecked
+  (`user_verdict` empty) and these labels are less verified than rounds 1-2. fEuM1XWZ068 minutes 12-30 were labeled from
+  10 s frames and its regular 60 s timer cycle, not from the 2 s pages.
+- Run: **Notebook 48** = Notebook 47's recipe and data **plus the 2 round-3 train videos** (34 labeled long videos), 3 seeds
+  (42, 137, 2026), Colab T4 in three parts (`ml/notebooks/48_long_video_round3_seed*.ipynb`, built by
+  `ml/scripts/build_notebook48.py`). Control = the current final model v2 (Notebook 47). Scoring: `ml/scripts/score_nb48_round3_v1.py`,
+  once, on the single locked test video `WopbPBumelc` with the same scorer, decoder, and threshold as every earlier evaluation.
+- Rule (all four must hold for Notebook 48 to be called better than v2; **informational only, one test video**):
+  1. smoothed Macro F1 gain >= 2 pp (seed medians);
+  2. mean time recall over the weak exercises present in the test video (dumbbell row, tricep extension, bench press, bicep curl,
+     shoulder press) not worse than 5 pp;
+  3. supported exercise time called unknown no more than 3 pp worse;
+  4. rest/transition time called unknown no more than 5 pp worse.
+  The internal clip-test Macro F1 is reported only. Nothing is tuned from the result; if the rule fails, v2 stays the final model.
+  Even if it passes, one video is an anecdote: the report says so and v2 stays the presented model unless the user decides otherwise.
