@@ -97,7 +97,9 @@ def timeline_figure(table, total):
         if r.label != "unknown" and w > total / 60 * 0.045:
             ax.text(r.start_s / 60 + w / 2, 0, r.label.replace("_", " "), ha="center", va="center", fontsize=7, color="#12151C", fontweight="bold", rotation=0)
     ax.set_xlim(0, total / 60); ax.set_yticks([]); ax.set_xlabel("minutes", color="#B9BDD0")
-    ax.tick_params(colors="#B9BDD0"); [s.set_visible(False) for s in ax.spines.values()]
+    ax.tick_params(colors="#B9BDD0")
+    for spine in ax.spines.values():
+        spine.set_visible(False)
     return fig
 
 
@@ -113,12 +115,21 @@ if rate < 0.5:
 
 summary = rc.summarize_exercises(table, pose, weight)
 exercise_s = float(summary.seconds.sum()) if len(summary) else 0.0
-cols = st.columns(4)
-cards = [(fmt(total), "workout length"), (fmt(exercise_s), "exercise time found"), (str(len(summary)), "exercises found"),
-         (f"{int(summary.kcal.sum())}" if len(summary) else "0", "kcal (estimate)")]
+# Calories two ways: only the exercise the model recognized (a floor, because missed time counts as zero), and a rough
+# whole-session figure at a general strength-training MET (3.5) over the full video length.
+session_kcal = rc.MET_SESSION * 3.5 * weight / 200.0 * (total / 60.0)
+cols = st.columns(3)
+cards = [(fmt(total), "workout length"), (fmt(exercise_s), "exercise time found"), (str(len(summary)), "exercises found")]
+
 for col, (big, small) in zip(cols, cards):
     col.markdown(f'<div class="card"><div class="big">{big}</div><div class="small">{small}</div></div>', unsafe_allow_html=True)
-
+st.write("")
+cols2 = st.columns(2)
+cards2 = [(f"{int(summary.kcal.sum())}" if len(summary) else "0", "kcal from the exercises found (a minimum: missed time counts as zero)"),
+          (f"{int(session_kcal)}", "kcal for the whole session (rough, general strength-training estimate)")]
+for col, (big, small) in zip(cols2, cards2):
+    col.markdown(f'<div class="card"><div class="big">{big}</div><div class="small">{small}</div></div>', unsafe_allow_html=True)
+st.write("")
 st.subheader("Timeline")
 buf = io.BytesIO()
 timeline_figure(table, total).savefig(buf, format="png", transparent=True, dpi=200, bbox_inches="tight")

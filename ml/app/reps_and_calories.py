@@ -24,6 +24,7 @@ MET = {
     "shoulder_press": 3.5, "tricep_extension": 3.5,
 }
 CALORIE_RANGE = 0.35
+MET_SESSION = 3.5  # general resistance-training MET (2024 Compendium 02054), used for the whole-session figure
 
 
 def motion_signal(normalized: np.ndarray, image: np.ndarray | None, kind: str) -> np.ndarray:
