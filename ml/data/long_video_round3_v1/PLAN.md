@@ -85,3 +85,34 @@ About 2-3 days. Limits: 6 test videos give a wide interval; weak classes may sti
   4. rest/transition time called unknown no more than 5 pp worse.
   The internal clip-test Macro F1 is reported only. Nothing is tuned from the result; if the rule fails, v2 stays the final model.
   Even if it passes, one video is an anecdote: the report says so and v2 stays the presented model unless the user decides otherwise.
+
+- **Add 3 (2026-11-02, user: "3 more okey?"):** the 3 remaining videos from the approved mini shortlist are added: train `7xDmlGYrfww`,
+  `HlnCRJ2Z-i8`; test `dVtAnYQynbU` (roles fixed by the earlier selection, before any footage was seen). Round 3 becomes 4 train + 2 test videos.
+  Same screening, labeling, lock, and review-sample steps; the Notebook 48 run in this plan is re-planned over all 6 videos before any training
+  (the earlier single-test-video rule is replaced by a rule over 2 test videos, written before training, in a later entry).
+- **Screening reject (2026-11-02):** `7xDmlGYrfww` is an edited compilation (animated anatomy figure beside stock clips of different people;
+  pose detection 70%). Replaced by the next unused train candidate in the selector's hash order (salt `long_video_round3_train`): `4FaqRNRHX4M`.
+  The rejected video's evidence ZIP is not kept.
+- **Second screening reject (2026-11-02):** `4FaqRNRHX4M` shows two performers side by side with camera cuts. Replaced by the next unused train
+  candidate in hash order: `LL7OIZm5RAU`. The rejected video's evidence ZIP is not kept.
+- **Third screening reject (2026-11-02):** `LL7OIZm5RAU` is an animated figure with no real performer. Replaced by the next unused train candidate in hash
+  order: `QWNYZRt_K9g`. The rejected video's evidence ZIP is not kept.
+
+## Final round-3 set and predeclared training run (2026-11-02, written before any training or scoring; replaces the 3-video run entry above)
+
+- Set after screening (3 rejects, each replaced by the next unused candidate in the selector's hash order; all logged in `screening.csv`):
+  **train** `fEuM1XWZ068`, `BZiRx8zVPY8`, `HlnCRJ2Z-i8`, `QWNYZRt_K9g` (about 1.6 h, 1,094 s unknown + 2,030 s of supported exercise);
+  **test** `WopbPBumelc`, `dVtAnYQynbU` (1.2 h; locked in `LOCK.json`). Labels: all uncertain rows settled by written rule; the user skipped the
+  10% review (sample of 49 segments left unchecked), so these labels are less verified than rounds 1-2. fEuM1XWZ068 minutes 12-30 and
+  dVtAnYQynbU (card text + strict 60 s cycle) were timed from the interval pattern, not every 2 s page.
+- Run: **Notebook 48** = Notebook 47's recipe and data plus the 4 round-3 train videos (42 labeled long videos), 3 seeds (42, 137, 2026), Colab T4
+  in three parts. Control = final model v2 (Notebook 47). One scoring, `ml/scripts/score_nb48_round3_v1.py`, on the 2 locked test videos, same
+  scorer, decoder, and threshold as every earlier evaluation.
+- Rule (all four must hold to call Notebook 48 better than v2; **informational only**, 2 test videos are still few):
+  1. smoothed pooled Macro F1 gain >= 2 pp (seed medians);
+  2. mean time recall over the weak exercises present in the test videos (bench press, bicep curl, dumbbell row, shoulder press, tricep extension,
+     lateral raise) not worse than 5 pp, and dumbbell row not worse than v2;
+  3. supported exercise time called unknown no more than 3 pp worse;
+  4. rest/transition time called unknown no more than 5 pp worse.
+  Internal clip-test Macro F1 is reported only. Nothing is tuned from the result. If the rule fails, v2 stays the final model; if it passes, v2 still
+  stays the presented model unless the user decides otherwise, because 2 videos are weak evidence.

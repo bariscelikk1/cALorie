@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Score Notebook 48 (three per-seed ZIPs) once on the locked round-3 test video, against final model v2 (Notebook 47).
 
-Predeclared in ml/data/long_video_round3_v1/PLAN.md. One test video: the result is informational only.
-Four criteria (all must hold to call Notebook 48 better than v2):
+Predeclared in ml/data/long_video_round3_v1/PLAN.md. Two test videos: the result is informational only.
+Criteria (all must hold to call Notebook 48 better than v2):
   1. smoothed Macro F1 gain >= 2 pp (seed medians)
-  2. mean time recall over the weak exercises present in the test video not worse than 5 pp
+  2. mean time recall over the weak exercises present in the test videos not worse than 5 pp, and dumbbell row recall not worse than v2
   3. supported exercise time called unknown no more than 3 pp worse
   4. rest/transition time called unknown no more than 5 pp worse
 Usage: score_nb48_round3_v1.py REPO_ROOT OUT_DIR nb47_seed42.zip nb47_seed137.zip nb47_seed2026.zip nb48_seed42.zip nb48_seed137.zip nb48_seed2026.zip [--device mps]
@@ -100,6 +100,7 @@ def main():
     criteria = {
         "smoothed_macro_f1_gain_at_least_2pp": bool(s48.macro_f1 - s2.macro_f1 >= 0.02),
         "weak_class_mean_recall_not_worse_than_5pp": bool(weak["nb48_seed_median"] - weak["v2_seed_median"] >= -0.05),
+        "dumbbell_row_recall_not_worse_than_v2": bool(s48["recall__dumbbell_row"] - s2["recall__dumbbell_row"] >= 0),
         "supported_called_unknown_not_worse_than_3pp": bool(s48.supported_called_unknown - s2.supported_called_unknown <= 0.03),
         "downtime_called_unknown_not_worse_than_5pp": bool(s48.downtime_called_unknown - s2.downtime_called_unknown <= 0.05),
     }
@@ -109,7 +110,7 @@ def main():
                "supported_called_unknown": {"v2": float(s2.supported_called_unknown), "nb48": float(s48.supported_called_unknown)},
                "downtime_called_unknown": {"v2": float(s2.downtime_called_unknown), "nb48": float(s48.downtime_called_unknown)},
                "internal_test_macro_f1_seed_mean": {"v2": float(internal_c.end_to_end_macro_f1.mean()), "nb48": float(internal_t.end_to_end_macro_f1.mean())},
-               "test_videos": test, "caveat": "one test video: informational only", "promotion": False}
+               "test_videos": test, "caveat": "two test videos: informational only", "promotion": False}
     (args.out_dir / "verdict.json").write_text(json.dumps(verdict, indent=2) + "\n")
     for name in per:
         pd.concat(per[name].values()).to_csv(args.out_dir / f"timeline_{name}_smoothed.csv.gz", index=False)

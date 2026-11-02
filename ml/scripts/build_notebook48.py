@@ -50,7 +50,7 @@ if ROUND2_READY:
 r3 = roles(R3 / "roles.csv")
 R3_TRAIN_IDS = sorted(v for v, r in r3 if r == "train")
 R3_TEST_IDS = sorted(v for v, r in r3 if r == "test")
-assert (len(R3_TRAIN_IDS), len(R3_TEST_IDS)) == (2, 1) and (R3 / "LOCK.json").exists()
+assert (len(R3_TRAIN_IDS), len(R3_TEST_IDS)) == (4, 2) and (R3 / "LOCK.json").exists()
 
 subprocess.run(["git", "-C", str(ROOT), "diff", "--quiet", "--", "ml/data", "ml/artifacts", "ml/scripts"], check=True)
 COMMIT = subprocess.run(["git", "-C", str(ROOT), "rev-parse", "HEAD"], capture_output=True, text=True, check=True).stdout.strip()

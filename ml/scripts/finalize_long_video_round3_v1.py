@@ -10,7 +10,7 @@ import cv2, numpy as np
 
 root, work, pages = Path(sys.argv[1]), Path(sys.argv[2]), Path(sys.argv[3])
 data, evidence = root / "ml/data/long_video_round3_v1", root / "ml/artifacts/long_video_round3_v1"
-ROLE = {"fEuM1XWZ068": "train", "BZiRx8zVPY8": "train", "WopbPBumelc": "test"}
+ROLE = {"fEuM1XWZ068": "train", "BZiRx8zVPY8": "train", "HlnCRJ2Z-i8": "train", "QWNYZRt_K9g": "train", "WopbPBumelc": "test", "dVtAnYQynbU": "test"}
 SUPPORTED = {"bench_press", "bicep_curl", "deadlift", "dumbbell_row", "jumping_jack", "lat_pulldown", "lateral_raise", "lunge",
              "pull_up", "push_up", "shoulder_press", "sit_up", "squat", "tricep_extension", "unknown"}
 BASIS = {
@@ -22,6 +22,13 @@ BASIS = {
     "double_pulse_curls_and_pivot": "rule 14", "double_neutral_clean_and_press": "guide default: compound stays unknown",
     "tricep_push_up": "rule 15", "lying_dumbbell_press_variation": "rule 22", "alternating_skull_crushers": "class definition (skull crushers, as in rounds 1-2)",
     "kneeling_overhead_dumbbell_work": "guide default: ambiguous stays unknown", "kneeling_reverse_rows": "rule 3", "walking_rows": "rule 3/12",
+    "romanian_deadlift_left": "rule 11", "romanian_deadlift_right": "rule 11", "walking_goblet_squat": "rule 5", "alt_curtsy_lunges_back_extensions": "rule 4/18",
+    "crunch_hold_alt_heel_touch": "rule 7", "hip_thrust_hold_and_press": "rule 2", "sit_up_hold_with_weight": "rule 7",
+    "hip_thrust_hold_alt_chest_press": "rule 2", "left_lunge_pulses": "rule 4", "right_lunge_pulses": "rule 4",
+    "deadlift_to_bent_over_rows": "guide default: compound stays unknown", "kneeling_overhead_dumbbell_work": "guide default: ambiguous stays unknown",
+    "diamond_press": "rule 22", "decline_chest_press": "rule 2", "prone_lat_pulldowns": "guide default: not the machine class, stays unknown",
+    "rear_delt_rows": "rule 3", "supine_rows_as_bent_over_rows": "rule 3 (frames show bent-over two-dumbbell rows, not supine)",
+    "bent_over_dumbbell_row": "rule 3", "lying_ab_crunch_variation": "rule 7",
     "rear_delt_fly_and_neutral_press": "guide default: compound stays unknown", "wide_curls": "rule 14", "stirrup_arnold_press": "rule 13",
 }
 ann = data / "annotations"
@@ -45,9 +52,9 @@ for path in sorted(glob.glob(str(ann / "*.csv"))):
 assert pending == 0
 sha = lambda p: hashlib.sha256(Path(p).read_bytes()).hexdigest()
 lock = {"locked_on": "2026-11-02", "status": "locked_test_set",
-        "rules": "Never train, calibrate, choose thresholds or decoders, or relabel from predictions. One test video: any score is informational only.",
-        "annotations": {"WopbPBumelc.csv": sha(ann / "WopbPBumelc.csv")},
-        "evidence": {"WopbPBumelc": sha(evidence / "long_video_round3_v1_WopbPBumelc.zip")}, "second_review": "second_review_sample_v1.csv"}
+        "rules": "Never train, calibrate, choose thresholds or decoders, or relabel from predictions. Two test videos: any score is informational only.",
+        "annotations": {f"{v}.csv": sha(ann / f"{v}.csv") for v in ("WopbPBumelc", "dVtAnYQynbU")},
+        "evidence": {v: sha(evidence / f"long_video_round3_v1_{v}.zip") for v in ("WopbPBumelc", "dVtAnYQynbU")}, "second_review": "second_review_sample_v1.csv"}
 (data / "LOCK.json").write_text(json.dumps(lock, indent=2) + "\n")
 sample = []
 for rl in ("train", "test"):

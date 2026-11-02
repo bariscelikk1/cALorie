@@ -1,12 +1,14 @@
 {
   "locked_on": "2026-11-02",
   "status": "locked_test_set",
-  "rules": "Never train, calibrate, choose thresholds or decoders, or relabel from predictions. One test video: any score is informational only.",
+  "rules": "Never train, calibrate, choose thresholds or decoders, or relabel from predictions. Two test videos: any score is informational only.",
   "annotations": {
-    "WopbPBumelc.csv": "1e244b8b028e74206dbdc17ac907cb181bac2bf6de95d37633f0183aca61d8fd"
+    "WopbPBumelc.csv": "1e244b8b028e74206dbdc17ac907cb181bac2bf6de95d37633f0183aca61d8fd",
+    "dVtAnYQynbU.csv": "679f6bb363d08c105d19627adf43ed9dffeab665b3ce8d6eecbc56838bdd08b1"
   },
   "evidence": {
-    "WopbPBumelc": "7ed64911d5108cad3365a6cbc0819f4d0cba137933030b86af62c77cfd953bc5"
+    "WopbPBumelc": "7ed64911d5108cad3365a6cbc0819f4d0cba137933030b86af62c77cfd953bc5",
+    "dVtAnYQynbU": "7b250de2845c5910caa09480738bb9192f56f0f7be3bf7b41269094e786ecc6c"
   },
   "second_review": "second_review_sample_v1.csv"
 }
