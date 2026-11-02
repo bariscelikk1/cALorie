@@ -59,8 +59,8 @@ A dark, one-page web app that runs only on your computer: upload a workout video
 4 GB), wait while it analyzes (roughly a quarter to a half of the video's length), and get the exercise
 timeline, time per exercise, reps for five exercises, and an approximate calorie estimate, plus a CSV download.
 Your video is never uploaded anywhere. It is a research prototype: it averages the three final-model seeds
-(not scored separately), reps are approximate (68% of unseen clips within one rep), and calories use one fixed
-MET per exercise with a ±35% range. Command line: `python ml/app/calorie_pipeline.py VIDEO`.
+(not scored separately), reps are approximate (68% of unseen clips within one rep), and calories use a MET per exercise
+scaled by an effort slider, with a ±35% range, and an optional heart-rate figure. Command line: `python ml/app/calorie_pipeline.py VIDEO`.
 
 ## Run it on another computer (Docker)
 

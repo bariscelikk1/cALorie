@@ -20,11 +20,12 @@ PARAMS = {"smooth_s": 0.6, "min_gap_s": 0.4, "min_prominence": 0.4, "signal": "n
 # resistance 3.0 | 2011 moderate calisthenics 3.8. Push-up, pull-up use a moderate 5.0.
 MET = {
     "squat": 5.0, "deadlift": 5.0, "lunge": 3.8, "push_up": 5.0, "pull_up": 5.0, "sit_up": 3.8, "jumping_jack": 7.5,
-    "bench_press": 3.5, "bicep_curl": 3.5, "dumbbell_row": 3.5, "lat_pulldown": 3.5, "lateral_raise": 3.5,
-    "shoulder_press": 3.5, "tricep_extension": 3.5,
+    "bench_press": 5.0, "bicep_curl": 5.0, "dumbbell_row": 5.0, "lat_pulldown": 5.0, "lateral_raise": 5.0,
+    "shoulder_press": 5.0, "tricep_extension": 5.0,   # weights at moderate effort (Compendium 02052/02061: 5.0)
 }
+EFFORT = {"Light": 0.7, "Moderate": 1.0, "Hard": 1.2}   # scales every MET (weights: 3.5 / 5.0 / 6.0)
 CALORIE_RANGE = 0.35
-MET_SESSION = 3.5  # general resistance-training MET (2024 Compendium 02054), used for the whole-session figure
+MET_SESSION = 5.0  # moderate weight-training MET (Compendium 02061), scaled by effort; used for the whole-session figure
 
 
 def motion_signal(normalized: np.ndarray, image: np.ndarray | None, kind: str) -> np.ndarray:
@@ -53,11 +54,11 @@ def count_reps(normalized: np.ndarray, image: np.ndarray | None = None, params: 
     return int(len(peaks))
 
 
-def estimate_calories(label: str, weight_kg: float, seconds: float) -> tuple[float, float, float]:
+def estimate_calories(label: str, weight_kg: float, seconds: float, effort: float = 1.0) -> tuple[float, float, float]:
     """Return (estimate, low, high) kcal for `seconds` of `label`."""
     if label not in MET:
         return 0.0, 0.0, 0.0
-    kcal = MET[label] * 3.5 * weight_kg / 200.0 * (seconds / 60.0)
+    kcal = MET[label] * effort * 3.5 * weight_kg / 200.0 * (seconds / 60.0)
     return kcal, kcal * (1 - CALORIE_RANGE), kcal * (1 + CALORIE_RANGE)
 
 
@@ -65,7 +66,7 @@ def estimate_calories(label: str, weight_kg: float, seconds: float) -> tuple[flo
 REP_VALIDATED = {"jumping_jack", "pull_up", "push_up", "sit_up", "squat"}
 
 
-def summarize_exercises(table, pose: np.ndarray, weight_kg: float):
+def summarize_exercises(table, pose: np.ndarray, weight_kg: float, effort: float = 1.0):
     """Per-exercise totals from a timeline table (start_s, end_s, label) and the full pose."""
     import pandas as pd
     rows = {}
@@ -78,9 +79,18 @@ def summarize_exercises(table, pose: np.ndarray, weight_kg: float):
         row["reps"] += count_reps(seg) if r.label in REP_VALIDATED else 0
     out = []
     for label, row in rows.items():
-        kcal, low, high = estimate_calories(label, weight_kg, row["seconds"])
+        kcal, low, high = estimate_calories(label, weight_kg, row["seconds"], effort)
         out.append({"exercise": label, "seconds": round(row["seconds"]),
                     "reps": row["reps"] if label in REP_VALIDATED else None,
                     "kcal": round(kcal), "kcal_low": round(low), "kcal_high": round(high)})
     return pd.DataFrame(out).sort_values("seconds", ascending=False).reset_index(drop=True) if out else pd.DataFrame(
         columns=["exercise", "seconds", "reps", "kcal", "kcal_low", "kcal_high"])
+
+
+def heart_rate_kcal(avg_hr: float, weight_kg: float, age: float, male: bool, minutes: float) -> float:
+    """Keytel et al. (2005) heart-rate equation, kcal over `minutes` at an average heart rate (bpm)."""
+    if male:
+        per_min = (-55.0969 + 0.6309 * avg_hr + 0.1988 * weight_kg + 0.2017 * age) / 4.184
+    else:
+        per_min = (-20.4022 + 0.4472 * avg_hr - 0.1263 * weight_kg + 0.074 * age) / 4.184
+    return max(per_min, 0.0) * minutes
