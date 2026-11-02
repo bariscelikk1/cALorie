@@ -23,7 +23,7 @@ MET = {
     "bench_press": 5.0, "bicep_curl": 5.0, "dumbbell_row": 5.0, "lat_pulldown": 5.0, "lateral_raise": 5.0,
     "shoulder_press": 5.0, "tricep_extension": 5.0,   # weights at moderate effort (Compendium 02052/02061: 5.0)
 }
-EFFORT = {"Light": 0.7, "Moderate": 1.0, "Hard": 1.2}   # scales every MET (weights: 3.5 / 5.0 / 6.0)
+EFFORT = {"Light": 0.7, "Moderate": 1.0, "Hard": 1.4}   # scales every MET (weights: 3.5 / 5.0 / 7.0; vigorous weights ~6, short-rest circuits up to ~8)
 CALORIE_RANGE = 0.35
 MET_SESSION = 5.0  # moderate weight-training MET (Compendium 02061), scaled by effort; used for the whole-session figure
 

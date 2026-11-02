@@ -51,7 +51,7 @@ with st.sidebar:
     st.header("Settings")
     weight = st.number_input("Your body weight (kg), only for the calorie estimate", 30.0, 250.0, 70.0, 1.0)
     effort_name = st.select_slider("How hard was the workout?", options=list(rc.EFFORT), value="Moderate",
-                                   help="Scales the calorie estimate: light about 3.5 MET, moderate 5, hard 6 for weight training.")
+                                   help="Scales the calorie estimate: light about 3.5 MET, moderate 5, hard 7 (short rests, circuit style) for weight training.")
     effort = rc.EFFORT[effort_name]
     with st.expander("Optional: use your heart rate"):
         avg_hr = st.number_input("Average heart rate during the workout (bpm), 0 = skip", 0, 220, 0, 1)
@@ -125,6 +125,7 @@ exercise_s = float(summary.seconds.sum()) if len(summary) else 0.0
 # Calories two ways: only the exercise the model recognized (a floor, because missed time counts as zero), and a rough
 # whole-session figure at a general strength-training MET (3.5) over the full video length.
 session_kcal = rc.MET_SESSION * effort * 3.5 * weight / 200.0 * (total / 60.0)
+session_range = {k: rc.MET_SESSION * f * 3.5 * weight / 200.0 * (total / 60.0) for k, f in rc.EFFORT.items()}
 hr_kcal = rc.heart_rate_kcal(avg_hr, weight, age, male, total / 60.0) if avg_hr > 0 else None
 cols = st.columns(3)
 cards = [(fmt(total), "workout length"), (fmt(exercise_s), "exercise time found"), (str(len(summary)), "exercises found")]
@@ -134,7 +135,7 @@ for col, (big, small) in zip(cols, cards):
 st.write("")
 cols2 = st.columns(3 if avg_hr > 0 else 2)
 cards2 = [(f"{int(summary.kcal.sum())}" if len(summary) else "0", "kcal from the exercises found (a minimum: missed time counts as zero)"),
-          (f"{int(session_kcal)}", f"kcal for the whole session ({effort_name.lower()} effort, rough)")]
+          (f"{int(session_kcal)}", f"kcal for the whole session at {effort_name.lower()} effort (light {int(session_range['Light'])}, moderate {int(session_range['Moderate'])}, hard {int(session_range['Hard'])})")]
 if hr_kcal is not None:
     cards2.append((f"{int(hr_kcal)}", "kcal from your average heart rate (Keytel formula, whole session)"))
 for col, (big, small) in zip(cols2, cards2):
