@@ -131,6 +131,33 @@ stat(s, 5.7, 1.5, 3.6, "68%", "of unseen clips counted within one rep of a human
 s.addText("Calories use one fixed MET value per exercise and could not be validated.", { x: 5.7, y: 3.7, w: 3.6, h: 0.9, fontSize: 14, fontFace: "Calibri", color: "C9CEDF", margin: 0, isTextBox: true, objectName: "calorie note" });
 notes(s, "The web page is a Streamlit script. Reps come from a simple peak counter tuned on dev clips and scored once on a sealed test: 68 percent within one rep, 39 percent exact. Calories use the standard formula with a fixed MET per exercise and a plus or minus 35 percent range, because we have no ground truth for them.");
 
+// 10 (ideas) -----------------------------------------------------------------------------------------------
+section("Wrap-up");
+s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Wrap-up" });
+s.addText("How we can push the score higher", { placeholder: "title" });
+const card = (x, head, color, items, name) => {
+  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y: 1.35, w: 4.35, h: 3.55, rectRadius: 0.08, fill: { color: "1C2130" }, line: { type: "none" }, objectName: name + " card" });
+  s.addShape(pres.shapes.OVAL, { x: x + 0.25, y: 1.58, w: 0.3, h: 0.3, fill: { color }, line: { type: "none" }, objectName: name + " dot" });
+  s.addText(head, { x: x + 0.7, y: 1.5, w: 3.5, h: 0.45, fontSize: 18, bold: true, fontFace: "Cambria", color: C.background1, valign: "middle", margin: 0, isTextBox: true, objectName: name + " head" });
+  const runs = [];
+  items.forEach((it, i) => {
+    runs.push({ text: it[0] + " ", options: { bold: true, color: C.background1, bullet: true } });
+    runs.push({ text: it[1], options: { color: "C9CEDF", breakLine: i < items.length - 1 } });
+  });
+  s.addText(runs, { x: x + 0.25, y: 2.1, w: 3.9, h: 2.7, fontSize: 14, fontFace: "Calibri", valign: "top", paraSpaceAfter: 6, margin: 0, isTextBox: true, objectName: name + " list" });
+};
+card(0.6, "A better gate", B.orange, [
+  ["Longer context:", "read 20–30 s, not 4 s."],
+  ["Rhythm feature:", "sets repeat, rest does not."],
+  ["Easy to stay, hard to leave:", "two thresholds so short pauses don’t cut a set."],
+  ["Hard rest examples:", "standing, drinking water, talking."]], "gate");
+card(5.05, "More and better data", B.violet, [
+  ["More variety:", "30–50 new workouts from new people, cameras, and gyms."],
+  ["Targeted clips:", "row, triceps, and lateral raise, the weakest exercises."],
+  ["A fresh locked test:", "the two old ones are used up."]], "data");
+s.addText("Every idea gets a pass rule written before it runs, and nothing is tuned on the test.", { x: 0.6, y: 5.0, w: 8.8, h: 0.3, fontSize: 12, fontFace: "Calibri", color: B.yellow, margin: 0, isTextBox: true, objectName: "rule note" });
+notes(s, "These are ideas, not results. The gate is the part that decides whether a moment is an exercise at all, and it is where most of the missed time comes from. Longer context and a rhythm feature should help most. More varied data is the most proven lever. Each change would be tested with a pass rule written first, on a new locked test set.");
+
 // 10 --------------------------------------------------------------------------------------------------------
 section("Wrap-up");
 s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Wrap-up" });

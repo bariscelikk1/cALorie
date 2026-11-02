@@ -128,6 +128,14 @@ Failed and borderline experiments were kept as evidence, not rewritten as succes
 3. Per-exercise rep counting and a way to validate calories (a wearable or lab reference).
 4. A friendlier app on top of the timeline script.
 
+## 8b. Ideas for raising the score (not yet tested)
+
+- **Gate (the "exercise or rest?" decision):** read longer context (20-30 s instead of 4 s); add a rhythm feature (sets repeat, rest does not);
+  use two thresholds so short pauses do not cut a set; train on hard rest examples (standing, drinking water, talking).
+- **Data:** 30-50 new workouts from new people, cameras, and gyms; targeted clips for row, triceps, and lateral raise; a fresh locked test
+  because both existing ones are spent.
+- Every idea gets a pass rule written before it runs; nothing is tuned on a locked test.
+
 ## 9. Reproduce
 
 - Final model files and card: `ml/artifacts/final_model_v2/`.
